@@ -9,7 +9,8 @@ import { Observable } from 'rxjs';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  private spreadsheetData$: Observable<Spreadsheet>;
+
+  spreadsheetData$: Observable<Spreadsheet>;
 
   constructor(private spreadsheetDataService: SpreadsheetDataService) {
   }
