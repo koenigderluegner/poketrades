@@ -19,3 +19,10 @@ a {
   text-decoration: none;
   color: #adaeb0;
 }
+
+
+.sub-navi{
+  display: grid;
+  grid-gap: 4px;
+  grid-auto-rows: max-content;
+}

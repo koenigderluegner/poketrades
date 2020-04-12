@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { SpreadsheetDataService } from '@shared/services/spreadsheet-data.service';
+import { Observable } from 'rxjs';
+import { Spreadsheet } from '@shared/interfaces/spreadsheet';
 
 @Component({
   selector: 'app-index',
@@ -6,10 +9,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./index.component.scss']
 })
 export class IndexComponent implements OnInit {
+  spreadsheetData$: Observable<Spreadsheet>;
 
-  constructor() { }
+  constructor(private spreadsheetDataService: SpreadsheetDataService) {
+  }
 
   ngOnInit(): void {
+    this.spreadsheetData$ = this.spreadsheetDataService.getSpreadsheetInformation();
   }
 
 }
