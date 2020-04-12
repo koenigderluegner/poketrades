@@ -41,7 +41,7 @@ export class AppComponent implements OnInit {
       map(worksheets => {
         let selectedWorksheet: Worksheet;
         for (const worksheet of worksheets) {
-          selectedWorksheet = this.spreadsheet.worksheets.filter(fWorksheet => fWorksheet.title === worksheet.feed.title['$t'])?.[0];
+          selectedWorksheet = this.spreadsheet.worksheets.filter(ws => ws.title === worksheet.feed.title['$t'])?.[0];
 
           selectedWorksheet.config = this.getWorksheetConfig(worksheet);
           if (selectedWorksheet) {
@@ -49,6 +49,9 @@ export class AppComponent implements OnInit {
           }
           console.log(worksheet.feed.title['$t']);
         }
+
+        this.spreadsheet.hasBreedables = this.spreadsheet.worksheets.some(ws => ws.config?.type === 'Breedables');
+        this.spreadsheet.hasValuables = this.spreadsheet.worksheets.some(ws => ws.config?.type === 'Valuables');
 
         this.spreadsheetDataService.updateSpreadsheetInformation(this.spreadsheet);
       })

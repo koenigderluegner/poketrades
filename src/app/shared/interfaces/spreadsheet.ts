@@ -5,4 +5,7 @@ export interface Spreadsheet {
   title: string;
   date: Date;
   worksheets: Worksheet[];
+
+  hasValuables?: boolean;
+  hasBreedables?: boolean;
 }
