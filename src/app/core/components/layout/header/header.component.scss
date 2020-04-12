@@ -1,0 +1,66 @@
+app-header:host {
+  color: #fff;
+  background: #060606;
+  height: 53px;
+  padding: 0 3rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 320px 2fr;
+  grid-gap: 2rem;
+
+  .App-title, .App-navigation ul {
+    display: flex;
+    align-items: center;
+  }
+
+  .App-header {
+    padding: 1rem 0;
+
+    a {
+      color: #c9cacc;
+      border-bottom: 2px solid transparent;
+
+      &.selected {
+        border-bottom-color: #0b7abb;;
+      }
+    }
+
+  }
+
+  .App-navigation ul {
+
+    justify-content: flex-end;
+
+    a {
+      padding: 1rem;
+      display: block;
+    }
+  }
+
+
+  &:before, &:after {
+    content: "";
+    display: block;
+    position: fixed;
+    top: 0;
+    -webkit-transform-origin: right top;
+    transform-origin: right top;
+    -webkit-transform: rotate(24deg);
+    transform: rotate(24deg);
+    z-index: -1;
+  }
+
+  &:before {
+    background-color: #bd2732;
+    right: 48%;
+    width: 130vw;
+    height: 130vw;
+  }
+
+  &:after {
+    background-color: #dd313d;
+    right: 60%;
+    width: 100vw;
+    height: 100vw;
+  }
+}
