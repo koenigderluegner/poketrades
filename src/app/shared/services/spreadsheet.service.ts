@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
-import { Observable } from 'rxjs';
+import { forkJoin, Observable } from 'rxjs';
 import { Spreadsheet } from '@shared/interfaces/spreadsheet';
 
 @Injectable({
@@ -33,5 +33,9 @@ export class SpreadsheetService {
 
   getWorksheet(spreadsheetId: string, worksheetId: string): Observable<any> {
     return this.httpClient.get(`https://spreadsheets.google.com/feeds/list/${spreadsheetId}/${worksheetId}/public/values?alt=json`)
+  }
+
+  getWorksheets(spreadsheetId: string, worksheetIds: string[]): Observable<any> {
+    return forkJoin(...worksheetIds.map(worksheetId => this.getWorksheet(spreadsheetId, worksheetId)))
   }
 }
