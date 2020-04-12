@@ -10,12 +10,28 @@ import { Observable } from 'rxjs';
 })
 export class HeaderComponent implements OnInit {
 
+  spreadsheetData: Spreadsheet;
+
+  breedablesLink: string;
+  valuablesLink: string;
+
   spreadsheetData$: Observable<Spreadsheet>;
 
   constructor(private spreadsheetDataService: SpreadsheetDataService) {
   }
 
   ngOnInit(): void {
-    this.spreadsheetData$ = this.spreadsheetDataService.getSpreadsheetInformation();
+    this.spreadsheetDataService.getSpreadsheetInformation().subscribe({
+      next: spreadsheetData => {
+        this.spreadsheetData = spreadsheetData;
+        if (this.spreadsheetData.hasValuables) {
+          this.valuablesLink = this.spreadsheetData.worksheets.filter(worksheet => worksheet.config.type === 'Valuables')[0].title;
+        }
+        if (this.spreadsheetData.hasBreedables) {
+          this.breedablesLink = this.spreadsheetData.worksheets.filter(worksheet => worksheet.config.type === 'Breedables')[0].title;
+        }
+
+      }
+    });
   }
 }
