@@ -4,6 +4,7 @@ import { IndexComponent } from './components/index/index.component';
 import { BreedableRoutingModule } from './breedable-routing.module';
 import { BallComponent } from './components/ball/ball.component';
 import { SharedModule } from '@shared/shared.module';
+import { GridModule } from '../grid/grid.module';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { SharedModule } from '@shared/shared.module';
   imports: [
     CommonModule,
     BreedableRoutingModule,
-    SharedModule
+    SharedModule,
+    GridModule
   ]
 })
 export class BreedableModule {
