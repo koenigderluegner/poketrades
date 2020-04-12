@@ -9,17 +9,22 @@ import { Spreadsheet } from '@shared/interfaces/spreadsheet';
 })
 export class SpreadsheetService {
 
+  filteredTabs = ["Landing Page", "Shiny Living Dex", "Living Dex", "Friend Safari (X & Y)", "Resource",
+    "Breedables Overview", "Ban List", "Ban Checker", "Breedables Ball Legality", "Resource Gen7 (Backup)"];
+
   constructor(private httpClient: HttpClient) {
   }
 
   getSpreadsheet(spreadsheetId: string): Observable<Spreadsheet> {
     return this.httpClient.get(`https://spreadsheets.google.com/feeds/worksheets/${spreadsheetId}/public/basic?alt=json`).pipe(
       map((response: any) => {
+
+        const filteredEntries = response.feed.entry.filter(worksheet => !this.filteredTabs.includes(worksheet.title['$t']));
         return {
           id: spreadsheetId,
           title: response.feed.title['$t'],
           date: new Date(Date.parse(response.feed.updated['$t'])),
-          worksheets: response.feed.entry.map((entry: any) => {
+          worksheets: filteredEntries.map((entry: any) => {
             return {
               id: entry.link[4].href.split('/').pop(), // id is last part of URI
               title: entry.title['$t'],
@@ -27,6 +32,7 @@ export class SpreadsheetService {
             }
           })
         }
+
       })
     )
   }
