@@ -27,6 +27,7 @@ li {
 
 
     .icon {
+      flex-basis: 32px;
       height: 32px;
     }
 
@@ -40,9 +41,8 @@ li {
         color: #fff;
         font-weight: 500;
         font-size: 100%;
-
+        text-align: right;
       }
-
     }
   }
 }
