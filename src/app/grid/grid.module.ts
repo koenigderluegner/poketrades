@@ -8,6 +8,10 @@ import { GridItemComponent } from './grid-item/grid-item.component';
 
 @NgModule({
   declarations: [MinimalComponent, GridComponent, GridItemComponent],
+  exports: [
+    GridComponent,
+    GridItemComponent
+  ],
   imports: [
     CommonModule
   ]

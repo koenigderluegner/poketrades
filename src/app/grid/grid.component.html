@@ -1,1 +1,5 @@
-<p>grid works!</p>
+<ng-container *ngIf="items">
+  <div *ngFor="let item of items">
+    {{item.pokemon['gsx$name']['$t']}}
+  </div>
+</ng-container>

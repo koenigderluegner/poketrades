@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { GridAppearanceType } from '../grid-appearance.type';
 
 @Component({
   selector: 'app-grid-item',
@@ -7,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GridItemComponent implements OnInit {
 
+  @Input() pokemon;
+  @Input() appearance: GridAppearanceType;
   constructor() { }
 
   ngOnInit(): void {
