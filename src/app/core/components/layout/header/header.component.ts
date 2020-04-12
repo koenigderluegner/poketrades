@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SpreadsheetDataService } from '@shared/services/spreadsheet-data.service';
 import { Spreadsheet } from '@shared/interfaces/spreadsheet';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -14,8 +13,6 @@ export class HeaderComponent implements OnInit {
 
   breedablesLink: string;
   valuablesLink: string;
-
-  spreadsheetData$: Observable<Spreadsheet>;
 
   constructor(private spreadsheetDataService: SpreadsheetDataService) {
   }
