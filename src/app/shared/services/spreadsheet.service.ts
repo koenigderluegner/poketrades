@@ -19,7 +19,13 @@ export class SpreadsheetService {
           id: spreadsheetId,
           title: response.feed.title['$t'],
           date: new Date(Date.parse(response.feed.updated['$t'])),
-          worksheets: response.feed.entry
+          worksheets: response.feed.entry.map((entry: any) => {
+            return {
+              id: entry.link[4].href.split('/').pop(), // id is last part of URI
+              title: entry.title['$t'],
+              date: new Date(Date.parse(entry.updated['$t'])),
+            }
+          })
         }
       })
     )
