@@ -6,6 +6,9 @@ import { SlugifyPipe } from './pipes/slugify.pipe';
 
 @NgModule({
   declarations: [SlugifyPipe],
+  exports: [
+    SlugifyPipe
+  ],
   imports: [
     CommonModule
   ]
