@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostBinding, OnInit } from '@angular/core';
 import { SpreadsheetDataService } from '@shared/services/spreadsheet-data.service';
 import { Observable } from 'rxjs';
 import { Spreadsheet } from '@shared/interfaces/spreadsheet';
@@ -9,6 +9,9 @@ import { Spreadsheet } from '@shared/interfaces/spreadsheet';
   styleUrls: ['./index.component.scss']
 })
 export class IndexComponent implements OnInit {
+
+  @HostBinding('class.view') isView: boolean = true;
+
   spreadsheetData$: Observable<Spreadsheet>;
 
   constructor(private spreadsheetDataService: SpreadsheetDataService) {

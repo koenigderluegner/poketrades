@@ -1,4 +1,4 @@
-*{
+* {
   box-sizing: border-box;
 }
 
@@ -21,8 +21,16 @@ a {
 }
 
 
-.sub-navi{
+.sub-navi {
   display: grid;
   grid-gap: 4px;
   grid-auto-rows: max-content;
+}
+
+.view {
+  padding: 3rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 320px 2fr;
+  grid-gap: 2rem;
 }
