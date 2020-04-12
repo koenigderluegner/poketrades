@@ -1,12 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { IndexComponent } from './components/index/index.component';
+import { BreedableRoutingModule } from './breedable-routing.module';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [IndexComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    BreedableRoutingModule
   ]
 })
-export class BreedableModule { }
+export class BreedableModule {
+}
