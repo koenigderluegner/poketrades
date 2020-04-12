@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { SlugifyPipe } from './pipes/slugify.pipe';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [SlugifyPipe],
   imports: [
     CommonModule
   ]
