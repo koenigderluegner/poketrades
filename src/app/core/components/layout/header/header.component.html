@@ -1,13 +1,15 @@
-<div class="App-title">
-  Test
-</div>
-
-<nav class="App-navigation">
-  <div class="nav-wrapper">
-    <ul>
-      <li>Test</li>
-      <li>Test</li>
-      <li>Test</li>
-    </ul>
+<ng-container *ngIf="(spreadsheetData$ | async) as spreadsheetData">
+  <div class="App-title">
+    {{spreadsheetData.title}}
   </div>
-</nav>
+
+  <nav class="App-navigation">
+    <div class="nav-wrapper">
+      <ul>
+        <li>Test</li>
+        <li>Test</li>
+        <li>Test</li>
+      </ul>
+    </div>
+  </nav>
+</ng-container>
