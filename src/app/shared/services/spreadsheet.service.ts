@@ -30,4 +30,8 @@ export class SpreadsheetService {
       })
     )
   }
+
+  getWorksheet(spreadsheetId: string, worksheetId: string): Observable<any> {
+    return this.httpClient.get(`https://spreadsheets.google.com/feeds/list/${spreadsheetId}/${worksheetId}/public/values?alt=json`)
+  }
 }
