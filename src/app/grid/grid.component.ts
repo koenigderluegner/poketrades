@@ -1,11 +1,22 @@
-import { AfterContentInit, Component, ContentChildren, Input, OnInit, QueryList } from '@angular/core';
+import {
+  AfterContentInit,
+  Component,
+  ContentChildren,
+  HostBinding,
+  Input,
+  OnInit,
+  QueryList,
+  ViewEncapsulation
+} from '@angular/core';
 import { GridAppearanceType } from './grid-appearance.type';
 import { GridItemComponent } from './grid-item/grid-item.component';
 
 @Component({
   selector: 'app-grid',
   templateUrl: './grid.component.html',
-  styleUrls: ['./grid.component.scss']
+  styleUrls: ['./grid.component.scss'],
+  host: {class: 'grid'},
+  encapsulation: ViewEncapsulation.None
 })
 export class GridComponent implements OnInit, AfterContentInit {
 
@@ -14,6 +25,10 @@ export class GridComponent implements OnInit, AfterContentInit {
   @ContentChildren(GridItemComponent) contentChildren !: QueryList<GridItemComponent>;
 
   items;
+
+  @HostBinding('class') get class() {
+    return this.appearance ?? 'normal';
+  }
 
   constructor() {
   }

@@ -1,5 +1,9 @@
 <ng-container *ngIf="items">
-  <div *ngFor="let item of items">
-    {{item.pokemon['gsx$name']['$t']}}
-  </div>
+  <ng-container *ngFor="let item of items">
+    <ng-container [ngSwitch]="appearance">
+      <ng-container *ngSwitchCase="'minimal'">
+        <app-minimal></app-minimal>
+      </ng-container>
+    </ng-container>
+  </ng-container>
 </ng-container>

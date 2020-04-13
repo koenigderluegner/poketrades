@@ -1,0 +1,12 @@
+.grid.minimal {
+  grid-gap: 6px;
+  grid-template-columns: repeat(auto-fit, 40px);
+
+  .grid-item {
+    height: 40px;
+    width: 40px;
+    border: none;
+    background: rgba(255, 255, 255, .22);
+    border-radius: 5px;
+  }
+}
