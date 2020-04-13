@@ -46,6 +46,7 @@ export class AppComponent implements OnInit {
           selectedWorksheet.config = this.getWorksheetConfig(worksheet);
           if (selectedWorksheet) {
             selectedWorksheet.data = worksheet.feed.entry.slice(3); // first 3 rows contain meta data
+            selectedWorksheet.data.pop(); // last row is empty, its a helper row in sheets
           }
           console.log(worksheet.feed.title['$t']);
         }
