@@ -1,5 +1,5 @@
 <ng-container *ngIf="worksheet">
   <app-grid appearance="minimal">
-    <app-grid-item  *ngFor="let entry of worksheet.data" [pokemon]="entry" ></app-grid-item>
+    <app-grid-item *ngFor="let entry of worksheet.data" [pokemon]="entry | castBreedable"></app-grid-item>
   </app-grid>
 </ng-container>

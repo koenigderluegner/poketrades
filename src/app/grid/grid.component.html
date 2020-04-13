@@ -2,7 +2,7 @@
   <ng-container *ngFor="let item of items">
     <ng-container [ngSwitch]="appearance">
       <ng-container *ngSwitchCase="'minimal'">
-        <app-minimal></app-minimal>
+        <app-minimal [pokemon]="item.pokemon"></app-minimal>
       </ng-container>
     </ng-container>
   </ng-container>
