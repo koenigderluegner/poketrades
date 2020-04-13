@@ -12,6 +12,8 @@ export class Breedable implements Pokemon{
   dex: string;
   hasHiddenAbility: boolean;
   iconSlug: string;
-  name: string;
+  get name(): string{
+    return this['gsx$name']['$t'];
+  }
 
 }

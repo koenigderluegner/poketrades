@@ -6,6 +6,9 @@ import { PokemonComponent } from './pokemon/pokemon.component';
 
 @NgModule({
   declarations: [PokemonComponent],
+  exports: [
+    PokemonComponent
+  ],
   imports: [
     CommonModule
   ]

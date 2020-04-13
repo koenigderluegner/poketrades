@@ -8,5 +8,13 @@
     border: none;
     background: rgba(255, 255, 255, .22);
     border-radius: 5px;
+
+    .icon {
+      width: 68px;
+      height: 56px;
+      margin-left: -14px;
+      flex-basis: 40px;
+      margin-top: -16px;
+    }
   }
 }
