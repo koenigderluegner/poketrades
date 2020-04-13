@@ -3,22 +3,24 @@ import { ActivatedRoute } from '@angular/router';
 import { combineLatest, Subscription } from 'rxjs';
 import { SpreadsheetDataService } from '@shared/services/spreadsheet-data.service';
 import { Worksheet } from '@shared/interfaces/worksheet';
+import { SlugifyPipe } from '@shared/pipes/slugify.pipe';
 
 @Component({
   selector: 'app-ball',
   templateUrl: './ball.component.html',
-  styleUrls: ['./ball.component.scss']
+  styleUrls: ['./ball.component.scss'],
 })
 export class BallComponent implements OnInit, OnDestroy {
 
-  ball: string;
+  worksheetTitle: string;
   worksheet: Worksheet;
 
   subscriptions: Subscription[] = [];
 
   constructor(
     private spreadsheetDataService: SpreadsheetDataService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private slugifyPipe: SlugifyPipe
   ) {
   }
 
@@ -29,11 +31,12 @@ export class BallComponent implements OnInit, OnDestroy {
         this.spreadsheetDataService.getSpreadsheetInformation()
       ]).subscribe({
         next: ([params, spreadsheetData]) => {
-          console.log(spreadsheetData.worksheets[0].config);
-          this.ball = params.get('ball');
+
+          this.worksheetTitle = params.get('worksheetTitle');
           this.worksheet = spreadsheetData.worksheets.filter(
-            worksheet => worksheet.config?.ball?.toLowerCase() === this.ball
-          )?.[0]
+            worksheet => this.slugifyPipe.transform(worksheet.title) === this.worksheetTitle
+          )?.[0];
+
         }
       })
     );

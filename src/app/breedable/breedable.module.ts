@@ -5,6 +5,7 @@ import { BreedableRoutingModule } from './breedable-routing.module';
 import { BallComponent } from './components/ball/ball.component';
 import { SharedModule } from '@shared/shared.module';
 import { GridModule } from '../grid/grid.module';
+import { SlugifyPipe } from '@shared/pipes/slugify.pipe';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { GridModule } from '../grid/grid.module';
     BreedableRoutingModule,
     SharedModule,
     GridModule
-  ]
+  ],
+  providers: [SlugifyPipe]
 })
 export class BreedableModule {
 }

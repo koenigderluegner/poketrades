@@ -7,7 +7,7 @@ import { BallComponent } from './components/ball/ball.component';
 const routes: Routes = [
   {
     path: '', component: IndexComponent, children: [
-      {path: ':id/:ball', component: BallComponent}
+      {path: ':id/:worksheetTitle', component: BallComponent}
     ]
   }
 ];
