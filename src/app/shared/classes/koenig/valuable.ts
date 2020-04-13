@@ -6,4 +6,8 @@ export class Valuable implements Pokemon{
   hasHiddenAbility: boolean;
   iconSlug: string;
   name: string;
+
+  constructor(pokemon?: Pokemon) {
+    pokemon && Object.assign(this, pokemon);
+  }
 }

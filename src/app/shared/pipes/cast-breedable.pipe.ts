@@ -8,7 +8,7 @@ import { Breedable } from '@shared/classes/koenig/breedable';
 export class CastBreedablePipe implements PipeTransform {
 
   transform(pokemon: Pokemon): Breedable {
-    return pokemon;
+    return new Breedable(pokemon);
   }
 
 }

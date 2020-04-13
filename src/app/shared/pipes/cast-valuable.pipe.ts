@@ -8,7 +8,7 @@ import { Valuable } from '@shared/classes/koenig/valuable';
 export class CastValuablePipe implements PipeTransform {
 
   transform(pokemon: Pokemon): Valuable {
-    return pokemon;
+    return new Valuable(pokemon);
   }
 
 }

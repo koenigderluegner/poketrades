@@ -12,7 +12,9 @@ import { CastValuablePipe } from './pipes/cast-valuable.pipe';
   declarations: [SlugifyPipe, SubNaviItemComponent, CastBreedablePipe, CastValuablePipe],
   exports: [
     SlugifyPipe,
-    SubNaviItemComponent
+    SubNaviItemComponent,
+    CastBreedablePipe,
+    CastValuablePipe
   ],
   imports: [
     CommonModule,
