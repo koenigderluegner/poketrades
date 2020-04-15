@@ -8,7 +8,9 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build-gh": "ng build --prod --output-path docs --base-href /poketrades/ "
+    "build-gh": "ng build --prod --output-path docs --base-href /poketrades/",
+    "config-gh": "ren docs\\index.html 404.html && git add docs && git commit -m \"github deploy build\" && git push",
+    "deploy-gh": "npm run build-gh && npm run config-gh"
   },
   "private": true,
   "dependencies": {
