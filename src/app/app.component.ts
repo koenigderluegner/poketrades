@@ -22,6 +22,7 @@ export class AppComponent implements OnInit {
       "Dusk", "Heal"],
     includeShinies: ['true', 'false']
   };
+  isLoading: boolean = true;
 
 
   constructor(private spreadsheetService: SpreadsheetService, private spreadsheetDataService: SpreadsheetDataService) {
@@ -55,6 +56,8 @@ export class AppComponent implements OnInit {
         this.spreadsheet.hasValuables = this.spreadsheet.worksheets.some(ws => ws.config?.type === 'Valuables');
 
         this.spreadsheetDataService.updateSpreadsheetInformation(this.spreadsheet);
+
+        this.isLoading = false;
       })
     ).subscribe({
       error: error => console.log('error: ', error)
