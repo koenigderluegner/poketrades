@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable, Subject } from 'rxjs';
+import { BehaviorSubject} from 'rxjs';
 import { Spreadsheet } from '@shared/interfaces/spreadsheet';
 
 @Injectable({
@@ -7,16 +7,25 @@ import { Spreadsheet } from '@shared/interfaces/spreadsheet';
 })
 export class SpreadsheetDataService {
 
-  private spreadsheetInformation = new Subject<Spreadsheet>();
+  private spreadsheetInformation: BehaviorSubject<Spreadsheet>;
 
   constructor() {
+    this.spreadsheetInformation = new BehaviorSubject<Spreadsheet>({
+      title: '',
+      hasBreedables: false,
+      hasValuables: false,
+      worksheets: [],
+      id: '',
+      date: new Date()
+  });
   }
 
-  getSpreadsheetInformation(): Observable<Spreadsheet> {
-    return this.spreadsheetInformation.asObservable();
+  getSpreadsheetInformation(): BehaviorSubject<Spreadsheet> {
+    return this.spreadsheetInformation;
   }
 
-  updateSpreadsheetInformation(spreadsheet: Spreadsheet) {
+  updateSpreadsheetInformation(spreadsheet: Spreadsheet): void {
+    console.log(spreadsheet);
     this.spreadsheetInformation.next(spreadsheet);
   }
 }

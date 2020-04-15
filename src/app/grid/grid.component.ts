@@ -37,8 +37,8 @@ export class GridComponent implements OnInit, AfterContentInit {
   ngAfterContentInit() {
 
     // initial load of list
-    if(this.items === undefined){
-      this.contentChildren.toArray();
+    if (!this.items) {
+      this.items = this.contentChildren.toArray();
     }
     this.contentChildren.changes.subscribe(items => {
       this.items = items.toArray();

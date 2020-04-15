@@ -1,9 +1,10 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { combineLatest, Subscription } from 'rxjs';
+import { Subscription } from 'rxjs';
 import { SpreadsheetDataService } from '@shared/services/spreadsheet-data.service';
 import { Worksheet } from '@shared/interfaces/worksheet';
 import { SlugifyPipe } from '@shared/pipes/slugify.pipe';
+import { switchMap, tap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-ball',
@@ -26,26 +27,33 @@ export class BallComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
 
-    this.subscriptions.push(combineLatest([
-        this.route.paramMap,
-        this.spreadsheetDataService.getSpreadsheetInformation()
-      ]).subscribe({
-        next: ([params, spreadsheetData]) => {
+    this.route.paramMap.pipe(
+      tap(params => this.worksheetTitle = params.get('worksheetTitle')),
+      switchMap(
+        () => {
+          return this.spreadsheetDataService.getSpreadsheetInformation()
+        }
+      )).subscribe(
+      {
+        next: (spreadsheetData) => {
 
-          this.worksheetTitle = params.get('worksheetTitle');
           this.worksheet = spreadsheetData.worksheets.filter(
             worksheet => this.slugifyPipe.transform(worksheet.title) === this.worksheetTitle
           )?.[0];
+          console.log('Www',this.worksheet);
 
         }
-      })
+      }
     );
+  }
 
+  trackBy(index, pokemon){
+    return index + pokemon.dex;
   }
 
   ngOnDestroy(): void {
-    for (let subscribtion of this.subscriptions) {
-      subscribtion.unsubscribe();
+    for (let subscription of this.subscriptions) {
+      subscription.unsubscribe();
     }
   }
 }
