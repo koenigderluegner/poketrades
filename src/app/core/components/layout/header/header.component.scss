@@ -4,9 +4,8 @@ app-header:host {
   height: 53px;
   padding: 0 3rem;
   width: 100%;
-  display: grid;
-  grid-template-columns: 320px 2fr;
-  grid-gap: 2rem;
+  display: flex;
+  justify-content: space-between;
 
   .App-title, .App-navigation ul {
     display: flex;
