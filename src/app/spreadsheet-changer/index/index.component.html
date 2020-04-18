@@ -1,1 +1,26 @@
-<p>index works!</p>
+<header class="view-header full-width">breedables</header>
+<aside class="view-sidebar">
+  <form (submit)="submitSearch()" [formGroup]="searchForm">
+    <label for="search">Spreadsheet ID</label>
+    <input id="search" formControlName="search">
+  </form>
+</aside>
+<div class="view-content">
+  <ng-container
+    *ngxSubscribe="let loadedSpreadsheet of loadedSpreadsheet$; beforeAny pendingTemplate onError errorTemplate">
+    {{loadedSpreadsheet.title}}
+  </ng-container>
+</div>
+
+
+<ng-template #pendingTemplate>
+  <div *ngIf="!submitted">
+    Enter a spreadsheet Id to load a spreadsheet
+  </div>
+  <div *ngIf="submitted">
+    Load spreadsheet
+  </div>
+</ng-template>
+<ng-template #errorTemplate let-error="error">Error: {{ error.message }}</ng-template>
+
+

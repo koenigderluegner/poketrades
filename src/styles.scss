@@ -48,6 +48,10 @@ a {
     font-weight: 700;
     font-size: 250%;
     letter-spacing: -1px;
+
+    &.full-width{
+      grid-column: 1 / span 2;
+    }
   }
 }
 
