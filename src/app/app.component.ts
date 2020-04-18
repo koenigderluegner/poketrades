@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { SpreadsheetService } from '@shared/services/spreadsheet.service';
+import { SpreadsheetService } from './spreadsheet/services/spreadsheet.service';
 import { map, switchMap, tap } from 'rxjs/operators';
-import { SpreadsheetDataService } from '@shared/services/spreadsheet-data.service';
-import { Worksheet } from '@shared/interfaces/worksheet';
-import { Spreadsheet } from '@shared/interfaces/spreadsheet';
+import { SpreadsheetDataService } from './spreadsheet/services/spreadsheet-data.service';
+import { Worksheet } from './spreadsheet/models/worksheet';
+import { Spreadsheet } from './spreadsheet/models/spreadsheet';
 import { NavigationEnd, Router } from '@angular/router';
 
 @Component({

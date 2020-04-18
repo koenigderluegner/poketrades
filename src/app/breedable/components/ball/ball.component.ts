@@ -1,8 +1,8 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { SpreadsheetDataService } from '@shared/services/spreadsheet-data.service';
-import { Worksheet } from '@shared/interfaces/worksheet';
+import { SpreadsheetDataService } from '../../../spreadsheet/services/spreadsheet-data.service';
+import { Worksheet } from '../../../spreadsheet/models/worksheet';
 import { SlugifyPipe } from '@shared/pipes/slugify.pipe';
 import { switchMap, tap } from 'rxjs/operators';
 

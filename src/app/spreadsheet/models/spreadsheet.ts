@@ -1,4 +1,4 @@
-import { Worksheet } from '@shared/interfaces/worksheet';
+import { Worksheet } from './worksheet';
 
 export interface Spreadsheet {
   id: string;

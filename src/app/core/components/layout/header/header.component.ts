@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { SpreadsheetDataService } from '@shared/services/spreadsheet-data.service';
-import { Spreadsheet } from '@shared/interfaces/spreadsheet';
+import { SpreadsheetDataService } from '../../../../spreadsheet/services/spreadsheet-data.service';
+import { Spreadsheet } from '../../../../spreadsheet/models/spreadsheet';
 
 @Component({
   selector: 'app-header',

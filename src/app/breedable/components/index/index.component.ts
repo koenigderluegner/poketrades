@@ -1,8 +1,8 @@
 import { Component, HostBinding, OnInit } from '@angular/core';
-import { SpreadsheetDataService } from '@shared/services/spreadsheet-data.service';
+import { SpreadsheetDataService } from '../../../spreadsheet/services/spreadsheet-data.service';
 import { Observable } from 'rxjs';
-import { Spreadsheet } from '@shared/interfaces/spreadsheet';
-import { Worksheet } from '@shared/interfaces/worksheet';
+import { Spreadsheet } from '../../../spreadsheet/models/spreadsheet';
+import { Worksheet } from '../../../spreadsheet/models/worksheet';
 
 @Component({
   selector: 'app-index',
