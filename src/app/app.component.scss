@@ -1,7 +1,7 @@
 $border-color: #1b2229;
 
 .Loading-wrapper {
-  background: #56738c;
+  background: linear-gradient(55deg, rgba(225, 230, 252, .3) 40%, rgba(212, 254, 252, .3) 80%), radial-gradient(circle, #fbf0fe 14%, #f2eff3 42%, #dbeffa 80%);
   position: absolute;
   top: 0;
   bottom: 0;
@@ -70,7 +70,7 @@ $border-color: #1b2229;
 
   .message {
     opacity: .8;
-    color: #fff;
+    color: #000;
     text-transform: uppercase;
     position: absolute;
     bottom: 7rem;
