@@ -24,13 +24,15 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
 
+
+    const nonIdRoutes = this.router.config.map(route => route.path);
     this.loadingMessage = 'Looking for spreadsheet id';
 
     let routerSub = this.router.events.subscribe((e) => {
       if (e instanceof NavigationEnd) {
         routerSub.unsubscribe();
         const id = e.url.split('/')?.[1];
-        if (id) {
+        if (id && !nonIdRoutes.includes(id)) {
           this.loadingMessage = 'Loading spreadsheet from Google API';
           const sub = this.spreadsheetFacade.loadSpreadsheet(id).subscribe({
             next: spreadsheet => {
@@ -45,6 +47,8 @@ export class AppComponent implements OnInit {
             }
           });
 
+        } else {
+          this.isLoading = false
         }
 
       }
