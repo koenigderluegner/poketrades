@@ -48,6 +48,9 @@ app-header:host {
     -webkit-transform: rotate(24deg);
     transform: rotate(24deg);
     z-index: -1;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
   }
 
   &:before {
