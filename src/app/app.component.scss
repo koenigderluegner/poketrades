@@ -7,77 +7,78 @@ $border-color: #1b2229;
   bottom: 0;
   left: 0;
   right: 0;
-}
 
-.top-color {
-  height: 200%;
-  transform: rotate(0deg);
-  transform-origin: center;
-  animation: rotationWithPause 5s infinite linear, colorChange 20s infinite;
-  background: linear-gradient(180deg, rgba(210, 30, 50, 1) 50%, rgba(0, 0, 0, 0) 50%);
-}
-
-
-.ball {
-  top: calc(50% - 75px);
-  left: calc(50% - 75px);
-  position: absolute;
-  transform: translate(-50%, -50%);
-  border: 6px solid transparent;
-  animation: rotation 5s linear infinite;
-  border-radius: 50%;
-  height: 150px;
-  width: 150px;
-  overflow: hidden;
-  background: rgba(207, 207, 207, 0.5);
-}
-
-.top, .bottom {
-  height: 50%;
-  overflow: hidden;
-}
+  .top-color {
+    height: 200%;
+    transform: rotate(0deg);
+    transform-origin: center;
+    animation: rotationWithPause 5s infinite linear, colorChange 20s infinite;
+    background: linear-gradient(180deg, rgba(210, 30, 50, 1) 50%, rgba(0, 0, 0, 0) 50%);
+  }
 
 
-.Button {
-  border: 7px solid $border-color;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  padding: 16px;
-  transform: translate(-50%, -50%);
-  border-radius: 50px;
-  background: #fff;
-}
+  .ball {
+    top: calc(50% - 75px);
+    left: calc(50% - 75px);
+    position: absolute;
+    transform: translate(-50%, -50%);
+    border: 6px solid transparent;
+    animation: rotation 5s linear infinite;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    overflow: hidden;
+    background: rgba(207, 207, 207, 0.5);
+  }
 
-.Line {
-  height: 6px;
-  background: $border-color;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 100%;
-}
-
-.bottom-color {
-  height: 200%;
-  transform: rotate(0deg);
-  transform-origin: top;
-  animation: rotationWithPause 5s infinite linear;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 50%);
+  .top, .bottom {
+    height: 50%;
+    overflow: hidden;
+  }
 
 
-}
+  .Button {
+    border: 7px solid $border-color;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    padding: 16px;
+    transform: translate(-50%, -50%);
+    border-radius: 50px;
+    background: #fff;
+  }
+
+  .Line {
+    height: 6px;
+    background: $border-color;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+  }
+
+  .bottom-color {
+    height: 200%;
+    transform: rotate(0deg);
+    transform-origin: top;
+    animation: rotationWithPause 5s infinite linear;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 50%);
 
 
-.message {
-  opacity: .8;
-  color: #fff;
-  text-transform: uppercase;
-  position: absolute;
-  bottom: 7rem;
-  left: 0;
-  width: 100%;
-  text-align: center;
+  }
+
+
+  .message {
+    opacity: .8;
+    color: #fff;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 7rem;
+    left: 0;
+    width: 100%;
+    text-align: center;
+  }
+
 }
 
 

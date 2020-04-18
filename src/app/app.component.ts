@@ -24,18 +24,18 @@ export class AppComponent implements OnInit {
     includeShinies: ['true', 'false']
   };
   isLoading: boolean = true;
+  loadingMessage: string;
 
 
   constructor(
     private spreadsheetService: SpreadsheetService,
     private spreadsheetDataService: SpreadsheetDataService,
     private router: Router) {
-    console.log('url', router.url);
-
-
   }
 
   ngOnInit(): void {
+
+    this.loadingMessage = 'Looking for spreadsheet id';
 
     let sub = this.router.events.subscribe((e) => {
       if (e instanceof NavigationEnd) {
@@ -47,6 +47,7 @@ export class AppComponent implements OnInit {
 
   loadStartupData(spreadsheetId: string) {
     if (spreadsheetId) {
+      this.loadingMessage = 'Loading spreadsheet from Google API';
       this.spreadsheetService.getSpreadsheet(spreadsheetId).pipe(
         tap(spreadsheet => {
           this.spreadsheetDataService.updateSpreadsheetInformation(spreadsheet);
@@ -54,6 +55,7 @@ export class AppComponent implements OnInit {
         }),
         switchMap(q => this.spreadsheetService.getWorksheets(q.id, q.worksheets.map(worksheet => worksheet.id))),
         map(worksheets => {
+          this.loadingMessage = 'Configuring spreadsheet details';
           let selectedWorksheet: Worksheet;
           for (const worksheet of worksheets) {
             selectedWorksheet = this.spreadsheet.worksheets.filter(ws => ws.title === worksheet.feed.title['$t'])?.[0];
@@ -63,7 +65,6 @@ export class AppComponent implements OnInit {
               selectedWorksheet.data = worksheet.feed.entry.slice(3); // first 3 rows contain meta data
               selectedWorksheet.data.pop(); // last row is empty, its a helper row in sheets
             }
-            console.log(worksheet.feed.title['$t']);
           }
 
           this.spreadsheet.hasBreedables = this.spreadsheet.worksheets.some(ws => ws.config?.type === 'Breedables');
