@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject, Observable, throwError } from 'rxjs';
 import { Spreadsheet } from './models/spreadsheet';
-import { map, switchMap, tap } from 'rxjs/operators';
+import { catchError, map, switchMap, tap } from 'rxjs/operators';
 import { Worksheet } from './models/worksheet';
 import { SpreadsheetService } from './services/spreadsheet.service';
 
@@ -71,8 +71,25 @@ export class SpreadsheetFacade {
         loadedSpreadsheet.hasValuables = loadedSpreadsheet.worksheets.some(ws => ws.config?.type === 'Valuables');
         this.updateIsLoading(false);
         return loadedSpreadsheet
+      }),
+      catchError((error) => {
+        console.log(error);
+        return throwError(this.convertApiErrors(error))
       })
     )
+  }
+
+  convertApiErrors(error) {
+    const newError = {
+      state: 'unknown',
+      message: null
+    };
+    switch (error.status) {
+      default:
+        newError.message = 'Unknown Error: please check the given ID and publish your sheet if not already.';
+        break;
+    }
+    return newError;
   }
 
 
@@ -117,7 +134,6 @@ export class SpreadsheetFacade {
       }
       configIndex++;
     }
-
     return config;
   }
 }
