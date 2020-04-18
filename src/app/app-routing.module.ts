@@ -3,8 +3,15 @@ import { Routes, RouterModule } from '@angular/router';
 
 
 const routes: Routes = [
-  {path: 'breedables', loadChildren: () => import('./breedable/breedable.module').then(m => m.BreedableModule)},
-  {path: 'valuables', loadChildren: () => import('./valuable/valuable.module').then(m => m.ValuableModule)}
+
+  {
+    path: ':spreadsheetId', children: [
+      {path: 'breedables', loadChildren: () => import('./breedable/breedable.module').then(m => m.BreedableModule)},
+      {path: 'valuables', loadChildren: () => import('./valuable/valuable.module').then(m => m.ValuableModule)}
+    ]
+  },
+
+
 ];
 
 @NgModule({

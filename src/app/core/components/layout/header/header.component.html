@@ -1,16 +1,17 @@
 <ng-container *ngIf="spreadsheetData">
   <div class="App-title">
-    {{spreadsheetData.title}}
+    {{spreadsheetData.title ? spreadsheetData.title:  'Pokétrades' }}
   </div>
 
   <nav class="App-navigation">
     <div class="nav-wrapper">
       <ul>
         <li *ngIf="spreadsheetData.hasBreedables">
-          <a routerLinkActive="selected" [routerLink]="['/breedables', spreadsheetData.id, breedablesLink | slugify]">Breedables</a>
+          <a routerLinkActive="selected"
+             [routerLink]="['/'+ spreadsheetData.id,'breedables', breedablesLink | slugify]">Breedables</a>
         </li>
         <li *ngIf="spreadsheetData.hasValuables">
-          <a routerLinkActive="selected" [routerLink]="['/valuables',  spreadsheetData.id, valuablesLink | slugify]">Valuables</a>
+          <a routerLinkActive="selected" [routerLink]="['/'+ spreadsheetData.id,'valuables', valuablesLink | slugify]">Valuables</a>
         </li>
       </ul>
     </div>

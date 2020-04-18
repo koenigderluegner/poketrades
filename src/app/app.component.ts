@@ -4,6 +4,7 @@ import { map, switchMap, tap } from 'rxjs/operators';
 import { SpreadsheetDataService } from '@shared/services/spreadsheet-data.service';
 import { Worksheet } from '@shared/interfaces/worksheet';
 import { Spreadsheet } from '@shared/interfaces/spreadsheet';
+import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -25,43 +26,57 @@ export class AppComponent implements OnInit {
   isLoading: boolean = true;
 
 
-  constructor(private spreadsheetService: SpreadsheetService, private spreadsheetDataService: SpreadsheetDataService) {
+  constructor(
+    private spreadsheetService: SpreadsheetService,
+    private spreadsheetDataService: SpreadsheetDataService,
+    private router: Router) {
+    console.log('url', router.url);
+
+
   }
 
   ngOnInit(): void {
-    this.loadStartupData()
+    this.router.events.subscribe((e) => {
+      if (e instanceof NavigationEnd) {
+        this.loadStartupData(e.url.split('/')[1]);
+      }
+    });
   }
 
-  loadStartupData() {
-    this.spreadsheetService.getSpreadsheet('17KmYOvREddg0SpBGbATH7I15C4JsDfzl-07pnABTueE').pipe(
-      tap(spreadsheet => {
-        this.spreadsheetDataService.updateSpreadsheetInformation(spreadsheet);
-        this.spreadsheet = spreadsheet;
-      }),
-      switchMap(q => this.spreadsheetService.getWorksheets(q.id, q.worksheets.map(worksheet => worksheet.id))),
-      map(worksheets => {
-        let selectedWorksheet: Worksheet;
-        for (const worksheet of worksheets) {
-          selectedWorksheet = this.spreadsheet.worksheets.filter(ws => ws.title === worksheet.feed.title['$t'])?.[0];
+  loadStartupData(spreadsheetId: string) {
+    if (spreadsheetId) {
+      this.spreadsheetService.getSpreadsheet(spreadsheetId).pipe(
+        tap(spreadsheet => {
+          this.spreadsheetDataService.updateSpreadsheetInformation(spreadsheet);
+          this.spreadsheet = spreadsheet;
+        }),
+        switchMap(q => this.spreadsheetService.getWorksheets(q.id, q.worksheets.map(worksheet => worksheet.id))),
+        map(worksheets => {
+          let selectedWorksheet: Worksheet;
+          for (const worksheet of worksheets) {
+            selectedWorksheet = this.spreadsheet.worksheets.filter(ws => ws.title === worksheet.feed.title['$t'])?.[0];
 
-          selectedWorksheet.config = this.getWorksheetConfig(worksheet);
-          if (selectedWorksheet) {
-            selectedWorksheet.data = worksheet.feed.entry.slice(3); // first 3 rows contain meta data
-            selectedWorksheet.data.pop(); // last row is empty, its a helper row in sheets
+            selectedWorksheet.config = this.getWorksheetConfig(worksheet);
+            if (selectedWorksheet) {
+              selectedWorksheet.data = worksheet.feed.entry.slice(3); // first 3 rows contain meta data
+              selectedWorksheet.data.pop(); // last row is empty, its a helper row in sheets
+            }
+            console.log(worksheet.feed.title['$t']);
           }
-          console.log(worksheet.feed.title['$t']);
-        }
 
-        this.spreadsheet.hasBreedables = this.spreadsheet.worksheets.some(ws => ws.config?.type === 'Breedables');
-        this.spreadsheet.hasValuables = this.spreadsheet.worksheets.some(ws => ws.config?.type === 'Valuables');
+          this.spreadsheet.hasBreedables = this.spreadsheet.worksheets.some(ws => ws.config?.type === 'Breedables');
+          this.spreadsheet.hasValuables = this.spreadsheet.worksheets.some(ws => ws.config?.type === 'Valuables');
 
-        this.spreadsheetDataService.updateSpreadsheetInformation(this.spreadsheet);
+          this.spreadsheetDataService.updateSpreadsheetInformation(this.spreadsheet);
 
-        this.isLoading = false;
+          this.isLoading = false;
+        })
+      ).subscribe({
+        error: error => console.log('error: ', error)
       })
-    ).subscribe({
-      error: error => console.log('error: ', error)
-    })
+    } else {
+      this.router.navigate(['/']).then(() => this.isLoading = false);
+    }
   }
 
 
