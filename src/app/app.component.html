@@ -1,4 +1,4 @@
-<div *ngIf="isLoading" class="Loading-wrapper">
+<div *ngIf="isLoading" [class.pause-animation]="errored" class="Loading-wrapper">
   <div class="ball">
     <div class="top">
       <div class="top-color"></div>

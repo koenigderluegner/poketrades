@@ -79,6 +79,13 @@ $border-color: #1b2229;
     text-align: center;
   }
 
+
+  &.pause-animation {
+    .ball, .top-color, .bottom-color {
+      animation-play-state: paused;
+    }
+  }
+
 }
 
 
