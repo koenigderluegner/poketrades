@@ -20,7 +20,8 @@
     ],
     "paths": {
       "@core/*": ["src/app/core/*"],
-      "@shared/*": ["src/app/shared/*"]
+      "@shared/*": ["src/app/shared/*"],
+      "@spreadsheet/*": ["src/app/spreadsheet/*"]
     }
   },
   "angularCompilerOptions": {
