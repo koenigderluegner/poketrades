@@ -151,6 +151,10 @@ export class SpreadsheetFacade {
     return config;
   }
 
+  getSpreadsheetHistory$() {
+    return this._searchHistory;
+  }
+
   private saveToHistory(spreadsheet: Spreadsheet) {
     const history = JSON.parse(localStorage.getItem('spreadsheetHistory'));
     const entryIndex = history.findIndex(sheet => sheet.id === spreadsheet.id);
@@ -164,5 +168,6 @@ export class SpreadsheetFacade {
       saveDate: new Date().toTimeString()
     });
     localStorage.setItem('spreadsheetHistory', JSON.stringify(history));
+    this._searchHistory.next(history);
   }
 }

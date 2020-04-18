@@ -4,6 +4,12 @@
     <label for="search">Spreadsheet ID</label>
     <input id="search" formControlName="search">
   </form>
+  <ul>
+    <li *ngFor="let historyEntry of spreadsheetHistory$ | async; trackBy: trackBy"
+        (click)="fromHistory(historyEntry.id)">
+      {{historyEntry.title}}
+    </li>
+  </ul>
 </aside>
 <div class="view-content">
   <ng-container
@@ -15,10 +21,10 @@
 
 
 <ng-template #pendingTemplate>
-  <div *ngIf="!submitted">
+  <div *ngIf="!hasRequested">
     Enter a spreadsheet Id to load a spreadsheet
   </div>
-  <div *ngIf="submitted">
+  <div *ngIf="hasRequested">
     Load spreadsheet
   </div>
 </ng-template>

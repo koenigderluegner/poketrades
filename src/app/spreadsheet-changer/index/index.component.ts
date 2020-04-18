@@ -13,10 +13,12 @@ import { SpreadsheetFacade } from '@spreadsheet/spreadsheet.facade';
 export class IndexComponent implements OnInit {
 
   searchForm: FormGroup;
-  submitted = false;
+  hasRequested = false;
 
   loadedSpreadsheet$: Observable<Spreadsheet>;
   isLoading$: Observable<boolean>;
+
+  spreadsheetHistory$: Observable<any[]>;
 
   constructor(private spreadsheetFacade: SpreadsheetFacade) {
   }
@@ -26,14 +28,25 @@ export class IndexComponent implements OnInit {
       search: new FormControl('')
     });
     this.isLoading$ = this.spreadsheetFacade.isLoading$();
+    this.spreadsheetHistory$ = this.spreadsheetFacade.getSpreadsheetHistory$();
   }
 
   submitSearch() {
-    this.submitted = true;
+    this.hasRequested = true;
     this.loadedSpreadsheet$ = this.spreadsheetFacade.searchSpreadsheet(this.searchForm.controls.search.value)
   }
 
-  saveSpreadsheet(spreadsheet: Spreadsheet){
+  saveSpreadsheet(spreadsheet: Spreadsheet) {
     this.spreadsheetFacade.updateCurrentSpreadsheet(spreadsheet)
+  }
+
+  fromHistory(id: any) {
+    this.hasRequested = true;
+    this.loadedSpreadsheet$ = this.spreadsheetFacade.loadSpreadsheet(id)
+
+  }
+
+  trackBy(index, item){
+    return item.id
   }
 }
