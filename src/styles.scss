@@ -42,11 +42,17 @@ a {
   grid-template-columns: 320px 2fr;
   grid-gap: 2rem;
 
-  .view-header{
+  .view-header {
     text-transform: uppercase;
     color: #000;
     font-weight: 700;
     font-size: 250%;
     letter-spacing: -1px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .view {
+    grid-template-columns: 1fr;
   }
 }
