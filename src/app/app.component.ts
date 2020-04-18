@@ -36,9 +36,11 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.router.events.subscribe((e) => {
+
+    let sub = this.router.events.subscribe((e) => {
       if (e instanceof NavigationEnd) {
         this.loadStartupData(e.url.split('/')[1]);
+        sub.unsubscribe();
       }
     });
   }
