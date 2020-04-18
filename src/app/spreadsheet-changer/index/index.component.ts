@@ -30,7 +30,7 @@ export class IndexComponent implements OnInit {
 
   submitSearch() {
     this.submitted = true;
-    this.loadedSpreadsheet$ = this.spreadsheetFacade.loadSpreadsheet(this.searchForm.controls.search.value)
+    this.loadedSpreadsheet$ = this.spreadsheetFacade.searchSpreadsheet(this.searchForm.controls.search.value)
   }
 
   saveSpreadsheet(spreadsheet: Spreadsheet){
