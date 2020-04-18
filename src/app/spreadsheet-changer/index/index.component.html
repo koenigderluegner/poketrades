@@ -9,6 +9,7 @@
   <ng-container
     *ngxSubscribe="let loadedSpreadsheet of loadedSpreadsheet$; beforeAny pendingTemplate onError errorTemplate">
     {{loadedSpreadsheet.title}}
+    <button (click)="saveSpreadsheet(loadedSpreadsheet)">Save</button>
   </ng-container>
 </div>
 
