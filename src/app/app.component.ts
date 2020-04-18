@@ -12,9 +12,10 @@ export class AppComponent implements OnInit {
 
   spreadsheet: Spreadsheet;
 
-  isLoading: boolean = true;
+  isLoading: boolean = false;
   loadingMessage: string;
   errored: boolean = false;
+  waitingForRouter = true;
 
 
   constructor(
@@ -26,13 +27,14 @@ export class AppComponent implements OnInit {
 
 
     const nonIdRoutes = this.router.config.map(route => route.path);
-    this.loadingMessage = 'Looking for spreadsheet id';
 
     let routerSub = this.router.events.subscribe((e) => {
       if (e instanceof NavigationEnd) {
         routerSub.unsubscribe();
         const id = e.url.split('/')?.[1];
         if (id && !nonIdRoutes.includes(id)) {
+          this.isLoading = true;
+          this.waitingForRouter = false;
           this.loadingMessage = 'Loading spreadsheet from Google API';
           const sub = this.spreadsheetFacade.loadSpreadsheet(id).subscribe({
             next: spreadsheet => {
@@ -48,7 +50,9 @@ export class AppComponent implements OnInit {
           });
 
         } else {
-          this.isLoading = false
+          this.isLoading = false;
+          this.waitingForRouter = false;
+
         }
 
       }

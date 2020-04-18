@@ -1,4 +1,4 @@
-<div *ngIf="isLoading" [class.pause-animation]="errored" class="Loading-wrapper">
+<div *ngIf="isLoading && !waitingForRouter" [class.pause-animation]="errored" class="Loading-wrapper">
   <div class="ball">
     <div class="top">
       <div class="top-color"></div>
@@ -12,5 +12,7 @@
   </div>
   <span class="message">{{loadingMessage}}</span>
 </div>
-<app-header></app-header>
-<router-outlet></router-outlet>
+<ng-container *ngIf="!isLoading && !waitingForRouter">
+  <app-header></app-header>
+  <router-outlet></router-outlet>
+</ng-container>
