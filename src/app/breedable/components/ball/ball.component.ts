@@ -1,10 +1,10 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { SpreadsheetDataService } from '../../../spreadsheet/services/spreadsheet-data.service';
-import { Worksheet } from '../../../spreadsheet/models/worksheet';
+import { Worksheet } from '@spreadsheet/models/worksheet';
 import { SlugifyPipe } from '@shared/pipes/slugify.pipe';
 import { switchMap, tap } from 'rxjs/operators';
+import { SpreadsheetFacade } from '@spreadsheet/spreadsheet.facade';
 
 @Component({
   selector: 'app-ball',
@@ -19,7 +19,7 @@ export class BallComponent implements OnInit, OnDestroy {
   subscriptions: Subscription[] = [];
 
   constructor(
-    private spreadsheetDataService: SpreadsheetDataService,
+    private spreadsheetFacade: SpreadsheetFacade,
     private route: ActivatedRoute,
     private slugifyPipe: SlugifyPipe
   ) {
@@ -31,7 +31,7 @@ export class BallComponent implements OnInit, OnDestroy {
       tap(params => this.worksheetTitle = params.get('worksheetTitle')),
       switchMap(
         () => {
-          return this.spreadsheetDataService.getSpreadsheetInformation()
+          return this.spreadsheetFacade.getCurrentSpreadsheet$()
         }
       )).subscribe(
       {

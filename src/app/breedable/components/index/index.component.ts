@@ -1,8 +1,8 @@
 import { Component, HostBinding, OnInit } from '@angular/core';
-import { SpreadsheetDataService } from '../../../spreadsheet/services/spreadsheet-data.service';
 import { Observable } from 'rxjs';
-import { Spreadsheet } from '../../../spreadsheet/models/spreadsheet';
-import { Worksheet } from '../../../spreadsheet/models/worksheet';
+import { Spreadsheet } from '@spreadsheet/models/spreadsheet';
+import { Worksheet } from '@spreadsheet/models/worksheet';
+import { SpreadsheetFacade } from '@spreadsheet/spreadsheet.facade';
 
 @Component({
   selector: 'app-index',
@@ -18,11 +18,11 @@ export class IndexComponent implements OnInit {
   spreadsheetId: string;
   worksheets: Worksheet[];
 
-  constructor(private spreadsheetDataService: SpreadsheetDataService) {
+  constructor(private spreadsheetFacade: SpreadsheetFacade) {
   }
 
   ngOnInit(): void {
-    this.spreadsheetData$ = this.spreadsheetDataService.getSpreadsheetInformation();
+    this.spreadsheetData$ = this.spreadsheetFacade.getCurrentSpreadsheet$();
 
     this.spreadsheetData$.subscribe({
       next: spreadsheet => {

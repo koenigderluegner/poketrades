@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { SpreadsheetDataService } from '../../../../spreadsheet/services/spreadsheet-data.service';
-import { Spreadsheet } from '../../../../spreadsheet/models/spreadsheet';
+import { Spreadsheet } from '@spreadsheet/models/spreadsheet';
+import { SpreadsheetFacade } from '@spreadsheet/spreadsheet.facade';
 
 @Component({
   selector: 'app-header',
@@ -14,11 +14,11 @@ export class HeaderComponent implements OnInit {
   breedablesLink: string;
   valuablesLink: string;
 
-  constructor(private spreadsheetDataService: SpreadsheetDataService) {
+  constructor(private spreadsheetFacade: SpreadsheetFacade) {
   }
 
   ngOnInit(): void {
-    this.spreadsheetDataService.getSpreadsheetInformation().subscribe({
+    this.spreadsheetFacade.getCurrentSpreadsheet$().subscribe({
       next: spreadsheetData => {
         this.spreadsheetData = spreadsheetData;
         if (this.spreadsheetData.hasValuables) {
