@@ -15,7 +15,8 @@ import { BallGuyBubbleComponent } from './components/ball-guy-bubble/ball-guy-bu
     SlugifyPipe,
     SubNaviItemComponent,
     CastBreedablePipe,
-    CastValuablePipe
+    CastValuablePipe,
+    BallGuyBubbleComponent
   ],
   imports: [
     CommonModule,

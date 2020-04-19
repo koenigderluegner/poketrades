@@ -1,0 +1,26 @@
+:host {
+  padding-left: 115px;
+  background: url('/assets/images/ball-guy-face.png') top left no-repeat;
+  min-height: 110px;
+  display: block;
+
+  .speech-bubble {
+    display: block;
+    width: 100%;
+    min-height: 80px;
+    padding: 12px;
+    border-radius: 8px;
+    background: #fff;
+    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, .5));
+
+    &:after {
+      content: '';
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      border-right: 10px solid #ffffff;
+      position: absolute;
+      left: -10px;
+      top: 40px;
+    }
+  }
+}
