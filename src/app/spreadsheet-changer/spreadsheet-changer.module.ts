@@ -4,6 +4,7 @@ import { IndexComponent } from './index/index.component';
 import { SpreadsheetChangerRoutingModule } from './spreadsheet-changer-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgxStructuralsModule } from '@tngtech/ngx-structurals';
+import { SharedModule } from '@shared/shared.module';
 
 
 
@@ -13,7 +14,8 @@ import { NgxStructuralsModule } from '@tngtech/ngx-structurals';
     CommonModule,
     SpreadsheetChangerRoutingModule,
     ReactiveFormsModule,
-    NgxStructuralsModule
+    NgxStructuralsModule,
+    SharedModule
   ]
 })
 export class SpreadsheetChangerModule { }

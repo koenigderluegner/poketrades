@@ -34,7 +34,9 @@
 
 <ng-template #pendingTemplate>
   <div *ngIf="!hasRequested">
-    Enter a spreadsheet Id to load a spreadsheet
+    <app-ball-guy-bubble>
+      Enter a spreadsheet Id to load a spreadsheet
+    </app-ball-guy-bubble>
   </div>
   <div *ngIf="hasRequested">
     Load spreadsheet
