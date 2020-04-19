@@ -49,10 +49,24 @@ a {
     font-size: 250%;
     letter-spacing: -1px;
 
-    &.full-width{
+    &.full-width {
       grid-column: 1 / span 2;
     }
   }
+
+  .view-subheader {
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  .view-subheader ~ .view-subheader{
+    margin-top: 30px;
+  }
+
+
 }
 
 @media screen and (max-width: 720px) {

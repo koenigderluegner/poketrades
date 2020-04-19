@@ -1,11 +1,15 @@
 <header class="view-header full-width">Change spreadsheet</header>
 <aside class="view-sidebar">
+  <div class="view-subheader">Spreadsheet search</div>
   <form (submit)="submitSearch()" [formGroup]="searchForm">
-    <label for="search">Spreadsheet ID</label>
-    <input id="search" formControlName="search">
+    <input id="search" formControlName="search" placeholder="Look up spreadsheet by id">
   </form>
+
+  <div class="view-subheader">
+    search history
+  </div>
   <ul>
-    <li *ngFor="let historyEntry of spreadsheetHistory$ | async; trackBy: trackBy"
+    <li class="history-entry" *ngFor="let historyEntry of spreadsheetHistory$ | async; trackBy: trackBy"
         (click)="fromHistory(historyEntry.id)">
       {{historyEntry.title}}
     </li>
