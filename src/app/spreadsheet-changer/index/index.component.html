@@ -18,8 +18,16 @@
 <div class="view-content">
   <ng-container
     *ngxSubscribe="let loadedSpreadsheet of loadedSpreadsheet$; beforeAny pendingTemplate onError errorTemplate">
-    {{loadedSpreadsheet.title}}
-    <button (click)="saveSpreadsheet(loadedSpreadsheet)">Save</button>
+    <div class="view-subheader">{{loadedSpreadsheet.title}}</div>
+    <div *ngIf="loadedSpreadsheet.hasValuables">
+      Contains valuables.
+    </div>
+    <div *ngIf="loadedSpreadsheet.hasBreedables">
+      Contains breedables.
+    </div>
+    <div class="button-row">
+      <button class="save-button" (click)="saveSpreadsheet(loadedSpreadsheet)">Save as current spreadsheet</button>
+    </div>
   </ng-container>
 </div>
 

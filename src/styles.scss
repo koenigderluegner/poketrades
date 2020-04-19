@@ -69,6 +69,10 @@ a {
 
 }
 
+.button-row{
+  padding: 16px 0;
+}
+
 @media screen and (max-width: 720px) {
   .view {
     grid-template-columns: 1fr;
