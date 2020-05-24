@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PokemonComponent } from './pokemon/pokemon.component';
+import {ObserversModule} from '@angular/cdk/observers';
 
 
 
@@ -10,7 +11,8 @@ import { PokemonComponent } from './pokemon/pokemon.component';
     PokemonComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ObserversModule
   ]
 })
 export class IconModule { }
