@@ -6,11 +6,12 @@ import { GridItemComponent } from './grid-item/grid-item.component';
 import { IconModule } from '../icon/icon.module';
 import { SharedModule } from '@shared/shared.module';
 import { NormalComponent } from './normal/normal.component';
+import { DetailedComponent } from './detailed/detailed.component';
 
 
 
 @NgModule({
-  declarations: [MinimalComponent, GridComponent, GridItemComponent, NormalComponent],
+  declarations: [MinimalComponent, GridComponent, GridItemComponent, NormalComponent, DetailedComponent],
   exports: [
     GridComponent,
     GridItemComponent
