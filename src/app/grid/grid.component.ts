@@ -46,6 +46,10 @@ export class GridComponent implements OnInit, AfterContentInit {
 
   }
 
+  trackByFn(item, index){
+    return item.pokemon?.name;
+  }
+
   ngOnInit(): void {
   }
 
