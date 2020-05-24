@@ -4,4 +4,5 @@ export interface Pokemon {
   ability: string;
   iconSlug: string;
   hasHiddenAbility: boolean;
+  isOwned?: boolean;
 }

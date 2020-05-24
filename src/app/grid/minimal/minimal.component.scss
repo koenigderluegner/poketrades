@@ -15,6 +15,10 @@
       margin-left: -14px;
       flex-basis: 40px;
       margin-top: -16px;
+
+      &.inactive .pkspr {
+        filter: grayscale(1) opacity(0.2);
+      }
     }
   }
 }
