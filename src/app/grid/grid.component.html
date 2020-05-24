@@ -4,6 +4,12 @@
       <ng-container *ngSwitchCase="'minimal'">
         <app-minimal [pokemon]="item.pokemon"></app-minimal>
       </ng-container>
+      <ng-container *ngSwitchCase="'normal'">
+        <app-normal [pokemon]="item.pokemon"></app-normal>
+      </ng-container>
+      <ng-container *ngSwitchCase="'detailed'">
+        <app-detailed [pokemon]="item.pokemon"></app-detailed>
+      </ng-container>
     </ng-container>
   </ng-container>
 </ng-container>

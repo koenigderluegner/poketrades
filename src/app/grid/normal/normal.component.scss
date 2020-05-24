@@ -1,0 +1,58 @@
+.grid.normal {
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 15px;
+
+  .grid-item {
+    line-height: 20px;
+    color: #000;
+    background: rgb(255, 255, 255);
+    border-radius: 42px;
+    margin: 0;
+    height: auto;
+    display: grid;
+    grid-template-columns: 68px 1fr 68px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .4);
+
+    .inactive {
+      color: rgba(0, 0, 0, .3);
+
+      .icon-wrapper {
+        filter: grayscale(1) opacity(0.2);
+      }
+    }
+
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .grid.normal {
+    grid-template-columns: 1fr;
+  }
+}
+
+.icon-wrapper {
+  position: relative;
+  height: 56px;
+  width: 68px;
+
+  img {
+    position: absolute;
+    left: 14px;
+    bottom: 5px;
+    width: 40px;
+    opacity: .3;
+  }
+
+  .icon {
+    position: absolute;
+    bottom: 8px;
+  }
+
+  .item {
+    position: absolute;
+    bottom: 0;
+    right: 2px;
+  }
+}
