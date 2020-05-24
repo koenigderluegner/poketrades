@@ -77,7 +77,7 @@ export class SpreadsheetFacade {
           selectedWorksheet.config = this.getWorksheetConfig(worksheet);
           if (selectedWorksheet) {
             selectedWorksheet.data = worksheet.feed.entry.slice(3); // first 3 rows contain meta data
-            selectedWorksheet.data.pop(); // last row is empty, its a helper row in sheets
+            selectedWorksheet.data = selectedWorksheet.data.filter(pokemon => pokemon['gsx$name']['$t']);
           }
         }
 
