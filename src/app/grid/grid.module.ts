@@ -8,6 +8,7 @@ import { SharedModule } from '@shared/shared.module';
 import { NormalComponent } from './normal/normal.component';
 import { DetailedComponent } from './detailed/detailed.component';
 import { ChangerComponent } from './changer/changer.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -15,12 +16,14 @@ import { ChangerComponent } from './changer/changer.component';
   declarations: [MinimalComponent, GridComponent, GridItemComponent, NormalComponent, DetailedComponent, ChangerComponent],
   exports: [
     GridComponent,
-    GridItemComponent
+    GridItemComponent,
+    ChangerComponent
   ],
   imports: [
     CommonModule,
     IconModule,
-    SharedModule
+    SharedModule,
+    ReactiveFormsModule
   ]
 })
 export class GridModule { }

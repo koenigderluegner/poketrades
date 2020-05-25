@@ -54,6 +54,11 @@ a {
     }
   }
 
+  .view-addional-content {
+    display: flex;
+    align-items: center;
+  }
+
   .view-subheader {
     font-size: 20px;
     font-weight: 500;
@@ -62,14 +67,14 @@ a {
     display: block;
   }
 
-  .view-subheader ~ .view-subheader{
+  .view-subheader ~ .view-subheader {
     margin-top: 30px;
   }
 
 
 }
 
-.button-row{
+.button-row {
   padding: 16px 0;
 }
 

@@ -1,0 +1,39 @@
+$grid-changer-height: 24px;
+
+.grid-changer {
+  background: #fff;
+  color: #000;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 1);
+  display: flex;
+  width: fit-content;
+  height: ($grid-changer-height + 3px);
+
+  .grid-changer-option {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  input {
+    display: none;
+  }
+
+  .material-icons {
+    padding: 3px;
+  }
+
+  .label {
+    padding: 3px;
+    display: none;
+    width: 85px;
+    height: ($grid-changer-height + 6px);
+  }
+
+  input:checked ~ .label, input:checked ~ .material-icons {
+    background: #313330;
+    color: #fff;
+    display: inline-block;
+  }
+}
+
+
+
