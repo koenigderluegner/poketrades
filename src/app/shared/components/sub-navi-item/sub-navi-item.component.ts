@@ -9,6 +9,7 @@ export class SubNaviItemComponent implements OnInit {
 
   @Input() text: string;
   @Input() link: any[];
+  @Input() meta: string;
 
   constructor() { }
 

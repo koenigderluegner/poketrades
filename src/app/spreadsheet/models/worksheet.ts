@@ -6,4 +6,5 @@ export interface Worksheet {
   updated: Date;
   config?: any;
   data?: Pokemon[];
+  ownedEntries?: number;
 }

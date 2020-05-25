@@ -78,6 +78,7 @@ export class SpreadsheetFacade {
           if (selectedWorksheet) {
             selectedWorksheet.data = worksheet.feed.entry.slice(3); // first 3 rows contain meta data
             selectedWorksheet.data = selectedWorksheet.data.filter(pokemon => pokemon['gsx$name']['$t']);
+            selectedWorksheet.ownedEntries = selectedWorksheet.data.filter(pokemon => pokemon['gsx$owned']?.['$t'] === 'x').length
           }
         }
 
