@@ -7,11 +7,12 @@ import { IconModule } from '../icon/icon.module';
 import { SharedModule } from '@shared/shared.module';
 import { NormalComponent } from './normal/normal.component';
 import { DetailedComponent } from './detailed/detailed.component';
+import { ChangerComponent } from './changer/changer.component';
 
 
 
 @NgModule({
-  declarations: [MinimalComponent, GridComponent, GridItemComponent, NormalComponent, DetailedComponent],
+  declarations: [MinimalComponent, GridComponent, GridItemComponent, NormalComponent, DetailedComponent, ChangerComponent],
   exports: [
     GridComponent,
     GridItemComponent
