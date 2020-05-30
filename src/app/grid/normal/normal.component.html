@@ -1,17 +1,10 @@
-  <div class="icon-wrapper">
-
-    <div class="icon">
-      <app-pokemon>{{pokemon.iconSlug}}</app-pokemon>
-    </div>
-    <div class="item">
-      <span class="pkspr ball-friend"></span>
-    </div>
-
+<div class="icon-wrapper">
+  <img class="icon-foundation" src="/assets/images/pokesprite-pokeball.svg" alt="">
+  <div class="icon">
+    <app-pokemon>{{pokemon?.iconSlug}}</app-pokemon>
   </div>
-  <div class="information">
-    <div>{{pokemon.name}}</div>
-    <div>{{pokemon.ability}}</div>
-  </div>
-  <div class="meta-wrapper">
-    <div class="icon"></div>
-  </div>
+</div>
+<div class="information">
+  <div>{{pokemon?.name}}</div>
+  <div>{{pokemon?.ability}}</div>
+</div>

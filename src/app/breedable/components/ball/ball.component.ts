@@ -46,8 +46,6 @@ export class BallComponent implements OnInit, OnDestroy {
           this.worksheet = spreadsheetData.worksheets.filter(
             worksheet => this.slugifyPipe.transform(worksheet.title) === this.worksheetTitle
           )?.[0];
-          console.log('Www',this.worksheet);
-
         }
       }
     );
