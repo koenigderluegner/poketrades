@@ -1,4 +1,5 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output, ViewEncapsulation } from '@angular/core';
+import { GridAppearanceType } from '../grid-appearance.type';
 
 @Component({
   selector: 'app-changer',
@@ -9,9 +10,15 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 })
 export class ChangerComponent implements OnInit {
 
-  constructor() { }
+  @Output() selectionChanged: EventEmitter<GridAppearanceType> = new EventEmitter();
+
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
 
+  emitChange($event: Event) {
+    this.selectionChanged.emit(($event.target as HTMLInputElement).defaultValue as GridAppearanceType);
+  }
 }
