@@ -17,7 +17,7 @@ export class GridService {
     return this.gridAppearance.asObservable();
   }
 
-  updateGridAppearance$(gridAppearanceType: GridAppearanceType): void {
+  updateGridAppearance(gridAppearanceType: GridAppearanceType): void {
     this.gridAppearance.next(gridAppearanceType);
   }
 

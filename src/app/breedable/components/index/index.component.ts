@@ -3,6 +3,8 @@ import { Observable } from 'rxjs';
 import { Spreadsheet } from '@spreadsheet/models/spreadsheet';
 import { Worksheet } from '@spreadsheet/models/worksheet';
 import { SpreadsheetFacade } from '@spreadsheet/spreadsheet.facade';
+import { GridAppearanceType } from '../../../grid/grid-appearance.type';
+import { GridService } from '../../../grid/services/grid.service';
 
 @Component({
   selector: 'app-index',
@@ -18,7 +20,10 @@ export class IndexComponent implements OnInit {
   spreadsheetId: string;
   worksheets: Worksheet[];
 
-  constructor(private spreadsheetFacade: SpreadsheetFacade) {
+  constructor(
+    private spreadsheetFacade: SpreadsheetFacade,
+    private gridService: GridService
+  ) {
   }
 
   ngOnInit(): void {
@@ -32,4 +37,7 @@ export class IndexComponent implements OnInit {
     })
   }
 
+  changeGrid(appearance: GridAppearanceType) {
+    this.gridService.updateGridAppearance(appearance);
+  }
 }

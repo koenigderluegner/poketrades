@@ -6,16 +6,18 @@ import { BallComponent } from './components/ball/ball.component';
 import { SharedModule } from '@shared/shared.module';
 import { GridModule } from '../grid/grid.module';
 import { SlugifyPipe } from '@shared/pipes/slugify.pipe';
+import { NgxStructuralsModule } from '@tngtech/ngx-structurals';
 
 
 @NgModule({
   declarations: [IndexComponent, BallComponent],
-  imports: [
-    CommonModule,
-    BreedableRoutingModule,
-    SharedModule,
-    GridModule
-  ],
+    imports: [
+        CommonModule,
+        BreedableRoutingModule,
+        SharedModule,
+        GridModule,
+        NgxStructuralsModule
+    ],
   providers: [SlugifyPipe]
 })
 export class BreedableModule {

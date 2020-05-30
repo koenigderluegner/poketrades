@@ -1,6 +1,6 @@
 <header class="view-header">breedables</header>
 <div class="view-addional-content">
-  <app-changer></app-changer>
+  <app-changer (selectionChanged)="changeGrid($event)"></app-changer>
 </div>
 <aside class="view-sidebar">
   <ul class="sub-navi" *ngIf="worksheets">
