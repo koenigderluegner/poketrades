@@ -8,9 +8,14 @@ import { CastValuablePipe } from './pipes/cast-valuable.pipe';
 import { BallGuyBubbleComponent } from './components/ball-guy-bubble/ball-guy-bubble.component';
 
 
-
 @NgModule({
-  declarations: [SlugifyPipe, SubNaviItemComponent, CastBreedablePipe, CastValuablePipe, BallGuyBubbleComponent],
+  declarations: [
+    SlugifyPipe,
+    SubNaviItemComponent,
+    CastBreedablePipe,
+    CastValuablePipe,
+    BallGuyBubbleComponent
+  ],
   exports: [
     SlugifyPipe,
     SubNaviItemComponent,
@@ -23,4 +28,5 @@ import { BallGuyBubbleComponent } from './components/ball-guy-bubble/ball-guy-bu
     RouterModule
   ]
 })
-export class SharedModule { }
+export class SharedModule {
+}

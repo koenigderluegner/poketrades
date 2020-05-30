@@ -42,7 +42,6 @@ export class BallComponent implements OnInit, OnDestroy {
       )).subscribe(
       {
         next: (spreadsheetData) => {
-
           this.worksheet = spreadsheetData.worksheets.filter(
             worksheet => this.slugifyPipe.transform(worksheet.title) === this.worksheetTitle
           )?.[0];

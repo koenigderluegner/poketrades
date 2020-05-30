@@ -1,6 +1,10 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { BallComponent } from './ball.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+import { SlugifyPipe } from '@shared/pipes/slugify.pipe';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 describe('BallComponent', () => {
   let component: BallComponent;
@@ -8,9 +12,14 @@ describe('BallComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BallComponent ]
+      imports: [HttpClientTestingModule, RouterTestingModule],
+      declarations: [BallComponent],
+      providers: [
+        SlugifyPipe
+      ],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

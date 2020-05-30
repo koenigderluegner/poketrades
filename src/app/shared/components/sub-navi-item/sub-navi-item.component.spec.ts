@@ -1,6 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SubNaviItemComponent } from './sub-navi-item.component';
+import { CommonModule } from '@angular/common';
+import { SharedModule } from '@shared/shared.module';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('SubNaviItemComponent', () => {
   let component: SubNaviItemComponent;
@@ -8,9 +11,10 @@ describe('SubNaviItemComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SubNaviItemComponent ]
+      imports: [CommonModule, SharedModule, RouterTestingModule],
+      declarations: [SubNaviItemComponent],
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
