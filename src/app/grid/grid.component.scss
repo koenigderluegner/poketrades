@@ -1,3 +1,7 @@
 .grid {
   display: grid;
+
+  &.hide-inactives .inactive {
+    display: none;
+  }
 }

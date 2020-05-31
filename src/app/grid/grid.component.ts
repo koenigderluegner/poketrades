@@ -20,6 +20,7 @@ import { GridItemComponent } from './grid-item/grid-item.component';
 export class GridComponent implements OnInit, AfterContentInit {
 
     @HostBinding('class.grid') true;
+    @Input() @HostBinding('class.hide-inactives') hideInactiveItems: boolean;
 
     @HostBinding('class') get class() {
         return this.appearance ?? 'normal';
