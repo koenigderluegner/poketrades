@@ -13,7 +13,7 @@ import { GridService } from '../../../grid/services/grid.service';
 })
 export class IndexComponent implements OnInit {
 
-  @HostBinding('class.view') isView: boolean = true;
+  @HostBinding('class.view') isView = true;
 
   spreadsheetData$: Observable<Spreadsheet>;
 

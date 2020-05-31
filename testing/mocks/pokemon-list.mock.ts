@@ -2,25 +2,25 @@ import { Pokemon } from '@shared/interfaces/pokemon';
 
 export const MOCK_POKEMON: Pokemon[] = [
   {
-    ability: "Run Away",
-    dex: "010",
+    ability: 'Run Away',
+    dex: '010',
     hasHiddenAbility: true,
-    iconSlug: "caterpie",
+    iconSlug: 'caterpie',
     isOwned: true,
-    name: "Caterpie",
+    name: 'Caterpie',
   }, {
-    ability: "Run Away",
-    dex: "290",
+    ability: 'Run Away',
+    dex: '290',
     hasHiddenAbility: true,
-    iconSlug: "nincada",
+    iconSlug: 'nincada',
     isOwned: true,
-    name: "Nincada",
+    name: 'Nincada',
   }, {
-    ability: "Hustle",
-    dex: "415",
+    ability: 'Hustle',
+    dex: '415',
     hasHiddenAbility: true,
-    iconSlug: "combee",
+    iconSlug: 'combee',
     isOwned: true,
-    name: "Combee",
+    name: 'Combee',
   }
 ];

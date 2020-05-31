@@ -21,9 +21,9 @@ export class SpreadsheetFacade {
   private readonly allowedConfigs = {
     type: ['Valuables', 'Breedables'],
     subType: ['RNGs', 'Legendaries', 'Shinies', 'Competitives', 'Events'],
-    ball: ["Dream", "Safari", "Sport", "Beast", "Fast", "Moon", "Heavy", "Love", "Lure", "Level",
-      "Friend", "Poké", "Great", "Ultra", "Premier", "Dive", "Luxury", "Nest", "Net", "Repeat", "Timer", "Quick",
-      "Dusk", "Heal"],
+    ball: ['Dream', 'Safari', 'Sport', 'Beast', 'Fast', 'Moon', 'Heavy', 'Love', 'Lure', 'Level',
+      'Friend', 'Poké', 'Great', 'Ultra', 'Premier', 'Dive', 'Luxury', 'Nest', 'Net', 'Repeat', 'Timer', 'Quick',
+      'Dusk', 'Heal'],
     includeShinies: ['true', 'false']
   };
 
@@ -67,18 +67,20 @@ export class SpreadsheetFacade {
       tap(spreadsheet => {
         loadedSpreadsheet = spreadsheet;
       }),
-      switchMap(spreadsheet => this.spreadsheetService.getWorksheets(spreadsheet.id, spreadsheet.worksheets.map(worksheet => worksheet.id))),
+      switchMap(spreadsheet => this.spreadsheetService.getWorksheets(
+        spreadsheet.id,
+        spreadsheet.worksheets.map(worksheet => worksheet.id))),
       map(worksheets => {
-        //this.loadingMessage = 'Configuring spreadsheet details';
         let selectedWorksheet: Worksheet;
         for (const worksheet of worksheets) {
-          selectedWorksheet = loadedSpreadsheet.worksheets.filter(ws => ws.title === worksheet.feed.title['$t'])?.[0];
+          selectedWorksheet = loadedSpreadsheet.worksheets.filter(ws => ws.title === worksheet.feed.title.$t)?.[0];
 
           selectedWorksheet.config = this.getWorksheetConfig(worksheet);
           if (selectedWorksheet) {
-            selectedWorksheet.data = worksheet.feed.entry.slice(3); // first 3 rows contain meta data
-            selectedWorksheet.data = selectedWorksheet.data.filter(pokemon => pokemon['gsx$name']['$t']);
-            selectedWorksheet.ownedEntries = selectedWorksheet.data.filter(pokemon => pokemon['gsx$owned']?.['$t'] === 'x').length
+            worksheet.feed.entry = worksheet.feed.entry.slice(3); // first 3 rows contain meta data
+            worksheet.feed.entry = worksheet.feed.entry.filter(pokemon => pokemon.gsx$name.$t);
+            selectedWorksheet.data = worksheet.feed.entry;
+            selectedWorksheet.ownedEntries = worksheet.feed.entry.filter(pokemon => pokemon.gsx$owned?.$t === 'x').length
           }
         }
 
@@ -133,12 +135,12 @@ export class SpreadsheetFacade {
   }
 
   private getWorksheetConfig(worksheet) {
-    let config = {};
+    const config = {};
     let configIndex = 0;
     let tempConfig;
 
-    while (worksheet.feed.entry[configIndex]?.['gsx$config']?.['$t'] && configIndex < 3) {
-      tempConfig = worksheet.feed.entry[configIndex]['gsx$config']['$t'].split(':');
+    while (worksheet.feed.entry[configIndex]?.gsx$config?.$t && configIndex < 3) {
+      tempConfig = worksheet.feed.entry[configIndex].gsx$config.$t.split(':');
       if (tempConfig.length === 2) {
         const [key, value] = tempConfig;
         if (key in this.allowedConfigs) {

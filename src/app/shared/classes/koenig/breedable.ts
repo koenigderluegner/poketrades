@@ -1,28 +1,30 @@
 import { Pokemon } from '@shared/interfaces/pokemon';
 import { SlugifyPipe } from '@shared/pipes/slugify.pipe';
+import { AbstractBreeable } from '@shared/classes/koenig/abstract-breeable';
 
-export class Breedable implements Pokemon {
+export class Breedable extends AbstractBreeable implements Pokemon {
 
   private _slug: string;
 
   constructor(pokemon?: Pokemon) {
-    pokemon && Object.assign(this, pokemon);
+    super();
+    if(pokemon) Object.assign(this, pokemon);
   }
 
   get ability(): string {
-    return this['gsx$ability']['$t'];
+    return this.gsx$ability.$t;
   }
 
   get dex(): string {
-    return this['gsx$dex']['$t'];
+    return this.gsx$dex.$t;
   }
 
   get hasHiddenAbility(): boolean {
-    return this['gsx$hasha']['$t'] === 'x';
+    return this.gsx$hasha.$t === 'x';
   }
 
   get isOwned(): boolean{
-    return this['gsx$owned']['$t'] === 'x';
+    return this.gsx$owned.$t === 'x';
   }
 
   get iconSlug(): string {
@@ -34,7 +36,7 @@ export class Breedable implements Pokemon {
   }
 
   get name(): string {
-    return this['gsx$name']['$t'];
+    return this.gsx$name.$t;
   }
 
 }

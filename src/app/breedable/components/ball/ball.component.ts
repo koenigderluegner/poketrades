@@ -55,7 +55,7 @@ export class BallComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    for (let subscription of this.subscriptions) {
+    for (const subscription of this.subscriptions) {
       subscription.unsubscribe();
     }
   }

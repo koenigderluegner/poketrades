@@ -12,9 +12,9 @@ export class AppComponent implements OnInit {
 
   spreadsheet: Spreadsheet;
 
-  isLoading: boolean = false;
+  isLoading = false;
   loadingMessage: string;
-  errored: boolean = false;
+  errored = false;
   waitingForRouter = true;
 
 
@@ -28,7 +28,7 @@ export class AppComponent implements OnInit {
 
     const nonIdRoutes = this.router.config.map(route => route.path);
 
-    let routerSub = this.router.events.subscribe((e) => {
+    const routerSub = this.router.events.subscribe((e) => {
       if (e instanceof NavigationEnd) {
         routerSub.unsubscribe();
         const id = e.url.split('/')?.[1];
