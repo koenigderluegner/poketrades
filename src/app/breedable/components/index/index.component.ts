@@ -5,6 +5,7 @@ import { Worksheet } from '@spreadsheet/models/worksheet';
 import { SpreadsheetFacade } from '@spreadsheet/spreadsheet.facade';
 import { GridAppearanceType } from '../../../grid/grid-appearance.type';
 import { GridService } from '../../../grid/services/grid.service';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-index',
@@ -17,6 +18,8 @@ export class IndexComponent implements OnInit {
 
   spreadsheetData$: Observable<Spreadsheet>;
 
+  toggleInactivesControl: FormControl;
+
   spreadsheetId: string;
   worksheets: Worksheet[];
 
@@ -27,6 +30,7 @@ export class IndexComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.toggleInactivesControl = new FormControl(false);
     this.spreadsheetData$ = this.spreadsheetFacade.getCurrentSpreadsheet$();
 
     this.spreadsheetData$.subscribe({
@@ -39,5 +43,9 @@ export class IndexComponent implements OnInit {
 
   changeGrid(appearance: GridAppearanceType) {
     this.gridService.updateGridAppearance(appearance);
+  }
+
+  changeGridInactives() {
+    console.log(this.toggleInactivesControl.value);
   }
 }

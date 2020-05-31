@@ -7,17 +7,19 @@ import { SharedModule } from '@shared/shared.module';
 import { GridModule } from '../grid/grid.module';
 import { SlugifyPipe } from '@shared/pipes/slugify.pipe';
 import { NgxStructuralsModule } from '@tngtech/ngx-structurals';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [IndexComponent, BallComponent],
-    imports: [
-        CommonModule,
-        BreedableRoutingModule,
-        SharedModule,
-        GridModule,
-        NgxStructuralsModule
-    ],
+  imports: [
+    CommonModule,
+    BreedableRoutingModule,
+    SharedModule,
+    GridModule,
+    NgxStructuralsModule,
+    ReactiveFormsModule
+  ],
   providers: [SlugifyPipe]
 })
 export class BreedableModule {

@@ -1,6 +1,9 @@
 <header class="view-header">breedables</header>
 <div class="view-addional-content">
   <app-changer (selectionChanged)="changeGrid($event)"></app-changer>
+  <label>
+    <input type="checkbox" [formControl]="toggleInactivesControl" (change)="changeGridInactives()">Hide unowned
+  </label>
 </div>
 <aside class="view-sidebar">
   <ul class="sub-navi" *ngIf="worksheets">

@@ -4,6 +4,7 @@ import { IndexComponent } from './index.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 describe('Breedables IndexComponent', () => {
   let component: IndexComponent;
@@ -11,7 +12,7 @@ describe('Breedables IndexComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [HttpClientTestingModule, RouterTestingModule],
+      imports: [HttpClientTestingModule, RouterTestingModule, FormsModule, ReactiveFormsModule],
       declarations: [IndexComponent],
       schemas: [CUSTOM_ELEMENTS_SCHEMA]
     })
