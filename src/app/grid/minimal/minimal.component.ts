@@ -9,7 +9,11 @@ import { Pokemon } from '@shared/interfaces/pokemon';
 })
 export class MinimalComponent implements OnInit {
 
-  @HostBinding('class') classes = 'grid-item';
+  @HostBinding('class.grid-item') true;
+
+  @HostBinding('class.inactive') get inactive() {
+    return !this.pokemon?.isOwned;
+  }
 
   @Input() pokemon: Pokemon;
 

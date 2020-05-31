@@ -9,16 +9,16 @@
     background: rgba(255, 255, 255, .22);
     border-radius: 5px;
 
+    &.inactive .pkspr {
+      filter: grayscale(1) opacity(0.2);
+    }
+
     .icon {
       width: 68px;
       height: 56px;
       margin-left: -14px;
       flex-basis: 40px;
       margin-top: -16px;
-
-      &.inactive .pkspr {
-        filter: grayscale(1) opacity(0.2);
-      }
     }
   }
 }
