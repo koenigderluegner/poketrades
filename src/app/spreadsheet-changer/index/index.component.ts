@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostBinding, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { Spreadsheet } from '@spreadsheet/models/spreadsheet';
@@ -8,9 +8,11 @@ import { SpreadsheetFacade } from '@spreadsheet/spreadsheet.facade';
   selector: 'app-index',
   templateUrl: './index.component.html',
   styleUrls: ['./index.component.scss'],
-  host: {class: 'view'}
+  encapsulation: ViewEncapsulation.None
 })
 export class IndexComponent implements OnInit {
+
+  @HostBinding('class') classes = 'view';
 
   searchForm: FormGroup;
   hasRequested = false;
@@ -46,7 +48,7 @@ export class IndexComponent implements OnInit {
 
   }
 
-  trackBy(index, item){
+  trackBy(index, item) {
     return item.id
   }
 }

@@ -1,12 +1,23 @@
-import { ChangeDetectorRef, Component, ElementRef, OnInit } from '@angular/core';
+import {
+  AfterContentChecked,
+  AfterViewInit,
+  ChangeDetectorRef,
+  Component,
+  ElementRef,
+  HostBinding,
+  OnInit, ViewEncapsulation
+} from '@angular/core';
 
 @Component({
   selector: 'app-pokemon',
   template: '<div (cdkObserveContent)="projectContentChanged($event)"><ng-content></ng-content></div>',
   styleUrls: ['./pokemon.component.scss'],
-  host: {class: 'pkspr'}
+  encapsulation: ViewEncapsulation.None
+
 })
-export class PokemonComponent implements OnInit {
+export class PokemonComponent implements OnInit, AfterContentChecked, AfterViewInit {
+
+  @HostBinding('class') pkspr = 'pkspr';
 
   constructor(private elementRef: ElementRef, private cd: ChangeDetectorRef) {
   }

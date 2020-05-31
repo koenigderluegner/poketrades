@@ -8,6 +8,6 @@ export class Valuable implements Pokemon{
   name: string;
 
   constructor(pokemon?: Pokemon) {
-    pokemon && Object.assign(this, pokemon);
+    if(pokemon) Object.assign(this, pokemon);
   }
 }

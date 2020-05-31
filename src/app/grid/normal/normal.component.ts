@@ -5,10 +5,11 @@ import { Pokemon } from '@shared/interfaces/pokemon';
   selector: 'app-normal',
   templateUrl: './normal.component.html',
   styleUrls: ['./normal.component.scss'],
-  host: {class: 'grid-item'},
   encapsulation: ViewEncapsulation.None
 })
 export class NormalComponent implements OnInit {
+
+  @HostBinding('class') classes = 'grid-item';
 
   _pokemon: Pokemon;
 

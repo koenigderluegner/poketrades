@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output, ViewEncapsulation } from '@angular/core';
+import { Component, EventEmitter, HostBinding, OnInit, Output, ViewEncapsulation } from '@angular/core';
 import { GridAppearanceType } from '../grid-appearance.type';
 
 @Component({
@@ -6,9 +6,10 @@ import { GridAppearanceType } from '../grid-appearance.type';
   templateUrl: './changer.component.html',
   styleUrls: ['./changer.component.scss'],
   encapsulation: ViewEncapsulation.None,
-  host: {class: 'grid-changer'}
 })
 export class ChangerComponent implements OnInit {
+
+  @HostBinding('class') classes = 'grid-changer';
 
   @Output() selectionChanged: EventEmitter<GridAppearanceType> = new EventEmitter();
 

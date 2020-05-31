@@ -1,56 +1,57 @@
 import {
-  AfterContentInit,
-  Component,
-  ContentChildren,
-  HostBinding,
-  Input,
-  OnInit,
-  QueryList,
-  ViewEncapsulation
+    AfterContentInit,
+    Component,
+    ContentChildren,
+    HostBinding,
+    Input,
+    OnInit,
+    QueryList,
+    ViewEncapsulation
 } from '@angular/core';
 import { GridAppearanceType } from './grid-appearance.type';
 import { GridItemComponent } from './grid-item/grid-item.component';
 
 @Component({
-  selector: 'app-grid',
-  templateUrl: './grid.component.html',
-  styleUrls: ['./grid.component.scss'],
-  host: {class: 'grid'},
-  encapsulation: ViewEncapsulation.None
+    selector: 'app-grid',
+    templateUrl: './grid.component.html',
+    styleUrls: ['./grid.component.scss'],
+    encapsulation: ViewEncapsulation.None
 })
 export class GridComponent implements OnInit, AfterContentInit {
 
-  @Input() appearance: GridAppearanceType;
+    @HostBinding('class') classes = 'grid';
 
-  @ContentChildren(GridItemComponent) contentChildren !: QueryList<GridItemComponent>;
+    @Input() appearance: GridAppearanceType;
 
-  items;
+    @ContentChildren(GridItemComponent) contentChildren !: QueryList<GridItemComponent>;
 
-  @HostBinding('class') get class() {
-    return this.appearance ?? 'normal';
-  }
+    items;
 
-  constructor() {
-  }
-
-
-  ngAfterContentInit() {
-
-    // initial load of list
-    if (!this.items) {
-      this.items = this.contentChildren.toArray();
+    @HostBinding('class') get class() {
+        return this.appearance ?? 'normal';
     }
-    this.contentChildren.changes.subscribe(items => {
-      this.items = items.toArray();
-    });
 
-  }
+    constructor() {
+    }
 
-  trackByFn(item, index){
-    return item.pokemon?.name;
-  }
 
-  ngOnInit(): void {
-  }
+    ngAfterContentInit() {
+
+        // initial load of list
+        if (!this.items) {
+            this.items = this.contentChildren.toArray();
+        }
+        this.contentChildren.changes.subscribe(items => {
+            this.items = items.toArray();
+        });
+
+    }
+
+    trackByFn(item, index) {
+        return item.pokemon?.name;
+    }
+
+    ngOnInit(): void {
+    }
 
 }

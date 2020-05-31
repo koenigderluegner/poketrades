@@ -9,8 +9,8 @@ import { Spreadsheet } from '../models/spreadsheet';
 })
 export class SpreadsheetService {
 
-  filteredTabs = ["Landing Page", "Shiny Living Dex", "Living Dex", "Friend Safari (X & Y)", "Resource",
-    "Breedables Overview", "Ban List", "Ban Checker", "Breedables Ball Legality", "Resource Gen7 (Backup)"];
+  filteredTabs = ['Landing Page', 'Shiny Living Dex', 'Living Dex', 'Friend Safari (X & Y)', 'Resource',
+    'Breedables Overview', 'Ban List', 'Ban Checker', 'Breedables Ball Legality', 'Resource Gen7 (Backup)'];
 
   constructor(private httpClient: HttpClient) {
   }
@@ -19,16 +19,16 @@ export class SpreadsheetService {
     return this.httpClient.get(`https://spreadsheets.google.com/feeds/worksheets/${spreadsheetId}/public/basic?alt=json`).pipe(
       map((response: any) => {
 
-        const filteredEntries = response.feed.entry.filter(worksheet => !this.filteredTabs.includes(worksheet.title['$t']));
+        const filteredEntries = response.feed.entry.filter(worksheet => !this.filteredTabs.includes(worksheet.title.$t));
         return {
           id: spreadsheetId,
-          title: response.feed.title['$t'],
-          date: new Date(Date.parse(response.feed.updated['$t'])),
+          title: response.feed.title.$t,
+          date: new Date(Date.parse(response.feed.updated.$t)),
           worksheets: filteredEntries.map((entry: any) => {
             return {
               id: entry.link[4].href.split('/').pop(), // id is last part of URI
-              title: entry.title['$t'],
-              date: new Date(Date.parse(entry.updated['$t'])),
+              title: entry.title.$t,
+              date: new Date(Date.parse(entry.updated.$t)),
             }
           })
         }
@@ -42,6 +42,6 @@ export class SpreadsheetService {
   }
 
   getWorksheets(spreadsheetId: string, worksheetIds: string[]): Observable<any> {
-    return forkJoin(...worksheetIds.map(worksheetId => this.getWorksheet(spreadsheetId, worksheetId)))
+    return forkJoin(worksheetIds.map(worksheetId => this.getWorksheet(spreadsheetId, worksheetId)))
   }
 }
