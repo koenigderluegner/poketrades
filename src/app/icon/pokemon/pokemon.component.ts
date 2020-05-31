@@ -13,11 +13,10 @@ import {
   template: '<div (cdkObserveContent)="projectContentChanged($event)"><ng-content></ng-content></div>',
   styleUrls: ['./pokemon.component.scss'],
   encapsulation: ViewEncapsulation.None
-
 })
 export class PokemonComponent implements OnInit, AfterContentChecked, AfterViewInit {
 
-  @HostBinding('class') pkspr = 'pkspr';
+  @HostBinding('class.pkspr') true;
 
   constructor(private elementRef: ElementRef, private cd: ChangeDetectorRef) {
   }

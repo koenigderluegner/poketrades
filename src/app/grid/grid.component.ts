@@ -19,17 +19,17 @@ import { GridItemComponent } from './grid-item/grid-item.component';
 })
 export class GridComponent implements OnInit, AfterContentInit {
 
-    @HostBinding('class') classes = 'grid';
+    @HostBinding('class.grid') true;
+
+    @HostBinding('class') get class() {
+        return this.appearance ?? 'normal';
+    }
 
     @Input() appearance: GridAppearanceType;
 
     @ContentChildren(GridItemComponent) contentChildren !: QueryList<GridItemComponent>;
 
     items;
-
-    @HostBinding('class') get class() {
-        return this.appearance ?? 'normal';
-    }
 
     constructor() {
     }
@@ -47,7 +47,7 @@ export class GridComponent implements OnInit, AfterContentInit {
 
     }
 
-    trackByFn(item, index) {
+    trackByFn(item) {
         return item.pokemon?.name;
     }
 
