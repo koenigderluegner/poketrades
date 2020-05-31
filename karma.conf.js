@@ -32,7 +32,7 @@ module.exports = function (config) {
     restartOnFileChange: true,
     junitReporter: {
       outputDir: require('path').join(__dirname, './coverage'),
-      outputFile: 'frontend.xml',
+      outputFile: 'poketrades.xml',
       useBrowserName: false
     },
     preprocessors: {'**/*.ts': ['coverage']}
