@@ -46,6 +46,6 @@ export class IndexComponent implements OnInit {
   }
 
   changeGridInactives() {
-    console.log(this.toggleInactivesControl.value);
+    this.gridService.updateHideItems(this.toggleInactivesControl.value)
   }
 }

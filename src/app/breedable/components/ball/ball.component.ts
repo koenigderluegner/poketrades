@@ -20,6 +20,7 @@ export class BallComponent implements OnInit, OnDestroy {
 
   subscriptions: Subscription[] = [];
   gridAppearance$: Observable<GridAppearanceType>;
+  hideItems$: Observable<boolean>;
 
   constructor(
     private spreadsheetFacade: SpreadsheetFacade,
@@ -32,6 +33,7 @@ export class BallComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
 
     this.gridAppearance$ = this.gridService.getGridAppearance$();
+    this.hideItems$ = this.gridService.getHideItems$();
 
     this.route.paramMap.pipe(
       tap(params => this.worksheetTitle = params.get('worksheetTitle')),
