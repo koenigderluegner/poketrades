@@ -1,4 +1,4 @@
-import { Component, forwardRef, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, forwardRef, HostBinding, Input, OnInit, ViewEncapsulation } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 @Component({
@@ -16,20 +16,24 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 })
 export class CheckboxComponent implements OnInit, ControlValueAccessor {
 
-  static idCounter = 0;
-  controlID: string;
-  checked: boolean;
-  onTouchedCallback: () => {};
-
   constructor() {
     this.controlID = 'pktrds-checkox-' + CheckboxComponent.idCounter++;
   }
+
+  static idCounter = 0;
+
+  @HostBinding('class.d-flex') true;
+  controlID: string;
+  checked: boolean;
+  onTouchedCallback: () => {};
+  @Input() icon: string;
 
   ngOnInit(): void {
   }
 
   propagateChange = (_: any) => {
   };
+
 
   writeValue(obj: any): void {
     this.checked = !!obj;
