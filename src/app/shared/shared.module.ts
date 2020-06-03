@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { CastBreedablePipe } from './pipes/cast-breedable.pipe';
 import { CastValuablePipe } from './pipes/cast-valuable.pipe';
 import { BallGuyBubbleComponent } from './components/ball-guy-bubble/ball-guy-bubble.component';
+import { CheckboxComponent } from './components/checkbox/checkbox.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { BallGuyBubbleComponent } from './components/ball-guy-bubble/ball-guy-bu
     SubNaviItemComponent,
     CastBreedablePipe,
     CastValuablePipe,
-    BallGuyBubbleComponent
+    BallGuyBubbleComponent,
+    CheckboxComponent
   ],
   exports: [
     SlugifyPipe,
