@@ -1,4 +1,6 @@
-.pkspr[class*=pkmn-]{
+.pkspr[class*=pkmn-], .pkspr {
+  background-image: url('../../icon/pokesprite/pokesprite.png');
   width: 68px;
   height: 56px;
+  display: inline-block;
 }
