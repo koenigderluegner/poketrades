@@ -1,1 +1,6 @@
-<p>checkbox works!</p>
+<label class="inacitve-hider">
+  <input type="checkbox" id="{{ controlID }}"
+         [checked]="checked" (change)="onChange($event)">
+  <span class="material-icons">view_comfy</span>
+  <span class="label"><ng-content></ng-content></span>
+</label>

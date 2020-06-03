@@ -23,7 +23,8 @@ import { CheckboxComponent } from './components/checkbox/checkbox.component';
     SubNaviItemComponent,
     CastBreedablePipe,
     CastValuablePipe,
-    BallGuyBubbleComponent
+    BallGuyBubbleComponent,
+    CheckboxComponent
   ],
   imports: [
     CommonModule,
