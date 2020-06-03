@@ -1,5 +1,11 @@
+$gap-size: 2.5rem;
+
 * {
   box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
 }
 
 body, html {
@@ -15,6 +21,7 @@ body, html {
 body {
   background: linear-gradient(55deg, rgba(225, 230, 252, .3) 40%, rgba(212, 254, 252, .3) 80%), radial-gradient(circle, #fbf0fe 14%, #f2eff3 42%, #dbeffa 80%);
   overflow-y: scroll;
+  font-size: 1.6rem;
 }
 
 ul, ol {
@@ -82,4 +89,24 @@ a {
   .view {
     grid-template-columns: 1fr;
   }
+}
+
+.m-right-gap {
+  margin-right: $gap-size;
+}
+
+.m-left-gap {
+  margin-left: $gap-size;
+}
+
+.m-top-gap {
+  margin-top: $gap-size;
+}
+
+.m-bottom-gap {
+  margin-bottom: $gap-size;
+}
+
+.d-flex{
+  display: flex;
 }
