@@ -24,8 +24,7 @@ export class DetailedComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
-    this.dbpokemon$ = this.databaseFacadeService.findPokemon(this.pokemon.name)
+    this.dbpokemon$ = this.databaseFacadeService.findPokemon(this.pokemon?.name)
   }
 
 }

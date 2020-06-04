@@ -16,7 +16,7 @@ export class TypeBadgeComponent implements OnInit {
   @HostBinding('class.type-badge') true;
 
   @HostBinding('class') get typeClass() {
-    return this.type.toLowerCase();
+    return this.type?.toLowerCase() || '';
   }
 
   @HostBinding('class.small') get sizeClass() {

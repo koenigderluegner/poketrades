@@ -8,6 +8,7 @@ export const MOCK_POKEMON: Pokemon[] = [
     iconSlug: 'caterpie',
     isOwned: true,
     name: 'Caterpie',
+    moves: []
   }, {
     ability: 'Run Away',
     dex: '290',
@@ -15,6 +16,7 @@ export const MOCK_POKEMON: Pokemon[] = [
     iconSlug: 'nincada',
     isOwned: true,
     name: 'Nincada',
+    moves: []
   }, {
     ability: 'Hustle',
     dex: '415',
@@ -22,5 +24,6 @@ export const MOCK_POKEMON: Pokemon[] = [
     iconSlug: 'combee',
     isOwned: true,
     name: 'Combee',
+    moves: []
   }
 ];
