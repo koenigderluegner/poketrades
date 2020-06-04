@@ -14,30 +14,38 @@
     box-shadow: 0 3px 5px rgba(0, 0, 0, .4);
     font-family: 'Kulim Park', sans-serif;
 
-    .dark-bg{
+    &.inactive {
+      opacity: .5;
+
+      .type-badge {
+        filter: grayscale(1);
+      }
+    }
+
+    .dark-bg {
       background: #dbdbdb;
     }
 
-    .detailed-pokemon-info{
+    .detailed-pokemon-info {
       padding: 4px 10px;
 
-      .type-badge{
+      .type-badge {
         margin-right: 5px;
       }
     }
 
-    .detailed-header{
+    .detailed-header {
       padding: 7px;
       font-weight: bold;
     }
 
-    .detailed-stats{
+    .detailed-stats {
       display: grid;
       grid-template-columns: 80px 1fr;
       grid-gap: 3px 10px;
     }
 
-    .detailed-label{
+    .detailed-label {
       width: 80px;
     }
 
