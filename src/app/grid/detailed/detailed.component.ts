@@ -1,5 +1,7 @@
 import { Component, HostBinding, Input, OnInit, ViewEncapsulation } from '@angular/core';
 import { Pokemon } from '@shared/interfaces/pokemon';
+import { DatabaseFacadeService } from '../../database/database-facade.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-detailed',
@@ -12,11 +14,14 @@ export class DetailedComponent implements OnInit {
   @HostBinding('class') classes = 'grid-item';
 
   @Input() pokemon: Pokemon;
+  private dbpokemon$: Observable<any>;
 
-  constructor() {
+  constructor(private databaseFacadeService: DatabaseFacadeService) {
   }
 
   ngOnInit(): void {
+
+    this.dbpokemon$ = this.databaseFacadeService.findPokemon(this.pokemon.name)
   }
 
 }

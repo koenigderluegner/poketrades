@@ -1,7 +1,9 @@
+<ng-container *ngIf="dbpokemon$ | async as dbpokemon">
 <div class="detailed-header">{{pokemon.name}}</div>
 <div class="detailed-pokemon-info">
   <div class="detailed-label">No. {{pokemon.dex}}</div>
   {{pokemon.name}}
+  <span *ngFor="let type of dbpokemon.types">{{type}}</span>
 </div>
 <div class="detailed-stats">
   <div class="detailed-label dark-bg t-align-center">HP</div>
@@ -23,3 +25,4 @@
 <div class="detailed-moves">
   <div class="detailed-move" *ngFor="let move of pokemon.moves">{{move}}</div>
 </div>
+</ng-container>
