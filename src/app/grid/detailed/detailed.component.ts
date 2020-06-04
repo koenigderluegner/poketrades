@@ -18,7 +18,7 @@ export class DetailedComponent implements OnInit {
   }
 
   @Input() pokemon: Pokemon;
-  private dbpokemon$: Observable<any>;
+  dbpokemon$: Observable<any>;
 
   constructor(private databaseFacadeService: DatabaseFacadeService) {
   }
