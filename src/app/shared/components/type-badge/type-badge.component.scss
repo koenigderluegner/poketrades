@@ -1,0 +1,86 @@
+.type-badge {
+  background-image: url('type-images/types-en.png');
+  height: 44px;
+  width: 200px;
+  display: inline-block;
+  background-size: 600% 300%;
+  border-radius: 3px;
+
+  &.small {
+    width: 100px;
+    height: 22px;
+  }
+
+  &.normal {
+    background-position: 0 0;
+  }
+
+  &.fighting {
+    background-position: 20% 0;
+  }
+
+  &.flying {
+    background-position: 40% 0;
+  }
+
+  &.poison {
+    background-position: 60% 0;
+  }
+
+  &.ground {
+    background-position: 80% 0;
+  }
+
+  &.rock {
+    background-position: 100% 0;
+  }
+
+  &.bug {
+    background-position: 0 44px;
+  }
+
+  &.ghost {
+    background-position: 20% 44px;
+  }
+
+  &.steel {
+    background-position: 40% 44px;
+  }
+
+  &.fire {
+    background-position: 60% 44px;
+  }
+
+  &.water {
+    background-position: 80% 44px;
+  }
+
+  &.grass {
+    background-position: 100% 44px;
+  }
+
+  &.electric {
+    background-position: 0 88px;
+  }
+
+  &.psychic {
+    background-position: 20% 88px;
+  }
+
+  &.ice {
+    background-position: 40% 88px;
+  }
+
+  &.dragon {
+    background-position: 60% 88px;
+  }
+
+  &.dark {
+    background-position: 80% 88px;
+  }
+
+  &.fairy {
+    background-position: 100% 88px;
+  }
+
+}

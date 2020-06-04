@@ -26,7 +26,8 @@ import { TypeBadgeComponent } from './components/type-badge/type-badge.component
     CastBreedablePipe,
     CastValuablePipe,
     BallGuyBubbleComponent,
-    CheckboxComponent
+    CheckboxComponent,
+    TypeBadgeComponent
   ],
   imports: [
     CommonModule,
