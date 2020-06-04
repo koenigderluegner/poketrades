@@ -59,3 +59,22 @@
 
   }
 }
+
+
+@media screen and (max-width: 1400px) {
+  .grid.detailed {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .grid.detailed {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .grid.detailed {
+    grid-template-columns: 1fr;
+  }
+}
