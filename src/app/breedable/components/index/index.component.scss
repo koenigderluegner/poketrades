@@ -1,0 +1,17 @@
+@media screen and (max-width: 720px) {
+  .view-header {
+    order: 1;
+  }
+
+  .view-addional-content {
+    order: 3
+  }
+
+  .view-sidebar {
+    order: 2
+  }
+
+  .view-content {
+    order: 4
+  }
+}

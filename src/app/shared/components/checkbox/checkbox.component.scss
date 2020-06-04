@@ -20,6 +20,8 @@ $grid-changer-height: 24px;
   }
 
   .label {
+    display: inline-flex;
+    align-items: center;
     padding: 3px;
     width: 130px;
     height: ($grid-changer-height + 6px);
