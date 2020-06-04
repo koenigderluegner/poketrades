@@ -1,9 +1,11 @@
 <ng-container *ngIf="dbpokemon$ | async as dbpokemon">
-<div class="detailed-header">{{pokemon.name}}</div>
+<div class="detailed-header dark-bg">{{pokemon.name}}</div>
 <div class="detailed-pokemon-info">
-  <div class="detailed-label">No. {{pokemon.dex}}</div>
-  {{pokemon.name}}
-  <span *ngFor="let type of dbpokemon.types">{{type}}</span>
+  <span class="detailed-label">No. {{pokemon.dex}}</span>  {{pokemon.name}}
+  <div>
+    <app-type-badge [type]="type" size="small" *ngFor="let type of dbpokemon.types">{{type}}</app-type-badge>
+  </div>
+
 </div>
 <div class="detailed-stats">
   <div class="detailed-label dark-bg t-align-center">HP</div>

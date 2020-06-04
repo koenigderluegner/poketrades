@@ -18,6 +18,19 @@
       background: #dbdbdb;
     }
 
+    .detailed-pokemon-info{
+      padding: 4px 10px;
+
+      .type-badge{
+        margin-right: 5px;
+      }
+    }
+
+    .detailed-header{
+      padding: 7px;
+      font-weight: bold;
+    }
+
     .detailed-stats{
       display: grid;
       grid-template-columns: 80px 1fr;
