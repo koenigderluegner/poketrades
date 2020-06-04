@@ -7,6 +7,7 @@ import { CastBreedablePipe } from './pipes/cast-breedable.pipe';
 import { CastValuablePipe } from './pipes/cast-valuable.pipe';
 import { BallGuyBubbleComponent } from './components/ball-guy-bubble/ball-guy-bubble.component';
 import { CheckboxComponent } from './components/checkbox/checkbox.component';
+import { TypeBadgeComponent } from './components/type-badge/type-badge.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { CheckboxComponent } from './components/checkbox/checkbox.component';
     CastBreedablePipe,
     CastValuablePipe,
     BallGuyBubbleComponent,
-    CheckboxComponent
+    CheckboxComponent,
+    TypeBadgeComponent
   ],
   exports: [
     SlugifyPipe,
