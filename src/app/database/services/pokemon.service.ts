@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { shareReplay, switchMap } from 'rxjs/operators';
+import { switchMap, tap } from 'rxjs/operators';
 import { Observable, of, throwError } from 'rxjs';
 
 @Injectable({
@@ -8,13 +8,21 @@ import { Observable, of, throwError } from 'rxjs';
 })
 export class PokemonService {
 
+  private db;
+
   constructor(private httpClient: HttpClient) {
   }
 
   loadDatabase(): Observable<any[]> {
-    return this.httpClient.get('assets/database/pokemon.json').pipe(
-      shareReplay(1)
-    ) as Observable<any[]>
+    if (this.db) {
+      return of(this.db)
+    } else {
+      return this.httpClient.get<any[]>('assets/database/pokemon.json').pipe(
+        tap(database => {
+          this.db = database;
+        })
+      )
+    }
 
 
   }
