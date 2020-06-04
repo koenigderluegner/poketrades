@@ -1,1 +1,25 @@
-<p>detailed works!</p>
+<div class="detailed-header">{{pokemon.name}}</div>
+<div class="detailed-pokemon-info">
+  <div class="detailed-label">No. {{pokemon.dex}}</div>
+  {{pokemon.name}}
+</div>
+<div class="detailed-stats">
+  <div class="detailed-label dark-bg t-align-center">HP</div>
+  <div class="">67</div>
+  <div class="detailed-label dark-bg t-align-center">Attack</div>
+  <div class="">67</div>
+  <div class="detailed-label dark-bg t-align-center">Defense</div>
+  <div class="">67</div>
+  <div class="detailed-label dark-bg t-align-center">Sp. Atk</div>
+  <div class="">67</div>
+  <div class="detailed-label dark-bg t-align-center">Sp. Def</div>
+  <div class="">67</div>
+  <div class="detailed-label dark-bg t-align-center">Speed</div>
+  <div class="">67</div>
+</div>
+<div class="detailed-dynamax">
+  <div class="detailed-label">Dynamax Level</div>
+</div>
+<div class="detailed-moves">
+  <div class="detailed-move" *ngFor="let move of pokemon.moves">{{move}}</div>
+</div>

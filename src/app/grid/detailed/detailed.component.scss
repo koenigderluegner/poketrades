@@ -1,0 +1,40 @@
+.grid.detailed {
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 15px;
+
+  .grid-item {
+    color: #000;
+    flex-direction: column;
+    background: rgba(255, 255, 255, .95);
+    margin: 0;
+    height: auto;
+    display: flex;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .4);
+    font-family: 'Kulim Park', sans-serif;
+
+    .dark-bg{
+      background: #dbdbdb;
+    }
+
+    .detailed-stats{
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      grid-gap: 3px 10px;
+    }
+
+    .detailed-label{
+      width: 80px;
+    }
+
+    .inactive {
+      color: rgba(0, 0, 0, .3);
+
+      .icon-wrapper {
+        filter: grayscale(1) opacity(0.1);
+      }
+    }
+
+  }
+}
