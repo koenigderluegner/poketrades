@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Spreadsheet } from '@spreadsheet/models/spreadsheet';
 import { NavigationEnd, Router } from '@angular/router';
 import { SpreadsheetFacade } from '@spreadsheet/spreadsheet.facade';
+import { DatabaseFacadeService } from './database/database-facade.service';
 
 @Component({
   selector: 'app-root',
@@ -20,6 +21,7 @@ export class AppComponent implements OnInit {
 
   constructor(
     private spreadsheetFacade: SpreadsheetFacade,
+    private databaseFacadeService: DatabaseFacadeService,
     private router: Router) {
   }
 
@@ -28,35 +30,42 @@ export class AppComponent implements OnInit {
 
     const nonIdRoutes = this.router.config.map(route => route.path);
 
-    const routerSub = this.router.events.subscribe((e) => {
-      if (e instanceof NavigationEnd) {
-        routerSub.unsubscribe();
-        const id = e.url.split('/')?.[1];
-        if (id && !nonIdRoutes.includes(id)) {
-          this.isLoading = true;
-          this.waitingForRouter = false;
-          this.loadingMessage = 'Loading spreadsheet from Google API';
-          const sub = this.spreadsheetFacade.loadSpreadsheet(id).subscribe({
-            next: spreadsheet => {
-              this.spreadsheetFacade.updateCurrentSpreadsheet(spreadsheet);
-              this.isLoading = false;
-              sub.unsubscribe();
-            },
-            error: (error) => {
-              this.loadingMessage = error.message;
-              this.errored = true;
-              sub.unsubscribe();
-            }
-          });
+    this.databaseFacadeService.loadDatabases().subscribe(() => {
 
-        } else {
-          this.isLoading = false;
-          this.waitingForRouter = false;
+      const routerSub = this.router.events.subscribe((e) => {
+        if (e instanceof NavigationEnd) {
+          routerSub.unsubscribe();
+          const id = e.url.split('/')?.[1];
+          if (id && !nonIdRoutes.includes(id)) {
+            this.isLoading = true;
+            this.waitingForRouter = false;
+            this.loadingMessage = 'Loading spreadsheet from Google API';
+            const sub = this.spreadsheetFacade.loadSpreadsheet(id).subscribe({
+              next: spreadsheet => {
+                this.spreadsheetFacade.updateCurrentSpreadsheet(spreadsheet);
+                this.isLoading = false;
+                sub.unsubscribe();
+              },
+              error: (error) => {
+                this.loadingMessage = error.message;
+                this.errored = true;
+                sub.unsubscribe();
+              }
+            });
+
+          } else {
+            this.isLoading = false;
+            this.waitingForRouter = false;
+
+          }
 
         }
+      });
 
-      }
-    });
+
+    })
+
+
   }
 
 }
