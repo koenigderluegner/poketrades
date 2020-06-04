@@ -5,10 +5,17 @@ import { AbstractBreeable } from '@shared/classes/koenig/abstract-breeable';
 export class Breedable extends AbstractBreeable implements Pokemon {
 
   private _slug: string;
+  private _moves: any[];
 
   constructor(pokemon?: Pokemon) {
     super();
-    if(pokemon) Object.assign(this, pokemon);
+    if (pokemon) Object.assign(this, pokemon);
+
+    this._moves = [];
+    for (let i = 1; i < 5; i++) {
+      if (this[`gsx$move${i}`]?.$t)
+        this._moves.push(this[`gsx$move${i}`]?.$t);
+    }
   }
 
   get ability(): string {
@@ -23,7 +30,7 @@ export class Breedable extends AbstractBreeable implements Pokemon {
     return this.gsx$hasha.$t === 'x';
   }
 
-  get isOwned(): boolean{
+  get isOwned(): boolean {
     return this.gsx$owned.$t === 'x';
   }
 
@@ -37,6 +44,10 @@ export class Breedable extends AbstractBreeable implements Pokemon {
 
   get name(): string {
     return this.gsx$name.$t;
+  }
+
+  get moves() {
+    return this._moves;
   }
 
 }

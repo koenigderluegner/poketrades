@@ -5,4 +5,5 @@ export interface Pokemon {
   iconSlug: string;
   hasHiddenAbility: boolean;
   isOwned?: boolean;
+  moves: any[];
 }
