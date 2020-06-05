@@ -34,7 +34,7 @@ export class PokemonService {
           return pokemon.name.toLowerCase() === name.toLowerCase()
         });
         if (hits.length === 0) {
-          throwError('No Pokemon found with name: ' + name);
+          throwError('No pokemon found with name: ' + name);
         }
         return of(hits[0]);
       })
