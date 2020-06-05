@@ -30,15 +30,17 @@ export class AppComponent implements OnInit {
 
     const nonIdRoutes = this.router.config.map(route => route.path);
 
-    this.databaseFacadeService.loadDatabases().subscribe(() => {
 
-      const routerSub = this.router.events.subscribe((e) => {
-        if (e instanceof NavigationEnd) {
-          routerSub.unsubscribe();
-          const id = e.url.split('/')?.[1];
-          if (id && !nonIdRoutes.includes(id)) {
-            this.isLoading = true;
-            this.waitingForRouter = false;
+    const routerSub = this.router.events.subscribe((e) => {
+      if (e instanceof NavigationEnd) {
+        routerSub.unsubscribe();
+        const id = e.url.split('/')?.[1];
+        if (id && !nonIdRoutes.includes(id)) {
+          this.isLoading = true;
+          this.waitingForRouter = false;
+
+          this.loadingMessage = 'Load databases from server';
+          this.databaseFacadeService.loadDatabases().subscribe(() => {
             this.loadingMessage = 'Loading spreadsheet from Google API';
             const sub = this.spreadsheetFacade.loadSpreadsheet(id).subscribe({
               next: spreadsheet => {
@@ -52,15 +54,15 @@ export class AppComponent implements OnInit {
                 sub.unsubscribe();
               }
             });
+          });
 
-          } else {
-            this.isLoading = false;
-            this.waitingForRouter = false;
-
-          }
+        } else {
+          this.isLoading = false;
+          this.waitingForRouter = false;
 
         }
-      });
+
+      }
 
 
     })
