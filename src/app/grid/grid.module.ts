@@ -9,6 +9,7 @@ import { NormalComponent } from './normal/normal.component';
 import { DetailedComponent } from './detailed/detailed.component';
 import { ChangerComponent } from './changer/changer.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { NgxStructuralsModule } from '@tngtech/ngx-structurals';
 
 
 
@@ -19,11 +20,12 @@ import { ReactiveFormsModule } from '@angular/forms';
     GridItemComponent,
     ChangerComponent
   ],
-  imports: [
-    CommonModule,
-    IconModule,
-    SharedModule,
-    ReactiveFormsModule
-  ]
+    imports: [
+        CommonModule,
+        IconModule,
+        SharedModule,
+        ReactiveFormsModule,
+        NgxStructuralsModule
+    ]
 })
 export class GridModule { }
