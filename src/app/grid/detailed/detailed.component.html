@@ -34,7 +34,7 @@
     <span class="detailed-text">{{pokemon.ability}}</span>
 
   </div>
-  <div class="detailed-moves">
-    <div class="detailed-move" *ngFor="let move of pokemon.moves">{{move}}</div>
+  <div class="detailed-moves" *ngIf="moves$ | async as moves">
+    <div class="detailed-move" [class]="'move-'+moves[i].type" *ngFor="let move of pokemon.moves; let i = index">{{move}}</div>
   </div>
 </ng-container>
