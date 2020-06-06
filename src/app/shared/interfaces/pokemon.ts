@@ -6,4 +6,5 @@ export interface Pokemon {
   hasHiddenAbility: boolean;
   isOwned?: boolean;
   moves: any[];
+  dynamaxLevel?: number;
 }

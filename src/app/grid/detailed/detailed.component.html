@@ -29,7 +29,7 @@
     <div class="detailed-label dark-bg">Dynamax Level</div>
 
     <ul>
-      <li [class.on]="index <10" *ngxRepeat="10; let index"></li>
+      <li [class.on]="index < pokemon.dynamaxLevel" *ngxRepeat="10; let index"></li>
     </ul>
 
   </div>
