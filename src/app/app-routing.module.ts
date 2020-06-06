@@ -1,5 +1,11 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
+
+
+const userRoutes: Routes = [
+  {path: 'breedables', loadChildren: () => import('./breedable/breedable.module').then(m => m.BreedableModule)},
+  {path: 'valuables', loadChildren: () => import('./valuable/valuable.module').then(m => m.ValuableModule)}
+];
 
 
 const routes: Routes = [
@@ -8,10 +14,10 @@ const routes: Routes = [
     loadChildren: () => import('./spreadsheet-changer/spreadsheet-changer.module').then(m => m.SpreadsheetChangerModule)
   },
   {
-    path: ':spreadsheetId', children: [
-      {path: 'breedables', loadChildren: () => import('./breedable/breedable.module').then(m => m.BreedableModule)},
-      {path: 'valuables', loadChildren: () => import('./valuable/valuable.module').then(m => m.ValuableModule)}
-    ]
+    path: ':spreadsheetId', children: userRoutes
+  },
+  {
+    path: 'u/:username', children: userRoutes
   },
 
 
