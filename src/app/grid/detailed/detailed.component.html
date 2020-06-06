@@ -1,11 +1,15 @@
 <ng-container *ngIf="dbpokemon$ | async as dbpokemon">
   <div class="detailed-header dark-bg">{{pokemon.name}}</div>
-  <div class="detailed-pokemon-info row">
-    <span class="detailed-label">No. {{pokemon.dex}}</span>  {{pokemon.name}}
-    <div>
-      <app-type-badge [type]="type" size="small" *ngFor="let type of dbpokemon.types">{{type}}</app-type-badge>
+  <div class="detailed-species-info  d-flex">
+    <div class="detailed-species-icon">
+      <img alt="" class="icon-foundation" src="assets/images/pokesprite-pokeball.svg">
+      <app-pokemon [slug]="pokemon.iconSlug"></app-pokemon>
     </div>
-
+    <div class="detailed-pokemon-info row">
+      <div class="detailed-types">
+        <app-type-badge [type]="type" size="small" *ngFor="let type of dbpokemon.types">{{type}}</app-type-badge>
+      </div>
+    </div>
   </div>
   <div class="detailed-stats row">
     <div class="detailed-label dark-bg t-align-center">HP</div>
@@ -35,6 +39,7 @@
 
   </div>
   <div class="detailed-moves" *ngIf="moves$ | async as moves">
-    <div class="detailed-move" [class]="'move-'+moves[i].type" *ngFor="let move of pokemon.moves; let i = index">{{move}}</div>
+    <div class="detailed-move" [class]="'move-'+moves[i].type"
+         *ngFor="let move of pokemon.moves; let i = index">{{move}}</div>
   </div>
 </ng-container>

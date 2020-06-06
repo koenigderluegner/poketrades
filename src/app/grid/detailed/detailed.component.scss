@@ -20,6 +20,30 @@
         filter: grayscale(1);
       }
     }
+    .detailed-species-info{
+      margin-top: -12px;
+    }
+
+    .detailed-species-icon {
+      position: relative;
+      display: flex;
+      width: 90px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .icon-foundation {
+      position: absolute;
+      left: 50%;
+      bottom: 3px;
+      width: 40px;
+      opacity: 0.3;
+      transform: translateX(-20px);
+    }
+
+    .detailed-species {
+      border-bottom: 4px solid transparent;
+    }
 
     .row {
       margin: 0 0 3px 0;
@@ -29,8 +53,18 @@
       background: #dbdbdb;
     }
 
+    .detailed-types{
+      border-top: 14px solid transparent;
+    }
+
     .detailed-pokemon-info {
       padding: 4px 10px;
+      display: flex;
+      align-items: center;
+
+      .detailed-label {
+        margin-left: -10px;
+      }
 
       .type-badge {
         margin-right: 5px;
