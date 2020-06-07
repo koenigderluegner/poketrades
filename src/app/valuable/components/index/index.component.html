@@ -1,1 +1,17 @@
-<p>index works!</p>
+<header class="view-header">valuables</header>
+<div class="view-addional-content">
+  <app-changer (selectionChanged)="changeGrid($event)" class="m-right-gap"></app-changer>
+</div>
+<aside class="view-sidebar">
+  <ul class="sub-navi" *ngIf="worksheets">
+
+    <app-sub-navi-item [link]="['/'+spreadsheetId, 'valuables', worksheet.title | slugify]"
+                       *ngFor="let worksheet of worksheets"
+                       [text]="worksheet.title"
+                       [meta]="worksheet.ownedEntries +'/'+worksheet.data.length">
+    </app-sub-navi-item>
+  </ul>
+</aside>
+<div class="view-content">
+  <router-outlet></router-outlet>
+</div>

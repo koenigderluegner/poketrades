@@ -1,10 +1,15 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { IndexComponent } from './components/index/index.component';
+import { ValuablesComponent } from './components/valuables/valuables.component';
 
 
 const routes: Routes = [
-  {path: '', component: IndexComponent}
+  {
+    path: '', component: IndexComponent, children: [
+      {path: ':worksheetTitle', component: ValuablesComponent}
+    ]
+  }
 ];
 
 @NgModule({

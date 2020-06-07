@@ -13,7 +13,10 @@ import { ValuablesComponent } from './components/valuables/valuables.component';
   declarations: [IndexComponent, ValuablesComponent],
   imports: [
     CommonModule,
-    ValuableRoutingModule
+    ValuableRoutingModule,
+    ReactiveFormsModule,
+    SharedModule,
+    GridModule
   ]
 })
 export class ValuableModule { }
