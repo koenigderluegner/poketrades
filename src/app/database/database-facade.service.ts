@@ -28,4 +28,9 @@ export class DatabaseFacadeService {
   findMove(name: string): Observable<any> {
     return this.moveService.findMove(name);
   }
+
+  isEggMove(pokemonName: string, move: string): Observable<boolean> {
+    return this.moveService.isEggMove(pokemonName, move);
+  }
+
 }
