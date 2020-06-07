@@ -12,6 +12,7 @@ import { forkJoin, Observable } from 'rxjs';
 export class DetailedComponent implements OnInit {
 
   @HostBinding('class.grid-item') true;
+  isEggMove$: Observable<boolean[]>;
 
   @HostBinding('class.inactive') get inactive() {
     return !this.pokemon?.isOwned;
@@ -20,6 +21,7 @@ export class DetailedComponent implements OnInit {
   @Input() pokemon: Pokemon;
   dbpokemon$: Observable<any>;
   moves$: Observable<any[]>;
+
   constructor(private databaseFacadeService: DatabaseFacadeService) {
   }
 
@@ -27,6 +29,10 @@ export class DetailedComponent implements OnInit {
     this.dbpokemon$ = this.databaseFacadeService.findPokemon(this.pokemon?.name);
     this.moves$ = forkJoin(this.pokemon.moves.map(move => {
       return this.databaseFacadeService.findMove(move);
+    }));
+
+    this.isEggMove$ = forkJoin(this.pokemon.moves.map(move => {
+      return this.databaseFacadeService.isEggMove(this.pokemon.name, move);
     }));
   }
 

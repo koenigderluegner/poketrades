@@ -193,6 +193,18 @@
 
 .detailed-moves {
   padding: 0 4px;
+
+  .egg-icon {
+    overflow: hidden;
+    height: 21px;
+    width: 32px;
+    display: flex;
+    align-items: flex-end;
+
+    .pkspr.egg {
+      margin-left: -16px;
+    }
+  }
 }
 
 [class*=move-] {
@@ -202,6 +214,7 @@
   background-blend-mode: screen;
   background-size: 24px;
   background-position: 3px;
+  justify-content: space-between;
 }
 
 $types: "water" #8CADE0,
