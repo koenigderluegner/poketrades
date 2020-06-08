@@ -6,6 +6,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from '@shared/shared.module';
 import { GridModule } from '../grid/grid.module';
 import { ValuablesComponent } from './components/valuables/valuables.component';
+import { SlugifyPipe } from '@shared/pipes/slugify.pipe';
+import { NgxStructuralsModule } from '@tngtech/ngx-structurals';
 
 
 
@@ -16,7 +18,9 @@ import { ValuablesComponent } from './components/valuables/valuables.component';
     ValuableRoutingModule,
     ReactiveFormsModule,
     SharedModule,
-    GridModule
-  ]
+    GridModule,
+    NgxStructuralsModule
+  ],
+  providers: [SlugifyPipe]
 })
 export class ValuableModule { }
