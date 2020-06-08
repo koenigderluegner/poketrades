@@ -1,6 +1,10 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ValuablesComponent } from './valuables.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+import { SlugifyPipe } from '@shared/pipes/slugify.pipe';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 describe('ValuablesComponent', () => {
   let component: ValuablesComponent;
@@ -8,9 +12,14 @@ describe('ValuablesComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ValuablesComponent ]
+      imports: [HttpClientTestingModule, RouterTestingModule],
+      declarations: [ValuablesComponent],
+      providers: [
+        SlugifyPipe
+      ],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
