@@ -39,6 +39,8 @@ export class Valuable extends AbstractValuable implements Pokemon {
     if (!this._slug) {
       this._slug = new SlugifyPipe().transform(this.name);
       this._slug = this._slug.replace('-antique', '');
+      this._slug = this._slug.replace('-gigantamax', '-gmax');
+      this._slug = this._slug.replace('-low-key-gmax', '-gmax');
     }
     return this._slug;
   }
