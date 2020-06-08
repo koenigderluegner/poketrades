@@ -91,6 +91,10 @@
       display: grid;
       grid-template-columns: 80px 1fr;
       grid-gap: 3px 10px;
+
+      &.ev-iv{
+        grid-template-columns: 80px 1fr 1fr;
+      }
     }
 
     .detailed-label {

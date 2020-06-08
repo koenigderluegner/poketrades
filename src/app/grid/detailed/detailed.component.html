@@ -11,19 +11,29 @@
       </div>
     </div>
   </div>
-  <div class="detailed-stats row">
+  <div class="detailed-stats row "  [class.ev-iv]="pokemon.ivs && pokemon.evs">
+
+    <div class="detailed-label dark-bg t-align-center">Stats</div>
+    <div class="" *ngIf="pokemon.ivs">IVs</div>
+    <div class="" *ngIf="pokemon.evs">EVs</div>
     <div class="detailed-label dark-bg t-align-center">HP</div>
-    <div class="">67</div>
+    <div class="" *ngIf="pokemon.ivs">{{pokemon.ivs.hp}}</div>
+    <div class="" *ngIf="pokemon.evs">{{pokemon.evs.hp}}</div>
     <div class="detailed-label dark-bg t-align-center">Attack</div>
-    <div class="">67</div>
+    <div class="" *ngIf="pokemon.ivs">{{pokemon.ivs.atk}}</div>
+    <div class="" *ngIf="pokemon.evs">{{pokemon.evs.atk}}</div>
     <div class="detailed-label dark-bg t-align-center">Defense</div>
-    <div class="">67</div>
+    <div class="" *ngIf="pokemon.ivs">{{pokemon.ivs.def}}</div>
+    <div class="" *ngIf="pokemon.evs">{{pokemon.evs.def}}</div>
     <div class="detailed-label dark-bg t-align-center">Sp. Atk</div>
-    <div class="">67</div>
+    <div class="" *ngIf="pokemon.ivs">{{pokemon.ivs.spa}}</div>
+    <div class="" *ngIf="pokemon.evs">{{pokemon.evs.spa}}</div>
     <div class="detailed-label dark-bg t-align-center">Sp. Def</div>
-    <div class="">67</div>
+    <div class="" *ngIf="pokemon.ivs">{{pokemon.ivs.spd}}</div>
+    <div class="" *ngIf="pokemon.evs">{{pokemon.evs.spd}}</div>
     <div class="detailed-label dark-bg t-align-center">Speed</div>
-    <div class="">67</div>
+    <div class="" *ngIf="pokemon.ivs">{{pokemon.ivs.spe}}</div>
+    <div class="" *ngIf="pokemon.evs">{{pokemon.evs.spe}}</div>
   </div>
   <div class="detailed-dynamax row ">
     <div class="detailed-label dark-bg">Dynamax Level</div>
