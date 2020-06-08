@@ -10,6 +10,7 @@ export interface Pokemon {
   isOwned?: boolean;
   moves: any[];
   dynamaxLevel?: number;
+  isShiny?: boolean;
   ivs?: PokemonStats;
   evs?: PokemonStats;
 }

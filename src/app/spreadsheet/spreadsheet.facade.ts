@@ -82,9 +82,15 @@ export class SpreadsheetFacade {
             selectedWorksheet.data = worksheet.feed.entry;
             selectedWorksheet.ownedEntries = worksheet.feed.entry.filter(pokemon => pokemon.gsx$owned?.$t === 'x').length;
 
-            for(const entry of selectedWorksheet.data){
-               // @ts-ignore
+            for (const entry of selectedWorksheet.data) {
+              // @ts-ignore
               entry.id = entry.id.$t.split('/').pop();
+            }
+            if (selectedWorksheet.config?.type === 'Valuables' && selectedWorksheet.config?.subType === 'Shinies') {
+              for (const entry of selectedWorksheet.data) {
+                // @ts-ignore
+                entry.isShiny = true;
+              }
             }
           }
         }

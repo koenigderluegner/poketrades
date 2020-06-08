@@ -1,7 +1,7 @@
 <div class="icon-wrapper">
   <img class="icon-foundation" [src]="'assets/images/pokesprite-pokeball.svg'" alt="">
   <div class="icon">
-    <app-pokemon [slug]="pokemon?.iconSlug"></app-pokemon>
+    <app-pokemon [shiny]="pokemon?.isShiny" [slug]="pokemon?.iconSlug"></app-pokemon>
   </div>
 </div>
 <div class="information">
