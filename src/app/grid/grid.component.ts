@@ -49,7 +49,7 @@ export class GridComponent implements OnInit, AfterContentInit {
     }
 
     trackByFn(item) {
-        return item.pokemon?.name;
+        return item.pokemon?.id;
     }
 
     ngOnInit(): void {

@@ -1,4 +1,5 @@
 export interface Pokemon {
+  id: string;
   name: string;
   dex: string;
   ability: string;

@@ -53,7 +53,7 @@ export class BallComponent implements OnInit, OnDestroy {
   }
 
   trackBy(index, pokemon) {
-    return index + pokemon.dex;
+    return pokemon.id;
   }
 
   ngOnDestroy(): void {
