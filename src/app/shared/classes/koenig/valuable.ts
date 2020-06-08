@@ -1,10 +1,14 @@
 import { Pokemon } from '@shared/interfaces/pokemon';
 import { AbstractValuable } from '@shared/classes/koenig/AbstractValuable';
 import { SlugifyPipe } from '@shared/pipes/slugify.pipe';
+import { PokemonStats } from '@shared/interfaces/pokemon-stats';
 
 export class Valuable extends AbstractValuable implements Pokemon {
-  _slug: string;
-  _moves: any[];
+  id: string;
+  private _slug: string;
+  private _moves: any[];
+  private _ivs: PokemonStats;
+  private _evs: PokemonStats;
 
   constructor(pokemon?: Pokemon) {
     super();
@@ -16,6 +20,28 @@ export class Valuable extends AbstractValuable implements Pokemon {
       if (this[`gsx$move${i}`]?.$t)
         this._moves.push(this[`gsx$move${i}`]?.$t);
     }
+
+    this._ivs = {};
+    this._evs = {};
+    let hasIvs = false;
+    let hasEvs = false;
+    ['hp', 'atk', 'def', 'spa', 'spd', 'spe'].forEach(stat => {
+      const iv = this['gsx$' + stat]?.$t.trim();
+      const ev = this['gsx$ev' + stat]?.$t.trim();
+      if (iv !== '') {
+        this._ivs[stat] = iv;
+        hasIvs = true;
+      }
+      if (ev !== '') {
+        this._evs[stat] = ev;
+        hasEvs = true;
+      }
+
+      if (!hasIvs) delete this._ivs;
+      if (!hasEvs) delete this._evs;
+    })
+
+
   }
 
 
@@ -51,5 +77,13 @@ export class Valuable extends AbstractValuable implements Pokemon {
 
   get moves() {
     return this._moves;
+  }
+
+  get ivs() {
+    return this._ivs;
+  }
+
+  get evs() {
+    return this._evs;
   }
 }

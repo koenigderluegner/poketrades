@@ -3,7 +3,7 @@ import { SlugifyPipe } from '@shared/pipes/slugify.pipe';
 import { AbstractBreeable } from '@shared/classes/koenig/abstract-breeable';
 
 export class Breedable extends AbstractBreeable implements Pokemon {
-
+  id: string;
   private _slug: string;
   private _moves: any[];
 

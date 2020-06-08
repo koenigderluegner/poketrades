@@ -1,3 +1,5 @@
+import { PokemonStats } from '@shared/interfaces/pokemon-stats';
+
 export interface Pokemon {
   id: string;
   name: string;
@@ -8,4 +10,6 @@ export interface Pokemon {
   isOwned?: boolean;
   moves: any[];
   dynamaxLevel?: number;
+  ivs?: PokemonStats;
+  evs?: PokemonStats;
 }
