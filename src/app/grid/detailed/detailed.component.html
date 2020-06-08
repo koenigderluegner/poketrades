@@ -11,7 +11,7 @@
       </div>
     </div>
   </div>
-  <div class="detailed-stats row "  [class.ev-iv]="pokemon.ivs && pokemon.evs">
+  <div class="detailed-stats row " *ngIf="pokemon.ivs || pokemon.evs"  [class.ev-iv]="pokemon.ivs && pokemon.evs">
 
     <div class="detailed-label dark-bg t-align-center">Stats</div>
     <div class="" *ngIf="pokemon.ivs">IVs</div>
