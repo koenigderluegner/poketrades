@@ -28,11 +28,11 @@ export class Valuable extends AbstractValuable implements Pokemon {
     ['hp', 'atk', 'def', 'spa', 'spd', 'spe'].forEach(stat => {
       const iv = this['gsx$' + stat]?.$t.trim();
       const ev = this['gsx$ev' + stat]?.$t.trim();
-      if (iv !== '') {
+      if (iv && iv !== '') {
         this._ivs[stat] = iv;
         hasIvs = true;
       }
-      if (ev !== '') {
+      if (ev && ev !== '') {
         this._evs[stat] = ev;
         hasEvs = true;
       }
