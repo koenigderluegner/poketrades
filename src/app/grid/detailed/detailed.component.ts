@@ -1,4 +1,4 @@
-import { Component, HostBinding, Input, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, HostBinding, Input, OnChanges, OnInit, SimpleChanges, ViewEncapsulation } from '@angular/core';
 import { Pokemon } from '@shared/interfaces/pokemon';
 import { DatabaseFacadeService } from '../../database/database-facade.service';
 import { forkJoin, Observable } from 'rxjs';
@@ -9,7 +9,7 @@ import { forkJoin, Observable } from 'rxjs';
   styleUrls: ['./detailed.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class DetailedComponent implements OnInit {
+export class DetailedComponent implements OnInit, OnChanges {
 
   @HostBinding('class.grid-item') true;
   isEggMove$: Observable<boolean[]>;
@@ -26,6 +26,16 @@ export class DetailedComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
+    console.log(this.pokemon);
+    this.initPokemonAttributes();
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    this.initPokemonAttributes();
+  }
+
+  initPokemonAttributes() {
     this.dbpokemon$ = this.databaseFacadeService.findPokemon(this.pokemon?.name);
     this.moves$ = forkJoin(this.pokemon.moves.map(move => {
       return this.databaseFacadeService.findMove(move);
