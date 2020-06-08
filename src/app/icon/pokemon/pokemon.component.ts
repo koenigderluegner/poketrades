@@ -9,7 +9,9 @@ import { Component, HostBinding, Input, ViewEncapsulation } from '@angular/core'
 export class PokemonComponent {
 
   @HostBinding('class.pkspr') true;
+  @Input() @HostBinding('class.shiny') shiny: boolean;
   @Input() @HostBinding('class') slug: string;
+
 
   constructor() {
   }
