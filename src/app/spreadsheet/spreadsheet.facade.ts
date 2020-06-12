@@ -78,7 +78,7 @@ export class SpreadsheetFacade {
           selectedWorksheet.config = this.getWorksheetConfig(worksheet);
           if (selectedWorksheet) {
             worksheet.feed.entry = worksheet.feed.entry.slice(3); // first 3 rows contain meta data
-            worksheet.feed.entry = worksheet.feed.entry.filter(pokemon => pokemon.gsx$name.$t);
+            worksheet.feed.entry = worksheet.feed.entry.filter(pokemon => pokemon.gsx$name?.$t);
             selectedWorksheet.data = worksheet.feed.entry;
             selectedWorksheet.ownedEntries = worksheet.feed.entry.filter(pokemon => pokemon.gsx$owned?.$t === 'x').length;
 
