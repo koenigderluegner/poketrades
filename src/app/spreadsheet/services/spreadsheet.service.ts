@@ -9,8 +9,10 @@ import { Spreadsheet } from '../models/spreadsheet';
 })
 export class SpreadsheetService {
 
-  filteredTabs = ['Landing Page', 'Shiny Living Dex', 'Living Dex', 'Friend Safari (X & Y)', 'Resource',
-    'Breedables Overview', 'Ban List', 'Ban Checker', 'Breedables Ball Legality', 'Resource Gen7 (Backup)'];
+  filteredTabs = ['Welcome', 'Shiny Living Dex', 'Living Dex', 'Friend Safari (X & Y)', 'Resource',
+    'Breedables Overview', 'Ban List', 'Ban Checker', 'Breedables Ball Legality', 'Resource Gen7 (Backup)',
+    'DB:Natures', 'DB:Types', 'DB:Moves', 'DB:Misc', 'DB:Pokemon', 'DB:Items', 'DB:Abilities', 'DB:LevelMoves',
+    'DB:Balls', 'Tool:Breeding', 'Tool: Move Lookup', 'Alcremie'];
 
   constructor(private httpClient: HttpClient) {
   }
