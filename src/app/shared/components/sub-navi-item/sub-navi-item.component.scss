@@ -73,3 +73,12 @@ li {
   }
 }
 
+@media (prefers-color-scheme: dark) {
+  li a {
+    .icon, .content .title, {
+      background: #212121;
+      color: rgba(255, 255, 255, 0.8);
+    }
+  }
+}
+

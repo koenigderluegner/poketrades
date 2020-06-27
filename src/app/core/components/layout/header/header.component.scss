@@ -66,3 +66,16 @@ app-header:host {
     height: 100vw;
   }
 }
+
+@media (prefers-color-scheme: dark) {
+  app-header:host {
+    &:before {
+      background-color: #67181e;
+    }
+
+    &:after {
+      background-color: #821f26;
+    }
+
+  }
+}
