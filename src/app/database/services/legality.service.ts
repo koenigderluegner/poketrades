@@ -25,4 +25,8 @@ export class LegalityService {
     }
   }
 
+  getList() {
+    return this.loadDatabase();
+  }
+
 }
