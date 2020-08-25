@@ -1,15 +1,25 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostBinding, Input } from '@angular/core';
 
 @Component({
   selector: 'app-item',
-  templateUrl: './item.component.html',
-  styleUrls: ['./item.component.scss']
+  template: '',
 })
-export class ItemComponent implements OnInit {
+export class ItemComponent {
 
-  constructor() { }
 
-  ngOnInit(): void {
+  @HostBinding('class.pokesprite') pokesprite = true;
+  private slugClass: any;
+  private categoryClass: any;
+
+  @Input() set slug(sl) {
+    this.slugClass = sl;
+    this.classes = [this.slugClass, this.categoryClass].join(' ');
   }
+
+  @Input() set category(cat) {
+    this.categoryClass = cat;
+  }
+
+  @HostBinding('class') classes;
 
 }
