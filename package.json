@@ -25,6 +25,7 @@
     "@angular/router": "~10.0.12",
     "@tngtech/ngx-structurals": "^1.1.2",
     "karma-junit-reporter": "^2.0.1",
+    "pokesprite-spritesheet": "github:msikma/pokesprite-spritesheet#master",
     "rxjs": "~6.5.4",
     "tslib": "^2.0.1",
     "zone.js": "~0.10.2"

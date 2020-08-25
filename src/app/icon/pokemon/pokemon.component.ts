@@ -3,12 +3,13 @@ import { Component, HostBinding, Input, ViewEncapsulation } from '@angular/core'
 @Component({
   selector: 'app-pokemon',
   template: '',
-  styleUrls: ['./pokemon.component.scss', '../pokesprite/pokesprite.css'],
+  styleUrls: ['./pokemon.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
 export class PokemonComponent {
 
-  @HostBinding('class.pkspr') true;
+  @HostBinding('class.pokesprite') pokesprite = true;
+  @HostBinding('class.pokemon') pokemon = true;
   @Input() @HostBinding('class.shiny') shiny: boolean;
   @Input() @HostBinding('class') slug: string;
 
