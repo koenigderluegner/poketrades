@@ -6,6 +6,7 @@ export interface Spreadsheet {
   date: Date;
   worksheets: Worksheet[];
 
+  overviewEntries?: object;
   hasValuables?: boolean;
   hasBreedables?: boolean;
 }

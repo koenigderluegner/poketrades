@@ -4,6 +4,7 @@ import { Spreadsheet } from './models/spreadsheet';
 import { catchError, map, switchMap, tap } from 'rxjs/operators';
 import { Worksheet } from './models/worksheet';
 import { SpreadsheetService } from './services/spreadsheet.service';
+import { Breedable } from '@shared/classes/koenig/breedable';
 
 @Injectable({
   providedIn: 'root'
@@ -31,9 +32,9 @@ export class SpreadsheetFacade {
   constructor(private spreadsheetService: SpreadsheetService) {
     if (!localStorage.getItem('spreadsheetHistory')) {
       localStorage.setItem('spreadsheetHistory', JSON.stringify([]));
-      this._searchHistory = new BehaviorSubject<any[]>([])
+      this._searchHistory = new BehaviorSubject<any[]>([]);
     } else {
-      this._searchHistory = new BehaviorSubject<any[]>(JSON.parse(localStorage.getItem('spreadsheetHistory')))
+      this._searchHistory = new BehaviorSubject<any[]>(JSON.parse(localStorage.getItem('spreadsheetHistory')));
     }
     this._currentSpreadsheet$ = new BehaviorSubject<Spreadsheet>({
       title: '',
@@ -55,13 +56,13 @@ export class SpreadsheetFacade {
   searchSpreadsheet(spreadsheetId): Observable<Spreadsheet> {
     return this.loadSpreadsheet(spreadsheetId).pipe(
       tap(spreadsheet => this.saveToHistory(spreadsheet))
-    )
+    );
   }
 
   loadSpreadsheet(spreadsheetId): Observable<Spreadsheet> {
 
     this.updateIsLoading(true);
-    let loadedSpreadsheet;
+    let loadedSpreadsheet: Spreadsheet;
 
     return this.spreadsheetService.getSpreadsheet(spreadsheetId).pipe(
       tap(spreadsheet => {
@@ -97,14 +98,21 @@ export class SpreadsheetFacade {
 
         loadedSpreadsheet.hasBreedables = loadedSpreadsheet.worksheets.some(ws => ws.config?.type === 'Breedables');
         loadedSpreadsheet.hasValuables = loadedSpreadsheet.worksheets.some(ws => ws.config?.type === 'Valuables');
+
+        if (loadedSpreadsheet.hasBreedables) {
+          loadedSpreadsheet.overviewEntries = this.buildOverviewEntries(
+            loadedSpreadsheet.worksheets.filter(ws => ws.config?.type === 'Breedables' && ws.config?.ball)
+          );
+        }
+
         this.updateIsLoading(false);
-        return loadedSpreadsheet
+        return loadedSpreadsheet;
       }),
       catchError((error) => {
         console.log(error);
-        return throwError(this.convertApiErrors(error))
+        return throwError(this.convertApiErrors(error));
       })
-    )
+    );
   }
 
   private convertApiErrors(error) {
@@ -183,5 +191,18 @@ export class SpreadsheetFacade {
     });
     localStorage.setItem('spreadsheetHistory', JSON.stringify(history));
     this._searchHistory.next(history);
+  }
+
+  private buildOverviewEntries(worksheets: Worksheet[]) {
+    const overviewEntries = {};
+    worksheets.forEach(worksheet => {
+      const ball = worksheet.config.ball.toLowerCase();
+      overviewEntries[ball] = {};
+      worksheet.data.forEach(pokemon => {
+        const breedable = new Breedable(pokemon);
+        overviewEntries[ball][breedable.iconSlug] = breedable;
+      });
+    });
+    return overviewEntries;
   }
 }
