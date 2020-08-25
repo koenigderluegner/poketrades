@@ -8,7 +8,8 @@ import { ItemComponent } from './item/item.component';
 @NgModule({
   declarations: [PokemonComponent, ItemComponent],
   exports: [
-    PokemonComponent
+    PokemonComponent,
+    ItemComponent
   ],
   imports: [
     CommonModule
