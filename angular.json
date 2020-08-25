@@ -25,7 +25,9 @@
             "aot": true,
             "assets": [
               "src/favicon.png",
-              "src/assets"
+              "src/assets",
+              "src/app/shared/components/ball-guy-bubble/ball-guy-face.png",
+              "src/app/shared/components/type-badge/type-images"
             ],
             "styles": [
               "src/styles.scss"
