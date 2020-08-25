@@ -9,6 +9,11 @@
 <aside class="view-sidebar">
   <ul class="sub-navi" *ngIf="worksheets">
 
+    <app-sub-navi-item [link]="['/'+spreadsheetId, 'breedables', 'overview']"
+                       [text]="'Overview'">
+      <app-item category="ball" [slug]="'master'"></app-item>
+    </app-sub-navi-item>
+
     <app-sub-navi-item [link]="['/'+spreadsheetId, 'breedables', worksheet.title | slugify]"
                        *ngFor="let worksheet of worksheets"
                        [text]="worksheet.title"

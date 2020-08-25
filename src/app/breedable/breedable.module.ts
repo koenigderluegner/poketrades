@@ -9,10 +9,11 @@ import { SlugifyPipe } from '@shared/pipes/slugify.pipe';
 import { NgxStructuralsModule } from '@tngtech/ngx-structurals';
 import { ReactiveFormsModule } from '@angular/forms';
 import { IconModule } from '../icon/icon.module';
+import { OverviewComponent } from './components/overview/overview.component';
 
 
 @NgModule({
-  declarations: [IndexComponent, BallComponent],
+  declarations: [IndexComponent, BallComponent, OverviewComponent],
     imports: [
         CommonModule,
         BreedableRoutingModule,
