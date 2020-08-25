@@ -1,0 +1,36 @@
+.ball-col {
+  .pokesprite {
+    filter: grayscale(1) opacity(0.3);
+  }
+
+  &.active .pokesprite {
+    filter: none;
+  }
+
+  &.illegal .pokesprite{
+    filter: brightness(0) opacity(.2);
+  }
+}
+
+.legality-row {
+  align-items: center;
+  padding-right: 10px;
+  border-radius: 5px;
+  margin: 8px 0;
+
+  .name {
+    width: 300px;
+    align-items: center;
+  }
+
+  &:nth-child(2n) {
+    background: #efefef;
+  }
+}
+
+.legality-table {
+  background: #fff;
+  border-radius: 12px;
+  display: inline-block;
+  padding: 15px;
+}
