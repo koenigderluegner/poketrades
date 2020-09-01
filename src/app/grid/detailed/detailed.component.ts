@@ -26,8 +26,6 @@ export class DetailedComponent implements OnInit, OnChanges {
   }
 
   ngOnInit(): void {
-
-    console.log(this.pokemon);
     this.initPokemonAttributes();
   }
 
