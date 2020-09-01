@@ -35,20 +35,20 @@ export class IndexComponent implements OnInit {
 
   submitSearch() {
     this.hasRequested = true;
-    this.loadedSpreadsheet$ = this.spreadsheetFacade.searchSpreadsheet(this.searchForm.controls.search.value)
+    this.loadedSpreadsheet$ = this.spreadsheetFacade.searchSpreadsheet(this.searchForm.controls.search.value);
   }
 
   saveSpreadsheet(spreadsheet: Spreadsheet) {
-    this.spreadsheetFacade.updateCurrentSpreadsheet(spreadsheet)
+    this.spreadsheetFacade.updateCurrentSpreadsheet(spreadsheet);
   }
 
   fromHistory(id: any) {
     this.hasRequested = true;
-    this.loadedSpreadsheet$ = this.spreadsheetFacade.loadSpreadsheet(id)
+    this.loadedSpreadsheet$ = this.spreadsheetFacade.loadSpreadsheet(id);
 
   }
 
   trackBy(index, item) {
-    return item.id
+    return item.id;
   }
 }

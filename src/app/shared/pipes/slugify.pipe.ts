@@ -256,7 +256,9 @@ export class SlugifyPipe implements PipeTransform {
   };
 
   transform(original: string): string {
-    if (!original) return '';
+    if (!original) {
+      return '';
+    }
     const ascii = [];
     let ch;
     let cp;

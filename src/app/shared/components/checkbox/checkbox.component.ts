@@ -32,7 +32,7 @@ export class CheckboxComponent implements OnInit, ControlValueAccessor {
   }
 
   propagateChange = (_: any) => {
-  };
+  }
 
 
   writeValue(obj: any): void {

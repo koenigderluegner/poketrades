@@ -39,7 +39,7 @@ export class BallComponent implements OnInit, OnDestroy {
       tap(params => this.worksheetTitle = params.get('worksheetTitle')),
       switchMap(
         () => {
-          return this.spreadsheetFacade.getCurrentSpreadsheet$()
+          return this.spreadsheetFacade.getCurrentSpreadsheet$();
         }
       )).subscribe(
       {

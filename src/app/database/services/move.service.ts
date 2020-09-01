@@ -15,7 +15,7 @@ export class MoveService {
 
   loadDatabase(): Observable<{ moves: any[], eggMoves: any[] }> {
     if (this.db) {
-      return of(this.db)
+      return of(this.db);
     } else {
       return forkJoin({
         moves: this.httpClient.get<any[]>('assets/database/moves.json'),
@@ -24,7 +24,7 @@ export class MoveService {
         tap(database => {
           this.db = database;
         })
-      )
+      );
     }
 
 
@@ -34,14 +34,14 @@ export class MoveService {
     return this.loadDatabase().pipe(
       switchMap(database => {
         const hits = database.moves.filter(move => {
-          return move.name.toLowerCase() === name.toLowerCase()
+          return move.name.toLowerCase() === name.toLowerCase();
         });
         if (hits.length === 0) {
           throwError('No move found with name: ' + name);
         }
         return of(hits[0]);
       })
-    )
+    );
   }
 
   isEggMove(pokemonName: string, move: string): Observable<boolean> {

@@ -9,12 +9,15 @@ export class Breedable extends AbstractBreeable implements Pokemon {
 
   constructor(pokemon?: Pokemon) {
     super();
-    if (pokemon) Object.assign(this, pokemon);
+    if (pokemon) {
+      Object.assign(this, pokemon);
+    }
 
     this._moves = [];
     for (let i = 1; i < 5; i++) {
-      if (this[`gsx$move${i}`]?.$t)
+      if (this[`gsx$move${i}`]?.$t) {
         this._moves.push(this[`gsx$move${i}`]?.$t);
+      }
     }
   }
 

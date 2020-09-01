@@ -38,7 +38,7 @@ export class IndexComponent implements OnInit {
         this.spreadsheetId = spreadsheet.id;
         this.worksheets = spreadsheet.worksheets.filter(worksheet => worksheet.config?.type === 'Breedables');
       }
-    })
+    });
   }
 
   changeGrid(appearance: GridAppearanceType) {
@@ -46,6 +46,6 @@ export class IndexComponent implements OnInit {
   }
 
   changeGridInactives() {
-    this.gridService.updateHideItems(this.toggleInactivesControl.value)
+    this.gridService.updateHideItems(this.toggleInactivesControl.value);
   }
 }

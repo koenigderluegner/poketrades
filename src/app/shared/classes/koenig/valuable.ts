@@ -12,13 +12,16 @@ export class Valuable extends AbstractValuable implements Pokemon {
 
   constructor(pokemon?: Pokemon) {
     super();
-    if (pokemon) Object.assign(this, pokemon);
+    if (pokemon) {
+      Object.assign(this, pokemon);
+    }
 
 
     this._moves = [];
     for (let i = 1; i < 5; i++) {
-      if (this[`gsx$move${i}`]?.$t)
+      if (this[`gsx$move${i}`]?.$t) {
         this._moves.push(this[`gsx$move${i}`]?.$t);
+      }
     }
 
     this._ivs = {};
@@ -37,9 +40,13 @@ export class Valuable extends AbstractValuable implements Pokemon {
         hasEvs = true;
       }
 
-      if (!hasIvs) delete this._ivs;
-      if (!hasEvs) delete this._evs;
-    })
+      if (!hasIvs) {
+        delete this._ivs;
+      }
+      if (!hasEvs) {
+        delete this._evs;
+      }
+    });
 
 
   }

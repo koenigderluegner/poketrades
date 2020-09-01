@@ -16,13 +16,13 @@ export class UserService {
 
   loadDatabase(): Observable<any[]> {
     if (this.db) {
-      return of(this.db)
+      return of(this.db);
     } else {
       return this.httpClient.get<any[]>('assets/database/users.json').pipe(
         tap(database => {
           this.db = database;
         })
-      )
+      );
     }
 
 
@@ -33,6 +33,6 @@ export class UserService {
       switchMap(database => {
         return database[name] ? of(database[name]) : throwError('No user found with name: ' + name);
       })
-    )
+    );
   }
 }

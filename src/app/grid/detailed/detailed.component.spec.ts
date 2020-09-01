@@ -43,7 +43,7 @@ describe('DetailedComponent', () => {
       expect(() => {
         fixture = TestBed.createComponent(DetailedComponent);
         component = fixture.componentInstance;
-        fixture.detectChanges()
+        fixture.detectChanges();
       }).toThrow();
     });
   });
@@ -64,5 +64,5 @@ describe('DetailedComponent', () => {
     it('should create', () => {
       expect(testHostComponent.detailedComponent).toBeTruthy();
     });
-  })
+  });
 });

@@ -44,16 +44,12 @@ export class AppComponent implements OnInit {
         if (id === 'u') { // user route
           this.userService.findUser(e.url.split('/')?.[2]).subscribe(spreadsheetId => {
             this.loadData(spreadsheetId);
-          })
+          });
         } else {
           this.loadData(id);
         }
-
-
       }
-
-
-    })
+    });
 
 
   }

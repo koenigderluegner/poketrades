@@ -31,19 +31,19 @@ export class SpreadsheetService {
               id: entry.link[4].href.split('/').pop(), // id is last part of URI
               title: entry.title.$t,
               date: new Date(Date.parse(entry.updated.$t)),
-            }
+            };
           })
-        }
+        };
 
       })
-    )
+    );
   }
 
   getWorksheet(spreadsheetId: string, worksheetId: string): Observable<any> {
-    return this.httpClient.get(`https://spreadsheets.google.com/feeds/list/${spreadsheetId}/${worksheetId}/public/values?alt=json`)
+    return this.httpClient.get(`https://spreadsheets.google.com/feeds/list/${spreadsheetId}/${worksheetId}/public/values?alt=json`);
   }
 
   getWorksheets(spreadsheetId: string, worksheetIds: string[]): Observable<any> {
-    return forkJoin(worksheetIds.map(worksheetId => this.getWorksheet(spreadsheetId, worksheetId)))
+    return forkJoin(worksheetIds.map(worksheetId => this.getWorksheet(spreadsheetId, worksheetId)));
   }
 }

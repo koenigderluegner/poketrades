@@ -39,7 +39,7 @@ describe('MinimalComponent', () => {
       expect(() => {
         fixture = TestBed.createComponent(MinimalComponent);
         component = fixture.componentInstance;
-        fixture.detectChanges()
+        fixture.detectChanges();
       }).toThrow();
     });
   });
@@ -59,6 +59,6 @@ describe('MinimalComponent', () => {
     it('should create', () => {
       expect(testHostComponent.minimalComponent).toBeTruthy();
     });
-  })
+  });
 
 });

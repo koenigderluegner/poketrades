@@ -15,13 +15,13 @@ export class PokemonService {
 
   loadDatabase(): Observable<any[]> {
     if (this.db) {
-      return of(this.db)
+      return of(this.db);
     } else {
       return this.httpClient.get<any[]>('assets/database/pokemon.json').pipe(
         tap(database => {
           this.db = database;
         })
-      )
+      );
     }
 
 
@@ -31,13 +31,13 @@ export class PokemonService {
     return this.loadDatabase().pipe(
       switchMap(database => {
         const hits = database.filter(pokemon => {
-          return pokemon.name.toLowerCase() === name.toLowerCase()
+          return pokemon.name.toLowerCase() === name.toLowerCase();
         });
         if (hits.length === 0) {
           throwError('No pokemon found with name: ' + name);
         }
         return of(hits[0]);
       })
-    )
+    );
   }
 }
