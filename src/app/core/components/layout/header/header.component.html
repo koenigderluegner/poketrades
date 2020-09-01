@@ -9,7 +9,7 @@
         <li><a routerLink="/change-spreadsheet">Change Spreadsheet</a></li>
         <li *ngIf="spreadsheetData.hasBreedables">
           <a routerLinkActive="selected"
-             [routerLink]="['/'+ spreadsheetData.id,'breedables', breedablesLink | slugify]">Breedables</a>
+             [routerLink]="['/'+ spreadsheetData.id,'breedables', 'overview']">Breedables</a>
         </li>
         <li *ngIf="spreadsheetData.hasValuables">
           <a routerLinkActive="selected" [routerLink]="['/'+ spreadsheetData.id,'valuables', valuablesLink | slugify]">Valuables</a>
