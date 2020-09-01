@@ -47,8 +47,8 @@ export class MoveService {
   isEggMove(pokemonName: string, move: string): Observable<boolean> {
     return this.loadDatabase().pipe(
       switchMap(database => {
-        return of(database.eggMoves[pokemonName].includes(move));
+        return of(!!database?.eggMoves[pokemonName]?.includes(move));
       })
-    )
+    );
   }
 }
