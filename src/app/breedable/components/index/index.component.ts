@@ -35,7 +35,7 @@ export class IndexComponent implements OnInit {
 
     this.spreadsheetData$.subscribe({
       next: spreadsheet => {
-        this.spreadsheetId = spreadsheet.id;
+        this.spreadsheetId = spreadsheet.username ? 'u/' + spreadsheet.username : spreadsheet.id;
         this.worksheets = spreadsheet.worksheets.filter(worksheet => worksheet.config?.type === 'Breedables');
       }
     });
