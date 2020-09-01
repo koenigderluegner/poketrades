@@ -51,6 +51,20 @@ export class Valuable extends AbstractValuable implements Pokemon {
 
   }
 
+  get isShiny(): boolean {
+    return this.gsx$isshiny?.$t;
+  }
+
+  set isShiny(isShiny: boolean) {
+    if (!this.gsx$isshiny) {
+      this.gsx$isshiny = {
+        $t: isShiny
+      };
+    } else {
+      this.gsx$isshiny.$t = isShiny;
+    }
+  }
+
 
   get ability(): string {
     return this.gsx$ability.$t;

@@ -5,6 +5,7 @@ export class AbstractValuable {
   protected gsx$hasha;
   protected gsx$owned;
   protected gsx$ability;
+  protected gsx$isshiny;
 
   protected gsx$hp;
   protected gsx$atk;
