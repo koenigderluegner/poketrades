@@ -42,8 +42,9 @@ export class AppComponent implements OnInit {
         console.log(id);
 
         if (id === 'u') { // user route
-          this.userService.findUser(e.url.split('/')?.[2]).subscribe(spreadsheetId => {
-            this.loadData(spreadsheetId);
+          const username = e.url.split('/')?.[2];
+          this.userService.findUser(username).subscribe(spreadsheetId => {
+            this.loadData(spreadsheetId, username);
           });
         } else {
           this.loadData(id);
@@ -54,7 +55,7 @@ export class AppComponent implements OnInit {
 
   }
 
-  loadData(spreadsheetId: string) {
+  loadData(spreadsheetId: string, username?: string) {
     if (spreadsheetId && !this.nonIdRoutes.includes(spreadsheetId)) {
       this.isLoading = true;
       this.waitingForRouter = false;
@@ -64,6 +65,9 @@ export class AppComponent implements OnInit {
         this.loadingMessage = 'Loading spreadsheet from Google API';
         const sub = this.spreadsheetFacade.loadSpreadsheet(spreadsheetId).subscribe({
           next: spreadsheet => {
+            if (username) {
+              spreadsheet.username = username;
+            }
             this.spreadsheetFacade.updateCurrentSpreadsheet(spreadsheet);
             this.isLoading = false;
             sub.unsubscribe();
