@@ -1,4 +1,4 @@
-<ng-container *ngIf="dbpokemon$ | async as dbpokemon">
+<ng-container *ngxSubscribe="let dbpokemon of dbpokemon$">
   <div class="detailed-header dark-bg">{{pokemon.name}}</div>
   <div class="detailed-species-info  d-flex">
     <div class="detailed-species-icon">
@@ -7,12 +7,17 @@
     </div>
     <div class="detailed-pokemon-info row">
       <div class="detailed-types">
-        <app-type-badge [type]="type" size="small" *ngFor="let type of dbpokemon.types">{{type}}</app-type-badge>
+        <ng-container *ngIf="dbpokemon">
+          <app-type-badge [type]="type" size="small" *ngFor="let type of dbpokemon.types">{{type}}</app-type-badge>
+        </ng-container>
+
+          <app-type-badge type="unknown" size="small" *ngIf="!dbpokemon">{{'unknown'}}</app-type-badge>
+
       </div>
     </div>
   </div>
-  <div class="detailed-stats row " *ngIf="pokemon.ivs || pokemon.evs"  [class.ev-iv]="pokemon.ivs && pokemon.evs">
 
+  <div class="detailed-stats row " *ngIf="pokemon.ivs || pokemon.evs" [class.ev-iv]="pokemon.ivs && pokemon.evs">
     <div class="detailed-label dark-bg t-align-center">Stats</div>
     <div class="" *ngIf="pokemon.ivs">IVs</div>
     <div class="" *ngIf="pokemon.evs">EVs</div>
@@ -35,19 +40,19 @@
     <div class="" *ngIf="pokemon.ivs">{{pokemon.ivs.spe}}</div>
     <div class="" *ngIf="pokemon.evs">{{pokemon.evs.spe}}</div>
   </div>
+
   <div class="detailed-dynamax row ">
     <div class="detailed-label dark-bg">Dynamax Level</div>
-
     <ul>
       <li [class.on]="index < pokemon.dynamaxLevel" *ngxRepeat="10; let index"></li>
     </ul>
-
   </div>
+
   <div class="detailed-ability row ">
     <div class="detailed-label dark-bg">Ability</div>
     <span class="detailed-text">{{pokemon.ability}}</span>
-
   </div>
+
   <div class="detailed-moves" *ngIf="moves$ | async as moves">
     <ng-container *ngIf="isEggMove$ | async as isEggMove">
       <div class="detailed-move d-flex" [class]="'move-'+moves[i].type"
