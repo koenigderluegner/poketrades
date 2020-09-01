@@ -16,6 +16,14 @@
     box-shadow: 0 3px 5px rgba(0, 0, 0, .4);
     font-family: 'Kulim Park', sans-serif;
 
+    .information {
+      div {
+        height: 25px;
+        display: flex;
+        align-items: center;
+      }
+    }
+
     .inactive {
       color: rgba(0, 0, 0, .3);
 
@@ -35,7 +43,7 @@
 
 .icon-wrapper {
   position: relative;
-  height: 56px;
+  height: 50px;
   width: 68px;
 
   .icon-foundation {
