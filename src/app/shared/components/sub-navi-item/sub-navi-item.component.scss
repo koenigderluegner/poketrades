@@ -46,6 +46,10 @@ li {
         z-index: 1;
       }
 
+      &.no-meta:before{
+        background-color: #fff;
+      }
+
       .title {
         flex-grow: 1;
         background: #fff;
@@ -65,7 +69,7 @@ li {
     }
 
     &.active {
-      .icon, .content .title {
+      .icon, .content .title, .content.no-meta:before {
         background: #000;
         color: #fff;
       }
