@@ -6,6 +6,11 @@
   background-size: 600% 300%;
   border-radius: 3px;
 
+  &.unknown{
+    background-image: url('type-images/type-unknown.png');
+    background-size: contain;
+  }
+
   &.small {
     width: 100px;
     height: 22px;

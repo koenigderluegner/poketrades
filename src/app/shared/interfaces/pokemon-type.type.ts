@@ -16,4 +16,5 @@ export type PokemonType =
   | 'ice'
   | 'dragon'
   | 'dark'
-  | 'fairy';
+  | 'fairy'
+  | 'unknown';
