@@ -14,6 +14,10 @@ const routes: Routes = [
     loadChildren: () => import('./spreadsheet-changer/spreadsheet-changer.module').then(m => m.SpreadsheetChangerModule)
   },
   {
+    path: 'tools',
+    loadChildren: () => import('./tools/tools.module').then(m => m.ToolsModule)
+  },
+  {
     path: ':spreadsheetId', children: userRoutes
   },
   {
