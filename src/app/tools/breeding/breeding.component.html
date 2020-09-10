@@ -1,19 +1,23 @@
 <ng-container *ngxSubscribe="let breedables of breedables$">
-  <div class="custom-wrapper-example" matAutocompleteOrigin #origin="matAutocompleteOrigin">
+  <label class="poke-autocomplete-input-wrapper" matAutocompleteOrigin #origin="matAutocompleteOrigin">
+
+    <app-pokemon [slug]="selectedPokemon ? selectedPokemon.iconSlug : 'unknown'" ></app-pokemon>
     <input
       matInput
+      class="poke-autocomplete-input"
+      (focusin)="$event.target.select()"
       [formControl]="control"
       [matAutocomplete]="auto"
       [matAutocompleteConnectedTo]="origin">
-  </div>
+  </label>
   <mat-autocomplete (optionSelected)="selectPokemon($event)" #auto="matAutocomplete" class="poke-autocomplete"
                     [displayWith]="displayFn">
     <mat-option *ngFor="let option of filteredPokemon | async" [value]="option">
       <app-pokemon [slug]="option.pokemon | slugify"></app-pokemon>
       {{option.pokemon}}</mat-option>
   </mat-autocomplete>
-  <ng-container *ngIf="selectedPokemon">
-    <ng-container *ngxSubscribe="let pokemon of selectedPokemon">
+  <ng-container *ngIf="selectedPokemon$">
+    <ng-container *ngxSubscribe="let pokemon of selectedPokemon$">
       <ng-container *ngIf="pokemon; else pokemonNotFound">
         {{pokemon.iconSlug}}
       </ng-container>

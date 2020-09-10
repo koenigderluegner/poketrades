@@ -17,7 +17,8 @@ export class BreedingComponent implements OnInit {
   breedables$: Observable<any>;
   private breedables: any;
   filteredPokemon: Observable<any[]>;
-  selectedPokemon;
+  selectedPokemon$;
+  selectedPokemon: any;
 
 
   constructor(private database: DatabaseFacadeService) {
@@ -57,6 +58,10 @@ export class BreedingComponent implements OnInit {
   }
 
   selectPokemon($event: MatAutocompleteSelectedEvent) {
-    this.selectedPokemon = this.database.findPokemon($event.option.value.pokemon);
+    this.selectedPokemon$ = this.database.findPokemon($event.option.value.pokemon).pipe(tap(
+      pokemon => {
+        this.selectedPokemon = pokemon;
+      }
+    ));
   }
 }
