@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { DatabaseFacadeService } from '../../database/database-facade.service';
 import { Observable } from 'rxjs';
@@ -7,7 +7,8 @@ import { map, startWith, tap } from 'rxjs/operators';
 @Component({
   selector: 'app-breeding',
   templateUrl: './breeding.component.html',
-  styleUrls: ['./breeding.component.scss']
+  styleUrls: ['./breeding.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class BreedingComponent implements OnInit {
 
