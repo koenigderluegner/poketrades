@@ -3,6 +3,7 @@ import { FormControl } from '@angular/forms';
 import { DatabaseFacadeService } from '../../database/database-facade.service';
 import { Observable } from 'rxjs';
 import { map, startWith, tap } from 'rxjs/operators';
+import { MatAutocompleteSelectedEvent } from '@angular/material/autocomplete';
 
 @Component({
   selector: 'app-breeding',
@@ -16,6 +17,7 @@ export class BreedingComponent implements OnInit {
   breedables$: Observable<any>;
   private breedables: any;
   filteredPokemon: Observable<any[]>;
+  selectedPokemon;
 
 
   constructor(private database: DatabaseFacadeService) {
@@ -54,4 +56,7 @@ export class BreedingComponent implements OnInit {
     return pokemon.pokemon;
   }
 
+  selectPokemon($event: MatAutocompleteSelectedEvent) {
+    this.selectedPokemon = this.database.findPokemon($event.option.value.pokemon);
+  }
 }
