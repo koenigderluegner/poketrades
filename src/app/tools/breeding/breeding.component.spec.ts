@@ -1,6 +1,10 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { BreedingComponent } from './breeding.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { NgxSubscribeModule } from '@tngtech/ngx-structurals';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 describe('BreedingComponent', () => {
   let component: BreedingComponent;
@@ -8,7 +12,9 @@ describe('BreedingComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BreedingComponent ]
+      imports: [ HttpClientTestingModule, NgxSubscribeModule, MatAutocompleteModule ],
+      declarations: [ BreedingComponent ],
+      schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
     })
     .compileComponents();
   }));
