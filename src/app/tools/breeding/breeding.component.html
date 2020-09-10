@@ -1,8 +1,9 @@
 <ng-container *ngxSubscribe="let breedables of breedables$">
   <label class="poke-autocomplete-input-wrapper" matAutocompleteOrigin #origin="matAutocompleteOrigin">
 
-    <app-pokemon [slug]="selectedPokemon ? selectedPokemon.iconSlug : 'unknown'" ></app-pokemon>
+    <app-pokemon [slug]="selectedPokemon ? selectedPokemon.iconSlug : 'unknown'"></app-pokemon>
     <input
+      placeholder="Select Pokémon"
       matInput
       class="poke-autocomplete-input"
       (focusin)="$event.target.select()"
@@ -11,10 +12,11 @@
       [matAutocompleteConnectedTo]="origin">
   </label>
   <mat-autocomplete (optionSelected)="selectPokemon($event)" #auto="matAutocomplete" class="poke-autocomplete"
-                    [displayWith]="displayFn">
+                    [displayWith]="displayFn" autoActiveFirstOption>
     <mat-option *ngFor="let option of filteredPokemon | async" [value]="option">
       <app-pokemon [slug]="option.pokemon | slugify"></app-pokemon>
-      {{option.pokemon}}</mat-option>
+      {{option.pokemon}}
+    </mat-option>
   </mat-autocomplete>
   <ng-container *ngIf="selectedPokemon$">
     <ng-container *ngxSubscribe="let pokemon of selectedPokemon$">
