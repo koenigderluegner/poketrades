@@ -2,6 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { OverviewComponent } from './overview.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { NgxSubscribeModule } from '@tngtech/ngx-structurals';
 
 describe('OverviewComponent', () => {
   let component: OverviewComponent;
@@ -9,7 +10,7 @@ describe('OverviewComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [HttpClientTestingModule],
+      imports: [HttpClientTestingModule, NgxSubscribeModule],
       declarations: [OverviewComponent]
     })
       .compileComponents();
