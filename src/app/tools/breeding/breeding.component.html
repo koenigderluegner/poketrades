@@ -1,1 +1,14 @@
-<p>breeding works!</p>
+<ng-container *ngxSubscribe="let breedables of breedables$">
+  <div class="custom-wrapper-example" matAutocompleteOrigin #origin="matAutocompleteOrigin">
+    <input
+      matInput
+
+      [formControl]="control"
+      [matAutocomplete]="auto"
+      [matAutocompleteConnectedTo]="origin">
+  </div>
+
+  <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+    <mat-option *ngFor="let option of filteredPokemon | async" [value]="option">{{option.pokemon}}</mat-option>
+  </mat-autocomplete>
+</ng-container>
