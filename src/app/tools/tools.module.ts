@@ -10,6 +10,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { NgxAliasModule, NgxSubscribeModule } from '@tngtech/ngx-structurals';
 import { FilterLevelUpMovesPipe } from './pipes/filter-level-up-moves.pipe';
+import { GridModule } from '../grid/grid.module';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { FilterLevelUpMovesPipe } from './pipes/filter-level-up-moves.pipe';
     ReactiveFormsModule,
     MatAutocompleteModule,
     NgxSubscribeModule,
-    NgxAliasModule
+    NgxAliasModule,
+    GridModule
   ]
 })
 export class ToolsModule { }

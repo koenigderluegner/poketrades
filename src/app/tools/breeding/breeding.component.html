@@ -27,20 +27,26 @@
         <div>
           <h2>Inheritance</h2>
           <div *ngFor="let eggMove of eggMoves">{{eggMove}}
-            <ng-container *ngFor="let parent of parentMoves | keyvalue">
-              <app-pokemon *ngIf="parent.value.eggMoves.includes(eggMove)" [slug]="parent.key | slugify"></app-pokemon>
-            </ng-container>
+            <app-grid appearance="minimal">
+              <ng-container *ngFor="let parent of parentMoves | keyvalue">
+                <app-grid-item *ngIf="parent.value.eggMoves.includes(eggMove)"
+                               [pokemon]="{iconSlug: parent.key | slugify, isOwned: true}"></app-grid-item>
+              </ng-container>
+            </app-grid>
           </div>
         </div>
 
         <div>
           <h2>Leveling</h2>
           <div *ngFor="let eggMove of eggMoves">{{eggMove}}
-            <ng-container *ngFor="let parent of parentMoves | keyvalue">
-              <ng-container *ngIf="(parent.value.levelUpMoves | filterLevelUpMoves: eggMove) as moves">
-                <app-pokemon [slug]="parent.key | slugify" *ngIf="moves.length"></app-pokemon>
+            <app-grid appearance="minimal">
+              <ng-container *ngFor="let parent of parentMoves | keyvalue">
+                <ng-container *ngIf="(parent.value.levelUpMoves | filterLevelUpMoves: eggMove) as moves">
+                  <app-grid-item [pokemon]="{iconSlug: parent.key | slugify, isOwned: true}"
+                                 *ngIf="moves.length"></app-grid-item>
+                </ng-container>
               </ng-container>
-            </ng-container>
+            </app-grid>
           </div>
         </div>
       </ng-container>
