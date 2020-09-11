@@ -40,4 +40,8 @@ export class DatabaseFacadeService {
     return this.legalityService.getList();
   }
 
+  getEggGroupParents(eggGroups: string[]) {
+    return this.pokemonService.getEggGroupParents(eggGroups);
+  }
+
 }
