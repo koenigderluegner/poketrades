@@ -40,4 +40,23 @@ export class DatabaseFacadeService {
     return this.legalityService.getList();
   }
 
+  getEggGroupParents(eggGroups: string[]) {
+    return this.pokemonService.getEggGroupParents(eggGroups);
+  }
+
+  getEggMovesForPokemon(pokemonName: string): Observable<any> {
+    return this.moveService.getEggMovesForPokemon(pokemonName);
+  }
+
+  getLevelUpMovesForPokemon(pokemonName: string): Observable<any> {
+    return this.moveService.getLevelUpMovesForPokemon(pokemonName);
+  }
+
+  getMovesForPokemon(pokemonName: string): Observable<any> {
+    return forkJoin({
+      eggMoves: this.getEggMovesForPokemon(pokemonName),
+      levelUpMoves: this.getLevelUpMovesForPokemon(pokemonName),
+    });
+  }
+
 }

@@ -1,0 +1,36 @@
+.poke-autocomplete {
+  .mat-option {
+    padding: 0 16px 0 0;
+  }
+
+  .mat-option-text {
+    display: inline-flex;
+    align-items: flex-end;
+    height: 48px;
+  }
+}
+
+.poke-autocomplete-input {
+  line-height: 48px;
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 16px;
+  flex-grow: 1;
+  border: none;
+  outline: none;
+}
+
+.poke-autocomplete-input-wrapper {
+  display: flex;
+  background: white;
+  color: rgba(0, 0, 0, 0.87);
+  min-width: 112px;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  max-width: none;
+  max-height: 256px;
+  position: relative;
+  width: 100%;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+}

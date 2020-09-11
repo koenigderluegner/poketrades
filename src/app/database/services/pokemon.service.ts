@@ -40,4 +40,25 @@ export class PokemonService {
       })
     );
   }
+
+  getEggGroupParents(eggGroups: string[]) {
+    if (eggGroups.includes('Undiscovered') || eggGroups.includes('Ditto')) {
+      return of([]);
+    }
+
+    return this.loadDatabase().pipe(
+      switchMap(database => {
+        const hits = database.filter(pokemon => {
+          return pokemon.eggGroups.some(x => eggGroups.includes(x));
+        });
+        hits.sort((a, b) => {
+          return a.dex === b.dex ? 0 : a.dex < b.dex ? -1 : 1;
+        });
+        if (hits.length === 0) {
+          throwError('No pokemon found with egg groups: ');
+        }
+        return of(hits);
+      })
+    );
+  }
 }

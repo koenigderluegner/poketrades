@@ -1,0 +1,60 @@
+<ng-container *ngxSubscribe="let breedables of breedables$">
+  <label class="poke-autocomplete-input-wrapper" matAutocompleteOrigin #origin="matAutocompleteOrigin">
+
+    <app-pokemon [slug]="selectedPokemon ? selectedPokemon.iconSlug : 'unknown'"></app-pokemon>
+    <input
+      placeholder="Select Pokémon"
+      matInput
+      class="poke-autocomplete-input"
+      (focusin)="$event.target.select()"
+      [formControl]="control"
+      [matAutocomplete]="auto"
+      [matAutocompleteConnectedTo]="origin">
+  </label>
+  <mat-autocomplete (optionSelected)="selectPokemon($event)" #auto="matAutocomplete" class="poke-autocomplete"
+                    [displayWith]="displayFn" autoActiveFirstOption>
+    <mat-option *ngFor="let option of filteredPokemon | async" [value]="option">
+      <app-pokemon [slug]="option.pokemon | slugify"></app-pokemon>
+      {{option.pokemon}}
+    </mat-option>
+  </mat-autocomplete>
+  <ng-container *ngIf="selectedPokemon$">
+    <ng-container *ngxSubscribe="let pokemon of selectedPokemon$">
+      <ng-container *ngIf="pokemon; else pokemonNotFound">
+
+        <app-type-badge [type]="type" size="small" *ngFor="let type of pokemon.types">{{type}}</app-type-badge>
+
+        <div>
+          <h2>Inheritance</h2>
+          <div *ngFor="let eggMove of eggMoves">{{eggMove}}
+            <app-grid appearance="minimal">
+              <ng-container *ngFor="let parent of parentMoves | keyvalue">
+                <app-grid-item *ngIf="parent.value.eggMoves.includes(eggMove)"
+                               [pokemon]="{iconSlug: parent.key | slugify, isOwned: true}"></app-grid-item>
+              </ng-container>
+            </app-grid>
+          </div>
+        </div>
+
+        <div>
+          <h2>Leveling</h2>
+          <div *ngFor="let eggMove of eggMoves">{{eggMove}}
+            <app-grid appearance="minimal">
+              <ng-container *ngFor="let parent of parentMoves | keyvalue">
+                <ng-container *ngIf="(parent.value.levelUpMoves | filterLevelUpMoves: eggMove) as moves">
+                  <app-grid-item [pokemon]="{iconSlug: parent.key | slugify, isOwned: true}"
+                                 *ngIf="moves.length"></app-grid-item>
+                </ng-container>
+              </ng-container>
+            </app-grid>
+          </div>
+        </div>
+      </ng-container>
+    </ng-container>
+  </ng-container>
+</ng-container>
+
+<ng-template #pokemonNotFound>
+  <app-ball-guy-bubble>The Pokemon you're looking for was not found. The database might not be up to date.
+  </app-ball-guy-bubble>
+</ng-template>
