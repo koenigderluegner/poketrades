@@ -13,13 +13,14 @@ export class MoveService {
   constructor(private httpClient: HttpClient) {
   }
 
-  loadDatabase(): Observable<{ moves: any[], eggMoves: any[] }> {
+  loadDatabase(): Observable<{ moves: any[], eggMoves: any[], levelUpMoves: any[] }> {
     if (this.db) {
       return of(this.db);
     } else {
       return forkJoin({
         moves: this.httpClient.get<any[]>('assets/database/moves.json'),
         eggMoves: this.httpClient.get<any[]>('assets/database/egg-moves.json'),
+        levelUpMoves: this.httpClient.get<any[]>('assets/database/level-up-moves.json'),
       }).pipe(
         tap(database => {
           this.db = database;
@@ -56,6 +57,14 @@ export class MoveService {
     return this.loadDatabase().pipe(
       switchMap(database => {
         return of(database?.eggMoves[pokemonName] ? database?.eggMoves[pokemonName].sort() : []);
+      })
+    );
+  }
+
+  getLevelUpMovesForPokemon(pokemonName: string): Observable<any> {
+    return this.loadDatabase().pipe(
+      switchMap(database => {
+        return of(database?.levelUpMoves[pokemonName] ? database?.levelUpMoves[pokemonName].moves : []);
       })
     );
   }
