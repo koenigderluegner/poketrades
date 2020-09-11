@@ -4,6 +4,8 @@ import { NavigationEnd, Router } from '@angular/router';
 import { SpreadsheetFacade } from '@spreadsheet/spreadsheet.facade';
 import { DatabaseFacadeService } from './database/database-facade.service';
 import { UserService } from './database/services/user.service';
+import { MatIconRegistry } from '@angular/material/icon';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
@@ -25,11 +27,16 @@ export class AppComponent implements OnInit {
     private spreadsheetFacade: SpreadsheetFacade,
     private databaseFacadeService: DatabaseFacadeService,
     private userService: UserService,
-    private router: Router) {
+    private router: Router,
+    private matIconRegistry: MatIconRegistry,
+    private domSanitizer: DomSanitizer) {
   }
 
   ngOnInit(): void {
 
+    this.registerIcons([
+      {title: 'github', link: '../assets/images/svg-icons/github.svg'}
+    ]);
 
     this.nonIdRoutes = this.router.config.map(route => route.path);
 
@@ -84,6 +91,15 @@ export class AppComponent implements OnInit {
       this.isLoading = false;
       this.waitingForRouter = false;
 
+    }
+  }
+
+  registerIcons(iconList: { title: string; link: string; }[]): void {
+    for (const icon of iconList) {
+      this.matIconRegistry.addSvgIcon(
+        icon.title,
+        this.domSanitizer.bypassSecurityTrustResourceUrl(icon.link)
+      );
     }
   }
 
