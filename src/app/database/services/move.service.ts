@@ -55,7 +55,7 @@ export class MoveService {
   getEggMovesForPokemon(pokemonName: string): Observable<any> {
     return this.loadDatabase().pipe(
       switchMap(database => {
-        return of(database?.eggMoves[pokemonName] ? database?.eggMoves[pokemonName] : []);
+        return of(database?.eggMoves[pokemonName] ? database?.eggMoves[pokemonName].sort() : []);
       })
     );
   }
