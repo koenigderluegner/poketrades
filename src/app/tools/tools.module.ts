@@ -8,7 +8,7 @@ import { BreedingComponent } from './breeding/breeding.component';
 import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
-import { NgxSubscribeModule } from '@tngtech/ngx-structurals';
+import { NgxAliasModule, NgxSubscribeModule } from '@tngtech/ngx-structurals';
 import { FilterLevelUpMovesPipe } from './pipes/filter-level-up-moves.pipe';
 
 
@@ -22,7 +22,8 @@ import { FilterLevelUpMovesPipe } from './pipes/filter-level-up-moves.pipe';
     MatInputModule,
     ReactiveFormsModule,
     MatAutocompleteModule,
-    NgxSubscribeModule
+    NgxSubscribeModule,
+    NgxAliasModule
   ]
 })
 export class ToolsModule { }

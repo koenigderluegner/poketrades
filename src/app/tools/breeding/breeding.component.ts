@@ -1,8 +1,8 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { DatabaseFacadeService } from '../../database/database-facade.service';
-import { Observable } from 'rxjs';
-import { map, startWith, tap } from 'rxjs/operators';
+import { forkJoin, Observable } from 'rxjs';
+import { map, mergeMap, startWith, tap } from 'rxjs/operators';
 import { MatAutocompleteSelectedEvent } from '@angular/material/autocomplete';
 
 @Component({
@@ -19,6 +19,8 @@ export class BreedingComponent implements OnInit {
   filteredPokemon: Observable<any[]>;
   selectedPokemon$;
   selectedPokemon: any;
+  eggMoves: string[] | undefined;
+  parentMoves: never;
 
 
   constructor(private database: DatabaseFacadeService) {
@@ -61,6 +63,28 @@ export class BreedingComponent implements OnInit {
     this.selectedPokemon$ = this.database.findPokemon($event.option.value.pokemon).pipe(tap(
       pokemon => {
         this.selectedPokemon = pokemon;
+
+        this.database.getEggMovesForPokemon(pokemon.name).subscribe({
+          next: value => {
+            this.eggMoves = value;
+          }
+        });
+
+        this.database.getEggGroupParents(pokemon.eggGroups).pipe(
+          mergeMap(parents => {
+              const forkObj = {};
+
+              for (const parent of parents) {
+                forkObj[parent.name] = this.database.getMovesForPokemon(parent.name);
+              }
+
+              return forkJoin(forkObj);
+            }
+          )
+        ).subscribe(value => {
+          this.parentMoves = value;
+        });
+
       }
     ));
   }

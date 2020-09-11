@@ -21,7 +21,28 @@
   <ng-container *ngIf="selectedPokemon$">
     <ng-container *ngxSubscribe="let pokemon of selectedPokemon$">
       <ng-container *ngIf="pokemon; else pokemonNotFound">
-        {{pokemon.iconSlug}}
+
+        <app-type-badge [type]="type" size="small" *ngFor="let type of pokemon.types">{{type}}</app-type-badge>
+
+        <div>
+          <h2>Inheritance</h2>
+          <div *ngFor="let eggMove of eggMoves">{{eggMove}}
+            <ng-container *ngFor="let parent of parentMoves | keyvalue">
+              <app-pokemon *ngIf="parent.value.eggMoves.includes(eggMove)" [slug]="parent.key | slugify"></app-pokemon>
+            </ng-container>
+          </div>
+        </div>
+
+        <div>
+          <h2>Leveling</h2>
+          <div *ngFor="let eggMove of eggMoves">{{eggMove}}
+            <ng-container *ngFor="let parent of parentMoves | keyvalue">
+              <ng-container *ngIf="(parent.value.levelUpMoves | filterLevelUpMoves: eggMove) as moves">
+                <app-pokemon [slug]="parent.key | slugify" *ngIf="moves.length"></app-pokemon>
+              </ng-container>
+            </ng-container>
+          </div>
+        </div>
       </ng-container>
     </ng-container>
   </ng-container>
