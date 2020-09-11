@@ -40,14 +40,16 @@ export class AppComponent implements OnInit {
 
     this.nonIdRoutes = this.router.config.map(route => route.path);
 
-    this.databaseFacadeService.loadDatabases().subscribe(() => {
-      const routerSub = this.router.events.subscribe((e) => {
-        if (e instanceof NavigationEnd) {
-          routerSub.unsubscribe();
+    const routerSub = this.router.events.subscribe((e) => {
+      if (e instanceof NavigationEnd) {
+        routerSub.unsubscribe();
+
+        this.databaseFacadeService.loadDatabases().subscribe(() => {
+
           const id = e.url.split('/')?.[1];
           console.log(e.url);
           console.log(id);
-
+          console.log('t');
           if (id === 'u') { // user route
             const username = e.url.split('/')?.[2];
             this.userService.findUser(username).subscribe(spreadsheetId => {
@@ -56,9 +58,10 @@ export class AppComponent implements OnInit {
           } else {
             this.loadData(id);
           }
-        }
-      });
+        });
+      }
     });
+
 
   }
 
