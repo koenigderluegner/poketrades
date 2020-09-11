@@ -9,10 +9,11 @@ import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { NgxSubscribeModule } from '@tngtech/ngx-structurals';
+import { FilterLevelUpMovesPipe } from './pipes/filter-level-up-moves.pipe';
 
 
 @NgModule({
-  declarations: [ToolsComponent, BreedingComponent],
+  declarations: [ToolsComponent, BreedingComponent, FilterLevelUpMovesPipe],
   imports: [
     ToolsRoutingModule,
     CommonModule,
