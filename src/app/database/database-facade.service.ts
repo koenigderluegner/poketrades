@@ -44,4 +44,8 @@ export class DatabaseFacadeService {
     return this.pokemonService.getEggGroupParents(eggGroups);
   }
 
+  getEggMovesForPokemon(pokemonName: string): Observable<any> {
+    return this.moveService.getEggMovesForPokemon(pokemonName);
+  }
+
 }
