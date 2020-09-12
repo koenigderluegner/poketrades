@@ -33,7 +33,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class SlugifyPipe implements PipeTransform {
 
-  charMap = {
+  charMap: { [key: string]: string; } = {
     ' ': ' ',
     '¡': '!',
     '¢': 'c',
@@ -259,9 +259,9 @@ export class SlugifyPipe implements PipeTransform {
     if (!original) {
       return '';
     }
-    const ascii = [];
-    let ch;
-    let cp;
+    const ascii: string[] = [];
+    let ch: string;
+    let cp: number;
     for (let i = 0; i < original.length; i++) {
       cp = original.charCodeAt(i);
       if (cp < 0x180) {
