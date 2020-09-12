@@ -16,13 +16,13 @@ export class MoveService {
   constructor(private httpClient: HttpClient) {
   }
 
-  loadDatabase(): Observable<{ moves: Move[], eggMoves: any[], levelUpMoves: { [key: string]: LevelUpMoveEntry } }> {
+  loadDatabase(): Observable<{ moves: Move[], eggMoves: { [key: string]: string[] }, levelUpMoves: { [key: string]: LevelUpMoveEntry } }> {
     if (this.db) {
       return of(this.db);
     } else {
       return forkJoin({
         moves: this.httpClient.get<Move[]>('assets/database/moves.json'),
-        eggMoves: this.httpClient.get<any[]>('assets/database/egg-moves.json'),
+        eggMoves: this.httpClient.get<{ [key: string]: string[] }>('assets/database/egg-moves.json'),
         levelUpMoves: this.httpClient.get<{ [key: string]: LevelUpMoveEntry }>('assets/database/level-up-moves.json'),
       }).pipe(
         tap(database => {
