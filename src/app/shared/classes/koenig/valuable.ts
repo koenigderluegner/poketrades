@@ -6,9 +6,9 @@ import { PokemonStats } from '@shared/interfaces/pokemon-stats';
 export class Valuable extends AbstractValuable implements Pokemon {
   id: string;
   private _slug: string;
-  private _moves: any[];
-  private _ivs: PokemonStats;
-  private _evs: PokemonStats;
+  private readonly _moves: string[];
+  private _ivs?: PokemonStats;
+  private _evs?: PokemonStats;
 
   constructor(pokemon?: Pokemon) {
     super();
@@ -52,16 +52,16 @@ export class Valuable extends AbstractValuable implements Pokemon {
   }
 
   get isShiny(): boolean {
-    return this.gsx$isshiny?.$t;
+    return !!this.gsx$isshiny?.$t;
   }
 
   set isShiny(isShiny: boolean) {
     if (!this.gsx$isshiny) {
       this.gsx$isshiny = {
-        $t: isShiny
+        $t: '' + isShiny
       };
     } else {
-      this.gsx$isshiny.$t = isShiny;
+      this.gsx$isshiny.$t = '' + isShiny;
     }
   }
 
@@ -96,15 +96,15 @@ export class Valuable extends AbstractValuable implements Pokemon {
     return this.gsx$name.$t;
   }
 
-  get moves() {
+  get moves(): string[] {
     return this._moves;
   }
 
-  get ivs() {
+  get ivs(): PokemonStats {
     return this._ivs;
   }
 
-  get evs() {
+  get evs(): PokemonStats {
     return this._evs;
   }
 }

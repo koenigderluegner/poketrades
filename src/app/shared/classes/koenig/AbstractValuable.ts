@@ -1,25 +1,25 @@
 export class AbstractValuable {
 
-  protected gsx$name;
-  protected gsx$dex;
-  protected gsx$hasha;
-  protected gsx$owned;
-  protected gsx$ability;
-  protected gsx$isshiny;
+  protected gsx$name: { $t: string };
+  protected gsx$dex: { $t: string };
+  protected gsx$hasha: { $t: string };
+  protected gsx$owned: { $t: string };
+  protected gsx$ability: { $t: string };
+  protected gsx$isshiny: { $t: string };
 
-  protected gsx$hp;
-  protected gsx$atk;
-  protected gsx$def;
-  protected gsx$spa;
-  protected gsx$spd;
-  protected gsx$spe;
+  protected gsx$hp: { $t: string };
+  protected gsx$atk: { $t: string };
+  protected gsx$def: { $t: string };
+  protected gsx$spa: { $t: string };
+  protected gsx$spd: { $t: string };
+  protected gsx$spe: { $t: string };
 
-  protected gsx$evhp;
-  protected gsx$evatk;
-  protected gsx$evdef;
-  protected gsx$evspa;
-  protected gsx$evspd;
-  protected gsx$evspe;
+  protected gsx$evhp: { $t: string };
+  protected gsx$evatk: { $t: string };
+  protected gsx$evdef: { $t: string };
+  protected gsx$evspa: { $t: string };
+  protected gsx$evspd: { $t: string };
+  protected gsx$evspe: { $t: string };
 
   constructor() {
     if (new.target === AbstractValuable) {
