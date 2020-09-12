@@ -2,22 +2,23 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { switchMap, tap } from 'rxjs/operators';
 import { Observable, of, throwError } from 'rxjs';
+import { PokemonEntry } from '../models/pokemon-entry-.interface';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PokemonService {
 
-  private db;
+  private db: PokemonEntry[];
 
   constructor(private httpClient: HttpClient) {
   }
 
-  loadDatabase(): Observable<any[]> {
+  loadDatabase(): Observable<PokemonEntry[]> {
     if (this.db) {
       return of(this.db);
     } else {
-      return this.httpClient.get<any[]>('assets/database/pokemon.json').pipe(
+      return this.httpClient.get<PokemonEntry[]>('assets/database/pokemon.json').pipe(
         tap(database => {
           this.db = database;
         })
@@ -27,7 +28,7 @@ export class PokemonService {
 
   }
 
-  findPokemon(name: string) {
+  findPokemon(name: string): Observable<PokemonEntry> {
     return this.loadDatabase().pipe(
       switchMap(database => {
         const hits = database.filter(pokemon => {
@@ -41,7 +42,7 @@ export class PokemonService {
     );
   }
 
-  getEggGroupParents(eggGroups: string[]) {
+  getEggGroupParents(eggGroups: string[]): Observable<PokemonEntry[]> {
     if (eggGroups.includes('Undiscovered') || eggGroups.includes('Ditto')) {
       return of([]);
     }
