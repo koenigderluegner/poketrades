@@ -5,7 +5,7 @@ import { AbstractBreedable } from '@shared/classes/koenig/abstract-breedable';
 export class Breedable extends AbstractBreedable implements Pokemon {
   id: string;
   private _slug: string;
-  private _moves: any[];
+  private readonly _moves: string[];
 
   constructor(pokemon?: Pokemon) {
     super();
@@ -49,7 +49,7 @@ export class Breedable extends AbstractBreedable implements Pokemon {
     return this.gsx$name.$t;
   }
 
-  get moves() {
+  get moves(): string[] {
     return this._moves;
   }
 
