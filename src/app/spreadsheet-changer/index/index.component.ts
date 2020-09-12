@@ -1,8 +1,9 @@
-import { Component, HostBinding, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, HostBinding, ViewEncapsulation } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { Spreadsheet } from '@spreadsheet/models/spreadsheet';
 import { SpreadsheetFacade } from '@spreadsheet/spreadsheet.facade';
+import { SearchHistoryEntry } from '../models/search-history-entry.interface';
 
 @Component({
   selector: 'app-index',
@@ -10,22 +11,19 @@ import { SpreadsheetFacade } from '@spreadsheet/spreadsheet.facade';
   styleUrls: ['./index.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class IndexComponent implements OnInit {
+export class IndexComponent {
 
   @HostBinding('class') classes = 'view';
 
   searchForm: FormGroup;
   hasRequested = false;
 
-  loadedSpreadsheet$: Observable<Spreadsheet>;
+  loadedSpreadsheet$: Observable<Spreadsheet> | undefined;
   isLoading$: Observable<boolean>;
 
-  spreadsheetHistory$: Observable<any[]>;
+  spreadsheetHistory$: Observable<SearchHistoryEntry[]>;
 
   constructor(private spreadsheetFacade: SpreadsheetFacade) {
-  }
-
-  ngOnInit(): void {
     this.searchForm = new FormGroup({
       search: new FormControl('')
     });
@@ -33,22 +31,22 @@ export class IndexComponent implements OnInit {
     this.spreadsheetHistory$ = this.spreadsheetFacade.getSpreadsheetHistory$();
   }
 
-  submitSearch() {
+  submitSearch(): void {
     this.hasRequested = true;
     this.loadedSpreadsheet$ = this.spreadsheetFacade.searchSpreadsheet(this.searchForm.controls.search.value);
   }
 
-  saveSpreadsheet(spreadsheet: Spreadsheet) {
+  saveSpreadsheet(spreadsheet: Spreadsheet): void {
     this.spreadsheetFacade.updateCurrentSpreadsheet(spreadsheet);
   }
 
-  fromHistory(id: any) {
+  fromHistory(id: string): void {
     this.hasRequested = true;
     this.loadedSpreadsheet$ = this.spreadsheetFacade.loadSpreadsheet(id);
 
   }
 
-  trackBy(index, item) {
+  trackBy(index: number, item: SearchHistoryEntry): string {
     return item.id;
   }
 }
