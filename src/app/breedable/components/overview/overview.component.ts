@@ -1,8 +1,9 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { SpreadsheetFacade } from '@spreadsheet/spreadsheet.facade';
 import { combineLatest, Observable, of } from 'rxjs';
 import { DatabaseFacadeService } from '../../../database/database-facade.service';
 import { switchMap } from 'rxjs/operators';
+import { LegalityEntry } from '../../../database/models/legality-entry.interface';
 
 @Component({
   selector: 'app-overview',
@@ -10,23 +11,22 @@ import { switchMap } from 'rxjs/operators';
   styleUrls: ['./overview.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class OverviewComponent implements OnInit {
+export class OverviewComponent {
 
-  data$: Observable<any>;
+  data$: Observable<{ legality: LegalityEntry[], entries?: object }>;
 
   constructor(private facade: SpreadsheetFacade,
               private db: DatabaseFacadeService) {
+    this.data$ = combineLatest([
+      this.db.getBreedableLegality(),
+      this.facade.getCurrentSpreadsheet$()
+    ])
+      .pipe(
+        switchMap(val => {
+          return of({legality: val[0], entries: val[1].overviewEntries});
+        })
+      );
   }
 
-  ngOnInit(): void {
-    this.data$ = combineLatest([this.db.getBreedableLegality(),
-      this.facade.getCurrentSpreadsheet$()]
-    ).pipe(
-      switchMap(val => {
-        console.log(val[1]);
-        return of({legality: val[0], entries: val[1].overviewEntries});
-      })
-    );
-  }
 
 }
