@@ -1,8 +1,8 @@
 import { Pokemon } from '@shared/interfaces/pokemon';
 import { SlugifyPipe } from '@shared/pipes/slugify.pipe';
-import { AbstractBreeable } from '@shared/classes/koenig/abstract-breeable';
+import { AbstractBreedable } from '@shared/classes/koenig/abstract-breedable';
 
-export class Breedable extends AbstractBreeable implements Pokemon {
+export class Breedable extends AbstractBreedable implements Pokemon {
   id: string;
   private _slug: string;
   private _moves: any[];
