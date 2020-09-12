@@ -1,10 +1,10 @@
 export class  AbstractBreedable {
 
-  protected gsx$name: string;
-  protected gsx$dex: string;
-  protected gsx$hasha: string;
-  protected gsx$owned: string;
-  protected gsx$ability: string;
+  protected gsx$name: {$t: string};
+  protected gsx$dex: {$t: string};
+  protected gsx$hasha: {$t: string};
+  protected gsx$owned: {$t: string};
+  protected gsx$ability: {$t: string};
 
   constructor() {
     if (new.target === AbstractBreedable) {
