@@ -5,18 +5,19 @@ import { switchMap, tap } from 'rxjs/operators';
 import { LevelUpMove } from '../models/level-up-move.interface';
 import { LevelUpMoveEntry } from '../models/level-up-move-entry.interface';
 import { Move } from '../models/move.interface';
+import { MoveDatabase } from '../models/move-database.interface';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MoveService {
 
-  private db;
+  private db: MoveDatabase | undefined;
 
   constructor(private httpClient: HttpClient) {
   }
 
-  loadDatabase(): Observable<{ moves: Move[], eggMoves: { [key: string]: string[] }, levelUpMoves: { [key: string]: LevelUpMoveEntry } }> {
+  loadDatabase(): Observable<MoveDatabase> {
     if (this.db) {
       return of(this.db);
     } else {
