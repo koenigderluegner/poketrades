@@ -9,10 +9,9 @@ import { SpreadsheetFacade } from '@spreadsheet/spreadsheet.facade';
 })
 export class HeaderComponent implements OnInit {
 
-  spreadsheetData: Spreadsheet;
+  spreadsheetData: Spreadsheet | undefined;
 
-  breedablesLink: string;
-  valuablesLink: string;
+  valuablesLink: string | undefined;
 
   constructor(private spreadsheetFacade: SpreadsheetFacade) {
   }
