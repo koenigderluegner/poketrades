@@ -9,7 +9,7 @@ import { PokemonEntry } from '../models/pokemon-entry-.interface';
 })
 export class PokemonService {
 
-  private db: PokemonEntry[];
+  private db: PokemonEntry[] | undefined;
 
   constructor(private httpClient: HttpClient) {
   }

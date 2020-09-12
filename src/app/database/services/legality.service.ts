@@ -9,7 +9,7 @@ import { LegalityEntry } from '../models/legality-entry.interface';
 })
 export class LegalityService {
 
-  private db: LegalityEntry[];
+  private db: LegalityEntry[] | undefined;
 
   constructor(private httpClient: HttpClient) {
   }
