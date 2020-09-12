@@ -4,6 +4,7 @@ import { forkJoin, Observable, of, throwError } from 'rxjs';
 import { switchMap, tap } from 'rxjs/operators';
 import { LevelUpMove } from '../models/level-up-move.interface';
 import { LevelUpMoveEntry } from '../models/level-up-move-entry.interface';
+import { Move } from '../models/move.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -15,12 +16,12 @@ export class MoveService {
   constructor(private httpClient: HttpClient) {
   }
 
-  loadDatabase(): Observable<{ moves: any[], eggMoves: any[], levelUpMoves: { [key: string]: LevelUpMoveEntry } }> {
+  loadDatabase(): Observable<{ moves: Move[], eggMoves: any[], levelUpMoves: { [key: string]: LevelUpMoveEntry } }> {
     if (this.db) {
       return of(this.db);
     } else {
       return forkJoin({
-        moves: this.httpClient.get<any[]>('assets/database/moves.json'),
+        moves: this.httpClient.get<Move[]>('assets/database/moves.json'),
         eggMoves: this.httpClient.get<any[]>('assets/database/egg-moves.json'),
         levelUpMoves: this.httpClient.get<{ [key: string]: LevelUpMoveEntry }>('assets/database/level-up-moves.json'),
       }).pipe(
@@ -33,7 +34,7 @@ export class MoveService {
 
   }
 
-  findMove(name: string) {
+  findMove(name: string): Observable<Move> {
     return this.loadDatabase().pipe(
       switchMap(database => {
         const hits = database.moves.filter(move => {
@@ -55,7 +56,7 @@ export class MoveService {
     );
   }
 
-  getEggMovesForPokemon(pokemonName: string): Observable<any> {
+  getEggMovesForPokemon(pokemonName: string): Observable<string[]> {
     return this.loadDatabase().pipe(
       switchMap(database => {
         return of(database?.eggMoves[pokemonName] ? database?.eggMoves[pokemonName].sort() : []);
