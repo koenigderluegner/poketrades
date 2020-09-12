@@ -3,9 +3,12 @@ import { SlugifyPipe } from '@shared/pipes/slugify.pipe';
 import { AbstractBreedable } from '@shared/classes/koenig/abstract-breedable';
 
 export class Breedable extends AbstractBreedable implements Pokemon {
-  id: string;
-  private _slug: string;
-  private readonly _moves: string[];
+  id = '';
+  private _slug = '';
+  private readonly _moves: string[] = [];
+
+  [key: string]: string | { $t: string } | boolean | string[];
+
 
   constructor(pokemon?: Pokemon) {
     super();
@@ -13,10 +16,10 @@ export class Breedable extends AbstractBreedable implements Pokemon {
       Object.assign(this, pokemon);
     }
 
-    this._moves = [];
     for (let i = 1; i < 5; i++) {
-      if (this[`gsx$move${i}`]?.$t) {
-        this._moves.push(this[`gsx$move${i}`]?.$t);
+      const index = `gsx$move${i}`;
+      if (this[index]?.$t) {
+        this._moves.push(this[index]?.$t);
       }
     }
   }
