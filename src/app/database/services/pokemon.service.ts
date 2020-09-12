@@ -31,7 +31,7 @@ export class PokemonService {
   findPokemon(name: string): Observable<PokemonEntry> {
     return this.loadDatabase().pipe(
       switchMap(database => {
-        const hits = database.filter(pokemon => {
+        const hits = database.filter((pokemon: PokemonEntry) => {
           return pokemon.name.toLowerCase() === name.toLowerCase();
         });
         if (hits.length === 0) {
@@ -48,11 +48,11 @@ export class PokemonService {
     }
 
     return this.loadDatabase().pipe(
-      switchMap(database => {
-        const hits = database.filter(pokemon => {
-          return pokemon.eggGroups.some(x => eggGroups.includes(x));
+      switchMap((database: PokemonEntry[]) => {
+        const hits = database.filter((pokemon: PokemonEntry) => {
+          return pokemon.eggGroups.some((x: string) => eggGroups.includes(x));
         });
-        hits.sort((a, b) => {
+        hits.sort((a: PokemonEntry, b: PokemonEntry) => {
           return a.dex === b.dex ? 0 : a.dex < b.dex ? -1 : 1;
         });
         if (hits.length === 0) {

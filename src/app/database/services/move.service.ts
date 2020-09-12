@@ -37,8 +37,8 @@ export class MoveService {
 
   findMove(name: string): Observable<Move> {
     return this.loadDatabase().pipe(
-      switchMap(database => {
-        const hits = database.moves.filter(move => {
+      switchMap((database: MoveDatabase) => {
+        const hits = database.moves.filter((move: Move) => {
           return move.name.toLowerCase() === name.toLowerCase();
         });
         if (hits.length === 0) {
@@ -51,7 +51,7 @@ export class MoveService {
 
   isEggMove(pokemonName: string, move: string): Observable<boolean> {
     return this.loadDatabase().pipe(
-      switchMap(database => {
+      switchMap((database: MoveDatabase) => {
         return of(!!database?.eggMoves[pokemonName]?.includes(move));
       })
     );
@@ -59,16 +59,16 @@ export class MoveService {
 
   getEggMovesForPokemon(pokemonName: string): Observable<string[]> {
     return this.loadDatabase().pipe(
-      switchMap(database => {
-        return of(database?.eggMoves[pokemonName] ? database?.eggMoves[pokemonName].sort() : []);
+      switchMap((database: MoveDatabase) => {
+        return of(database.eggMoves[pokemonName] ? database.eggMoves[pokemonName].sort() : []);
       })
     );
   }
 
   getLevelUpMovesForPokemon(pokemonName: string): Observable<LevelUpMove[]> {
     return this.loadDatabase().pipe(
-      switchMap(database => {
-        return of(database?.levelUpMoves[pokemonName] ? database?.levelUpMoves[pokemonName].moves : []);
+      switchMap((database: MoveDatabase) => {
+        return of(database.levelUpMoves[pokemonName] ? database.levelUpMoves[pokemonName].moves : []);
       })
     );
   }

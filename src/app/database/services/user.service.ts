@@ -9,7 +9,6 @@ import { UserDatabase } from '../models/user-database.interface';
 })
 export class UserService {
 
-
   private db: UserDatabase | undefined;
 
   constructor(private httpClient: HttpClient) {
@@ -31,7 +30,7 @@ export class UserService {
 
   findUser(name: string): Observable<string> {
     return this.loadDatabase().pipe(
-      switchMap(database => {
+      switchMap((database: UserDatabase) => {
         return database[name] ? of(database[name]) : throwError('No user found with name: ' + name);
       })
     );
