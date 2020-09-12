@@ -5,6 +5,7 @@ import { catchError, map, switchMap, tap } from 'rxjs/operators';
 import { Worksheet } from './models/worksheet';
 import { SpreadsheetService } from './services/spreadsheet.service';
 import { Breedable } from '@shared/classes/koenig/breedable';
+import { SearchHistoryEntry } from '../spreadsheet-changer/models/search-history-entry.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +17,7 @@ export class SpreadsheetFacade {
   private readonly _isLoading$: BehaviorSubject<boolean>;
   private readonly _currentSpreadsheet$: BehaviorSubject<Spreadsheet>;
 
-  private readonly _searchHistory: BehaviorSubject<any[]>;
+  private readonly _searchHistory: BehaviorSubject<SearchHistoryEntry[]>;
 
 
   private readonly allowedConfigs = {
@@ -32,9 +33,9 @@ export class SpreadsheetFacade {
   constructor(private spreadsheetService: SpreadsheetService) {
     if (!localStorage.getItem('spreadsheetHistory')) {
       localStorage.setItem('spreadsheetHistory', JSON.stringify([]));
-      this._searchHistory = new BehaviorSubject<any[]>([]);
+      this._searchHistory = new BehaviorSubject<SearchHistoryEntry[]>([]);
     } else {
-      this._searchHistory = new BehaviorSubject<any[]>(JSON.parse(localStorage.getItem('spreadsheetHistory')));
+      this._searchHistory = new BehaviorSubject<SearchHistoryEntry[]>(JSON.parse(localStorage.getItem('spreadsheetHistory')));
     }
     this._currentSpreadsheet$ = new BehaviorSubject<Spreadsheet>({
       title: '',
@@ -145,11 +146,11 @@ export class SpreadsheetFacade {
     return this.isLoading$();
   }
 
-  isLoading$() {
+  isLoading$(): BehaviorSubject<boolean> {
     return this._isLoading$;
   }
 
-  isDefaultSpreadhseet$() {
+  isDefaultSpreadhseet$(): BehaviorSubject<boolean> {
     return this._isDefaultSheet$;
   }
 
@@ -178,7 +179,7 @@ export class SpreadsheetFacade {
   }
 
   private saveToHistory(spreadsheet: Spreadsheet) {
-    const history = JSON.parse(localStorage.getItem('spreadsheetHistory'));
+    const history: SearchHistoryEntry[] = JSON.parse(localStorage.getItem('spreadsheetHistory'));
     const entryIndex = history.findIndex(sheet => sheet.id === spreadsheet.id);
     if (entryIndex !== -1) {
       history.splice(entryIndex, 1);
@@ -186,7 +187,7 @@ export class SpreadsheetFacade {
     history.unshift({
       title: spreadsheet.title,
       id: spreadsheet.id,
-      updated: spreadsheet.date,
+      updated: spreadsheet.date.toTimeString(),
       saveDate: new Date().toTimeString()
     });
     localStorage.setItem('spreadsheetHistory', JSON.stringify(history));
