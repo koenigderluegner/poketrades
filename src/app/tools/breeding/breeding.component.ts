@@ -1,9 +1,12 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { DatabaseFacadeService } from '../../database/database-facade.service';
 import { forkJoin, Observable } from 'rxjs';
 import { map, mergeMap, startWith, tap } from 'rxjs/operators';
 import { MatAutocompleteSelectedEvent } from '@angular/material/autocomplete';
+import { LegalityEntry } from '../../database/models/legality-entry.interface';
+import { PokemonEntry } from '../../database/models/pokemon-entry-.interface';
+import { LevelUpMove } from '../../database/models/level-up-move.interface';
 
 @Component({
   selector: 'app-breeding',
@@ -11,22 +14,19 @@ import { MatAutocompleteSelectedEvent } from '@angular/material/autocomplete';
   styleUrls: ['./breeding.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class BreedingComponent implements OnInit {
+export class BreedingComponent {
 
   control: FormControl;
-  breedables$: Observable<any>;
-  private breedables: any;
-  filteredPokemon: Observable<any[]>;
-  selectedPokemon$;
-  selectedPokemon: any;
+  breedables$: Observable<LegalityEntry[]>;
+  private breedables: LegalityEntry[] | undefined;
+  filteredPokemon: Observable<LegalityEntry[]>;
+  selectedPokemon$: Observable<PokemonEntry> | undefined;
+  selectedPokemon: PokemonEntry | undefined;
   eggMoves: string[] | undefined;
-  parentMoves: never;
+  parentMoves: { [key: string]: { eggMoves: string[]; levelUpMoves: LevelUpMove[] } } | undefined;
 
 
   constructor(private database: DatabaseFacadeService) {
-  }
-
-  ngOnInit(): void {
     this.control = new FormControl('');
     this.breedables$ = this.database.getBreedableLegality().pipe(
       tap(pokemon => {
@@ -40,12 +40,14 @@ export class BreedingComponent implements OnInit {
     );
   }
 
-  private _filter(value: string): any[] {
+  private _filter(value: string): LegalityEntry[] {
     const filterValue = this._normalizeValue(value);
-    return this.breedables?.filter(breedable => this._normalizeValue(breedable.pokemon).includes(filterValue)) || [];
+    return this.breedables?.filter(
+      (legalityEntry: LegalityEntry) => this._normalizeValue(legalityEntry.pokemon).includes(filterValue)
+    ) || [];
   }
 
-  private _normalizeValue(value: any): string {
+  private _normalizeValue(value: string | LegalityEntry): string {
     let pokemon;
     if (typeof value !== 'string') {
       pokemon = value?.pokemon || '';
@@ -55,11 +57,11 @@ export class BreedingComponent implements OnInit {
     return pokemon.toLowerCase().replace(/\s/g, '');
   }
 
-  displayFn(pokemon): string {
+  displayFn(pokemon: LegalityEntry): string {
     return pokemon.pokemon;
   }
 
-  selectPokemon($event: MatAutocompleteSelectedEvent) {
+  selectPokemon($event: MatAutocompleteSelectedEvent): void {
     this.selectedPokemon$ = this.database.findPokemon($event.option.value.pokemon).pipe(tap(
       pokemon => {
         this.selectedPokemon = pokemon;
@@ -72,7 +74,7 @@ export class BreedingComponent implements OnInit {
 
         this.database.getEggGroupParents(pokemon.eggGroups).pipe(
           mergeMap(parents => {
-              const forkObj = {};
+              const forkObj: { [key: string]: Observable<{ eggMoves: string[]; levelUpMoves: LevelUpMove[] }> } = {};
 
               for (const parent of parents) {
                 forkObj[parent.name] = this.database.getMovesForPokemon(parent.name);
@@ -81,7 +83,7 @@ export class BreedingComponent implements OnInit {
               return forkJoin(forkObj);
             }
           )
-        ).subscribe(value => {
+        ).subscribe((value: { [key: string]: { eggMoves: string[]; levelUpMoves: LevelUpMove[] } }) => {
           this.parentMoves = value;
         });
 
