@@ -53,7 +53,7 @@ export class ValuablesComponent implements OnInit {
     );
   }
 
-  trackBy(index: number, pokemon: Pokemon) {
+  trackBy(index: number, pokemon: Pokemon): string {
     return pokemon.id;
   }
 
