@@ -5,4 +5,6 @@ export interface PokemonStats {
   spa?: string | number;
   spd?: string | number;
   spe?: string | number;
+
+  [key: string]: number | string;
 }

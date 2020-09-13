@@ -1,3 +1,5 @@
+import { PokemonStats } from '@shared/interfaces/pokemon-stats';
+
 export class AbstractValuable {
 
   protected gsx$name: { $t: string };
@@ -20,6 +22,9 @@ export class AbstractValuable {
   protected gsx$evspa: { $t: string };
   protected gsx$evspd: { $t: string };
   protected gsx$evspe: { $t: string };
+
+  [key: string]: ({ $t: string }) | PokemonStats | undefined | string[] | string |boolean;
+
 
   constructor() {
     if (new.target === AbstractValuable) {
