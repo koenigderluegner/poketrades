@@ -6,6 +6,12 @@ import { Worksheet } from './models/worksheet';
 import { SpreadsheetService } from './services/spreadsheet.service';
 import { Breedable } from '@shared/classes/koenig/breedable';
 import { SearchHistoryEntry } from '../spreadsheet-changer/models/search-history-entry.interface';
+import { Pokemon } from '@shared/interfaces/pokemon';
+import { WorksheetResponse } from '@spreadsheet/models/worksheet-response.interface';
+import { WorksheetResponseEntry } from '@spreadsheet/models/worksheet-response-entry.interface';
+import { BreedablesOverviewList } from '@shared/interfaces/breedables-overview-list.interface';
+import { ApiError } from '@shared/interfaces/api-error.interface';
+import { WorksheetConfig } from '@spreadsheet/models/worksheet-config.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +19,7 @@ import { SearchHistoryEntry } from '../spreadsheet-changer/models/search-history
 export class SpreadsheetFacade {
 
 
-  private _isDefaultSheet$: BehaviorSubject<boolean>;
+  private readonly _isDefaultSheet$: BehaviorSubject<boolean>;
   private readonly _isLoading$: BehaviorSubject<boolean>;
   private readonly _currentSpreadsheet$: BehaviorSubject<Spreadsheet>;
 
@@ -54,34 +60,34 @@ export class SpreadsheetFacade {
     return this._currentSpreadsheet$;
   }
 
-  searchSpreadsheet(spreadsheetId): Observable<Spreadsheet> {
+  searchSpreadsheet(spreadsheetId: string): Observable<Spreadsheet> {
     return this.loadSpreadsheet(spreadsheetId).pipe(
-      tap(spreadsheet => this.saveToHistory(spreadsheet))
+      tap((spreadsheet: Spreadsheet) => this.saveToHistory(spreadsheet))
     );
   }
 
-  loadSpreadsheet(spreadsheetId): Observable<Spreadsheet> {
+  loadSpreadsheet(spreadsheetId: string): Observable<Spreadsheet> {
 
     this.updateIsLoading(true);
     let loadedSpreadsheet: Spreadsheet;
 
     return this.spreadsheetService.getSpreadsheet(spreadsheetId).pipe(
-      tap(spreadsheet => {
+      tap((spreadsheet: Spreadsheet) => {
         loadedSpreadsheet = spreadsheet;
       }),
-      switchMap(spreadsheet => this.spreadsheetService.getWorksheets(
+      switchMap((spreadsheet: Spreadsheet) => this.spreadsheetService.getWorksheets(
         spreadsheet.id,
-        spreadsheet.worksheets.map(worksheet => worksheet.id))),
-      map(worksheets => {
+        spreadsheet.worksheets.map((worksheet: Worksheet) => worksheet.id))),
+      map((worksheets: WorksheetResponse[]) => {
         let selectedWorksheet: Worksheet;
         for (const worksheet of worksheets) {
-          selectedWorksheet = loadedSpreadsheet.worksheets.filter(ws => ws.title === worksheet.feed.title.$t)?.[0];
+          selectedWorksheet = loadedSpreadsheet.worksheets.filter((ws: Worksheet) => ws.title === worksheet.feed.title.$t)?.[0];
 
           selectedWorksheet.config = this.getWorksheetConfig(worksheet);
           if (selectedWorksheet) {
             worksheet.feed.entry = worksheet.feed.entry.slice(3); // first 3 rows contain meta data
-            worksheet.feed.entry = worksheet.feed.entry.filter(pokemon => pokemon.gsx$name?.$t);
-            selectedWorksheet.data = worksheet.feed.entry;
+            worksheet.feed.entry = worksheet.feed.entry.filter((pokemon: WorksheetResponseEntry) => pokemon.gsx$name?.$t);
+            selectedWorksheet.data = worksheet.feed.entry as Pokemon[];
             selectedWorksheet.ownedEntries = worksheet.feed.entry.filter(pokemon => pokemon.gsx$owned?.$t === 'x').length;
 
             for (const entry of selectedWorksheet.data) {
@@ -90,19 +96,18 @@ export class SpreadsheetFacade {
             }
             if (selectedWorksheet.config?.type === 'Valuables' && selectedWorksheet.config?.subType === 'Shinies') {
               for (const entry of selectedWorksheet.data) {
-                // @ts-ignore
                 entry.isShiny = true;
               }
             }
           }
         }
 
-        loadedSpreadsheet.hasBreedables = loadedSpreadsheet.worksheets.some(ws => ws.config?.type === 'Breedables');
-        loadedSpreadsheet.hasValuables = loadedSpreadsheet.worksheets.some(ws => ws.config?.type === 'Valuables');
+        loadedSpreadsheet.hasBreedables = loadedSpreadsheet.worksheets.some((ws: Worksheet) => ws.config?.type === 'Breedables');
+        loadedSpreadsheet.hasValuables = loadedSpreadsheet.worksheets.some((ws: Worksheet) => ws.config?.type === 'Valuables');
 
         if (loadedSpreadsheet.hasBreedables) {
           loadedSpreadsheet.overviewEntries = this.buildOverviewEntries(
-            loadedSpreadsheet.worksheets.filter(ws => ws.config?.type === 'Breedables' && ws.config?.ball)
+            loadedSpreadsheet.worksheets.filter((ws: Worksheet) => ws.config?.type === 'Breedables' && ws.config?.ball)
           );
         }
 
@@ -116,7 +121,7 @@ export class SpreadsheetFacade {
     );
   }
 
-  private convertApiErrors(error) {
+  private convertApiErrors(error: { status: string }): ApiError {
     const newError = {
       state: 'unknown',
       message: null
@@ -154,10 +159,10 @@ export class SpreadsheetFacade {
     return this._isDefaultSheet$;
   }
 
-  private getWorksheetConfig(worksheet) {
+  private getWorksheetConfig(worksheet: WorksheetResponse): WorksheetConfig {
     const config = {};
     let configIndex = 0;
-    let tempConfig;
+    let tempConfig: string[];
 
     while (worksheet.feed.entry[configIndex]?.gsx$config?.$t && configIndex < 3) {
       tempConfig = worksheet.feed.entry[configIndex].gsx$config.$t.split(':');
@@ -171,16 +176,16 @@ export class SpreadsheetFacade {
       }
       configIndex++;
     }
-    return config;
+    return config as WorksheetConfig;
   }
 
-  getSpreadsheetHistory$() {
+  getSpreadsheetHistory$(): BehaviorSubject<SearchHistoryEntry[]> {
     return this._searchHistory;
   }
 
-  private saveToHistory(spreadsheet: Spreadsheet) {
+  private saveToHistory(spreadsheet: Spreadsheet): void {
     const history: SearchHistoryEntry[] = JSON.parse(localStorage.getItem('spreadsheetHistory'));
-    const entryIndex = history.findIndex(sheet => sheet.id === spreadsheet.id);
+    const entryIndex = history.findIndex((searchHistoryEntry: SearchHistoryEntry) => searchHistoryEntry.id === spreadsheet.id);
     if (entryIndex !== -1) {
       history.splice(entryIndex, 1);
     }
@@ -194,12 +199,12 @@ export class SpreadsheetFacade {
     this._searchHistory.next(history);
   }
 
-  private buildOverviewEntries(worksheets: Worksheet[]) {
+  private buildOverviewEntries(worksheets: Worksheet[]): BreedablesOverviewList {
     const overviewEntries = {};
-    worksheets.forEach(worksheet => {
+    worksheets.forEach((worksheet: Worksheet) => {
       const ball = worksheet.config.ball.toLowerCase();
       overviewEntries[ball] = {};
-      worksheet.data.forEach(pokemon => {
+      worksheet.data.forEach((pokemon: Pokemon) => {
         const breedable = new Breedable(pokemon);
         overviewEntries[ball][breedable.iconSlug] = breedable;
       });
