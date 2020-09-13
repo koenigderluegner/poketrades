@@ -1,4 +1,4 @@
-import { Component, forwardRef, HostBinding, Input, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, forwardRef, HostBinding, Input, ViewEncapsulation } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 @Component({
@@ -14,43 +14,38 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
   ],
   encapsulation: ViewEncapsulation.None
 })
-export class CheckboxComponent implements OnInit, ControlValueAccessor {
-
-  constructor() {
-    this.controlID = 'pktrds-checkox-' + CheckboxComponent.idCounter++;
-  }
+export class CheckboxComponent implements ControlValueAccessor {
 
   static idCounter = 0;
 
-  @HostBinding('class.d-flex') true;
+  @HostBinding('class.d-flex') displayFlex = true;
   controlID: string;
-  checked: boolean;
-  onTouchedCallback: () => {};
-  @Input() icon: string;
+  checked = false;
+  onTouchedCallback: (() => void) | undefined;
+  @Input() icon: string | undefined;
 
-  ngOnInit(): void {
+  constructor() {
+    this.controlID = 'pktrds-checkbox-' + CheckboxComponent.idCounter++;
   }
 
-  propagateChange = (_: any) => {
+  propagateChange = (_: unknown) => {
   }
 
-
-  writeValue(obj: any): void {
+  writeValue(obj: unknown): void {
     this.checked = !!obj;
   }
 
-  registerOnChange(fn: any) {
+  registerOnChange(fn: (_: unknown) => void) {
     this.propagateChange = fn;
   }
 
-  registerOnTouched(fn: any) {
+  registerOnTouched(fn: () => {}) {
     this.onTouchedCallback = fn;
   }
 
-  onChange(event) {
-    this.checked = event.target.checked;
-    this.propagateChange(event.target.checked);
+  onChange(event: Event) {
+    this.checked = (event.target as HTMLInputElement).checked;
+    this.propagateChange(this.checked);
   }
-
 
 }
