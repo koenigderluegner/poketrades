@@ -6,5 +6,5 @@ export interface PokemonStats {
   spd?: string | number;
   spe?: string | number;
 
-  [key: string]: number | string;
+  [key: string]: number | string | undefined;
 }
