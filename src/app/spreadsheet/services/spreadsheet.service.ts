@@ -32,7 +32,7 @@ export class SpreadsheetService {
           date: new Date(Date.parse(response.feed.updated.$t)),
           worksheets: filteredEntries.map((entry: SpreadsheetResponseEntry) => {
             return {
-              id: entry.link[4].href.split('/').pop(), // id is last part of URI
+              id: entry.link[4].href.split('/').pop() ?? '',  // id is last part of URI
               title: entry.title.$t,
               updated: new Date(entry.updated.$t),
               date: new Date((entry.updated.$t)),
