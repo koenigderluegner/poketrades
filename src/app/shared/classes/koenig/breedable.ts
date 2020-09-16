@@ -7,7 +7,7 @@ export class Breedable extends AbstractBreedable implements Pokemon {
   private _slug = '';
   private readonly _moves: string[] = [];
 
-  [key: string]: string | { $t: string } | boolean | string[];
+  [key: string]: string | { $t: string } | boolean | string[] | undefined;
 
 
   constructor(pokemon?: Pokemon) {
@@ -17,27 +17,27 @@ export class Breedable extends AbstractBreedable implements Pokemon {
     }
 
     for (let i = 1; i < 5; i++) {
-      const index = `gsx$move${i}`;
-      if (this[index]?.$t) {
-        this._moves.push(this[index]?.$t);
+      const move = (this[`gsx$move${i}`] as { $t: string })?.$t;
+      if (move) {
+        this._moves.push(move);
       }
     }
   }
 
   get ability(): string {
-    return this.gsx$ability.$t;
+    return this.gsx$ability?.$t ?? '';
   }
 
   get dex(): string {
-    return this.gsx$dex.$t;
+    return this.gsx$dex?.$t ?? '';
   }
 
   get hasHiddenAbility(): boolean {
-    return this.gsx$hasha.$t === 'x';
+    return this.gsx$hasha?.$t === 'x';
   }
 
   get isOwned(): boolean {
-    return this.gsx$owned.$t === 'x';
+    return this.gsx$owned?.$t === 'x';
   }
 
   get iconSlug(): string {
@@ -49,7 +49,7 @@ export class Breedable extends AbstractBreedable implements Pokemon {
   }
 
   get name(): string {
-    return this.gsx$name.$t;
+    return this.gsx$name?.$t ?? 'unknown';
   }
 
   get moves(): string[] {
