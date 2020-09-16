@@ -9,7 +9,7 @@ import { Component, Input, ViewEncapsulation } from '@angular/core';
 export class SubNaviItemComponent {
 
   @Input() text: string | undefined;
-  @Input() link: (string | number)[] | string | null | undefined;
+  @Input() link: (string | number)[] | string | null | undefined; // routerLink inputs
   @Input() meta: string | undefined;
 
 }

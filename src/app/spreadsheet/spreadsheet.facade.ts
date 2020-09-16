@@ -12,6 +12,7 @@ import { WorksheetResponseEntry } from '@spreadsheet/models/worksheet-response-e
 import { BreedablesOverviewList } from '@shared/interfaces/breedables-overview-list.interface';
 import { ApiError } from '@shared/interfaces/api-error.interface';
 import { WorksheetConfig } from '@spreadsheet/models/worksheet-config.interface';
+import { AllowedConfig } from '@spreadsheet/models/allowed-config.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -26,7 +27,7 @@ export class SpreadsheetFacade {
   private readonly _searchHistory: BehaviorSubject<SearchHistoryEntry[]>;
 
 
-  private readonly allowedConfigs = {
+  private readonly allowedConfigs: AllowedConfig = {
     type: ['Valuables', 'Breedables'],
     subType: ['RNGs', 'Legendaries', 'Shinies', 'Competitives', 'Events'],
     ball: ['Dream', 'Safari', 'Sport', 'Beast', 'Fast', 'Moon', 'Heavy', 'Love', 'Lure', 'Level',
@@ -41,7 +42,9 @@ export class SpreadsheetFacade {
       localStorage.setItem('spreadsheetHistory', JSON.stringify([]));
       this._searchHistory = new BehaviorSubject<SearchHistoryEntry[]>([]);
     } else {
-      this._searchHistory = new BehaviorSubject<SearchHistoryEntry[]>(JSON.parse(localStorage.getItem('spreadsheetHistory')));
+      this._searchHistory = new BehaviorSubject<SearchHistoryEntry[]>(
+        JSON.parse(localStorage.getItem('spreadsheetHistory') ?? [].toString())
+      );
     }
     this._currentSpreadsheet$ = new BehaviorSubject<Spreadsheet>({
       title: '',
@@ -124,7 +127,7 @@ export class SpreadsheetFacade {
   private convertApiErrors(error: { status: string }): ApiError {
     const newError = {
       state: 'unknown',
-      message: null
+      message: ''
     };
     switch (error.status) {
       default:
@@ -160,16 +163,22 @@ export class SpreadsheetFacade {
   }
 
   private getWorksheetConfig(worksheet: WorksheetResponse): WorksheetConfig {
-    const config = {};
+    const config: WorksheetConfig = {type: 'unknown'};
     let configIndex = 0;
     let tempConfig: string[];
 
     while (worksheet.feed.entry[configIndex]?.gsx$config?.$t && configIndex < 3) {
-      tempConfig = worksheet.feed.entry[configIndex].gsx$config.$t.split(':');
+      const configData = worksheet.feed.entry[configIndex].gsx$config;
+      if (configData) {
+        tempConfig = configData.$t.split(':');
+      } else {
+        tempConfig = [];
+      }
       if (tempConfig.length === 2) {
         const [key, value] = tempConfig;
         if (key in this.allowedConfigs) {
-          if (this.allowedConfigs[key].includes(value)) {
+          const configArray = this.allowedConfigs[key];
+          if (configArray && configArray.includes(value)) {
             config[key] = value;
           }
         }
@@ -184,7 +193,7 @@ export class SpreadsheetFacade {
   }
 
   private saveToHistory(spreadsheet: Spreadsheet): void {
-    const history: SearchHistoryEntry[] = JSON.parse(localStorage.getItem('spreadsheetHistory'));
+    const history: SearchHistoryEntry[] = JSON.parse(localStorage.getItem('spreadsheetHistory') ?? [].toString());
     const entryIndex = history.findIndex((searchHistoryEntry: SearchHistoryEntry) => searchHistoryEntry.id === spreadsheet.id);
     if (entryIndex !== -1) {
       history.splice(entryIndex, 1);
@@ -200,14 +209,17 @@ export class SpreadsheetFacade {
   }
 
   private buildOverviewEntries(worksheets: Worksheet[]): BreedablesOverviewList {
-    const overviewEntries = {};
+    const overviewEntries: BreedablesOverviewList = {};
     worksheets.forEach((worksheet: Worksheet) => {
-      const ball = worksheet.config.ball.toLowerCase();
+      const ball: string = worksheet.config.ball.toLowerCase();
+      const data: Pokemon[] | undefined = worksheet.data;
       overviewEntries[ball] = {};
-      worksheet.data.forEach((pokemon: Pokemon) => {
-        const breedable = new Breedable(pokemon);
-        overviewEntries[ball][breedable.iconSlug] = breedable;
-      });
+      if (data) {
+        data.forEach((pokemon: Pokemon) => {
+          const breedable = new Breedable(pokemon);
+          overviewEntries[ball][breedable.iconSlug] = breedable;
+        });
+      }
     });
     return overviewEntries;
   }
