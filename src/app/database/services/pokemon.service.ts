@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { switchMap, tap } from 'rxjs/operators';
 import { Observable, of, throwError } from 'rxjs';
-import { PokemonEntry } from '../models/pokemon-entry-.interface';
+import { PokemonEntry } from '../models/pokemon-entry.interface';
 
 @Injectable({
   providedIn: 'root'

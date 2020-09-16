@@ -5,7 +5,7 @@ import { forkJoin, Observable } from 'rxjs';
 import { map, mergeMap, startWith, tap } from 'rxjs/operators';
 import { MatAutocompleteSelectedEvent } from '@angular/material/autocomplete';
 import { LegalityEntry } from '../../database/models/legality-entry.interface';
-import { PokemonEntry } from '../../database/models/pokemon-entry-.interface';
+import { PokemonEntry } from '../../database/models/pokemon-entry.interface';
 import { LevelUpMove } from '../../database/models/level-up-move.interface';
 
 @Component({

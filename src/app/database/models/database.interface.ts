@@ -1,4 +1,4 @@
-import { PokemonEntry } from './pokemon-entry-.interface';
+import { PokemonEntry } from './pokemon-entry.interface';
 import { MoveDatabase } from './move-database.interface';
 import { LegalityEntry } from './legality-entry.interface';
 

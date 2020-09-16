@@ -2,7 +2,7 @@ import { Component, HostBinding, Input, OnChanges, OnInit, SimpleChanges, ViewEn
 import { Pokemon } from '@shared/interfaces/pokemon';
 import { DatabaseFacadeService } from '../../database/database-facade.service';
 import { forkJoin, Observable, of } from 'rxjs';
-import { PokemonEntry } from '../../database/models/pokemon-entry-.interface';
+import { PokemonEntry } from '../../database/models/pokemon-entry.interface';
 import { Move } from '../../database/models/move.interface';
 
 @Component({
