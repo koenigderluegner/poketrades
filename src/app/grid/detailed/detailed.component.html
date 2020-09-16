@@ -1,65 +1,67 @@
-<ng-container *ngxSubscribe="let dbpokemon of dbpokemon$">
-  <div class="detailed-header dark-bg">{{pokemon.name}}</div>
-  <div class="detailed-species-info  d-flex">
-    <div class="detailed-species-icon">
-      <img alt="" class="icon-foundation" src="assets/images/pokesprite-pokeball.svg">
-      <app-pokemon [shiny]="pokemon.isShiny" [slug]="pokemon.iconSlug"></app-pokemon>
-    </div>
-    <div class="detailed-pokemon-info row">
-      <div class="detailed-types">
-        <ng-container *ngIf="dbpokemon">
-          <app-type-badge [type]="type" size="small" *ngFor="let type of dbpokemon.types">{{type}}</app-type-badge>
-        </ng-container>
+<ng-container *ngIf="pokemon && dbpokemon$">
+  <ng-container *ngxSubscribe="let dbpokemon of dbpokemon$">
+    <div class="detailed-header dark-bg">{{pokemon.name}}</div>
+    <div class="detailed-species-info  d-flex">
+      <div class="detailed-species-icon">
+        <img alt="" class="icon-foundation" src="assets/images/pokesprite-pokeball.svg">
+        <app-pokemon [shiny]="pokemon.isShiny" [slug]="pokemon.iconSlug"></app-pokemon>
+      </div>
+      <div class="detailed-pokemon-info row">
+        <div class="detailed-types">
+          <ng-container *ngIf="dbpokemon">
+            <app-type-badge [type]="type" size="small" *ngFor="let type of dbpokemon.types">{{type}}</app-type-badge>
+          </ng-container>
 
           <app-type-badge type="unknown" size="small" *ngIf="!dbpokemon">{{'unknown'}}</app-type-badge>
 
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="detailed-stats row " *ngIf="pokemon.ivs || pokemon.evs" [class.ev-iv]="pokemon.ivs && pokemon.evs">
-    <div class="detailed-label dark-bg t-align-center">Stats</div>
-    <div class="" *ngIf="pokemon.ivs">IVs</div>
-    <div class="" *ngIf="pokemon.evs">EVs</div>
-    <div class="detailed-label dark-bg t-align-center">HP</div>
-    <div class="" *ngIf="pokemon.ivs">{{pokemon.ivs.hp}}</div>
-    <div class="" *ngIf="pokemon.evs">{{pokemon.evs.hp}}</div>
-    <div class="detailed-label dark-bg t-align-center">Attack</div>
-    <div class="" *ngIf="pokemon.ivs">{{pokemon.ivs.atk}}</div>
-    <div class="" *ngIf="pokemon.evs">{{pokemon.evs.atk}}</div>
-    <div class="detailed-label dark-bg t-align-center">Defense</div>
-    <div class="" *ngIf="pokemon.ivs">{{pokemon.ivs.def}}</div>
-    <div class="" *ngIf="pokemon.evs">{{pokemon.evs.def}}</div>
-    <div class="detailed-label dark-bg t-align-center">Sp. Atk</div>
-    <div class="" *ngIf="pokemon.ivs">{{pokemon.ivs.spa}}</div>
-    <div class="" *ngIf="pokemon.evs">{{pokemon.evs.spa}}</div>
-    <div class="detailed-label dark-bg t-align-center">Sp. Def</div>
-    <div class="" *ngIf="pokemon.ivs">{{pokemon.ivs.spd}}</div>
-    <div class="" *ngIf="pokemon.evs">{{pokemon.evs.spd}}</div>
-    <div class="detailed-label dark-bg t-align-center">Speed</div>
-    <div class="" *ngIf="pokemon.ivs">{{pokemon.ivs.spe}}</div>
-    <div class="" *ngIf="pokemon.evs">{{pokemon.evs.spe}}</div>
-  </div>
+    <div class="detailed-stats row " *ngIf="pokemon.ivs || pokemon.evs" [class.ev-iv]="pokemon.ivs && pokemon.evs">
+      <div class="detailed-label dark-bg t-align-center">Stats</div>
+      <div class="" *ngIf="pokemon.ivs">IVs</div>
+      <div class="" *ngIf="pokemon.evs">EVs</div>
+      <div class="detailed-label dark-bg t-align-center">HP</div>
+      <div class="" *ngIf="pokemon.ivs">{{pokemon.ivs.hp}}</div>
+      <div class="" *ngIf="pokemon.evs">{{pokemon.evs.hp}}</div>
+      <div class="detailed-label dark-bg t-align-center">Attack</div>
+      <div class="" *ngIf="pokemon.ivs">{{pokemon.ivs.atk}}</div>
+      <div class="" *ngIf="pokemon.evs">{{pokemon.evs.atk}}</div>
+      <div class="detailed-label dark-bg t-align-center">Defense</div>
+      <div class="" *ngIf="pokemon.ivs">{{pokemon.ivs.def}}</div>
+      <div class="" *ngIf="pokemon.evs">{{pokemon.evs.def}}</div>
+      <div class="detailed-label dark-bg t-align-center">Sp. Atk</div>
+      <div class="" *ngIf="pokemon.ivs">{{pokemon.ivs.spa}}</div>
+      <div class="" *ngIf="pokemon.evs">{{pokemon.evs.spa}}</div>
+      <div class="detailed-label dark-bg t-align-center">Sp. Def</div>
+      <div class="" *ngIf="pokemon.ivs">{{pokemon.ivs.spd}}</div>
+      <div class="" *ngIf="pokemon.evs">{{pokemon.evs.spd}}</div>
+      <div class="detailed-label dark-bg t-align-center">Speed</div>
+      <div class="" *ngIf="pokemon.ivs">{{pokemon.ivs.spe}}</div>
+      <div class="" *ngIf="pokemon.evs">{{pokemon.evs.spe}}</div>
+    </div>
 
-  <div class="detailed-dynamax row ">
-    <div class="detailed-label dark-bg">Dynamax Level</div>
-    <ul>
-      <li [class.on]="index < pokemon.dynamaxLevel" *ngxRepeat="10; let index"></li>
-    </ul>
-  </div>
+    <div *ngIf="pokemon.dynamaxLevel" class="detailed-dynamax row ">
+      <div class="detailed-label dark-bg">Dynamax Level</div>
+      <ul>
+        <li [class.on]="index < pokemon.dynamaxLevel" *ngxRepeat="10; let index"></li>
+      </ul>
+    </div>
 
-  <div class="detailed-ability row ">
-    <div class="detailed-label dark-bg">Ability</div>
-    <span class="detailed-text">{{pokemon.ability}}</span>
-  </div>
+    <div class="detailed-ability row ">
+      <div class="detailed-label dark-bg">Ability</div>
+      <span class="detailed-text">{{pokemon.ability}}</span>
+    </div>
 
-  <div class="detailed-moves" *ngIf="moves$ | async as moves">
-    <ng-container *ngIf="isEggMove$ | async as isEggMove">
-      <div class="detailed-move d-flex" [class]="'move-'+moves[i].type"
-           *ngFor="let move of pokemon.moves; let i = index">
-        <span>{{move}}</span>
-        <span class="egg-icon" *ngIf="isEggMove[i]"><app-pokemon [slug]="'egg'"></app-pokemon></span>
-      </div>
-    </ng-container>
-  </div>
+    <div class="detailed-moves" *ngIf="moves$ | async as moves">
+      <ng-container *ngIf="isEggMove$ | async as isEggMove">
+        <div class="detailed-move d-flex" [class]="'move-'+moves[i].type"
+             *ngFor="let move of pokemon.moves; let i = index">
+          <span>{{move}}</span>
+          <span class="egg-icon" *ngIf="isEggMove[i]"><app-pokemon [slug]="'egg'"></app-pokemon></span>
+        </div>
+      </ng-container>
+    </div>
+  </ng-container>
 </ng-container>
