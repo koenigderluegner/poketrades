@@ -75,15 +75,15 @@ export class Valuable extends AbstractValuable implements Pokemon {
 
 
   get ability(): string {
-    return this.gsx$ability.$t;
+    return this.gsx$ability?.$t ?? '';
   }
 
   get dex(): string {
-    return this.gsx$dex.$t;
+    return this.gsx$dex?.$t ?? '';
   }
 
   get hasHiddenAbility(): boolean {
-    return this.gsx$hasha.$t === 'x';
+    return this.gsx$hasha?.$t === 'x';
   }
 
   get isOwned(): boolean {
@@ -101,7 +101,7 @@ export class Valuable extends AbstractValuable implements Pokemon {
   }
 
   get name(): string {
-    return this.gsx$name.$t;
+    return this.gsx$name?.$t ?? 'unknown';
   }
 
   get moves(): string[] {
