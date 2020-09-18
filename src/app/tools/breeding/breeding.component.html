@@ -29,7 +29,7 @@
           <div *ngFor="let eggMove of eggMoves">{{eggMove}}
             <app-grid appearance="minimal">
               <ng-container *ngFor="let parent of parentMoves | keyvalue">
-                <app-grid-item *ngIf="parent.value.eggMoves.includes(eggMove)"
+                <app-grid-item *ngIf="parent.key !== pokemon.name && parent.value.eggMoves.includes(eggMove)"
                                [pokemon]="asPokemon({iconSlug: parent.key | slugify}) "></app-grid-item>
               </ng-container>
             </app-grid>
