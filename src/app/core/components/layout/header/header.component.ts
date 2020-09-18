@@ -21,7 +21,7 @@ export class HeaderComponent implements OnInit {
       next: spreadsheetData => {
         this.spreadsheetData = spreadsheetData;
         if (this.spreadsheetData.hasValuables) {
-          this.valuablesLink = this.spreadsheetData.worksheets.filter(worksheet => worksheet.config.type === 'Valuables')[0].title;
+          this.valuablesLink = this.spreadsheetData.worksheets.filter(worksheet => worksheet.config?.type === 'Valuables')[0].title;
         }
       }
     });
