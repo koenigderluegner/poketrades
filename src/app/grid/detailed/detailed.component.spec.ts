@@ -14,14 +14,12 @@ import { MOCK_POKEMON } from 'testing/mocks/pokemon-list.mock';
 class TestHostComponent {
 
   @ViewChild(DetailedComponent)
-  public detailedComponent: DetailedComponent;
+  public detailedComponent: DetailedComponent | undefined;
 
   MOCK_POKEMON: Pokemon = MOCK_POKEMON[0];
 }
 
 describe('DetailedComponent', () => {
-  let component: DetailedComponent;
-  let fixture: ComponentFixture<DetailedComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -31,22 +29,6 @@ describe('DetailedComponent', () => {
     })
       .compileComponents();
   }));
-
-
-  describe('without input', () => {
-    beforeEach(() => {
-      fixture = TestBed.createComponent(DetailedComponent);
-      component = fixture.componentInstance;
-    });
-
-    it('shouldn\'t create', () => {
-      expect(() => {
-        fixture = TestBed.createComponent(DetailedComponent);
-        component = fixture.componentInstance;
-        fixture.detectChanges();
-      }).toThrow();
-    });
-  });
 
 
   describe('with input', () => {

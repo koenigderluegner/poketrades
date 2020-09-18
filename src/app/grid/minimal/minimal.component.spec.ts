@@ -14,7 +14,7 @@ import { MOCK_POKEMON } from '../../../../testing/mocks/pokemon-list.mock';
 class TestHostComponent {
 
   @ViewChild(MinimalComponent)
-  public minimalComponent: MinimalComponent;
+  public minimalComponent: MinimalComponent | undefined;
 
   MOCK_POKEMON: Pokemon = MOCK_POKEMON[0];
 }
@@ -30,19 +30,6 @@ describe('MinimalComponent', () => {
       .compileComponents();
   }));
 
-
-  describe('without input', () => {
-    let component: MinimalComponent;
-    let fixture: ComponentFixture<MinimalComponent>;
-
-    it('shouldn\'t create', () => {
-      expect(() => {
-        fixture = TestBed.createComponent(MinimalComponent);
-        component = fixture.componentInstance;
-        fixture.detectChanges();
-      }).toThrow();
-    });
-  });
 
   describe('with input', () => {
 
