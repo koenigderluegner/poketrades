@@ -16,28 +16,32 @@
   </ul>
 </aside>
 <div class="view-content">
-  <ng-container
-    *ngxSubscribe="let loadedSpreadsheet of loadedSpreadsheet$; beforeAny pendingTemplate onError errorTemplate">
-    <div class="view-subheader">{{loadedSpreadsheet.title}}</div>
-    <div *ngIf="loadedSpreadsheet.hasValuables">
-      Contains valuables.
-    </div>
-    <div *ngIf="loadedSpreadsheet.hasBreedables">
-      Contains breedables.
-    </div>
-    <div class="button-row">
-      <button class="save-button" (click)="saveSpreadsheet(loadedSpreadsheet)">Save as current spreadsheet</button>
-    </div>
+  <ng-container *ngIf="loadedSpreadsheet$; else notRequestedYet">
+    <ng-container
+      *ngxSubscribe="let loadedSpreadsheet of loadedSpreadsheet$; beforeAny pendingTemplate onError errorTemplate">
+      <ng-container *ngIf="loadedSpreadsheet">
+        <div class="view-subheader">{{loadedSpreadsheet.title}}</div>
+        <div *ngIf="loadedSpreadsheet.hasValuables">
+          Contains valuables.
+        </div>
+        <div *ngIf="loadedSpreadsheet.hasBreedables">
+          Contains breedables.
+        </div>
+        <div class="button-row">
+          <button class="save-button" (click)="saveSpreadsheet(loadedSpreadsheet)">Save as current spreadsheet</button>
+        </div>
+      </ng-container>
+    </ng-container>
   </ng-container>
 </div>
 
-
+<ng-template #notRequestedYet>
+  <app-ball-guy-bubble>
+    Enter a spreadsheet Id to load a spreadsheet
+  </app-ball-guy-bubble>
+</ng-template>
 <ng-template #pendingTemplate>
-  <div *ngIf="!hasRequested">
-    <app-ball-guy-bubble>
-      Enter a spreadsheet Id to load a spreadsheet
-    </app-ball-guy-bubble>
-  </div>
+
   <div *ngIf="hasRequested">
     Load spreadsheet
   </div>
