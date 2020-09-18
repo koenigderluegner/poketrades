@@ -1,14 +1,21 @@
 <ng-container *ngxSubscribe="let data of data$; beforeAny loading">
 
   <div class="legality-table">
-    <div class="legality-row d-flex" *ngFor="let entry of data.legality">
-      <div class="name d-flex">
-        <app-pokemon [slug]="entry.pokemon | slugify"></app-pokemon>
-        {{entry.pokemon}}</div>
-      <div class="ball-col" [class.active]="data.entries[ball.key][entry.pokemon | slugify]?.isOwned" [class.illegal]="entry[ball.key] === null" *ngFor="let ball of data.entries | keyvalue">
-        <app-item [slug]="ball.key | slugify" category="ball"></app-item>
+    <ng-container *ngIf="data && data.legality">
+      <div class="legality-row d-flex" *ngFor="let entry of data.legality">
+        <div class="name d-flex">
+          <app-pokemon [slug]="entry.pokemon | slugify"></app-pokemon>
+          {{entry.pokemon}}</div>
+        <ng-container *ngIf="data.entries">
+          <ng-container *ngFor="let ball of data.entries | keyvalue">
+            <div class="ball-col" [class.active]="data.entries[ball.key][(entry.pokemon | slugify)]?.isOwned"
+                 [class.illegal]="entry[ball.key] === null">
+              <app-item [slug]="ball.key | slugify" category="ball"></app-item>
+            </div>
+          </ng-container>
+        </ng-container>
       </div>
-    </div>
+    </ng-container>
   </div>
 </ng-container>
 <ng-template #loading>Loading</ng-template>
