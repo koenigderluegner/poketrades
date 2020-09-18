@@ -1,4 +1,4 @@
-import { Component, Input, ViewEncapsulation } from '@angular/core';
+import { Component, HostBinding, Input, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-sub-navi-item',
@@ -7,6 +7,8 @@ import { Component, Input, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class SubNaviItemComponent {
+
+  @HostBinding('class.sub-navi-item') subNaviClass = true;
 
   @Input() text: string | undefined;
   @Input() link: (string | number)[] | string | null | undefined; // routerLink inputs
