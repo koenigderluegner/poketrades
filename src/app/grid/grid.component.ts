@@ -39,8 +39,8 @@ export class GridComponent implements AfterContentInit {
 
   }
 
-  trackByFn(item: GridItemComponent): string | undefined {
-    return item.pokemon?.id;
+  trackByFn(index: number, item: GridItemComponent): string {
+    return item.pokemon?.id ?? '';
   }
 
 }
