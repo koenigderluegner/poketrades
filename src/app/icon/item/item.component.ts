@@ -20,5 +20,5 @@ export class ItemComponent {
     this.categoryClass = cat;
   }
 
-  @HostBinding('classes') classes: string | undefined;
+  @HostBinding('class') classes: string | undefined;
 }
