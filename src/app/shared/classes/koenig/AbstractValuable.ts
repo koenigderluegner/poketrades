@@ -23,7 +23,7 @@ export class AbstractValuable {
   protected gsx$evspd: { $t: string } | undefined;
   protected gsx$evspe: { $t: string } | undefined;
 
-  [key: string]: ({ $t: string }) | PokemonStats | undefined | string[] | string | boolean;
+  [key: string]: ({ $t: string }) | PokemonStats | undefined | string[] | string | boolean | number;
 
 
   constructor() {
