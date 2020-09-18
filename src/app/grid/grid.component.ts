@@ -17,7 +17,7 @@ export class GridComponent implements AfterContentInit {
     return this.appearance ?? 'normal';
   }
 
-  @Input() appearance: GridAppearanceType | undefined;
+  @Input() appearance: GridAppearanceType | undefined | null;
 
   @ContentChildren(GridItemComponent) contentChildren !: QueryList<GridItemComponent>;
 
