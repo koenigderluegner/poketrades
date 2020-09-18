@@ -1,58 +1,46 @@
-import {
-    AfterContentInit,
-    Component,
-    ContentChildren,
-    HostBinding,
-    Input,
-    OnInit,
-    QueryList,
-    ViewEncapsulation
-} from '@angular/core';
+import { AfterContentInit, Component, ContentChildren, HostBinding, Input, QueryList, ViewEncapsulation } from '@angular/core';
 import { GridAppearanceType } from './grid-appearance.type';
 import { GridItemComponent } from './grid-item/grid-item.component';
 
 @Component({
-    selector: 'app-grid',
-    templateUrl: './grid.component.html',
-    styleUrls: ['./grid.component.scss'],
-    encapsulation: ViewEncapsulation.None
+  selector: 'app-grid',
+  templateUrl: './grid.component.html',
+  styleUrls: ['./grid.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
-export class GridComponent implements OnInit, AfterContentInit {
+export class GridComponent implements AfterContentInit {
 
-    @HostBinding('class.grid') true;
-    @Input() @HostBinding('class.hide-inactives') hideInactiveItems: boolean;
+  @HostBinding('class.grid') isGrid = true;
+  @Input() @HostBinding('class.hide-inactives') hideInactiveItems = false;
 
-    @HostBinding('class') get class() {
-        return this.appearance ?? 'normal';
+  @HostBinding('class') get class() {
+    return this.appearance ?? 'normal';
+  }
+
+  @Input() appearance: GridAppearanceType | undefined | null;
+
+  @ContentChildren(GridItemComponent) contentChildren !: QueryList<GridItemComponent>;
+
+  items: GridItemComponent[] | undefined;
+
+  constructor() {
+  }
+
+
+  ngAfterContentInit() {
+
+    // initial load of list
+    if (!this.items) {
+      this.items = this.contentChildren.toArray();
     }
+    this.contentChildren.changes.subscribe((items: QueryList<GridItemComponent>) => {
+      this.items = items.toArray();
+    });
 
-    @Input() appearance: GridAppearanceType;
+  }
 
-    @ContentChildren(GridItemComponent) contentChildren !: QueryList<GridItemComponent>;
-
-    items;
-
-    constructor() {
-    }
-
-
-    ngAfterContentInit() {
-
-        // initial load of list
-        if (!this.items) {
-            this.items = this.contentChildren.toArray();
-        }
-        this.contentChildren.changes.subscribe(items => {
-            this.items = items.toArray();
-        });
-
-    }
-
-    trackByFn(item) {
-        return item.pokemon?.id;
-    }
-
-    ngOnInit(): void {
-    }
+  trackByFn(index: number, item: GridItemComponent): string {
+    return item.pokemon?.id ?? '';
+  }
 
 }

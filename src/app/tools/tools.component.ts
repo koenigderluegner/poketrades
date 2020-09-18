@@ -8,7 +8,7 @@ import { Component, HostBinding, OnInit, ViewEncapsulation } from '@angular/core
 })
 export class ToolsComponent implements OnInit {
 
-  @HostBinding('class.view') true;
+  @HostBinding('class.view') classes = true;
 
   constructor() { }
 

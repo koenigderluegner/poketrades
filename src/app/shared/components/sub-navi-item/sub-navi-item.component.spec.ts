@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { SubNaviItemComponent } from './sub-navi-item.component';
 import { CommonModule } from '@angular/common';
@@ -9,7 +9,7 @@ describe('SubNaviItemComponent', () => {
   let component: SubNaviItemComponent;
   let fixture: ComponentFixture<SubNaviItemComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [CommonModule, SharedModule, RouterTestingModule],
       declarations: [SubNaviItemComponent],

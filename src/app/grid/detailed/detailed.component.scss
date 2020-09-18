@@ -1,3 +1,33 @@
+$types: "water" #8CADE0,
+"dark" #8F8E94,
+"psychic" #EBA1A2,
+"fighting" #CD8B99,
+"poison" #BD98D2,
+"normal" #ACB4B7,
+"ghost" #8E97BE,
+"steel" #90ACB8,
+"ground" #E19F87,
+"dragon" #7A99CF,
+"fairy" #F2ADEC,
+"fire" #FFB68D,
+"bug" #ADD080,
+"ice" #9CDACD,
+"flying" #AEBDE4,
+"rock" #D3C8A8,
+"grass" #94CC8F,
+"electric" #F6DC85;
+
+$dynamaxColor: #33EAFA,
+#5ADFFE,
+#65C2FD,
+#52A3F4,
+#987AFC,
+#B977FD,
+#DC51EA,
+#F631BE,
+#E8288D,
+#E52674;
+
 .grid.detailed {
 
   display: grid;
@@ -92,7 +122,7 @@
       grid-template-columns: 80px 1fr;
       grid-gap: 3px 10px;
 
-      &.ev-iv{
+      &.ev-iv {
         grid-template-columns: 80px 1fr 1fr;
       }
     }
@@ -125,7 +155,6 @@
 }
 
 .detailed-dynamax {
-
   display: flex;
 
   .detailed-label, ul {
@@ -141,55 +170,19 @@
 
 
   ul li {
-
     transform: skewX(-20deg);
     height: 100%;
     width: 7%;
-
     background: #E8E8E8;
 
-    &.on:nth-child(1) {
-      background: #33EAFA;
+    @for $i from 1 through length($dynamaxColor) {
+      &.on:nth-child(#{$i}) {
+        background: nth($dynamaxColor, $i);
+      }
     }
-
-    &.on:nth-child(2) {
-      background: #5ADFFE;
-    }
-
-    &.on:nth-child(3) {
-      background: #65C2FD;
-    }
-
-    &.on:nth-child(4) {
-      background: #52A3F4;
-    }
-
-    &.on:nth-child(5) {
-      background: #987AFC;
-    }
-
-    &.on:nth-child(6) {
-      background: #B977FD;
-    }
-
-    &.on:nth-child(7) {
-      background: #DC51EA;
-    }
-
-    &.on:nth-child(8) {
-      background: #F631BE;
-    }
-
-    &.on:nth-child(9) {
-      background: #E8288D;
-    }
-
-    &.on:nth-child(10) {
-      background: #E52674;
-    }
-
   }
 }
+
 
 .detailed-move {
   margin-bottom: 3px;
@@ -219,26 +212,10 @@
   background-size: 24px;
   background-position: 3px;
   justify-content: space-between;
+  background-color: #dbdbdb;
 }
 
-$types: "water" #8CADE0,
-"dark" #8F8E94,
-"psychic" #EBA1A2,
-"fighting" #CD8B99,
-"poison" #BD98D2,
-"normal" #ACB4B7,
-"ghost" #8E97BE,
-"steel" #90ACB8,
-"ground" #E19F87,
-"dragon" #7A99CF,
-"fairy" #F2ADEC,
-"fire" #FFB68D,
-"bug" #ADD080,
-"ice" #9CDACD,
-"flying" #AEBDE4,
-"rock" #D3C8A8,
-"grass" #94CC8F,
-"electric" #F6DC85;
+
 
 @each $type, $color in $types {
   .move-#{$type} {

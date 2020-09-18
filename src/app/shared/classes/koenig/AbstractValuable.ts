@@ -1,25 +1,30 @@
+import { PokemonStats } from '@shared/interfaces/pokemon-stats';
+
 export class AbstractValuable {
 
-  protected gsx$name;
-  protected gsx$dex;
-  protected gsx$hasha;
-  protected gsx$owned;
-  protected gsx$ability;
-  protected gsx$isshiny;
+  protected gsx$name: { $t: string } | undefined;
+  protected gsx$dex: { $t: string } | undefined;
+  protected gsx$hasha: { $t: string } | undefined;
+  protected gsx$owned: { $t: string } | undefined;
+  protected gsx$ability: { $t: string } | undefined;
+  protected gsx$isshiny: { $t: string } | undefined;
 
-  protected gsx$hp;
-  protected gsx$atk;
-  protected gsx$def;
-  protected gsx$spa;
-  protected gsx$spd;
-  protected gsx$spe;
+  protected gsx$hp: { $t: string } | undefined;
+  protected gsx$atk: { $t: string } | undefined;
+  protected gsx$def: { $t: string } | undefined;
+  protected gsx$spa: { $t: string } | undefined;
+  protected gsx$spd: { $t: string } | undefined;
+  protected gsx$spe: { $t: string } | undefined;
 
-  protected gsx$evhp;
-  protected gsx$evatk;
-  protected gsx$evdef;
-  protected gsx$evspa;
-  protected gsx$evspd;
-  protected gsx$evspe;
+  protected gsx$evhp: { $t: string } | undefined;
+  protected gsx$evatk: { $t: string } | undefined;
+  protected gsx$evdef: { $t: string } | undefined;
+  protected gsx$evspa: { $t: string } | undefined;
+  protected gsx$evspd: { $t: string } | undefined;
+  protected gsx$evspe: { $t: string } | undefined;
+
+  [key: string]: ({ $t: string }) | PokemonStats | undefined | string[] | string | boolean | number;
+
 
   constructor() {
     if (new.target === AbstractValuable) {

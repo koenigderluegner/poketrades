@@ -1,19 +1,17 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, HostBinding, Input, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-sub-navi-item',
   templateUrl: './sub-navi-item.component.html',
-  styleUrls: ['./sub-navi-item.component.scss']
+  styleUrls: ['./sub-navi-item.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
-export class SubNaviItemComponent implements OnInit {
+export class SubNaviItemComponent {
 
-  @Input() text: string;
-  @Input() link: any[];
-  @Input() meta: string;
+  @HostBinding('class.sub-navi-item') subNaviClass = true;
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+  @Input() text: string | undefined;
+  @Input() link: (string | number)[] | string | null | undefined; // routerLink inputs
+  @Input() meta: string | undefined;
 
 }

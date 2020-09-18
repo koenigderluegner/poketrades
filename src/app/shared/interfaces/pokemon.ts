@@ -8,9 +8,9 @@ export interface Pokemon {
   iconSlug: string;
   hasHiddenAbility: boolean;
   isOwned?: boolean;
-  moves: any[];
+  moves: string[];
   dynamaxLevel?: number;
-  isShiny?: boolean;
+  isShiny: boolean;
   ivs?: PokemonStats;
   evs?: PokemonStats;
 }

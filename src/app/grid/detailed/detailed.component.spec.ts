@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { DetailedComponent } from './detailed.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
@@ -14,16 +14,14 @@ import { MOCK_POKEMON } from 'testing/mocks/pokemon-list.mock';
 class TestHostComponent {
 
   @ViewChild(DetailedComponent)
-  public detailedComponent: DetailedComponent;
+  public detailedComponent: DetailedComponent | undefined;
 
   MOCK_POKEMON: Pokemon = MOCK_POKEMON[0];
 }
 
 describe('DetailedComponent', () => {
-  let component: DetailedComponent;
-  let fixture: ComponentFixture<DetailedComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule],
       declarations: [DetailedComponent, TestHostComponent],
@@ -31,22 +29,6 @@ describe('DetailedComponent', () => {
     })
       .compileComponents();
   }));
-
-
-  describe('without input', () => {
-    beforeEach(() => {
-      fixture = TestBed.createComponent(DetailedComponent);
-      component = fixture.componentInstance;
-    });
-
-    it('shouldn\'t create', () => {
-      expect(() => {
-        fixture = TestBed.createComponent(DetailedComponent);
-        component = fixture.componentInstance;
-        fixture.detectChanges();
-      }).toThrow();
-    });
-  });
 
 
   describe('with input', () => {

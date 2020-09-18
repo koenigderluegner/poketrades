@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, Input, ViewEncapsulation } from '@angular/core';
 import { GridAppearanceType } from '../grid-appearance.type';
 import { Pokemon } from '@shared/interfaces/pokemon';
 
@@ -8,13 +8,9 @@ import { Pokemon } from '@shared/interfaces/pokemon';
   styleUrls: ['./grid-item.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class GridItemComponent implements OnInit {
+export class GridItemComponent {
 
-  @Input() pokemon: Pokemon;
-  @Input() appearance: GridAppearanceType;
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+  @Input() pokemon: Pokemon | undefined;
+  @Input() appearance: GridAppearanceType | undefined;
 
 }

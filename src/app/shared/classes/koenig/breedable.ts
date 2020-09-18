@@ -1,11 +1,15 @@
 import { Pokemon } from '@shared/interfaces/pokemon';
 import { SlugifyPipe } from '@shared/pipes/slugify.pipe';
-import { AbstractBreeable } from '@shared/classes/koenig/abstract-breeable';
+import { AbstractBreedable } from '@shared/classes/koenig/abstract-breedable';
 
-export class Breedable extends AbstractBreeable implements Pokemon {
-  id: string;
-  private _slug: string;
-  private _moves: any[];
+export class Breedable extends AbstractBreedable implements Pokemon {
+  id = '';
+  private _slug = '';
+  private readonly _moves: string[] = [];
+  isShiny = false;
+
+  [key: string]: string | { $t: string } | boolean | string[] | undefined;
+
 
   constructor(pokemon?: Pokemon) {
     super();
@@ -13,28 +17,28 @@ export class Breedable extends AbstractBreeable implements Pokemon {
       Object.assign(this, pokemon);
     }
 
-    this._moves = [];
     for (let i = 1; i < 5; i++) {
-      if (this[`gsx$move${i}`]?.$t) {
-        this._moves.push(this[`gsx$move${i}`]?.$t);
+      const move = (this[`gsx$move${i}`] as { $t: string })?.$t;
+      if (move) {
+        this._moves.push(move);
       }
     }
   }
 
   get ability(): string {
-    return this.gsx$ability.$t;
+    return this.gsx$ability?.$t ?? '';
   }
 
   get dex(): string {
-    return this.gsx$dex.$t;
+    return this.gsx$dex?.$t ?? '';
   }
 
   get hasHiddenAbility(): boolean {
-    return this.gsx$hasha.$t === 'x';
+    return this.gsx$hasha?.$t === 'x';
   }
 
   get isOwned(): boolean {
-    return this.gsx$owned.$t === 'x';
+    return this.gsx$owned?.$t === 'x';
   }
 
   get iconSlug(): string {
@@ -46,10 +50,10 @@ export class Breedable extends AbstractBreeable implements Pokemon {
   }
 
   get name(): string {
-    return this.gsx$name.$t;
+    return this.gsx$name?.$t ?? 'unknown';
   }
 
-  get moves() {
+  get moves(): string[] {
     return this._moves;
   }
 

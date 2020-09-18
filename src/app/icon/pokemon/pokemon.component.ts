@@ -10,11 +10,7 @@ export class PokemonComponent {
 
   @HostBinding('class.pokesprite') pokesprite = true;
   @HostBinding('class.pokemon') pokemon = true;
-  @Input() @HostBinding('class.shiny') shiny: boolean;
-  @Input() @HostBinding('class') slug: string;
-
-
-  constructor() {
-  }
+  @Input() @HostBinding('class.shiny') shiny = false;
+  @Input() @HostBinding('class') slug: string | undefined;
 
 }

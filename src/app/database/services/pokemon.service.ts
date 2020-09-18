@@ -2,22 +2,23 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { switchMap, tap } from 'rxjs/operators';
 import { Observable, of, throwError } from 'rxjs';
+import { PokemonEntry } from '../models/pokemon-entry.interface';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PokemonService {
 
-  private db;
+  private db: PokemonEntry[] | undefined;
 
   constructor(private httpClient: HttpClient) {
   }
 
-  loadDatabase(): Observable<any[]> {
+  loadDatabase(): Observable<PokemonEntry[]> {
     if (this.db) {
       return of(this.db);
     } else {
-      return this.httpClient.get<any[]>('assets/database/pokemon.json').pipe(
+      return this.httpClient.get<PokemonEntry[]>('assets/database/pokemon.json').pipe(
         tap(database => {
           this.db = database;
         })
@@ -27,10 +28,10 @@ export class PokemonService {
 
   }
 
-  findPokemon(name: string) {
+  findPokemon(name: string): Observable<PokemonEntry> {
     return this.loadDatabase().pipe(
       switchMap(database => {
-        const hits = database.filter(pokemon => {
+        const hits = database.filter((pokemon: PokemonEntry) => {
           return pokemon.name.toLowerCase() === name.toLowerCase();
         });
         if (hits.length === 0) {
@@ -41,17 +42,17 @@ export class PokemonService {
     );
   }
 
-  getEggGroupParents(eggGroups: string[]) {
+  getEggGroupParents(eggGroups: string[]): Observable<PokemonEntry[]> {
     if (eggGroups.includes('Undiscovered') || eggGroups.includes('Ditto')) {
       return of([]);
     }
 
     return this.loadDatabase().pipe(
-      switchMap(database => {
-        const hits = database.filter(pokemon => {
-          return pokemon.eggGroups.some(x => eggGroups.includes(x));
+      switchMap((database: PokemonEntry[]) => {
+        const hits = database.filter((pokemon: PokemonEntry) => {
+          return pokemon.eggGroups.some((x: string) => eggGroups.includes(x));
         });
-        hits.sort((a, b) => {
+        hits.sort((a: PokemonEntry, b: PokemonEntry) => {
           return a.dex === b.dex ? 0 : a.dex < b.dex ? -1 : 1;
         });
         if (hits.length === 0) {

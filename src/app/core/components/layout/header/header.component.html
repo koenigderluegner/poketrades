@@ -14,7 +14,7 @@
              'breedables',
              'overview']">Breedables</a>
         </li>
-        <li *ngIf="spreadsheetData.hasValuables">
+        <li *ngIf="spreadsheetData.hasValuables && valuablesLink">
           <a routerLinkActive="selected"
              [routerLink]="[
              '/'+ (spreadsheetData.username? 'u/'+spreadsheetData.username : spreadsheetData.id),

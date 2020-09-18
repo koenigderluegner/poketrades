@@ -17,7 +17,8 @@
     <app-sub-navi-item [link]="['/'+spreadsheetId, 'breedables', worksheet.title | slugify]"
                        *ngFor="let worksheet of worksheets"
                        [text]="worksheet.title"
-                       [meta]="worksheet.ownedEntries +'/'+worksheet.data.length">
+                       [meta]="worksheet.ownedEntries +'/'+(worksheet.data ? worksheet.data.length : '???')">
+
       <app-item category="ball" [slug]="worksheet.title | slugify"></app-item>
     </app-sub-navi-item>
   </ul>

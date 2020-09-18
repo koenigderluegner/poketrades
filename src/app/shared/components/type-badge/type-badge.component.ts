@@ -1,4 +1,4 @@
-import { Component, HostBinding, Input, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, HostBinding, Input, ViewEncapsulation } from '@angular/core';
 import { PokemonType } from '@shared/interfaces/pokemon-type.type';
 
 @Component({
@@ -8,12 +8,12 @@ import { PokemonType } from '@shared/interfaces/pokemon-type.type';
   encapsulation: ViewEncapsulation.None
 })
 
-export class TypeBadgeComponent implements OnInit {
+export class TypeBadgeComponent {
 
-  @Input() type: PokemonType;
-  @Input() size: 'small' | 'normal';
+  @Input() type: PokemonType = 'unknown';
+  @Input() size: 'small' | 'normal' = 'normal';
 
-  @HostBinding('class.type-badge') true;
+  @HostBinding('class.type-badge') isTypeBade = true;
 
   @HostBinding('class') get typeClass() {
     return this.type?.toLowerCase() || '';
@@ -22,11 +22,4 @@ export class TypeBadgeComponent implements OnInit {
   @HostBinding('class.small') get sizeClass() {
     return this.size === 'small';
   }
-
-  constructor() {
-  }
-
-  ngOnInit(): void {
-  }
-
 }

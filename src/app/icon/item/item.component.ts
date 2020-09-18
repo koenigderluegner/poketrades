@@ -8,18 +8,17 @@ export class ItemComponent {
 
 
   @HostBinding('class.pokesprite') pokesprite = true;
-  private slugClass: any;
-  private categoryClass: any;
+  private slugClass: string | undefined;
+  private categoryClass: string | undefined;
 
-  @Input() set slug(sl) {
+  @Input() set slug(sl: string) {
     this.slugClass = sl;
     this.classes = [this.slugClass, this.categoryClass].join(' ');
   }
 
-  @Input() set category(cat) {
+  @Input() set category(cat: string) {
     this.categoryClass = cat;
   }
 
-  @HostBinding('class') classes;
-
+  @HostBinding('class') classes: string | undefined;
 }

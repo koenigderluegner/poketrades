@@ -1,4 +1,5 @@
 import { Worksheet } from './worksheet';
+import { BreedablesOverviewList } from '@shared/interfaces/breedables-overview-list.interface';
 
 export interface Spreadsheet {
   id: string;
@@ -7,7 +8,7 @@ export interface Spreadsheet {
   date: Date;
   worksheets: Worksheet[];
 
-  overviewEntries?: object;
+  overviewEntries?: BreedablesOverviewList;
   hasValuables?: boolean;
   hasBreedables?: boolean;
 }

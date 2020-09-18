@@ -1,4 +1,4 @@
-import { Component, HostBinding, Input, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, HostBinding, Input, ViewEncapsulation } from '@angular/core';
 import { Pokemon } from '@shared/interfaces/pokemon';
 
 @Component({
@@ -7,20 +7,14 @@ import { Pokemon } from '@shared/interfaces/pokemon';
   styleUrls: ['./minimal.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class MinimalComponent implements OnInit {
+export class MinimalComponent {
 
-  @HostBinding('class.grid-item') true;
+  @HostBinding('class.grid-item') isGridItem = true;
 
-  @HostBinding('class.inactive') get inactive() {
+  @HostBinding('class.inactive') get inactive(): boolean {
     return !this.pokemon?.isOwned;
   }
 
-  @Input() pokemon: Pokemon;
-
-  constructor() {
-  }
-
-  ngOnInit(): void {
-  }
+  @Input() pokemon: Pokemon | undefined;
 
 }

@@ -7,6 +7,8 @@ import { switchMap, tap } from 'rxjs/operators';
 import { SpreadsheetFacade } from '@spreadsheet/spreadsheet.facade';
 import { GridService } from '../../../grid/services/grid.service';
 import { GridAppearanceType } from '../../../grid/grid-appearance.type';
+import { Spreadsheet } from '@spreadsheet/models/spreadsheet';
+import { Pokemon } from '@shared/interfaces/pokemon';
 
 @Component({
   selector: 'app-ball',
@@ -15,8 +17,8 @@ import { GridAppearanceType } from '../../../grid/grid-appearance.type';
 })
 export class BallComponent implements OnInit, OnDestroy {
 
-  worksheetTitle: string;
-  worksheet: Worksheet;
+  worksheetTitle: string | undefined;
+  worksheet: Worksheet | undefined;
 
   subscriptions: Subscription[] = [];
   gridAppearance$: Observable<GridAppearanceType>;
@@ -28,31 +30,31 @@ export class BallComponent implements OnInit, OnDestroy {
     private slugifyPipe: SlugifyPipe,
     private gridService: GridService
   ) {
+    this.gridAppearance$ = this.gridService.getGridAppearance$();
+    this.hideItems$ = this.gridService.getHideItems$();
   }
 
   ngOnInit(): void {
 
-    this.gridAppearance$ = this.gridService.getGridAppearance$();
-    this.hideItems$ = this.gridService.getHideItems$();
 
     this.route.paramMap.pipe(
-      tap(params => this.worksheetTitle = params.get('worksheetTitle')),
+      tap(params => this.worksheetTitle = params.get('worksheetTitle') ?? ''),
       switchMap(
         () => {
           return this.spreadsheetFacade.getCurrentSpreadsheet$();
         }
       )).subscribe(
       {
-        next: (spreadsheetData) => {
+        next: (spreadsheetData: Spreadsheet) => {
           this.worksheet = spreadsheetData.worksheets.filter(
-            worksheet => this.slugifyPipe.transform(worksheet.title) === this.worksheetTitle
+            (worksheet: Worksheet) => this.slugifyPipe.transform(worksheet.title) === this.worksheetTitle
           )?.[0];
         }
       }
     );
   }
 
-  trackBy(index, pokemon) {
+  trackBy(index: number, pokemon: Pokemon): string {
     return pokemon.id;
   }
 

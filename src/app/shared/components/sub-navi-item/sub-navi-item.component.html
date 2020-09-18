@@ -1,4 +1,4 @@
-<li class="{{text | slugify}}">
+<li *ngIf="text" class="{{text | slugify}}">
   <a [routerLink]="link" routerLinkActive="active">
     <div class="icon"><ng-content select="app-item, app-pokemon"></ng-content></div>
     <div class="content" [class.no-meta]="!meta">
@@ -7,3 +7,4 @@
     </div>
   </a>
 </li>
+

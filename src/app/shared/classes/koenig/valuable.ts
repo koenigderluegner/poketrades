@@ -5,10 +5,11 @@ import { PokemonStats } from '@shared/interfaces/pokemon-stats';
 
 export class Valuable extends AbstractValuable implements Pokemon {
   id: string;
-  private _slug: string;
-  private _moves: any[];
-  private _ivs: PokemonStats;
-  private _evs: PokemonStats;
+  private _slug: string | undefined;
+  private readonly _moves: string[];
+  private _ivs?: PokemonStats;
+  private _evs?: PokemonStats;
+
 
   constructor(pokemon?: Pokemon) {
     super();
@@ -16,11 +17,14 @@ export class Valuable extends AbstractValuable implements Pokemon {
       Object.assign(this, pokemon);
     }
 
+    this.id = pokemon?.id ?? '';
+
 
     this._moves = [];
     for (let i = 1; i < 5; i++) {
-      if (this[`gsx$move${i}`]?.$t) {
-        this._moves.push(this[`gsx$move${i}`]?.$t);
+      const move = (this[`gsx$move${i}`] as { $t: string })?.$t;
+      if (move) {
+        this._moves.push(move);
       }
     }
 
@@ -29,22 +33,26 @@ export class Valuable extends AbstractValuable implements Pokemon {
     let hasIvs = false;
     let hasEvs = false;
     ['hp', 'atk', 'def', 'spa', 'spd', 'spe'].forEach(stat => {
-      const iv = this['gsx$' + stat]?.$t.trim();
-      const ev = this['gsx$ev' + stat]?.$t.trim();
+      const iv = (this['gsx$' + stat] as { $t: string })?.$t.trim();
+      const ev = (this['gsx$ev' + stat] as { $t: string })?.$t.trim();
       if (iv && iv !== '') {
-        this._ivs[stat] = iv;
+        if (this._ivs) {
+          this._ivs[stat] = iv;
+        }
         hasIvs = true;
       }
       if (ev && ev !== '') {
-        this._evs[stat] = ev;
+        if (this._evs) {
+          this._evs[stat] = ev;
+        }
         hasEvs = true;
       }
 
       if (!hasIvs) {
-        delete this._ivs;
+        this._ivs = undefined;
       }
       if (!hasEvs) {
-        delete this._evs;
+        this._evs = undefined;
       }
     });
 
@@ -52,30 +60,30 @@ export class Valuable extends AbstractValuable implements Pokemon {
   }
 
   get isShiny(): boolean {
-    return this.gsx$isshiny?.$t;
+    return !!this.gsx$isshiny?.$t;
   }
 
   set isShiny(isShiny: boolean) {
     if (!this.gsx$isshiny) {
       this.gsx$isshiny = {
-        $t: isShiny
+        $t: '' + isShiny
       };
     } else {
-      this.gsx$isshiny.$t = isShiny;
+      this.gsx$isshiny.$t = '' + isShiny;
     }
   }
 
 
   get ability(): string {
-    return this.gsx$ability.$t;
+    return this.gsx$ability?.$t ?? '';
   }
 
   get dex(): string {
-    return this.gsx$dex.$t;
+    return this.gsx$dex?.$t ?? '';
   }
 
   get hasHiddenAbility(): boolean {
-    return this.gsx$hasha.$t === 'x';
+    return this.gsx$hasha?.$t === 'x';
   }
 
   get isOwned(): boolean {
@@ -93,18 +101,18 @@ export class Valuable extends AbstractValuable implements Pokemon {
   }
 
   get name(): string {
-    return this.gsx$name.$t;
+    return this.gsx$name?.$t ?? 'unknown';
   }
 
-  get moves() {
+  get moves(): string[] {
     return this._moves;
   }
 
-  get ivs() {
+  get ivs(): PokemonStats | undefined {
     return this._ivs;
   }
 
-  get evs() {
+  get evs(): PokemonStats | undefined {
     return this._evs;
   }
 }

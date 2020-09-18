@@ -21,19 +21,18 @@ export class IndexComponent implements OnInit {
 
   toggleInactivesControl: FormControl;
 
-  spreadsheetId: string;
-  worksheets: Worksheet[];
+  spreadsheetId: string | undefined;
+  worksheets: Worksheet[] | undefined;
 
   constructor(
     private spreadsheetFacade: SpreadsheetFacade,
     private gridService: GridService
   ) {
+    this.toggleInactivesControl = new FormControl(false);
+    this.spreadsheetData$ = this.spreadsheetFacade.getCurrentSpreadsheet$();
   }
 
   ngOnInit(): void {
-    this.toggleInactivesControl = new FormControl(false);
-    this.spreadsheetData$ = this.spreadsheetFacade.getCurrentSpreadsheet$();
-
     this.spreadsheetData$.subscribe({
       next: spreadsheet => {
         this.spreadsheetId = spreadsheet.id;
@@ -42,11 +41,11 @@ export class IndexComponent implements OnInit {
     });
   }
 
-  changeGrid(appearance: GridAppearanceType) {
+  changeGrid(appearance: GridAppearanceType): void {
     this.gridService.updateGridAppearance(appearance);
   }
 
-  changeGridInactives() {
+  changeGridInactives(): void {
     this.gridService.updateHideItems(this.toggleInactivesControl.value);
   }
 

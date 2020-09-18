@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { MinimalComponent } from './minimal.component';
 import { Component, CUSTOM_ELEMENTS_SCHEMA, ViewChild } from '@angular/core';
@@ -14,7 +14,7 @@ import { MOCK_POKEMON } from '../../../../testing/mocks/pokemon-list.mock';
 class TestHostComponent {
 
   @ViewChild(MinimalComponent)
-  public minimalComponent: MinimalComponent;
+  public minimalComponent: MinimalComponent | undefined;
 
   MOCK_POKEMON: Pokemon = MOCK_POKEMON[0];
 }
@@ -22,7 +22,7 @@ class TestHostComponent {
 describe('MinimalComponent', () => {
 
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [MinimalComponent, TestHostComponent],
       schemas: [CUSTOM_ELEMENTS_SCHEMA]
@@ -30,19 +30,6 @@ describe('MinimalComponent', () => {
       .compileComponents();
   }));
 
-
-  describe('without input', () => {
-    let component: MinimalComponent;
-    let fixture: ComponentFixture<MinimalComponent>;
-
-    it('shouldn\'t create', () => {
-      expect(() => {
-        fixture = TestBed.createComponent(MinimalComponent);
-        component = fixture.componentInstance;
-        fixture.detectChanges();
-      }).toThrow();
-    });
-  });
 
   describe('with input', () => {
 
