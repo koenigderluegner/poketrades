@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { DetailedComponent } from './detailed.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
@@ -21,7 +21,7 @@ class TestHostComponent {
 
 describe('DetailedComponent', () => {
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule],
       declarations: [DetailedComponent, TestHostComponent],

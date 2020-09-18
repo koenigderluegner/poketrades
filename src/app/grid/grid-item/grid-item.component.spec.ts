@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { GridItemComponent } from './grid-item.component';
 
@@ -6,11 +6,11 @@ describe('GridItemComponent', () => {
   let component: GridItemComponent;
   let fixture: ComponentFixture<GridItemComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ GridItemComponent ]
+      declarations: [GridItemComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

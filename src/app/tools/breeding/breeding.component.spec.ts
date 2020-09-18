@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { BreedingComponent } from './breeding.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
@@ -12,13 +12,13 @@ describe('BreedingComponent', () => {
   let component: BreedingComponent;
   let fixture: ComponentFixture<BreedingComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      imports: [ HttpClientTestingModule, NgxSubscribeModule, MatAutocompleteModule, FormsModule, MatInputModule, ReactiveFormsModule ],
-      declarations: [ BreedingComponent ],
-      schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
+      imports: [HttpClientTestingModule, NgxSubscribeModule, MatAutocompleteModule, FormsModule, MatInputModule, ReactiveFormsModule],
+      declarations: [BreedingComponent],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

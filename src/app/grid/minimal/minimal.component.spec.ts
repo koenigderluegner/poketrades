@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { MinimalComponent } from './minimal.component';
 import { Component, CUSTOM_ELEMENTS_SCHEMA, ViewChild } from '@angular/core';
@@ -22,7 +22,7 @@ class TestHostComponent {
 describe('MinimalComponent', () => {
 
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [MinimalComponent, TestHostComponent],
       schemas: [CUSTOM_ELEMENTS_SCHEMA]
