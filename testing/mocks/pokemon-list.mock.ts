@@ -9,7 +9,8 @@ export const MOCK_POKEMON: Pokemon[] = [
     iconSlug: 'caterpie',
     isOwned: true,
     name: 'Caterpie',
-    moves: []
+    moves: [],
+    isShiny: false
   }, {
     id: 'v87nik',
     ability: 'Run Away',
@@ -18,7 +19,8 @@ export const MOCK_POKEMON: Pokemon[] = [
     iconSlug: 'nincada',
     isOwned: true,
     name: 'Nincada',
-    moves: []
+    moves: [],
+    isShiny: false
   }, {
     id: 'wvw6v',
     ability: 'Hustle',
@@ -27,6 +29,7 @@ export const MOCK_POKEMON: Pokemon[] = [
     iconSlug: 'combee',
     isOwned: true,
     name: 'Combee',
-    moves: []
+    moves: [],
+    isShiny: true
   }
 ];
