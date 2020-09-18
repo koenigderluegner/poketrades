@@ -8,7 +8,7 @@
     <app-sub-navi-item [link]="['/'+spreadsheetId, 'valuables', worksheet.title | slugify]"
                        *ngFor="let worksheet of worksheets"
                        [text]="worksheet.title"
-                       [meta]="''+worksheet.data.length">
+                       [meta]="''+worksheet.data?.length">
     </app-sub-navi-item>
   </ul>
 </aside>
