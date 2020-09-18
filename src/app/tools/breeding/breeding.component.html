@@ -26,27 +26,33 @@
 
         <div>
           <h2>Inheritance</h2>
-          <div *ngFor="let eggMove of eggMoves">{{eggMove}}
-            <app-grid appearance="minimal">
-              <ng-container *ngFor="let parent of parentMoves | keyvalue">
-                <app-grid-item *ngIf="parent.key !== pokemon.name && parent.value.eggMoves.includes(eggMove)"
-                               [pokemon]="asPokemon({iconSlug: parent.key | slugify}) "></app-grid-item>
-              </ng-container>
-            </app-grid>
+          <div class="breeding-move-grid">
+            <ng-container *ngFor="let eggMove of eggMoves">
+              <div class="move-name">{{eggMove}}</div>
+              <app-grid appearance="minimal">
+                <ng-container *ngFor="let parent of parentMoves | keyvalue">
+                  <app-grid-item *ngIf="parent.key !== pokemon.name && parent.value.eggMoves.includes(eggMove)"
+                                 [pokemon]="asPokemon({iconSlug: parent.key | slugify}) "></app-grid-item>
+                </ng-container>
+              </app-grid>
+            </ng-container>
           </div>
         </div>
 
         <div>
           <h2>Leveling</h2>
-          <div *ngFor="let eggMove of eggMoves">{{eggMove}}
-            <app-grid appearance="minimal">
-              <ng-container *ngFor="let parent of parentMoves | keyvalue">
-                <ng-container *ngIf="(parent.value.levelUpMoves | filterLevelUpMoves: eggMove) as moves">
-                  <app-grid-item [pokemon]="asPokemon({iconSlug: parent.key | slugify})"
-                                 *ngIf="moves.length"></app-grid-item>
+          <div class="breeding-move-grid">
+            <ng-container *ngFor="let eggMove of eggMoves">
+              <div class="move-name">{{eggMove}}</div>
+              <app-grid appearance="minimal">
+                <ng-container *ngFor="let parent of parentMoves | keyvalue">
+                  <ng-container *ngIf="(parent.value.levelUpMoves | filterLevelUpMoves: eggMove) as moves">
+                    <app-grid-item [pokemon]="asPokemon({iconSlug: parent.key | slugify})"
+                                   *ngIf="moves.length"></app-grid-item>
+                  </ng-container>
                 </ng-container>
-              </ng-container>
-            </app-grid>
+              </app-grid>
+            </ng-container>
           </div>
         </div>
       </ng-container>
