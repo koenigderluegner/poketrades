@@ -7,6 +7,7 @@ import { MatAutocompleteSelectedEvent } from '@angular/material/autocomplete';
 import { LegalityEntry } from '../../database/models/legality-entry.interface';
 import { PokemonEntry } from '../../database/models/pokemon-entry.interface';
 import { LevelUpMove } from '../../database/models/level-up-move.interface';
+import { Pokemon } from '@shared/interfaces/pokemon';
 
 @Component({
   selector: 'app-breeding',
@@ -23,10 +24,23 @@ export class BreedingComponent {
   selectedPokemon$: Observable<PokemonEntry> | undefined;
   selectedPokemon: PokemonEntry | undefined;
   eggMoves: string[] | undefined;
-  parentMoves: { [key: string]: { eggMoves: string[]; levelUpMoves: LevelUpMove[] } } | undefined;
+  parentMoves: { [key: string]: { eggMoves: string[]; levelUpMoves: LevelUpMove[] } } | null;
+  placeHolderPokemon: Pokemon;
 
 
   constructor(private database: DatabaseFacadeService) {
+    this.placeHolderPokemon = {
+      id: '',
+      name: '',
+      dex: '',
+      ability: '',
+      isOwned: true,
+      hasHiddenAbility: false,
+      isShiny: false,
+      iconSlug: '',
+      moves: []
+    };
+    this.parentMoves = null;
     this.control = new FormControl('');
     this.breedables$ = this.database.getBreedableLegality().pipe(
       tap(pokemon => {
@@ -89,5 +103,14 @@ export class BreedingComponent {
 
       }
     ));
+  }
+
+  asPokemon(values: object): Pokemon {
+    return ({...this.placeHolderPokemon, ...values});
+  }
+
+
+  selectInputText($event: FocusEvent) {
+    ($event.target as HTMLInputElement).select();
   }
 }

@@ -6,7 +6,7 @@
       placeholder="Select Pokémon"
       matInput
       class="poke-autocomplete-input"
-      (focusin)="$event.target.select()"
+      (focusin)="selectInputText($event)"
       [formControl]="control"
       [matAutocomplete]="auto"
       [matAutocompleteConnectedTo]="origin">
@@ -30,7 +30,7 @@
             <app-grid appearance="minimal">
               <ng-container *ngFor="let parent of parentMoves | keyvalue">
                 <app-grid-item *ngIf="parent.value.eggMoves.includes(eggMove)"
-                               [pokemon]="{iconSlug: parent.key | slugify, isOwned: true}"></app-grid-item>
+                               [pokemon]="asPokemon({iconSlug: parent.key | slugify}) "></app-grid-item>
               </ng-container>
             </app-grid>
           </div>
@@ -42,7 +42,7 @@
             <app-grid appearance="minimal">
               <ng-container *ngFor="let parent of parentMoves | keyvalue">
                 <ng-container *ngIf="(parent.value.levelUpMoves | filterLevelUpMoves: eggMove) as moves">
-                  <app-grid-item [pokemon]="{iconSlug: parent.key | slugify, isOwned: true}"
+                  <app-grid-item [pokemon]="asPokemon({iconSlug: parent.key | slugify})"
                                  *ngIf="moves.length"></app-grid-item>
                 </ng-container>
               </ng-container>
