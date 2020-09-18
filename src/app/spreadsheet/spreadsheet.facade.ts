@@ -211,8 +211,11 @@ export class SpreadsheetFacade {
   private buildOverviewEntries(worksheets: Worksheet[]): BreedablesOverviewList {
     const overviewEntries: BreedablesOverviewList = {};
     worksheets.forEach((worksheet: Worksheet) => {
-      const ball: string = worksheet.config.ball.toLowerCase();
+      const ball: string | undefined = worksheet.config?.ball?.toLowerCase();
       const data: Pokemon[] | undefined = worksheet.data;
+      if (!ball) {
+        return;
+      }
       overviewEntries[ball] = {};
       if (data) {
         data.forEach((pokemon: Pokemon) => {
