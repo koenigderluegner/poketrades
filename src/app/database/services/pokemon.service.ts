@@ -50,7 +50,7 @@ export class PokemonService {
     return this.loadDatabase().pipe(
       switchMap((database: PokemonEntry[]) => {
         const hits = database.filter((pokemon: PokemonEntry) => {
-          return pokemon.eggGroups.some((x: string) => eggGroups.includes(x));
+          return !pokemon.name.toLowerCase().includes('-gigantamax') && pokemon.eggGroups.some((x: string) => eggGroups.includes(x));
         });
         hits.sort((a: PokemonEntry, b: PokemonEntry) => {
           return a.dex === b.dex ? 0 : a.dex < b.dex ? -1 : 1;
