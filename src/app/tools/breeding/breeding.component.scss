@@ -71,4 +71,45 @@
 .breeding-pokemon-table {
   background: #fff;
   border-radius: 3px;
+  border-collapse: collapse;
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+
+  tr:nth-child(even) {
+    background: #efefef;
+  }
+
+  tr:not(.is-owned) {
+    background: #464646;
+  }
+
+  td {
+    padding: 3px 8px;
+    text-align: center;
+  }
+
+  .pokesprite.ball {
+    margin-top: 2px;
+    margin-bottom: -2px;
+  }
+
+  .ball-col {
+    padding-right: 0;
+  }
+
+  .egg-col {
+    padding-left: 0;
+    padding-right: 0;
+    overflow: hidden;
+  }
+
+  .is-em {
+    font-weight: 500;
+  }
+
+
+  .pokesprite.egg {
+    margin-top: -30px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
 }

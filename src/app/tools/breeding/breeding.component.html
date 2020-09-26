@@ -24,6 +24,34 @@
 
         <app-type-badge [type]="type" size="small" *ngFor="let type of pokemon.types">{{type}}</app-type-badge>
 
+        <ng-container *ngIf="sheetBreeadbles">
+          <table class="breeding-pokemon-table">
+            <ng-container *ngFor="let sheetbreedable of sheetBreeadbles | keyvalue">
+              <tr [class.is-owned]="sheetbreedable.value.isOwned">
+                <td class="ball-col">
+                  <app-item category="ball" [slug]="sheetbreedable.key | slugify"></app-item>
+                </td>
+                <td class="egg-col">
+                  <app-pokemon matTooltip="This breedable has the maximum amount of egg moves!"
+                               *ngIf="hasMaxEggmoves(sheetbreedable.value)" slug="egg"></app-pokemon>
+                </td>
+                <td>
+                  <ng-container *ngIf="sheetbreedable.value.isOwned">
+                    {{sheetbreedable.value.hasHiddenAbility ? 'HA' : 'NON-HA'}}
+                  </ng-container>
+                </td>
+
+                <td *ngxRepeat="4; let index" [class.is-em]="isEggMove(sheetbreedable.value.moves[index])">
+                  {{sheetbreedable.value.moves[index]}}
+                </td>
+                <td>
+                  {{sheetbreedable.value.nature}}
+                </td>
+              </tr>
+            </ng-container>
+          </table>
+        </ng-container>
+
         <div>
           <h2>Inheritance</h2>
           <div class="breeding-move-grid">

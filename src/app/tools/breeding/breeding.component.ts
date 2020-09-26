@@ -8,6 +8,9 @@ import { LegalityEntry } from '../../database/models/legality-entry.interface';
 import { PokemonEntry } from '../../database/models/pokemon-entry.interface';
 import { LevelUpMove } from '../../database/models/level-up-move.interface';
 import { Pokemon } from '@shared/interfaces/pokemon';
+import { SpreadsheetFacade } from '@spreadsheet/spreadsheet.facade';
+import { Worksheet } from '@spreadsheet/models/worksheet';
+import { Breedable } from '@shared/classes/koenig/breedable';
 
 @Component({
   selector: 'app-breeding',
@@ -26,9 +29,12 @@ export class BreedingComponent {
   eggMoves: string[] | undefined;
   parentMoves: { [key: string]: { eggMoves: string[]; levelUpMoves: LevelUpMove[] } } | null;
   placeHolderPokemon: Pokemon;
+  worksheets?: Worksheet[];
+  sheetBreeadbles?: { [key: string]: Breedable };
 
 
-  constructor(private database: DatabaseFacadeService) {
+  constructor(private database: DatabaseFacadeService,
+              private spreadsheetFacade: SpreadsheetFacade) {
     this.placeHolderPokemon = {
       id: '',
       name: '',
@@ -47,6 +53,15 @@ export class BreedingComponent {
         this.breedables = pokemon;
       })
     );
+
+    spreadsheetFacade.getCurrentSpreadsheet$().subscribe(spreadsheet => {
+      if (spreadsheet.hasBreedables) {
+        this.worksheets = spreadsheet.worksheets.filter(worksheet => {
+          return worksheet.config?.type === 'Breedables';
+        });
+      }
+    });
+
 
     this.filteredPokemon = this.control.valueChanges.pipe(
       startWith(''),
@@ -80,6 +95,20 @@ export class BreedingComponent {
       pokemon => {
         this.selectedPokemon = pokemon;
 
+        this.sheetBreeadbles = {};
+
+        this.worksheets?.forEach(worksheet => {
+          const breedable = worksheet.data?.filter(poke => {
+            // @ts-ignore
+            return poke.gsx$name.$t === pokemon.name;
+          });
+
+          if (breedable?.length && worksheet.config?.ball && this.sheetBreeadbles) {
+            this.sheetBreeadbles[worksheet.config?.ball] = new Breedable(breedable[0]);
+          }
+
+        });
+
         this.database.getEggMovesForPokemon(pokemon.name).subscribe({
           next: value => {
             this.eggMoves = value;
@@ -105,8 +134,26 @@ export class BreedingComponent {
     ));
   }
 
+  isEggMove(move: string){
+    return this.eggMoves?.includes(move);
+  }
+
   asPokemon(values: object): Pokemon {
     return ({...this.placeHolderPokemon, ...values});
+  }
+
+  hasMaxEggmoves(breedable: Breedable): boolean {
+    let eggCount = 0;
+    const eggMovesLengeth = Math.min(this.eggMoves?.length ?? -1, 4);
+    for (let i = 0; i < 4; i++) {
+      if (this.isEggMove(breedable.moves[i])) {
+        eggCount++;
+        if (eggCount === eggMovesLengeth) {
+          break;
+        }
+      }
+    }
+    return eggCount === eggMovesLengeth;
   }
 
 
