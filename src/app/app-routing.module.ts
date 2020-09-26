@@ -20,7 +20,6 @@ const routes: Routes = [
     path: 'change-spreadsheet',
     loadChildren: () => import('./spreadsheet-changer/spreadsheet-changer.module').then(m => m.SpreadsheetChangerModule)
   },
-
   {
     path: ':spreadsheetId', children: userRoutes
   },
@@ -31,7 +30,7 @@ const routes: Routes = [
 
 ];
 
-routes.push(toolsRoutes);
+routes.unshift(toolsRoutes);
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
