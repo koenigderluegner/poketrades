@@ -23,7 +23,9 @@
         </li>
         <li >
           <a routerLinkActive="selected"
-             [routerLink]="['tools']">Tools</a>
+             [routerLink]="[
+             spreadsheetData ?  '/'+ (spreadsheetData.username ? 'u/'+spreadsheetData.username : spreadsheetData.id): '',
+             'tools']">Tools</a>
         </li>
       </ul>
     </div>
