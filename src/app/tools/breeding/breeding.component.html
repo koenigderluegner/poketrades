@@ -22,31 +22,73 @@
     <ng-container *ngxSubscribe="let pokemon of selectedPokemon$">
       <ng-container *ngIf="pokemon; else pokemonNotFound">
 
-        <app-type-badge [type]="type" size="small" *ngFor="let type of pokemon.types">{{type}}</app-type-badge>
+        <div class="card">
+          <h2 class="m-0">{{pokemon.name}} information</h2>
+          <app-type-badge [type]="type" size="small" *ngFor="let type of pokemon.types">{{type}}</app-type-badge>
+          <div><b>Abilities:</b>
+            <ng-container *ngFor="let ability of pokemon.abilities">{{ability}}</ng-container>
+          </div>
+          <div><b>Hidden Ability:</b> {{pokemon.hiddenAbility ? pokemon.hiddenAbility : '-'}}</div>
+        </div>
+
+
+        <ng-container *ngIf="sheetBreeadbles">
+          <table class="breeding-pokemon-table">
+            <ng-container *ngFor="let sheetbreedable of sheetBreeadbles | keyvalue">
+              <tr [class.is-owned]="sheetbreedable.value.isOwned">
+                <td class="ball-col">
+                  <app-item category="ball" [slug]="sheetbreedable.key | slugify"></app-item>
+                </td>
+                <td class="egg-col">
+                  <app-pokemon matTooltip="This breedable has the maximum amount of egg moves!"
+                               *ngIf="hasMaxEggmoves(sheetbreedable.value)" slug="egg"></app-pokemon>
+                </td>
+                <td>
+                  <ng-container *ngIf="sheetbreedable.value.isOwned">
+                    {{sheetbreedable.value.hasHiddenAbility ? 'HA' : 'NON-HA'}}
+                  </ng-container>
+                </td>
+
+                <td *ngxRepeat="4; let index" [class.is-em]="isEggMove(sheetbreedable.value.moves[index])">
+                  {{sheetbreedable.value.moves[index]}}
+                </td>
+                <td>
+                  {{sheetbreedable.value.nature}}
+                </td>
+              </tr>
+            </ng-container>
+          </table>
+        </ng-container>
 
         <div>
           <h2>Inheritance</h2>
-          <div *ngFor="let eggMove of eggMoves">{{eggMove}}
-            <app-grid appearance="minimal">
-              <ng-container *ngFor="let parent of parentMoves | keyvalue">
-                <app-grid-item *ngIf="parent.value.eggMoves.includes(eggMove)"
-                               [pokemon]="asPokemon({iconSlug: parent.key | slugify}) "></app-grid-item>
-              </ng-container>
-            </app-grid>
+          <div class="breeding-move-grid">
+            <ng-container *ngFor="let eggMove of eggMoves">
+              <div class="move-name">{{eggMove}}</div>
+              <app-grid appearance="minimal">
+                <ng-container *ngFor="let parent of parentMoves | keyvalue">
+                  <app-grid-item *ngIf="parent.key !== pokemon.name && parent.value.eggMoves.includes(eggMove)"
+                                 [pokemon]="asPokemon({iconSlug: parent.key | slugify}) "></app-grid-item>
+                </ng-container>
+              </app-grid>
+            </ng-container>
           </div>
         </div>
 
         <div>
           <h2>Leveling</h2>
-          <div *ngFor="let eggMove of eggMoves">{{eggMove}}
-            <app-grid appearance="minimal">
-              <ng-container *ngFor="let parent of parentMoves | keyvalue">
-                <ng-container *ngIf="(parent.value.levelUpMoves | filterLevelUpMoves: eggMove) as moves">
-                  <app-grid-item [pokemon]="asPokemon({iconSlug: parent.key | slugify})"
-                                 *ngIf="moves.length"></app-grid-item>
+          <div class="breeding-move-grid">
+            <ng-container *ngFor="let eggMove of eggMoves">
+              <div class="move-name">{{eggMove}}</div>
+              <app-grid appearance="minimal">
+                <ng-container *ngFor="let parent of parentMoves | keyvalue">
+                  <ng-container *ngIf="(parent.value.levelUpMoves | filterLevelUpMoves: eggMove) as moves">
+                    <app-grid-item [pokemon]="asPokemon({iconSlug: parent.key | slugify})"
+                                   *ngIf="moves.length"></app-grid-item>
+                  </ng-container>
                 </ng-container>
-              </ng-container>
-            </app-grid>
+              </app-grid>
+            </ng-container>
           </div>
         </div>
       </ng-container>

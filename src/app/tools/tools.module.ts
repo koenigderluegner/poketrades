@@ -8,9 +8,10 @@ import { BreedingComponent } from './breeding/breeding.component';
 import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
-import { NgxAliasModule, NgxSubscribeModule } from '@tngtech/ngx-structurals';
+import { NgxAliasModule, NgxRepeatModule, NgxSubscribeModule } from '@tngtech/ngx-structurals';
 import { FilterLevelUpMovesPipe } from './pipes/filter-level-up-moves.pipe';
 import { GridModule } from '../grid/grid.module';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 
 @NgModule({
@@ -25,7 +26,9 @@ import { GridModule } from '../grid/grid.module';
     MatAutocompleteModule,
     NgxSubscribeModule,
     NgxAliasModule,
-    GridModule
+    GridModule,
+    NgxRepeatModule,
+    MatTooltipModule
   ]
 })
 export class ToolsModule { }
