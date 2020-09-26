@@ -53,6 +53,10 @@ export class Breedable extends AbstractBreedable implements Pokemon {
     return this.gsx$name?.$t ?? 'unknown';
   }
 
+  get nature(): string {
+    return this.gsx$nature?.$t ?? '';
+  }
+
   get moves(): string[] {
     return this._moves;
   }
