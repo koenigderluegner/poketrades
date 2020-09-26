@@ -22,7 +22,15 @@
     <ng-container *ngxSubscribe="let pokemon of selectedPokemon$">
       <ng-container *ngIf="pokemon; else pokemonNotFound">
 
-        <app-type-badge [type]="type" size="small" *ngFor="let type of pokemon.types">{{type}}</app-type-badge>
+        <div class="card">
+          <h2 class="m-0">{{pokemon.name}} information</h2>
+          <app-type-badge [type]="type" size="small" *ngFor="let type of pokemon.types">{{type}}</app-type-badge>
+          <div><b>Abilities:</b>
+            <ng-container *ngFor="let ability of pokemon.abilities">{{ability}}</ng-container>
+          </div>
+          <div><b>Hidden Ability:</b> {{pokemon.hiddenAbility ? pokemon.hiddenAbility : '-'}}</div>
+        </div>
+
 
         <ng-container *ngIf="sheetBreeadbles">
           <table class="breeding-pokemon-table">
