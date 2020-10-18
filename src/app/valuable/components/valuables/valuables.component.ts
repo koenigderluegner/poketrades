@@ -30,6 +30,8 @@ export class ValuablesComponent implements OnInit {
     private slugifyPipe: SlugifyPipe,
     private gridService: GridService
   ) {
+    this.gridService.updateHideInactiveItemsControl(true);
+    this.gridService.updateHideAppearanceControl(false);
     this.gridAppearance$ = this.gridService.getGridAppearance$();
     this.hideItems$ = this.gridService.getHideItems$();
   }
