@@ -71,7 +71,9 @@ export class ShinyDexComponent implements OnInit {
             for (const worksheetentries of worksheet.data) {
               // @ts-ignore
               const pokemonName = worksheetentries.gsx$name.$t;
-              if (worksheetentries.isShiny) {
+              // @ts-ignore
+              const isShiny = !!worksheetentries.gsx$isshiny.$t;
+              if (worksheetentries.isShiny || isShiny) {
                 if (shinies[pokemonName]) {
                   shinies[pokemonName].amountShinies++;
                 } else {
