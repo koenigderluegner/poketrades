@@ -17,7 +17,7 @@ export class GridControllerComponent implements OnInit {
 
 
   constructor(private gridService: GridService) {
-    this.toggleInactivesControl = new FormControl(false);
+    this.toggleInactivesControl = new FormControl(this.gridService.getHideItems());
   }
 
   ngOnInit(): void {

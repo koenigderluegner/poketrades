@@ -27,6 +27,10 @@ export class GridService {
     return this.hideInactiveItems.asObservable();
   }
 
+  getHideItems(): boolean {
+    return this.hideInactiveItems.getValue();
+  }
+
   updateHideItems(hideItems: boolean): void {
     return this.hideInactiveItems.next(hideItems);
   }
