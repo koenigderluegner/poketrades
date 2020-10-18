@@ -12,10 +12,18 @@ import { NgxAliasModule, NgxRepeatModule, NgxSubscribeModule } from '@tngtech/ng
 import { FilterLevelUpMovesPipe } from './pipes/filter-level-up-moves.pipe';
 import { GridModule } from '../grid/grid.module';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { ShinyDexComponent } from './components/shiny-dex/shiny-dex.component';
+import { ShinyDexEntryToPokemonPipe } from './pipes/shiny-dex-entry-to-pokemon.pipe';
 
 
 @NgModule({
-  declarations: [ToolsComponent, BreedingComponent, FilterLevelUpMovesPipe],
+  declarations: [
+    ToolsComponent,
+    BreedingComponent,
+    FilterLevelUpMovesPipe,
+    ShinyDexComponent,
+    ShinyDexEntryToPokemonPipe
+  ],
   imports: [
     ToolsRoutingModule,
     CommonModule,
@@ -31,4 +39,5 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     MatTooltipModule
   ]
 })
-export class ToolsModule { }
+export class ToolsModule {
+}

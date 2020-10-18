@@ -8,4 +8,5 @@ export interface PokemonEntry {
   abilities: string[];
   hiddenAbility: string | null;
   iconSlug: string;
+  canBeShiny: boolean;
 }
