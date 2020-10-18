@@ -6,6 +6,7 @@ import { switchMap } from 'rxjs/operators';
 import { coerceBooleanProperty } from '@angular/cdk/coercion';
 import { Worksheet } from '@spreadsheet/models/worksheet';
 import { ShinyDexEntry } from '../../models/shiny-dex-entry.interface';
+import { GridService } from '../../../grid/services/grid.service';
 
 @Component({
   selector: 'app-shiny-dex',
@@ -18,10 +19,13 @@ export class ShinyDexComponent implements OnInit {
   allShinyWorksheets: Worksheet[] = [];
   partialShinyWorksheets: Worksheet[] = [];
   shinies$?: Observable<[string, ShinyDexEntry][]>;
+  hideItems$: Observable<boolean>;
 
 
   constructor(private databases: DatabaseFacadeService,
-              private spreadsheets: SpreadsheetFacade) {
+              private spreadsheets: SpreadsheetFacade,
+              private gridService: GridService) {
+    this.hideItems$ = this.gridService.getHideItems$();
   }
 
   ngOnInit(): void {

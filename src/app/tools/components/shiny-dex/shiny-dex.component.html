@@ -1,7 +1,9 @@
 <ng-container *ngIf="shinies$">
-  <app-grid appearance="minimal" *ngIf="shinies$|async as shinies">
+  <ng-container *ngxAlias="hideItems$ | async as hideItems">
+  <app-grid appearance="minimal" *ngIf="shinies$|async as shinies" [hideInactiveItems]="!!hideItems">
     <ng-container *ngFor="let shinyDexentry of shinies">
       <app-grid-item [pokemon]="shinyDexentry[1] | shinyDexEntryToPokemon"></app-grid-item>
     </ng-container>
   </app-grid>
+  </ng-container>
 </ng-container>
