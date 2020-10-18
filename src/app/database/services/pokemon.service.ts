@@ -24,8 +24,10 @@ export class PokemonService {
         })
       );
     }
+  }
 
-
+  getPokemon(): Observable<PokemonEntry[]> {
+    return this.loadDatabase();
   }
 
   findPokemon(name: string): Observable<PokemonEntry> {

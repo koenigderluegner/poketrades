@@ -29,6 +29,10 @@ export class DatabaseFacadeService {
     });
   }
 
+  getPokemon(): Observable<PokemonEntry[]> {
+    return this.pokemonService.getPokemon();
+  }
+
   findPokemon(name: string): Observable<PokemonEntry> {
     return this.pokemonService.findPokemon(name);
   }
