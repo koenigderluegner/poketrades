@@ -26,6 +26,8 @@ export class ShinyDexComponent implements OnInit {
               private spreadsheets: SpreadsheetFacade,
               private gridService: GridService) {
     this.hideItems$ = this.gridService.getHideItems$();
+    this.gridService.updateHideInactiveItemsControl(false);
+    this.gridService.updateHideAppearanceControl(true);
   }
 
   ngOnInit(): void {

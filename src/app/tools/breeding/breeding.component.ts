@@ -11,6 +11,7 @@ import { Pokemon } from '@shared/interfaces/pokemon';
 import { SpreadsheetFacade } from '@spreadsheet/spreadsheet.facade';
 import { Worksheet } from '@spreadsheet/models/worksheet';
 import { Breedable } from '@shared/classes/koenig/breedable';
+import { GridService } from '../../grid/services/grid.service';
 
 @Component({
   selector: 'app-breeding',
@@ -34,7 +35,10 @@ export class BreedingComponent {
 
 
   constructor(private database: DatabaseFacadeService,
-              private spreadsheetFacade: SpreadsheetFacade) {
+              private spreadsheetFacade: SpreadsheetFacade,
+              private gridService: GridService) {
+    this.gridService.updateHideInactiveItemsControl(true);
+    this.gridService.updateHideAppearanceControl(true);
     this.placeHolderPokemon = {
       id: '',
       name: '',
