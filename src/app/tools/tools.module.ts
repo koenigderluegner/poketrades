@@ -13,10 +13,17 @@ import { FilterLevelUpMovesPipe } from './pipes/filter-level-up-moves.pipe';
 import { GridModule } from '../grid/grid.module';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { ShinyDexComponent } from './components/shiny-dex/shiny-dex.component';
+import { ShinyDexEntryToPokemonPipe } from './pipes/shiny-dex-entry-to-pokemon.pipe';
 
 
 @NgModule({
-  declarations: [ToolsComponent, BreedingComponent, FilterLevelUpMovesPipe, ShinyDexComponent],
+  declarations: [
+    ToolsComponent,
+    BreedingComponent,
+    FilterLevelUpMovesPipe,
+    ShinyDexComponent,
+    ShinyDexEntryToPokemonPipe
+  ],
   imports: [
     ToolsRoutingModule,
     CommonModule,
@@ -32,4 +39,5 @@ import { ShinyDexComponent } from './components/shiny-dex/shiny-dex.component';
     MatTooltipModule
   ]
 })
-export class ToolsModule { }
+export class ToolsModule {
+}
