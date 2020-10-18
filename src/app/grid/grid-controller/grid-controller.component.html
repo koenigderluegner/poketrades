@@ -1,5 +1,5 @@
-<app-changer *ngIf="!(hideAppearance$ | async)" (selectionChanged)="changeGrid($event)" class="m-right-gap"></app-changer>
-<app-checkbox  *ngIf="!(hideInactives$ | async)" [formControl]="toggleInactivesControl" (change)="changeGridInactives()"
+<app-changer *ngIf="(hideAppearance$ | async)  === false" (selectionChanged)="changeGrid($event)" class="m-right-gap"></app-changer>
+<app-checkbox  *ngIf="(hideInactives$ | async) === false" [formControl]="toggleInactivesControl" (change)="changeGridInactives()"
               [icon]="toggleInactivesControl.value ? 'visibility_off': 'visibility'">
   {{toggleInactivesControl.value ? 'Unowned hidden' : 'Unowned visible'}}
 </app-checkbox>
