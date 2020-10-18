@@ -1,5 +1,7 @@
 import { Component, EventEmitter, HostBinding, OnInit, Output, ViewEncapsulation } from '@angular/core';
 import { GridAppearanceType } from '../grid-appearance.type';
+import { GridService } from '../services/grid.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-changer',
@@ -12,8 +14,10 @@ export class ChangerComponent implements OnInit {
   @HostBinding('class') classes = 'grid-changer';
 
   @Output() selectionChanged: EventEmitter<GridAppearanceType> = new EventEmitter();
+  appearance$: Observable<GridAppearanceType>;
 
-  constructor() {
+  constructor(private gridService: GridService) {
+    this.appearance$ = this.gridService.getGridAppearance$();
   }
 
   ngOnInit(): void {
