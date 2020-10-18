@@ -10,22 +10,32 @@ import { DetailedComponent } from './detailed/detailed.component';
 import { ChangerComponent } from './changer/changer.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgxStructuralsModule } from '@tngtech/ngx-structurals';
-
+import { GridControllerComponent } from './grid-controller/grid-controller.component';
 
 
 @NgModule({
-  declarations: [MinimalComponent, GridComponent, GridItemComponent, NormalComponent, DetailedComponent, ChangerComponent],
+  declarations: [
+    MinimalComponent,
+    GridComponent,
+    GridItemComponent,
+    NormalComponent,
+    DetailedComponent,
+    ChangerComponent,
+    GridControllerComponent
+  ],
   exports: [
     GridComponent,
     GridItemComponent,
-    ChangerComponent
+    ChangerComponent,
+    GridControllerComponent
   ],
-    imports: [
-        CommonModule,
-        IconModule,
-        SharedModule,
-        ReactiveFormsModule,
-        NgxStructuralsModule
-    ]
+  imports: [
+    CommonModule,
+    IconModule,
+    SharedModule,
+    ReactiveFormsModule,
+    NgxStructuralsModule
+  ]
 })
-export class GridModule { }
+export class GridModule {
+}

@@ -1,17 +1,21 @@
-<label class="grid-changer-option">
-  <input value="minimal" checked="checked" name="changer" type="radio" (change)="emitChange($event)">
-  <span class="material-icons">view_comfy</span>
-  <span class="label">Minimal</span>
-</label>
+<ng-container *ngIf="appearance$ | async as appearance">
+  <label class="grid-changer-option">
+    <input value="minimal" [checked]="appearance==='minimal' " name="changer" type="radio"
+           (change)="emitChange($event)">
+    <span class="material-icons">view_comfy</span>
+    <span class="label">Minimal</span>
+  </label>
 
-<label class="grid-changer-option">
-  <input value="normal" name="changer" type="radio" (change)="emitChange($event)">
-  <span class="material-icons">view_headline</span>
-  <span class="label">Normal</span>
-</label>
+  <label class="grid-changer-option">
+    <input value="normal" [checked]="appearance==='normal'" name="changer" type="radio" (change)="emitChange($event)">
+    <span class="material-icons">view_headline</span>
+    <span class="label">Normal</span>
+  </label>
 
-<label class="grid-changer-option">
-  <input value="detailed" name="changer" type="radio" (change)="emitChange($event)">
-  <span class="material-icons">view_column</span>
-  <span class="label">Detailed</span>
-</label>
+  <label class="grid-changer-option">
+    <input value="detailed" [checked]="appearance==='detailed'" name="changer" type="radio"
+           (change)="emitChange($event)">
+    <span class="material-icons">view_column</span>
+    <span class="label">Detailed</span>
+  </label>
+</ng-container>

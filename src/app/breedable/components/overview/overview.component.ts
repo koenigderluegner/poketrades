@@ -5,6 +5,7 @@ import { DatabaseFacadeService } from '../../../database/database-facade.service
 import { switchMap } from 'rxjs/operators';
 import { LegalityEntry } from '../../../database/models/legality-entry.interface';
 import { BreedablesOverviewList } from '@shared/interfaces/breedables-overview-list.interface';
+import { GridService } from '../../../grid/services/grid.service';
 
 @Component({
   selector: 'app-overview',
@@ -17,7 +18,10 @@ export class OverviewComponent implements OnInit{
   data$: Observable<{ legality: LegalityEntry[], entries: BreedablesOverviewList }>;
 
   constructor(private facade: SpreadsheetFacade,
-              private db: DatabaseFacadeService) {
+              private db: DatabaseFacadeService,
+              private gridService: GridService) {
+    this.gridService.updateHideAppearanceControl(true);
+    this.gridService.updateHideInactiveItemsControl(true);
     this.data$ = combineLatest([
       this.db.getBreedableLegality(),
       this.facade.getCurrentSpreadsheet$()
