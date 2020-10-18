@@ -9078,7 +9078,7 @@
       "RKS System"
     ],
     "hiddenAbility": null,
-    "canBeShiny": true,
+    "canBeShiny": false,
     "iconSlug": "silvally-steel"
   },
   {
@@ -9094,7 +9094,7 @@
       "RKS System"
     ],
     "hiddenAbility": null,
-    "canBeShiny": true,
+    "canBeShiny": false,
     "iconSlug": "silvally-rock"
   },
   {
@@ -9110,7 +9110,7 @@
       "RKS System"
     ],
     "hiddenAbility": null,
-    "canBeShiny": true,
+    "canBeShiny": false,
     "iconSlug": "silvally-flying"
   },
   {
@@ -9126,7 +9126,7 @@
       "RKS System"
     ],
     "hiddenAbility": null,
-    "canBeShiny": true,
+    "canBeShiny": false,
     "iconSlug": "silvally-poison"
   },
   {
@@ -9142,7 +9142,7 @@
       "RKS System"
     ],
     "hiddenAbility": null,
-    "canBeShiny": true,
+    "canBeShiny": false,
     "iconSlug": "silvally-ground"
   },
   {
@@ -9158,7 +9158,7 @@
       "RKS System"
     ],
     "hiddenAbility": null,
-    "canBeShiny": true,
+    "canBeShiny": false,
     "iconSlug": "silvally-bug"
   },
   {
@@ -9174,7 +9174,7 @@
       "RKS System"
     ],
     "hiddenAbility": null,
-    "canBeShiny": true,
+    "canBeShiny": false,
     "iconSlug": "silvally-ghost"
   },
   {
@@ -9190,7 +9190,7 @@
       "RKS System"
     ],
     "hiddenAbility": null,
-    "canBeShiny": true,
+    "canBeShiny": false,
     "iconSlug": "silvally-fighting"
   },
   {
@@ -9206,7 +9206,7 @@
       "RKS System"
     ],
     "hiddenAbility": null,
-    "canBeShiny": true,
+    "canBeShiny": false,
     "iconSlug": "silvally-fire"
   },
   {
@@ -9222,7 +9222,7 @@
       "RKS System"
     ],
     "hiddenAbility": null,
-    "canBeShiny": true,
+    "canBeShiny": false,
     "iconSlug": "silvally-psychic"
   },
   {
@@ -9238,7 +9238,7 @@
       "RKS System"
     ],
     "hiddenAbility": null,
-    "canBeShiny": true,
+    "canBeShiny": false,
     "iconSlug": "silvally-fairy"
   },
   {
@@ -9254,7 +9254,7 @@
       "RKS System"
     ],
     "hiddenAbility": null,
-    "canBeShiny": true,
+    "canBeShiny": false,
     "iconSlug": "silvally-dark"
   },
   {
@@ -9270,7 +9270,7 @@
       "RKS System"
     ],
     "hiddenAbility": null,
-    "canBeShiny": true,
+    "canBeShiny": false,
     "iconSlug": "silvally-ice"
   },
   {
@@ -9286,7 +9286,7 @@
       "RKS System"
     ],
     "hiddenAbility": null,
-    "canBeShiny": true,
+    "canBeShiny": false,
     "iconSlug": "silvally-dragon"
   },
   {
@@ -9302,7 +9302,7 @@
       "RKS System"
     ],
     "hiddenAbility": null,
-    "canBeShiny": true,
+    "canBeShiny": false,
     "iconSlug": "silvally-electric"
   },
   {
@@ -9318,7 +9318,7 @@
       "RKS System"
     ],
     "hiddenAbility": null,
-    "canBeShiny": true,
+    "canBeShiny": false,
     "iconSlug": "silvally-grass"
   },
   {
@@ -9334,7 +9334,7 @@
       "RKS System"
     ],
     "hiddenAbility": null,
-    "canBeShiny": true,
+    "canBeShiny": false,
     "iconSlug": "silvally-water"
   },
   {
