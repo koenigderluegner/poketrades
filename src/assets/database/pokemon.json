@@ -13,6 +13,7 @@
       "Overgrow"
     ],
     "hiddenAbility": "Grassy Surge",
+    "canBeShiny": true,
     "iconSlug": "grookey"
   },
   {
@@ -29,6 +30,7 @@
       "Overgrow"
     ],
     "hiddenAbility": "Grassy Surge",
+    "canBeShiny": true,
     "iconSlug": "thwackey"
   },
   {
@@ -45,6 +47,7 @@
       "Overgrow"
     ],
     "hiddenAbility": "Grassy Surge",
+    "canBeShiny": true,
     "iconSlug": "rillaboom"
   },
   {
@@ -61,6 +64,7 @@
       "Blaze"
     ],
     "hiddenAbility": "Libero",
+    "canBeShiny": true,
     "iconSlug": "scorbunny"
   },
   {
@@ -77,6 +81,7 @@
       "Blaze"
     ],
     "hiddenAbility": "Libero",
+    "canBeShiny": true,
     "iconSlug": "raboot"
   },
   {
@@ -93,6 +98,7 @@
       "Blaze"
     ],
     "hiddenAbility": "Libero",
+    "canBeShiny": true,
     "iconSlug": "cinderace"
   },
   {
@@ -109,6 +115,7 @@
       "Torrent"
     ],
     "hiddenAbility": "Sniper",
+    "canBeShiny": true,
     "iconSlug": "sobble"
   },
   {
@@ -125,6 +132,7 @@
       "Torrent"
     ],
     "hiddenAbility": "Sniper",
+    "canBeShiny": true,
     "iconSlug": "drizzile"
   },
   {
@@ -141,6 +149,7 @@
       "Torrent"
     ],
     "hiddenAbility": "Sniper",
+    "canBeShiny": true,
     "iconSlug": "inteleon"
   },
   {
@@ -157,6 +166,7 @@
       "Compound Eyes"
     ],
     "hiddenAbility": "Telepathy",
+    "canBeShiny": true,
     "iconSlug": "blipbug"
   },
   {
@@ -174,6 +184,7 @@
       "Compound Eyes"
     ],
     "hiddenAbility": "Telepathy",
+    "canBeShiny": true,
     "iconSlug": "dottler"
   },
   {
@@ -191,6 +202,7 @@
       "Frisk"
     ],
     "hiddenAbility": "Telepathy",
+    "canBeShiny": true,
     "iconSlug": "orbeetle"
   },
   {
@@ -208,6 +220,7 @@
       "Frisk"
     ],
     "hiddenAbility": "Telepathy",
+    "canBeShiny": true,
     "iconSlug": "orbeetle-gmax"
   },
   {
@@ -223,6 +236,7 @@
       "Shield Dust"
     ],
     "hiddenAbility": "Run Away",
+    "canBeShiny": true,
     "iconSlug": "caterpie"
   },
   {
@@ -238,6 +252,7 @@
       "Shed Skin"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "metapod"
   },
   {
@@ -254,6 +269,7 @@
       "Compound Eyes"
     ],
     "hiddenAbility": "Tinted Lens",
+    "canBeShiny": true,
     "iconSlug": "butterfree"
   },
   {
@@ -270,6 +286,7 @@
       "Compound Eyes"
     ],
     "hiddenAbility": "Tinted Lens",
+    "canBeShiny": true,
     "iconSlug": "butterfree-gmax"
   },
   {
@@ -285,6 +302,7 @@
       "Swarm"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "grubbin"
   },
   {
@@ -301,6 +319,7 @@
       "Battery"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "charjabug"
   },
   {
@@ -317,6 +336,7 @@
       "Levitate"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "vikavolt"
   },
   {
@@ -334,6 +354,7 @@
       "Keen Eye"
     ],
     "hiddenAbility": "Tinted Lens",
+    "canBeShiny": true,
     "iconSlug": "hoothoot"
   },
   {
@@ -351,6 +372,7 @@
       "Keen Eye"
     ],
     "hiddenAbility": "Tinted Lens",
+    "canBeShiny": true,
     "iconSlug": "noctowl"
   },
   {
@@ -367,6 +389,7 @@
       "Unnerve"
     ],
     "hiddenAbility": "Big Pecks",
+    "canBeShiny": true,
     "iconSlug": "rookidee"
   },
   {
@@ -383,6 +406,7 @@
       "Unnerve"
     ],
     "hiddenAbility": "Big Pecks",
+    "canBeShiny": true,
     "iconSlug": "corvisquire"
   },
   {
@@ -400,6 +424,7 @@
       "Unnerve"
     ],
     "hiddenAbility": "Mirror Armor",
+    "canBeShiny": true,
     "iconSlug": "corviknight"
   },
   {
@@ -417,6 +442,7 @@
       "Unnerve"
     ],
     "hiddenAbility": "Mirror Armor",
+    "canBeShiny": true,
     "iconSlug": "corviknight-gmax"
   },
   {
@@ -432,6 +458,7 @@
       "Cheek Pouch"
     ],
     "hiddenAbility": "Gluttony",
+    "canBeShiny": true,
     "iconSlug": "skwovet"
   },
   {
@@ -447,6 +474,7 @@
       "Cheek Pouch"
     ],
     "hiddenAbility": "Gluttony",
+    "canBeShiny": true,
     "iconSlug": "greedent"
   },
   {
@@ -464,6 +492,7 @@
       "Super Luck"
     ],
     "hiddenAbility": "Rivalry",
+    "canBeShiny": true,
     "iconSlug": "pidove"
   },
   {
@@ -481,6 +510,7 @@
       "Super Luck"
     ],
     "hiddenAbility": "Rivalry",
+    "canBeShiny": true,
     "iconSlug": "tranquill"
   },
   {
@@ -498,6 +528,7 @@
       "Super Luck"
     ],
     "hiddenAbility": "Rivalry",
+    "canBeShiny": true,
     "iconSlug": "unfezant"
   },
   {
@@ -515,6 +546,7 @@
       "Super Luck"
     ],
     "hiddenAbility": "Rivalry",
+    "canBeShiny": true,
     "iconSlug": "female/unfezant"
   },
   {
@@ -531,6 +563,7 @@
       "Unburden"
     ],
     "hiddenAbility": "Stakeout",
+    "canBeShiny": true,
     "iconSlug": "nickit"
   },
   {
@@ -547,6 +580,7 @@
       "Unburden"
     ],
     "hiddenAbility": "Stakeout",
+    "canBeShiny": true,
     "iconSlug": "thievul"
   },
   {
@@ -563,6 +597,7 @@
       "Gluttony"
     ],
     "hiddenAbility": "Quick Feet",
+    "canBeShiny": true,
     "iconSlug": "zigzagoon"
   },
   {
@@ -580,6 +615,7 @@
       "Gluttony"
     ],
     "hiddenAbility": "Quick Feet",
+    "canBeShiny": true,
     "iconSlug": "zigzagoon-galar"
   },
   {
@@ -596,6 +632,7 @@
       "Gluttony"
     ],
     "hiddenAbility": "Quick Feet",
+    "canBeShiny": true,
     "iconSlug": "linoone"
   },
   {
@@ -613,6 +650,7 @@
       "Gluttony"
     ],
     "hiddenAbility": "Quick Feet",
+    "canBeShiny": true,
     "iconSlug": "linoone-galar"
   },
   {
@@ -630,6 +668,7 @@
       "Guts"
     ],
     "hiddenAbility": "Defiant",
+    "canBeShiny": true,
     "iconSlug": "obstagoon"
   },
   {
@@ -646,6 +685,7 @@
       "Run Away"
     ],
     "hiddenAbility": "Bulletproof",
+    "canBeShiny": true,
     "iconSlug": "wooloo"
   },
   {
@@ -662,6 +702,7 @@
       "Steadfast"
     ],
     "hiddenAbility": "Bulletproof",
+    "canBeShiny": true,
     "iconSlug": "dubwool"
   },
   {
@@ -680,6 +721,7 @@
       "Rain Dish"
     ],
     "hiddenAbility": "Own Tempo",
+    "canBeShiny": true,
     "iconSlug": "lotad"
   },
   {
@@ -698,6 +740,7 @@
       "Rain Dish"
     ],
     "hiddenAbility": "Own Tempo",
+    "canBeShiny": true,
     "iconSlug": "lombre"
   },
   {
@@ -716,6 +759,7 @@
       "Rain Dish"
     ],
     "hiddenAbility": "Own Tempo",
+    "canBeShiny": true,
     "iconSlug": "ludicolo"
   },
   {
@@ -733,6 +777,7 @@
       "Early Bird"
     ],
     "hiddenAbility": "Pickpocket",
+    "canBeShiny": true,
     "iconSlug": "seedot"
   },
   {
@@ -751,6 +796,7 @@
       "Early Bird"
     ],
     "hiddenAbility": "Pickpocket",
+    "canBeShiny": true,
     "iconSlug": "nuzleaf"
   },
   {
@@ -769,6 +815,7 @@
       "Early Bird"
     ],
     "hiddenAbility": "Pickpocket",
+    "canBeShiny": true,
     "iconSlug": "shiftry"
   },
   {
@@ -786,6 +833,7 @@
       "Shell Armor"
     ],
     "hiddenAbility": "Swift Swim",
+    "canBeShiny": true,
     "iconSlug": "chewtle"
   },
   {
@@ -804,6 +852,7 @@
       "Shell Armor"
     ],
     "hiddenAbility": "Swift Swim",
+    "canBeShiny": true,
     "iconSlug": "drednaw"
   },
   {
@@ -822,6 +871,7 @@
       "Shell Armor"
     ],
     "hiddenAbility": "Swift Swim",
+    "canBeShiny": true,
     "iconSlug": "drednaw-gmax"
   },
   {
@@ -838,6 +888,7 @@
       "Unburden"
     ],
     "hiddenAbility": "Prankster",
+    "canBeShiny": true,
     "iconSlug": "purrloin"
   },
   {
@@ -854,6 +905,7 @@
       "Unburden"
     ],
     "hiddenAbility": "Prankster",
+    "canBeShiny": true,
     "iconSlug": "liepard"
   },
   {
@@ -869,6 +921,7 @@
       "Ball Fetch"
     ],
     "hiddenAbility": "Rattled",
+    "canBeShiny": true,
     "iconSlug": "yamper"
   },
   {
@@ -884,6 +937,7 @@
       "Strong Jaw"
     ],
     "hiddenAbility": "Competitive",
+    "canBeShiny": true,
     "iconSlug": "boltund"
   },
   {
@@ -900,6 +954,7 @@
       "Cheek Pouch"
     ],
     "hiddenAbility": "Huge Power",
+    "canBeShiny": true,
     "iconSlug": "bunnelby"
   },
   {
@@ -917,6 +972,7 @@
       "Cheek Pouch"
     ],
     "hiddenAbility": "Huge Power",
+    "canBeShiny": true,
     "iconSlug": "diggersby"
   },
   {
@@ -933,6 +989,7 @@
       "Technician"
     ],
     "hiddenAbility": "Skill Link",
+    "canBeShiny": true,
     "iconSlug": "minccino"
   },
   {
@@ -949,6 +1006,7 @@
       "Technician"
     ],
     "hiddenAbility": "Skill Link",
+    "canBeShiny": true,
     "iconSlug": "cinccino"
   },
   {
@@ -965,6 +1023,7 @@
       "Oblivious"
     ],
     "hiddenAbility": "Sweet Veil",
+    "canBeShiny": true,
     "iconSlug": "bounsweet"
   },
   {
@@ -981,6 +1040,7 @@
       "Oblivious"
     ],
     "hiddenAbility": "Sweet Veil",
+    "canBeShiny": true,
     "iconSlug": "steenee"
   },
   {
@@ -997,6 +1057,7 @@
       "Queenly Majesty"
     ],
     "hiddenAbility": "Sweet Veil",
+    "canBeShiny": true,
     "iconSlug": "tsareena"
   },
   {
@@ -1013,6 +1074,7 @@
       "Chlorophyll"
     ],
     "hiddenAbility": "Run Away",
+    "canBeShiny": true,
     "iconSlug": "oddish"
   },
   {
@@ -1029,6 +1091,7 @@
       "Chlorophyll"
     ],
     "hiddenAbility": "Stench",
+    "canBeShiny": true,
     "iconSlug": "gloom"
   },
   {
@@ -1045,6 +1108,7 @@
       "Chlorophyll"
     ],
     "hiddenAbility": "Effect Spore",
+    "canBeShiny": true,
     "iconSlug": "vileplume"
   },
   {
@@ -1060,6 +1124,7 @@
       "Chlorophyll"
     ],
     "hiddenAbility": "Healer",
+    "canBeShiny": true,
     "iconSlug": "bellossom"
   },
   {
@@ -1077,6 +1142,7 @@
       "Poison Point"
     ],
     "hiddenAbility": "Leaf Guard",
+    "canBeShiny": true,
     "iconSlug": "budew"
   },
   {
@@ -1095,6 +1161,7 @@
       "Poison Point"
     ],
     "hiddenAbility": "Leaf Guard",
+    "canBeShiny": true,
     "iconSlug": "roselia"
   },
   {
@@ -1113,6 +1180,7 @@
       "Poison Point"
     ],
     "hiddenAbility": "Technician",
+    "canBeShiny": true,
     "iconSlug": "roserade"
   },
   {
@@ -1131,6 +1199,7 @@
       "Hydration"
     ],
     "hiddenAbility": "Rain Dish",
+    "canBeShiny": true,
     "iconSlug": "wingull"
   },
   {
@@ -1149,6 +1218,7 @@
       "Drizzle"
     ],
     "hiddenAbility": "Rain Dish",
+    "canBeShiny": true,
     "iconSlug": "pelipper"
   },
   {
@@ -1166,6 +1236,7 @@
       "Unnerve"
     ],
     "hiddenAbility": "Swarm",
+    "canBeShiny": true,
     "iconSlug": "joltik"
   },
   {
@@ -1183,6 +1254,7 @@
       "Unnerve"
     ],
     "hiddenAbility": "Swarm",
+    "canBeShiny": true,
     "iconSlug": "galvantula"
   },
   {
@@ -1199,6 +1271,7 @@
       "Lightning Rod"
     ],
     "hiddenAbility": "Minus",
+    "canBeShiny": true,
     "iconSlug": "electrike"
   },
   {
@@ -1215,6 +1288,7 @@
       "Lightning Rod"
     ],
     "hiddenAbility": "Minus",
+    "canBeShiny": true,
     "iconSlug": "manectric"
   },
   {
@@ -1230,6 +1304,7 @@
       "Flash Fire"
     ],
     "hiddenAbility": "Drought",
+    "canBeShiny": true,
     "iconSlug": "vulpix"
   },
   {
@@ -1245,6 +1320,7 @@
       "Snow Cloak"
     ],
     "hiddenAbility": "Snow Warning",
+    "canBeShiny": true,
     "iconSlug": "vulpix-alola"
   },
   {
@@ -1260,6 +1336,7 @@
       "Flash Fire"
     ],
     "hiddenAbility": "Drought",
+    "canBeShiny": true,
     "iconSlug": "ninetales"
   },
   {
@@ -1276,6 +1353,7 @@
       "Snow Cloak"
     ],
     "hiddenAbility": "Snow Warning",
+    "canBeShiny": true,
     "iconSlug": "ninetales-alola"
   },
   {
@@ -1292,6 +1370,7 @@
       "Flash Fire"
     ],
     "hiddenAbility": "Justified",
+    "canBeShiny": true,
     "iconSlug": "growlithe"
   },
   {
@@ -1308,6 +1387,7 @@
       "Flash Fire"
     ],
     "hiddenAbility": "Justified",
+    "canBeShiny": true,
     "iconSlug": "arcanine"
   },
   {
@@ -1324,6 +1404,7 @@
       "Snow Cloak"
     ],
     "hiddenAbility": "Weak Armor",
+    "canBeShiny": true,
     "iconSlug": "vanillite"
   },
   {
@@ -1340,6 +1421,7 @@
       "Snow Cloak"
     ],
     "hiddenAbility": "Weak Armor",
+    "canBeShiny": true,
     "iconSlug": "vanillish"
   },
   {
@@ -1356,6 +1438,7 @@
       "Snow Warning"
     ],
     "hiddenAbility": "Weak Armor",
+    "canBeShiny": true,
     "iconSlug": "vanilluxe"
   },
   {
@@ -1373,6 +1456,7 @@
       "Snow Cloak"
     ],
     "hiddenAbility": "Thick Fat",
+    "canBeShiny": true,
     "iconSlug": "swinub"
   },
   {
@@ -1390,6 +1474,7 @@
       "Snow Cloak"
     ],
     "hiddenAbility": "Thick Fat",
+    "canBeShiny": true,
     "iconSlug": "piloswine"
   },
   {
@@ -1407,6 +1492,7 @@
       "Snow Cloak"
     ],
     "hiddenAbility": "Thick Fat",
+    "canBeShiny": true,
     "iconSlug": "mamoswine"
   },
   {
@@ -1425,6 +1511,7 @@
       "Hustle"
     ],
     "hiddenAbility": "Insomnia",
+    "canBeShiny": true,
     "iconSlug": "delibird"
   },
   {
@@ -1442,6 +1529,7 @@
       "Ice Body"
     ],
     "hiddenAbility": "Moody",
+    "canBeShiny": true,
     "iconSlug": "snorunt"
   },
   {
@@ -1459,6 +1547,7 @@
       "Ice Body"
     ],
     "hiddenAbility": "Moody",
+    "canBeShiny": true,
     "iconSlug": "glalie"
   },
   {
@@ -1476,6 +1565,7 @@
       "Snow Cloak"
     ],
     "hiddenAbility": "Cursed Body",
+    "canBeShiny": true,
     "iconSlug": "froslass"
   },
   {
@@ -1492,6 +1582,7 @@
       "Levitate"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "baltoy"
   },
   {
@@ -1508,6 +1599,7 @@
       "Levitate"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "claydol"
   },
   {
@@ -1524,6 +1616,7 @@
       "Stamina"
     ],
     "hiddenAbility": "Inner Focus",
+    "canBeShiny": true,
     "iconSlug": "mudbray"
   },
   {
@@ -1540,6 +1633,7 @@
       "Stamina"
     ],
     "hiddenAbility": "Inner Focus",
+    "canBeShiny": true,
     "iconSlug": "mudsdale"
   },
   {
@@ -1558,6 +1652,7 @@
       "Shell Armor"
     ],
     "hiddenAbility": "Weak Armor",
+    "canBeShiny": true,
     "iconSlug": "dwebble"
   },
   {
@@ -1576,6 +1671,7 @@
       "Shell Armor"
     ],
     "hiddenAbility": "Weak Armor",
+    "canBeShiny": true,
     "iconSlug": "crustle"
   },
   {
@@ -1593,6 +1689,7 @@
       "Klutz"
     ],
     "hiddenAbility": "No Guard",
+    "canBeShiny": true,
     "iconSlug": "golett"
   },
   {
@@ -1610,6 +1707,7 @@
       "Klutz"
     ],
     "hiddenAbility": "No Guard",
+    "canBeShiny": true,
     "iconSlug": "golurk"
   },
   {
@@ -1626,6 +1724,7 @@
       "Synchronize"
     ],
     "hiddenAbility": "Telepathy",
+    "canBeShiny": true,
     "iconSlug": "munna"
   },
   {
@@ -1642,6 +1741,7 @@
       "Synchronize"
     ],
     "hiddenAbility": "Telepathy",
+    "canBeShiny": true,
     "iconSlug": "musharna"
   },
   {
@@ -1659,6 +1759,7 @@
       "Early Bird"
     ],
     "hiddenAbility": "Magic Bounce",
+    "canBeShiny": true,
     "iconSlug": "natu"
   },
   {
@@ -1676,6 +1777,7 @@
       "Early Bird"
     ],
     "hiddenAbility": "Magic Bounce",
+    "canBeShiny": true,
     "iconSlug": "xatu"
   },
   {
@@ -1693,6 +1795,7 @@
       "Klutz"
     ],
     "hiddenAbility": "Cute Charm",
+    "canBeShiny": true,
     "iconSlug": "stufful"
   },
   {
@@ -1710,6 +1813,7 @@
       "Klutz"
     ],
     "hiddenAbility": "Unnerve",
+    "canBeShiny": true,
     "iconSlug": "bewear"
   },
   {
@@ -1727,6 +1831,7 @@
       "Snow Warning"
     ],
     "hiddenAbility": "Soundproof",
+    "canBeShiny": true,
     "iconSlug": "snover"
   },
   {
@@ -1744,6 +1849,7 @@
       "Snow Warning"
     ],
     "hiddenAbility": "Soundproof",
+    "canBeShiny": true,
     "iconSlug": "abomasnow"
   },
   {
@@ -1760,6 +1866,7 @@
       "Shell Armor"
     ],
     "hiddenAbility": "Sheer Force",
+    "canBeShiny": true,
     "iconSlug": "krabby"
   },
   {
@@ -1776,6 +1883,7 @@
       "Shell Armor"
     ],
     "hiddenAbility": "Sheer Force",
+    "canBeShiny": true,
     "iconSlug": "kingler"
   },
   {
@@ -1792,6 +1900,7 @@
       "Shell Armor"
     ],
     "hiddenAbility": "Sheer Force",
+    "canBeShiny": true,
     "iconSlug": "kingler-gmax"
   },
   {
@@ -1810,6 +1919,7 @@
       "Water Absorb"
     ],
     "hiddenAbility": "Unaware",
+    "canBeShiny": true,
     "iconSlug": "wooper"
   },
   {
@@ -1828,6 +1938,7 @@
       "Water Absorb"
     ],
     "hiddenAbility": "Unaware",
+    "canBeShiny": true,
     "iconSlug": "quagsire"
   },
   {
@@ -1845,6 +1956,7 @@
       "Shell Armor"
     ],
     "hiddenAbility": "Adaptability",
+    "canBeShiny": true,
     "iconSlug": "corphish"
   },
   {
@@ -1863,6 +1975,7 @@
       "Shell Armor"
     ],
     "hiddenAbility": "Adaptability",
+    "canBeShiny": true,
     "iconSlug": "crawdaunt"
   },
   {
@@ -1879,6 +1992,7 @@
       "Compound Eyes"
     ],
     "hiddenAbility": "Run Away",
+    "canBeShiny": true,
     "iconSlug": "nincada"
   },
   {
@@ -1895,6 +2009,7 @@
       "Speed Boost"
     ],
     "hiddenAbility": "Infiltrator",
+    "canBeShiny": true,
     "iconSlug": "ninjask"
   },
   {
@@ -1911,6 +2026,7 @@
       "Wonder Guard"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "shedinja"
   },
   {
@@ -1927,6 +2043,7 @@
       "Steadfast"
     ],
     "hiddenAbility": "Vital Spirit",
+    "canBeShiny": true,
     "iconSlug": "tyrogue"
   },
   {
@@ -1943,6 +2060,7 @@
       "Reckless"
     ],
     "hiddenAbility": "Unburden",
+    "canBeShiny": true,
     "iconSlug": "hitmonlee"
   },
   {
@@ -1959,6 +2077,7 @@
       "Iron Fist"
     ],
     "hiddenAbility": "Inner Focus",
+    "canBeShiny": true,
     "iconSlug": "hitmonchan"
   },
   {
@@ -1975,6 +2094,7 @@
       "Technician"
     ],
     "hiddenAbility": "Steadfast",
+    "canBeShiny": true,
     "iconSlug": "hitmontop"
   },
   {
@@ -1992,6 +2112,7 @@
       "Mold Breaker"
     ],
     "hiddenAbility": "Scrappy",
+    "canBeShiny": true,
     "iconSlug": "pancham"
   },
   {
@@ -2010,6 +2131,7 @@
       "Mold Breaker"
     ],
     "hiddenAbility": "Scrappy",
+    "canBeShiny": true,
     "iconSlug": "pangoro"
   },
   {
@@ -2026,6 +2148,7 @@
       "Minus"
     ],
     "hiddenAbility": "Clear Body",
+    "canBeShiny": true,
     "iconSlug": "klink"
   },
   {
@@ -2042,6 +2165,7 @@
       "Minus"
     ],
     "hiddenAbility": "Clear Body",
+    "canBeShiny": true,
     "iconSlug": "klang"
   },
   {
@@ -2058,6 +2182,7 @@
       "Minus"
     ],
     "hiddenAbility": "Clear Body",
+    "canBeShiny": true,
     "iconSlug": "klinklang"
   },
   {
@@ -2074,6 +2199,7 @@
       "Honey Gather"
     ],
     "hiddenAbility": "Hustle",
+    "canBeShiny": true,
     "iconSlug": "combee"
   },
   {
@@ -2090,6 +2216,7 @@
       "Pressure"
     ],
     "hiddenAbility": "Unnerve",
+    "canBeShiny": true,
     "iconSlug": "vespiquen"
   },
   {
@@ -2107,6 +2234,7 @@
       "Heatproof"
     ],
     "hiddenAbility": "Heavy Metal",
+    "canBeShiny": true,
     "iconSlug": "bronzor"
   },
   {
@@ -2124,6 +2252,7 @@
       "Heatproof"
     ],
     "hiddenAbility": "Heavy Metal",
+    "canBeShiny": true,
     "iconSlug": "bronzong"
   },
   {
@@ -2142,6 +2271,7 @@
       "Trace"
     ],
     "hiddenAbility": "Telepathy",
+    "canBeShiny": true,
     "iconSlug": "ralts"
   },
   {
@@ -2160,6 +2290,7 @@
       "Trace"
     ],
     "hiddenAbility": "Telepathy",
+    "canBeShiny": true,
     "iconSlug": "kirlia"
   },
   {
@@ -2178,6 +2309,7 @@
       "Trace"
     ],
     "hiddenAbility": "Telepathy",
+    "canBeShiny": true,
     "iconSlug": "gardevoir"
   },
   {
@@ -2195,6 +2327,7 @@
       "Steadfast"
     ],
     "hiddenAbility": "Justified",
+    "canBeShiny": true,
     "iconSlug": "gallade"
   },
   {
@@ -2212,6 +2345,7 @@
       "Unburden"
     ],
     "hiddenAbility": "Flare Boost",
+    "canBeShiny": true,
     "iconSlug": "drifloon"
   },
   {
@@ -2229,6 +2363,7 @@
       "Unburden"
     ],
     "hiddenAbility": "Flare Boost",
+    "canBeShiny": true,
     "iconSlug": "drifblim"
   },
   {
@@ -2245,6 +2380,7 @@
       "Regenerator"
     ],
     "hiddenAbility": "Effect Spore",
+    "canBeShiny": true,
     "iconSlug": "gossifleur"
   },
   {
@@ -2261,6 +2397,7 @@
       "Regenerator"
     ],
     "hiddenAbility": "Effect Spore",
+    "canBeShiny": true,
     "iconSlug": "eldegoss"
   },
   {
@@ -2277,6 +2414,7 @@
       "Chlorophyll"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "cherubi"
   },
   {
@@ -2293,6 +2431,7 @@
       "Flower Gift"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "cherrim"
   },
   {
@@ -2309,6 +2448,7 @@
       "Flower Gift"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "cherrim-sunshine"
   },
   {
@@ -2326,6 +2466,7 @@
       "Aftermath"
     ],
     "hiddenAbility": "Keen Eye",
+    "canBeShiny": true,
     "iconSlug": "stunky"
   },
   {
@@ -2343,6 +2484,7 @@
       "Aftermath"
     ],
     "hiddenAbility": "Keen Eye",
+    "canBeShiny": true,
     "iconSlug": "skuntank"
   },
   {
@@ -2359,6 +2501,7 @@
       "Hydration"
     ],
     "hiddenAbility": "Water Absorb",
+    "canBeShiny": true,
     "iconSlug": "tympole"
   },
   {
@@ -2376,6 +2519,7 @@
       "Hydration"
     ],
     "hiddenAbility": "Water Absorb",
+    "canBeShiny": true,
     "iconSlug": "palpitoad"
   },
   {
@@ -2393,6 +2537,7 @@
       "Poison Touch"
     ],
     "hiddenAbility": "Water Absorb",
+    "canBeShiny": true,
     "iconSlug": "seismitoad"
   },
   {
@@ -2408,6 +2553,7 @@
       "Levitate"
     ],
     "hiddenAbility": "Frisk",
+    "canBeShiny": true,
     "iconSlug": "duskull"
   },
   {
@@ -2423,6 +2569,7 @@
       "Pressure"
     ],
     "hiddenAbility": "Frisk",
+    "canBeShiny": true,
     "iconSlug": "dusclops"
   },
   {
@@ -2438,6 +2585,7 @@
       "Pressure"
     ],
     "hiddenAbility": "Frisk",
+    "canBeShiny": true,
     "iconSlug": "dusknoir"
   },
   {
@@ -2454,6 +2602,7 @@
       "No Guard"
     ],
     "hiddenAbility": "Steadfast",
+    "canBeShiny": true,
     "iconSlug": "machop"
   },
   {
@@ -2470,6 +2619,7 @@
       "No Guard"
     ],
     "hiddenAbility": "Steadfast",
+    "canBeShiny": true,
     "iconSlug": "machoke"
   },
   {
@@ -2486,6 +2636,7 @@
       "No Guard"
     ],
     "hiddenAbility": "Steadfast",
+    "canBeShiny": true,
     "iconSlug": "machamp"
   },
   {
@@ -2502,6 +2653,7 @@
       "No Guard"
     ],
     "hiddenAbility": "Steadfast",
+    "canBeShiny": true,
     "iconSlug": "machamp-gmax"
   },
   {
@@ -2518,6 +2670,7 @@
       "Levitate"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "gastly"
   },
   {
@@ -2534,6 +2687,7 @@
       "Levitate"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "haunter"
   },
   {
@@ -2550,6 +2704,7 @@
       "Cursed Body"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "gengar"
   },
   {
@@ -2566,6 +2721,7 @@
       "Cursed Body"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "gengar-gmax"
   },
   {
@@ -2582,6 +2738,7 @@
       "Swift Swim"
     ],
     "hiddenAbility": "Rattled",
+    "canBeShiny": true,
     "iconSlug": "magikarp"
   },
   {
@@ -2599,6 +2756,7 @@
       "Intimidate"
     ],
     "hiddenAbility": "Moxie",
+    "canBeShiny": true,
     "iconSlug": "gyarados"
   },
   {
@@ -2615,6 +2773,7 @@
       "Water Veil"
     ],
     "hiddenAbility": "Lightning Rod",
+    "canBeShiny": true,
     "iconSlug": "goldeen"
   },
   {
@@ -2631,6 +2790,7 @@
       "Water Veil"
     ],
     "hiddenAbility": "Lightning Rod",
+    "canBeShiny": true,
     "iconSlug": "seaking"
   },
   {
@@ -2648,6 +2808,7 @@
       "Sniper"
     ],
     "hiddenAbility": "Moody",
+    "canBeShiny": true,
     "iconSlug": "remoraid"
   },
   {
@@ -2665,6 +2826,7 @@
       "Sniper"
     ],
     "hiddenAbility": "Moody",
+    "canBeShiny": true,
     "iconSlug": "octillery"
   },
   {
@@ -2681,6 +2843,7 @@
       "Skill Link"
     ],
     "hiddenAbility": "Overcoat",
+    "canBeShiny": true,
     "iconSlug": "shellder"
   },
   {
@@ -2698,6 +2861,7 @@
       "Skill Link"
     ],
     "hiddenAbility": "Overcoat",
+    "canBeShiny": true,
     "iconSlug": "cloyster"
   },
   {
@@ -2715,6 +2879,7 @@
       "Oblivious"
     ],
     "hiddenAbility": "Adaptability",
+    "canBeShiny": true,
     "iconSlug": "feebas"
   },
   {
@@ -2732,6 +2897,7 @@
       "Competitive"
     ],
     "hiddenAbility": "Cute Charm",
+    "canBeShiny": true,
     "iconSlug": "milotic"
   },
   {
@@ -2748,6 +2914,7 @@
       "Adaptability"
     ],
     "hiddenAbility": "Mold Breaker",
+    "canBeShiny": true,
     "iconSlug": "basculin"
   },
   {
@@ -2764,6 +2931,7 @@
       "Adaptability"
     ],
     "hiddenAbility": "Mold Breaker",
+    "canBeShiny": true,
     "iconSlug": "basculin-blue-striped"
   },
   {
@@ -2779,6 +2947,7 @@
       "Schooling"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "wishiwashi"
   },
   {
@@ -2794,6 +2963,7 @@
       "Schooling"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "wishiwashi-school"
   },
   {
@@ -2809,6 +2979,7 @@
       "Innards Out"
     ],
     "hiddenAbility": "Unaware",
+    "canBeShiny": true,
     "iconSlug": "pyukumuku"
   },
   {
@@ -2825,6 +2996,7 @@
       "Sticky Hold"
     ],
     "hiddenAbility": "Aftermath",
+    "canBeShiny": true,
     "iconSlug": "trubbish"
   },
   {
@@ -2841,6 +3013,7 @@
       "Weak Armor"
     ],
     "hiddenAbility": "Aftermath",
+    "canBeShiny": true,
     "iconSlug": "garbodor"
   },
   {
@@ -2857,6 +3030,7 @@
       "Weak Armor"
     ],
     "hiddenAbility": "Aftermath",
+    "canBeShiny": true,
     "iconSlug": "garbodor-gmax"
   },
   {
@@ -2874,6 +3048,7 @@
       "White Smoke"
     ],
     "hiddenAbility": "Flame Body",
+    "canBeShiny": true,
     "iconSlug": "sizzlipede"
   },
   {
@@ -2891,6 +3066,7 @@
       "White Smoke"
     ],
     "hiddenAbility": "Flame Body",
+    "canBeShiny": true,
     "iconSlug": "centiskorch"
   },
   {
@@ -2908,6 +3084,7 @@
       "White Smoke"
     ],
     "hiddenAbility": "Flame Body",
+    "canBeShiny": true,
     "iconSlug": "centiskorch-gmax"
   },
   {
@@ -2924,6 +3101,7 @@
       "Heatproof"
     ],
     "hiddenAbility": "Flash Fire",
+    "canBeShiny": true,
     "iconSlug": "rolycoly"
   },
   {
@@ -2941,6 +3119,7 @@
       "Flame Body"
     ],
     "hiddenAbility": "Flash Fire",
+    "canBeShiny": true,
     "iconSlug": "carkol"
   },
   {
@@ -2958,6 +3137,7 @@
       "Flame Body"
     ],
     "hiddenAbility": "Flash Fire",
+    "canBeShiny": true,
     "iconSlug": "coalossal"
   },
   {
@@ -2975,6 +3155,7 @@
       "Flame Body"
     ],
     "hiddenAbility": "Flash Fire",
+    "canBeShiny": true,
     "iconSlug": "coalossal-gmax"
   },
   {
@@ -2992,6 +3173,7 @@
       "Tangling Hair"
     ],
     "hiddenAbility": "Sand Force",
+    "canBeShiny": true,
     "iconSlug": "diglett-alola"
   },
   {
@@ -3008,6 +3190,7 @@
       "Arena Trap"
     ],
     "hiddenAbility": "Sand Force",
+    "canBeShiny": true,
     "iconSlug": "diglett"
   },
   {
@@ -3025,6 +3208,7 @@
       "Tangling Hair"
     ],
     "hiddenAbility": "Sand Force",
+    "canBeShiny": true,
     "iconSlug": "dugtrio-alola"
   },
   {
@@ -3041,6 +3225,7 @@
       "Arena Trap"
     ],
     "hiddenAbility": "Sand Force",
+    "canBeShiny": true,
     "iconSlug": "dugtrio"
   },
   {
@@ -3057,6 +3242,7 @@
       "Sand Force"
     ],
     "hiddenAbility": "Mold Breaker",
+    "canBeShiny": true,
     "iconSlug": "drilbur"
   },
   {
@@ -3074,6 +3260,7 @@
       "Sand Force"
     ],
     "hiddenAbility": "Mold Breaker",
+    "canBeShiny": true,
     "iconSlug": "excadrill"
   },
   {
@@ -3090,6 +3277,7 @@
       "Weak Armor"
     ],
     "hiddenAbility": "Sand Force",
+    "canBeShiny": true,
     "iconSlug": "roggenrola"
   },
   {
@@ -3106,6 +3294,7 @@
       "Weak Armor"
     ],
     "hiddenAbility": "Sand Force",
+    "canBeShiny": true,
     "iconSlug": "boldore"
   },
   {
@@ -3122,6 +3311,7 @@
       "Sand Stream"
     ],
     "hiddenAbility": "Sand Force",
+    "canBeShiny": true,
     "iconSlug": "gigalith"
   },
   {
@@ -3138,6 +3328,7 @@
       "Sheer Force"
     ],
     "hiddenAbility": "Iron Fist",
+    "canBeShiny": true,
     "iconSlug": "timburr"
   },
   {
@@ -3154,6 +3345,7 @@
       "Sheer Force"
     ],
     "hiddenAbility": "Iron Fist",
+    "canBeShiny": true,
     "iconSlug": "gurdurr"
   },
   {
@@ -3170,6 +3362,7 @@
       "Sheer Force"
     ],
     "hiddenAbility": "Iron Fist",
+    "canBeShiny": true,
     "iconSlug": "conkeldurr"
   },
   {
@@ -3188,6 +3381,7 @@
       "Klutz"
     ],
     "hiddenAbility": "Simple",
+    "canBeShiny": true,
     "iconSlug": "woobat"
   },
   {
@@ -3206,6 +3400,7 @@
       "Klutz"
     ],
     "hiddenAbility": "Simple",
+    "canBeShiny": true,
     "iconSlug": "swoobat"
   },
   {
@@ -3224,6 +3419,7 @@
       "Infiltrator"
     ],
     "hiddenAbility": "Telepathy",
+    "canBeShiny": true,
     "iconSlug": "noibat"
   },
   {
@@ -3242,6 +3438,7 @@
       "Infiltrator"
     ],
     "hiddenAbility": "Telepathy",
+    "canBeShiny": true,
     "iconSlug": "noivern"
   },
   {
@@ -3259,6 +3456,7 @@
       "Sturdy"
     ],
     "hiddenAbility": "Weak Armor",
+    "canBeShiny": true,
     "iconSlug": "onix"
   },
   {
@@ -3276,6 +3474,7 @@
       "Sturdy"
     ],
     "hiddenAbility": "Sheer Force",
+    "canBeShiny": true,
     "iconSlug": "steelix"
   },
   {
@@ -3291,6 +3490,7 @@
       "Swift Swim"
     ],
     "hiddenAbility": "Propeller Tail",
+    "canBeShiny": true,
     "iconSlug": "arrokuda"
   },
   {
@@ -3306,6 +3506,7 @@
       "Swift Swim"
     ],
     "hiddenAbility": "Propeller Tail",
+    "canBeShiny": true,
     "iconSlug": "barraskewda"
   },
   {
@@ -3322,6 +3523,7 @@
       "Technician"
     ],
     "hiddenAbility": "Unnerve",
+    "canBeShiny": true,
     "iconSlug": "meowth"
   },
   {
@@ -3338,6 +3540,7 @@
       "Technician"
     ],
     "hiddenAbility": "Rattled",
+    "canBeShiny": true,
     "iconSlug": "meowth-alola"
   },
   {
@@ -3354,6 +3557,7 @@
       "Tough Claws"
     ],
     "hiddenAbility": "Unnerve",
+    "canBeShiny": true,
     "iconSlug": "meowth-galar"
   },
   {
@@ -3370,6 +3574,7 @@
       "Technician"
     ],
     "hiddenAbility": "Unnerve",
+    "canBeShiny": true,
     "iconSlug": "meowth-gmax"
   },
   {
@@ -3386,6 +3591,7 @@
       "Tough Claws"
     ],
     "hiddenAbility": "Steely Spirit",
+    "canBeShiny": true,
     "iconSlug": "perrserker"
   },
   {
@@ -3402,6 +3608,7 @@
       "Technician"
     ],
     "hiddenAbility": "Unnerve",
+    "canBeShiny": true,
     "iconSlug": "persian"
   },
   {
@@ -3418,6 +3625,7 @@
       "Technician"
     ],
     "hiddenAbility": "Rattled",
+    "canBeShiny": true,
     "iconSlug": "persian-alola"
   },
   {
@@ -3434,6 +3642,7 @@
       "Sweet Veil"
     ],
     "hiddenAbility": "Aroma Veil",
+    "canBeShiny": true,
     "iconSlug": "milcery"
   },
   {
@@ -3450,6 +3659,7 @@
       "Sweet Veil"
     ],
     "hiddenAbility": "Aroma Veil",
+    "canBeShiny": true,
     "iconSlug": "alcremie"
   },
   {
@@ -3466,6 +3676,7 @@
       "Sweet Veil"
     ],
     "hiddenAbility": "Aroma Veil",
+    "canBeShiny": true,
     "iconSlug": "alcremie-vanilla-cream-berry"
   },
   {
@@ -3482,6 +3693,7 @@
       "Sweet Veil"
     ],
     "hiddenAbility": "Aroma Veil",
+    "canBeShiny": true,
     "iconSlug": "alcremie-vanilla-cream-love"
   },
   {
@@ -3498,6 +3710,7 @@
       "Sweet Veil"
     ],
     "hiddenAbility": "Aroma Veil",
+    "canBeShiny": true,
     "iconSlug": "alcremie-vanilla-cream-star"
   },
   {
@@ -3514,6 +3727,7 @@
       "Sweet Veil"
     ],
     "hiddenAbility": "Aroma Veil",
+    "canBeShiny": true,
     "iconSlug": "alcremie-vanilla-cream-clover"
   },
   {
@@ -3530,6 +3744,7 @@
       "Sweet Veil"
     ],
     "hiddenAbility": "Aroma Veil",
+    "canBeShiny": true,
     "iconSlug": "alcremie-vanilla-cream-flower"
   },
   {
@@ -3546,6 +3761,7 @@
       "Sweet Veil"
     ],
     "hiddenAbility": "Aroma Veil",
+    "canBeShiny": true,
     "iconSlug": "alcremie-vanilla-cream-ribbon"
   },
   {
@@ -3562,6 +3778,7 @@
       "Sweet Veil"
     ],
     "hiddenAbility": "Aroma Veil",
+    "canBeShiny": true,
     "iconSlug": "alcremie-ruby-cream-strawberry"
   },
   {
@@ -3578,6 +3795,7 @@
       "Sweet Veil"
     ],
     "hiddenAbility": "Aroma Veil",
+    "canBeShiny": true,
     "iconSlug": "alcremie-ruby-cream-berry"
   },
   {
@@ -3594,6 +3812,7 @@
       "Sweet Veil"
     ],
     "hiddenAbility": "Aroma Veil",
+    "canBeShiny": true,
     "iconSlug": "alcremie-ruby-cream-love"
   },
   {
@@ -3610,6 +3829,7 @@
       "Sweet Veil"
     ],
     "hiddenAbility": "Aroma Veil",
+    "canBeShiny": true,
     "iconSlug": "alcremie-ruby-cream-star"
   },
   {
@@ -3626,6 +3846,7 @@
       "Sweet Veil"
     ],
     "hiddenAbility": "Aroma Veil",
+    "canBeShiny": true,
     "iconSlug": "alcremie-ruby-cream-clover"
   },
   {
@@ -3642,6 +3863,7 @@
       "Sweet Veil"
     ],
     "hiddenAbility": "Aroma Veil",
+    "canBeShiny": true,
     "iconSlug": "alcremie-ruby-cream-flower"
   },
   {
@@ -3658,6 +3880,7 @@
       "Sweet Veil"
     ],
     "hiddenAbility": "Aroma Veil",
+    "canBeShiny": true,
     "iconSlug": "alcremie-ruby-cream-ribbon"
   },
   {
@@ -3674,6 +3897,7 @@
       "Sweet Veil"
     ],
     "hiddenAbility": "Aroma Veil",
+    "canBeShiny": true,
     "iconSlug": "alcremie-matcha-cream-strawberry"
   },
   {
@@ -3690,6 +3914,7 @@
       "Sweet Veil"
     ],
     "hiddenAbility": "Aroma Veil",
+    "canBeShiny": true,
     "iconSlug": "alcremie-matcha-cream-berry"
   },
   {
@@ -3706,6 +3931,7 @@
       "Sweet Veil"
     ],
     "hiddenAbility": "Aroma Veil",
+    "canBeShiny": true,
     "iconSlug": "alcremie-matcha-cream-love"
   },
   {
@@ -3722,6 +3948,7 @@
       "Sweet Veil"
     ],
     "hiddenAbility": "Aroma Veil",
+    "canBeShiny": true,
     "iconSlug": "alcremie-matcha-cream-star"
   },
   {
@@ -3738,6 +3965,7 @@
       "Sweet Veil"
     ],
     "hiddenAbility": "Aroma Veil",
+    "canBeShiny": true,
     "iconSlug": "alcremie-matcha-cream-clover"
   },
   {
@@ -3754,6 +3982,7 @@
       "Sweet Veil"
     ],
     "hiddenAbility": "Aroma Veil",
+    "canBeShiny": true,
     "iconSlug": "alcremie-matcha-cream-flower"
   },
   {
@@ -3770,6 +3999,7 @@
       "Sweet Veil"
     ],
     "hiddenAbility": "Aroma Veil",
+    "canBeShiny": true,
     "iconSlug": "alcremie-matcha-cream-ribbon"
   },
   {
@@ -3786,6 +4016,7 @@
       "Sweet Veil"
     ],
     "hiddenAbility": "Aroma Veil",
+    "canBeShiny": true,
     "iconSlug": "alcremie-mint-cream-strawberry"
   },
   {
@@ -3802,6 +4033,7 @@
       "Sweet Veil"
     ],
     "hiddenAbility": "Aroma Veil",
+    "canBeShiny": true,
     "iconSlug": "alcremie-mint-cream-berry"
   },
   {
@@ -3818,6 +4050,7 @@
       "Sweet Veil"
     ],
     "hiddenAbility": "Aroma Veil",
+    "canBeShiny": true,
     "iconSlug": "alcremie-mint-cream-love"
   },
   {
@@ -3834,6 +4067,7 @@
       "Sweet Veil"
     ],
     "hiddenAbility": "Aroma Veil",
+    "canBeShiny": true,
     "iconSlug": "alcremie-mint-cream-star"
   },
   {
@@ -3850,6 +4084,7 @@
       "Sweet Veil"
     ],
     "hiddenAbility": "Aroma Veil",
+    "canBeShiny": true,
     "iconSlug": "alcremie-mint-cream-clover"
   },
   {
@@ -3866,6 +4101,7 @@
       "Sweet Veil"
     ],
     "hiddenAbility": "Aroma Veil",
+    "canBeShiny": true,
     "iconSlug": "alcremie-mint-cream-flower"
   },
   {
@@ -3882,6 +4118,7 @@
       "Sweet Veil"
     ],
     "hiddenAbility": "Aroma Veil",
+    "canBeShiny": true,
     "iconSlug": "alcremie-mint-cream-ribbon"
   },
   {
@@ -3898,6 +4135,7 @@
       "Sweet Veil"
     ],
     "hiddenAbility": "Aroma Veil",
+    "canBeShiny": true,
     "iconSlug": "alcremie-lemon-cream-strawberry"
   },
   {
@@ -3914,6 +4152,7 @@
       "Sweet Veil"
     ],
     "hiddenAbility": "Aroma Veil",
+    "canBeShiny": true,
     "iconSlug": "alcremie-lemon-cream-berry"
   },
   {
@@ -3930,6 +4169,7 @@
       "Sweet Veil"
     ],
     "hiddenAbility": "Aroma Veil",
+    "canBeShiny": true,
     "iconSlug": "alcremie-lemon-cream-love"
   },
   {
@@ -3946,6 +4186,7 @@
       "Sweet Veil"
     ],
     "hiddenAbility": "Aroma Veil",
+    "canBeShiny": true,
     "iconSlug": "alcremie-lemon-cream-star"
   },
   {
@@ -3962,6 +4203,7 @@
       "Sweet Veil"
     ],
     "hiddenAbility": "Aroma Veil",
+    "canBeShiny": true,
     "iconSlug": "alcremie-lemon-cream-clover"
   },
   {
@@ -3978,6 +4220,7 @@
       "Sweet Veil"
     ],
     "hiddenAbility": "Aroma Veil",
+    "canBeShiny": true,
     "iconSlug": "alcremie-lemon-cream-flower"
   },
   {
@@ -3994,6 +4237,7 @@
       "Sweet Veil"
     ],
     "hiddenAbility": "Aroma Veil",
+    "canBeShiny": true,
     "iconSlug": "alcremie-lemon-cream-ribbon"
   },
   {
@@ -4010,6 +4254,7 @@
       "Sweet Veil"
     ],
     "hiddenAbility": "Aroma Veil",
+    "canBeShiny": true,
     "iconSlug": "alcremie-salted-cream-strawberry"
   },
   {
@@ -4026,6 +4271,7 @@
       "Sweet Veil"
     ],
     "hiddenAbility": "Aroma Veil",
+    "canBeShiny": true,
     "iconSlug": "alcremie-salted-cream-berry"
   },
   {
@@ -4042,6 +4288,7 @@
       "Sweet Veil"
     ],
     "hiddenAbility": "Aroma Veil",
+    "canBeShiny": true,
     "iconSlug": "alcremie-salted-cream-love"
   },
   {
@@ -4058,6 +4305,7 @@
       "Sweet Veil"
     ],
     "hiddenAbility": "Aroma Veil",
+    "canBeShiny": true,
     "iconSlug": "alcremie-salted-cream-star"
   },
   {
@@ -4074,6 +4322,7 @@
       "Sweet Veil"
     ],
     "hiddenAbility": "Aroma Veil",
+    "canBeShiny": true,
     "iconSlug": "alcremie-salted-cream-clover"
   },
   {
@@ -4090,6 +4339,7 @@
       "Sweet Veil"
     ],
     "hiddenAbility": "Aroma Veil",
+    "canBeShiny": true,
     "iconSlug": "alcremie-salted-cream-flower"
   },
   {
@@ -4106,6 +4356,7 @@
       "Sweet Veil"
     ],
     "hiddenAbility": "Aroma Veil",
+    "canBeShiny": true,
     "iconSlug": "alcremie-salted-cream-ribbon"
   },
   {
@@ -4122,6 +4373,7 @@
       "Sweet Veil"
     ],
     "hiddenAbility": "Aroma Veil",
+    "canBeShiny": true,
     "iconSlug": "alcremie-ruby-swirl-strawberry"
   },
   {
@@ -4138,6 +4390,7 @@
       "Sweet Veil"
     ],
     "hiddenAbility": "Aroma Veil",
+    "canBeShiny": true,
     "iconSlug": "alcremie-ruby-swirl-berry"
   },
   {
@@ -4154,6 +4407,7 @@
       "Sweet Veil"
     ],
     "hiddenAbility": "Aroma Veil",
+    "canBeShiny": true,
     "iconSlug": "alcremie-ruby-swirl-love"
   },
   {
@@ -4170,6 +4424,7 @@
       "Sweet Veil"
     ],
     "hiddenAbility": "Aroma Veil",
+    "canBeShiny": true,
     "iconSlug": "alcremie-ruby-swirl-star"
   },
   {
@@ -4186,6 +4441,7 @@
       "Sweet Veil"
     ],
     "hiddenAbility": "Aroma Veil",
+    "canBeShiny": true,
     "iconSlug": "alcremie-ruby-swirl-clover"
   },
   {
@@ -4202,6 +4458,7 @@
       "Sweet Veil"
     ],
     "hiddenAbility": "Aroma Veil",
+    "canBeShiny": true,
     "iconSlug": "alcremie-ruby-swirl-flower"
   },
   {
@@ -4218,6 +4475,7 @@
       "Sweet Veil"
     ],
     "hiddenAbility": "Aroma Veil",
+    "canBeShiny": true,
     "iconSlug": "alcremie-ruby-swirl-ribbon"
   },
   {
@@ -4234,6 +4492,7 @@
       "Sweet Veil"
     ],
     "hiddenAbility": "Aroma Veil",
+    "canBeShiny": true,
     "iconSlug": "alcremie-caramel-swirl-strawberry"
   },
   {
@@ -4250,6 +4509,7 @@
       "Sweet Veil"
     ],
     "hiddenAbility": "Aroma Veil",
+    "canBeShiny": true,
     "iconSlug": "alcremie-caramel-swirl-berry"
   },
   {
@@ -4266,6 +4526,7 @@
       "Sweet Veil"
     ],
     "hiddenAbility": "Aroma Veil",
+    "canBeShiny": true,
     "iconSlug": "alcremie-caramel-swirl-love"
   },
   {
@@ -4282,6 +4543,7 @@
       "Sweet Veil"
     ],
     "hiddenAbility": "Aroma Veil",
+    "canBeShiny": true,
     "iconSlug": "alcremie-caramel-swirl-star"
   },
   {
@@ -4298,6 +4560,7 @@
       "Sweet Veil"
     ],
     "hiddenAbility": "Aroma Veil",
+    "canBeShiny": true,
     "iconSlug": "alcremie-caramel-swirl-clover"
   },
   {
@@ -4314,6 +4577,7 @@
       "Sweet Veil"
     ],
     "hiddenAbility": "Aroma Veil",
+    "canBeShiny": true,
     "iconSlug": "alcremie-caramel-swirl-flower"
   },
   {
@@ -4330,6 +4594,7 @@
       "Sweet Veil"
     ],
     "hiddenAbility": "Aroma Veil",
+    "canBeShiny": true,
     "iconSlug": "alcremie-caramel-swirl-ribbon"
   },
   {
@@ -4346,6 +4611,7 @@
       "Sweet Veil"
     ],
     "hiddenAbility": "Aroma Veil",
+    "canBeShiny": true,
     "iconSlug": "alcremie-rainbow-swirl-strawberry"
   },
   {
@@ -4362,6 +4628,7 @@
       "Sweet Veil"
     ],
     "hiddenAbility": "Aroma Veil",
+    "canBeShiny": true,
     "iconSlug": "alcremie-rainbow-swirl-berry"
   },
   {
@@ -4378,6 +4645,7 @@
       "Sweet Veil"
     ],
     "hiddenAbility": "Aroma Veil",
+    "canBeShiny": true,
     "iconSlug": "alcremie-rainbow-swirl-love"
   },
   {
@@ -4394,6 +4662,7 @@
       "Sweet Veil"
     ],
     "hiddenAbility": "Aroma Veil",
+    "canBeShiny": true,
     "iconSlug": "alcremie-rainbow-swirl-star"
   },
   {
@@ -4410,6 +4679,7 @@
       "Sweet Veil"
     ],
     "hiddenAbility": "Aroma Veil",
+    "canBeShiny": true,
     "iconSlug": "alcremie-rainbow-swirl-clover"
   },
   {
@@ -4426,6 +4696,7 @@
       "Sweet Veil"
     ],
     "hiddenAbility": "Aroma Veil",
+    "canBeShiny": true,
     "iconSlug": "alcremie-rainbow-swirl-flower"
   },
   {
@@ -4442,6 +4713,7 @@
       "Sweet Veil"
     ],
     "hiddenAbility": "Aroma Veil",
+    "canBeShiny": true,
     "iconSlug": "alcremie-rainbow-swirl-ribbon"
   },
   {
@@ -4458,6 +4730,7 @@
       "Sweet Veil"
     ],
     "hiddenAbility": "Aroma Veil",
+    "canBeShiny": true,
     "iconSlug": "alcremie-gmax"
   },
   {
@@ -4476,6 +4749,7 @@
       "Shield Dust"
     ],
     "hiddenAbility": "Sweet Veil",
+    "canBeShiny": true,
     "iconSlug": "cutiefly"
   },
   {
@@ -4494,6 +4768,7 @@
       "Shield Dust"
     ],
     "hiddenAbility": "Sweet Veil",
+    "canBeShiny": true,
     "iconSlug": "ribombee"
   },
   {
@@ -4511,6 +4786,7 @@
       "Iron Barbs"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "ferroseed"
   },
   {
@@ -4528,6 +4804,7 @@
       "Iron Barbs"
     ],
     "hiddenAbility": "Anticipation",
+    "canBeShiny": true,
     "iconSlug": "ferrothorn"
   },
   {
@@ -4545,6 +4822,7 @@
       "Frisk"
     ],
     "hiddenAbility": "Insomnia",
+    "canBeShiny": true,
     "iconSlug": "pumpkaboo"
   },
   {
@@ -4562,6 +4840,7 @@
       "Frisk"
     ],
     "hiddenAbility": "Insomnia",
+    "canBeShiny": true,
     "iconSlug": "pumpkaboo-small"
   },
   {
@@ -4579,6 +4858,7 @@
       "Frisk"
     ],
     "hiddenAbility": "Insomnia",
+    "canBeShiny": true,
     "iconSlug": "pumpkaboo-large"
   },
   {
@@ -4596,6 +4876,7 @@
       "Frisk"
     ],
     "hiddenAbility": "Insomnia",
+    "canBeShiny": true,
     "iconSlug": "pumpkaboo-super"
   },
   {
@@ -4613,6 +4894,7 @@
       "Frisk"
     ],
     "hiddenAbility": "Insomnia",
+    "canBeShiny": true,
     "iconSlug": "gourgeist"
   },
   {
@@ -4630,6 +4912,7 @@
       "Frisk"
     ],
     "hiddenAbility": "Insomnia",
+    "canBeShiny": true,
     "iconSlug": "gourgeist-small"
   },
   {
@@ -4647,6 +4930,7 @@
       "Frisk"
     ],
     "hiddenAbility": "Insomnia",
+    "canBeShiny": true,
     "iconSlug": "gourgeist-large"
   },
   {
@@ -4664,6 +4948,7 @@
       "Frisk"
     ],
     "hiddenAbility": "Insomnia",
+    "canBeShiny": true,
     "iconSlug": "gourgeist-super"
   },
   {
@@ -4679,6 +4964,7 @@
       "Static"
     ],
     "hiddenAbility": "Lightning Rod",
+    "canBeShiny": true,
     "iconSlug": "pichu"
   },
   {
@@ -4695,6 +4981,7 @@
       "Static"
     ],
     "hiddenAbility": "Lightning Rod",
+    "canBeShiny": true,
     "iconSlug": "pikachu"
   },
   {
@@ -4710,6 +4997,7 @@
       "Static"
     ],
     "hiddenAbility": "Lightning Rod",
+    "canBeShiny": false,
     "iconSlug": "pikachu-original-cap"
   },
   {
@@ -4725,6 +5013,7 @@
       "Static"
     ],
     "hiddenAbility": "Lightning Rod",
+    "canBeShiny": false,
     "iconSlug": "pikachu-hoenn-cap"
   },
   {
@@ -4740,6 +5029,7 @@
       "Static"
     ],
     "hiddenAbility": "Lightning Rod",
+    "canBeShiny": false,
     "iconSlug": "pikachu-sinnoh-cap"
   },
   {
@@ -4755,6 +5045,7 @@
       "Static"
     ],
     "hiddenAbility": "Lightning Rod",
+    "canBeShiny": false,
     "iconSlug": "pikachu-unova-cap"
   },
   {
@@ -4770,6 +5061,7 @@
       "Static"
     ],
     "hiddenAbility": "Lightning Rod",
+    "canBeShiny": false,
     "iconSlug": "pikachu-kalos-cap"
   },
   {
@@ -4785,6 +5077,7 @@
       "Static"
     ],
     "hiddenAbility": "Lightning Rod",
+    "canBeShiny": false,
     "iconSlug": "pikachu-alola-cap"
   },
   {
@@ -4800,7 +5093,24 @@
       "Static"
     ],
     "hiddenAbility": "Lightning Rod",
+    "canBeShiny": true,
     "iconSlug": "pikachu-partner-cap"
+  },
+  {
+    "name": "Pikachu-World Cap",
+    "dex": "025",
+    "types": [
+      "Electric"
+    ],
+    "eggGroups": [
+      "Undiscovered"
+    ],
+    "abilities": [
+      "Static"
+    ],
+    "hiddenAbility": "Lightning Rod",
+    "canBeShiny": false,
+    "iconSlug": "pikachu-world-cap"
   },
   {
     "name": "Pikachu-Gigantamax",
@@ -4815,6 +5125,7 @@
       "Static"
     ],
     "hiddenAbility": "Lightning Rod",
+    "canBeShiny": true,
     "iconSlug": "pikachu-gmax"
   },
   {
@@ -4832,6 +5143,7 @@
       "Surge Surfer"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "raichu-alola"
   },
   {
@@ -4848,6 +5160,7 @@
       "Static"
     ],
     "hiddenAbility": "Lightning Rod",
+    "canBeShiny": true,
     "iconSlug": "raichu"
   },
   {
@@ -4864,6 +5177,7 @@
       "Adaptability"
     ],
     "hiddenAbility": "Anticipation",
+    "canBeShiny": true,
     "iconSlug": "eevee"
   },
   {
@@ -4880,6 +5194,7 @@
       "Adaptability"
     ],
     "hiddenAbility": "Anticipation",
+    "canBeShiny": true,
     "iconSlug": "eevee-gmax"
   },
   {
@@ -4895,6 +5210,7 @@
       "Water Absorb"
     ],
     "hiddenAbility": "Hydration",
+    "canBeShiny": true,
     "iconSlug": "vaporeon"
   },
   {
@@ -4910,6 +5226,7 @@
       "Volt Absorb"
     ],
     "hiddenAbility": "Quick Feet",
+    "canBeShiny": true,
     "iconSlug": "jolteon"
   },
   {
@@ -4925,6 +5242,7 @@
       "Flash Fire"
     ],
     "hiddenAbility": "Guts",
+    "canBeShiny": true,
     "iconSlug": "flareon"
   },
   {
@@ -4940,6 +5258,7 @@
       "Synchronize"
     ],
     "hiddenAbility": "Magic Bounce",
+    "canBeShiny": true,
     "iconSlug": "espeon"
   },
   {
@@ -4955,6 +5274,7 @@
       "Synchronize"
     ],
     "hiddenAbility": "Inner Focus",
+    "canBeShiny": true,
     "iconSlug": "umbreon"
   },
   {
@@ -4970,6 +5290,7 @@
       "Leaf Guard"
     ],
     "hiddenAbility": "Chlorophyll",
+    "canBeShiny": true,
     "iconSlug": "leafeon"
   },
   {
@@ -4985,6 +5306,7 @@
       "Snow Cloak"
     ],
     "hiddenAbility": "Ice Body",
+    "canBeShiny": true,
     "iconSlug": "glaceon"
   },
   {
@@ -5000,6 +5322,7 @@
       "Cute Charm"
     ],
     "hiddenAbility": "Pixilate",
+    "canBeShiny": true,
     "iconSlug": "sylveon"
   },
   {
@@ -5018,6 +5341,7 @@
       "Gluttony"
     ],
     "hiddenAbility": "Bulletproof",
+    "canBeShiny": true,
     "iconSlug": "applin"
   },
   {
@@ -5036,6 +5360,7 @@
       "Gluttony"
     ],
     "hiddenAbility": "Hustle",
+    "canBeShiny": true,
     "iconSlug": "flapple"
   },
   {
@@ -5054,6 +5379,7 @@
       "Gluttony"
     ],
     "hiddenAbility": "Hustle",
+    "canBeShiny": true,
     "iconSlug": "flapple-gmax"
   },
   {
@@ -5072,6 +5398,7 @@
       "Gluttony"
     ],
     "hiddenAbility": "Thick Fat",
+    "canBeShiny": true,
     "iconSlug": "appletun"
   },
   {
@@ -5090,6 +5417,7 @@
       "Gluttony"
     ],
     "hiddenAbility": "Hustle",
+    "canBeShiny": true,
     "iconSlug": "flapple-gmax"
   },
   {
@@ -5106,6 +5434,7 @@
       "Infiltrator"
     ],
     "hiddenAbility": "Own Tempo",
+    "canBeShiny": true,
     "iconSlug": "espurr"
   },
   {
@@ -5122,6 +5451,7 @@
       "Infiltrator"
     ],
     "hiddenAbility": "Prankster",
+    "canBeShiny": true,
     "iconSlug": "meowstic"
   },
   {
@@ -5138,6 +5468,7 @@
       "Infiltrator"
     ],
     "hiddenAbility": "Competitive",
+    "canBeShiny": true,
     "iconSlug": "female/meowstic"
   },
   {
@@ -5153,6 +5484,7 @@
       "Sweet Veil"
     ],
     "hiddenAbility": "Unburden",
+    "canBeShiny": true,
     "iconSlug": "swirlix"
   },
   {
@@ -5168,6 +5500,7 @@
       "Sweet Veil"
     ],
     "hiddenAbility": "Unburden",
+    "canBeShiny": true,
     "iconSlug": "slurpuff"
   },
   {
@@ -5183,6 +5516,7 @@
       "Healer"
     ],
     "hiddenAbility": "Aroma Veil",
+    "canBeShiny": true,
     "iconSlug": "spritzee"
   },
   {
@@ -5198,6 +5532,7 @@
       "Healer"
     ],
     "hiddenAbility": "Aroma Veil",
+    "canBeShiny": true,
     "iconSlug": "aromatisse"
   },
   {
@@ -5215,6 +5550,7 @@
       "Water Bubble"
     ],
     "hiddenAbility": "Water Absorb",
+    "canBeShiny": true,
     "iconSlug": "dewpider"
   },
   {
@@ -5232,6 +5568,7 @@
       "Water Bubble"
     ],
     "hiddenAbility": "Water Absorb",
+    "canBeShiny": true,
     "iconSlug": "araquanid"
   },
   {
@@ -5247,6 +5584,7 @@
       "Shadow Tag"
     ],
     "hiddenAbility": "Telepathy",
+    "canBeShiny": true,
     "iconSlug": "wynaut"
   },
   {
@@ -5262,6 +5600,7 @@
       "Shadow Tag"
     ],
     "hiddenAbility": "Telepathy",
+    "canBeShiny": true,
     "iconSlug": "wobbuffet"
   },
   {
@@ -5280,6 +5619,7 @@
       "Inner Focus"
     ],
     "hiddenAbility": "Defiant",
+    "canBeShiny": true,
     "iconSlug": "farfetchd"
   },
   {
@@ -5296,6 +5636,7 @@
       "Steadfast"
     ],
     "hiddenAbility": "Scrappy",
+    "canBeShiny": true,
     "iconSlug": "farfetchd-galar"
   },
   {
@@ -5312,6 +5653,7 @@
       "Steadfast"
     ],
     "hiddenAbility": "Scrappy",
+    "canBeShiny": true,
     "iconSlug": "sirfetchd"
   },
   {
@@ -5329,6 +5671,7 @@
       "Illuminate"
     ],
     "hiddenAbility": "Water Absorb",
+    "canBeShiny": true,
     "iconSlug": "chinchou"
   },
   {
@@ -5346,6 +5689,7 @@
       "Illuminate"
     ],
     "hiddenAbility": "Water Absorb",
+    "canBeShiny": true,
     "iconSlug": "lanturn"
   },
   {
@@ -5363,6 +5707,7 @@
       "Dry Skin"
     ],
     "hiddenAbility": "Poison Touch",
+    "canBeShiny": true,
     "iconSlug": "croagunk"
   },
   {
@@ -5380,6 +5725,7 @@
       "Dry Skin"
     ],
     "hiddenAbility": "Poison Touch",
+    "canBeShiny": true,
     "iconSlug": "toxicroak"
   },
   {
@@ -5398,6 +5744,7 @@
       "Moxie"
     ],
     "hiddenAbility": "Intimidate",
+    "canBeShiny": true,
     "iconSlug": "scraggy"
   },
   {
@@ -5416,6 +5763,7 @@
       "Moxie"
     ],
     "hiddenAbility": "Intimidate",
+    "canBeShiny": true,
     "iconSlug": "scrafty"
   },
   {
@@ -5434,6 +5782,7 @@
       "Limber"
     ],
     "hiddenAbility": "Sand Veil",
+    "canBeShiny": true,
     "iconSlug": "stunfisk"
   },
   {
@@ -5451,6 +5800,7 @@
       "Mimicry"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "stunfisk-galar"
   },
   {
@@ -5468,6 +5818,7 @@
       "Gluttony"
     ],
     "hiddenAbility": "Contrary",
+    "canBeShiny": true,
     "iconSlug": "shuckle"
   },
   {
@@ -5485,6 +5836,7 @@
       "Anticipation"
     ],
     "hiddenAbility": "Hydration",
+    "canBeShiny": true,
     "iconSlug": "barboach"
   },
   {
@@ -5502,6 +5854,7 @@
       "Anticipation"
     ],
     "hiddenAbility": "Hydration",
+    "canBeShiny": true,
     "iconSlug": "whiscash"
   },
   {
@@ -5519,6 +5872,7 @@
       "Storm Drain"
     ],
     "hiddenAbility": "Sand Force",
+    "canBeShiny": true,
     "iconSlug": "shellos"
   },
   {
@@ -5536,6 +5890,7 @@
       "Storm Drain"
     ],
     "hiddenAbility": "Sand Force",
+    "canBeShiny": true,
     "iconSlug": "shellos-east"
   },
   {
@@ -5554,6 +5909,7 @@
       "Storm Drain"
     ],
     "hiddenAbility": "Sand Force",
+    "canBeShiny": true,
     "iconSlug": "gastrodon"
   },
   {
@@ -5572,6 +5928,7 @@
       "Storm Drain"
     ],
     "hiddenAbility": "Sand Force",
+    "canBeShiny": true,
     "iconSlug": "gastrodon-east"
   },
   {
@@ -5589,6 +5946,7 @@
       "Wimp Out"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "wimpod"
   },
   {
@@ -5606,6 +5964,7 @@
       "Emergency Exit"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "golisopod"
   },
   {
@@ -5623,6 +5982,7 @@
       "Sniper"
     ],
     "hiddenAbility": "Pickpocket",
+    "canBeShiny": true,
     "iconSlug": "binacle"
   },
   {
@@ -5640,6 +6000,7 @@
       "Sniper"
     ],
     "hiddenAbility": "Pickpocket",
+    "canBeShiny": true,
     "iconSlug": "barbaracle"
   },
   {
@@ -5658,6 +6019,7 @@
       "Natural Cure"
     ],
     "hiddenAbility": "Regenerator",
+    "canBeShiny": true,
     "iconSlug": "corsola"
   },
   {
@@ -5674,6 +6036,7 @@
       "Weak Armor"
     ],
     "hiddenAbility": "Cursed Body",
+    "canBeShiny": true,
     "iconSlug": "corsola-galar"
   },
   {
@@ -5690,6 +6053,7 @@
       "Weak Armor"
     ],
     "hiddenAbility": "Perish Body",
+    "canBeShiny": true,
     "iconSlug": "cursola"
   },
   {
@@ -5708,6 +6072,7 @@
       "Frisk"
     ],
     "hiddenAbility": "Pickpocket",
+    "canBeShiny": true,
     "iconSlug": "impidimp"
   },
   {
@@ -5726,6 +6091,7 @@
       "Frisk"
     ],
     "hiddenAbility": "Pickpocket",
+    "canBeShiny": true,
     "iconSlug": "morgrem"
   },
   {
@@ -5744,6 +6110,7 @@
       "Frisk"
     ],
     "hiddenAbility": "Pickpocket",
+    "canBeShiny": true,
     "iconSlug": "grimmsnarl"
   },
   {
@@ -5762,6 +6129,7 @@
       "Frisk"
     ],
     "hiddenAbility": "Pickpocket",
+    "canBeShiny": true,
     "iconSlug": "grimmsnarl-gmax"
   },
   {
@@ -5778,6 +6146,7 @@
       "Anticipation"
     ],
     "hiddenAbility": "Magic Bounce",
+    "canBeShiny": true,
     "iconSlug": "hatenna"
   },
   {
@@ -5794,6 +6163,7 @@
       "Anticipation"
     ],
     "hiddenAbility": "Magic Bounce",
+    "canBeShiny": true,
     "iconSlug": "hattrem"
   },
   {
@@ -5811,6 +6181,7 @@
       "Anticipation"
     ],
     "hiddenAbility": "Magic Bounce",
+    "canBeShiny": true,
     "iconSlug": "hatterene"
   },
   {
@@ -5828,6 +6199,7 @@
       "Anticipation"
     ],
     "hiddenAbility": "Magic Bounce",
+    "canBeShiny": true,
     "iconSlug": "hatterene-gmax"
   },
   {
@@ -5845,6 +6217,7 @@
       "Corrosion"
     ],
     "hiddenAbility": "Oblivious",
+    "canBeShiny": true,
     "iconSlug": "salandit"
   },
   {
@@ -5862,6 +6235,7 @@
       "Corrosion"
     ],
     "hiddenAbility": "Oblivious",
+    "canBeShiny": true,
     "iconSlug": "salazzle"
   },
   {
@@ -5879,6 +6253,7 @@
       "Inner Focus"
     ],
     "hiddenAbility": "Pressure",
+    "canBeShiny": true,
     "iconSlug": "pawniard"
   },
   {
@@ -5896,6 +6271,7 @@
       "Inner Focus"
     ],
     "hiddenAbility": "Pressure",
+    "canBeShiny": true,
     "iconSlug": "bisharp"
   },
   {
@@ -5912,6 +6288,7 @@
       "Inner Focus"
     ],
     "hiddenAbility": "Mold Breaker",
+    "canBeShiny": true,
     "iconSlug": "throh"
   },
   {
@@ -5928,6 +6305,7 @@
       "Inner Focus"
     ],
     "hiddenAbility": "Mold Breaker",
+    "canBeShiny": true,
     "iconSlug": "sawk"
   },
   {
@@ -5944,6 +6322,7 @@
       "Neutralizing Gas"
     ],
     "hiddenAbility": "Stench",
+    "canBeShiny": true,
     "iconSlug": "koffing"
   },
   {
@@ -5961,6 +6340,7 @@
       "Neutralizing Gas"
     ],
     "hiddenAbility": "Misty Surge",
+    "canBeShiny": true,
     "iconSlug": "weezing-galar"
   },
   {
@@ -5977,6 +6357,7 @@
       "Neutralizing Gas"
     ],
     "hiddenAbility": "Stench",
+    "canBeShiny": true,
     "iconSlug": "weezing"
   },
   {
@@ -5993,6 +6374,7 @@
       "Rock Head"
     ],
     "hiddenAbility": "Rattled",
+    "canBeShiny": true,
     "iconSlug": "bonsly"
   },
   {
@@ -6009,6 +6391,7 @@
       "Rock Head"
     ],
     "hiddenAbility": "Rattled",
+    "canBeShiny": true,
     "iconSlug": "sudowoodo"
   },
   {
@@ -6025,6 +6408,7 @@
       "Magic Guard"
     ],
     "hiddenAbility": "Friend Guard",
+    "canBeShiny": true,
     "iconSlug": "cleffa"
   },
   {
@@ -6041,6 +6425,7 @@
       "Magic Guard"
     ],
     "hiddenAbility": "Friend Guard",
+    "canBeShiny": true,
     "iconSlug": "clefairy"
   },
   {
@@ -6057,6 +6442,7 @@
       "Magic Guard"
     ],
     "hiddenAbility": "Unaware",
+    "canBeShiny": true,
     "iconSlug": "clefable"
   },
   {
@@ -6073,6 +6459,7 @@
       "Serene Grace"
     ],
     "hiddenAbility": "Super Luck",
+    "canBeShiny": true,
     "iconSlug": "togepi"
   },
   {
@@ -6091,6 +6478,7 @@
       "Serene Grace"
     ],
     "hiddenAbility": "Super Luck",
+    "canBeShiny": true,
     "iconSlug": "togetic"
   },
   {
@@ -6109,6 +6497,7 @@
       "Serene Grace"
     ],
     "hiddenAbility": "Super Luck",
+    "canBeShiny": true,
     "iconSlug": "togekiss"
   },
   {
@@ -6125,6 +6514,7 @@
       "Thick Fat"
     ],
     "hiddenAbility": "Gluttony",
+    "canBeShiny": true,
     "iconSlug": "munchlax"
   },
   {
@@ -6141,6 +6531,7 @@
       "Thick Fat"
     ],
     "hiddenAbility": "Gluttony",
+    "canBeShiny": true,
     "iconSlug": "snorlax"
   },
   {
@@ -6157,6 +6548,7 @@
       "Thick Fat"
     ],
     "hiddenAbility": "Gluttony",
+    "canBeShiny": true,
     "iconSlug": "snorlax-gmax"
   },
   {
@@ -6175,6 +6567,7 @@
       "Infiltrator"
     ],
     "hiddenAbility": "Chlorophyll",
+    "canBeShiny": true,
     "iconSlug": "cottonee"
   },
   {
@@ -6193,6 +6586,7 @@
       "Infiltrator"
     ],
     "hiddenAbility": "Chlorophyll",
+    "canBeShiny": true,
     "iconSlug": "whimsicott"
   },
   {
@@ -6211,6 +6605,7 @@
       "Rock Head"
     ],
     "hiddenAbility": "Reckless",
+    "canBeShiny": true,
     "iconSlug": "rhyhorn"
   },
   {
@@ -6229,6 +6624,7 @@
       "Rock Head"
     ],
     "hiddenAbility": "Reckless",
+    "canBeShiny": true,
     "iconSlug": "rhydon"
   },
   {
@@ -6247,6 +6643,7 @@
       "Solid Rock"
     ],
     "hiddenAbility": "Reckless",
+    "canBeShiny": true,
     "iconSlug": "rhyperior"
   },
   {
@@ -6263,6 +6660,7 @@
       "Competitive"
     ],
     "hiddenAbility": "Shadow Tag",
+    "canBeShiny": true,
     "iconSlug": "gothita"
   },
   {
@@ -6279,6 +6677,7 @@
       "Competitive"
     ],
     "hiddenAbility": "Shadow Tag",
+    "canBeShiny": true,
     "iconSlug": "gothorita"
   },
   {
@@ -6295,6 +6694,7 @@
       "Competitive"
     ],
     "hiddenAbility": "Shadow Tag",
+    "canBeShiny": true,
     "iconSlug": "gothitelle"
   },
   {
@@ -6311,6 +6711,7 @@
       "Magic Guard"
     ],
     "hiddenAbility": "Regenerator",
+    "canBeShiny": true,
     "iconSlug": "solosis"
   },
   {
@@ -6327,6 +6728,7 @@
       "Magic Guard"
     ],
     "hiddenAbility": "Regenerator",
+    "canBeShiny": true,
     "iconSlug": "duosion"
   },
   {
@@ -6343,6 +6745,7 @@
       "Magic Guard"
     ],
     "hiddenAbility": "Regenerator",
+    "canBeShiny": true,
     "iconSlug": "reuniclus"
   },
   {
@@ -6359,6 +6762,7 @@
       "Shed Skin"
     ],
     "hiddenAbility": "No Guard",
+    "canBeShiny": true,
     "iconSlug": "karrablast"
   },
   {
@@ -6376,6 +6780,7 @@
       "Shell Armor"
     ],
     "hiddenAbility": "Overcoat",
+    "canBeShiny": true,
     "iconSlug": "escavalier"
   },
   {
@@ -6392,6 +6797,7 @@
       "Shell Armor"
     ],
     "hiddenAbility": "Overcoat",
+    "canBeShiny": true,
     "iconSlug": "shelmet"
   },
   {
@@ -6408,6 +6814,7 @@
       "Sticky Hold"
     ],
     "hiddenAbility": "Unburden",
+    "canBeShiny": true,
     "iconSlug": "accelgor"
   },
   {
@@ -6424,6 +6831,7 @@
       "Synchronize"
     ],
     "hiddenAbility": "Analytic",
+    "canBeShiny": true,
     "iconSlug": "elgyem"
   },
   {
@@ -6440,6 +6848,7 @@
       "Synchronize"
     ],
     "hiddenAbility": "Analytic",
+    "canBeShiny": true,
     "iconSlug": "beheeyem"
   },
   {
@@ -6456,6 +6865,7 @@
       "Slush Rush"
     ],
     "hiddenAbility": "Rattled",
+    "canBeShiny": true,
     "iconSlug": "cubchoo"
   },
   {
@@ -6472,6 +6882,7 @@
       "Slush Rush"
     ],
     "hiddenAbility": "Swift Swim",
+    "canBeShiny": true,
     "iconSlug": "beartic"
   },
   {
@@ -6489,6 +6900,7 @@
       "Sheer Force"
     ],
     "hiddenAbility": "Hustle",
+    "canBeShiny": true,
     "iconSlug": "rufflet"
   },
   {
@@ -6506,6 +6918,7 @@
       "Sheer Force"
     ],
     "hiddenAbility": "Defiant",
+    "canBeShiny": true,
     "iconSlug": "braviary"
   },
   {
@@ -6523,6 +6936,7 @@
       "Overcoat"
     ],
     "hiddenAbility": "Weak Armor",
+    "canBeShiny": true,
     "iconSlug": "vullaby"
   },
   {
@@ -6540,6 +6954,7 @@
       "Overcoat"
     ],
     "hiddenAbility": "Weak Armor",
+    "canBeShiny": true,
     "iconSlug": "mandibuzz"
   },
   {
@@ -6558,6 +6973,7 @@
       "Sniper"
     ],
     "hiddenAbility": "Keen Eye",
+    "canBeShiny": true,
     "iconSlug": "skorupi"
   },
   {
@@ -6576,6 +6992,7 @@
       "Sniper"
     ],
     "hiddenAbility": "Keen Eye",
+    "canBeShiny": true,
     "iconSlug": "drapion"
   },
   {
@@ -6593,6 +7010,7 @@
       "Flame Body"
     ],
     "hiddenAbility": "Infiltrator",
+    "canBeShiny": true,
     "iconSlug": "litwick"
   },
   {
@@ -6610,6 +7028,7 @@
       "Flame Body"
     ],
     "hiddenAbility": "Infiltrator",
+    "canBeShiny": true,
     "iconSlug": "lampent"
   },
   {
@@ -6627,6 +7046,7 @@
       "Flame Body"
     ],
     "hiddenAbility": "Infiltrator",
+    "canBeShiny": true,
     "iconSlug": "chandelure"
   },
   {
@@ -6645,6 +7065,7 @@
       "Suction Cups"
     ],
     "hiddenAbility": "Infiltrator",
+    "canBeShiny": true,
     "iconSlug": "inkay"
   },
   {
@@ -6663,6 +7084,7 @@
       "Suction Cups"
     ],
     "hiddenAbility": "Infiltrator",
+    "canBeShiny": true,
     "iconSlug": "malamar"
   },
   {
@@ -6680,6 +7102,7 @@
       "Keen Eye"
     ],
     "hiddenAbility": "Pickpocket",
+    "canBeShiny": true,
     "iconSlug": "sneasel"
   },
   {
@@ -6696,6 +7119,7 @@
       "Pressure"
     ],
     "hiddenAbility": "Pickpocket",
+    "canBeShiny": true,
     "iconSlug": "weavile"
   },
   {
@@ -6713,6 +7137,7 @@
       "Stall"
     ],
     "hiddenAbility": "Prankster",
+    "canBeShiny": true,
     "iconSlug": "sableye"
   },
   {
@@ -6731,6 +7156,7 @@
       "Intimidate"
     ],
     "hiddenAbility": "Sheer Force",
+    "canBeShiny": true,
     "iconSlug": "mawile"
   },
   {
@@ -6747,6 +7173,7 @@
       "Chlorophyll"
     ],
     "hiddenAbility": "Storm Drain",
+    "canBeShiny": true,
     "iconSlug": "maractus"
   },
   {
@@ -6764,6 +7191,7 @@
       "Magic Guard"
     ],
     "hiddenAbility": "Tinted Lens",
+    "canBeShiny": true,
     "iconSlug": "sigilyph"
   },
   {
@@ -6780,6 +7208,7 @@
       "Inner Focus"
     ],
     "hiddenAbility": "Prankster",
+    "canBeShiny": true,
     "iconSlug": "riolu"
   },
   {
@@ -6798,6 +7227,7 @@
       "Inner Focus"
     ],
     "hiddenAbility": "Justified",
+    "canBeShiny": true,
     "iconSlug": "lucario"
   },
   {
@@ -6814,6 +7244,7 @@
       "Drought"
     ],
     "hiddenAbility": "Shell Armor",
+    "canBeShiny": true,
     "iconSlug": "torkoal"
   },
   {
@@ -6830,6 +7261,7 @@
       "Disguise"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "mimikyu"
   },
   {
@@ -6846,6 +7278,7 @@
       "Sheer Force"
     ],
     "hiddenAbility": "Heavy Metal",
+    "canBeShiny": true,
     "iconSlug": "cufant"
   },
   {
@@ -6862,6 +7295,7 @@
       "Sheer Force"
     ],
     "hiddenAbility": "Heavy Metal",
+    "canBeShiny": true,
     "iconSlug": "copperajah"
   },
   {
@@ -6878,6 +7312,7 @@
       "Sheer Force"
     ],
     "hiddenAbility": "Heavy Metal",
+    "canBeShiny": true,
     "iconSlug": "copperajah-gmax"
   },
   {
@@ -6895,6 +7330,7 @@
       "Swift Swim"
     ],
     "hiddenAbility": "Intimidate",
+    "canBeShiny": true,
     "iconSlug": "qwilfish"
   },
   {
@@ -6912,6 +7348,7 @@
       "Cursed Body"
     ],
     "hiddenAbility": "Damp",
+    "canBeShiny": true,
     "iconSlug": "frillish"
   },
   {
@@ -6929,6 +7366,7 @@
       "Cursed Body"
     ],
     "hiddenAbility": "Damp",
+    "canBeShiny": true,
     "iconSlug": "female/frillish"
   },
   {
@@ -6946,6 +7384,7 @@
       "Cursed Body"
     ],
     "hiddenAbility": "Damp",
+    "canBeShiny": true,
     "iconSlug": "jellicent"
   },
   {
@@ -6963,6 +7402,7 @@
       "Cursed Body"
     ],
     "hiddenAbility": "Damp",
+    "canBeShiny": true,
     "iconSlug": "female/jellicent"
   },
   {
@@ -6980,6 +7420,7 @@
       "Limber"
     ],
     "hiddenAbility": "Regenerator",
+    "canBeShiny": true,
     "iconSlug": "mareanie"
   },
   {
@@ -6997,6 +7438,7 @@
       "Limber"
     ],
     "hiddenAbility": "Regenerator",
+    "canBeShiny": true,
     "iconSlug": "toxapex"
   },
   {
@@ -7014,6 +7456,7 @@
       "Gulp Missile"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "cramorant"
   },
   {
@@ -7031,6 +7474,7 @@
       "Gulp Missile"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "cramorant-gulping"
   },
   {
@@ -7048,6 +7492,7 @@
       "Gulp Missile"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "cramorant-gorging"
   },
   {
@@ -7065,6 +7510,7 @@
       "Static"
     ],
     "hiddenAbility": "Klutz",
+    "canBeShiny": true,
     "iconSlug": "toxel"
   },
   {
@@ -7082,6 +7528,7 @@
       "Plus"
     ],
     "hiddenAbility": "Technician",
+    "canBeShiny": true,
     "iconSlug": "toxtricity"
   },
   {
@@ -7099,6 +7546,7 @@
       "Minus"
     ],
     "hiddenAbility": "Technician",
+    "canBeShiny": true,
     "iconSlug": "toxtricity-low-key"
   },
   {
@@ -7116,6 +7564,7 @@
       "Plus"
     ],
     "hiddenAbility": "Technician",
+    "canBeShiny": true,
     "iconSlug": "toxtricity-gmax"
   },
   {
@@ -7133,6 +7582,7 @@
       "Minus"
     ],
     "hiddenAbility": "Technician",
+    "canBeShiny": true,
     "iconSlug": "toxtricity-gmax"
   },
   {
@@ -7150,6 +7600,7 @@
       "Shed Skin"
     ],
     "hiddenAbility": "Sand Veil",
+    "canBeShiny": true,
     "iconSlug": "silicobra"
   },
   {
@@ -7167,6 +7618,7 @@
       "Shed Skin"
     ],
     "hiddenAbility": "Sand Veil",
+    "canBeShiny": true,
     "iconSlug": "sandaconda"
   },
   {
@@ -7184,6 +7636,7 @@
       "Shed Skin"
     ],
     "hiddenAbility": "Sand Veil",
+    "canBeShiny": true,
     "iconSlug": "sandaconda-gmax"
   },
   {
@@ -7199,6 +7652,7 @@
       "Sand Stream"
     ],
     "hiddenAbility": "Sand Force",
+    "canBeShiny": true,
     "iconSlug": "hippopotas"
   },
   {
@@ -7214,6 +7668,7 @@
       "Sand Stream"
     ],
     "hiddenAbility": "Sand Force",
+    "canBeShiny": true,
     "iconSlug": "female/hippopotas"
   },
   {
@@ -7229,6 +7684,7 @@
       "Sand Stream"
     ],
     "hiddenAbility": "Sand Force",
+    "canBeShiny": true,
     "iconSlug": "hippowdon"
   },
   {
@@ -7244,6 +7700,7 @@
       "Sand Stream"
     ],
     "hiddenAbility": "Sand Force",
+    "canBeShiny": true,
     "iconSlug": "female/hippowdon"
   },
   {
@@ -7261,6 +7718,7 @@
       "Hustle"
     ],
     "hiddenAbility": "Truant",
+    "canBeShiny": true,
     "iconSlug": "durant"
   },
   {
@@ -7277,6 +7735,7 @@
       "Flash Fire"
     ],
     "hiddenAbility": "White Smoke",
+    "canBeShiny": true,
     "iconSlug": "heatmor"
   },
   {
@@ -7295,6 +7754,7 @@
       "Sand Veil"
     ],
     "hiddenAbility": "Solar Power",
+    "canBeShiny": true,
     "iconSlug": "helioptile"
   },
   {
@@ -7313,6 +7773,7 @@
       "Sand Veil"
     ],
     "hiddenAbility": "Solar Power",
+    "canBeShiny": true,
     "iconSlug": "heliolisk"
   },
   {
@@ -7331,6 +7792,7 @@
       "Unburden"
     ],
     "hiddenAbility": "Mold Breaker",
+    "canBeShiny": true,
     "iconSlug": "hawlucha"
   },
   {
@@ -7348,6 +7810,7 @@
       "Arena Trap"
     ],
     "hiddenAbility": "Sheer Force",
+    "canBeShiny": true,
     "iconSlug": "trapinch"
   },
   {
@@ -7365,6 +7828,7 @@
       "Levitate"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "vibrava"
   },
   {
@@ -7382,6 +7846,7 @@
       "Levitate"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "flygon"
   },
   {
@@ -7399,6 +7864,7 @@
       "Mold Breaker"
     ],
     "hiddenAbility": "Unnerve",
+    "canBeShiny": true,
     "iconSlug": "axew"
   },
   {
@@ -7416,6 +7882,7 @@
       "Mold Breaker"
     ],
     "hiddenAbility": "Unnerve",
+    "canBeShiny": true,
     "iconSlug": "fraxure"
   },
   {
@@ -7433,6 +7900,7 @@
       "Mold Breaker"
     ],
     "hiddenAbility": "Unnerve",
+    "canBeShiny": true,
     "iconSlug": "haxorus"
   },
   {
@@ -7449,6 +7917,7 @@
       "Mummy"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "yamask"
   },
   {
@@ -7466,6 +7935,7 @@
       "Wandering Spirit"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "yamask-galar"
   },
   {
@@ -7483,6 +7953,7 @@
       "Wandering Spirit"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "runerigus"
   },
   {
@@ -7499,6 +7970,7 @@
       "Mummy"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "cofagrigus"
   },
   {
@@ -7515,6 +7987,7 @@
       "No Guard"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "honedge"
   },
   {
@@ -7531,6 +8004,7 @@
       "No Guard"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "doublade"
   },
   {
@@ -7547,6 +8021,7 @@
       "Stance Change"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "aegislash"
   },
   {
@@ -7563,6 +8038,7 @@
       "Stance Change"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "aegislash-blade"
   },
   {
@@ -7579,6 +8055,7 @@
       "Flash Fire"
     ],
     "hiddenAbility": "Flame Body",
+    "canBeShiny": true,
     "iconSlug": "ponyta"
   },
   {
@@ -7595,6 +8072,7 @@
       "Pastel Veil"
     ],
     "hiddenAbility": "Anticipation",
+    "canBeShiny": true,
     "iconSlug": "ponyta-galar"
   },
   {
@@ -7611,6 +8089,7 @@
       "Flash Fire"
     ],
     "hiddenAbility": "Flame Body",
+    "canBeShiny": true,
     "iconSlug": "rapidash"
   },
   {
@@ -7628,6 +8107,7 @@
       "Pastel Veil"
     ],
     "hiddenAbility": "Anticipation",
+    "canBeShiny": true,
     "iconSlug": "rapidash-galar"
   },
   {
@@ -7644,6 +8124,7 @@
       "Weak Armor"
     ],
     "hiddenAbility": "Cursed Body",
+    "canBeShiny": true,
     "iconSlug": "sinistea"
   },
   {
@@ -7660,6 +8141,7 @@
       "Weak Armor"
     ],
     "hiddenAbility": "Cursed Body",
+    "canBeShiny": true,
     "iconSlug": "sinistea"
   },
   {
@@ -7676,6 +8158,7 @@
       "Weak Armor"
     ],
     "hiddenAbility": "Cursed Body",
+    "canBeShiny": true,
     "iconSlug": "polteageist"
   },
   {
@@ -7692,6 +8175,7 @@
       "Weak Armor"
     ],
     "hiddenAbility": "Cursed Body",
+    "canBeShiny": true,
     "iconSlug": "polteageist"
   },
   {
@@ -7709,6 +8193,7 @@
       "Synchronize"
     ],
     "hiddenAbility": "Psychic Surge",
+    "canBeShiny": true,
     "iconSlug": "indeedee"
   },
   {
@@ -7726,6 +8211,7 @@
       "Synchronize"
     ],
     "hiddenAbility": "Psychic Surge",
+    "canBeShiny": true,
     "iconSlug": "female/indeedee"
   },
   {
@@ -7744,6 +8230,7 @@
       "Frisk"
     ],
     "hiddenAbility": "Harvest",
+    "canBeShiny": true,
     "iconSlug": "phantump"
   },
   {
@@ -7762,6 +8249,7 @@
       "Frisk"
     ],
     "hiddenAbility": "Harvest",
+    "canBeShiny": true,
     "iconSlug": "trevenant"
   },
   {
@@ -7779,6 +8267,7 @@
       "Effect Spore"
     ],
     "hiddenAbility": "Rain Dish",
+    "canBeShiny": true,
     "iconSlug": "morelull"
   },
   {
@@ -7796,6 +8285,7 @@
       "Effect Spore"
     ],
     "hiddenAbility": "Rain Dish",
+    "canBeShiny": true,
     "iconSlug": "shiinotic"
   },
   {
@@ -7813,6 +8303,7 @@
       "Telepathy"
     ],
     "hiddenAbility": "Symbiosis",
+    "canBeShiny": true,
     "iconSlug": "oranguru"
   },
   {
@@ -7828,6 +8319,7 @@
       "Receiver"
     ],
     "hiddenAbility": "Defiant",
+    "canBeShiny": true,
     "iconSlug": "passimian"
   },
   {
@@ -7845,6 +8337,7 @@
       "Hunger Switch"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "morpeko"
   },
   {
@@ -7862,6 +8355,7 @@
       "Hunger Switch"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "morpeko-hangry"
   },
   {
@@ -7878,6 +8372,7 @@
       "Battle Armor"
     ],
     "hiddenAbility": "Defiant",
+    "canBeShiny": true,
     "iconSlug": "falinks"
   },
   {
@@ -7896,6 +8391,7 @@
       "Sap Sipper"
     ],
     "hiddenAbility": "Cloud Nine",
+    "canBeShiny": true,
     "iconSlug": "drampa"
   },
   {
@@ -7913,6 +8409,7 @@
       "Shell Armor"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "turtonator"
   },
   {
@@ -7931,6 +8428,7 @@
       "Lightning Rod"
     ],
     "hiddenAbility": "Sturdy",
+    "canBeShiny": true,
     "iconSlug": "togedemaru"
   },
   {
@@ -7947,6 +8445,7 @@
       "Shield Dust"
     ],
     "hiddenAbility": "Ice Scales",
+    "canBeShiny": true,
     "iconSlug": "snom"
   },
   {
@@ -7963,6 +8462,7 @@
       "Shield Dust"
     ],
     "hiddenAbility": "Ice Scales",
+    "canBeShiny": true,
     "iconSlug": "frosmoth"
   },
   {
@@ -7979,6 +8479,7 @@
       "Limber"
     ],
     "hiddenAbility": "Technician",
+    "canBeShiny": true,
     "iconSlug": "clobbopus"
   },
   {
@@ -7995,6 +8496,7 @@
       "Limber"
     ],
     "hiddenAbility": "Technician",
+    "canBeShiny": true,
     "iconSlug": "grapploct"
   },
   {
@@ -8011,6 +8513,7 @@
       "Lightning Rod"
     ],
     "hiddenAbility": "Electric Surge",
+    "canBeShiny": true,
     "iconSlug": "pincurchin"
   },
   {
@@ -8028,6 +8531,7 @@
       "Water Absorb"
     ],
     "hiddenAbility": "Water Veil",
+    "canBeShiny": true,
     "iconSlug": "mantyke"
   },
   {
@@ -8045,6 +8549,7 @@
       "Water Absorb"
     ],
     "hiddenAbility": "Water Veil",
+    "canBeShiny": true,
     "iconSlug": "mantine"
   },
   {
@@ -8062,6 +8567,7 @@
       "Oblivious"
     ],
     "hiddenAbility": "Pressure",
+    "canBeShiny": true,
     "iconSlug": "wailmer"
   },
   {
@@ -8079,6 +8585,7 @@
       "Oblivious"
     ],
     "hiddenAbility": "Pressure",
+    "canBeShiny": true,
     "iconSlug": "wailord"
   },
   {
@@ -8096,6 +8603,7 @@
       "Ice Body"
     ],
     "hiddenAbility": "Sturdy",
+    "canBeShiny": true,
     "iconSlug": "bergmite"
   },
   {
@@ -8113,6 +8621,7 @@
       "Ice Body"
     ],
     "hiddenAbility": "Sturdy",
+    "canBeShiny": true,
     "iconSlug": "avalugg"
   },
   {
@@ -8129,6 +8638,7 @@
       "Steelworker"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "dhelmise"
   },
   {
@@ -8147,6 +8657,7 @@
       "Shell Armor"
     ],
     "hiddenAbility": "Hydration",
+    "canBeShiny": true,
     "iconSlug": "lapras"
   },
   {
@@ -8165,6 +8676,7 @@
       "Shell Armor"
     ],
     "hiddenAbility": "Hydration",
+    "canBeShiny": true,
     "iconSlug": "lapras-gmax"
   },
   {
@@ -8181,6 +8693,7 @@
       "Levitate"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "lunatone"
   },
   {
@@ -8197,6 +8710,7 @@
       "Levitate"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "solrock"
   },
   {
@@ -8214,6 +8728,7 @@
       "Filter"
     ],
     "hiddenAbility": "Technician",
+    "canBeShiny": true,
     "iconSlug": "mime-jr"
   },
   {
@@ -8231,6 +8746,7 @@
       "Filter"
     ],
     "hiddenAbility": "Technician",
+    "canBeShiny": true,
     "iconSlug": "mr-mime"
   },
   {
@@ -8248,6 +8764,7 @@
       "Screen Cleaner"
     ],
     "hiddenAbility": "Ice Body",
+    "canBeShiny": true,
     "iconSlug": "mr-mime-galar"
   },
   {
@@ -8265,6 +8782,7 @@
       "Screen Cleaner"
     ],
     "hiddenAbility": "Ice Body",
+    "canBeShiny": true,
     "iconSlug": "mr-rime"
   },
   {
@@ -8280,6 +8798,7 @@
       "Hustle"
     ],
     "hiddenAbility": "Inner Focus",
+    "canBeShiny": true,
     "iconSlug": "darumaka"
   },
   {
@@ -8295,6 +8814,7 @@
       "Hustle"
     ],
     "hiddenAbility": "Inner Focus",
+    "canBeShiny": true,
     "iconSlug": "darumaka-galar"
   },
   {
@@ -8310,6 +8830,7 @@
       "Sheer Force"
     ],
     "hiddenAbility": "Zen Mode",
+    "canBeShiny": true,
     "iconSlug": "darmanitan"
   },
   {
@@ -8326,6 +8847,7 @@
       "Sheer Force"
     ],
     "hiddenAbility": "Zen Mode",
+    "canBeShiny": true,
     "iconSlug": "darmanitan-zen"
   },
   {
@@ -8341,6 +8863,7 @@
       "Gorilla Tactics"
     ],
     "hiddenAbility": "Zen Mode",
+    "canBeShiny": true,
     "iconSlug": "darmanitan-galar"
   },
   {
@@ -8357,6 +8880,7 @@
       "Gorilla Tactics"
     ],
     "hiddenAbility": "Zen Mode",
+    "canBeShiny": true,
     "iconSlug": "darmanitan-galar-zen"
   },
   {
@@ -8372,6 +8896,7 @@
       "Power Spot"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "stonjourner"
   },
   {
@@ -8388,6 +8913,7 @@
       "Ice Face"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "eiscue-noice"
   },
   {
@@ -8404,6 +8930,7 @@
       "Ice Face"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "eiscue"
   },
   {
@@ -8422,6 +8949,7 @@
       "Heavy Metal"
     ],
     "hiddenAbility": "Stalwart",
+    "canBeShiny": true,
     "iconSlug": "duraludon"
   },
   {
@@ -8440,6 +8968,7 @@
       "Heavy Metal"
     ],
     "hiddenAbility": "Stalwart",
+    "canBeShiny": true,
     "iconSlug": "duraludon-gmax"
   },
   {
@@ -8456,6 +8985,7 @@
       "Levitate"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "rotom"
   },
   {
@@ -8472,6 +9002,7 @@
       "Levitate"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "rotom-fan"
   },
   {
@@ -8488,6 +9019,7 @@
       "Levitate"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "rotom-frost"
   },
   {
@@ -8504,6 +9036,7 @@
       "Levitate"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "rotom-heat"
   },
   {
@@ -8520,6 +9053,7 @@
       "Levitate"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "rotom-mow"
   },
   {
@@ -8536,6 +9070,7 @@
       "Levitate"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "rotom-wash"
   },
   {
@@ -8551,6 +9086,7 @@
       "Limber"
     ],
     "hiddenAbility": "Imposter",
+    "canBeShiny": true,
     "iconSlug": "ditto"
   },
   {
@@ -8568,6 +9104,7 @@
       "Hustle"
     ],
     "hiddenAbility": "Sand Rush",
+    "canBeShiny": true,
     "iconSlug": "dracozolt"
   },
   {
@@ -8585,6 +9122,7 @@
       "Static"
     ],
     "hiddenAbility": "Slush Rush",
+    "canBeShiny": true,
     "iconSlug": "arctozolt"
   },
   {
@@ -8602,6 +9140,7 @@
       "Strong Jaw"
     ],
     "hiddenAbility": "Sand Rush",
+    "canBeShiny": true,
     "iconSlug": "dracovish"
   },
   {
@@ -8619,6 +9158,7 @@
       "Ice Body"
     ],
     "hiddenAbility": "Slush Rush",
+    "canBeShiny": true,
     "iconSlug": "arctovish"
   },
   {
@@ -8635,6 +9175,7 @@
       "Blaze"
     ],
     "hiddenAbility": "Solar Power",
+    "canBeShiny": true,
     "iconSlug": "charmander"
   },
   {
@@ -8651,6 +9192,7 @@
       "Blaze"
     ],
     "hiddenAbility": "Solar Power",
+    "canBeShiny": true,
     "iconSlug": "charmeleon"
   },
   {
@@ -8668,6 +9210,7 @@
       "Blaze"
     ],
     "hiddenAbility": "Solar Power",
+    "canBeShiny": true,
     "iconSlug": "charizard"
   },
   {
@@ -8685,6 +9228,7 @@
       "Blaze"
     ],
     "hiddenAbility": "Solar Power",
+    "canBeShiny": true,
     "iconSlug": "charizard-gmax"
   },
   {
@@ -8700,6 +9244,7 @@
       "Battle Armor"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "type-null"
   },
   {
@@ -8715,6 +9260,7 @@
       "RKS System"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "silvally"
   },
   {
@@ -8730,6 +9276,7 @@
       "RKS System"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "silvally-steel"
   },
   {
@@ -8745,6 +9292,7 @@
       "RKS System"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "silvally-rock"
   },
   {
@@ -8760,6 +9308,7 @@
       "RKS System"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "silvally-flying"
   },
   {
@@ -8775,6 +9324,7 @@
       "RKS System"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "silvally-poison"
   },
   {
@@ -8790,6 +9340,7 @@
       "RKS System"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "silvally-ground"
   },
   {
@@ -8805,6 +9356,7 @@
       "RKS System"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "silvally-bug"
   },
   {
@@ -8820,6 +9372,7 @@
       "RKS System"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "silvally-ghost"
   },
   {
@@ -8835,6 +9388,7 @@
       "RKS System"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "silvally-fighting"
   },
   {
@@ -8850,6 +9404,7 @@
       "RKS System"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "silvally-fire"
   },
   {
@@ -8865,6 +9420,7 @@
       "RKS System"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "silvally-psychic"
   },
   {
@@ -8880,6 +9436,7 @@
       "RKS System"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "silvally-fairy"
   },
   {
@@ -8895,6 +9452,7 @@
       "RKS System"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "silvally-dark"
   },
   {
@@ -8910,6 +9468,7 @@
       "RKS System"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "silvally-ice"
   },
   {
@@ -8925,6 +9484,7 @@
       "RKS System"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "silvally-dragon"
   },
   {
@@ -8940,6 +9500,7 @@
       "RKS System"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "silvally-electric"
   },
   {
@@ -8955,6 +9516,7 @@
       "RKS System"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "silvally-grass"
   },
   {
@@ -8970,6 +9532,7 @@
       "RKS System"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "silvally-water"
   },
   {
@@ -8986,6 +9549,7 @@
       "Guts"
     ],
     "hiddenAbility": "Sand Veil",
+    "canBeShiny": true,
     "iconSlug": "larvitar"
   },
   {
@@ -9002,6 +9566,7 @@
       "Shed Skin"
     ],
     "hiddenAbility": "Shed Skin",
+    "canBeShiny": true,
     "iconSlug": "pupitar"
   },
   {
@@ -9018,6 +9583,7 @@
       "Sand Stream"
     ],
     "hiddenAbility": "Unnerve",
+    "canBeShiny": true,
     "iconSlug": "tyranitar"
   },
   {
@@ -9034,6 +9600,7 @@
       "Hustle"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "deino"
   },
   {
@@ -9050,6 +9617,7 @@
       "Hustle"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "zweilous"
   },
   {
@@ -9066,6 +9634,7 @@
       "Levitate"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "hydreigon"
   },
   {
@@ -9082,6 +9651,7 @@
       "Hydration"
     ],
     "hiddenAbility": "Gooey",
+    "canBeShiny": true,
     "iconSlug": "goomy"
   },
   {
@@ -9098,6 +9668,7 @@
       "Hydration"
     ],
     "hiddenAbility": "Gooey",
+    "canBeShiny": true,
     "iconSlug": "sliggoo"
   },
   {
@@ -9114,6 +9685,7 @@
       "Hydration"
     ],
     "hiddenAbility": "Gooey",
+    "canBeShiny": true,
     "iconSlug": "goodra"
   },
   {
@@ -9130,6 +9702,7 @@
       "Soundproof"
     ],
     "hiddenAbility": "Overcoat",
+    "canBeShiny": true,
     "iconSlug": "jangmo-o"
   },
   {
@@ -9147,6 +9720,7 @@
       "Soundproof"
     ],
     "hiddenAbility": "Overcoat",
+    "canBeShiny": true,
     "iconSlug": "hakamo-o"
   },
   {
@@ -9164,6 +9738,7 @@
       "Soundproof"
     ],
     "hiddenAbility": "Overcoat",
+    "canBeShiny": true,
     "iconSlug": "kommo-o"
   },
   {
@@ -9182,6 +9757,7 @@
       "Infiltrator"
     ],
     "hiddenAbility": "Cursed Body",
+    "canBeShiny": true,
     "iconSlug": "dreepy"
   },
   {
@@ -9200,6 +9776,7 @@
       "Infiltrator"
     ],
     "hiddenAbility": "Cursed Body",
+    "canBeShiny": true,
     "iconSlug": "drakloak"
   },
   {
@@ -9218,6 +9795,7 @@
       "Infiltrator"
     ],
     "hiddenAbility": "Cursed Body",
+    "canBeShiny": true,
     "iconSlug": "dragapult"
   },
   {
@@ -9233,6 +9811,7 @@
       "Intrepid Sword"
     ],
     "hiddenAbility": null,
+    "canBeShiny": false,
     "iconSlug": "zacian"
   },
   {
@@ -9249,6 +9828,7 @@
       "Intrepid Sword"
     ],
     "hiddenAbility": null,
+    "canBeShiny": false,
     "iconSlug": "zacian-crowned"
   },
   {
@@ -9264,6 +9844,7 @@
       "Dauntless Shield"
     ],
     "hiddenAbility": null,
+    "canBeShiny": false,
     "iconSlug": "zamazenta"
   },
   {
@@ -9280,6 +9861,7 @@
       "Dauntless Shield"
     ],
     "hiddenAbility": null,
+    "canBeShiny": false,
     "iconSlug": "zamazenta-crowned"
   },
   {
@@ -9296,6 +9878,7 @@
       "Pressure"
     ],
     "hiddenAbility": null,
+    "canBeShiny": false,
     "iconSlug": "eternatus"
   },
   {
@@ -9312,6 +9895,7 @@
       "Pressure"
     ],
     "hiddenAbility": null,
+    "canBeShiny": false,
     "iconSlug": "eternatus-eternamax"
   },
   {
@@ -9329,6 +9913,7 @@
       "Overgrow"
     ],
     "hiddenAbility": "Chlorophyll",
+    "canBeShiny": true,
     "iconSlug": "bulbasaur"
   },
   {
@@ -9346,6 +9931,7 @@
       "Overgrow"
     ],
     "hiddenAbility": "Chlorophyll",
+    "canBeShiny": true,
     "iconSlug": "ivysaur"
   },
   {
@@ -9363,6 +9949,7 @@
       "Overgrow"
     ],
     "hiddenAbility": "Chlorophyll",
+    "canBeShiny": true,
     "iconSlug": "venusaur"
   },
   {
@@ -9379,6 +9966,7 @@
       "Torrent"
     ],
     "hiddenAbility": "Rain Dish",
+    "canBeShiny": true,
     "iconSlug": "squirtle"
   },
   {
@@ -9395,6 +9983,7 @@
       "Torrent"
     ],
     "hiddenAbility": "Rain Dish",
+    "canBeShiny": true,
     "iconSlug": "wartortle"
   },
   {
@@ -9411,6 +10000,7 @@
       "Torrent"
     ],
     "hiddenAbility": "Rain Dish",
+    "canBeShiny": true,
     "iconSlug": "blastoise"
   },
   {
@@ -9429,6 +10019,7 @@
       "Own Tempo"
     ],
     "hiddenAbility": "Regenerator",
+    "canBeShiny": true,
     "iconSlug": "slowpoke"
   },
   {
@@ -9447,6 +10038,7 @@
       "Own Tempo"
     ],
     "hiddenAbility": "Regenerator",
+    "canBeShiny": true,
     "iconSlug": "slowpoke-galar"
   },
   {
@@ -9465,6 +10057,7 @@
       "Own Tempo"
     ],
     "hiddenAbility": "Regenerator",
+    "canBeShiny": true,
     "iconSlug": "slowbro"
   },
   {
@@ -9480,6 +10073,7 @@
       "Pressure"
     ],
     "hiddenAbility": "Unnerve",
+    "canBeShiny": true,
     "iconSlug": "mewtwo"
   },
   {
@@ -9495,6 +10089,7 @@
       "Synchronize"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "mew"
   },
   {
@@ -9513,6 +10108,7 @@
       "Own Tempo"
     ],
     "hiddenAbility": "Regenerator",
+    "canBeShiny": true,
     "iconSlug": "slowking"
   },
   {
@@ -9529,6 +10125,7 @@
       "Natural Cure"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "celebi"
   },
   {
@@ -9545,6 +10142,7 @@
       "Serene Grace"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "jirachi"
   },
   {
@@ -9561,6 +10159,7 @@
       "Justified"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "cobalion"
   },
   {
@@ -9577,6 +10176,7 @@
       "Justified"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "terrakion"
   },
   {
@@ -9593,6 +10193,7 @@
       "Justified"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "virizion"
   },
   {
@@ -9609,6 +10210,7 @@
       "Turboblaze"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "reshiram"
   },
   {
@@ -9625,6 +10227,7 @@
       "Teravolt"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "zekrom"
   },
   {
@@ -9641,6 +10244,7 @@
       "Pressure"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "kyurem"
   },
   {
@@ -9657,6 +10261,7 @@
       "Teravolt"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "kyurem-black"
   },
   {
@@ -9673,6 +10278,7 @@
       "Turboblaze"
     ],
     "hiddenAbility": null,
+    "canBeShiny": true,
     "iconSlug": "kyurem-white"
   },
   {
@@ -9689,6 +10295,7 @@
       "Justified"
     ],
     "hiddenAbility": null,
+    "canBeShiny": false,
     "iconSlug": "keldeo"
   },
   {
@@ -9705,6 +10312,7 @@
       "Justified"
     ],
     "hiddenAbility": null,
+    "canBeShiny": false,
     "iconSlug": "keldeo-resolute"
   },
   {
@@ -9721,6 +10329,7 @@
       "Overgrow"
     ],
     "hiddenAbility": "Long Reach",
+    "canBeShiny": true,
     "iconSlug": "rowlet"
   },
   {
@@ -9737,6 +10346,7 @@
       "Overgrow"
     ],
     "hiddenAbility": "Long Reach",
+    "canBeShiny": true,
     "iconSlug": "dartrix"
   },
   {
@@ -9753,6 +10363,7 @@
       "Overgrow"
     ],
     "hiddenAbility": "Long Reach",
+    "canBeShiny": true,
     "iconSlug": "decidueye"
   },
   {
@@ -9768,6 +10379,7 @@
       "Blaze"
     ],
     "hiddenAbility": "Intimidate",
+    "canBeShiny": true,
     "iconSlug": "litten"
   },
   {
@@ -9783,161 +10395,2404 @@
       "Blaze"
     ],
     "hiddenAbility": "Intimidate",
+    "canBeShiny": true,
     "iconSlug": "torracat"
   },
   {
-    "name": "Incineroar", "dex": "727", "types": ["Fire"   , "Dark" ],  "eggGroups": ["Field"    ],  "abilities": ["Blaze"    ], "hiddenAbility": "Intimidate", "iconSlug": "incineroar"},
+    "name": "Incineroar",
+    "dex": "727",
+    "types": [
+      "Fire",
+      "Dark"
+    ],
+    "eggGroups": [
+      "Field"
+    ],
+    "abilities": [
+      "Blaze"
+    ],
+    "hiddenAbility": "Intimidate",
+    "canBeShiny": true,
+    "iconSlug": "incineroar"
+  },
   {
-    "name": "Popplio", "dex": "728", "types": ["Water"    ],  "eggGroups": ["Water1"   , "Field" ],  "abilities": ["Torrent"    ], "hiddenAbility": "Liquid Voice", "iconSlug": "popplio"},
+    "name": "Popplio",
+    "dex": "728",
+    "types": [
+      "Water"
+    ],
+    "eggGroups": [
+      "Water1",
+      "Field"
+    ],
+    "abilities": [
+      "Torrent"
+    ],
+    "hiddenAbility": "Liquid Voice",
+    "canBeShiny": true,
+    "iconSlug": "popplio"
+  },
   {
-    "name": "Brionne", "dex": "729", "types": ["Water"    ],  "eggGroups": ["Water1"   , "Field" ],  "abilities": ["Torrent"    ], "hiddenAbility": "Liquid Voice", "iconSlug": "brionne"},
+    "name": "Brionne",
+    "dex": "729",
+    "types": [
+      "Water"
+    ],
+    "eggGroups": [
+      "Water1",
+      "Field"
+    ],
+    "abilities": [
+      "Torrent"
+    ],
+    "hiddenAbility": "Liquid Voice",
+    "canBeShiny": true,
+    "iconSlug": "brionne"
+  },
   {
-    "name": "Primarina", "dex": "730", "types": ["Water"   , "Fairy" ],  "eggGroups": ["Water1"   , "Field" ],  "abilities": ["Torrent"    ], "hiddenAbility": "Liquid Voice", "iconSlug": "primarina"},
+    "name": "Primarina",
+    "dex": "730",
+    "types": [
+      "Water",
+      "Fairy"
+    ],
+    "eggGroups": [
+      "Water1",
+      "Field"
+    ],
+    "abilities": [
+      "Torrent"
+    ],
+    "hiddenAbility": "Liquid Voice",
+    "canBeShiny": true,
+    "iconSlug": "primarina"
+  },
   {
-    "name": "Cosmog", "dex": "789", "types": ["Psychic"    ],  "eggGroups": ["Undiscovered"    ],  "abilities": ["Unaware"    ], "hiddenAbility": null, "iconSlug": "cosmog"},
+    "name": "Cosmog",
+    "dex": "789",
+    "types": [
+      "Psychic"
+    ],
+    "eggGroups": [
+      "Undiscovered"
+    ],
+    "abilities": [
+      "Unaware"
+    ],
+    "hiddenAbility": null,
+    "canBeShiny": false,
+    "iconSlug": "cosmog"
+  },
   {
-    "name": "Cosmoem", "dex": "790", "types": ["Psychic"    ],  "eggGroups": ["Undiscovered"    ],  "abilities": ["Sturdy"    ], "hiddenAbility": null, "iconSlug": "cosmoem"},
+    "name": "Cosmoem",
+    "dex": "790",
+    "types": [
+      "Psychic"
+    ],
+    "eggGroups": [
+      "Undiscovered"
+    ],
+    "abilities": [
+      "Sturdy"
+    ],
+    "hiddenAbility": null,
+    "canBeShiny": false,
+    "iconSlug": "cosmoem"
+  },
   {
-    "name": "Solgaleo", "dex": "791", "types": ["Psychic"   , "Steel" ],  "eggGroups": ["Undiscovered"    ],  "abilities": ["Full Metal Body"    ], "hiddenAbility": null, "iconSlug": "solgaleo"},
+    "name": "Solgaleo",
+    "dex": "791",
+    "types": [
+      "Psychic",
+      "Steel"
+    ],
+    "eggGroups": [
+      "Undiscovered"
+    ],
+    "abilities": [
+      "Full Metal Body"
+    ],
+    "hiddenAbility": null,
+    "canBeShiny": true,
+    "iconSlug": "solgaleo"
+  },
   {
-    "name": "Lunala", "dex": "792", "types": ["Psychic"   , "Ghost" ],  "eggGroups": ["Undiscovered"    ],  "abilities": ["Shadow Shield"    ], "hiddenAbility": null, "iconSlug": "lunala"},
+    "name": "Lunala",
+    "dex": "792",
+    "types": [
+      "Psychic",
+      "Ghost"
+    ],
+    "eggGroups": [
+      "Undiscovered"
+    ],
+    "abilities": [
+      "Shadow Shield"
+    ],
+    "hiddenAbility": null,
+    "canBeShiny": true,
+    "iconSlug": "lunala"
+  },
   {
-    "name": "Necrozma", "dex": "800", "types": ["Psychic"    ],  "eggGroups": ["Undiscovered"    ],  "abilities": ["Prism Armor"    ], "hiddenAbility": null, "iconSlug": "necrozma"},
+    "name": "Necrozma",
+    "dex": "800",
+    "types": [
+      "Psychic"
+    ],
+    "eggGroups": [
+      "Undiscovered"
+    ],
+    "abilities": [
+      "Prism Armor"
+    ],
+    "hiddenAbility": null,
+    "canBeShiny": true,
+    "iconSlug": "necrozma"
+  },
   {
-    "name": "Necrozma Dusk", "dex": "800", "types": ["Psychic"   , "Steel" ],  "eggGroups": ["Undiscovered"    ],  "abilities": ["Prism Armor"    ], "hiddenAbility": null, "iconSlug": "necrozma-dusk"},
+    "name": "Necrozma Dusk",
+    "dex": "800",
+    "types": [
+      "Psychic",
+      "Steel"
+    ],
+    "eggGroups": [
+      "Undiscovered"
+    ],
+    "abilities": [
+      "Prism Armor"
+    ],
+    "hiddenAbility": null,
+    "canBeShiny": true,
+    "iconSlug": "necrozma-dusk"
+  },
   {
-    "name": "Necrozma Dawn", "dex": "800", "types": ["Psychic"   , "Ghost" ],  "eggGroups": ["Undiscovered"    ],  "abilities": ["Prism Armor"    ], "hiddenAbility": null, "iconSlug": "necrozma-dawn"},
+    "name": "Necrozma Dawn",
+    "dex": "800",
+    "types": [
+      "Psychic",
+      "Ghost"
+    ],
+    "eggGroups": [
+      "Undiscovered"
+    ],
+    "abilities": [
+      "Prism Armor"
+    ],
+    "hiddenAbility": null,
+    "canBeShiny": true,
+    "iconSlug": "necrozma-dawn"
+  },
   {
-    "name": "Marshadow", "dex": "802", "types": ["Fighting"   , "Ghost" ],  "eggGroups": ["Undiscovered"    ],  "abilities": ["Technician"    ], "hiddenAbility": null, "iconSlug": "marshadow"},
+    "name": "Marshadow",
+    "dex": "802",
+    "types": [
+      "Fighting",
+      "Ghost"
+    ],
+    "eggGroups": [
+      "Undiscovered"
+    ],
+    "abilities": [
+      "Technician"
+    ],
+    "hiddenAbility": null,
+    "canBeShiny": true,
+    "iconSlug": "marshadow"
+  },
   {
-    "name": "Zeraora", "dex": "807", "types": ["Electric"    ],  "eggGroups": ["Undiscovered"    ],  "abilities": ["Volt Absorb"    ], "hiddenAbility": null, "iconSlug": "zeraora"},
+    "name": "Zeraora",
+    "dex": "807",
+    "types": [
+      "Electric"
+    ],
+    "eggGroups": [
+      "Undiscovered"
+    ],
+    "abilities": [
+      "Volt Absorb"
+    ],
+    "hiddenAbility": null,
+    "canBeShiny": true,
+    "iconSlug": "zeraora"
+  },
   {
-    "name": "Meltan", "dex": "808", "types": ["Steel"    ],  "eggGroups": ["Undiscovered"    ],  "abilities": ["Magnet Pull"    ], "hiddenAbility": null, "iconSlug": "meltan"},
+    "name": "Meltan",
+    "dex": "808",
+    "types": [
+      "Steel"
+    ],
+    "eggGroups": [
+      "Undiscovered"
+    ],
+    "abilities": [
+      "Magnet Pull"
+    ],
+    "hiddenAbility": null,
+    "canBeShiny": true,
+    "iconSlug": "meltan"
+  },
   {
-    "name": "Melmetal", "dex": "809", "types": ["Steel"    ],  "eggGroups": ["Undiscovered"    ],  "abilities": ["Iron Fist"    ], "hiddenAbility": null, "iconSlug": "melmetal"},
+    "name": "Melmetal",
+    "dex": "809",
+    "types": [
+      "Steel"
+    ],
+    "eggGroups": [
+      "Undiscovered"
+    ],
+    "abilities": [
+      "Iron Fist"
+    ],
+    "hiddenAbility": null,
+    "canBeShiny": true,
+    "iconSlug": "melmetal"
+  },
   {
-    "name": "Melmetal-Gigantamax", "dex": "809", "types": ["Steel"    ],  "eggGroups": ["Undiscovered"    ],  "abilities": ["Iron Fist"    ], "hiddenAbility": null, "iconSlug": "melmetal-gmax"},
-  {"name": "Venusaur-Gigantamax", "dex": "003", "types": ["Grass","Poison"], "eggGroups": ["Monster","Grass"], "abilities": ["Overgrow"], "hiddenAbility": "Chlorophyll", "iconSlug": "venusaur-gmax" },
-  {"name": "Blastoise-Gigantamax", "dex": "009", "types": ["Water"], "eggGroups": ["Monster","Water1"], "abilities": ["Torrent"], "hiddenAbility": "Rain Dish", "iconSlug": "blastoise-gmax" },
-  {"name": "Sandshrew", "dex": "027", "types": ["Ground"], "eggGroups": ["Field"], "abilities": ["Sand Veil"], "hiddenAbility": "Sand Rush", "iconSlug": "sandshrew" },
-  {"name": "Sandshrew-Alola", "dex": "027", "types": ["Ice","Steel"], "eggGroups": ["Field"], "abilities": ["Snow Cloak"], "hiddenAbility": "Slush Rush", "iconSlug": "sandshrew-alola" },
-  {"name": "Sandslash", "dex": "028", "types": ["Ground"], "eggGroups": ["Field"], "abilities": ["Sand Veil"], "hiddenAbility": "Sand Rush", "iconSlug": "sandslash" },
-  {"name": "Sandslash-Alola", "dex": "028", "types": ["Ice","Steel"], "eggGroups": ["Field"], "abilities": ["Snow Cloak"], "hiddenAbility": "Slush Rush", "iconSlug": "sandslash-alola" },
-  {"name": "Jigglypuff", "dex": "039", "types": ["Normal","Fairy"], "eggGroups": ["Fairy"], "abilities": ["Cute Charm","Competitive"], "hiddenAbility": "Friend Guard", "iconSlug": "jigglypuff" },
-  {"name": "Wigglytuff", "dex": "040", "types": ["Normal","Fairy"], "eggGroups": ["Fairy"], "abilities": ["Cute Charm","Competitive"], "hiddenAbility": "Frisk", "iconSlug": "wigglytuff" },
-  {"name": "Psyduck", "dex": "054", "types": ["Water"], "eggGroups": ["Water1","Field"], "abilities": ["Damp","Cloud Nine"], "hiddenAbility": "Swift Swim", "iconSlug": "psyduck" },
-  {"name": "Golduck", "dex": "055", "types": ["Water"], "eggGroups": ["Water1","Field"], "abilities": ["Damp","Cloud Nine"], "hiddenAbility": "Swift Swim", "iconSlug": "golduck" },
-  {"name": "Poliwag", "dex": "060", "types": ["Water"], "eggGroups": ["Water1"], "abilities": ["Water Absorb","Damp"], "hiddenAbility": "Swift Swim", "iconSlug": "poliwag" },
-  {"name": "Poliwhirl", "dex": "061", "types": ["Water"], "eggGroups": ["Water1"], "abilities": ["Water Absorb","Damp"], "hiddenAbility": "Swift Swim", "iconSlug": "poliwhirl" },
-  {"name": "Poliwrath", "dex": "062", "types": ["Water","Fighting"], "eggGroups": ["Water1"], "abilities": ["Water Absorb","Damp"], "hiddenAbility": "Swift Swim", "iconSlug": "poliwrath" },
-  {"name": "Abra", "dex": "063", "types": ["Psychic"], "eggGroups": ["HumanLike"], "abilities": ["Synchronize","Inner Focus"], "hiddenAbility": "Magic Guard", "iconSlug": "abra" },
-  {"name": "Kadabra", "dex": "064", "types": ["Psychic"], "eggGroups": ["HumanLike"], "abilities": ["Synchronize","Inner Focus"], "hiddenAbility": "Magic Guard", "iconSlug": "kadabra" },
-  {"name": "Alakazam", "dex": "065", "types": ["Psychic"], "eggGroups": ["HumanLike"], "abilities": ["Synchronize","Inner Focus"], "hiddenAbility": "Magic Guard", "iconSlug": "alakazam" },
-  {"name": "Tentacool", "dex": "072", "types": ["Water","Poison"], "eggGroups": ["Water3"], "abilities": ["Clear Body","Liquid Ooze"], "hiddenAbility": "Rain Dish", "iconSlug": "tentacool" },
-  {"name": "Tentacruel", "dex": "073", "types": ["Water","Poison"], "eggGroups": ["Water3"], "abilities": ["Clear Body","Liquid Ooze"], "hiddenAbility": "Rain Dish", "iconSlug": "tentacruel" },
-  {"name": "Slowbro-Galar", "dex": "080", "types": ["Poison","Psychic"], "eggGroups": ["Monster","Water 1"], "abilities": ["Quick Draw","Own Tempo"], "hiddenAbility": "Regenerator", "iconSlug": "slowbro-galar" },
-  {"name": "Magnemite", "dex": "081", "types": ["Electric","Steel"], "eggGroups": ["Mineral"], "abilities": ["Magnet Pull","Sturdy"], "hiddenAbility": "Analytic", "iconSlug": "magnemite" },
-  {"name": "Magneton", "dex": "082", "types": ["Electric","Steel"], "eggGroups": ["Mineral"], "abilities": ["Magnet Pull","Sturdy"], "hiddenAbility": "Analytic", "iconSlug": "magneton" },
-  {"name": "Exeggcute", "dex": "102", "types": ["Grass","Psychic"], "eggGroups": ["Grass"], "abilities": ["Chlorophyll"], "hiddenAbility": "Harvest", "iconSlug": "exeggcute" },
-  {"name": "Exeggutor", "dex": "103", "types": ["Grass","Psychic"], "eggGroups": ["Grass"], "abilities": ["Chlorophyll"], "hiddenAbility": "Harvest", "iconSlug": "exeggutor" },
-  {"name": "Exeggutor-Alola", "dex": "103", "types": ["Grass","Dragon"], "eggGroups": ["Grass"], "abilities": ["",""], "hiddenAbility": "", "iconSlug": "exeggutor-alola" },
-  {"name": "Cubone", "dex": "104", "types": ["Ground"], "eggGroups": ["Monster"], "abilities": ["Rock Head","Lightning Rod"], "hiddenAbility": "Battle Armor", "iconSlug": "cubone" },
-  {"name": "Marowak", "dex": "105", "types": ["Ground"], "eggGroups": ["Monster"], "abilities": ["Rock Head","Lightning Rod"], "hiddenAbility": "Battle Armor", "iconSlug": "marowak" },
-  {"name": "Marowak-Alola", "dex": "105", "types": ["Fire","Ghost"], "eggGroups": ["Monster"], "abilities": ["Cursed Body","Lightning Rod"], "hiddenAbility": "Rock Head", "iconSlug": "marowak-alola" },
-  {"name": "Lickitung", "dex": "108", "types": ["Normal"], "eggGroups": ["Monster"], "abilities": ["Own Tempo","Oblivious"], "hiddenAbility": "Cloud Nine", "iconSlug": "lickitung" },
-  {"name": "Chansey", "dex": "113", "types": ["Normal"], "eggGroups": ["Fairy"], "abilities": ["Natural Cure","Serene Grace"], "hiddenAbility": "Healer", "iconSlug": "chansey" },
-  {"name": "Tangela", "dex": "114", "types": ["Grass"], "eggGroups": ["Grass"], "abilities": ["Chlorophyll","Leaf Guard"], "hiddenAbility": "Regenerator", "iconSlug": "tangela" },
-  {"name": "Kangaskhan", "dex": "115", "types": ["Normal"], "eggGroups": ["Monster"], "abilities": ["Early Bird","Scrappy"], "hiddenAbility": "Inner Focus", "iconSlug": "kangaskhan" },
-  {"name": "Horsea", "dex": "116", "types": ["Water"], "eggGroups": ["Water1","Dragon"], "abilities": ["Swift Swim","Sniper"], "hiddenAbility": "Damp", "iconSlug": "horsea" },
-  {"name": "Seadra", "dex": "117", "types": ["Water"], "eggGroups": ["Water1","Dragon"], "abilities": ["Poison Point","Sniper"], "hiddenAbility": "Damp", "iconSlug": "seadra" },
-  {"name": "Staryu", "dex": "120", "types": ["Water"], "eggGroups": ["Water3"], "abilities": ["Illuminate","Natural Cure"], "hiddenAbility": "Analytic", "iconSlug": "staryu" },
-  {"name": "Starmie", "dex": "121", "types": ["Water","Psychic"], "eggGroups": ["Water3"], "abilities": ["Illuminate","Natural Cure"], "hiddenAbility": "Analytic", "iconSlug": "starmie" },
-  {"name": "Scyther", "dex": "123", "types": ["Bug","Flying"], "eggGroups": ["Bug"], "abilities": ["Swarm","Technician"], "hiddenAbility": "Steadfast", "iconSlug": "scyther" },
-  {"name": "Pinsir", "dex": "127", "types": ["Bug"], "eggGroups": ["Bug"], "abilities": ["Hyper Cutter","Mold Breaker"], "hiddenAbility": "Moxie", "iconSlug": "pinsir" },
-  {"name": "Tauros", "dex": "128", "types": ["Normal"], "eggGroups": ["Field"], "abilities": ["Intimidate","Anger Point"], "hiddenAbility": "Sheer Force", "iconSlug": "tauros" },
-  {"name": "Porygon", "dex": "137", "types": ["Normal"], "eggGroups": ["Mineral"], "abilities": ["Trace","Download"], "hiddenAbility": "Analytic", "iconSlug": "porygon" },
-  {"name": "Igglybuff", "dex": "174", "types": ["Normal","Fairy"], "eggGroups": ["Undiscovered"], "abilities": ["Cute Charm","Competitive"], "hiddenAbility": "Friend Guard", "iconSlug": "igglybuff" },
-  {"name": "Marill", "dex": "183", "types": ["Water","Fairy"], "eggGroups": ["Water1","Fairy"], "abilities": ["Thick Fat","Huge Power"], "hiddenAbility": "Sap Sipper", "iconSlug": "marill" },
-  {"name": "Azumarill", "dex": "184", "types": ["Water","Fairy"], "eggGroups": ["Water1","Fairy"], "abilities": ["Thick Fat","Huge Power"], "hiddenAbility": "Sap Sipper", "iconSlug": "azumarill" },
-  {"name": "Politoed", "dex": "186", "types": ["Water"], "eggGroups": ["Water1"], "abilities": ["Water Absorb","Damp"], "hiddenAbility": "Drizzle", "iconSlug": "politoed" },
-  {"name": "Slowking", "dex": "199", "types": ["Water","Psychic"], "eggGroups": ["Monster","Water1"], "abilities": ["Oblivious","Own Tempo"], "hiddenAbility": "Regenerator", "iconSlug": "slowking" },
-  {"name": "Dunsparce", "dex": "206", "types": ["Normal"], "eggGroups": ["Field"], "abilities": ["Serene Grace","Run Away"], "hiddenAbility": "Rattled", "iconSlug": "dunsparce" },
-  {"name": "Scizor", "dex": "212", "types": ["Bug","Steel"], "eggGroups": ["Bug"], "abilities": ["Swarm","Technician"], "hiddenAbility": "Light Metal", "iconSlug": "scizor" },
-  {"name": "Heracross", "dex": "214", "types": ["Bug","Fighting"], "eggGroups": ["Bug"], "abilities": ["Swarm","Guts"], "hiddenAbility": "Moxie", "iconSlug": "heracross" },
-  {"name": "Skarmory", "dex": "227", "types": ["Steel","Flying"], "eggGroups": ["Flying"], "abilities": ["Keen Eye","Sturdy"], "hiddenAbility": "Weak Armor", "iconSlug": "skarmory" },
-  {"name": "Kingdra", "dex": "230", "types": ["Water","Dragon"], "eggGroups": ["Water1","Dragon"], "abilities": ["Swift Swim","Sniper"], "hiddenAbility": "Damp", "iconSlug": "kingdra" },
-  {"name": "Porygon2", "dex": "233", "types": ["Normal"], "eggGroups": ["Mineral"], "abilities": ["Trace","Download"], "hiddenAbility": "Analytic", "iconSlug": "porygon2" },
-  {"name": "Miltank", "dex": "241", "types": ["Normal"], "eggGroups": ["Field"], "abilities": ["Thick Fat","Scrappy"], "hiddenAbility": "Sap Sipper", "iconSlug": "miltank" },
-  {"name": "Blissey", "dex": "242", "types": ["Normal"], "eggGroups": ["Fairy"], "abilities": ["Natural Cure","Serene Grace"], "hiddenAbility": "Healer", "iconSlug": "blissey" },
-  {"name": "Whismur", "dex": "293", "types": ["Normal"], "eggGroups": ["Monster","Field"], "abilities": ["Soundproof"], "hiddenAbility": "Rattled", "iconSlug": "whismur" },
-  {"name": "Loudred", "dex": "294", "types": ["Normal"], "eggGroups": ["Monster","Field"], "abilities": ["Soundproof"], "hiddenAbility": "Scrappy", "iconSlug": "loudred" },
-  {"name": "Exploud", "dex": "295", "types": ["Normal"], "eggGroups": ["Monster","Field"], "abilities": ["Soundproof"], "hiddenAbility": "Scrappy", "iconSlug": "exploud" },
-  {"name": "Azurill", "dex": "298", "types": ["Normal","Fairy"], "eggGroups": ["Undiscovered"], "abilities": ["Thick Fat","Huge Power"], "hiddenAbility": "Sap Sipper", "iconSlug": "azurill" },
-  {"name": "Carvanha", "dex": "318", "types": ["Water","Dark"], "eggGroups": ["Water2"], "abilities": ["Rough Skin"], "hiddenAbility": "Speed Boost", "iconSlug": "carvanha" },
-  {"name": "Sharpedo", "dex": "319", "types": ["Water","Dark"], "eggGroups": ["Water2"], "abilities": ["Rough Skin"], "hiddenAbility": "Speed Boost", "iconSlug": "sharpedo" },
-  {"name": "Shinx", "dex": "403", "types": ["Electric"], "eggGroups": ["Field"], "abilities": ["Rivalry","Intimidate"], "hiddenAbility": "Guts", "iconSlug": "shinx" },
-  {"name": "Luxio", "dex": "404", "types": ["Electric"], "eggGroups": ["Field"], "abilities": ["Rivalry","Intimidate"], "hiddenAbility": "Guts", "iconSlug": "luxio" },
-  {"name": "Luxray", "dex": "405", "types": ["Electric"], "eggGroups": ["Field"], "abilities": ["Rivalry","Intimidate"], "hiddenAbility": "Guts", "iconSlug": "luxray" },
-  {"name": "Buneary", "dex": "427", "types": ["Normal"], "eggGroups": ["Field","HumanLike"], "abilities": ["Run Away","Klutz"], "hiddenAbility": "Limber", "iconSlug": "buneary" },
-  {"name": "Lopunny", "dex": "428", "types": ["Normal"], "eggGroups": ["Field","HumanLike"], "abilities": ["Cute Charm","Klutz"], "hiddenAbility": "Limber", "iconSlug": "lopunny" },
-  {"name": "Happiny", "dex": "440", "types": ["Normal"], "eggGroups": ["Undiscovered"], "abilities": ["Natural Cure","Serene Grace"], "hiddenAbility": "Friend Guard", "iconSlug": "happiny" },
-  {"name": "Magnezone", "dex": "462", "types": ["Electric","Steel"], "eggGroups": ["Mineral"], "abilities": ["Magnet Pull","Sturdy"], "hiddenAbility": "Analytic", "iconSlug": "magnezone" },
-  {"name": "Lickilicky", "dex": "463", "types": ["Normal"], "eggGroups": ["Monster"], "abilities": ["Own Tempo","Oblivious"], "hiddenAbility": "Cloud Nine", "iconSlug": "lickilicky" },
-  {"name": "Tangrowth", "dex": "465", "types": ["Grass"], "eggGroups": ["Grass"], "abilities": ["Chlorophyll","Leaf Guard"], "hiddenAbility": "Regenerator", "iconSlug": "tangrowth" },
-  {"name": "Porygon-Z", "dex": "474", "types": ["Normal"], "eggGroups": ["Mineral"], "abilities": ["Adaptability","Download"], "hiddenAbility": "Analytic", "iconSlug": "porygon-z" },
-  {"name": "Lillipup", "dex": "506", "types": ["Normal"], "eggGroups": ["Field"], "abilities": ["Vital Spirit","Pickup"], "hiddenAbility": "Run Away", "iconSlug": "lillipup" },
-  {"name": "Herdier", "dex": "507", "types": ["Normal"], "eggGroups": ["Field"], "abilities": ["Intimidate","Sand Rush"], "hiddenAbility": "Scrappy", "iconSlug": "herdier" },
-  {"name": "Stoutland", "dex": "508", "types": ["Normal"], "eggGroups": ["Field"], "abilities": ["Intimidate","Sand Rush"], "hiddenAbility": "Scrappy", "iconSlug": "stoutland" },
-  {"name": "Venipede", "dex": "543", "types": ["Bug","Poison"], "eggGroups": ["Bug"], "abilities": ["Poison Point","Swarm"], "hiddenAbility": "Speed Boost", "iconSlug": "venipede" },
-  {"name": "Whirlipede", "dex": "544", "types": ["Bug","Poison"], "eggGroups": ["Bug"], "abilities": ["Poison Point","Swarm"], "hiddenAbility": "Speed Boost", "iconSlug": "whirlipede" },
-  {"name": "Scolipede", "dex": "545", "types": ["Bug","Poison"], "eggGroups": ["Bug"], "abilities": ["Poison Point","Swarm"], "hiddenAbility": "Speed Boost", "iconSlug": "scolipede" },
-  {"name": "Petilil", "dex": "548", "types": ["Grass"], "eggGroups": ["Grass"], "abilities": ["Chlorophyll","Own Tempo"], "hiddenAbility": "Leaf Guard", "iconSlug": "petilil" },
-  {"name": "Lilligant", "dex": "549", "types": ["Grass"], "eggGroups": ["Grass"], "abilities": ["Chlorophyll","Own Tempo"], "hiddenAbility": "Leaf Guard", "iconSlug": "lilligant" },
-  {"name": "Sandile", "dex": "551", "types": ["Ground","Dark"], "eggGroups": ["Field"], "abilities": ["Intimidate","Moxie"], "hiddenAbility": "Anger Point", "iconSlug": "sandile" },
-  {"name": "Krokorok", "dex": "552", "types": ["Ground","Dark"], "eggGroups": ["Field"], "abilities": ["Intimidate","Moxie"], "hiddenAbility": "Anger Point", "iconSlug": "krokorok" },
-  {"name": "Krookodile", "dex": "553", "types": ["Ground","Dark"], "eggGroups": ["Field"], "abilities": ["Intimidate","Moxie"], "hiddenAbility": "Anger Point", "iconSlug": "krookodile" },
-  {"name": "Zorua", "dex": "570", "types": ["Dark"], "eggGroups": ["Field"], "abilities": ["Illusion"], "hiddenAbility": "NULL", "iconSlug": "zorua" },
-  {"name": "Zoroark", "dex": "571", "types": ["Dark"], "eggGroups": ["Field"], "abilities": ["Illusion"], "hiddenAbility": "NULL", "iconSlug": "zoroark" },
-  {"name": "Emolga", "dex": "587", "types": ["Electric","Flying"], "eggGroups": ["Field"], "abilities": ["Static"], "hiddenAbility": "Motor Drive", "iconSlug": "emolga" },
-  {"name": "Foongus", "dex": "590", "types": ["Grass","Poison"], "eggGroups": ["Grass"], "abilities": ["Effect Spore"], "hiddenAbility": "Regenerator", "iconSlug": "foongus" },
-  {"name": "Amoonguss", "dex": "591", "types": ["Grass","Poison"], "eggGroups": ["Grass"], "abilities": ["Effect Spore"], "hiddenAbility": "Regenerator", "iconSlug": "amoonguss" },
-  {"name": "Mienfoo", "dex": "619", "types": ["Fighting"], "eggGroups": ["Field","HumanLike"], "abilities": ["Inner Focus","Regenerator"], "hiddenAbility": "Reckless", "iconSlug": "mienfoo" },
-  {"name": "Mienshao", "dex": "620", "types": ["Fighting"], "eggGroups": ["Field","HumanLike"], "abilities": ["Inner Focus","Regenerator"], "hiddenAbility": "Reckless", "iconSlug": "mienshao" },
-  {"name": "Druddigon", "dex": "621", "types": ["Dragon"], "eggGroups": ["Dragon","Monster"], "abilities": ["Rough Skin","Sheer Force"], "hiddenAbility": "Mold Breaker", "iconSlug": "druddigon" },
-  {"name": "Bouffalant", "dex": "626", "types": ["Normal"], "eggGroups": ["Field"], "abilities": ["Reckless","Sap Sipper"], "hiddenAbility": "Soundproof", "iconSlug": "bouffalant" },
-  {"name": "Larvesta", "dex": "636", "types": ["Bug","Fire"], "eggGroups": ["Bug"], "abilities": ["Flame Body"], "hiddenAbility": "Swarm", "iconSlug": "larvesta" },
-  {"name": "Volcarona", "dex": "637", "types": ["Bug","Fire"], "eggGroups": ["Bug"], "abilities": ["Flame Body"], "hiddenAbility": "Swarm", "iconSlug": "volcarona" },
-  {"name": "Cobalion", "dex": "638", "types": ["Steel","Fighting"], "eggGroups": ["Undiscovered"], "abilities": ["Justified"], "hiddenAbility": "NULL", "iconSlug": "cobalion" },
-  {"name": "Terrakion", "dex": "639", "types": ["Rock","Fighting"], "eggGroups": ["Undiscovered"], "abilities": ["Justified"], "hiddenAbility": "NULL", "iconSlug": "terrakion" },
-  {"name": "Virizion", "dex": "640", "types": ["Grass","Fighting"], "eggGroups": ["Undiscovered"], "abilities": ["Justified"], "hiddenAbility": "NULL", "iconSlug": "virizion" },
-  {"name": "Fletchling", "dex": "661", "types": ["Normal","Flying"], "eggGroups": ["Flying"], "abilities": ["Big Pecks"], "hiddenAbility": "Gale Wings", "iconSlug": "fletchling" },
-  {"name": "Fletchinder", "dex": "662", "types": ["Fire","Flying"], "eggGroups": ["Flying"], "abilities": ["Flame Body"], "hiddenAbility": "Gale Wings", "iconSlug": "fletchinder" },
-  {"name": "Talonflame", "dex": "663", "types": ["Fire","Flying"], "eggGroups": ["Flying"], "abilities": ["Flame Body"], "hiddenAbility": "Gale Wings", "iconSlug": "talonflame" },
-  {"name": "Skrelp", "dex": "690", "types": ["Poison","Water"], "eggGroups": ["Water1","Dragon"], "abilities": ["Poison Point","Poison Touch"], "hiddenAbility": "Adaptability", "iconSlug": "skrelp" },
-  {"name": "Dragalge", "dex": "691", "types": ["Poison","Dragon"], "eggGroups": ["Water1","Dragon"], "abilities": ["Poison Point","Poison Touch"], "hiddenAbility": "Adaptability", "iconSlug": "dragalge" },
-  {"name": "Clauncher", "dex": "692", "types": ["Water"], "eggGroups": ["Water1","Water3"], "abilities": ["Mega Launcher"], "hiddenAbility": "NULL", "iconSlug": "clauncher" },
-  {"name": "Clawitzer", "dex": "693", "types": ["Water"], "eggGroups": ["Water1","Water3"], "abilities": ["Mega Launcher"], "hiddenAbility": "NULL", "iconSlug": "clawitzer" },
-  {"name": "Dedenne", "dex": "702", "types": ["Electric","Fairy"], "eggGroups": ["Field","Fairy"], "abilities": ["Cheek Pouch","Pickup"], "hiddenAbility": "Plus", "iconSlug": "dedenne" },
-  {"name": "Klefki", "dex": "707", "types": ["Steel","Fairy"], "eggGroups": ["Mineral"], "abilities": ["Prankster"], "hiddenAbility": "Magician", "iconSlug": "klefki" },
-  {"name": "Rockruff", "dex": "744", "types": ["Rock"], "eggGroups": ["Field"], "abilities": ["Keen Eye","Vital Spirit"], "hiddenAbility": "Steadfast", "iconSlug": "rockruff" },
-  {"name": "Rockruff-Own-Tempo", "dex": "744", "types": ["Rock"], "eggGroups": ["Field"], "abilities": ["Own Tempo"], "hiddenAbility": "NULL", "iconSlug": "rockruff" },
-  {"name": "Lycanroc", "dex": "745", "types": ["Rock"], "eggGroups": ["Field"], "abilities": ["Keen Eye","Sand Rush"], "hiddenAbility": "Steadfast", "iconSlug": "lycanroc" },
-  {"name": "Lycanroc-Midnight", "dex": "745", "types": ["Rock"], "eggGroups": ["Field"], "abilities": ["Keen Eye","Vital Spirit"], "hiddenAbility": "No Guard", "iconSlug": "lycanroc-midnight" },
-  {"name": "Lycanroc-Dusk", "dex": "745", "types": ["Rock"], "eggGroups": ["Field"], "abilities": ["Tough Claws"], "hiddenAbility": "NULL", "iconSlug": "lycanroc-dusk" },
-  {"name": "Fomantis", "dex": "753", "types": ["Grass"], "eggGroups": ["Grass"], "abilities": ["Leaf Guard"], "hiddenAbility": "Contrary", "iconSlug": "fomantis" },
-  {"name": "Lurantis", "dex": "754", "types": ["Grass"], "eggGroups": ["Grass"], "abilities": ["Leaf Guard"], "hiddenAbility": "Contrary", "iconSlug": "lurantis" },
-  {"name": "Comfey", "dex": "764", "types": ["Fairy"], "eggGroups": ["Grass"], "abilities": ["Flower Veil","Triage"], "hiddenAbility": "Natural Cure", "iconSlug": "comfey" },
-  {"name": "Sandygast", "dex": "769", "types": ["Ghost","Ground"], "eggGroups": ["Amorphous"], "abilities": ["Water Compaction"], "hiddenAbility": "Sand Veil", "iconSlug": "sandygast" },
-  {"name": "Palossand", "dex": "770", "types": ["Ghost","Ground"], "eggGroups": ["Amorphous"], "abilities": ["Water Compaction"], "hiddenAbility": "Sand Veil", "iconSlug": "palossand" },
-  {"name": "Magearna", "dex": "801", "types": ["Steel","Fairy"], "eggGroups": ["Undiscovered"], "abilities": ["Soul-Heart"], "hiddenAbility": "NULL", "iconSlug": "magearna" },
-  {"name": "Magearna-Original", "dex": "801", "types": ["Steel","Fairy"], "eggGroups": ["Undiscovered"], "abilities": ["Soul-Heart"], "hiddenAbility": "NULL", "iconSlug": "magearna-original" },
-  {"name": "Rillaboom-Gigantamax", "dex": "812", "types": ["Grass"], "eggGroups": ["Field","Grass"], "abilities": ["Overgrow"], "hiddenAbility": "Grassy Surge", "iconSlug": "rillaboom-gmax" },
-  {"name": "Cinderace-Gigantamax", "dex": "815", "types": ["Fire"], "eggGroups": ["Field","HumanLike"], "abilities": ["Blaze"], "hiddenAbility": "Libero", "iconSlug": "cinderace-gmax" },
-  {"name": "Inteleon-Gigantamax", "dex": "818", "types": ["Water"], "eggGroups": ["Water1","Field"], "abilities": ["Torrent"], "hiddenAbility": "Sniper", "iconSlug": "inteleon-gmax" },
-  {"name": "Kubfu", "dex": "891", "types": ["Fighting"], "eggGroups": ["Undiscovered"], "abilities": ["Inner Focus"], "hiddenAbility": "NULL", "iconSlug": "kubfu" },
-  {"name": "Urshifu", "dex": "892", "types": ["Fighting","Dark"], "eggGroups": ["Undiscovered"], "abilities": ["Unseen Fist"], "hiddenAbility": "NULL", "iconSlug": "urshifu" },
-  {"name": "Urshifu-Gigantamax", "dex": "892", "types": ["Fighting","Dark"], "eggGroups": ["Undiscovered"], "abilities": ["Unseen Fist"], "hiddenAbility": "NULL", "iconSlug": "urshifu-gmax" },
-  {"name": "Urshifu-Rapid-Strike", "dex": "892", "types": ["Fighting","Water"], "eggGroups": ["Undiscovered"], "abilities": ["Unseen Fist"], "hiddenAbility": "NULL", "iconSlug": "urshifu-rapid-strike" },
-  {"name": "Urshifu-Rapid-Strike-Gigantamax", "dex": "892", "types": ["Fighting","Water"], "eggGroups": ["Undiscovered"], "abilities": ["Unseen Fist"], "hiddenAbility": "NULL", "iconSlug": "urshifu-rapid-strike-gmax" },
-  {"name": "Zarude", "dex": "893", "types": ["Dark","Grass"], "eggGroups": ["Undiscovered"], "abilities": ["Leaf Guard"], "hiddenAbility": "NULL", "iconSlug": "zarude" }
+    "name": "Melmetal-Gigantamax",
+    "dex": "809",
+    "types": [
+      "Steel"
+    ],
+    "eggGroups": [
+      "Undiscovered"
+    ],
+    "abilities": [
+      "Iron Fist"
+    ],
+    "hiddenAbility": null,
+    "canBeShiny": false,
+    "iconSlug": "melmetal-gmax"
+  },
+  {
+    "name": "Venusaur-Gigantamax",
+    "dex": "003",
+    "types": [
+      "Grass",
+      "Poison"
+    ],
+    "eggGroups": [
+      "Monster",
+      "Grass"
+    ],
+    "abilities": [
+      "Overgrow"
+    ],
+    "hiddenAbility": "Chlorophyll",
+    "canBeShiny": true,
+    "iconSlug": "venusaur-gmax"
+  },
+  {
+    "name": "Blastoise-Gigantamax",
+    "dex": "009",
+    "types": [
+      "Water"
+    ],
+    "eggGroups": [
+      "Monster",
+      "Water1"
+    ],
+    "abilities": [
+      "Torrent"
+    ],
+    "hiddenAbility": "Rain Dish",
+    "canBeShiny": true,
+    "iconSlug": "blastoise-gmax"
+  },
+  {
+    "name": "Sandshrew",
+    "dex": "027",
+    "types": [
+      "Ground"
+    ],
+    "eggGroups": [
+      "Field"
+    ],
+    "abilities": [
+      "Sand Veil"
+    ],
+    "hiddenAbility": "Sand Rush",
+    "canBeShiny": true,
+    "iconSlug": "sandshrew"
+  },
+  {
+    "name": "Sandshrew-Alola",
+    "dex": "027",
+    "types": [
+      "Ice",
+      "Steel"
+    ],
+    "eggGroups": [
+      "Field"
+    ],
+    "abilities": [
+      "Snow Cloak"
+    ],
+    "hiddenAbility": "Slush Rush",
+    "canBeShiny": true,
+    "iconSlug": "sandshrew-alola"
+  },
+  {
+    "name": "Sandslash",
+    "dex": "028",
+    "types": [
+      "Ground"
+    ],
+    "eggGroups": [
+      "Field"
+    ],
+    "abilities": [
+      "Sand Veil"
+    ],
+    "hiddenAbility": "Sand Rush",
+    "canBeShiny": true,
+    "iconSlug": "sandslash"
+  },
+  {
+    "name": "Sandslash-Alola",
+    "dex": "028",
+    "types": [
+      "Ice",
+      "Steel"
+    ],
+    "eggGroups": [
+      "Field"
+    ],
+    "abilities": [
+      "Snow Cloak"
+    ],
+    "hiddenAbility": "Slush Rush",
+    "canBeShiny": true,
+    "iconSlug": "sandslash-alola"
+  },
+  {
+    "name": "Jigglypuff",
+    "dex": "039",
+    "types": [
+      "Normal",
+      "Fairy"
+    ],
+    "eggGroups": [
+      "Fairy"
+    ],
+    "abilities": [
+      "Cute Charm",
+      "Competitive"
+    ],
+    "hiddenAbility": "Friend Guard",
+    "canBeShiny": true,
+    "iconSlug": "jigglypuff"
+  },
+  {
+    "name": "Wigglytuff",
+    "dex": "040",
+    "types": [
+      "Normal",
+      "Fairy"
+    ],
+    "eggGroups": [
+      "Fairy"
+    ],
+    "abilities": [
+      "Cute Charm",
+      "Competitive"
+    ],
+    "hiddenAbility": "Frisk",
+    "canBeShiny": true,
+    "iconSlug": "wigglytuff"
+  },
+  {
+    "name": "Psyduck",
+    "dex": "054",
+    "types": [
+      "Water"
+    ],
+    "eggGroups": [
+      "Water1",
+      "Field"
+    ],
+    "abilities": [
+      "Damp",
+      "Cloud Nine"
+    ],
+    "hiddenAbility": "Swift Swim",
+    "canBeShiny": true,
+    "iconSlug": "psyduck"
+  },
+  {
+    "name": "Golduck",
+    "dex": "055",
+    "types": [
+      "Water"
+    ],
+    "eggGroups": [
+      "Water1",
+      "Field"
+    ],
+    "abilities": [
+      "Damp",
+      "Cloud Nine"
+    ],
+    "hiddenAbility": "Swift Swim",
+    "canBeShiny": true,
+    "iconSlug": "golduck"
+  },
+  {
+    "name": "Poliwag",
+    "dex": "060",
+    "types": [
+      "Water"
+    ],
+    "eggGroups": [
+      "Water1"
+    ],
+    "abilities": [
+      "Water Absorb",
+      "Damp"
+    ],
+    "hiddenAbility": "Swift Swim",
+    "canBeShiny": true,
+    "iconSlug": "poliwag"
+  },
+  {
+    "name": "Poliwhirl",
+    "dex": "061",
+    "types": [
+      "Water"
+    ],
+    "eggGroups": [
+      "Water1"
+    ],
+    "abilities": [
+      "Water Absorb",
+      "Damp"
+    ],
+    "hiddenAbility": "Swift Swim",
+    "canBeShiny": true,
+    "iconSlug": "poliwhirl"
+  },
+  {
+    "name": "Poliwrath",
+    "dex": "062",
+    "types": [
+      "Water",
+      "Fighting"
+    ],
+    "eggGroups": [
+      "Water1"
+    ],
+    "abilities": [
+      "Water Absorb",
+      "Damp"
+    ],
+    "hiddenAbility": "Swift Swim",
+    "canBeShiny": true,
+    "iconSlug": "poliwrath"
+  },
+  {
+    "name": "Abra",
+    "dex": "063",
+    "types": [
+      "Psychic"
+    ],
+    "eggGroups": [
+      "HumanLike"
+    ],
+    "abilities": [
+      "Synchronize",
+      "Inner Focus"
+    ],
+    "hiddenAbility": "Magic Guard",
+    "canBeShiny": true,
+    "iconSlug": "abra"
+  },
+  {
+    "name": "Kadabra",
+    "dex": "064",
+    "types": [
+      "Psychic"
+    ],
+    "eggGroups": [
+      "HumanLike"
+    ],
+    "abilities": [
+      "Synchronize",
+      "Inner Focus"
+    ],
+    "hiddenAbility": "Magic Guard",
+    "canBeShiny": true,
+    "iconSlug": "kadabra"
+  },
+  {
+    "name": "Alakazam",
+    "dex": "065",
+    "types": [
+      "Psychic"
+    ],
+    "eggGroups": [
+      "HumanLike"
+    ],
+    "abilities": [
+      "Synchronize",
+      "Inner Focus"
+    ],
+    "hiddenAbility": "Magic Guard",
+    "canBeShiny": true,
+    "iconSlug": "alakazam"
+  },
+  {
+    "name": "Tentacool",
+    "dex": "072",
+    "types": [
+      "Water",
+      "Poison"
+    ],
+    "eggGroups": [
+      "Water3"
+    ],
+    "abilities": [
+      "Clear Body",
+      "Liquid Ooze"
+    ],
+    "hiddenAbility": "Rain Dish",
+    "canBeShiny": true,
+    "iconSlug": "tentacool"
+  },
+  {
+    "name": "Tentacruel",
+    "dex": "073",
+    "types": [
+      "Water",
+      "Poison"
+    ],
+    "eggGroups": [
+      "Water3"
+    ],
+    "abilities": [
+      "Clear Body",
+      "Liquid Ooze"
+    ],
+    "hiddenAbility": "Rain Dish",
+    "canBeShiny": true,
+    "iconSlug": "tentacruel"
+  },
+  {
+    "name": "Slowbro-Galar",
+    "dex": "080",
+    "types": [
+      "Poison",
+      "Psychic"
+    ],
+    "eggGroups": [
+      "Monster",
+      "Water 1"
+    ],
+    "abilities": [
+      "Quick Draw",
+      "Own Tempo"
+    ],
+    "hiddenAbility": "Regenerator",
+    "canBeShiny": true,
+    "iconSlug": "slowbro-galar"
+  },
+  {
+    "name": "Magnemite",
+    "dex": "081",
+    "types": [
+      "Electric",
+      "Steel"
+    ],
+    "eggGroups": [
+      "Mineral"
+    ],
+    "abilities": [
+      "Magnet Pull",
+      "Sturdy"
+    ],
+    "hiddenAbility": "Analytic",
+    "canBeShiny": true,
+    "iconSlug": "magnemite"
+  },
+  {
+    "name": "Magneton",
+    "dex": "082",
+    "types": [
+      "Electric",
+      "Steel"
+    ],
+    "eggGroups": [
+      "Mineral"
+    ],
+    "abilities": [
+      "Magnet Pull",
+      "Sturdy"
+    ],
+    "hiddenAbility": "Analytic",
+    "canBeShiny": true,
+    "iconSlug": "magneton"
+  },
+  {
+    "name": "Exeggcute",
+    "dex": "102",
+    "types": [
+      "Grass",
+      "Psychic"
+    ],
+    "eggGroups": [
+      "Grass"
+    ],
+    "abilities": [
+      "Chlorophyll"
+    ],
+    "hiddenAbility": "Harvest",
+    "canBeShiny": true,
+    "iconSlug": "exeggcute"
+  },
+  {
+    "name": "Exeggutor",
+    "dex": "103",
+    "types": [
+      "Grass",
+      "Psychic"
+    ],
+    "eggGroups": [
+      "Grass"
+    ],
+    "abilities": [
+      "Chlorophyll"
+    ],
+    "hiddenAbility": "Harvest",
+    "canBeShiny": true,
+    "iconSlug": "exeggutor"
+  },
+  {
+    "name": "Exeggutor-Alola",
+    "dex": "103",
+    "types": [
+      "Grass",
+      "Dragon"
+    ],
+    "eggGroups": [
+      "Grass"
+    ],
+    "abilities": [
+      "",
+      ""
+    ],
+    "hiddenAbility": "",
+    "canBeShiny": true,
+    "iconSlug": "exeggutor-alola"
+  },
+  {
+    "name": "Cubone",
+    "dex": "104",
+    "types": [
+      "Ground"
+    ],
+    "eggGroups": [
+      "Monster"
+    ],
+    "abilities": [
+      "Rock Head",
+      "Lightning Rod"
+    ],
+    "hiddenAbility": "Battle Armor",
+    "canBeShiny": true,
+    "iconSlug": "cubone"
+  },
+  {
+    "name": "Marowak",
+    "dex": "105",
+    "types": [
+      "Ground"
+    ],
+    "eggGroups": [
+      "Monster"
+    ],
+    "abilities": [
+      "Rock Head",
+      "Lightning Rod"
+    ],
+    "hiddenAbility": "Battle Armor",
+    "canBeShiny": true,
+    "iconSlug": "marowak"
+  },
+  {
+    "name": "Marowak-Alola",
+    "dex": "105",
+    "types": [
+      "Fire",
+      "Ghost"
+    ],
+    "eggGroups": [
+      "Monster"
+    ],
+    "abilities": [
+      "Cursed Body",
+      "Lightning Rod"
+    ],
+    "hiddenAbility": "Rock Head",
+    "canBeShiny": true,
+    "iconSlug": "marowak-alola"
+  },
+  {
+    "name": "Lickitung",
+    "dex": "108",
+    "types": [
+      "Normal"
+    ],
+    "eggGroups": [
+      "Monster"
+    ],
+    "abilities": [
+      "Own Tempo",
+      "Oblivious"
+    ],
+    "hiddenAbility": "Cloud Nine",
+    "canBeShiny": true,
+    "iconSlug": "lickitung"
+  },
+  {
+    "name": "Chansey",
+    "dex": "113",
+    "types": [
+      "Normal"
+    ],
+    "eggGroups": [
+      "Fairy"
+    ],
+    "abilities": [
+      "Natural Cure",
+      "Serene Grace"
+    ],
+    "hiddenAbility": "Healer",
+    "canBeShiny": true,
+    "iconSlug": "chansey"
+  },
+  {
+    "name": "Tangela",
+    "dex": "114",
+    "types": [
+      "Grass"
+    ],
+    "eggGroups": [
+      "Grass"
+    ],
+    "abilities": [
+      "Chlorophyll",
+      "Leaf Guard"
+    ],
+    "hiddenAbility": "Regenerator",
+    "canBeShiny": true,
+    "iconSlug": "tangela"
+  },
+  {
+    "name": "Kangaskhan",
+    "dex": "115",
+    "types": [
+      "Normal"
+    ],
+    "eggGroups": [
+      "Monster"
+    ],
+    "abilities": [
+      "Early Bird",
+      "Scrappy"
+    ],
+    "hiddenAbility": "Inner Focus",
+    "canBeShiny": true,
+    "iconSlug": "kangaskhan"
+  },
+  {
+    "name": "Horsea",
+    "dex": "116",
+    "types": [
+      "Water"
+    ],
+    "eggGroups": [
+      "Water1",
+      "Dragon"
+    ],
+    "abilities": [
+      "Swift Swim",
+      "Sniper"
+    ],
+    "hiddenAbility": "Damp",
+    "canBeShiny": true,
+    "iconSlug": "horsea"
+  },
+  {
+    "name": "Seadra",
+    "dex": "117",
+    "types": [
+      "Water"
+    ],
+    "eggGroups": [
+      "Water1",
+      "Dragon"
+    ],
+    "abilities": [
+      "Poison Point",
+      "Sniper"
+    ],
+    "hiddenAbility": "Damp",
+    "canBeShiny": true,
+    "iconSlug": "seadra"
+  },
+  {
+    "name": "Staryu",
+    "dex": "120",
+    "types": [
+      "Water"
+    ],
+    "eggGroups": [
+      "Water3"
+    ],
+    "abilities": [
+      "Illuminate",
+      "Natural Cure"
+    ],
+    "hiddenAbility": "Analytic",
+    "canBeShiny": true,
+    "iconSlug": "staryu"
+  },
+  {
+    "name": "Starmie",
+    "dex": "121",
+    "types": [
+      "Water",
+      "Psychic"
+    ],
+    "eggGroups": [
+      "Water3"
+    ],
+    "abilities": [
+      "Illuminate",
+      "Natural Cure"
+    ],
+    "hiddenAbility": "Analytic",
+    "canBeShiny": true,
+    "iconSlug": "starmie"
+  },
+  {
+    "name": "Scyther",
+    "dex": "123",
+    "types": [
+      "Bug",
+      "Flying"
+    ],
+    "eggGroups": [
+      "Bug"
+    ],
+    "abilities": [
+      "Swarm",
+      "Technician"
+    ],
+    "hiddenAbility": "Steadfast",
+    "canBeShiny": true,
+    "iconSlug": "scyther"
+  },
+  {
+    "name": "Pinsir",
+    "dex": "127",
+    "types": [
+      "Bug"
+    ],
+    "eggGroups": [
+      "Bug"
+    ],
+    "abilities": [
+      "Hyper Cutter",
+      "Mold Breaker"
+    ],
+    "hiddenAbility": "Moxie",
+    "canBeShiny": true,
+    "iconSlug": "pinsir"
+  },
+  {
+    "name": "Tauros",
+    "dex": "128",
+    "types": [
+      "Normal"
+    ],
+    "eggGroups": [
+      "Field"
+    ],
+    "abilities": [
+      "Intimidate",
+      "Anger Point"
+    ],
+    "hiddenAbility": "Sheer Force",
+    "canBeShiny": true,
+    "iconSlug": "tauros"
+  },
+  {
+    "name": "Porygon",
+    "dex": "137",
+    "types": [
+      "Normal"
+    ],
+    "eggGroups": [
+      "Mineral"
+    ],
+    "abilities": [
+      "Trace",
+      "Download"
+    ],
+    "hiddenAbility": "Analytic",
+    "canBeShiny": true,
+    "iconSlug": "porygon"
+  },
+  {
+    "name": "Igglybuff",
+    "dex": "174",
+    "types": [
+      "Normal",
+      "Fairy"
+    ],
+    "eggGroups": [
+      "Undiscovered"
+    ],
+    "abilities": [
+      "Cute Charm",
+      "Competitive"
+    ],
+    "hiddenAbility": "Friend Guard",
+    "canBeShiny": true,
+    "iconSlug": "igglybuff"
+  },
+  {
+    "name": "Marill",
+    "dex": "183",
+    "types": [
+      "Water",
+      "Fairy"
+    ],
+    "eggGroups": [
+      "Water1",
+      "Fairy"
+    ],
+    "abilities": [
+      "Thick Fat",
+      "Huge Power"
+    ],
+    "hiddenAbility": "Sap Sipper",
+    "canBeShiny": true,
+    "iconSlug": "marill"
+  },
+  {
+    "name": "Azumarill",
+    "dex": "184",
+    "types": [
+      "Water",
+      "Fairy"
+    ],
+    "eggGroups": [
+      "Water1",
+      "Fairy"
+    ],
+    "abilities": [
+      "Thick Fat",
+      "Huge Power"
+    ],
+    "hiddenAbility": "Sap Sipper",
+    "canBeShiny": true,
+    "iconSlug": "azumarill"
+  },
+  {
+    "name": "Politoed",
+    "dex": "186",
+    "types": [
+      "Water"
+    ],
+    "eggGroups": [
+      "Water1"
+    ],
+    "abilities": [
+      "Water Absorb",
+      "Damp"
+    ],
+    "hiddenAbility": "Drizzle",
+    "canBeShiny": true,
+    "iconSlug": "politoed"
+  },
+  {
+    "name": "Slowking",
+    "dex": "199",
+    "types": [
+      "Water",
+      "Psychic"
+    ],
+    "eggGroups": [
+      "Monster",
+      "Water1"
+    ],
+    "abilities": [
+      "Oblivious",
+      "Own Tempo"
+    ],
+    "hiddenAbility": "Regenerator",
+    "canBeShiny": true,
+    "iconSlug": "slowking"
+  },
+  {
+    "name": "Dunsparce",
+    "dex": "206",
+    "types": [
+      "Normal"
+    ],
+    "eggGroups": [
+      "Field"
+    ],
+    "abilities": [
+      "Serene Grace",
+      "Run Away"
+    ],
+    "hiddenAbility": "Rattled",
+    "canBeShiny": true,
+    "iconSlug": "dunsparce"
+  },
+  {
+    "name": "Scizor",
+    "dex": "212",
+    "types": [
+      "Bug",
+      "Steel"
+    ],
+    "eggGroups": [
+      "Bug"
+    ],
+    "abilities": [
+      "Swarm",
+      "Technician"
+    ],
+    "hiddenAbility": "Light Metal",
+    "canBeShiny": true,
+    "iconSlug": "scizor"
+  },
+  {
+    "name": "Heracross",
+    "dex": "214",
+    "types": [
+      "Bug",
+      "Fighting"
+    ],
+    "eggGroups": [
+      "Bug"
+    ],
+    "abilities": [
+      "Swarm",
+      "Guts"
+    ],
+    "hiddenAbility": "Moxie",
+    "canBeShiny": true,
+    "iconSlug": "heracross"
+  },
+  {
+    "name": "Skarmory",
+    "dex": "227",
+    "types": [
+      "Steel",
+      "Flying"
+    ],
+    "eggGroups": [
+      "Flying"
+    ],
+    "abilities": [
+      "Keen Eye",
+      "Sturdy"
+    ],
+    "hiddenAbility": "Weak Armor",
+    "canBeShiny": true,
+    "iconSlug": "skarmory"
+  },
+  {
+    "name": "Kingdra",
+    "dex": "230",
+    "types": [
+      "Water",
+      "Dragon"
+    ],
+    "eggGroups": [
+      "Water1",
+      "Dragon"
+    ],
+    "abilities": [
+      "Swift Swim",
+      "Sniper"
+    ],
+    "hiddenAbility": "Damp",
+    "canBeShiny": true,
+    "iconSlug": "kingdra"
+  },
+  {
+    "name": "Porygon2",
+    "dex": "233",
+    "types": [
+      "Normal"
+    ],
+    "eggGroups": [
+      "Mineral"
+    ],
+    "abilities": [
+      "Trace",
+      "Download"
+    ],
+    "hiddenAbility": "Analytic",
+    "canBeShiny": true,
+    "iconSlug": "porygon2"
+  },
+  {
+    "name": "Miltank",
+    "dex": "241",
+    "types": [
+      "Normal"
+    ],
+    "eggGroups": [
+      "Field"
+    ],
+    "abilities": [
+      "Thick Fat",
+      "Scrappy"
+    ],
+    "hiddenAbility": "Sap Sipper",
+    "canBeShiny": true,
+    "iconSlug": "miltank"
+  },
+  {
+    "name": "Blissey",
+    "dex": "242",
+    "types": [
+      "Normal"
+    ],
+    "eggGroups": [
+      "Fairy"
+    ],
+    "abilities": [
+      "Natural Cure",
+      "Serene Grace"
+    ],
+    "hiddenAbility": "Healer",
+    "canBeShiny": true,
+    "iconSlug": "blissey"
+  },
+  {
+    "name": "Whismur",
+    "dex": "293",
+    "types": [
+      "Normal"
+    ],
+    "eggGroups": [
+      "Monster",
+      "Field"
+    ],
+    "abilities": [
+      "Soundproof"
+    ],
+    "hiddenAbility": "Rattled",
+    "canBeShiny": true,
+    "iconSlug": "whismur"
+  },
+  {
+    "name": "Loudred",
+    "dex": "294",
+    "types": [
+      "Normal"
+    ],
+    "eggGroups": [
+      "Monster",
+      "Field"
+    ],
+    "abilities": [
+      "Soundproof"
+    ],
+    "hiddenAbility": "Scrappy",
+    "canBeShiny": true,
+    "iconSlug": "loudred"
+  },
+  {
+    "name": "Exploud",
+    "dex": "295",
+    "types": [
+      "Normal"
+    ],
+    "eggGroups": [
+      "Monster",
+      "Field"
+    ],
+    "abilities": [
+      "Soundproof"
+    ],
+    "hiddenAbility": "Scrappy",
+    "canBeShiny": true,
+    "iconSlug": "exploud"
+  },
+  {
+    "name": "Azurill",
+    "dex": "298",
+    "types": [
+      "Normal",
+      "Fairy"
+    ],
+    "eggGroups": [
+      "Undiscovered"
+    ],
+    "abilities": [
+      "Thick Fat",
+      "Huge Power"
+    ],
+    "hiddenAbility": "Sap Sipper",
+    "canBeShiny": true,
+    "iconSlug": "azurill"
+  },
+  {
+    "name": "Carvanha",
+    "dex": "318",
+    "types": [
+      "Water",
+      "Dark"
+    ],
+    "eggGroups": [
+      "Water2"
+    ],
+    "abilities": [
+      "Rough Skin"
+    ],
+    "hiddenAbility": "Speed Boost",
+    "canBeShiny": true,
+    "iconSlug": "carvanha"
+  },
+  {
+    "name": "Sharpedo",
+    "dex": "319",
+    "types": [
+      "Water",
+      "Dark"
+    ],
+    "eggGroups": [
+      "Water2"
+    ],
+    "abilities": [
+      "Rough Skin"
+    ],
+    "hiddenAbility": "Speed Boost",
+    "canBeShiny": true,
+    "iconSlug": "sharpedo"
+  },
+  {
+    "name": "Shinx",
+    "dex": "403",
+    "types": [
+      "Electric"
+    ],
+    "eggGroups": [
+      "Field"
+    ],
+    "abilities": [
+      "Rivalry",
+      "Intimidate"
+    ],
+    "hiddenAbility": "Guts",
+    "canBeShiny": true,
+    "iconSlug": "shinx"
+  },
+  {
+    "name": "Luxio",
+    "dex": "404",
+    "types": [
+      "Electric"
+    ],
+    "eggGroups": [
+      "Field"
+    ],
+    "abilities": [
+      "Rivalry",
+      "Intimidate"
+    ],
+    "hiddenAbility": "Guts",
+    "canBeShiny": true,
+    "iconSlug": "luxio"
+  },
+  {
+    "name": "Luxray",
+    "dex": "405",
+    "types": [
+      "Electric"
+    ],
+    "eggGroups": [
+      "Field"
+    ],
+    "abilities": [
+      "Rivalry",
+      "Intimidate"
+    ],
+    "hiddenAbility": "Guts",
+    "canBeShiny": true,
+    "iconSlug": "luxray"
+  },
+  {
+    "name": "Buneary",
+    "dex": "427",
+    "types": [
+      "Normal"
+    ],
+    "eggGroups": [
+      "Field",
+      "HumanLike"
+    ],
+    "abilities": [
+      "Run Away",
+      "Klutz"
+    ],
+    "hiddenAbility": "Limber",
+    "canBeShiny": true,
+    "iconSlug": "buneary"
+  },
+  {
+    "name": "Lopunny",
+    "dex": "428",
+    "types": [
+      "Normal"
+    ],
+    "eggGroups": [
+      "Field",
+      "HumanLike"
+    ],
+    "abilities": [
+      "Cute Charm",
+      "Klutz"
+    ],
+    "hiddenAbility": "Limber",
+    "canBeShiny": true,
+    "iconSlug": "lopunny"
+  },
+  {
+    "name": "Happiny",
+    "dex": "440",
+    "types": [
+      "Normal"
+    ],
+    "eggGroups": [
+      "Undiscovered"
+    ],
+    "abilities": [
+      "Natural Cure",
+      "Serene Grace"
+    ],
+    "hiddenAbility": "Friend Guard",
+    "canBeShiny": true,
+    "iconSlug": "happiny"
+  },
+  {
+    "name": "Magnezone",
+    "dex": "462",
+    "types": [
+      "Electric",
+      "Steel"
+    ],
+    "eggGroups": [
+      "Mineral"
+    ],
+    "abilities": [
+      "Magnet Pull",
+      "Sturdy"
+    ],
+    "hiddenAbility": "Analytic",
+    "canBeShiny": true,
+    "iconSlug": "magnezone"
+  },
+  {
+    "name": "Lickilicky",
+    "dex": "463",
+    "types": [
+      "Normal"
+    ],
+    "eggGroups": [
+      "Monster"
+    ],
+    "abilities": [
+      "Own Tempo",
+      "Oblivious"
+    ],
+    "hiddenAbility": "Cloud Nine",
+    "canBeShiny": true,
+    "iconSlug": "lickilicky"
+  },
+  {
+    "name": "Tangrowth",
+    "dex": "465",
+    "types": [
+      "Grass"
+    ],
+    "eggGroups": [
+      "Grass"
+    ],
+    "abilities": [
+      "Chlorophyll",
+      "Leaf Guard"
+    ],
+    "hiddenAbility": "Regenerator",
+    "canBeShiny": true,
+    "iconSlug": "tangrowth"
+  },
+  {
+    "name": "Porygon-Z",
+    "dex": "474",
+    "types": [
+      "Normal"
+    ],
+    "eggGroups": [
+      "Mineral"
+    ],
+    "abilities": [
+      "Adaptability",
+      "Download"
+    ],
+    "hiddenAbility": "Analytic",
+    "canBeShiny": true,
+    "iconSlug": "porygon-z"
+  },
+  {
+    "name": "Lillipup",
+    "dex": "506",
+    "types": [
+      "Normal"
+    ],
+    "eggGroups": [
+      "Field"
+    ],
+    "abilities": [
+      "Vital Spirit",
+      "Pickup"
+    ],
+    "hiddenAbility": "Run Away",
+    "canBeShiny": true,
+    "iconSlug": "lillipup"
+  },
+  {
+    "name": "Herdier",
+    "dex": "507",
+    "types": [
+      "Normal"
+    ],
+    "eggGroups": [
+      "Field"
+    ],
+    "abilities": [
+      "Intimidate",
+      "Sand Rush"
+    ],
+    "hiddenAbility": "Scrappy",
+    "canBeShiny": true,
+    "iconSlug": "herdier"
+  },
+  {
+    "name": "Stoutland",
+    "dex": "508",
+    "types": [
+      "Normal"
+    ],
+    "eggGroups": [
+      "Field"
+    ],
+    "abilities": [
+      "Intimidate",
+      "Sand Rush"
+    ],
+    "hiddenAbility": "Scrappy",
+    "canBeShiny": true,
+    "iconSlug": "stoutland"
+  },
+  {
+    "name": "Venipede",
+    "dex": "543",
+    "types": [
+      "Bug",
+      "Poison"
+    ],
+    "eggGroups": [
+      "Bug"
+    ],
+    "abilities": [
+      "Poison Point",
+      "Swarm"
+    ],
+    "hiddenAbility": "Speed Boost",
+    "canBeShiny": true,
+    "iconSlug": "venipede"
+  },
+  {
+    "name": "Whirlipede",
+    "dex": "544",
+    "types": [
+      "Bug",
+      "Poison"
+    ],
+    "eggGroups": [
+      "Bug"
+    ],
+    "abilities": [
+      "Poison Point",
+      "Swarm"
+    ],
+    "hiddenAbility": "Speed Boost",
+    "canBeShiny": true,
+    "iconSlug": "whirlipede"
+  },
+  {
+    "name": "Scolipede",
+    "dex": "545",
+    "types": [
+      "Bug",
+      "Poison"
+    ],
+    "eggGroups": [
+      "Bug"
+    ],
+    "abilities": [
+      "Poison Point",
+      "Swarm"
+    ],
+    "hiddenAbility": "Speed Boost",
+    "canBeShiny": true,
+    "iconSlug": "scolipede"
+  },
+  {
+    "name": "Petilil",
+    "dex": "548",
+    "types": [
+      "Grass"
+    ],
+    "eggGroups": [
+      "Grass"
+    ],
+    "abilities": [
+      "Chlorophyll",
+      "Own Tempo"
+    ],
+    "hiddenAbility": "Leaf Guard",
+    "canBeShiny": true,
+    "iconSlug": "petilil"
+  },
+  {
+    "name": "Lilligant",
+    "dex": "549",
+    "types": [
+      "Grass"
+    ],
+    "eggGroups": [
+      "Grass"
+    ],
+    "abilities": [
+      "Chlorophyll",
+      "Own Tempo"
+    ],
+    "hiddenAbility": "Leaf Guard",
+    "canBeShiny": true,
+    "iconSlug": "lilligant"
+  },
+  {
+    "name": "Sandile",
+    "dex": "551",
+    "types": [
+      "Ground",
+      "Dark"
+    ],
+    "eggGroups": [
+      "Field"
+    ],
+    "abilities": [
+      "Intimidate",
+      "Moxie"
+    ],
+    "hiddenAbility": "Anger Point",
+    "canBeShiny": true,
+    "iconSlug": "sandile"
+  },
+  {
+    "name": "Krokorok",
+    "dex": "552",
+    "types": [
+      "Ground",
+      "Dark"
+    ],
+    "eggGroups": [
+      "Field"
+    ],
+    "abilities": [
+      "Intimidate",
+      "Moxie"
+    ],
+    "hiddenAbility": "Anger Point",
+    "canBeShiny": true,
+    "iconSlug": "krokorok"
+  },
+  {
+    "name": "Krookodile",
+    "dex": "553",
+    "types": [
+      "Ground",
+      "Dark"
+    ],
+    "eggGroups": [
+      "Field"
+    ],
+    "abilities": [
+      "Intimidate",
+      "Moxie"
+    ],
+    "hiddenAbility": "Anger Point",
+    "canBeShiny": true,
+    "iconSlug": "krookodile"
+  },
+  {
+    "name": "Zorua",
+    "dex": "570",
+    "types": [
+      "Dark"
+    ],
+    "eggGroups": [
+      "Field"
+    ],
+    "abilities": [
+      "Illusion"
+    ],
+    "hiddenAbility": "NULL",
+    "canBeShiny": true,
+    "iconSlug": "zorua"
+  },
+  {
+    "name": "Zoroark",
+    "dex": "571",
+    "types": [
+      "Dark"
+    ],
+    "eggGroups": [
+      "Field"
+    ],
+    "abilities": [
+      "Illusion"
+    ],
+    "hiddenAbility": "NULL",
+    "canBeShiny": true,
+    "iconSlug": "zoroark"
+  },
+  {
+    "name": "Emolga",
+    "dex": "587",
+    "types": [
+      "Electric",
+      "Flying"
+    ],
+    "eggGroups": [
+      "Field"
+    ],
+    "abilities": [
+      "Static"
+    ],
+    "hiddenAbility": "Motor Drive",
+    "canBeShiny": true,
+    "iconSlug": "emolga"
+  },
+  {
+    "name": "Foongus",
+    "dex": "590",
+    "types": [
+      "Grass",
+      "Poison"
+    ],
+    "eggGroups": [
+      "Grass"
+    ],
+    "abilities": [
+      "Effect Spore"
+    ],
+    "hiddenAbility": "Regenerator",
+    "canBeShiny": true,
+    "iconSlug": "foongus"
+  },
+  {
+    "name": "Amoonguss",
+    "dex": "591",
+    "types": [
+      "Grass",
+      "Poison"
+    ],
+    "eggGroups": [
+      "Grass"
+    ],
+    "abilities": [
+      "Effect Spore"
+    ],
+    "hiddenAbility": "Regenerator",
+    "canBeShiny": true,
+    "iconSlug": "amoonguss"
+  },
+  {
+    "name": "Mienfoo",
+    "dex": "619",
+    "types": [
+      "Fighting"
+    ],
+    "eggGroups": [
+      "Field",
+      "HumanLike"
+    ],
+    "abilities": [
+      "Inner Focus",
+      "Regenerator"
+    ],
+    "hiddenAbility": "Reckless",
+    "canBeShiny": true,
+    "iconSlug": "mienfoo"
+  },
+  {
+    "name": "Mienshao",
+    "dex": "620",
+    "types": [
+      "Fighting"
+    ],
+    "eggGroups": [
+      "Field",
+      "HumanLike"
+    ],
+    "abilities": [
+      "Inner Focus",
+      "Regenerator"
+    ],
+    "hiddenAbility": "Reckless",
+    "canBeShiny": true,
+    "iconSlug": "mienshao"
+  },
+  {
+    "name": "Druddigon",
+    "dex": "621",
+    "types": [
+      "Dragon"
+    ],
+    "eggGroups": [
+      "Dragon",
+      "Monster"
+    ],
+    "abilities": [
+      "Rough Skin",
+      "Sheer Force"
+    ],
+    "hiddenAbility": "Mold Breaker",
+    "canBeShiny": true,
+    "iconSlug": "druddigon"
+  },
+  {
+    "name": "Bouffalant",
+    "dex": "626",
+    "types": [
+      "Normal"
+    ],
+    "eggGroups": [
+      "Field"
+    ],
+    "abilities": [
+      "Reckless",
+      "Sap Sipper"
+    ],
+    "hiddenAbility": "Soundproof",
+    "canBeShiny": true,
+    "iconSlug": "bouffalant"
+  },
+  {
+    "name": "Larvesta",
+    "dex": "636",
+    "types": [
+      "Bug",
+      "Fire"
+    ],
+    "eggGroups": [
+      "Bug"
+    ],
+    "abilities": [
+      "Flame Body"
+    ],
+    "hiddenAbility": "Swarm",
+    "canBeShiny": true,
+    "iconSlug": "larvesta"
+  },
+  {
+    "name": "Volcarona",
+    "dex": "637",
+    "types": [
+      "Bug",
+      "Fire"
+    ],
+    "eggGroups": [
+      "Bug"
+    ],
+    "abilities": [
+      "Flame Body"
+    ],
+    "hiddenAbility": "Swarm",
+    "canBeShiny": true,
+    "iconSlug": "volcarona"
+  },
+  {
+    "name": "Cobalion",
+    "dex": "638",
+    "types": [
+      "Steel",
+      "Fighting"
+    ],
+    "eggGroups": [
+      "Undiscovered"
+    ],
+    "abilities": [
+      "Justified"
+    ],
+    "hiddenAbility": "NULL",
+    "canBeShiny": true,
+    "iconSlug": "cobalion"
+  },
+  {
+    "name": "Terrakion",
+    "dex": "639",
+    "types": [
+      "Rock",
+      "Fighting"
+    ],
+    "eggGroups": [
+      "Undiscovered"
+    ],
+    "abilities": [
+      "Justified"
+    ],
+    "hiddenAbility": "NULL",
+    "canBeShiny": true,
+    "iconSlug": "terrakion"
+  },
+  {
+    "name": "Virizion",
+    "dex": "640",
+    "types": [
+      "Grass",
+      "Fighting"
+    ],
+    "eggGroups": [
+      "Undiscovered"
+    ],
+    "abilities": [
+      "Justified"
+    ],
+    "hiddenAbility": "NULL",
+    "canBeShiny": true,
+    "iconSlug": "virizion"
+  },
+  {
+    "name": "Fletchling",
+    "dex": "661",
+    "types": [
+      "Normal",
+      "Flying"
+    ],
+    "eggGroups": [
+      "Flying"
+    ],
+    "abilities": [
+      "Big Pecks"
+    ],
+    "hiddenAbility": "Gale Wings",
+    "canBeShiny": true,
+    "iconSlug": "fletchling"
+  },
+  {
+    "name": "Fletchinder",
+    "dex": "662",
+    "types": [
+      "Fire",
+      "Flying"
+    ],
+    "eggGroups": [
+      "Flying"
+    ],
+    "abilities": [
+      "Flame Body"
+    ],
+    "hiddenAbility": "Gale Wings",
+    "canBeShiny": true,
+    "iconSlug": "fletchinder"
+  },
+  {
+    "name": "Talonflame",
+    "dex": "663",
+    "types": [
+      "Fire",
+      "Flying"
+    ],
+    "eggGroups": [
+      "Flying"
+    ],
+    "abilities": [
+      "Flame Body"
+    ],
+    "hiddenAbility": "Gale Wings",
+    "canBeShiny": true,
+    "iconSlug": "talonflame"
+  },
+  {
+    "name": "Skrelp",
+    "dex": "690",
+    "types": [
+      "Poison",
+      "Water"
+    ],
+    "eggGroups": [
+      "Water1",
+      "Dragon"
+    ],
+    "abilities": [
+      "Poison Point",
+      "Poison Touch"
+    ],
+    "hiddenAbility": "Adaptability",
+    "canBeShiny": true,
+    "iconSlug": "skrelp"
+  },
+  {
+    "name": "Dragalge",
+    "dex": "691",
+    "types": [
+      "Poison",
+      "Dragon"
+    ],
+    "eggGroups": [
+      "Water1",
+      "Dragon"
+    ],
+    "abilities": [
+      "Poison Point",
+      "Poison Touch"
+    ],
+    "hiddenAbility": "Adaptability",
+    "canBeShiny": true,
+    "iconSlug": "dragalge"
+  },
+  {
+    "name": "Clauncher",
+    "dex": "692",
+    "types": [
+      "Water"
+    ],
+    "eggGroups": [
+      "Water1",
+      "Water3"
+    ],
+    "abilities": [
+      "Mega Launcher"
+    ],
+    "hiddenAbility": "NULL",
+    "canBeShiny": true,
+    "iconSlug": "clauncher"
+  },
+  {
+    "name": "Clawitzer",
+    "dex": "693",
+    "types": [
+      "Water"
+    ],
+    "eggGroups": [
+      "Water1",
+      "Water3"
+    ],
+    "abilities": [
+      "Mega Launcher"
+    ],
+    "hiddenAbility": "NULL",
+    "canBeShiny": true,
+    "iconSlug": "clawitzer"
+  },
+  {
+    "name": "Dedenne",
+    "dex": "702",
+    "types": [
+      "Electric",
+      "Fairy"
+    ],
+    "eggGroups": [
+      "Field",
+      "Fairy"
+    ],
+    "abilities": [
+      "Cheek Pouch",
+      "Pickup"
+    ],
+    "hiddenAbility": "Plus",
+    "canBeShiny": true,
+    "iconSlug": "dedenne"
+  },
+  {
+    "name": "Klefki",
+    "dex": "707",
+    "types": [
+      "Steel",
+      "Fairy"
+    ],
+    "eggGroups": [
+      "Mineral"
+    ],
+    "abilities": [
+      "Prankster"
+    ],
+    "hiddenAbility": "Magician",
+    "canBeShiny": true,
+    "iconSlug": "klefki"
+  },
+  {
+    "name": "Rockruff",
+    "dex": "744",
+    "types": [
+      "Rock"
+    ],
+    "eggGroups": [
+      "Field"
+    ],
+    "abilities": [
+      "Keen Eye",
+      "Vital Spirit"
+    ],
+    "hiddenAbility": "Steadfast",
+    "canBeShiny": true,
+    "iconSlug": "rockruff"
+  },
+  {
+    "name": "Rockruff-Own-Tempo",
+    "dex": "744",
+    "types": [
+      "Rock"
+    ],
+    "eggGroups": [
+      "Field"
+    ],
+    "abilities": [
+      "Own Tempo"
+    ],
+    "hiddenAbility": "NULL",
+    "canBeShiny": true,
+    "iconSlug": "rockruff"
+  },
+  {
+    "name": "Lycanroc",
+    "dex": "745",
+    "types": [
+      "Rock"
+    ],
+    "eggGroups": [
+      "Field"
+    ],
+    "abilities": [
+      "Keen Eye",
+      "Sand Rush"
+    ],
+    "hiddenAbility": "Steadfast",
+    "canBeShiny": true,
+    "iconSlug": "lycanroc"
+  },
+  {
+    "name": "Lycanroc-Midnight",
+    "dex": "745",
+    "types": [
+      "Rock"
+    ],
+    "eggGroups": [
+      "Field"
+    ],
+    "abilities": [
+      "Keen Eye",
+      "Vital Spirit"
+    ],
+    "hiddenAbility": "No Guard",
+    "canBeShiny": true,
+    "iconSlug": "lycanroc-midnight"
+  },
+  {
+    "name": "Lycanroc-Dusk",
+    "dex": "745",
+    "types": [
+      "Rock"
+    ],
+    "eggGroups": [
+      "Field"
+    ],
+    "abilities": [
+      "Tough Claws"
+    ],
+    "hiddenAbility": "NULL",
+    "canBeShiny": true,
+    "iconSlug": "lycanroc-dusk"
+  },
+  {
+    "name": "Fomantis",
+    "dex": "753",
+    "types": [
+      "Grass"
+    ],
+    "eggGroups": [
+      "Grass"
+    ],
+    "abilities": [
+      "Leaf Guard"
+    ],
+    "hiddenAbility": "Contrary",
+    "canBeShiny": true,
+    "iconSlug": "fomantis"
+  },
+  {
+    "name": "Lurantis",
+    "dex": "754",
+    "types": [
+      "Grass"
+    ],
+    "eggGroups": [
+      "Grass"
+    ],
+    "abilities": [
+      "Leaf Guard"
+    ],
+    "hiddenAbility": "Contrary",
+    "canBeShiny": true,
+    "iconSlug": "lurantis"
+  },
+  {
+    "name": "Comfey",
+    "dex": "764",
+    "types": [
+      "Fairy"
+    ],
+    "eggGroups": [
+      "Grass"
+    ],
+    "abilities": [
+      "Flower Veil",
+      "Triage"
+    ],
+    "hiddenAbility": "Natural Cure",
+    "canBeShiny": true,
+    "iconSlug": "comfey"
+  },
+  {
+    "name": "Sandygast",
+    "dex": "769",
+    "types": [
+      "Ghost",
+      "Ground"
+    ],
+    "eggGroups": [
+      "Amorphous"
+    ],
+    "abilities": [
+      "Water Compaction"
+    ],
+    "hiddenAbility": "Sand Veil",
+    "canBeShiny": true,
+    "iconSlug": "sandygast"
+  },
+  {
+    "name": "Palossand",
+    "dex": "770",
+    "types": [
+      "Ghost",
+      "Ground"
+    ],
+    "eggGroups": [
+      "Amorphous"
+    ],
+    "abilities": [
+      "Water Compaction"
+    ],
+    "hiddenAbility": "Sand Veil",
+    "canBeShiny": true,
+    "iconSlug": "palossand"
+  },
+  {
+    "name": "Magearna",
+    "dex": "801",
+    "types": [
+      "Steel",
+      "Fairy"
+    ],
+    "eggGroups": [
+      "Undiscovered"
+    ],
+    "abilities": [
+      "Soul-Heart"
+    ],
+    "hiddenAbility": "NULL",
+    "canBeShiny": false,
+    "iconSlug": "magearna"
+  },
+  {
+    "name": "Magearna-Original",
+    "dex": "801",
+    "types": [
+      "Steel",
+      "Fairy"
+    ],
+    "eggGroups": [
+      "Undiscovered"
+    ],
+    "abilities": [
+      "Soul-Heart"
+    ],
+    "hiddenAbility": "NULL",
+    "canBeShiny": false,
+    "iconSlug": "magearna-original"
+  },
+  {
+    "name": "Rillaboom-Gigantamax",
+    "dex": "812",
+    "types": [
+      "Grass"
+    ],
+    "eggGroups": [
+      "Field",
+      "Grass"
+    ],
+    "abilities": [
+      "Overgrow"
+    ],
+    "hiddenAbility": "Grassy Surge",
+    "canBeShiny": true,
+    "iconSlug": "rillaboom-gmax"
+  },
+  {
+    "name": "Cinderace-Gigantamax",
+    "dex": "815",
+    "types": [
+      "Fire"
+    ],
+    "eggGroups": [
+      "Field",
+      "HumanLike"
+    ],
+    "abilities": [
+      "Blaze"
+    ],
+    "hiddenAbility": "Libero",
+    "canBeShiny": true,
+    "iconSlug": "cinderace-gmax"
+  },
+  {
+    "name": "Inteleon-Gigantamax",
+    "dex": "818",
+    "types": [
+      "Water"
+    ],
+    "eggGroups": [
+      "Water1",
+      "Field"
+    ],
+    "abilities": [
+      "Torrent"
+    ],
+    "hiddenAbility": "Sniper",
+    "canBeShiny": true,
+    "iconSlug": "inteleon-gmax"
+  },
+  {
+    "name": "Kubfu",
+    "dex": "891",
+    "types": [
+      "Fighting"
+    ],
+    "eggGroups": [
+      "Undiscovered"
+    ],
+    "abilities": [
+      "Inner Focus"
+    ],
+    "hiddenAbility": "NULL",
+    "canBeShiny": false,
+    "iconSlug": "kubfu"
+  },
+  {
+    "name": "Urshifu",
+    "dex": "892",
+    "types": [
+      "Fighting",
+      "Dark"
+    ],
+    "eggGroups": [
+      "Undiscovered"
+    ],
+    "abilities": [
+      "Unseen Fist"
+    ],
+    "hiddenAbility": "NULL",
+    "canBeShiny": false,
+    "iconSlug": "urshifu"
+  },
+  {
+    "name": "Urshifu-Gigantamax",
+    "dex": "892",
+    "types": [
+      "Fighting",
+      "Dark"
+    ],
+    "eggGroups": [
+      "Undiscovered"
+    ],
+    "abilities": [
+      "Unseen Fist"
+    ],
+    "hiddenAbility": "NULL",
+    "canBeShiny": false,
+    "iconSlug": "urshifu-gmax"
+  },
+  {
+    "name": "Urshifu-Rapid-Strike",
+    "dex": "892",
+    "types": [
+      "Fighting",
+      "Water"
+    ],
+    "eggGroups": [
+      "Undiscovered"
+    ],
+    "abilities": [
+      "Unseen Fist"
+    ],
+    "hiddenAbility": "NULL",
+    "canBeShiny": false,
+    "iconSlug": "urshifu-rapid-strike"
+  },
+  {
+    "name": "Urshifu-Rapid-Strike-Gigantamax",
+    "dex": "892",
+    "types": [
+      "Fighting",
+      "Water"
+    ],
+    "eggGroups": [
+      "Undiscovered"
+    ],
+    "abilities": [
+      "Unseen Fist"
+    ],
+    "hiddenAbility": "NULL",
+    "canBeShiny": false,
+    "iconSlug": "urshifu-rapid-strike-gmax"
+  },
+  {
+    "name": "Zarude",
+    "dex": "893",
+    "types": [
+      "Dark",
+      "Grass"
+    ],
+    "eggGroups": [
+      "Undiscovered"
+    ],
+    "abilities": [
+      "Leaf Guard"
+    ],
+    "hiddenAbility": "NULL",
+    "canBeShiny": false,
+    "iconSlug": "zarude"
+  }
 ]
