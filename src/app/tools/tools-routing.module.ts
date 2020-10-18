@@ -7,10 +7,13 @@ import { ShinyDexComponent } from './components/shiny-dex/shiny-dex.component';
 
 const routes: Routes = [
   {
+    path: '', redirectTo: 'breeding'
+  },
+  {
     path: '', component: ToolsComponent, children: [
       {
         path: 'breeding', component: BreedingComponent
-      } ,
+      },
       {
         path: 'shiny-dex', component: ShinyDexComponent
       }
