@@ -3,9 +3,6 @@ import { Observable } from 'rxjs';
 import { Spreadsheet } from '@spreadsheet/models/spreadsheet';
 import { Worksheet } from '@spreadsheet/models/worksheet';
 import { SpreadsheetFacade } from '@spreadsheet/spreadsheet.facade';
-import { GridAppearanceType } from '../../../grid/grid-appearance.type';
-import { GridService } from '../../../grid/services/grid.service';
-import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-index',
@@ -18,16 +15,12 @@ export class IndexComponent implements OnInit {
 
   spreadsheetData$: Observable<Spreadsheet>;
 
-  toggleInactivesControl: FormControl;
-
   spreadsheetId?: string;
   worksheets?: Worksheet[];
 
   constructor(
-    private spreadsheetFacade: SpreadsheetFacade,
-    private gridService: GridService
+    private spreadsheetFacade: SpreadsheetFacade
   ) {
-    this.toggleInactivesControl = new FormControl(false);
     this.spreadsheetData$ = this.spreadsheetFacade.getCurrentSpreadsheet$();
   }
 
@@ -39,13 +32,5 @@ export class IndexComponent implements OnInit {
         this.worksheets = spreadsheet.worksheets.filter(worksheet => worksheet.config?.type === 'Breedables');
       }
     });
-  }
-
-  changeGrid(appearance: GridAppearanceType): void {
-    this.gridService.updateGridAppearance(appearance);
-  }
-
-  changeGridInactives(): void {
-    this.gridService.updateHideItems(this.toggleInactivesControl.value);
   }
 }

@@ -26,7 +26,8 @@ import { GridControllerComponent } from './grid-controller/grid-controller.compo
   exports: [
     GridComponent,
     GridItemComponent,
-    ChangerComponent
+    ChangerComponent,
+    GridControllerComponent
   ],
   imports: [
     CommonModule,
