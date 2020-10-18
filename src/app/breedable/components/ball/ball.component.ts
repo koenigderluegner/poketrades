@@ -30,6 +30,8 @@ export class BallComponent implements OnInit, OnDestroy {
     private slugifyPipe: SlugifyPipe,
     private gridService: GridService
   ) {
+    this.gridService.updateHideAppearanceControl(false);
+    this.gridService.updateHideInactiveItemsControl(false);
     this.gridAppearance$ = this.gridService.getGridAppearance$();
     this.hideItems$ = this.gridService.getHideItems$();
   }
