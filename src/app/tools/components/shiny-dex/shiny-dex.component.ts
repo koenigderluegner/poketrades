@@ -17,8 +17,7 @@ export class ShinyDexComponent implements OnInit {
 
   allShinyWorksheets: Worksheet[] = [];
   partialShinyWorksheets: Worksheet[] = [];
-  shinies$?: Observable<{ [key: string]: ShinyDexEntry }>;
-
+  shinies$?: Observable<[string , ShinyDexEntry][]>;
 
 
   constructor(private databases: DatabaseFacadeService,
@@ -38,14 +37,17 @@ export class ShinyDexComponent implements OnInit {
         });
 
         // build shiny list
-
         const shinies: { [key: string]: ShinyDexEntry } = {};
 
         for (const pokemon of pokemonEntries) {
-          shinies[pokemon.name] = {
-            pokemon, amountShinies: 0
-          };
+
+          Object.assign(shinies, {
+            [pokemon.name]: {
+              pokemon, amountShinies: 0
+            }
+          });
         }
+
 
         // add one for each entry in an "all shinies" tab
         for (const worksheet of this.allShinyWorksheets) {
@@ -78,8 +80,7 @@ export class ShinyDexComponent implements OnInit {
             }
           }
         }
-
-        return of(shinies);
+        return of(Object.entries(shinies));
       })
     );
   }
