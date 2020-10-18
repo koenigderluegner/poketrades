@@ -17,7 +17,7 @@ export class ShinyDexComponent implements OnInit {
 
   allShinyWorksheets: Worksheet[] = [];
   partialShinyWorksheets: Worksheet[] = [];
-  shinies$?: Observable<[string , ShinyDexEntry][]>;
+  shinies$?: Observable<[string, ShinyDexEntry][]>;
 
 
   constructor(private databases: DatabaseFacadeService,
@@ -40,12 +40,13 @@ export class ShinyDexComponent implements OnInit {
         const shinies: { [key: string]: ShinyDexEntry } = {};
 
         for (const pokemon of pokemonEntries) {
-
-          Object.assign(shinies, {
-            [pokemon.name]: {
-              pokemon, amountShinies: 0
-            }
-          });
+          if (pokemon.canBeShiny) {
+            Object.assign(shinies, {
+              [pokemon.name]: {
+                pokemon, amountShinies: 0
+              }
+            });
+          }
         }
 
 
