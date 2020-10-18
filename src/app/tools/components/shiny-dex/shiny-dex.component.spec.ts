@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ShinyDexComponent } from './shiny-dex.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('ShinyDexComponent', () => {
   let component: ShinyDexComponent;
@@ -8,9 +9,10 @@ describe('ShinyDexComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ShinyDexComponent ]
+      imports: [HttpClientTestingModule],
+      declarations: [ShinyDexComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
