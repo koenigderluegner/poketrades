@@ -85,6 +85,7 @@ export class HeaderComponent implements OnInit {
     config.width = '100%';
     config.height = 'calc(100vh - 53px)';
     config.backdropClass = 'main-menu-backdrop';
+    config.scrollStrategy = this.overlay.scrollStrategies.block();
 
 
     config.hasBackdrop = true;
