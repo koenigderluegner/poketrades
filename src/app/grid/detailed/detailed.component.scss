@@ -191,6 +191,24 @@ $dynamaxColor: #33EAFA,
 .detailed-moves {
   padding: 0 4px;
 
+  & [class*=move-] {
+    padding: 6px 6px 6px 36px;
+    border-radius: 3px;
+    background-repeat: no-repeat;
+    background-blend-mode: screen;
+    background-size: 24px;
+    background-position: 3px;
+    justify-content: space-between;
+    background-color: #dbdbdb;
+  }
+
+  @each $type, $color in $types {
+    .move-#{$type} {
+      background-color: $color;
+      background-image: url("type-icons/#{$type}.png");
+    }
+  }
+
   .egg-icon {
     overflow: hidden;
     height: 21px;
@@ -201,26 +219,6 @@ $dynamaxColor: #33EAFA,
     .pkspr.egg {
       margin-left: -16px;
     }
-  }
-}
-
-[class*=move-] {
-  padding: 6px 6px 6px 36px;
-  border-radius: 3px;
-  background-repeat: no-repeat;
-  background-blend-mode: screen;
-  background-size: 24px;
-  background-position: 3px;
-  justify-content: space-between;
-  background-color: #dbdbdb;
-}
-
-
-
-@each $type, $color in $types {
-  .move-#{$type} {
-    background-color: $color;
-    background-image: url("type-icons/#{$type}.png");
   }
 }
 
