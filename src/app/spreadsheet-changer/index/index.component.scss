@@ -17,6 +17,7 @@
 }
 
 .history-entry {
+  cursor: pointer;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -24,5 +25,6 @@
 }
 
 .save-button {
+  cursor: pointer;
   width: auto;
 }
