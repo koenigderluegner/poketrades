@@ -330,6 +330,17 @@
     "probability": "30"
   },
   {
+    "slug": "astral-barrage",
+    "name": "Astral Barrage",
+    "type": "ghost",
+    "category": "special",
+    "power": "120",
+    "accuracy": "100",
+    "pp": "5",
+    "desc": "The user attacks by sending a frightful amount of small ghosts at opposing Pokémon.",
+    "probability": null
+  },
+  {
     "slug": "attack-order",
     "name": "Attack Order",
     "type": "bug",
@@ -480,7 +491,7 @@
     "power": null,
     "accuracy": null,
     "pp": "40",
-    "desc": "User switches out and gives stat changes to the incoming Pok\u00e9mon.",
+    "desc": "User switches out and gives stat changes to the incoming Pokémon.",
     "probability": null
   },
   {
@@ -491,7 +502,7 @@
     "power": "100",
     "accuracy": "100",
     "pp": "15",
-    "desc": "The user first heats up its beak, and then it attacks the target. Making direct contact with the Pok\u00e9mon while it's heating up its beak results in a burn.",
+    "desc": "The user first heats up its beak, and then it attacks the target. Making direct contact with the Pokémon while it's heating up its beak results in a burn.",
     "probability": null
   },
   {
@@ -502,7 +513,7 @@
     "power": null,
     "accuracy": "100",
     "pp": "10",
-    "desc": "Each Pok\u00e9mon in your party attacks.",
+    "desc": "Each Pokémon in your party attacks.",
     "probability": null
   },
   {
@@ -755,7 +766,7 @@
     "power": "140",
     "accuracy": "100",
     "pp": "10",
-    "desc": "Hits all adjacent Pok\u00e9mon.",
+    "desc": "Hits all adjacent Pokémon.",
     "probability": null
   },
   {
@@ -1019,7 +1030,7 @@
     "power": null,
     "accuracy": null,
     "pp": "40",
-    "desc": "The Pok\u00e9mon congratulates you on your special day. No battle effect.",
+    "desc": "The Pokémon congratulates you on your special day. No battle effect.",
     "probability": null
   },
   {
@@ -1085,7 +1096,7 @@
     "power": "60",
     "accuracy": "90",
     "pp": "10",
-    "desc": "In battles, the opponent switches. In the wild, the Pok\u00e9mon runs.",
+    "desc": "In battles, the opponent switches. In the wild, the Pokémon runs.",
     "probability": null
   },
   {
@@ -1371,7 +1382,7 @@
     "power": null,
     "accuracy": null,
     "pp": "10",
-    "desc": "Protects the Pok\u00e9mon from status moves.",
+    "desc": "Protects the Pokémon from status moves.",
     "probability": null
   },
   {
@@ -1793,6 +1804,17 @@
     "probability": null
   },
   {
+    "slug": "dragon-energy",
+    "name": "Dragon Energy",
+    "type": "dragon",
+    "category": "special",
+    "power": "150",
+    "accuracy": "100",
+    "pp": "5",
+    "desc": "Converting its life-force into power, the user attacks opposing Pokémon. The lower the user's HP, the lower the move's power.",
+    "probability": null
+  },
+  {
     "slug": "dragon-hammer",
     "name": "Dragon Hammer",
     "type": "dragon",
@@ -1844,7 +1866,7 @@
     "power": "60",
     "accuracy": "90",
     "pp": "10",
-    "desc": "In battles, the opponent switches. In the wild, the Pok\u00e9mon runs.",
+    "desc": "In battles, the opponent switches. In the wild, the Pokémon runs.",
     "probability": null
   },
   {
@@ -1991,6 +2013,17 @@
     "probability": null
   },
   {
+    "slug": "eerie-spell",
+    "name": "Eerie Spell",
+    "type": "psychic",
+    "category": "special",
+    "power": "80",
+    "accuracy": "100",
+    "pp": "5",
+    "desc": "The user attacks with its tremendous psychic power. This also removes 3 PP from the target's last move.",
+    "probability": null
+  },
+  {
     "slug": "egg-bomb",
     "name": "Egg Bomb",
     "type": "normal",
@@ -2009,7 +2042,7 @@
     "power": null,
     "accuracy": null,
     "pp": "10",
-    "desc": "Prevents all Pok\u00e9mon from falling asleep for 5 turns.",
+    "desc": "Prevents all Pokémon from falling asleep for 5 turns.",
     "probability": null
   },
   {
@@ -2321,6 +2354,17 @@
     "probability": "50"
   },
   {
+    "slug": "fiery-wrath",
+    "name": "Fiery Wrath",
+    "type": "dark",
+    "category": "special",
+    "power": "90",
+    "accuracy": "100",
+    "pp": "10",
+    "desc": "The user transforms its wrath into a fire-like aura to attack. This may also make opposing Pokémon flinch.",
+    "probability": "20"
+  },
+  {
     "slug": "final-gambit",
     "name": "Final Gambit",
     "type": "fighting",
@@ -2350,7 +2394,7 @@
     "power": "65",
     "accuracy": "95",
     "pp": "15",
-    "desc": "May cause flinching and\/or burn opponent.",
+    "desc": "May cause flinching and/or burn opponent.",
     "probability": "10"
   },
   {
@@ -2449,7 +2493,7 @@
     "power": "70",
     "accuracy": "100",
     "pp": "15",
-    "desc": "May also injure nearby Pok\u00e9mon.",
+    "desc": "May also injure nearby Pokémon.",
     "probability": null
   },
   {
@@ -2581,7 +2625,7 @@
     "power": null,
     "accuracy": null,
     "pp": "10",
-    "desc": "Sharply raises Defense of all Grass-type Pok\u00e9mon on the field.",
+    "desc": "Sharply raises Defense of all Grass-type Pokémon on the field.",
     "probability": "100"
   },
   {
@@ -2714,6 +2758,17 @@
     "accuracy": "100",
     "pp": "20",
     "desc": "May freeze opponent. Super-effective against Water types.",
+    "probability": "10"
+  },
+  {
+    "slug": "freezing-glare",
+    "name": "Freezing Glare",
+    "type": "psychic",
+    "category": "special",
+    "power": "90",
+    "accuracy": "100",
+    "pp": "10",
+    "desc": "The user shoots its psychic power from its eyes to attack. This may also leave the target frozen.",
     "probability": "10"
   },
   {
@@ -3142,7 +3197,7 @@
     "power": null,
     "accuracy": null,
     "pp": "20",
-    "desc": "The user engages its gears to raise the Attack and Sp. Atk stats of ally Pok\u00e9mon with the Plus or Minus Ability.",
+    "desc": "The user engages its gears to raise the Attack and Sp. Atk stats of ally Pokémon with the Plus or Minus Ability.",
     "probability": null
   },
   {
@@ -3198,6 +3253,17 @@
     "accuracy": null,
     "pp": "1",
     "desc": "Electric type Z-Move.",
+    "probability": null
+  },
+  {
+    "slug": "glacial-lance",
+    "name": "Glacial Lance",
+    "type": "ice",
+    "category": "physical",
+    "power": "130",
+    "accuracy": "100",
+    "pp": "5",
+    "desc": "The user attacks by hurling a blizzard-cloaked icicle lance at opposing Pokémon.",
     "probability": null
   },
   {
@@ -3274,7 +3340,7 @@
     "power": null,
     "accuracy": null,
     "pp": "10",
-    "desc": "Restores a little HP of all Pok\u00e9mon for 5 turns. ",
+    "desc": "Restores a little HP of all Pokémon for 5 turns. ",
     "probability": null
   },
   {
@@ -3395,7 +3461,7 @@
     "power": "40",
     "accuracy": "100",
     "pp": "35",
-    "desc": "Hits Pok\u00e9mon using Fly\/Bounce with double power.",
+    "desc": "Hits Pokémon using Fly/Bounce with double power.",
     "probability": null
   },
   {
@@ -3549,7 +3615,7 @@
     "power": null,
     "accuracy": null,
     "pp": "10",
-    "desc": "The user faints and the next Pok\u00e9mon released is fully healed.",
+    "desc": "The user faints and the next Pokémon released is fully healed.",
     "probability": null
   },
   {
@@ -3824,7 +3890,7 @@
     "power": "100",
     "accuracy": "&infin;",
     "pp": "5",
-    "desc": "Lowers user's Defense. Can strike through Protect\/Detect.",
+    "desc": "Lowers user's Defense. Can strike through Protect/Detect.",
     "probability": "100"
   },
   {
@@ -3835,7 +3901,7 @@
     "power": "80",
     "accuracy": "&infin;",
     "pp": "5",
-    "desc": "Can strike through Protect\/Detect.",
+    "desc": "Can strike through Protect/Detect.",
     "probability": null
   },
   {
@@ -3890,7 +3956,7 @@
     "power": "65",
     "accuracy": "95",
     "pp": "15",
-    "desc": "May cause flinching and\/or freeze opponent.",
+    "desc": "May cause flinching and/or freeze opponent.",
     "probability": "10"
   },
   {
@@ -4022,7 +4088,7 @@
     "power": null,
     "accuracy": null,
     "pp": "20",
-    "desc": "User restores HP each turn. User cannot escape\/switch.",
+    "desc": "User restores HP each turn. User cannot escape/switch.",
     "probability": null
   },
   {
@@ -4312,17 +4378,6 @@
     "probability": null
   },
   {
-    "slug": "light-of-ruin",
-    "name": "Light of Ruin",
-    "type": "fairy",
-    "category": "special",
-    "power": "140",
-    "accuracy": "90",
-    "pp": "5",
-    "desc": "User receives recoil damage.",
-    "probability": null
-  },
-  {
     "slug": "light-screen",
     "name": "Light Screen",
     "type": "psychic",
@@ -4342,6 +4397,17 @@
     "accuracy": null,
     "pp": "1",
     "desc": "Ultra Necrozma-exclusive Z-Move. Ignores target's ability; uses highest Attack stat.",
+    "probability": null
+  },
+  {
+    "slug": "light-of-ruin",
+    "name": "Light of Ruin",
+    "type": "fairy",
+    "category": "special",
+    "power": "140",
+    "accuracy": "90",
+    "pp": "5",
+    "desc": "User receives recoil damage.",
     "probability": null
   },
   {
@@ -4418,7 +4484,7 @@
     "power": null,
     "accuracy": null,
     "pp": "10",
-    "desc": "The user faints but the next Pok\u00e9mon released is fully healed.",
+    "desc": "The user faints but the next Pokémon released is fully healed.",
     "probability": null
   },
   {
@@ -4539,7 +4605,7 @@
     "power": null,
     "accuracy": null,
     "pp": "20",
-    "desc": "Raises Defense and Sp. Defense of Plus\/Minus Pok\u00e9mon.",
+    "desc": "Raises Defense and Sp. Defense of Plus/Minus Pokémon.",
     "probability": null
   },
   {
@@ -4792,7 +4858,7 @@
     "power": null,
     "accuracy": null,
     "pp": "20",
-    "desc": "User copies the opponent's attack with 1.5\u00d7 power.",
+    "desc": "User copies the opponent's attack with 1.5× power.",
     "probability": null
   },
   {
@@ -5540,7 +5606,7 @@
     "power": null,
     "accuracy": null,
     "pp": "5",
-    "desc": "Any Pok\u00e9mon in play when this attack is used faints in 3 turns.",
+    "desc": "Any Pokémon in play when this attack is used faints in 3 turns.",
     "probability": null
   },
   {
@@ -5551,7 +5617,7 @@
     "power": "90",
     "accuracy": "100",
     "pp": "15",
-    "desc": "Hits all adjacent Pok\u00e9mon.",
+    "desc": "Hits all adjacent Pokémon.",
     "probability": null
   },
   {
@@ -5573,7 +5639,7 @@
     "power": "90",
     "accuracy": "100",
     "pp": "10",
-    "desc": "Disappears on first turn, attacks on second. Can strike through Protect\/Detect.",
+    "desc": "Disappears on first turn, attacks on second. Can strike through Protect/Detect.",
     "probability": null
   },
   {
@@ -5749,7 +5815,7 @@
     "power": null,
     "accuracy": "100",
     "pp": "20",
-    "desc": "Damages Pok\u00e9mon using Fire type moves.",
+    "desc": "Damages Pokémon using Fire type moves.",
     "probability": null
   },
   {
@@ -6321,7 +6387,7 @@
     "power": null,
     "accuracy": null,
     "pp": "20",
-    "desc": "In battles, the opponent switches. In the wild, the Pok\u00e9mon runs.",
+    "desc": "In battles, the opponent switches. In the wild, the Pokémon runs.",
     "probability": null
   },
   {
@@ -6750,7 +6816,7 @@
     "power": "120",
     "accuracy": "100",
     "pp": "5",
-    "desc": "Disappears on first turn, attacks on second. Can strike through Protect\/Detect.",
+    "desc": "Disappears on first turn, attacks on second. Can strike through Protect/Detect.",
     "probability": null
   },
   {
@@ -7091,7 +7157,7 @@
     "power": "50",
     "accuracy": "100",
     "pp": "15",
-    "desc": "Makes Flying-type Pok\u00e9mon vulnerable to Ground moves.",
+    "desc": "Makes Flying-type Pokémon vulnerable to Ground moves.",
     "probability": "100"
   },
   {
@@ -7300,7 +7366,7 @@
     "power": "90",
     "accuracy": "100",
     "pp": "15",
-    "desc": "Cures all status problems in the party Pok\u00e9mon.",
+    "desc": "Cures all status problems in the party Pokémon.",
     "probability": null
   },
   {
@@ -7333,7 +7399,7 @@
     "power": null,
     "accuracy": null,
     "pp": "10",
-    "desc": "Opponent cannot escape\/switch.",
+    "desc": "Opponent cannot escape/switch.",
     "probability": null
   },
   {
@@ -7817,7 +7883,7 @@
     "power": "90",
     "accuracy": "100",
     "pp": "15",
-    "desc": "Hits all adjacent Pok\u00e9mon.",
+    "desc": "Hits all adjacent Pokémon.",
     "probability": null
   },
   {
@@ -7905,7 +7971,7 @@
     "power": "120",
     "accuracy": "100",
     "pp": "10",
-    "desc": "Hits any Pok\u00e9mon that shares a type with the user.",
+    "desc": "Hits any Pokémon that shares a type with the user.",
     "probability": null
   },
   {
@@ -8026,7 +8092,7 @@
     "power": null,
     "accuracy": null,
     "pp": "10",
-    "desc": "Forces all Pok\u00e9mon on the field to eat their berries.",
+    "desc": "Forces all Pokémon on the field to eat their berries.",
     "probability": null
   },
   {
@@ -8059,7 +8125,7 @@
     "power": null,
     "accuracy": "100",
     "pp": "20",
-    "desc": "Confuses all Pok\u00e9mon.",
+    "desc": "Confuses all Pokémon.",
     "probability": null
   },
   {
@@ -8081,7 +8147,7 @@
     "power": null,
     "accuracy": null,
     "pp": "20",
-    "desc": "Allows user to flee wild battles; also warps player to last Pok\u00e9Center.",
+    "desc": "Allows user to flee wild battles; also warps player to last PokéCenter.",
     "probability": null
   },
   {
@@ -8103,7 +8169,7 @@
     "power": "90",
     "accuracy": "100",
     "pp": "10",
-    "desc": "Makes Flying-type Pok\u00e9mon vulnerable to Ground moves.",
+    "desc": "Makes Flying-type Pokémon vulnerable to Ground moves.",
     "probability": null
   },
   {
@@ -8151,6 +8217,17 @@
     "probability": "30"
   },
   {
+    "slug": "thunder-cage",
+    "name": "Thunder Cage",
+    "type": "electric",
+    "category": "special",
+    "power": "80",
+    "accuracy": "90",
+    "pp": "15",
+    "desc": "The user traps the target in a cage of sparking electricity for four to five turns.",
+    "probability": "100"
+  },
+  {
     "slug": "thunder-fang",
     "name": "Thunder Fang",
     "type": "electric",
@@ -8158,7 +8235,7 @@
     "power": "65",
     "accuracy": "95",
     "pp": "15",
-    "desc": "May cause flinching and\/or paralyze opponent.",
+    "desc": "May cause flinching and/or paralyze opponent.",
     "probability": "10"
   },
   {
@@ -8204,6 +8281,17 @@
     "pp": "15",
     "desc": "May paralyze opponent.",
     "probability": "10"
+  },
+  {
+    "slug": "thunderous-kick",
+    "name": "Thunderous Kick",
+    "type": "fighting",
+    "category": "physical",
+    "power": "90",
+    "accuracy": "100",
+    "pp": "10",
+    "desc": "The user shoots its psychic power from its eyes to attack. This may also leave the target frozen.",
+    "probability": "100"
   },
   {
     "slug": "tickle",
@@ -8312,7 +8400,7 @@
     "power": null,
     "accuracy": null,
     "pp": "5",
-    "desc": "Slower Pok\u00e9mon move first in the turn for 5 turns.",
+    "desc": "Slower Pokémon move first in the turn for 5 turns.",
     "probability": null
   },
   {
@@ -8389,7 +8477,7 @@
     "power": "40",
     "accuracy": "100",
     "pp": "20",
-    "desc": "May cause flinching. Hits Pok\u00e9mon using Fly\/Bounce with double power.",
+    "desc": "May cause flinching. Hits Pokémon using Fly/Bounce with double power.",
     "probability": "20"
   },
   {
@@ -8642,7 +8730,7 @@
     "power": null,
     "accuracy": null,
     "pp": "20",
-    "desc": "In battles, the opponent switches. In the wild, the Pok\u00e9mon runs.",
+    "desc": "In battles, the opponent switches. In the wild, the Pokémon runs.",
     "probability": null
   },
   {
@@ -8719,7 +8807,7 @@
     "power": null,
     "accuracy": null,
     "pp": "10",
-    "desc": "Swaps every Pok\u00e9mon's Defense and Special Defense for 5 turns.",
+    "desc": "Swaps every Pokémon's Defense and Special Defense for 5 turns.",
     "probability": null
   },
   {

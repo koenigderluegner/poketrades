@@ -8,6 +8,7 @@ import { CastValuablePipe } from './pipes/cast-valuable.pipe';
 import { BallGuyBubbleComponent } from './components/ball-guy-bubble/ball-guy-bubble.component';
 import { CheckboxComponent } from './components/checkbox/checkbox.component';
 import { TypeBadgeComponent } from './components/type-badge/type-badge.component';
+import { NameToSlugPipe } from './pipes/name-to-slug.pipe';
 
 
 @NgModule({
@@ -18,17 +19,19 @@ import { TypeBadgeComponent } from './components/type-badge/type-badge.component
     CastValuablePipe,
     BallGuyBubbleComponent,
     CheckboxComponent,
-    TypeBadgeComponent
+    TypeBadgeComponent,
+    NameToSlugPipe
   ],
-  exports: [
-    SlugifyPipe,
-    SubNaviItemComponent,
-    CastBreedablePipe,
-    CastValuablePipe,
-    BallGuyBubbleComponent,
-    CheckboxComponent,
-    TypeBadgeComponent
-  ],
+    exports: [
+        SlugifyPipe,
+        SubNaviItemComponent,
+        CastBreedablePipe,
+        CastValuablePipe,
+        BallGuyBubbleComponent,
+        CheckboxComponent,
+        TypeBadgeComponent,
+        NameToSlugPipe
+    ],
   imports: [
     CommonModule,
     RouterModule

@@ -1,4 +1,4 @@
-import { PokemonType } from '@shared/interfaces/pokemon-type.type';
+import {PokemonType} from '@shared/interfaces/pokemon-type.type';
 
 export interface PokemonEntry {
   name: string;
@@ -9,4 +9,7 @@ export interface PokemonEntry {
   hiddenAbility: string | null;
   iconSlug: string;
   canBeShiny: boolean;
+  canBeBanked: boolean;
+  gen8Appearance: string;
+  femaleRatio: null | number;
 }

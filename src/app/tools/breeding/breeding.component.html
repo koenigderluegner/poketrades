@@ -14,7 +14,7 @@
   <mat-autocomplete (optionSelected)="selectPokemon($event)" #auto="matAutocomplete" class="poke-autocomplete"
                     [displayWith]="displayFn" autoActiveFirstOption>
     <mat-option *ngFor="let option of filteredPokemon | async" [value]="option">
-      <app-pokemon [slug]="option.pokemon | slugify"></app-pokemon>
+      <app-pokemon [slug]="option.pokemon | nameToSlug"></app-pokemon>
       {{option.pokemon}}
     </mat-option>
   </mat-autocomplete>
