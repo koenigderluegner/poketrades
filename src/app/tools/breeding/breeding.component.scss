@@ -113,3 +113,29 @@
     margin-right: -20px;
   }
 }
+
+@media (prefers-color-scheme: dark) {
+
+  .poke-autocomplete-input-wrapper {
+    background: #21262d;
+  }
+  .poke-autocomplete-input {
+    background: #21262d;
+    color: #efe2e3;
+  }
+
+  .poke-autocomplete {
+    background: #21262d;
+
+    .mat-option {
+      color: rgb(201, 209, 217);
+
+      &:hover:not(.mat-option-disabled),
+      &:focus:not(.mat-option-disabled),
+      &.mat-selected:not(.mat-option-multiple):not(.mat-option-disabled),
+      &.mat-active {
+        background: rgb(0 0 0 / 0.15);
+      }
+    }
+  }
+}
