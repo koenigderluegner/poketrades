@@ -4,7 +4,7 @@
     <ng-container *ngIf="data">
       <div class="legality-row d-flex" *ngFor="let entry of data.legality">
         <div class="name d-flex">
-          <app-pokemon [slug]="entry.pokemon | slugify"></app-pokemon>
+          <app-pokemon [slug]="entry.pokemon | nameToSlug"></app-pokemon>
           {{entry.pokemon}}</div>
         <ng-container *ngFor="let ball of data.entries | keyvalue">
           <div class="ball-col" [class.active]="data.entries[ball.key][(entry.pokemon | slugify)]?.isOwned"

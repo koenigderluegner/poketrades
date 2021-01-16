@@ -13,7 +13,7 @@ import { SearchHistoryEntry } from '../models/search-history-entry.interface';
 })
 export class IndexComponent {
 
-  @HostBinding('class') classes = 'view';
+  @HostBinding('class') classes = 'view spreadsheet-changer-view';
 
   searchForm: FormGroup;
   hasRequested = false;

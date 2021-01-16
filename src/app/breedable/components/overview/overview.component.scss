@@ -45,3 +45,13 @@
     background: #2f3232;
   }
 }
+
+@media screen and (max-width: 720px) {
+  .legality-row {
+    flex-wrap: wrap;
+
+    .name {
+      width: 100%;
+    }
+  }
+}

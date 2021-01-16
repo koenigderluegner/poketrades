@@ -1,7 +1,6 @@
 #search, .history-entry, .save-button {
   font-size: 90%;
-  font-weight: bold;
-  letter-spacing: -1px;
+  font-weight: 500;
   line-height: 32px;
   color: #000;
   border-radius: 42px;
@@ -17,6 +16,7 @@
 }
 
 .history-entry {
+  cursor: pointer;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -24,5 +24,21 @@
 }
 
 .save-button {
+  cursor: pointer;
   width: auto;
+}
+
+@media (prefers-color-scheme: dark) {
+  #search, .history-entry, .save-button {
+    background: #21262d;
+    color: #efe2e3;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .spreadsheet-changer-view {
+    .view-sidebar {
+      order: 2;
+    }
+  }
 }

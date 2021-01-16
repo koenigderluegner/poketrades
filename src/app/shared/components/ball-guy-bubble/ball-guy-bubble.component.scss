@@ -1,4 +1,4 @@
-:host {
+.ball-guy-bubble {
   padding-left: 115px;
   background: url('ball-guy-face.png') top left no-repeat;
   min-height: 110px;
@@ -21,6 +21,19 @@
       position: absolute;
       left: -10px;
       top: 40px;
+    }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .ball-guy-bubble {
+    .speech-bubble {
+      color: #efe2e3;
+      background: #21262d;
+
+      &:after {
+        border-right-color: #21262d;
+      }
     }
   }
 }

@@ -7,7 +7,7 @@
   .grid-item {
     line-height: 20px;
     color: #000;
-    background: rgb(255, 255, 255);
+    background: #fff;
     border-radius: 42px;
     margin: 0;
     height: auto;
@@ -63,5 +63,18 @@
     position: absolute;
     bottom: 0;
     right: 2px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .grid.normal {
+    .grid-item {
+      background: #212121;
+      color: #dfd3d4;
+
+      &.inactive {
+        color: rgb(223 211 212 / 0.3);
+      }
+    }
   }
 }

@@ -8,9 +8,8 @@
 
 
     a {
-      font-size: 90%;
+      font-size: 14.4px;
       font-weight: bold;
-      letter-spacing: -1px;
       line-height: 32px;
       color: #000;
       border-radius: 42px;
@@ -19,6 +18,9 @@
       align-items: center;
       width: 100%;
       overflow: hidden;
+
+      /* required for safari to cut rounded borders */
+      -webkit-mask-image: -webkit-radial-gradient(white, black);
 
 
       .icon {
@@ -32,6 +34,7 @@
         flex-basis: calc(100% - 48px - 0.5rem);
         display: flex;
         justify-content: space-between;
+        height: 32px;
 
         &:before {
           background-color: #46504f;
@@ -86,7 +89,12 @@
         background: #212121;
         color: rgba(255, 255, 255, 0.8);
       }
+
+      .content.no-meta:before {
+        background-color: #212121;
+      }
     }
   }
+
 }
 

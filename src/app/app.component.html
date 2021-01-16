@@ -1,15 +1,5 @@
-<div *ngIf="isLoading && !waitingForRouter" [class.pause-animation]="errored" class="Loading-wrapper">
-  <div class="ball">
-    <div class="top">
-      <div class="top-color"></div>
-    </div>
-    <div class="bottom">
-      <div class="bottom-color"></div>
-    </div>
-
-    <div class="Line"></div>
-    <div class="Button"></div>
-  </div>
+<div *ngIf="isLoading && !waitingForRouter"  class="Loading-wrapper">
+<app-spinner [class.pause-animation]="errored"></app-spinner>
   <span class="message">{{loadingMessage}}</span>
 </div>
 <ng-container *ngIf="!isLoading && !waitingForRouter">

@@ -1,4 +1,4 @@
-app-header:host {
+.app-header {
   color: #fff;
   background: #060606;
   height: 53px;
@@ -6,10 +6,17 @@ app-header:host {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  transition: padding .2s linear;
 
   .App-title, .App-navigation ul {
     display: flex;
     align-items: center;
+  }
+
+  .App-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .App-header {
@@ -67,8 +74,23 @@ app-header:host {
   }
 }
 
+#pop-up-main-menu {
+  width: 100%;
+  display: block;
+  background: rgba(0, 0, 0, .7);
+  backdrop-filter: blur(8px);
+  transition: opacity 400ms cubic-bezier(0.25, 0.8, 0.25, 1);
+
+  a {
+    color: rgba(255, 255, 255, .8);
+    display: block;
+    width: 100%;
+    padding: 16px;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
-  app-header:host {
+  .app-header {
     &:before {
       background-color: #67181e;
     }
@@ -77,5 +99,11 @@ app-header:host {
       background-color: #821f26;
     }
 
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .app-header {
+    padding: 0 0 0 1rem;
   }
 }

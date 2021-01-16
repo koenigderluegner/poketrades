@@ -7,18 +7,20 @@ import { HttpClientModule } from '@angular/common/http';
 import { CoreModule } from '@core/core.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MAT_TOOLTIP_DEFAULT_OPTIONS } from '@angular/material/tooltip';
+import {SharedModule} from '@shared/shared.module';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    CoreModule,
-    BrowserAnimationsModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        CoreModule,
+        BrowserAnimationsModule,
+        SharedModule
+    ],
   providers: [
     {provide: MAT_TOOLTIP_DEFAULT_OPTIONS, useValue: {position: 'above'}}
   ],

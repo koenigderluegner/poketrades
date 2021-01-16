@@ -32,8 +32,8 @@ $poketrades-theme: mat-light-theme((
 // that you are using.
 @include angular-material-theme($poketrades-theme);
 
-@import "../node_modules/pokesprite-spritesheet/assets/pokesprite-pokemon-gen8.css";
-@import "../node_modules/pokesprite-spritesheet/assets/pokesprite-inventory.css";
+@import "~pokesprite-spritesheet/assets/pokesprite-pokemon-gen8.css";
+@import "~pokesprite-spritesheet/assets/pokesprite-inventory.css";
 
 $gap-size: 2.5rem;
 
@@ -57,14 +57,14 @@ body, html {
 }
 
 body {
-  background: linear-gradient(55deg, rgba(225, 230, 252, .3) 40%, rgba(212, 254, 252, .3) 80%), radial-gradient(circle, #fbf0fe 14%, #f2eff3 42%, #dbeffa 80%);
+  background: linear-gradient(55deg, rgba(225, 230, 252, .3) 40%, rgba(212, 254, 252, .3) 80%) fixed, radial-gradient(circle, #fbf0fe 14%, #f2eff3 42%, #dbeffa 80%) fixed;
   overflow-y: scroll;
   font-size: 1.6rem;
 }
 
 @media (prefers-color-scheme: dark) {
   body {
-    background: linear-gradient(55deg, rgba(52, 63, 111, 0.3) 40%, rgba(44, 130, 125, 0.3) 80%), radial-gradient(circle, #353435 14%, #19151b 42%, #031925 80%);
+    background: linear-gradient(55deg, rgba(52, 63, 111, 0.3) 40%, rgba(44, 130, 125, 0.3) 80%) fixed, radial-gradient(circle, #151a25 14%, #19151b 42%, #1d0923 100%) fixed;
   }
 }
 
@@ -92,13 +92,13 @@ a {
   display: grid;
   grid-template-columns: 320px 2fr;
   grid-gap: 2rem;
+  transition: padding .2s linear;
 
   .view-header {
     text-transform: uppercase;
     color: #000;
     font-weight: 700;
     font-size: 250%;
-    letter-spacing: -1px;
 
     &.full-width {
       grid-column: 1 / span 2;
@@ -132,7 +132,15 @@ a {
 @media screen and (max-width: 720px) {
   .view {
     grid-template-columns: 1fr;
+    padding: 2rem 1rem;
+
+    .view-header.full-width {
+      grid-column: 1/1;
+
+    }
   }
+
+
 }
 
 .m-0 {
@@ -181,4 +189,52 @@ Mat Tooltip
   font-size: 13px;
   max-width: 350px;
   box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+}
+
+@media (prefers-color-scheme: dark) {
+
+  body, html, .view .view-header {
+    color: #d0c4c5;
+  }
+
+
+  /* Firefox */
+  * {
+    scrollbar-color: #394045 #131c21;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #131c21;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #394045;
+    border-radius: 20px;
+    border: 3px solid #131c21;
+  }
+
+  .mat-input-element {
+    caret-color: inherit;
+
+    &::placeholder {
+      color: #8b949e;
+      opacity: 1;
+    }
+
+    &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+      color: #8b949e;
+    }
+
+    &::-ms-input-placeholder { /* Microsoft Edge */
+      color: #8b949e;
+    }
+
+
+  }
+
 }

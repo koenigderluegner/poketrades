@@ -22,3 +22,10 @@
     }
   }
 }
+
+@media (prefers-color-scheme: dark) {
+  .grid.minimal .grid-item {
+    background: rgb(0 0 0 / 22%);
+  }
+}
+
