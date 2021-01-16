@@ -7,7 +7,7 @@ $grid-changer-height: 24px;
   box-shadow: 0 0 6px rgba(0, 0, 0, 1);
   display: flex;
   width: fit-content;
-  height: ($grid-changer-height + 3px);
+  height: ($grid-changer-height + 6px);
 
   .grid-changer-option {
     cursor: pointer;
@@ -26,6 +26,7 @@ $grid-changer-height: 24px;
   .label {
     padding: 3px;
     display: none;
+    line-height: 24px;
     width: 85px;
     height: ($grid-changer-height + 6px);
   }
@@ -39,5 +40,15 @@ $grid-changer-height: 24px;
   }
 }
 
+@media (prefers-color-scheme: dark) {
+  .grid-changer {
+    background: #21262d;
+    color: #efe2e3;
 
+    input:checked ~ .label, input:checked ~ .material-icons {
+      background: #161b22;
+      color: #58a6ff;
+    }
+  }
+}
 
