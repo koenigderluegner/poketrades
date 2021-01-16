@@ -136,7 +136,7 @@ $border-color: #1b2229;
   }
 
   &.pause-animation {
-    .ball, .top-color, .bottom-color {
+    &, .top-color, .bottom-color {
       animation-play-state: paused;
     }
   }
