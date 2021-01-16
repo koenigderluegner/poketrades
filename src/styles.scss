@@ -32,8 +32,8 @@ $poketrades-theme: mat-light-theme((
 // that you are using.
 @include angular-material-theme($poketrades-theme);
 
-@import "../node_modules/pokesprite-spritesheet/assets/pokesprite-pokemon-gen8.css";
-@import "../node_modules/pokesprite-spritesheet/assets/pokesprite-inventory.css";
+@import "~pokesprite-spritesheet/assets/pokesprite-pokemon-gen8.css";
+@import "~pokesprite-spritesheet/assets/pokesprite-inventory.css";
 
 $gap-size: 2.5rem;
 
