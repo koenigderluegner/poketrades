@@ -35,3 +35,11 @@
     color: #efe2e3;
   }
 }
+
+@media screen and (max-width: 720px) {
+  .spreadsheet-changer-view {
+    .view-sidebar {
+      order: 2;
+    }
+  }
+}

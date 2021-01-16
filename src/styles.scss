@@ -135,6 +135,10 @@ a {
     grid-template-columns: 1fr;
     padding: 2rem 1rem
   }
+
+  .view .view-header.full-width {
+    grid-column: 1/1;
+  }
 }
 
 .m-0 {
