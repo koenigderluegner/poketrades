@@ -133,12 +133,15 @@ a {
 @media screen and (max-width: 720px) {
   .view {
     grid-template-columns: 1fr;
-    padding: 2rem 1rem
+    padding: 2rem 1rem;
+
+    .view-header.full-width {
+      grid-column: 1/1;
+
+    }
   }
 
-  .view .view-header.full-width {
-    grid-column: 1/1;
-  }
+
 }
 
 .m-0 {
@@ -190,6 +193,12 @@ Mat Tooltip
 }
 
 @media (prefers-color-scheme: dark) {
+
+  body, html, .view .view-header {
+    color: #d0c4c5;
+  }
+
+
   /* Firefox */
   * {
     scrollbar-color: #394045 #131c21;
