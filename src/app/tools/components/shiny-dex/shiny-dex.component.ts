@@ -46,7 +46,7 @@ export class ShinyDexComponent implements OnInit {
         const shinies: { [key: string]: ShinyDexEntry } = {};
 
         for (const pokemon of pokemonEntries) {
-          if (pokemon.canBeShiny) {
+          if (pokemon.canBeShiny && pokemon.canBeBanked) {
             Object.assign(shinies, {
               [pokemon.name]: {
                 pokemon, amountShinies: 0

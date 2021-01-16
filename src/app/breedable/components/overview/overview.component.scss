@@ -34,3 +34,14 @@
     }
   }
 }
+
+@media (prefers-color-scheme: dark) {
+  .legality-table {
+    color: rgba(255, 255, 255, 0.8);
+    background: #212121;
+  }
+
+  .legality-row:nth-child(2n) {
+    background: #2f3232;
+  }
+}
