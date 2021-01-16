@@ -119,17 +119,20 @@ export class SpreadsheetFacade {
       }),
       catchError((error) => {
         console.log(error);
-        return throwError(this.convertApiErrors(error));
+        return throwError(this.convertApiErrors('' + error.status));
       })
     );
   }
 
-  private convertApiErrors(error: { status: string }): ApiError {
+  private convertApiErrors(errorStatus: string): ApiError {
     const newError = {
       state: 'unknown',
       message: ''
     };
-    switch (error.status) {
+    switch (errorStatus) {
+      case '429':
+        newError.message = 'Too many requests: Google request limit reached, try again later.';
+        break;
       default:
         newError.message = 'Unknown Error: please check the given ID and publish your sheet if not already.';
         break;
