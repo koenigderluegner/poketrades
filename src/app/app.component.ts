@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
-import { Spreadsheet } from '@spreadsheet/models/spreadsheet';
-import { NavigationEnd, Route, Router } from '@angular/router';
-import { SpreadsheetFacade } from '@spreadsheet/spreadsheet.facade';
-import { DatabaseFacadeService } from './database/database-facade.service';
-import { UserService } from './database/services/user.service';
-import { MatIconRegistry } from '@angular/material/icon';
-import { DomSanitizer } from '@angular/platform-browser';
+import {Component, OnInit} from '@angular/core';
+import {Spreadsheet} from '@spreadsheet/models/spreadsheet';
+import {NavigationEnd, Route, Router} from '@angular/router';
+import {SpreadsheetFacade} from '@spreadsheet/spreadsheet.facade';
+import {DatabaseFacadeService} from './database/database-facade.service';
+import {UserService} from './database/services/user.service';
+import {MatIconRegistry} from '@angular/material/icon';
+import {DomSanitizer} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
@@ -43,16 +43,26 @@ export class AppComponent implements OnInit {
     const routerSub = this.router.events.subscribe((e) => {
       if (e instanceof NavigationEnd) {
         routerSub.unsubscribe();
-
         this.databaseFacadeService.loadDatabases().subscribe(() => {
 
           const id = e.url.split('/')?.[1];
 
           if (id === 'u') { // user route
             const username = e.url.split('/')?.[2];
-            this.userService.findUser(username).subscribe(spreadsheetId => {
-              this.loadData(spreadsheetId, username);
+            this.isLoading = true;
+            this.loadingMessage = 'Search user ' + username;
+            this.waitingForRouter = false;
+
+            this.userService.findUser(username).subscribe({
+              next: spreadsheetId => {
+                this.loadData(spreadsheetId, username);
+              },
+              error: err => {
+                this.loadingMessage = err;
+                this.errored = true;
+              }
             });
+
           } else {
             this.loadData(id);
           }
