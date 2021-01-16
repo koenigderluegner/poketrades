@@ -207,6 +207,8 @@ Mat Tooltip
   }
 
   .mat-input-element {
+    caret-color: inherit;
+
     &::placeholder {
       color: #8b949e;
       opacity: 1;
@@ -219,7 +221,6 @@ Mat Tooltip
     &::-ms-input-placeholder { /* Microsoft Edge */
       color: #8b949e;
     }
-
 
 
   }
