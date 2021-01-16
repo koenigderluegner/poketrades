@@ -116,6 +116,34 @@
 
 @media (prefers-color-scheme: dark) {
 
+  .breeding-view {
+    .card {
+      color: #efe2e3;
+      background: #21262d;
+    }
+  }
+
+  .breeding-pokemon-table {
+    color: #d8cdcd;
+    background: #212121;
+
+    tr:nth-child(even) {
+      background: #2f3232;
+    }
+
+    tr:not(.is-owned) {
+      background: #111417;
+    }
+  }
+
+  .breeding-move-grid .grid.minimal {
+    background: #21262d;
+
+    .grid-item {
+      background: rgba(0, 0, 0, .1);
+    }
+  }
+
   .poke-autocomplete-input-wrapper {
     background: #21262d;
   }

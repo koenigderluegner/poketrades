@@ -1,17 +1,17 @@
-import { Component, ViewEncapsulation } from '@angular/core';
-import { FormControl } from '@angular/forms';
-import { DatabaseFacadeService } from '../../database/database-facade.service';
-import { forkJoin, Observable } from 'rxjs';
-import { map, mergeMap, startWith, tap } from 'rxjs/operators';
-import { MatAutocompleteSelectedEvent } from '@angular/material/autocomplete';
-import { LegalityEntry } from '../../database/models/legality-entry.interface';
-import { PokemonEntry } from '../../database/models/pokemon-entry.interface';
-import { LevelUpMove } from '../../database/models/level-up-move.interface';
-import { Pokemon } from '@shared/interfaces/pokemon';
-import { SpreadsheetFacade } from '@spreadsheet/spreadsheet.facade';
-import { Worksheet } from '@spreadsheet/models/worksheet';
-import { Breedable } from '@shared/classes/koenig/breedable';
-import { GridService } from '../../grid/services/grid.service';
+import {Component, HostBinding, ViewEncapsulation} from '@angular/core';
+import {FormControl} from '@angular/forms';
+import {DatabaseFacadeService} from '../../database/database-facade.service';
+import {forkJoin, Observable} from 'rxjs';
+import {map, mergeMap, startWith, tap} from 'rxjs/operators';
+import {MatAutocompleteSelectedEvent} from '@angular/material/autocomplete';
+import {LegalityEntry} from '../../database/models/legality-entry.interface';
+import {PokemonEntry} from '../../database/models/pokemon-entry.interface';
+import {LevelUpMove} from '../../database/models/level-up-move.interface';
+import {Pokemon} from '@shared/interfaces/pokemon';
+import {SpreadsheetFacade} from '@spreadsheet/spreadsheet.facade';
+import {Worksheet} from '@spreadsheet/models/worksheet';
+import {Breedable} from '@shared/classes/koenig/breedable';
+import {GridService} from '../../grid/services/grid.service';
 
 @Component({
   selector: 'app-breeding',
@@ -20,6 +20,8 @@ import { GridService } from '../../grid/services/grid.service';
   encapsulation: ViewEncapsulation.None
 })
 export class BreedingComponent {
+
+  @HostBinding('class.breeding-view') setClass = true;
 
   control: FormControl;
   breedables$: Observable<LegalityEntry[]>;
@@ -138,7 +140,7 @@ export class BreedingComponent {
     ));
   }
 
-  isEggMove(move: string){
+  isEggMove(move: string) {
     return this.eggMoves?.includes(move);
   }
 
