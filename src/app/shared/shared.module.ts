@@ -9,6 +9,7 @@ import { BallGuyBubbleComponent } from './components/ball-guy-bubble/ball-guy-bu
 import { CheckboxComponent } from './components/checkbox/checkbox.component';
 import { TypeBadgeComponent } from './components/type-badge/type-badge.component';
 import { NameToSlugPipe } from './pipes/name-to-slug.pipe';
+import { SpinnerComponent } from './components/spinner/spinner.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { NameToSlugPipe } from './pipes/name-to-slug.pipe';
     BallGuyBubbleComponent,
     CheckboxComponent,
     TypeBadgeComponent,
-    NameToSlugPipe
+    NameToSlugPipe,
+    SpinnerComponent
   ],
     exports: [
         SlugifyPipe,
