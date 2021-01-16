@@ -184,3 +184,25 @@ Mat Tooltip
   max-width: 350px;
   box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
 }
+
+@media (prefers-color-scheme: dark) {
+  /* Firefox */
+  * {
+    scrollbar-color: #394045 #131c21;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #131c21;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #394045;
+    border-radius: 20px;
+    border: 3px solid #131c21;
+  }
+}
