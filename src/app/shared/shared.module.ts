@@ -24,16 +24,17 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
     NameToSlugPipe,
     SpinnerComponent
   ],
-    exports: [
-        SlugifyPipe,
-        SubNaviItemComponent,
-        CastBreedablePipe,
-        CastValuablePipe,
-        BallGuyBubbleComponent,
-        CheckboxComponent,
-        TypeBadgeComponent,
-        NameToSlugPipe
-    ],
+  exports: [
+    SlugifyPipe,
+    SubNaviItemComponent,
+    CastBreedablePipe,
+    CastValuablePipe,
+    BallGuyBubbleComponent,
+    CheckboxComponent,
+    TypeBadgeComponent,
+    NameToSlugPipe,
+    SpinnerComponent
+  ],
   imports: [
     CommonModule,
     RouterModule
