@@ -41,9 +41,9 @@
   </app-ball-guy-bubble>
 </ng-template>
 <ng-template #pendingTemplate>
-
   <div *ngIf="hasRequested">
-    Load spreadsheet
+    <app-spinner class="centered-spinner"></app-spinner>
+    <div class="t-align-center">Load spreadsheet</div>
   </div>
 </ng-template>
 <ng-template #errorTemplate let-error="error">Error: {{ error.message }}</ng-template>

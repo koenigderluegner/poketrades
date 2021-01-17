@@ -28,6 +28,12 @@
   width: auto;
 }
 
+.spreadsheet-changer-view {
+  .centered-spinner {
+margin: 20px auto;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   #search, .history-entry, .save-button {
     background: #21262d;
