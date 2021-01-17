@@ -28,10 +28,41 @@
   width: auto;
 }
 
+.spreadsheet-changer-view {
+  .centered-spinner {
+    margin: 20px auto;
+  }
+}
+
+.collection-infos {
+  margin-top: 16px;
+
+  .title {
+    font-size: 18px;
+  }
+
+  .text {
+    margin: 0 0 8px;
+    line-height: 1.4;
+    color: hsla(0, 0%, 0%, .9);
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   #search, .history-entry, .save-button {
     background: #21262d;
     color: #efe2e3;
+  }
+
+  .collection-infos {
+
+    .title {
+      color: #efe2e3;
+    }
+
+    .text {
+      color: hsla(0, 0%, 100%, .7);
+    }
   }
 }
 
