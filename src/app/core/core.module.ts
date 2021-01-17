@@ -7,11 +7,12 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {OverlayModule} from '@angular/cdk/overlay';
 import {SlugifyPipe} from '@shared/pipes/slugify.pipe';
+import { FooterComponent } from './components/layout/footer/footer.component';
 
 
 
 @NgModule({
-  declarations: [HeaderComponent],
+  declarations: [HeaderComponent, FooterComponent],
   exports: [
     HeaderComponent
   ],
