@@ -1,0 +1,36 @@
+.footer {
+  background: #060606;
+  height: 53px;
+  padding: 0 3rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transition: padding 0.2s linear;
+
+  .copy{
+    padding: 1.6rem;
+  }
+
+  .copy, .link-list {
+    display: flex;
+    align-items: center;
+  }
+
+  .link-list a {
+    padding: 1.6rem;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 900px) {
+
+  .footer {
+    flex-direction: column;
+    height: auto;
+    min-height: 106px;
+
+    .copy {
+      order: 2;
+    }
+  }
+}

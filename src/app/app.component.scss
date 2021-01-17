@@ -29,6 +29,10 @@
 
 }
 
+.main-wrapper{
+  min-height: calc(100% - 106px); // 100% - (headerHeight + footerHeight)
+}
+
 @media (prefers-color-scheme: dark) {
   .Loading-wrapper {
     background: linear-gradient(55deg, rgba(52, 63, 111, 0.3) 40%, rgba(44, 130, 125, 0.3) 80%) fixed, radial-gradient(circle, #151a25 14%, #19151b 42%, #1d0923 100%) fixed;
@@ -36,5 +40,11 @@
     .message {
       color: rgba(255, 255, 255, .8)
     }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .main-wrapper{
+    min-height: calc(100% - 159px); // 100% - (headerHeight + footerHeight * 2)
   }
 }
