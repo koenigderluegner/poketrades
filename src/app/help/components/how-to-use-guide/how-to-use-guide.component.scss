@@ -2,3 +2,9 @@
   max-width: 100%;
   height: auto
 }
+
+.how-to-use-guide{
+  code {
+    overflow-wrap: break-word;
+  }
+}

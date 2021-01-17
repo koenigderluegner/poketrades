@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewEncapsulation} from '@angular/core';
+import {Component, HostBinding, OnInit, ViewEncapsulation} from '@angular/core';
 
 @Component({
   selector: 'app-how-to-use-guide',
@@ -8,7 +8,10 @@ import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 })
 export class HowToUseGuideComponent implements OnInit {
 
-  constructor() { }
+  @HostBinding('class.how-to-use-guide') private setClass = true;
+
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
