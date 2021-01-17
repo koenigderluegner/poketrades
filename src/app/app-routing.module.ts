@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
 
 
 const toolsRoutes = {
@@ -17,6 +17,10 @@ userRoutes.push(toolsRoutes);
 
 const routes: Routes = [
   {
+    path: 'help',
+    loadChildren: () => import('./help/help.module').then(m => m.HelpModule)
+  },
+  {
     path: 'change-spreadsheet',
     loadChildren: () => import('./spreadsheet-changer/spreadsheet-changer.module').then(m => m.SpreadsheetChangerModule)
   },
@@ -26,14 +30,12 @@ const routes: Routes = [
   {
     path: 'u/:username', children: userRoutes
   },
-
-
 ];
 
 routes.unshift(toolsRoutes);
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' })],
+  imports: [RouterModule.forRoot(routes, {relativeLinkResolution: 'legacy'})],
   exports: [RouterModule]
 })
 export class AppRoutingModule {

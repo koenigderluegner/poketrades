@@ -75,8 +75,7 @@ ul, ol {
 }
 
 a {
-  text-decoration: none;
-  color: #adaeb0;
+  color: #000;
 }
 
 
@@ -123,6 +122,14 @@ a {
   }
 
 
+}
+
+.container{
+  padding: 3rem;
+  width: 100%;
+  max-width: 1200px;
+  box-sizing: border-box;
+  margin: 0 auto;
 }
 
 .button-row {
@@ -193,8 +200,12 @@ Mat Tooltip
 
 @media (prefers-color-scheme: dark) {
 
+  a{
+    color: #fff;
+  }
+
   body, html, .view .view-header {
-    color: #d0c4c5;
+    color: #e0d4d5;
   }
 
 

@@ -19,25 +19,13 @@
     text-overflow: ellipsis;
   }
 
-  .App-header {
-    padding: 1rem 0;
-
-    a {
-      color: #c9cacc;
-      border-bottom: 2px solid transparent;
-
-      &.selected {
-        border-bottom-color: #0b7abb;;
-      }
-    }
-
-  }
-
   .App-navigation ul {
 
     justify-content: flex-end;
 
     a {
+      text-decoration: none;
+      color: #c9cacc;
       padding: 1.6rem;
       display: block;
     }
@@ -86,6 +74,7 @@
     display: block;
     width: 100%;
     padding: 16px;
+    text-decoration: none;
   }
 }
 
