@@ -14,13 +14,12 @@ export class GridService {
   hideInactiveItemsControl: BehaviorSubject<boolean>;
 
   constructor() {
-    const gridAppearanceType = localStorage.getItem('gridAppearanceType');
+    let gridAppearanceType = localStorage.getItem('gridAppearanceType');
     const hideItems = coerceBooleanProperty(localStorage.getItem('hideItems'));
-    if (gridAppearanceType) {
-      this.gridAppearance = new BehaviorSubject<GridAppearanceType>(gridAppearanceType as GridAppearanceType);
-    } else {
-      this.gridAppearance = new BehaviorSubject<GridAppearanceType>('minimal');
-    }
+    gridAppearanceType = gridAppearanceType !== 'detailed' && gridAppearanceType !== 'normal' ? 'minimal' : gridAppearanceType;
+
+    this.gridAppearance = new BehaviorSubject<GridAppearanceType>(gridAppearanceType as GridAppearanceType);
+
     if (hideItems !== null) {
       this.hideInactiveItems = new BehaviorSubject<boolean>(hideItems);
     } else {
