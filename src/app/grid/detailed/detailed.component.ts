@@ -4,6 +4,7 @@ import { DatabaseFacadeService } from '../../database/database-facade.service';
 import { forkJoin, Observable, of } from 'rxjs';
 import { PokemonEntry } from '../../database/models/pokemon-entry.interface';
 import { Move } from '../../database/models/move.interface';
+import {NaturesService} from '../../database/services/natures.service';
 
 @Component({
   selector: 'app-detailed',
@@ -24,7 +25,8 @@ export class DetailedComponent implements OnInit, OnChanges {
   dbpokemon$: Observable<PokemonEntry> | undefined;
   moves$: Observable<Move[]> | undefined;
 
-  constructor(private databaseFacadeService: DatabaseFacadeService) {
+  constructor(private databaseFacadeService: DatabaseFacadeService,
+              public naturesService: NaturesService) {
   }
 
   ngOnInit(): void {

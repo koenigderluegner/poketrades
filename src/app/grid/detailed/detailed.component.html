@@ -57,7 +57,7 @@
       <span class="detailed-text">{{pokemon.ability}}</span>
     </div>
 
-    <div class="detailed-nature row " *ngIf="pokemon.nature">
+    <div class="detailed-nature row " *ngIf="pokemon.nature ? naturesService.isNature(pokemon.nature) : false">
       <div class="detailed-label dark-bg">Nature</div>
       <span class="detailed-text">{{pokemon.nature}}</span>
     </div>
