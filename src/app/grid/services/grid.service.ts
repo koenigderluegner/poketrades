@@ -1,6 +1,7 @@
-import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
-import { GridAppearanceType } from '../grid-appearance.type';
+import {Injectable} from '@angular/core';
+import {BehaviorSubject, Observable} from 'rxjs';
+import {GridAppearanceType} from '../grid-appearance.type';
+import {coerceBooleanProperty} from '@angular/cdk/coercion';
 
 @Injectable({
   providedIn: 'root'
@@ -13,8 +14,18 @@ export class GridService {
   hideInactiveItemsControl: BehaviorSubject<boolean>;
 
   constructor() {
-    this.gridAppearance = new BehaviorSubject<GridAppearanceType>('minimal');
-    this.hideInactiveItems = new BehaviorSubject<boolean>(false);
+    const gridAppearanceType = localStorage.getItem('gridAppearanceType');
+    const hideItems = coerceBooleanProperty(localStorage.getItem('hideItems'));
+    if (gridAppearanceType) {
+      this.gridAppearance = new BehaviorSubject<GridAppearanceType>(gridAppearanceType as GridAppearanceType);
+    } else {
+      this.gridAppearance = new BehaviorSubject<GridAppearanceType>('minimal');
+    }
+    if (hideItems !== null) {
+      this.hideInactiveItems = new BehaviorSubject<boolean>(hideItems);
+    } else {
+      this.hideInactiveItems = new BehaviorSubject<boolean>(false);
+    }
     this.hideAppearanceControl = new BehaviorSubject<boolean>(false);
     this.hideInactiveItemsControl = new BehaviorSubject<boolean>(false);
   }
@@ -25,6 +36,7 @@ export class GridService {
 
   updateGridAppearance(gridAppearanceType: GridAppearanceType): void {
     this.gridAppearance.next(gridAppearanceType);
+    localStorage.setItem('gridAppearanceType', gridAppearanceType);
   }
 
   getHideItems$(): Observable<boolean> {
@@ -36,6 +48,7 @@ export class GridService {
   }
 
   updateHideItems(hideItems: boolean): void {
+    localStorage.setItem('hideItems', String(hideItems));
     return this.hideInactiveItems.next(hideItems);
   }
 
