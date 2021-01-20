@@ -15,6 +15,9 @@
           <app-type-badge type="unknown" size="small" *ngIf="!dbpokemon">{{'unknown'}}</app-type-badge>
 
         </div>
+        <div class="shiny-icon-wrapper">
+          <mat-icon *ngIf="pokemon.isShiny" svgIcon="shiny-stars"></mat-icon>
+        </div>
       </div>
     </div>
 

@@ -113,14 +113,25 @@ $dynamaxColor: #33EAFA,
       background: #dbdbdb;
     }
 
-    .detailed-types {
+    .detailed-types, .shiny-icon-wrapper {
       border-top: 14px solid transparent;
+    }
+
+    .shiny-icon-wrapper {
+      height: 38px;
+      width: 24px;
+
+      svg {
+        color: #f00;
+      }
     }
 
     .detailed-pokemon-info {
       padding: 4px 10px;
       display: flex;
       align-items: center;
+      justify-content: space-between;
+      flex: 1 1 auto;
 
       .detailed-label {
         margin-left: -10px;
@@ -273,6 +284,12 @@ $dynamaxColor: #33EAFA,
 
       &.inactive {
         color: rgb(223 211 212 / 0.3);
+      }
+
+      .shiny-icon-wrapper {
+        svg {
+          color: #b51010;
+        }
       }
     }
   }
