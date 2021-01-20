@@ -1,13 +1,14 @@
-import { Injectable } from '@angular/core';
-import { PokemonService } from './services/pokemon.service';
-import { forkJoin, Observable } from 'rxjs';
-import { MoveService } from './services/move.service';
-import { LegalityService } from './services/legality.service';
-import { Move } from './models/move.interface';
-import { LegalityEntry } from './models/legality-entry.interface';
-import { PokemonEntry } from './models/pokemon-entry.interface';
-import { LevelUpMove } from './models/level-up-move.interface';
-import { Database } from './models/database.interface';
+import {Injectable} from '@angular/core';
+import {PokemonService} from './services/pokemon.service';
+import {forkJoin, Observable} from 'rxjs';
+import {MoveService} from './services/move.service';
+import {LegalityService} from './services/legality.service';
+import {Move} from './models/move.interface';
+import {LegalityEntry} from './models/legality-entry.interface';
+import {PokemonEntry} from './models/pokemon-entry.interface';
+import {LevelUpMove} from './models/level-up-move.interface';
+import {Database} from './models/database.interface';
+import {NaturesService} from './services/natures.service';
 
 @Injectable({
   providedIn: 'root'
@@ -17,7 +18,8 @@ export class DatabaseFacadeService {
   constructor(
     private pokemonService: PokemonService,
     private moveService: MoveService,
-    private legalityService: LegalityService
+    private legalityService: LegalityService,
+    private naturesService: NaturesService
   ) {
   }
 
@@ -66,6 +68,14 @@ export class DatabaseFacadeService {
       eggMoves: this.getEggMovesForPokemon(pokemonName),
       levelUpMoves: this.getLevelUpMovesForPokemon(pokemonName),
     });
+  }
+
+  isNature(natureToCheck: string): boolean {
+    return this.naturesService.isNature(natureToCheck);
+  }
+
+  getNatures(): string[] {
+    return this.naturesService.getNatures();
   }
 
 }
