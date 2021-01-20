@@ -15,7 +15,6 @@ export class ChangelogComponent implements OnInit {
 
   constructor() {
     this.markdown = pageMarkdown;
-    console.log(pageMarkdown);
   }
 
   ngOnInit(): void {
