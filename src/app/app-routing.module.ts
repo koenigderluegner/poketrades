@@ -16,6 +16,7 @@ const userRoutes: Routes = [
 userRoutes.push(toolsRoutes);
 
 const routes: Routes = [
+  {path: '', loadChildren: () => import('./changelog/changelog.module').then(m => m.ChangelogModule)},
   {
     path: 'help',
     loadChildren: () => import('./help/help.module').then(m => m.HelpModule)
