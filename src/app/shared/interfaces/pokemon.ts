@@ -13,4 +13,5 @@ export interface Pokemon {
   isShiny: boolean;
   ivs?: PokemonStats;
   evs?: PokemonStats;
+  nature?: string;
 }

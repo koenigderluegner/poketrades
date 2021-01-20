@@ -1,6 +1,6 @@
-import { Pokemon } from '@shared/interfaces/pokemon';
-import { SlugifyPipe } from '@shared/pipes/slugify.pipe';
-import { AbstractBreedable } from '@shared/classes/koenig/abstract-breedable';
+import {Pokemon} from '@shared/interfaces/pokemon';
+import {SlugifyPipe} from '@shared/pipes/slugify.pipe';
+import {AbstractBreedable} from '@shared/classes/koenig/abstract-breedable';
 
 export class Breedable extends AbstractBreedable implements Pokemon {
   id = '';
@@ -43,9 +43,13 @@ export class Breedable extends AbstractBreedable implements Pokemon {
 
   get iconSlug(): string {
     if (!this._slug) {
-      this._slug = new SlugifyPipe().transform(this.name);
-      this._slug = this._slug.replace('-antique', '');
+      let slug = this.name.toLowerCase().replace('nidoran ♀', 'nidoran-f');
+      slug = slug.replace('nidoran ♂', 'nidoran-m');
+      slug = new SlugifyPipe().transform(slug);
+      slug = slug.replace('-antique', '');
+      this._slug = slug;
     }
+
     return this._slug;
   }
 

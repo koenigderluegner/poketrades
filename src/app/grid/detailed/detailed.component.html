@@ -15,31 +15,35 @@
           <app-type-badge type="unknown" size="small" *ngIf="!dbpokemon">{{'unknown'}}</app-type-badge>
 
         </div>
+        <div class="shiny-icon-wrapper">
+          <mat-icon *ngIf="pokemon.isShiny" svgIcon="shiny-stars"></mat-icon>
+        </div>
       </div>
     </div>
 
-    <div class="detailed-stats row " *ngIf="pokemon.ivs || pokemon.evs" [class.ev-iv]="pokemon.ivs && pokemon.evs">
+    <div class="detailed-stats row {{natureClass}}" *ngIf="pokemon.ivs || pokemon.evs"
+         [class.ev-iv]="pokemon.ivs && pokemon.evs">
       <div class="detailed-label dark-bg t-align-center">Stats</div>
-      <div class="" *ngIf="pokemon.ivs">IVs</div>
-      <div class="" *ngIf="pokemon.evs">EVs</div>
-      <div class="detailed-label dark-bg t-align-center">HP</div>
-      <div class="" *ngIf="pokemon.ivs">{{pokemon.ivs.hp}}</div>
-      <div class="" *ngIf="pokemon.evs">{{pokemon.evs.hp}}</div>
-      <div class="detailed-label dark-bg t-align-center">Attack</div>
-      <div class="" *ngIf="pokemon.ivs">{{pokemon.ivs.atk}}</div>
-      <div class="" *ngIf="pokemon.evs">{{pokemon.evs.atk}}</div>
-      <div class="detailed-label dark-bg t-align-center">Defense</div>
-      <div class="" *ngIf="pokemon.ivs">{{pokemon.ivs.def}}</div>
-      <div class="" *ngIf="pokemon.evs">{{pokemon.evs.def}}</div>
-      <div class="detailed-label dark-bg t-align-center">Sp. Atk</div>
-      <div class="" *ngIf="pokemon.ivs">{{pokemon.ivs.spa}}</div>
-      <div class="" *ngIf="pokemon.evs">{{pokemon.evs.spa}}</div>
-      <div class="detailed-label dark-bg t-align-center">Sp. Def</div>
-      <div class="" *ngIf="pokemon.ivs">{{pokemon.ivs.spd}}</div>
-      <div class="" *ngIf="pokemon.evs">{{pokemon.evs.spd}}</div>
-      <div class="detailed-label dark-bg t-align-center">Speed</div>
-      <div class="" *ngIf="pokemon.ivs">{{pokemon.ivs.spe}}</div>
-      <div class="" *ngIf="pokemon.evs">{{pokemon.evs.spe}}</div>
+      <div class="iv" *ngIf="pokemon.ivs">IVs</div>
+      <div class="ev" *ngIf="pokemon.evs">EVs</div>
+      <div class="detailed-label dark-bg t-align-center hp">HP</div>
+      <div class="hp" *ngIf="pokemon.ivs">{{pokemon.ivs.hp}}</div>
+      <div class="hp" *ngIf="pokemon.evs">{{pokemon.evs.hp}}</div>
+      <div class="detailed-label dark-bg t-align-center atk">Attack</div>
+      <div class="atk" *ngIf="pokemon.ivs">{{pokemon.ivs.atk}}</div>
+      <div class="atk" *ngIf="pokemon.evs">{{pokemon.evs.atk}}</div>
+      <div class="detailed-label dark-bg t-align-center def">Defense</div>
+      <div class="def" *ngIf="pokemon.ivs">{{pokemon.ivs.def}}</div>
+      <div class="def" *ngIf="pokemon.evs">{{pokemon.evs.def}}</div>
+      <div class="detailed-label dark-bg t-align-center spa">Sp. Atk</div>
+      <div class="spa" *ngIf="pokemon.ivs">{{pokemon.ivs.spa}}</div>
+      <div class="spa" *ngIf="pokemon.evs">{{pokemon.evs.spa}}</div>
+      <div class="detailed-label dark-bg t-align-center spd">Sp. Def</div>
+      <div class="spd" *ngIf="pokemon.ivs">{{pokemon.ivs.spd}}</div>
+      <div class="spd" *ngIf="pokemon.evs">{{pokemon.evs.spd}}</div>
+      <div class="detailed-label dark-bg t-align-center spe">Speed</div>
+      <div class="spe" *ngIf="pokemon.ivs">{{pokemon.ivs.spe}}</div>
+      <div class="spe" *ngIf="pokemon.evs">{{pokemon.evs.spe}}</div>
     </div>
 
     <div *ngIf="pokemon.dynamaxLevel" class="detailed-dynamax row ">
@@ -52,6 +56,11 @@
     <div class="detailed-ability row ">
       <div class="detailed-label dark-bg">Ability</div>
       <span class="detailed-text">{{pokemon.ability}}</span>
+    </div>
+
+    <div class="detailed-nature row " *ngIf="natureClass">
+      <div class="detailed-label dark-bg">Nature</div>
+      <span class="detailed-text">{{pokemon.nature}}</span>
     </div>
 
     <div class="detailed-moves" *ngIf="moves$ | async as moves">

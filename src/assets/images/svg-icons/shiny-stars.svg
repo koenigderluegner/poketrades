@@ -1,0 +1,6 @@
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+     preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32" width="32" height="32">
+    <path fill="currentColor" d="M23.16 9.06L26.91 7.35L23.16 5.64L21.45 1.9L19.74 5.64L16 7.35L19.74 9.06L21.45 12.8L23.16 9.06ZM12.36 9.17L10.09 14.17L5.09 16.44L10.09 18.71L12.36 23.71L14.64 18.71L19.64 16.44L14.64 14.17L12.36 9.17Z"></path>
+    <path fill="currentColor" d="M20.22 27.51L22.98 26.24L20.22 24.99L18.94 22.22L17.69 24.99L14.93 26.24L17.69 27.51L18.94 30.28L20.22 27.51Z"></path>
+</svg>
