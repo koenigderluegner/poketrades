@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewEncapsulation} from '@angular/core';
+import {Component, HostBinding, OnInit, ViewEncapsulation} from '@angular/core';
 import {default as pageMarkdown} from 'raw-loader!../../../CHANGELOG.md';
 
 @Component({
@@ -8,6 +8,8 @@ import {default as pageMarkdown} from 'raw-loader!../../../CHANGELOG.md';
   encapsulation: ViewEncapsulation.None
 })
 export class ChangelogComponent implements OnInit {
+
+  @HostBinding('class.container') private setClass = true;
 
   markdown: string;
 
