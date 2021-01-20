@@ -57,6 +57,11 @@
       <span class="detailed-text">{{pokemon.ability}}</span>
     </div>
 
+    <div class="detailed-nature row " *ngIf="pokemon.nature">
+      <div class="detailed-label dark-bg">Nature</div>
+      <span class="detailed-text">{{pokemon.nature}}</span>
+    </div>
+
     <div class="detailed-moves" *ngIf="moves$ | async as moves">
       <ng-container *ngIf="isEggMove$ | async as isEggMove">
         <div class="detailed-move d-flex" [class]="'move-'+(moves[i]?.type ? moves[i].type : 'unknown')"
