@@ -124,12 +124,13 @@ a {
 
 }
 
-.container{
+.container {
   padding: 3rem;
   width: 100%;
   max-width: 1200px;
   box-sizing: border-box;
   margin: 0 auto;
+  display: block;
 }
 
 .button-row {
@@ -200,7 +201,7 @@ Mat Tooltip
 
 @media (prefers-color-scheme: dark) {
 
-  a{
+  a {
     color: #fff;
   }
 

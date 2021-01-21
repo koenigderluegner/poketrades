@@ -8,6 +8,10 @@
   justify-content: space-between;
   transition: padding .2s linear;
 
+  a {
+    text-decoration: none;
+  }
+
   .App-title, .App-navigation ul {
     display: flex;
     align-items: center;
@@ -24,7 +28,6 @@
     justify-content: flex-end;
 
     a {
-      text-decoration: none;
       color: #c9cacc;
       padding: 1.6rem;
       display: block;

@@ -1,6 +1,6 @@
 <ng-container *ngIf="spreadsheetData">
   <div class="App-title">
-    {{spreadsheetData.title ? spreadsheetData.title : 'Pokétrades' }}
+    <a routerLink="/">{{spreadsheetData.title ? spreadsheetData.title : 'Pokétrades' }}</a>
   </div>
 
   <nav *ngIf="windowSize >= 1200" class="App-navigation">

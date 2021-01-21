@@ -1,41 +1,3 @@
-$types: "water" #8CADE0,
-"dark" #8F8E94,
-"psychic" #EBA1A2,
-"fighting" #CD8B99,
-"poison" #BD98D2,
-"normal" #ACB4B7,
-"ghost" #8E97BE,
-"steel" #90ACB8,
-"ground" #E19F87,
-"dragon" #7A99CF,
-"fairy" #F2ADEC,
-"fire" #FFB68D,
-"bug" #ADD080,
-"ice" #9CDACD,
-"flying" #AEBDE4,
-"rock" #D3C8A8,
-"grass" #94CC8F,
-"electric" #F6DC85;
-
-$typesDarkmode: "water" #576781,
-"dark" #58585b,
-"psychic" #866162,
-"fighting" #77565d,
-"poison" #6f5d7a,
-"normal" #676b6c,
-"ghost" #585c70,
-"steel" #59676d,
-"ground" #816054,
-"dragon" #4e5d78,
-"fairy" #896786,
-"fire" #906c57,
-"bug" #677951,
-"ice" #5f7e77,
-"flying" #686f82,
-"rock" #7a7565,
-"grass" #5b7758,
-"electric" #8b7f53;
-
 $dynamaxColor: #33EAFA,
 #5ADFFE,
 #65C2FD,
@@ -48,7 +10,6 @@ $dynamaxColor: #33EAFA,
 #E52674;
 
 .grid.detailed {
-
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 15px;
@@ -80,18 +41,6 @@ $dynamaxColor: #33EAFA,
       }
     }
 
-    .detailed-species-info {
-      margin-top: -12px;
-    }
-
-    .detailed-species-icon {
-      position: relative;
-      display: flex;
-      width: 90px;
-      justify-content: center;
-      align-items: center;
-    }
-
     .icon-foundation {
       position: absolute;
       left: 50%;
@@ -99,10 +48,6 @@ $dynamaxColor: #33EAFA,
       width: 40px;
       opacity: 0.3;
       transform: translateX(-20px);
-    }
-
-    .detailed-species {
-      border-bottom: 4px solid transparent;
     }
 
     .row {
@@ -126,43 +71,6 @@ $dynamaxColor: #33EAFA,
       }
     }
 
-    .detailed-pokemon-info {
-      padding: 4px 10px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex: 1 1 auto;
-
-      .detailed-label {
-        margin-left: -10px;
-      }
-
-      .type-badge {
-        margin-right: 5px;
-      }
-    }
-
-    .detailed-header {
-      padding: 7px;
-      font-weight: bold;
-    }
-
-    .detailed-stats {
-      display: grid;
-      grid-template-columns: 80px 1fr;
-      grid-gap: 3px 10px;
-
-      &.ev-iv {
-        grid-template-columns: 80px 1fr 1fr;
-      }
-    }
-
-    .detailed-label {
-      padding: 4px 10px;
-      width: 80px;
-      text-align: center;
-    }
-
     .inactive {
       color: rgba(0, 0, 0, .3);
 
@@ -172,6 +80,59 @@ $dynamaxColor: #33EAFA,
     }
 
   }
+}
+
+.detailed-header {
+  padding: 7px;
+  font-weight: bold;
+}
+
+.detailed-stats {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  grid-gap: 3px 10px;
+
+  &.ev-iv {
+    grid-template-columns: 80px 1fr 1fr;
+  }
+}
+
+.detailed-label {
+  padding: 4px 10px;
+  width: 80px;
+  text-align: center;
+}
+
+.detailed-pokemon-info {
+  padding: 4px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1 1 auto;
+
+  .detailed-label {
+    margin-left: -10px;
+  }
+
+  .type-badge {
+    margin-right: 5px;
+  }
+}
+
+.detailed-species-info {
+  margin-top: -12px;
+}
+
+.detailed-species-icon {
+  position: relative;
+  display: flex;
+  width: 90px;
+  justify-content: center;
+  align-items: center;
+}
+
+.detailed-species {
+  border-bottom: 4px solid transparent;
 }
 
 .detailed-text {
@@ -199,7 +160,7 @@ $dynamaxColor: #33EAFA,
   }
 
 
-  ul li {
+  li {
     transform: skewX(-20deg);
     height: 100%;
     width: 7%;
@@ -234,50 +195,17 @@ $dynamaxColor: #33EAFA,
   color: var(--nature-minus-color);
 }
 
-
 .hp, .atk, .def, .spa, .spd, .spe, .ev, .iv {
   padding: 4px 0;
-}
-
-
-.detailed-move {
-  margin-bottom: 3px;
 }
 
 .detailed-moves {
   padding: 0 4px;
 
-  & [class*=move-] {
-    padding: 6px 6px 6px 36px;
-    border-radius: 3px;
-    background-repeat: no-repeat;
-    background-blend-mode: screen;
-    background-size: 24px;
-    background-position: 3px;
-    justify-content: space-between;
-    background-color: #dbdbdb;
-  }
-
-  @each $type, $color in $types {
-    .move-#{$type} {
-      background-color: $color;
-      background-image: url("type-icons/#{$type}.png");
-    }
-  }
-
-  .egg-icon {
-    overflow: hidden;
-    height: 21px;
-    width: 42px;
-    display: flex;
-    align-items: flex-end;
-
-    .pkspr.egg {
-      margin-left: -16px;
-    }
+  .detailed-move {
+    margin-bottom: 3px;
   }
 }
-
 
 @media screen and (max-width: 1400px) {
   .grid.detailed {
@@ -299,7 +227,6 @@ $dynamaxColor: #33EAFA,
 
 
 @media (prefers-color-scheme: dark) {
-
   :root {
     --nature-plus-color: #f35b96;
     --nature-minus-color: #45c6f0;
@@ -322,14 +249,6 @@ $dynamaxColor: #33EAFA,
         svg {
           color: #b51010;
         }
-      }
-    }
-  }
-
-  .detailed-moves {
-    @each $type, $color in $typesDarkmode {
-      .move-#{$type} {
-        background-color: $color;
       }
     }
   }
