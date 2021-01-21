@@ -1,0 +1,79 @@
+$types: "water" #8CADE0,
+"dark" #8F8E94,
+"psychic" #EBA1A2,
+"fighting" #CD8B99,
+"poison" #BD98D2,
+"normal" #ACB4B7,
+"ghost" #8E97BE,
+"steel" #90ACB8,
+"ground" #E19F87,
+"dragon" #7A99CF,
+"fairy" #F2ADEC,
+"fire" #FFB68D,
+"bug" #ADD080,
+"ice" #9CDACD,
+"flying" #AEBDE4,
+"rock" #D3C8A8,
+"grass" #94CC8F,
+"electric" #F6DC85;
+
+$typesDarkmode: "water" #576781,
+"dark" #58585b,
+"psychic" #866162,
+"fighting" #77565d,
+"poison" #6f5d7a,
+"normal" #676b6c,
+"ghost" #585c70,
+"steel" #59676d,
+"ground" #816054,
+"dragon" #4e5d78,
+"fairy" #896786,
+"fire" #906c57,
+"bug" #677951,
+"ice" #5f7e77,
+"flying" #686f82,
+"rock" #7a7565,
+"grass" #5b7758,
+"electric" #8b7f53;
+
+.detailed-move {
+  display: flex;
+
+  &[class*=move-] {
+    padding: 6px 6px 6px 36px;
+    border-radius: 3px;
+    background-repeat: no-repeat;
+    background-blend-mode: screen;
+    background-size: 24px;
+    background-position: 3px;
+    justify-content: space-between;
+    background-color: #dbdbdb;
+  }
+
+  @each $type, $color in $types {
+    &.move-#{$type} {
+      background-color: $color;
+      background-image: url("type-icons/#{$type}.png");
+    }
+  }
+
+  .egg-icon {
+    overflow: hidden;
+    height: 21px;
+    width: 42px;
+    display: flex;
+    align-items: flex-end;
+
+    .pkspr.egg {
+      margin-left: -16px;
+    }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  @each $type, $color in $typesDarkmode {
+    .detailed-move.move-#{$type} {
+      background-color: $color;
+    }
+  }
+}

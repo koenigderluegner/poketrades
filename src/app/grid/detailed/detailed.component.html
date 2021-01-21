@@ -65,11 +65,7 @@
 
     <div class="detailed-moves" *ngIf="moves$ | async as moves">
       <ng-container *ngIf="isEggMove$ | async as isEggMove">
-        <div class="detailed-move d-flex" [class]="'move-'+(moves[i]?.type ? moves[i].type : 'unknown')"
-             *ngFor="let move of pokemon.moves; let i = index">
-          <span>{{move}}</span>
-          <span class="egg-icon" *ngIf="isEggMove[i]"><app-pokemon [slug]="'egg'"></app-pokemon></span>
-        </div>
+        <app-detailed-move [isEggMove]="isEggMove[i]" [move]="move" [type]="(moves[i]?.type ? moves[i].type : 'unknown')"  *ngFor="let move of pokemon.moves; let i = index"></app-detailed-move>
       </ng-container>
     </div>
   </ng-container>

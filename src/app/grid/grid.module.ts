@@ -12,6 +12,7 @@ import {ReactiveFormsModule} from '@angular/forms';
 import {NgxStructuralsModule} from '@tngtech/ngx-structurals';
 import {GridControllerComponent} from './grid-controller/grid-controller.component';
 import {MatIconModule} from '@angular/material/icon';
+import { DetailedMoveComponent } from './detailed-move/detailed-move.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import {MatIconModule} from '@angular/material/icon';
     NormalComponent,
     DetailedComponent,
     ChangerComponent,
-    GridControllerComponent
+    GridControllerComponent,
+    DetailedMoveComponent
   ],
   exports: [
     GridComponent,
