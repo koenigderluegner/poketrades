@@ -7,3 +7,7 @@
 - Frontpage now reads this file to make users aware of changes.
 - detailed-move component to tidy up detailed grid item
 - Happy birthday 🥝!
+
+### Changed
+- Increased component style budgets (warning: 5kb, error: 10kb)
+- Increased initial bundle budgets (warning: 750kb, error: 1.25mb)
