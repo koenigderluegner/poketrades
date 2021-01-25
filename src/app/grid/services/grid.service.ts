@@ -9,8 +9,10 @@ import {coerceBooleanProperty} from '@angular/cdk/coercion';
 export class GridService {
 
   gridAppearance: BehaviorSubject<GridAppearanceType>;
+  filter: BehaviorSubject<string>;
   hideInactiveItems: BehaviorSubject<boolean>;
   hideAppearanceControl: BehaviorSubject<boolean>;
+  hideFilterControl: BehaviorSubject<boolean>;
   hideInactiveItemsControl: BehaviorSubject<boolean>;
 
   constructor() {
@@ -25,7 +27,9 @@ export class GridService {
     } else {
       this.hideInactiveItems = new BehaviorSubject<boolean>(false);
     }
+    this.filter = new BehaviorSubject<string>('');
     this.hideAppearanceControl = new BehaviorSubject<boolean>(false);
+    this.hideFilterControl = new BehaviorSubject<boolean>(false);
     this.hideInactiveItemsControl = new BehaviorSubject<boolean>(false);
   }
 
@@ -36,6 +40,14 @@ export class GridService {
   updateGridAppearance(gridAppearanceType: GridAppearanceType): void {
     this.gridAppearance.next(gridAppearanceType);
     localStorage.setItem('gridAppearanceType', gridAppearanceType);
+  }
+
+  getFilter$(): Observable<string> {
+    return this.filter.asObservable();
+  }
+
+  updateFilter(filter: string): void {
+    this.filter.next(filter);
   }
 
   getHideItems$(): Observable<boolean> {
@@ -57,6 +69,14 @@ export class GridService {
 
   updateHideInactiveItemsControl(hideControl: boolean): void {
     return this.hideInactiveItemsControl.next(hideControl);
+  }
+
+  getHideFilterControl$(): Observable<boolean> {
+    return this.hideFilterControl.asObservable();
+  }
+
+  updateHideFilterControl(hideControl: boolean): void {
+    return this.hideFilterControl.next(hideControl);
   }
 
   getHideAppearanceControl$(): Observable<boolean> {
