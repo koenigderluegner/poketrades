@@ -1,6 +1,15 @@
-<app-changer *ngIf="(hideAppearance$ | async)  === false" (selectionChanged)="changeGrid($event)" class="m-right-gap"></app-changer>
-<app-checkbox  *ngIf="(hideInactives$ | async) === false" [formControl]="toggleInactivesControl" (change)="changeGridInactives()"
+<app-changer *ngIf="(hideAppearance$ | async)  === false" (selectionChanged)="changeGrid($event)"
+             class="m-right-gap"></app-changer>
+<app-checkbox *ngIf="(hideInactives$ | async) === false" [formControl]="toggleInactivesControl"
+              (change)="changeGridInactives()"
               [icon]="toggleInactivesControl.value ? 'visibility_off': 'visibility'">
   {{toggleInactivesControl.value ? 'Unowned hidden' : 'Unowned visible'}}
 </app-checkbox>
 <input [formControl]="filter">
+<mat-form-field floatLabel="never">
+  <mat-select [formControl]="sorting" placeholder="select sorting">
+    <mat-option>none</mat-option>
+    <mat-option [value]="{id: 'name', start: 'asc', disableClear: false}">name asc</mat-option>
+  </mat-select>
+
+</mat-form-field>

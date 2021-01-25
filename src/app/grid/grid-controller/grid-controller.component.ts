@@ -21,6 +21,7 @@ export class GridControllerComponent implements OnInit, OnDestroy {
   hideAppearance$: Observable<boolean>;
   hideInactives$: Observable<boolean>;
   filter: FormControl;
+  sorting: FormControl;
 
 
   constructor(private gridService: GridService) {
@@ -29,6 +30,7 @@ export class GridControllerComponent implements OnInit, OnDestroy {
     this.hideInactives$ = this.gridService.getHideInactiveItemsControl$();
 
     this.filter = new FormControl('');
+    this.sorting = new FormControl(null);
     this.subscriptions.push(
       this.filter.valueChanges.pipe(
         debounceTime(150),
@@ -38,6 +40,12 @@ export class GridControllerComponent implements OnInit, OnDestroy {
         })
       ).subscribe()
     );
+
+    this.subscriptions.push(this.sorting.valueChanges.pipe(
+      tap(val => {
+        this.gridService.updateSorting(val);
+      })
+    ).subscribe());
   }
 
   ngOnInit(): void {

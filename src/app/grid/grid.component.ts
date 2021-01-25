@@ -8,11 +8,12 @@ import {
   QueryList,
   ViewEncapsulation
 } from '@angular/core';
-import {GridAppearanceType} from './grid-appearance.type';
-import {GridItemComponent} from './grid-item/grid-item.component';
-import {MatTableDataSource} from '@angular/material/table';
-import {Subscription} from 'rxjs';
-import {GridService} from './services/grid.service';
+import { GridAppearanceType } from './grid-appearance.type';
+import { GridItemComponent } from './grid-item/grid-item.component';
+import { MatTableDataSource } from '@angular/material/table';
+import { MatSort, MatSortable } from '@angular/material/sort';
+import { Subscription } from 'rxjs';
+import { GridService } from './services/grid.service';
 
 @Component({
   selector: 'app-grid',
@@ -41,14 +42,19 @@ export class GridComponent implements AfterContentInit, OnDestroy {
 
   constructor(private gridService: GridService) {
     this.dataSource = new MatTableDataSource<GridItemComponent>([]);
+    this.dataSource.sort = new MatSort();
+    this.dataSource.sortingDataAccessor = (item: GridItemComponent, sortField: string) => {
+      switch (sortField) {
+        case 'name':
+          return item.pokemon?.name ?? '';
+        default:
+          return '';
+      }
+    };
 
     this.dataSource.filterPredicate = (data: GridItemComponent, filter: string) => {
       return (data.pokemon?.name ?? '').toLowerCase().includes(filter);
     };
-
-    this.dataSource.connect().subscribe({
-      next: value => console.log('val', value)
-    });
 
     this.subscriptions.push(this.gridService.getFilter$().subscribe(
       {
@@ -57,6 +63,18 @@ export class GridComponent implements AfterContentInit, OnDestroy {
         }
       })
     );
+
+    this.subscriptions.push(this.gridService.getSorting$().subscribe(
+      {
+        next: sorting => {
+          // reset if none set
+          if (sorting === undefined) {
+            sorting = {id: '', start: 'asc', disableClear: false};
+          }
+          this.sort(sorting);
+        }
+      }
+    ));
 
 
   }
@@ -80,6 +98,13 @@ export class GridComponent implements AfterContentInit, OnDestroy {
     return item.pokemon?.id ?? '';
   }
 
+  sort(sorting: MatSortable) { // mat sort + datasource?
+    this.dataSource.sort?.sort(sorting);
+
+    if (this.items) {
+      this.dataSource.data = this.dataSource._orderData(this.items);
+    }
+  }
 
   ngOnDestroy(): void {
     this.subscriptions.forEach(sub => sub.unsubscribe());

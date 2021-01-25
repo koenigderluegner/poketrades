@@ -2,6 +2,7 @@ import {Injectable} from '@angular/core';
 import {BehaviorSubject, Observable} from 'rxjs';
 import {GridAppearanceType} from '../grid-appearance.type';
 import {coerceBooleanProperty} from '@angular/cdk/coercion';
+import {MatSortable} from '@angular/material/sort';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +11,9 @@ export class GridService {
 
   gridAppearance: BehaviorSubject<GridAppearanceType>;
   filter: BehaviorSubject<string>;
+  sorting: BehaviorSubject<MatSortable>;
   hideInactiveItems: BehaviorSubject<boolean>;
+  hideSortingControl: BehaviorSubject<boolean>;
   hideAppearanceControl: BehaviorSubject<boolean>;
   hideFilterControl: BehaviorSubject<boolean>;
   hideInactiveItemsControl: BehaviorSubject<boolean>;
@@ -28,8 +31,10 @@ export class GridService {
       this.hideInactiveItems = new BehaviorSubject<boolean>(false);
     }
     this.filter = new BehaviorSubject<string>('');
+    this.sorting = new BehaviorSubject<MatSortable>({id: '', disableClear: false, start: 'asc'});
     this.hideAppearanceControl = new BehaviorSubject<boolean>(false);
     this.hideFilterControl = new BehaviorSubject<boolean>(false);
+    this.hideSortingControl = new BehaviorSubject<boolean>(false);
     this.hideInactiveItemsControl = new BehaviorSubject<boolean>(false);
   }
 
@@ -48,6 +53,14 @@ export class GridService {
 
   updateFilter(filter: string): void {
     this.filter.next(filter);
+  }
+
+  getSorting$(): Observable<MatSortable> {
+    return this.sorting.asObservable();
+  }
+
+  updateSorting(sorting: MatSortable): void {
+    this.sorting.next(sorting);
   }
 
   getHideItems$(): Observable<boolean> {
@@ -85,6 +98,14 @@ export class GridService {
 
   updateHideAppearanceControl(hideControl: boolean): void {
     return this.hideAppearanceControl.next(hideControl);
+  }
+
+  getHideSortingControl$(): Observable<boolean> {
+    return this.hideSortingControl.asObservable();
+  }
+
+  updateHideSortingControl(hideControl: boolean): void {
+    return this.hideSortingControl.next(hideControl);
   }
 
 }
