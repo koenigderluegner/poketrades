@@ -71,9 +71,18 @@ $typesDarkmode: "water" #576781,
 }
 
 @media (prefers-color-scheme: dark) {
+
+  .detailed-move {
+    &[class*=move-] {
+      background-color: #484848;
+    }
+  }
+
   @each $type, $color in $typesDarkmode {
     .detailed-move.move-#{$type} {
       background-color: $color;
     }
   }
+
+
 }

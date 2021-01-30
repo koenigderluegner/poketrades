@@ -13,6 +13,7 @@
 ### Changed
 - Fixed shiny icon not appearing 
 - Fixed missing icons on valuable sidebar
+- Changed unknown move background color in dark mode to make text more readable
 
 ## 0.1.0 - 2021-01-21
 ### Added
