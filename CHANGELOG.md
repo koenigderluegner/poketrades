@@ -13,6 +13,7 @@
 - A shiny indicator to normal view
     
 ### Changed
+- Fixed unwanted underline in sub navigation after recent changes 
 - Fixed shiny icon not appearing 
 - Removed red color from shiny icons
 - Fixed missing icons on valuable sidebar
