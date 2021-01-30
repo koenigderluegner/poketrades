@@ -2,3 +2,63 @@
   display: flex;
   align-items: center;
 }
+
+.sel.mat-form-field-appearance-fill {
+
+  .mat-select-placeholder {
+    color: rgb(255 255 255 / 53%)
+  }
+
+  .mat-form-field-underline {
+    display: none;
+  }
+
+  .mat-form-field-wrapper {
+    padding-bottom: 0;
+  }
+
+  .mat-form-field-flex {
+    border-radius: 0;
+    padding: .4em;
+    background: #313330;
+    color: #fff;
+    box-shadow: 0 0 6px black;
+  }
+
+  .mat-select-value {
+    color: #fff;
+  }
+
+  .mat-form-field-infix {
+    border-top: none;
+    padding: 0;
+
+
+    .mat-select-arrow {
+      color: inherit;
+    }
+
+    .mat-select-arrow-wrapper {
+      transform: translateY(0);
+    }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .mat-form-field-flex {
+    background: #21262d;
+    color: #efe2e3;
+  }
+}
+
+.dark-panel{
+  background: #21262d;
+
+  .mat-option {
+    color: #c9d1d9;
+  }
+
+  .mat-option.mat-selected:not(.mat-option-disabled) {
+    color: #58a6ff;
+  }
+}
