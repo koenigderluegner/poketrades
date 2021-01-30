@@ -7,8 +7,9 @@
     - Sorting by dex number
 - Flag to load json files as modules
 - Items now guess their category if none is set
-- Ball of pokemon in detailed view
-- Hold item of pokemon in detailed view
+- Ball of pokemon in detailed and normal view
+- Hold item of pokemon in detailed and normal view
+- A shiny indicator to normal view
     
 ### Changed
 - Fixed shiny icon not appearing 

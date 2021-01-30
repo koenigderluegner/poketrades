@@ -9,7 +9,8 @@ import { default as categoryData } from './categories.json';
 export class ItemComponent {
 
 
-  @HostBinding('class.pokesprite') pokesprite = true;
+  @HostBinding('class.pokesprite') private pokespriteClass = true;
+  @HostBinding('class.item-icon') private itemIconClass = true;
   private slugClass: string | undefined;
   private categoryClass: string | undefined;
   private suffixLess?: string;
