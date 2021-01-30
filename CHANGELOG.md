@@ -13,6 +13,7 @@
     
 ### Changed
 - Fixed shiny icon not appearing 
+- Removed red color from shiny icons
 - Fixed missing icons on valuable sidebar
 - Changed unknown move background color in dark mode to make text more readable
 

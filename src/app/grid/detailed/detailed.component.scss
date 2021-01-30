@@ -73,10 +73,6 @@ $dynamaxColor: #33EAFA,
     .shiny-icon-wrapper {
       height: 38px;
       width: 24px;
-
-      svg {
-        color: #f00;
-      }
     }
 
     .inactive {
@@ -256,12 +252,6 @@ $dynamaxColor: #33EAFA,
 
       &.inactive {
         color: rgb(223 211 212 / 0.3);
-      }
-
-      .shiny-icon-wrapper {
-        svg {
-          color: #b51010;
-        }
       }
     }
   }
