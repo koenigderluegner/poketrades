@@ -12,10 +12,17 @@ export class ItemComponent {
   @HostBinding('class.pokesprite') pokesprite = true;
   private slugClass: string | undefined;
   private categoryClass: string | undefined;
+  private suffixLess?: string;
 
   @Input() set slug(sl: string) {
     this.slugClass = sl;
-    this.classes = [this.slugClass, this.category].join(' ');
+    const category = this.category;
+    if (this.suffixLess) {
+      this.classes = [this.suffixLess, category].join(' ');
+    } else {
+      this.classes = [this.slugClass, category].join(' ');
+    }
+
   }
 
   @Input() set category(cat: string) {
@@ -26,11 +33,18 @@ export class ItemComponent {
     if (this.categoryClass) {
       return this.categoryClass;
     } else if (this.slugClass) {
-      return categoryData[this.slugClass];
+      let category = categoryData[this.slugClass];
+      if (!category) {
+        const suffixLess = this.slugClass.substring(0, this.slugClass.lastIndexOf('-'));
+        category = categoryData[suffixLess];
+        if (category) {
+          this.suffixLess = suffixLess;
+        }
+      }
+      return category;
     }
     return '';
   }
-
 
 
   @HostBinding('class') classes: string | undefined;
