@@ -1,6 +1,8 @@
 <ng-container *ngIf="pokemon && dbpokemon$">
   <ng-container *ngxSubscribe="let dbpokemon of dbpokemon$">
-    <div class="detailed-header dark-bg">{{pokemon.name}}</div>
+    <div class="detailed-header dark-bg d-flex">
+      <app-item category="ball" [slug]="pokemon.ball | slugify"></app-item>
+      {{pokemon.name}}</div>
     <div class="detailed-species-info  d-flex">
       <div class="detailed-species-icon">
         <img alt="" class="icon-foundation" src="assets/images/pokesprite-pokeball.svg">

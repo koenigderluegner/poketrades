@@ -14,6 +14,13 @@ $dynamaxColor: #33EAFA,
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 15px;
 
+  .detailed-header{
+    align-items: center;
+    .ball{
+      margin: -7px 0 -7px -7px;
+    }
+  }
+
   .grid-item {
     color: #000;
     flex-direction: column;
