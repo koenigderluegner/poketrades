@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 0.2.0 - 2021-01-30
 ### Added
 - Filter by pokemon name
 - Sorting
