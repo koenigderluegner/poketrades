@@ -7,6 +7,7 @@ export class Breedable extends AbstractBreedable implements Pokemon {
   private _slug = '';
   private readonly _moves: string[] = [];
   isShiny = false;
+  ball = '';
 
   [key: string]: string | { $t: string } | boolean | string[] | undefined;
 

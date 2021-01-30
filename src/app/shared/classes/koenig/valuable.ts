@@ -116,6 +116,10 @@ export class Valuable extends AbstractValuable implements Pokemon {
     return this.gsx$nature?.$t ?? '';
   }
 
+  get ball(): string {
+    return this.gsx$ball?.$t.replace(' Ball', '') ?? '';
+  }
+
   get evs(): PokemonStats | undefined {
     return this._evs;
   }

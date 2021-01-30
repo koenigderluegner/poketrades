@@ -102,6 +102,12 @@ export class SpreadsheetFacade {
                 entry.isShiny = true;
               }
             }
+
+            if (selectedWorksheet.config?.type === 'Breedables' && selectedWorksheet.config?.ball) {
+              for (const entry of selectedWorksheet.data) {
+                entry.ball = selectedWorksheet.config?.ball;
+              }
+            }
           }
         }
 
