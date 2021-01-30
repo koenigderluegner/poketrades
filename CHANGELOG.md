@@ -8,6 +8,7 @@
 - Flag to load json files as modules
 - Items now guess their category if none is set
 - Ball of pokemon in detailed view
+- Hold item of pokemon in detailed view
     
 ### Changed
 - Fixed shiny icon not appearing 

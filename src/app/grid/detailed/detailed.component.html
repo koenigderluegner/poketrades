@@ -65,9 +65,21 @@
       <span class="detailed-text">{{pokemon.nature}}</span>
     </div>
 
+    <div class="detailed-nature row " *ngIf="pokemon.item">
+      <div class="detailed-label dark-bg">Item</div>
+      <span class="detailed-text">
+        <app-item [slug]="pokemon.item | slugify"></app-item>
+        {{pokemon.item}}
+      </span>
+    </div>
+
     <div class="detailed-moves" *ngIf="moves$ | async as moves">
       <ng-container *ngIf="isEggMove$ | async as isEggMove">
-        <app-detailed-move [isEggMove]="isEggMove[i]" [move]="move" [type]="(moves[i]?.type ? moves[i].type : 'unknown')"  *ngFor="let move of pokemon.moves; let i = index"></app-detailed-move>
+        <app-detailed-move *ngFor="let move of pokemon.moves; let i = index"
+                           [isEggMove]="isEggMove[i]" [move]="move"
+                           [type]="(moves[i]?.type ? moves[i].type : 'unknown')">
+
+        </app-detailed-move>
       </ng-container>
     </div>
   </ng-container>

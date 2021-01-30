@@ -14,9 +14,10 @@ $dynamaxColor: #33EAFA,
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 15px;
 
-  .detailed-header{
+  .detailed-header {
     align-items: center;
-    .ball{
+
+    .ball {
       margin: -7px 0 -7px -7px;
     }
   }
@@ -144,8 +145,13 @@ $dynamaxColor: #33EAFA,
 
 .detailed-text {
   display: flex;
+  align-items: center;
   justify-content: center;
   padding: 4px 10px;
+
+  .pokesprite {
+    margin: -7px 0 -7px -7px;
+  }
 }
 
 .detailed-ability, .detailed-nature {
