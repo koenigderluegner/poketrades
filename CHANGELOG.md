@@ -5,6 +5,7 @@
 - Sorting
     - Sorting by name (issue [#9])
     - Sorting by dex number
+- Flag to load json files as modules
     
 ###
 - Fixed shiny icon not appearing 
