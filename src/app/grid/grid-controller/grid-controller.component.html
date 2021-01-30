@@ -6,7 +6,7 @@
 class="m-right-gap">
   {{toggleInactivesControl.value ? 'Unowned hidden' : 'Unowned visible'}}
 </app-checkbox>
-<input [formControl]="filter" class="m-right-gap">
+<input [formControl]="filter" class="m-right-gap grid-filter placeholder-light" placeholder="filter by name">
 <mat-form-field floatLabel="never" class="sel m-right-gap" appearance="fill">
   <mat-select [formControl]="sorting" placeholder="select sorting" panelClass="dark-panel">
     <mat-option>None</mat-option>

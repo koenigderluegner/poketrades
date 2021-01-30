@@ -3,6 +3,17 @@
   align-items: center;
 }
 
+.grid-filter {
+  background: #313330;
+  color: #fff;
+  height: 30px;
+  padding: 3px;
+  line-height: 24px;
+  border: none;
+  box-shadow: 0 0 6px black;
+  font-size: 1.6rem;
+}
+
 .sel.mat-form-field-appearance-fill {
 
   .mat-select-placeholder {
@@ -51,7 +62,7 @@
   }
 }
 
-.dark-panel{
+.dark-panel {
   background: #21262d;
 
   .mat-option {

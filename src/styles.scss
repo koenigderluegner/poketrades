@@ -250,3 +250,18 @@ Mat Tooltip
   }
 
 }
+
+.placeholder-light{
+  &::placeholder {
+    color: #8b949e;
+    opacity: 1;
+  }
+
+  &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #8b949e;
+  }
+
+  &::-ms-input-placeholder { /* Microsoft Edge */
+    color: #8b949e;
+  }
+}

@@ -2,6 +2,7 @@
 
 ## Unreleased
 ### Added
+- Filter by pokemon name
 - Sorting
     - Sorting by name (issue [#9])
     - Sorting by dex number
