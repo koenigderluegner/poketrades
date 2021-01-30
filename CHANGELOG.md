@@ -6,9 +6,11 @@
     - Sorting by name (issue [#9])
     - Sorting by dex number
 - Flag to load json files as modules
+- Items now guess their category if none is set
     
-###
+### Changed
 - Fixed shiny icon not appearing 
+- Fixed missing icons on valuable sidebar
 
 ## 0.1.0 - 2021-01-21
 ### Added
