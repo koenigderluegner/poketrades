@@ -8,19 +8,21 @@ import { GridModule } from '../grid/grid.module';
 import { ValuablesComponent } from './components/valuables/valuables.component';
 import { SlugifyPipe } from '@shared/pipes/slugify.pipe';
 import { NgxStructuralsModule } from '@tngtech/ngx-structurals';
+import { IconModule } from '../icon/icon.module';
 
 
 
 @NgModule({
   declarations: [IndexComponent, ValuablesComponent],
-  imports: [
-    CommonModule,
-    ValuableRoutingModule,
-    ReactiveFormsModule,
-    SharedModule,
-    GridModule,
-    NgxStructuralsModule
-  ],
+    imports: [
+        CommonModule,
+        ValuableRoutingModule,
+        ReactiveFormsModule,
+        SharedModule,
+        GridModule,
+        NgxStructuralsModule,
+        IconModule
+    ],
   providers: [SlugifyPipe]
 })
 export class ValuableModule { }

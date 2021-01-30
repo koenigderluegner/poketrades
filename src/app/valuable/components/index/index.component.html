@@ -9,7 +9,9 @@
                        *ngFor="let worksheet of worksheets"
                        [text]="worksheet.title"
                        [meta]="''+worksheet.data?.length">
+      <app-item [slug]="worksheet.config.iconSlug | slugify"></app-item>
     </app-sub-navi-item>
+
   </ul>
 </aside>
 <div class="view-content">

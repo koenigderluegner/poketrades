@@ -24,6 +24,13 @@ export class IndexComponent implements OnInit {
   spreadsheetId: string | undefined;
   worksheets: Worksheet[] | undefined;
 
+  subTypeItemMap: { [key: string]: string } = {
+    events: 'cherish',
+    legendaries: 'master',
+    shinies: 'shiny-charm',
+    competitives: 'focus-sash'
+  };
+
   constructor(
     private spreadsheetFacade: SpreadsheetFacade,
     private gridService: GridService
@@ -36,7 +43,13 @@ export class IndexComponent implements OnInit {
     this.spreadsheetData$.subscribe({
       next: spreadsheet => {
         this.spreadsheetId = spreadsheet.id;
-        this.worksheets = spreadsheet.worksheets.filter(worksheet => worksheet.config?.type === 'Valuables');
+        this.worksheets = spreadsheet.worksheets.filter(worksheet => worksheet.config?.type === 'Valuables'
+        );
+        this.worksheets.forEach(worksheet => {
+          if (worksheet.config?.subType) {
+            worksheet.config.iconSlug = this.subTypeItemMap[worksheet.config?.subType?.toLocaleLowerCase()];
+          }
+        });
       }
     });
   }
