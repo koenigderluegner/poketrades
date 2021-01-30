@@ -12,7 +12,8 @@ import {ReactiveFormsModule} from '@angular/forms';
 import {NgxStructuralsModule} from '@tngtech/ngx-structurals';
 import {GridControllerComponent} from './grid-controller/grid-controller.component';
 import {MatIconModule} from '@angular/material/icon';
-import { DetailedMoveComponent } from './detailed-move/detailed-move.component';
+import {DetailedMoveComponent} from './detailed-move/detailed-move.component';
+import {MatSelectModule} from '@angular/material/select';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { DetailedMoveComponent } from './detailed-move/detailed-move.component';
     SharedModule,
     ReactiveFormsModule,
     NgxStructuralsModule,
-    MatIconModule
+    MatIconModule,
+    MatSelectModule
   ]
 })
 export class GridModule {

@@ -14,6 +14,14 @@ $dynamaxColor: #33EAFA,
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 15px;
 
+  .detailed-header {
+    align-items: center;
+
+    .ball {
+      margin: -7px 0 -7px -7px;
+    }
+  }
+
   .grid-item {
     color: #000;
     flex-direction: column;
@@ -65,10 +73,6 @@ $dynamaxColor: #33EAFA,
     .shiny-icon-wrapper {
       height: 38px;
       width: 24px;
-
-      svg {
-        color: #f00;
-      }
     }
 
     .inactive {
@@ -137,8 +141,13 @@ $dynamaxColor: #33EAFA,
 
 .detailed-text {
   display: flex;
+  align-items: center;
   justify-content: center;
   padding: 4px 10px;
+
+  .pokesprite {
+    margin: -7px 0 -7px -7px;
+  }
 }
 
 .detailed-ability, .detailed-nature {
@@ -243,12 +252,6 @@ $dynamaxColor: #33EAFA,
 
       &.inactive {
         color: rgb(223 211 212 / 0.3);
-      }
-
-      .shiny-icon-wrapper {
-        svg {
-          color: #b51010;
-        }
       }
     }
   }

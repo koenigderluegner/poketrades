@@ -255,7 +255,7 @@ export class SlugifyPipe implements PipeTransform {
     ſ: 's'
   };
 
-  transform(original: string): string {
+  transform(original?: string): string {
     if (!original) {
       return '';
     }

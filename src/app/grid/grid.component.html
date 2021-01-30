@@ -1,5 +1,5 @@
-<ng-container *ngIf="items">
-  <ng-container *ngFor="let item of items; trackBy: trackByFn">
+<ng-container *ngxSubscribe="let items of this.dataSource.connect()">
+  <ng-container *ngFor="let item of dataSource.filteredData; trackBy: trackByFn">
     <ng-container [ngSwitch]="appearance">
       <ng-container *ngSwitchCase="'minimal'">
         <app-minimal [pokemon]="item.pokemon"></app-minimal>

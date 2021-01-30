@@ -1,5 +1,19 @@
-<app-changer *ngIf="(hideAppearance$ | async)  === false" (selectionChanged)="changeGrid($event)" class="m-right-gap"></app-changer>
-<app-checkbox  *ngIf="(hideInactives$ | async) === false" [formControl]="toggleInactivesControl" (change)="changeGridInactives()"
-              [icon]="toggleInactivesControl.value ? 'visibility_off': 'visibility'">
+<app-changer *ngIf="(hideAppearance$ | async)  === false" (selectionChanged)="changeGrid($event)"
+             class="m-right-gap"></app-changer>
+<app-checkbox *ngIf="(hideInactives$ | async) === false" [formControl]="toggleInactivesControl"
+              (change)="changeGridInactives()"
+              [icon]="toggleInactivesControl.value ? 'visibility_off': 'visibility'"
+class="m-right-gap">
   {{toggleInactivesControl.value ? 'Unowned hidden' : 'Unowned visible'}}
 </app-checkbox>
+<input [formControl]="filter" class="m-right-gap grid-filter placeholder-light" placeholder="filter by name">
+<mat-form-field floatLabel="never" class="sel m-right-gap" appearance="fill">
+  <mat-select [formControl]="sorting" placeholder="select sorting" panelClass="dark-panel">
+    <mat-option>None</mat-option>
+    <mat-option [value]="{id: 'name', start: 'asc', disableClear: false}">Name ascending</mat-option>
+    <mat-option [value]="{id: 'name', start: 'desc', disableClear: false}">Name descending</mat-option>
+    <mat-option [value]="{id: 'dex', start: 'asc', disableClear: false}">DexNo. ascending</mat-option>
+    <mat-option [value]="{id: 'dex', start: 'desc', disableClear: false}">DexNo. descending</mat-option>
+  </mat-select>
+
+</mat-form-field>

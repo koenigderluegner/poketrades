@@ -9,6 +9,8 @@ export class AbstractValuable {
   protected gsx$ability: { $t: string } | undefined;
   protected gsx$isshiny: { $t: string } | undefined;
   protected gsx$nature: { $t: string } | undefined;
+  protected gsx$ball: { $t: string } | undefined;
+  protected gsx$item: { $t: string } | undefined;
 
   protected gsx$hp: { $t: string } | undefined;
   protected gsx$atk: { $t: string } | undefined;

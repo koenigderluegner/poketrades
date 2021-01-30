@@ -14,4 +14,6 @@ export interface Pokemon {
   ivs?: PokemonStats;
   evs?: PokemonStats;
   nature?: string;
+  ball?: string;
+  item?: string;
 }
