@@ -45,17 +45,20 @@ export class IndexComponent implements OnInit {
         this.spreadsheetId = spreadsheet.id;
         this.worksheets = spreadsheet.worksheets.filter(worksheet => worksheet.config?.type === 'Valuables'
         );
-        this.worksheets.forEach(worksheet => {
-          if (worksheet.config?.subType) {
-            worksheet.config.iconSlug = this.subTypeItemMap[worksheet.config?.subType?.toLocaleLowerCase()];
-          }
-        });
       }
     });
   }
 
   changeGrid(appearance: GridAppearanceType): void {
     this.gridService.updateGridAppearance(appearance);
+  }
+
+  getItemMapping(subType?: string): string {
+    if (subType) {
+      return this.subTypeItemMap[subType.toLocaleLowerCase()] ?? '';
+    } else {
+      return '';
+    }
   }
 
   changeGridInactives(): void {

@@ -9,7 +9,7 @@
                        *ngFor="let worksheet of worksheets"
                        [text]="worksheet.title"
                        [meta]="''+worksheet.data?.length">
-      <app-item [slug]="worksheet.config.iconSlug | slugify"></app-item>
+      <app-item *ngIf="worksheet.config?.subType" [slug]="(getItemMapping(worksheet.config?.subType) | slugify)"></app-item>
     </app-sub-navi-item>
 
   </ul>

@@ -3,7 +3,6 @@ export interface WorksheetConfig {
   subType?: string;
   ball?: string;
   includeShinies?: string;
-  iconSlug?: string;
 
   [key: string]: string | undefined;
 }
