@@ -35,8 +35,8 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
 
     this.registerIcons([
-      {title: 'github', link: '../assets/images/svg-icons/github.svg'},
-      {title: 'shiny-stars', link: '../assets/images/svg-icons/shiny-stars.svg'},
+      {title: 'github', link: 'assets/images/svg-icons/github.svg'},
+      {title: 'shiny-stars', link: 'assets/images/svg-icons/shiny-stars.svg'},
     ]);
 
     this.nonIdRoutes = this.router.config.map((route: Route) => route.path ? route.path : '');
