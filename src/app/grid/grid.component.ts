@@ -47,6 +47,8 @@ export class GridComponent implements AfterContentInit, OnDestroy {
       switch (sortField) {
         case 'name':
           return item.pokemon?.name ?? '';
+          case 'dex':
+          return item.pokemon?.dex ?? '';
         default:
           return '';
       }

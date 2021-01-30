@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+### Added
+- Sorting
+    - Sorting by name (issue [#9])
+    - Sorting by dex number
+
 ## 0.1.0 - 2021-01-21
 ### Added
 - CHANGELOG.md (this file)
@@ -11,3 +17,6 @@
 ### Changed
 - Increased component style budgets (warning: 5kb, error: 10kb)
 - Increased initial bundle budgets (warning: 750kb, error: 1.25mb)
+
+
+[#9]: https://github.com/koenigderluegner/poketrades/issues/9

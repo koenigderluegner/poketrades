@@ -8,8 +8,11 @@
 <input [formControl]="filter">
 <mat-form-field floatLabel="never">
   <mat-select [formControl]="sorting" placeholder="select sorting">
-    <mat-option>none</mat-option>
-    <mat-option [value]="{id: 'name', start: 'asc', disableClear: false}">name asc</mat-option>
+    <mat-option>None</mat-option>
+    <mat-option [value]="{id: 'name', start: 'asc', disableClear: false}">Name ascending</mat-option>
+    <mat-option [value]="{id: 'name', start: 'desc', disableClear: false}">Name descending</mat-option>
+    <mat-option [value]="{id: 'dex', start: 'asc', disableClear: false}">DexNo. ascending</mat-option>
+    <mat-option [value]="{id: 'dex', start: 'desc', disableClear: false}">DexNo. descending</mat-option>
   </mat-select>
 
 </mat-form-field>
