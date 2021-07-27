@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.1 - 2021-07-27
+### Changed
+- Filter row now breaks on mobile
+
 ## 0.2.0 - 2021-01-30
 ### Added
 - Filter by pokemon name
