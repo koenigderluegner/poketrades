@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.2 - 2021-08-29
+### Changed
+- Updated dependencies including major update for Angular (from 11 to 12)
+
 ## 0.2.1 - 2021-07-27
 ### Changed
 - Filter row now breaks on mobile
