@@ -1,5 +1,5 @@
 import {Component, HostBinding, OnInit, ViewEncapsulation} from '@angular/core';
-import {default as pageMarkdown} from 'raw-loader!../../../CHANGELOG.md';
+import {default as pageMarkdown} from 'raw-loader!../../../CHANGELOG.md'; // TODO deprecated since webpack v5
 
 @Component({
   selector: 'app-changelog',
