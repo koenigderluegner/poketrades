@@ -123,7 +123,7 @@ export class SpreadsheetService {
                 title,
                 slug,
                 config,
-                gridProperties: matchingSheet.properties.gridProperties,
+                gridProperties: matchingSheet?.properties.gridProperties ?? {columnCount: 0, rowCount: 0},
                 headerIndex: values.values[0].slice(colMin, colMax + 1),
                 valueRange: ''
               }
@@ -144,7 +144,7 @@ export class SpreadsheetService {
   }
 
 
-  private _getWorksheets(spreadsheetId: string, sheetsToCheck: GoogleSpreadsheetResponse[]): Observable<Worksheet[]> {
+  private _getWorksheets(spreadsheetId: string, sheetsToCheck: GoogleSpreadsheetResponse['sheets']): Observable<Worksheet[]> {
 
     const configRanges = sheetsToCheck.map(sheet => `${sheet.properties.title}!A1:ZZ5`);
 

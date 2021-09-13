@@ -1,5 +1,9 @@
+import { GridProperties } from './grid-properties.interface';
+
 export interface GoogleSpreadsheetResponse {
-  properties: any;
-  sheets: any[];
+  properties: {
+    title: string;
+  };
+  sheets: { properties: { sheetId: string; title: string; gridProperties: GridProperties } }[];
   spreadsheetId: string;
 }
