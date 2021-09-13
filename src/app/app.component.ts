@@ -1,11 +1,12 @@
-import {Component, OnInit} from '@angular/core';
-import {Spreadsheet} from '@spreadsheet/models/spreadsheet';
-import {NavigationEnd, Route, Router} from '@angular/router';
-import {SpreadsheetFacade} from '@spreadsheet/spreadsheet.facade';
-import {DatabaseFacadeService} from './database/database-facade.service';
-import {UserService} from './database/services/user.service';
-import {MatIconRegistry} from '@angular/material/icon';
-import {DomSanitizer} from '@angular/platform-browser';
+import { Component, OnInit } from '@angular/core';
+import { Spreadsheet } from '@spreadsheet/models/spreadsheet';
+import { NavigationEnd, Route, Router } from '@angular/router';
+import { SpreadsheetFacade } from '@spreadsheet/spreadsheet.facade';
+import { DatabaseFacadeService } from './database/database-facade.service';
+import { UserService } from './database/services/user.service';
+import { MatIconRegistry } from '@angular/material/icon';
+import { DomSanitizer } from '@angular/platform-browser';
+import { GoogleSpreadsheetService } from './google-spreadsheet/services/google-spreadsheet.service';
 
 @Component({
   selector: 'app-root',
@@ -13,6 +14,19 @@ import {DomSanitizer} from '@angular/platform-browser';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+
+
+  constructor(
+    private spreadsheetFacade: SpreadsheetFacade,
+    private databaseFacadeService: DatabaseFacadeService,
+    private userService: UserService,
+    private router: Router,
+    private gss: GoogleSpreadsheetService,
+    private matIconRegistry: MatIconRegistry,
+    private domSanitizer: DomSanitizer,
+  ) {
+  }
+
 
   spreadsheet: Spreadsheet | undefined;
 
@@ -22,15 +36,6 @@ export class AppComponent implements OnInit {
   waitingForRouter = true;
   private nonIdRoutes: string[] = [];
 
-
-  constructor(
-    private spreadsheetFacade: SpreadsheetFacade,
-    private databaseFacadeService: DatabaseFacadeService,
-    private userService: UserService,
-    private router: Router,
-    private matIconRegistry: MatIconRegistry,
-    private domSanitizer: DomSanitizer) {
-  }
 
   ngOnInit(): void {
 

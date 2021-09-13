@@ -60,8 +60,7 @@ export class ShinyDexComponent implements OnInit {
         for (const worksheet of this.allShinyWorksheets) {
           if (worksheet.data) {
             for (const worksheetentries of worksheet.data) {
-              // @ts-ignore
-              const pokemonName = worksheetentries.gsx$name.$t;
+              const pokemonName = worksheetentries.name;
               if (shinies[pokemonName]) {
                 shinies[pokemonName].amountShinies++;
               } else {
@@ -75,10 +74,10 @@ export class ShinyDexComponent implements OnInit {
         for (const worksheet of this.partialShinyWorksheets) {
           if (worksheet.data) {
             for (const worksheetentries of worksheet.data) {
-              // @ts-ignore
-              const pokemonName = worksheetentries.gsx$name.$t;
-              // @ts-ignore
-              const isShiny = !!worksheetentries.gsx$isshiny.$t;
+
+              const pokemonName = worksheetentries.name;
+              const isShiny = worksheetentries.isShiny;
+
               if (worksheetentries.isShiny || isShiny) {
                 if (shinies[pokemonName]) {
                   shinies[pokemonName].amountShinies++;

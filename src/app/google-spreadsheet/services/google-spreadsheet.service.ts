@@ -16,7 +16,9 @@ export class GoogleSpreadsheetService {
     'sheets.properties.sheetId',
     'sheets.properties.title',
     'sheets.properties.gridProperties.rowCount',
+    'sheets.properties.gridProperties.frozenRowCount',
     'sheets.properties.gridProperties.columnCount',
+    'sheets.properties.gridProperties.frozenColumnCount',
   ];
 
   constructor(private _httpClient: HttpClient) {
@@ -32,6 +34,6 @@ export class GoogleSpreadsheetService {
     for (const range of ranges) {
       params = params.append('ranges', range);
     }
-    return this._httpClient.get<GoogleSpreadsheetResponse>(`https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values:batchGet?key=${apiKey}`, {params});
+    return this._httpClient.get<GoogleWorksheetResponse>(`https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values:batchGet?key=${apiKey}`, {params});
   }
 }

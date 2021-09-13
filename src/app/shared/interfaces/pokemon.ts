@@ -16,4 +16,9 @@ export interface Pokemon {
   nature?: string;
   ball?: string;
   item?: string;
+  ot?: string;
+  level?: string;
+  gender?: string;
+
+  [key: string]: string | boolean | PokemonStats | undefined | number | string[];
 }
