@@ -10,6 +10,12 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+      - name: Find and Replace
+        uses: jacobtomlinson/gha-find-replace@master
+        with:
+          find: "YOUR_GOOGLE_API_KEY"
+          replace: {{secrets.GOOGLE_API_KEY}}
+          include: "src/environments/"
       - name: All things angular
         uses: AhsanAyaz/angular-deploy-gh-pages-actions@v1.3.1 ## replace by latest version without it you will see Expected format {org}/{repo}[/path]@ref. Actual 'AhsanAyaz/angular-deploy-gh-pages-actions',Input string was not in a correct format.
         with:
