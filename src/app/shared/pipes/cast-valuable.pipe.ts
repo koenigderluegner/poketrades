@@ -1,6 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import { Pokemon } from '@shared/interfaces/pokemon';
-import { Valuable } from '@shared/classes/koenig/valuable';
+import { Valuable } from '@shared/interfaces/valuable.interface';
 
 @Pipe({
   name: 'castValuable'
@@ -8,7 +8,7 @@ import { Valuable } from '@shared/classes/koenig/valuable';
 export class CastValuablePipe implements PipeTransform {
 
   transform(pokemon: Pokemon): Valuable {
-    return new Valuable(pokemon);
+    return (pokemon) as Valuable;
   }
 
 }

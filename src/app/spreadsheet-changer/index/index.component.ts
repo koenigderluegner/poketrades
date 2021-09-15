@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { Spreadsheet } from '@spreadsheet/models/spreadsheet';
 import { SpreadsheetFacade } from '@spreadsheet/spreadsheet.facade';
 import { SearchHistoryEntry } from '../models/search-history-entry.interface';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-index',
@@ -17,6 +18,8 @@ export class IndexComponent {
 
   searchForm: FormGroup;
   hasRequested = false;
+
+  apiKey = environment.googleApiKey;
 
   loadedSpreadsheet$: Observable<Spreadsheet> | undefined;
   isLoading$: Observable<boolean>;
@@ -33,7 +36,7 @@ export class IndexComponent {
 
   submitSearch(): void {
     this.hasRequested = true;
-    this.loadedSpreadsheet$ = this.spreadsheetFacade.searchSpreadsheet(this.searchForm.controls.search.value);
+    this.loadedSpreadsheet$ = this.spreadsheetFacade.searchSpreadsheet(this.searchForm.controls.search.value, this.apiKey);
   }
 
   saveSpreadsheet(spreadsheet: Spreadsheet): void {
@@ -42,7 +45,7 @@ export class IndexComponent {
 
   fromHistory(id: string): void {
     this.hasRequested = true;
-    this.loadedSpreadsheet$ = this.spreadsheetFacade.loadSpreadsheet(id);
+    this.loadedSpreadsheet$ = this.spreadsheetFacade.loadSpreadsheet(id, this.apiKey);
 
   }
 

@@ -10,8 +10,8 @@ import {LevelUpMove} from '../../database/models/level-up-move.interface';
 import {Pokemon} from '@shared/interfaces/pokemon';
 import {SpreadsheetFacade} from '@spreadsheet/spreadsheet.facade';
 import {Worksheet} from '@spreadsheet/models/worksheet';
-import {Breedable} from '@shared/classes/koenig/breedable';
 import {GridService} from '../../grid/services/grid.service';
+import { Breedable } from '@shared/interfaces/breedable.interface';
 
 @Component({
   selector: 'app-breeding',
@@ -105,12 +105,11 @@ export class BreedingComponent {
 
         this.worksheets?.forEach(worksheet => {
           const breedable = worksheet.data?.filter(poke => {
-            // @ts-ignore
-            return poke.gsx$name.$t === pokemon.name;
+            return poke.name === pokemon.name;
           });
 
           if (breedable?.length && worksheet.config?.ball && this.sheetBreeadbles) {
-            this.sheetBreeadbles[worksheet.config?.ball] = new Breedable(breedable[0]);
+            this.sheetBreeadbles[worksheet.config?.ball] = breedable[0] as Breedable;
           }
 
         });

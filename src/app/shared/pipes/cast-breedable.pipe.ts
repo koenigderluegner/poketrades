@@ -1,6 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import { Pokemon } from '@shared/interfaces/pokemon';
-import { Breedable } from '@shared/classes/koenig/breedable';
+import { Breedable } from '@shared/interfaces/breedable.interface';
 
 @Pipe({
   name: 'castBreedable'
@@ -8,7 +8,7 @@ import { Breedable } from '@shared/classes/koenig/breedable';
 export class CastBreedablePipe implements PipeTransform {
 
   transform(pokemon: Pokemon): Breedable {
-    return new Breedable(pokemon);
+    return pokemon as Breedable;
   }
 
 }

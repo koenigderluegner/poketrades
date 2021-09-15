@@ -1,8 +1,11 @@
-export interface WorksheetConfig {
-  type: string;
-  subType?: string;
-  ball?: string;
-  includeShinies?: string;
+import { AllowedConfigSubType, AllowedConfigType } from '@spreadsheet/models/allowed-config.interface';
 
-  [key: string]: string | undefined;
+export interface WorksheetConfig {
+  type: AllowedConfigType;
+  subType?: AllowedConfigSubType;
+  ball?: string;
+  includeShinies?: boolean;
+  colIndex: { min: number; max: number; };
+
+  [key: string]: string | { min: number; max: number; } | boolean | undefined;
 }

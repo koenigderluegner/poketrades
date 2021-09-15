@@ -2,8 +2,17 @@ import { TestBed, waitForAsync } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { SpreadsheetFacade } from '@spreadsheet/spreadsheet.facade';
+import SpyObj = jasmine.SpyObj;
 
 describe('AppComponent', () => {
+
+  const spreadsheetSpy: SpyObj<SpreadsheetFacade> = jasmine.createSpyObj(
+    SpreadsheetFacade,
+    ['loadSpreadsheet', 'updateCurrentSpreadsheet']
+  );
+
+
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [
@@ -12,6 +21,9 @@ describe('AppComponent', () => {
       ],
       declarations: [
         AppComponent
+      ],
+      providers: [
+        {provide: SpreadsheetFacade, useValue: spreadsheetSpy}
       ],
     }).compileComponents();
   }));

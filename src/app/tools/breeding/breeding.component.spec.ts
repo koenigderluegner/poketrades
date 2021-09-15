@@ -7,16 +7,30 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
+import { SpreadsheetFacade } from '@spreadsheet/spreadsheet.facade';
+import { BehaviorSubject } from 'rxjs';
+import { MOCK_SPREADSHEET } from '../../../../testing/mocks/spreadsheet.mock';
+import { SlugifyPipe } from '@shared/pipes/slugify.pipe';
+import SpyObj = jasmine.SpyObj;
 
 describe('BreedingComponent', () => {
   let component: BreedingComponent;
   let fixture: ComponentFixture<BreedingComponent>;
 
+  const spreadsheetSpy: SpyObj<SpreadsheetFacade> = jasmine.createSpyObj(SpreadsheetFacade, ['getCurrentSpreadsheet$']);
+
+
   beforeEach(waitForAsync(() => {
+
+    spreadsheetSpy.getCurrentSpreadsheet$.and.returnValue(new BehaviorSubject(MOCK_SPREADSHEET));
+
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule, NgxSubscribeModule, MatAutocompleteModule, FormsModule, MatInputModule, ReactiveFormsModule],
       declarations: [BreedingComponent],
-      schemas: [CUSTOM_ELEMENTS_SCHEMA]
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
+      providers: [
+        SlugifyPipe
+      ]
     })
       .compileComponents();
   }));
