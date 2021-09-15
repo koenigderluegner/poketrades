@@ -1,11 +1,13 @@
-import {Component, OnInit} from '@angular/core';
-import {Spreadsheet} from '@spreadsheet/models/spreadsheet';
-import {NavigationEnd, Route, Router} from '@angular/router';
-import {SpreadsheetFacade} from '@spreadsheet/spreadsheet.facade';
-import {DatabaseFacadeService} from './database/database-facade.service';
-import {UserService} from './database/services/user.service';
-import {MatIconRegistry} from '@angular/material/icon';
-import {DomSanitizer} from '@angular/platform-browser';
+import { Component, OnInit } from '@angular/core';
+import { Spreadsheet } from '@spreadsheet/models/spreadsheet';
+import { NavigationEnd, Route, Router } from '@angular/router';
+import { SpreadsheetFacade } from '@spreadsheet/spreadsheet.facade';
+import { DatabaseFacadeService } from './database/database-facade.service';
+import { UserService } from './database/services/user.service';
+import { MatIconRegistry } from '@angular/material/icon';
+import { DomSanitizer } from '@angular/platform-browser';
+import { GoogleSpreadsheetService } from './google-spreadsheet/services/google-spreadsheet.service';
+import { environment } from '../environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -13,6 +15,20 @@ import {DomSanitizer} from '@angular/platform-browser';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+
+
+  constructor(
+    private spreadsheetFacade: SpreadsheetFacade,
+    private databaseFacadeService: DatabaseFacadeService,
+    private userService: UserService,
+    private router: Router,
+    private gss: GoogleSpreadsheetService,
+    private matIconRegistry: MatIconRegistry,
+    private domSanitizer: DomSanitizer,
+  ) {
+  }
+
+  apiKey = environment.googleApiKey;
 
   spreadsheet: Spreadsheet | undefined;
 
@@ -22,15 +38,6 @@ export class AppComponent implements OnInit {
   waitingForRouter = true;
   private nonIdRoutes: string[] = [];
 
-
-  constructor(
-    private spreadsheetFacade: SpreadsheetFacade,
-    private databaseFacadeService: DatabaseFacadeService,
-    private userService: UserService,
-    private router: Router,
-    private matIconRegistry: MatIconRegistry,
-    private domSanitizer: DomSanitizer) {
-  }
 
   ngOnInit(): void {
 
@@ -82,7 +89,7 @@ export class AppComponent implements OnInit {
       this.loadingMessage = 'Load databases from server';
 
       this.loadingMessage = 'Loading spreadsheet from Google API';
-      const sub = this.spreadsheetFacade.loadSpreadsheet(spreadsheetId).subscribe({
+      const sub = this.spreadsheetFacade.loadSpreadsheet(spreadsheetId, this.apiKey).subscribe({
         next: (spreadsheet: Spreadsheet) => {
           if (username) {
             spreadsheet.username = username;

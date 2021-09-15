@@ -1,3 +1,6 @@
 export interface GoogleWorksheetResponse {
-  [key: string]: any;
+  valueRanges: {
+    range: string;
+    values: string[][]
+  }[];
 }

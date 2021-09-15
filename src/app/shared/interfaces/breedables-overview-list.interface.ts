@@ -1,4 +1,4 @@
-import { Breedable } from '@shared/classes/koenig/breedable';
+import { Breedable } from '@shared/interfaces/breedable.interface';
 
 export interface BreedablesOverviewList {
   [key: string]: {
