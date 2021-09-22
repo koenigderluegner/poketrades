@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.3.0 - 2021-09-15
+### Changed
+- Updated google api version from v3 to v4. Migrated code accordingly
+
 ## 0.2.2 - 2021-08-29
 ### Changed
 - Updated dependencies including major update for Angular (from 11 to 12)
