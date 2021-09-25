@@ -3,10 +3,11 @@ import { DatabaseFacadeService } from '../../../database/database-facade.service
 import { combineLatest, Observable, of } from 'rxjs';
 import { SpreadsheetFacade } from '@spreadsheet/spreadsheet.facade';
 import { switchMap } from 'rxjs/operators';
-import { coerceBooleanProperty } from '@angular/cdk/coercion';
 import { Worksheet } from '@spreadsheet/models/worksheet';
-import { ShinyDexEntry } from '../../models/shiny-dex-entry.interface';
 import { GridService } from '../../../grid/services/grid.service';
+import { BaseShinyDexComponent } from '@shared/components/base-shiny-dex/base-shiny-dex.component';
+import { PokemonEntry } from '../../../database/models/pokemon-entry.interface';
+import { ShinyDexEntry } from '@shared/interfaces/shiny-dex-entry.interface';
 
 @Component({
   selector: 'app-shiny-dex',
@@ -14,7 +15,7 @@ import { GridService } from '../../../grid/services/grid.service';
   styleUrls: ['./shiny-dex.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class ShinyDexComponent implements OnInit {
+export class ShinyDexComponent extends BaseShinyDexComponent implements OnInit {
 
   allShinyWorksheets: Worksheet[] = [];
   partialShinyWorksheets: Worksheet[] = [];
@@ -24,6 +25,7 @@ export class ShinyDexComponent implements OnInit {
   constructor(private databases: DatabaseFacadeService,
               private spreadsheets: SpreadsheetFacade,
               private gridService: GridService) {
+    super();
     this.gridService.updateHideOwnedStatusControl(false);
     this.gridService.updateHideAppearanceControl(true);
   }
@@ -31,64 +33,25 @@ export class ShinyDexComponent implements OnInit {
   ngOnInit(): void {
     this.shinies$ = combineLatest([this.spreadsheets.getCurrentSpreadsheet$(), this.databases.getPokemon()]).pipe(
       switchMap(([spreadsheet, pokemonEntries]) => {
-
-        // Gather worksheets containing shinies
-        this.allShinyWorksheets = spreadsheet.worksheets.filter(worksheet => {
-          return worksheet.config?.subType?.toLowerCase() === 'shinies' && coerceBooleanProperty(worksheet.config?.includeShinies);
-        });
-        this.partialShinyWorksheets = spreadsheet.worksheets.filter(worksheet => {
-          return worksheet.config?.subType?.toLowerCase() !== 'shinies' && coerceBooleanProperty(worksheet.config?.includeShinies);
-        });
-
-        // build shiny list
-        const shinies: { [key: string]: ShinyDexEntry } = {};
-
-        for (const pokemon of pokemonEntries) {
-          if (pokemon.canBeShiny && pokemon.canBeBanked) {
-            Object.assign(shinies, {
-              [pokemon.name]: {
-                pokemon, amountShinies: 0
-              }
-            });
-          }
-        }
-
-
-        // add one for each entry in an "all shinies" tab
-        for (const worksheet of this.allShinyWorksheets) {
-          if (worksheet.data) {
-            for (const worksheetentries of worksheet.data) {
-              const pokemonName = worksheetentries.name;
-              if (shinies[pokemonName]) {
-                shinies[pokemonName].amountShinies++;
-              } else {
-                console.log('not found', pokemonName);
-              }
-            }
-          }
-        }
-
-        // look for shinies in partial shiiny tabs and add when entry is shiny
-        for (const worksheet of this.partialShinyWorksheets) {
-          if (worksheet.data) {
-            for (const worksheetentries of worksheet.data) {
-
-              const pokemonName = worksheetentries.name;
-              const isShiny = worksheetentries.isShiny;
-
-              if (worksheetentries.isShiny || isShiny) {
-                if (shinies[pokemonName]) {
-                  shinies[pokemonName].amountShinies++;
-                } else {
-                  console.log('not found', pokemonName);
-                }
-              }
-            }
-          }
-        }
-        return of(Object.entries(shinies));
+        return of(Object.entries(this.buildShinyList(spreadsheet, pokemonEntries)));
       })
     );
+  }
+
+  protected buildEmptyShinyList(pokemonEntries: PokemonEntry[]): { [p: string]: ShinyDexEntry } {
+    const shinies: { [key: string]: ShinyDexEntry } = {};
+
+    for (const pokemon of pokemonEntries) {
+      if (pokemon.canBeShiny && pokemon.canBeBanked) {
+        Object.assign(shinies, {
+          [pokemon.name]: {
+            pokemon, amountShinies: 0
+          }
+        });
+      }
+    }
+
+    return shinies;
   }
 
 }

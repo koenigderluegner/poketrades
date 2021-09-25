@@ -1,6 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { ShinyDexEntry } from '../models/shiny-dex-entry.interface';
 import { Pokemon } from '@shared/interfaces/pokemon';
+import { ShinyDexEntry } from '@shared/interfaces/shiny-dex-entry.interface';
 
 @Pipe({
   name: 'shinyDexEntryToPokemon'
