@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.7.0 - TBD
+### Added
+- Friend Safari Shiny Dex
+
 ## 0.6.1 - 2021-06-18
 ### Changed
 - Fixed crash when trying to read sheets with missing config
