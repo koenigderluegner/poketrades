@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.3.1 - 2021-09-25
+### Changed
+- Fixed Galar-Birds, Marshadow and Magearna being marked as "can be shiny"
+
 ## 0.3.0 - 2021-09-15
 ### Changed
 - Updated google api version from v3 to v4. Migrated code accordingly

@@ -4145,7 +4145,7 @@
       "Competetive"
     ],
     "hiddenAbility": null,
-    "canBeShiny": true,
+    "canBeShiny": false,
     "canBeBanked": true,
     "iconSlug": "articuno-galar",
     "gen8Appearance": "tct",
@@ -4185,7 +4185,7 @@
       "Defiant"
     ],
     "hiddenAbility": null,
-    "canBeShiny": true,
+    "canBeShiny": false,
     "canBeBanked": true,
     "iconSlug": "zapdos-galar",
     "gen8Appearance": "tct",
@@ -4225,7 +4225,7 @@
       "Berserk"
     ],
     "hiddenAbility": null,
-    "canBeShiny": true,
+    "canBeShiny": false,
     "canBeBanked": true,
     "iconSlug": "moltres-galar",
     "gen8Appearance": "tct",
@@ -22015,7 +22015,7 @@
       "Soul-Heart"
     ],
     "hiddenAbility": null,
-    "canBeShiny": true,
+    "canBeShiny": false,
     "canBeBanked": true,
     "iconSlug": "magearna",
     "gen8Appearance": "ioa",
@@ -22055,7 +22055,7 @@
       "Technician"
     ],
     "hiddenAbility": null,
-    "canBeShiny": true,
+    "canBeShiny": false,
     "canBeBanked": true,
     "iconSlug": "marshadow",
     "gen8Appearance": "swsh",
