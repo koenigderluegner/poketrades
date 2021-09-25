@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { BaseShinyDexComponent } from '@shared/components/base-shiny-dex/base-shiny-dex.component';
 import { DatabaseFacadeService } from '../../../database/database-facade.service';
 import { SpreadsheetFacade } from '@spreadsheet/spreadsheet.facade';
@@ -12,7 +12,8 @@ import { ObtainingMethods } from '@shared/enums/obtaining-method.enum';
 @Component({
   selector: 'app-friend-safari-shiny-dex',
   templateUrl: './friend-safari-shiny-dex.component.html',
-  styleUrls: ['./friend-safari-shiny-dex.component.scss']
+  styleUrls: ['./friend-safari-shiny-dex.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class FriendSafariShinyDexComponent extends BaseShinyDexComponent implements OnInit {
 
