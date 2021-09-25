@@ -22,7 +22,7 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
     CheckboxComponent,
     TypeBadgeComponent,
     NameToSlugPipe,
-    SpinnerComponent
+    SpinnerComponent,
   ],
   exports: [
     SlugifyPipe,
