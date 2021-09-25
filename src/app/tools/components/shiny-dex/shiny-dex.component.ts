@@ -3,7 +3,6 @@ import { DatabaseFacadeService } from '../../../database/database-facade.service
 import { combineLatest, Observable, of } from 'rxjs';
 import { SpreadsheetFacade } from '@spreadsheet/spreadsheet.facade';
 import { switchMap } from 'rxjs/operators';
-import { Worksheet } from '@spreadsheet/models/worksheet';
 import { GridService } from '../../../grid/services/grid.service';
 import { BaseShinyDexComponent } from '@shared/components/base-shiny-dex/base-shiny-dex.component';
 import { PokemonEntry } from '../../../database/models/pokemon-entry.interface';
@@ -17,8 +16,6 @@ import { ShinyDexEntry } from '@shared/interfaces/shiny-dex-entry.interface';
 })
 export class ShinyDexComponent extends BaseShinyDexComponent implements OnInit {
 
-  allShinyWorksheets: Worksheet[] = [];
-  partialShinyWorksheets: Worksheet[] = [];
   shinies$?: Observable<[string, ShinyDexEntry][]>;
 
 

@@ -1,1 +1,12 @@
-<p>friend-safari-shiny-dex works!</p>
+<ng-container *ngIf="shinies$">
+  <ng-container *ngxAlias="hideItems$ | async as hideItems">
+    <app-grid appearance="minimal" *ngIf="shinies$|async as shinies" [hideInactiveItems]="!!hideItems">
+      <ng-container *ngFor="let shinyDexentry of shinies">
+        <ng-container
+          *ngIf="(shinyDexentry[1] | shinyDexEntryToPokemon: {item: shinyDexentry[1].pokemon.fsObtainingMethod === 3 ? 'rare-candy' : null}) as pokemon">
+          <app-grid-item [pokemon]="pokemon"></app-grid-item>
+        </ng-container>
+      </ng-container>
+    </app-grid>
+  </ng-container>
+</ng-container>

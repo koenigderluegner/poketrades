@@ -7,10 +7,15 @@ import { ShinyDexEntry } from '@shared/interfaces/shiny-dex-entry.interface';
 })
 export class ShinyDexEntryToPokemonPipe implements PipeTransform {
 
-  transform(value: ShinyDexEntry): Pokemon {
+  transform(value: ShinyDexEntry, options?: Record<string, unknown>): Pokemon {
     const pokemon = value.pokemon as unknown as Pokemon;
     pokemon.isShiny = true;
     pokemon.isOwned = !!value.amountShinies;
+    if (options) {
+      if (typeof options.item === 'string') {
+        pokemon.item = options.item;
+      }
+    }
     return pokemon;
   }
 

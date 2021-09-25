@@ -1,4 +1,5 @@
-import {PokemonType} from '@shared/interfaces/pokemon-type.type';
+import { PokemonType } from '@shared/interfaces/pokemon-type.type';
+import { ObtainingMethods } from '@shared/enums/obtaining-method.enum';
 
 export interface PokemonEntry {
   name: string;
@@ -12,4 +13,6 @@ export interface PokemonEntry {
   canBeBanked: boolean;
   gen8Appearance: string;
   femaleRatio: null | number;
+  fsObtainingMethod?: ObtainingMethods;
+  uwObtainingMethod?: ObtainingMethods;
 }
