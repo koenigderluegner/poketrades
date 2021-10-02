@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.3.2 - 2021-10-02
+### Changed
+- Added Alola Non-Poké-Ball combinations to legality
+
 ## 0.3.1 - 2021-09-25
 ### Changed
 - Fixed Galar-Birds, Marshadow and Magearna being marked as "can be shiny"
