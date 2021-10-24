@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.3.3 - 2021-10-24
+### Changed
+- Zacian and Zamazenta can be shiny since 22nd October 2021
+
 ## 0.3.2 - 2021-10-02
 ### Changed
 - Added Alola Non-Poké-Ball combinations to legality
