@@ -25610,7 +25610,7 @@
       "Intrepid Sword"
     ],
     "hiddenAbility": null,
-    "canBeShiny": false,
+    "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "zacian",
     "gen8Appearance": "swsh",
@@ -25630,8 +25630,8 @@
       "Intrepid Sword"
     ],
     "hiddenAbility": null,
-    "canBeShiny": false,
-    "canBeBanked": true,
+    "canBeShiny": true,
+    "canBeBanked": false,
     "iconSlug": "zacian-crowned",
     "gen8Appearance": "swsh",
     "femaleRatio": null
@@ -25649,7 +25649,7 @@
       "Dauntless Shield"
     ],
     "hiddenAbility": null,
-    "canBeShiny": false,
+    "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "zamazenta",
     "gen8Appearance": "swsh",
@@ -25669,8 +25669,8 @@
       "Dauntless Shield"
     ],
     "hiddenAbility": null,
-    "canBeShiny": false,
-    "canBeBanked": true,
+    "canBeShiny": true,
+    "canBeBanked": false,
     "iconSlug": "zamazenta-crowned",
     "gen8Appearance": "swsh",
     "femaleRatio": null
