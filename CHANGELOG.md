@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.4.0 - 2021-11-06
+### Changed
+- Updated dependencies including major update for Angular (from 12 to 13)
+- Happy birthday ☁️💰!
+
 ## 0.3.3 - 2021-10-24
 ### Changed
 - Zacian and Zamazenta can be shiny since 22nd October 2021
