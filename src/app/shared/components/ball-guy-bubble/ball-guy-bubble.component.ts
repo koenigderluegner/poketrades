@@ -1,4 +1,4 @@
-import {Component, HostBinding, OnInit, ViewEncapsulation} from '@angular/core';
+import { Component, HostBinding, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-ball-guy-bubble',
@@ -6,14 +6,8 @@ import {Component, HostBinding, OnInit, ViewEncapsulation} from '@angular/core';
   styleUrls: ['./ball-guy-bubble.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class BallGuyBubbleComponent implements OnInit {
+export class BallGuyBubbleComponent {
 
   @HostBinding('class.ball-guy-bubble') private setClass = true;
-
-  constructor() {
-  }
-
-  ngOnInit(): void {
-  }
 
 }

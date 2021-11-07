@@ -1,4 +1,4 @@
-import {Component, HostBinding, OnInit, ViewEncapsulation} from '@angular/core';
+import { Component, HostBinding, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-footer',
@@ -6,14 +6,9 @@ import {Component, HostBinding, OnInit, ViewEncapsulation} from '@angular/core';
   styleUrls: ['./footer.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class FooterComponent implements OnInit {
+export class FooterComponent {
 
   @HostBinding('class.footer') private setClass = true;
 
-  constructor() {
-  }
-
-  ngOnInit(): void {
-  }
 
 }

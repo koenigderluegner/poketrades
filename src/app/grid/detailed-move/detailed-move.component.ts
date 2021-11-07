@@ -1,4 +1,4 @@
-import {Component, HostBinding, Input, OnInit, ViewEncapsulation} from '@angular/core';
+import { Component, HostBinding, Input, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-detailed-move',
@@ -6,7 +6,7 @@ import {Component, HostBinding, Input, OnInit, ViewEncapsulation} from '@angular
   styleUrls: ['./detailed-move.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class DetailedMoveComponent implements OnInit {
+export class DetailedMoveComponent {
 
   @HostBinding('class.detailed-move') private setClasses = true;
 
@@ -31,9 +31,6 @@ export class DetailedMoveComponent implements OnInit {
     this.move = 'unknown';
     this.isEggMove = false;
     this._type = 'unknown';
-  }
-
-  ngOnInit(): void {
   }
 
 }
