@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.3.4 - 2021-11-07
+### Changed
+- Migrated from TSLint to ESLint
+
 ## 0.3.3 - 2021-10-24
 ### Changed
 - Zacian and Zamazenta can be shiny since 22nd October 2021
