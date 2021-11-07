@@ -1,5 +1,5 @@
-import {Component, HostBinding, Input, OnInit, ViewEncapsulation} from '@angular/core';
-import {coerceNumberProperty} from '@angular/cdk/coercion';
+import { Component, HostBinding, Input, ViewEncapsulation } from '@angular/core';
+import { coerceNumberProperty } from '@angular/cdk/coercion';
 
 @Component({
   selector: 'app-spinner',
@@ -7,7 +7,7 @@ import {coerceNumberProperty} from '@angular/cdk/coercion';
   styleUrls: ['./spinner.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class SpinnerComponent implements OnInit {
+export class SpinnerComponent {
 
   @HostBinding('class.spinner') setClass = true;
 
@@ -15,12 +15,6 @@ export class SpinnerComponent implements OnInit {
   @HostBinding('style.height.px')
   @HostBinding('style.width.px')
   private _diameter = 150;
-
-  constructor() {
-  }
-
-  ngOnInit(): void {
-  }
 
   /** The diameter of the spinner (will set width and height of container). */
   @Input()

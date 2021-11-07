@@ -1,4 +1,4 @@
-import { Component, HostBinding, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, HostBinding, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-tools',
@@ -6,13 +6,8 @@ import { Component, HostBinding, OnInit, ViewEncapsulation } from '@angular/core
   styleUrls: ['./tools.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class ToolsComponent implements OnInit {
+export class ToolsComponent {
 
   @HostBinding('class.view') classes = true;
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }

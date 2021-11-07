@@ -1,9 +1,9 @@
-import {Component, HostBinding, OnDestroy, OnInit, ViewEncapsulation} from '@angular/core';
-import {GridAppearanceType} from '../grid-appearance.type';
-import {FormControl} from '@angular/forms';
-import {GridService} from '../services/grid.service';
-import {Observable, Subscription} from 'rxjs';
-import {debounceTime, distinctUntilChanged, tap} from 'rxjs/operators';
+import { Component, HostBinding, OnDestroy, ViewEncapsulation } from '@angular/core';
+import { GridAppearanceType } from '../grid-appearance.type';
+import { FormControl } from '@angular/forms';
+import { GridService } from '../services/grid.service';
+import { Observable, Subscription } from 'rxjs';
+import { debounceTime, distinctUntilChanged, tap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-grid-controller',
@@ -11,7 +11,7 @@ import {debounceTime, distinctUntilChanged, tap} from 'rxjs/operators';
   styleUrls: ['./grid-controller.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class GridControllerComponent implements OnInit, OnDestroy {
+export class GridControllerComponent implements OnDestroy {
 
   @HostBinding('class.grid-controller') setClass = true;
 
@@ -46,10 +46,6 @@ export class GridControllerComponent implements OnInit, OnDestroy {
         this.gridService.updateSorting(val);
       })
     ).subscribe());
-  }
-
-  ngOnInit(): void {
-
   }
 
   changeGrid(appearance: GridAppearanceType): void {

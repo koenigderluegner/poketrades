@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { SpreadsheetFacade } from '@spreadsheet/spreadsheet.facade';
 import { combineLatest, Observable, of } from 'rxjs';
 import { DatabaseFacadeService } from '../../../database/database-facade.service';
@@ -13,7 +13,7 @@ import { GridService } from '../../../grid/services/grid.service';
   styleUrls: ['./overview.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class OverviewComponent implements OnInit{
+export class OverviewComponent {
 
   data$: Observable<{ legality: LegalityEntry[], entries: BreedablesOverviewList }>;
 
@@ -32,9 +32,5 @@ export class OverviewComponent implements OnInit{
         })
       );
   }
-
-  ngOnInit(): void {
-  }
-
 
 }
