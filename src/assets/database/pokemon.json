@@ -4145,7 +4145,7 @@
       "Competetive"
     ],
     "hiddenAbility": null,
-    "canBeShiny": false,
+    "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "articuno-galar",
     "gen8Appearance": "tct",
