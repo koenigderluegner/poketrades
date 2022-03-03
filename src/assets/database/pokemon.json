@@ -4269,7 +4269,7 @@
       "Defiant"
     ],
     "hiddenAbility": null,
-    "canBeShiny": false,
+    "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "zapdos-galar",
     "gen8Appearance": "tct",
@@ -4309,7 +4309,7 @@
       "Berserk"
     ],
     "hiddenAbility": null,
-    "canBeShiny": false,
+    "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "moltres-galar",
     "gen8Appearance": "tct",
