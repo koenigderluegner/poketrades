@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.0 - 2021-03-03
+### Changed
+- Updated dependencies including major update for Angular (from 12 to 13)
+
 ## 0.3.4 - 2021-11-07
 ### Changed
 - Migrated from TSLint to ESLint
