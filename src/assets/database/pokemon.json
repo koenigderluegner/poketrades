@@ -423,7 +423,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "weedle",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -443,7 +443,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "kakuna",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -463,7 +463,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "beedrill",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -504,7 +504,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "pidgey",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -525,7 +525,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "pidgeotto",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -546,7 +546,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "pidgeot",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -586,7 +586,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "rattata",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -627,7 +627,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "raticate",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -668,7 +668,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "spearow",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -688,7 +688,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "fearow",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -709,7 +709,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "ekans",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -730,7 +730,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "arbok",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -1447,7 +1447,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "paras",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -1469,7 +1469,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "parasect",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -1490,7 +1490,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "venonat",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -1511,7 +1511,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "venomoth",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -1775,7 +1775,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "mankey",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -1795,7 +1795,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "primeape",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -1819,6 +1819,27 @@
     "femaleRatio": 24.5
   },
   {
+    "name": "Growlithe-Hisui",
+    "dex": "058",
+    "types": [
+      "Fire",
+      "Rock"
+    ],
+    "eggGroups": [
+      "Field"
+    ],
+    "abilities": [
+      "Intimidate",
+      "Flash Fire"
+    ],
+    "hiddenAbility": "Justified",
+    "canBeShiny": true,
+    "canBeBanked": true,
+    "iconSlug": "growlithe-hisui",
+    "gen8Appearance": "pla",
+    "femaleRatio": 24.5
+  },
+  {
     "name": "Arcanine",
     "dex": "059",
     "types": [
@@ -1836,6 +1857,27 @@
     "canBeBanked": true,
     "iconSlug": "arcanine",
     "gen8Appearance": "swsh",
+    "femaleRatio": 24.5
+  },
+  {
+    "name": "Arcanine-Hisui",
+    "dex": "059",
+    "types": [
+      "Fire",
+      "Rock"
+    ],
+    "eggGroups": [
+      "Field"
+    ],
+    "abilities": [
+      "Intimidate",
+      "Flash Fire"
+    ],
+    "hiddenAbility": "Justified",
+    "canBeShiny": true,
+    "canBeBanked": true,
+    "iconSlug": "arcanine-hisui",
+    "gen8Appearance": "pla",
     "femaleRatio": 24.5
   },
   {
@@ -2075,7 +2117,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "bellsprout",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -2095,7 +2137,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "weepinbell",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -2115,7 +2157,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "victreebel",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -2178,7 +2220,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "geodude",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -2220,7 +2262,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "graveler",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -2262,7 +2304,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "golem",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -2578,7 +2620,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "doduo",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -2599,7 +2641,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "dodrio",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -2620,7 +2662,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "seel",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -2642,7 +2684,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "dewgong",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -2662,7 +2704,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "grimer",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -2703,7 +2745,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "muk",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -2906,7 +2948,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "drowzee",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -2926,7 +2968,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "hypno",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -3006,7 +3048,28 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "voltorb",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
+    "femaleRatio": null
+  },
+  {
+    "name": "Voltorb-Hisui",
+    "dex": "100",
+    "types": [
+      "Electric",
+      "Grass"
+    ],
+    "eggGroups": [
+      "Mineral"
+    ],
+    "abilities": [
+      "Soundproof",
+      "Static"
+    ],
+    "hiddenAbility": "Aftermath",
+    "canBeShiny": true,
+    "canBeBanked": true,
+    "iconSlug": "voltorb-hisui",
+    "gen8Appearance": "pla",
     "femaleRatio": null
   },
   {
@@ -3026,7 +3089,28 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "electrode",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
+    "femaleRatio": null
+  },
+  {
+    "name": "Electrode-Hisui",
+    "dex": "101",
+    "types": [
+      "Electric",
+      "Grass"
+    ],
+    "eggGroups": [
+      "Mineral"
+    ],
+    "abilities": [
+      "Soundproof",
+      "Static"
+    ],
+    "hiddenAbility": "Aftermath",
+    "canBeShiny": true,
+    "canBeBanked": true,
+    "iconSlug": "electrode-hisui",
+    "gen8Appearance": "pla",
     "femaleRatio": null
   },
   {
@@ -4386,7 +4470,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "chikorita",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 11.85
   },
   {
@@ -4406,7 +4490,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "bayleef",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 11.85
   },
   {
@@ -4426,7 +4510,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "meganium",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 11.85
   },
   {
@@ -4445,7 +4529,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "cyndaquil",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 11.85
   },
   {
@@ -4464,7 +4548,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "quilava",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 11.85
   },
   {
@@ -4483,7 +4567,27 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "typhlosion",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
+    "femaleRatio": 11.85
+  },
+  {
+    "name": "Typhlosion-Hisui",
+    "dex": "157",
+    "types": [
+      "Fire",
+      "Ghost"
+    ],
+    "eggGroups": [
+      "Field"
+    ],
+    "abilities": [
+      "Blaze"
+    ],
+    "hiddenAbility": "Flash Fire",
+    "canBeShiny": true,
+    "canBeBanked": true,
+    "iconSlug": "typhlosion-hisui",
+    "gen8Appearance": "pla",
     "femaleRatio": 11.85
   },
   {
@@ -4503,7 +4607,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "totodile",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 11.85
   },
   {
@@ -4523,7 +4627,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "croconaw",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 11.85
   },
   {
@@ -4543,7 +4647,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "feraligatr",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 11.85
   },
   {
@@ -4563,7 +4667,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "sentret",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -4583,7 +4687,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "furret",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -4646,7 +4750,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "ledyba",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -4667,7 +4771,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "ledian",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -4688,7 +4792,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "spinarak",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -4709,7 +4813,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "ariados",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -4935,7 +5039,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "mareep",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -4955,7 +5059,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "flaaffy",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -4975,7 +5079,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "ampharos",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -5121,7 +5225,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "hoppip",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -5143,7 +5247,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "skiploom",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -5165,7 +5269,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "jumpluff",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -5185,7 +5289,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "aipom",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -5205,7 +5309,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "sunkern",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -5225,7 +5329,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "sunflora",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -5246,7 +5350,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "yanma",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -5349,7 +5453,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "murkrow",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -5412,7 +5516,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "misdreavus",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -5431,7 +5535,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "unown",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": null
   },
   {
@@ -5450,7 +5554,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "unown-b",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": null
   },
   {
@@ -5469,7 +5573,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "unown-c",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": null
   },
   {
@@ -5488,7 +5592,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "unown-d",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": null
   },
   {
@@ -5507,7 +5611,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "unown-e",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": null
   },
   {
@@ -5526,7 +5630,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "unown-f",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": null
   },
   {
@@ -5545,7 +5649,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "unown-g",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": null
   },
   {
@@ -5564,7 +5668,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "unown-h",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": null
   },
   {
@@ -5583,7 +5687,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "unown-i",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": null
   },
   {
@@ -5602,7 +5706,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "unown-j",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": null
   },
   {
@@ -5621,7 +5725,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "unown-k",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": null
   },
   {
@@ -5640,7 +5744,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "unown-l",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": null
   },
   {
@@ -5659,7 +5763,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "unown-m",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": null
   },
   {
@@ -5678,7 +5782,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "unown-n",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": null
   },
   {
@@ -5697,7 +5801,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "unown-o",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": null
   },
   {
@@ -5716,7 +5820,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "unown-p",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": null
   },
   {
@@ -5735,7 +5839,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "unown-q",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": null
   },
   {
@@ -5754,7 +5858,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "unown-r",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": null
   },
   {
@@ -5773,7 +5877,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "unown-s",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": null
   },
   {
@@ -5792,7 +5896,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "unown-t",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": null
   },
   {
@@ -5811,7 +5915,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "unown-u",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": null
   },
   {
@@ -5830,7 +5934,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "unown-v",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": null
   },
   {
@@ -5849,7 +5953,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "unown-w",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": null
   },
   {
@@ -5868,7 +5972,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "unown-x",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": null
   },
   {
@@ -5887,7 +5991,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "unown-y",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": null
   },
   {
@@ -5906,7 +6010,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "unown-z",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": null
   },
   {
@@ -5925,7 +6029,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "unown-exclamation",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": null
   },
   {
@@ -5944,7 +6048,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "unown-question",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": null
   },
   {
@@ -5984,7 +6088,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "girafarig",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -6003,7 +6107,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "pineco",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -6023,7 +6127,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "forretress",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -6064,7 +6168,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "gligar",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -6126,7 +6230,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "snubbull",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 75.1
   },
   {
@@ -6147,7 +6251,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "granbull",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 75.1
   },
   {
@@ -6169,6 +6273,27 @@
     "canBeBanked": true,
     "iconSlug": "qwilfish",
     "gen8Appearance": "swsh",
+    "femaleRatio": 49.8
+  },
+  {
+    "name": "Qwilfish-Hisui",
+    "dex": "211",
+    "types": [
+      "Dark",
+      "Poison"
+    ],
+    "eggGroups": [
+      "Water 2"
+    ],
+    "abilities": [
+      "Poison Point",
+      "Swift Swim"
+    ],
+    "hiddenAbility": "Intimidate",
+    "canBeShiny": true,
+    "canBeBanked": true,
+    "iconSlug": "qwilfish-hisui",
+    "gen8Appearance": "pla",
     "femaleRatio": 49.8
   },
   {
@@ -6296,6 +6421,27 @@
     "femaleRatio": 49.8
   },
   {
+    "name": "Sneasel-Hisui",
+    "dex": "215",
+    "types": [
+      "Dark",
+      "Ice"
+    ],
+    "eggGroups": [
+      "Field"
+    ],
+    "abilities": [
+      "Inner Focus",
+      "Keen Eye"
+    ],
+    "hiddenAbility": "Poison Touch",
+    "canBeShiny": true,
+    "canBeBanked": true,
+    "iconSlug": "sneasel-hisui",
+    "gen8Appearance": "pla",
+    "femaleRatio": 49.8
+  },
+  {
     "name": "Teddiursa",
     "dex": "216",
     "types": [
@@ -6312,7 +6458,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "teddiursa",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -6332,7 +6478,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "ursaring",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -6352,7 +6498,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "slugma",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -6373,7 +6519,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "magcargo",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -6584,7 +6730,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "houndour",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -6605,7 +6751,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "houndoom",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -6666,7 +6812,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "phanpy",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -6685,7 +6831,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "donphan",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -6725,7 +6871,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "stantler",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -6745,7 +6891,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "smeargle",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -7344,7 +7490,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "poochyena",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -7364,7 +7510,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "mightyena",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -7465,7 +7611,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "wurmple",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -7484,7 +7630,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "silcoon",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -7504,7 +7650,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "beautifly",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -7523,7 +7669,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "cascoon",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -7543,7 +7689,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "dustox",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -7694,7 +7840,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "taillow",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -7714,7 +7860,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "swellow",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -7865,7 +8011,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "surskit",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -7886,7 +8032,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "masquerain",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -7907,7 +8053,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "shroomish",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -7929,7 +8075,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "breloom",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -7948,7 +8094,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "slakoth",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -7967,7 +8113,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "vigoroth",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -7986,7 +8132,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "slaking",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -8126,7 +8272,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "makuhita",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 24.5
   },
   {
@@ -8146,7 +8292,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "hariyama",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 24.5
   },
   {
@@ -8187,7 +8333,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "nosepass",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -8208,7 +8354,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "skitty",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 75.1
   },
   {
@@ -8229,7 +8375,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "delcatty",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 75.1
   },
   {
@@ -8415,7 +8561,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "meditite",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -8435,7 +8581,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "medicham",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -8533,7 +8679,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "plusle",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -8552,7 +8698,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "minun",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -8573,7 +8719,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "volbeat",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 0
   },
   {
@@ -8594,7 +8740,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "illumise",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 100
   },
   {
@@ -8636,7 +8782,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "gulpin",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -8656,7 +8802,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "swalot",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -8779,7 +8925,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "numel",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -8800,7 +8946,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "camerupt",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -8860,7 +9006,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "spoink",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -8880,7 +9026,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "grumpig",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -8901,7 +9047,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "spinda",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -8984,7 +9130,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "cacnea",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -9005,7 +9151,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "cacturne",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -9087,7 +9233,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "zangoose",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -9107,7 +9253,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "seviper",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -9414,7 +9560,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "castform",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -9434,7 +9580,7 @@
     "canBeShiny": true,
     "canBeBanked": false,
     "iconSlug": "castform-sunny",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -9454,7 +9600,7 @@
     "canBeShiny": true,
     "canBeBanked": false,
     "iconSlug": "castform-rainy",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -9474,7 +9620,7 @@
     "canBeShiny": true,
     "canBeBanked": false,
     "iconSlug": "castform-snowy",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -9493,7 +9639,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "kecleon",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -9513,7 +9659,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "shuppet",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -9533,7 +9679,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "banette",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -9612,7 +9758,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "tropius",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -9631,7 +9777,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "chimecho",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -9836,7 +9982,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "clamperl",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -9855,7 +10001,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "huntail",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -9874,7 +10020,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "gorebyss",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -9915,7 +10061,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "luvdisc",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 75.1
   },
   {
@@ -10443,7 +10589,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "turtwig",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 11.85
   },
   {
@@ -10463,7 +10609,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "grotle",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 11.85
   },
   {
@@ -10484,7 +10630,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "torterra",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 11.85
   },
   {
@@ -10504,7 +10650,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "chimchar",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 11.85
   },
   {
@@ -10525,7 +10671,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "monferno",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 11.85
   },
   {
@@ -10546,7 +10692,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "infernape",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 11.85
   },
   {
@@ -10566,7 +10712,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "piplup",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 11.85
   },
   {
@@ -10586,7 +10732,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "prinplup",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 11.85
   },
   {
@@ -10607,7 +10753,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "empoleon",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 11.85
   },
   {
@@ -10627,7 +10773,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "starly",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -10647,7 +10793,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "staravia",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -10667,7 +10813,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "staraptor",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -10688,7 +10834,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "bidoof",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -10710,7 +10856,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "bibarel",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -10729,7 +10875,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "kricketot",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -10748,7 +10894,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "kricketune",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -10870,7 +11016,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "cranidos",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 11.85
   },
   {
@@ -10889,7 +11035,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "rampardos",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 11.85
   },
   {
@@ -10909,7 +11055,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "shieldon",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 11.85
   },
   {
@@ -10929,7 +11075,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "bastiodon",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 11.85
   },
   {
@@ -10948,7 +11094,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "burmy",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -10967,7 +11113,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "burmy-sandy",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -10986,7 +11132,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "burmy-trash",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -11006,7 +11152,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "wormadam",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 100
   },
   {
@@ -11026,7 +11172,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "wormadam-sandy",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 100
   },
   {
@@ -11046,7 +11192,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "wormadam-trash",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 100
   },
   {
@@ -11066,7 +11212,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "mothim",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 0
   },
   {
@@ -11127,7 +11273,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "pachirisu",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -11147,7 +11293,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "buizel",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -11167,7 +11313,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "floatzel",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -11333,7 +11479,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "ambipom",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -11457,7 +11603,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "mismagius",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -11478,7 +11624,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "honchkrow",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -11498,7 +11644,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "glameow",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 75.1
   },
   {
@@ -11518,7 +11664,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "purugly",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 75.1
   },
   {
@@ -11537,7 +11683,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "chingling",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -11703,7 +11849,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "chatot",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -12071,7 +12217,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "carnivine",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -12091,7 +12237,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "finneon",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -12111,7 +12257,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "lumineon",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -12379,7 +12525,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "yanmega",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -12438,7 +12584,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "gliscor",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -12541,7 +12687,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "probopass",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": 49.8
   },
   {
@@ -12916,7 +13062,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "phione",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": null
   },
   {
@@ -12936,7 +13082,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "manaphy",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "bdsp",
     "femaleRatio": null
   },
   {
@@ -12955,7 +13101,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "darkrai",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "pla",
     "femaleRatio": null
   },
   {
@@ -12974,7 +13120,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "shaymin",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "pla",
     "femaleRatio": null
   },
   {
@@ -12994,7 +13140,7 @@
     "canBeShiny": true,
     "canBeBanked": false,
     "iconSlug": "shaymin-sky",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "pla",
     "femaleRatio": null
   },
   {
@@ -13013,7 +13159,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "arceus",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "pla",
     "femaleRatio": null
   },
   {
@@ -13032,7 +13178,7 @@
     "canBeShiny": true,
     "canBeBanked": false,
     "iconSlug": "arceus-bug",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "pla",
     "femaleRatio": null
   },
   {
@@ -13051,7 +13197,7 @@
     "canBeShiny": true,
     "canBeBanked": false,
     "iconSlug": "arceus-dark",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "pla",
     "femaleRatio": null
   },
   {
@@ -13070,7 +13216,7 @@
     "canBeShiny": true,
     "canBeBanked": false,
     "iconSlug": "arceus-dragon",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "pla",
     "femaleRatio": null
   },
   {
@@ -13089,7 +13235,7 @@
     "canBeShiny": true,
     "canBeBanked": false,
     "iconSlug": "arceus-electric",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "pla",
     "femaleRatio": null
   },
   {
@@ -13108,7 +13254,7 @@
     "canBeShiny": true,
     "canBeBanked": false,
     "iconSlug": "arceus-fairy",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "pla",
     "femaleRatio": null
   },
   {
@@ -13127,7 +13273,7 @@
     "canBeShiny": true,
     "canBeBanked": false,
     "iconSlug": "arceus-fighting",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "pla",
     "femaleRatio": null
   },
   {
@@ -13146,7 +13292,7 @@
     "canBeShiny": true,
     "canBeBanked": false,
     "iconSlug": "arceus-fire",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "pla",
     "femaleRatio": null
   },
   {
@@ -13165,7 +13311,7 @@
     "canBeShiny": true,
     "canBeBanked": false,
     "iconSlug": "arceus-flying",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "pla",
     "femaleRatio": null
   },
   {
@@ -13184,7 +13330,7 @@
     "canBeShiny": true,
     "canBeBanked": false,
     "iconSlug": "arceus-ghost",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "pla",
     "femaleRatio": null
   },
   {
@@ -13203,7 +13349,7 @@
     "canBeShiny": true,
     "canBeBanked": false,
     "iconSlug": "arceus-grass",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "pla",
     "femaleRatio": null
   },
   {
@@ -13222,7 +13368,7 @@
     "canBeShiny": true,
     "canBeBanked": false,
     "iconSlug": "arceus-ground",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "pla",
     "femaleRatio": null
   },
   {
@@ -13241,7 +13387,7 @@
     "canBeShiny": true,
     "canBeBanked": false,
     "iconSlug": "arceus-ice",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "pla",
     "femaleRatio": null
   },
   {
@@ -13260,7 +13406,7 @@
     "canBeShiny": true,
     "canBeBanked": false,
     "iconSlug": "arceus-poison",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "pla",
     "femaleRatio": null
   },
   {
@@ -13279,7 +13425,7 @@
     "canBeShiny": true,
     "canBeBanked": false,
     "iconSlug": "arceus-psychic",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "pla",
     "femaleRatio": null
   },
   {
@@ -13298,7 +13444,7 @@
     "canBeShiny": true,
     "canBeBanked": false,
     "iconSlug": "arceus-rock",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "pla",
     "femaleRatio": null
   },
   {
@@ -13317,7 +13463,7 @@
     "canBeShiny": true,
     "canBeBanked": false,
     "iconSlug": "arceus-steel",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "pla",
     "femaleRatio": null
   },
   {
@@ -13336,7 +13482,7 @@
     "canBeShiny": true,
     "canBeBanked": false,
     "iconSlug": "arceus-water",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "pla",
     "femaleRatio": null
   },
   {
@@ -13494,7 +13640,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "oshawott",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "pla",
     "femaleRatio": 11.85
   },
   {
@@ -13513,7 +13659,7 @@
     "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "dewott",
-    "gen8Appearance": "unknown",
+    "gen8Appearance": "pla",
     "femaleRatio": 11.85
   },
   {
@@ -13533,6 +13679,26 @@
     "canBeBanked": true,
     "iconSlug": "samurott",
     "gen8Appearance": "unknown",
+    "femaleRatio": 11.85
+  },
+  {
+    "name": "Samurott-Hisui",
+    "dex": "503",
+    "types": [
+      "Water",
+      "Dark"
+    ],
+    "eggGroups": [
+      "Field"
+    ],
+    "abilities": [
+      "Torrent"
+    ],
+    "hiddenAbility": "Shell Armor",
+    "canBeShiny": true,
+    "canBeBanked": true,
+    "iconSlug": "samurott-hisui",
+    "gen8Appearance": "pla",
     "femaleRatio": 11.85
   },
   {
@@ -14511,6 +14677,27 @@
     "femaleRatio": 100
   },
   {
+    "name": "Lilligant-Hisui",
+    "dex": "549",
+    "types": [
+      "Grass",
+      "Fighting"
+    ],
+    "eggGroups": [
+      "Grass"
+    ],
+    "abilities": [
+      "Chlorophyll",
+      "Hustle"
+    ],
+    "hiddenAbility": "Leaf Guard",
+    "canBeShiny": true,
+    "canBeBanked": true,
+    "iconSlug": "lilligant-hisui",
+    "gen8Appearance": "pla",
+    "femaleRatio": 100
+  },
+  {
     "name": "Basculin",
     "dex": "550",
     "types": [
@@ -14541,6 +14728,26 @@
     ],
     "abilities": [
       "Rock Head",
+      "Adaptability"
+    ],
+    "hiddenAbility": "Mold Breaker",
+    "canBeShiny": true,
+    "canBeBanked": true,
+    "iconSlug": "basculin-blue-striped",
+    "gen8Appearance": "swsh",
+    "femaleRatio": 49.8
+  },
+  {
+    "name": "Basculin-White-Striped",
+    "dex": "550",
+    "types": [
+      "Water"
+    ],
+    "eggGroups": [
+      "Water 2"
+    ],
+    "abilities": [
+      "Rattled",
       "Adaptability"
     ],
     "hiddenAbility": "Mold Breaker",
@@ -15085,6 +15292,26 @@
     "femaleRatio": 11.85
   },
   {
+    "name": "Zorua-Hisui",
+    "dex": "570",
+    "types": [
+      "Normal",
+      "Ghost"
+    ],
+    "eggGroups": [
+      "Field"
+    ],
+    "abilities": [
+      "Illusion"
+    ],
+    "hiddenAbility": null,
+    "canBeShiny": true,
+    "canBeBanked": true,
+    "iconSlug": "zorua-hisui",
+    "gen8Appearance": "pla",
+    "femaleRatio": 11.85
+  },
+  {
     "name": "Zoroark",
     "dex": "571",
     "types": [
@@ -15101,6 +15328,26 @@
     "canBeBanked": true,
     "iconSlug": "zoroark",
     "gen8Appearance": "ioa",
+    "femaleRatio": 11.85
+  },
+  {
+    "name": "Zoroark-Hisui",
+    "dex": "571",
+    "types": [
+      "Normal",
+      "Ghost"
+    ],
+    "eggGroups": [
+      "Field"
+    ],
+    "abilities": [
+      "Illusion"
+    ],
+    "hiddenAbility": null,
+    "canBeShiny": true,
+    "canBeBanked": true,
+    "iconSlug": "zoroark-hisui",
+    "gen8Appearance": "pla",
     "femaleRatio": 11.85
   },
   {
@@ -16457,6 +16704,27 @@
     "canBeBanked": true,
     "iconSlug": "braviary",
     "gen8Appearance": "swsh",
+    "femaleRatio": 0
+  },
+  {
+    "name": "Braviary-Hisui",
+    "dex": "628",
+    "types": [
+      "Psychic",
+      "Flying"
+    ],
+    "eggGroups": [
+      "Flying"
+    ],
+    "abilities": [
+      "Keen Eye",
+      "Sheer Force"
+    ],
+    "hiddenAbility": "Defiant",
+    "canBeShiny": true,
+    "canBeBanked": true,
+    "iconSlug": "braviary-hisui",
+    "gen8Appearance": "pla",
     "femaleRatio": 0
   },
   {
@@ -19129,6 +19397,27 @@
     "femaleRatio": 49.8
   },
   {
+    "name": "Sliggoo-Hisui",
+    "dex": "705",
+    "types": [
+      "Steel",
+      "Dragon"
+    ],
+    "eggGroups": [
+      "Dragon"
+    ],
+    "abilities": [
+      "Sap Sipper",
+      "Overcoat"
+    ],
+    "hiddenAbility": "Gooey",
+    "canBeShiny": true,
+    "canBeBanked": true,
+    "iconSlug": "sliggoo-hisui",
+    "gen8Appearance": "pla",
+    "femaleRatio": 49.8
+  },
+  {
     "name": "Goodra",
     "dex": "706",
     "types": [
@@ -19146,6 +19435,27 @@
     "canBeBanked": true,
     "iconSlug": "goodra",
     "gen8Appearance": "swsh",
+    "femaleRatio": 49.8
+  },
+  {
+    "name": "Goodra-Hisui",
+    "dex": "706",
+    "types": [
+      "Steel",
+      "Dragon"
+    ],
+    "eggGroups": [
+      "Dragon"
+    ],
+    "abilities": [
+      "Sap Sipper",
+      "Hydration"
+    ],
+    "hiddenAbility": "Gooey",
+    "canBeShiny": true,
+    "canBeBanked": true,
+    "iconSlug": "goodra-hisui",
+    "gen8Appearance": "pla",
     "femaleRatio": 49.8
   },
   {
@@ -19402,24 +19712,25 @@
     "femaleRatio": 49.8
   },
   {
-    "name": "Avalugg",
+    "name": "Avalugg-Hisui",
     "dex": "713",
     "types": [
-      "Ice"
+      "Ice",
+      "Rock"
     ],
     "eggGroups": [
       "Monster",
       "Mineral"
     ],
     "abilities": [
-      "Own Tempo",
+      "Strong Jaw",
       "Ice Body"
     ],
     "hiddenAbility": "Sturdy",
     "canBeShiny": true,
     "canBeBanked": true,
-    "iconSlug": "avalugg",
-    "gen8Appearance": "swsh",
+    "iconSlug": "avalugg-hisui",
+    "gen8Appearance": "pla",
     "femaleRatio": 49.8
   },
   {
@@ -19784,6 +20095,26 @@
     "canBeBanked": true,
     "iconSlug": "decidueye",
     "gen8Appearance": "swsh",
+    "femaleRatio": 11.85
+  },
+  {
+    "name": "Decidueye-Hisui",
+    "dex": "724",
+    "types": [
+      "Grass",
+      "Fighting"
+    ],
+    "eggGroups": [
+      "Flying"
+    ],
+    "abilities": [
+      "Overgrow"
+    ],
+    "hiddenAbility": "Long Reach",
+    "canBeShiny": true,
+    "canBeBanked": true,
+    "iconSlug": "decidueye-hisui",
+    "gen8Appearance": "pla",
     "femaleRatio": 11.85
   },
   {
@@ -25993,5 +26324,191 @@
     "iconSlug": "calyrex-shadow-rider",
     "gen8Appearance": "tct",
     "femaleRatio": null
+  },
+  {
+    "name": "Wyrdeer",
+    "dex": "899",
+    "types": [
+      "Normal",
+      "Psychic"
+    ],
+    "eggGroups": [
+      "Field"
+    ],
+    "abilities": [
+      "Intimidate",
+      "Frisk"
+    ],
+    "hiddenAbility": "Sap Sipper",
+    "canBeShiny": true,
+    "canBeBanked": true,
+    "iconSlug": "wyrdeer",
+    "gen8Appearance": "pla",
+    "femaleRatio": 49.8
+  },
+  {
+    "name": "Kleavor",
+    "dex": "900",
+    "types": [
+      "Bug",
+      "Rock"
+    ],
+    "eggGroups": [
+      "Bug"
+    ],
+    "abilities": [
+      "Swarm",
+      "Sheer Force"
+    ],
+    "hiddenAbility": "Steadfast",
+    "canBeShiny": true,
+    "canBeBanked": true,
+    "iconSlug": "kleavor",
+    "gen8Appearance": "pla",
+    "femaleRatio": 49.8
+  },
+  {
+    "name": "Ursaluna",
+    "dex": "901",
+    "types": [
+      "Ground",
+      "Normal"
+    ],
+    "eggGroups": [
+      "Field"
+    ],
+    "abilities": [
+      "Guts",
+      "Bulletproof"
+    ],
+    "hiddenAbility": "Unnerve",
+    "canBeShiny": true,
+    "canBeBanked": true,
+    "iconSlug": "ursaluna",
+    "gen8Appearance": "pla",
+    "femaleRatio": 49.8
+  },
+  {
+    "name": "Basculegion",
+    "dex": "902",
+    "types": [
+      "Water",
+      "Ghost"
+    ],
+    "eggGroups": [
+      "Water 2"
+    ],
+    "abilities": [
+      "Rattled",
+      "Adaptability"
+    ],
+    "hiddenAbility": "Mold Breaker",
+    "canBeShiny": true,
+    "canBeBanked": true,
+    "iconSlug": "basculegion",
+    "gen8Appearance": "pla",
+    "femaleRatio": 49.8
+  },
+  {
+    "name": "Basculegion ♀",
+    "dex": "902",
+    "types": [
+      "Water",
+      "Ghost"
+    ],
+    "eggGroups": [
+      "Water 2"
+    ],
+    "abilities": [
+      "Rattled",
+      "Adaptability"
+    ],
+    "hiddenAbility": "Mold Breaker",
+    "canBeShiny": true,
+    "canBeBanked": true,
+    "iconSlug": "female/basculegion",
+    "gen8Appearance": "pla",
+    "femaleRatio": 49.8
+  },
+  {
+    "name": "Sneasler",
+    "dex": "903",
+    "types": [
+      "Fighting",
+      "Poison"
+    ],
+    "eggGroups": [
+      "Field"
+    ],
+    "abilities": [
+      "Pressure"
+    ],
+    "hiddenAbility": "Poison Touch",
+    "canBeShiny": true,
+    "canBeBanked": true,
+    "iconSlug": "sneasler",
+    "gen8Appearance": "pla",
+    "femaleRatio": 49.8
+  },
+  {
+    "name": "Overqwil",
+    "dex": "904",
+    "types": [
+      "Dark",
+      "Poison"
+    ],
+    "eggGroups": [
+      "Water 2"
+    ],
+    "abilities": [
+      "Poison Point",
+      "Swift Swim"
+    ],
+    "hiddenAbility": "Intimidate",
+    "canBeShiny": true,
+    "canBeBanked": true,
+    "iconSlug": "overqwil",
+    "gen8Appearance": "pla",
+    "femaleRatio": 49.8
+  },
+  {
+    "name": "Enamorus",
+    "dex": "905",
+    "types": [
+      "Fairy",
+      "Flying"
+    ],
+    "eggGroups": [
+      "Undiscovered"
+    ],
+    "abilities": [
+      "Healer"
+    ],
+    "hiddenAbility": "Contrary",
+    "canBeShiny": false,
+    "canBeBanked": true,
+    "iconSlug": "enamorus",
+    "gen8Appearance": "pla",
+    "femaleRatio": 100
+  },
+  {
+    "name": "Enamorus-Therian",
+    "dex": "905",
+    "types": [
+      "Fairy",
+      "Flying"
+    ],
+    "eggGroups": [
+      "Undiscovered"
+    ],
+    "abilities": [
+      "Overcoat"
+    ],
+    "hiddenAbility": null,
+    "canBeShiny": false,
+    "canBeBanked": true,
+    "iconSlug": "enamorus-therian",
+    "gen8Appearance": "pla",
+    "femaleRatio": 100
   }
 ]
