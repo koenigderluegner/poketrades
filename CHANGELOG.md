@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.4.1 - 2022-03-06
+### Changed
+- Updated Articuno-Galar, Zapdos-Galar and Moltres-Galar shiny availability
+- Changed first appearances from BDSP mons
+- Fixed female versions show as Bulbasaur icons 
+
+### Added
+- Added new Pokémon from Legends Arceus
+
 ## 0.4.0 - 2021-03-03
 ### Changed
 - Updated dependencies including major update for Angular (from 12 to 13)
