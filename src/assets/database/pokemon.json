@@ -12928,6 +12928,26 @@
     "femaleRatio": null
   },
   {
+    "name": "Dialga-Origin",
+    "dex": "483",
+    "types": [
+      "Steel",
+      "Dragon"
+    ],
+    "eggGroups": [
+      "Undiscovered"
+    ],
+    "abilities": [
+      "Pressure"
+    ],
+    "hiddenAbility": "Telepathy",
+    "canBeShiny": false,
+    "canBeBanked": false,
+    "iconSlug": "dialga-origin",
+    "gen8Appearance": "pla",
+    "femaleRatio": null
+  },
+  {
     "name": "Palkia",
     "dex": "484",
     "types": [
@@ -12945,6 +12965,26 @@
     "canBeBanked": true,
     "iconSlug": "palkia",
     "gen8Appearance": "tct",
+    "femaleRatio": null
+  },
+  {
+    "name": "Palkia-Origin",
+    "dex": "484",
+    "types": [
+      "Water",
+      "Dragon"
+    ],
+    "eggGroups": [
+      "Undiscovered"
+    ],
+    "abilities": [
+      "Pressure"
+    ],
+    "hiddenAbility": "Telepathy",
+    "canBeShiny": false,
+    "canBeBanked": false,
+    "iconSlug": "palkia-origin",
+    "gen8Appearance": "pla",
     "femaleRatio": null
   },
   {
