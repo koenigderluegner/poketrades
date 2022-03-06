@@ -28,7 +28,7 @@
     "pokesprite-spritesheet": "github:koenigderluegner/pokesprite-spritesheet#master",
     "rxjs": "7.5.4",
     "tslib": "^2.0.0",
-    "zone.js": "~0.11.4"
+    "zone.js": "~0.11.5"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "13.2.5",
