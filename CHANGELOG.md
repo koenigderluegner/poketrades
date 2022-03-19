@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.2 - 2022-03-19
+### Changed
+- Updated NPM-Packages
+
 ## 0.4.1 - 2022-03-06
 ### Changed
 - Updated Articuno-Galar, Zapdos-Galar and Moltres-Galar shiny availability
