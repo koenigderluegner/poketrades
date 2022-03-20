@@ -1,11 +1,14 @@
 <app-changer *ngIf="(hideAppearance$ | async)  === false" (selectionChanged)="changeGrid($event)"
              class="m-right-gap"></app-changer>
-<app-checkbox *ngIf="(hideInactives$ | async) === false" [formControl]="toggleInactivesControl"
-              (change)="changeGridInactives()"
-              [icon]="toggleInactivesControl.value ? 'visibility_off': 'visibility'"
-class="m-right-gap">
-  {{toggleInactivesControl.value ? 'Unowned hidden' : 'Unowned visible'}}
-</app-checkbox>
+
+<mat-form-field floatLabel="never" class="sel m-right-gap" appearance="fill"
+                *ngIf="(hideOwnedStatusControl$ | async) === false">
+  <mat-select multiple [formControl]="ownedStatusControl" placeholder="select owned status" panelClass="dark-panel">
+    <mat-option [value]="'owned'">Owned</mat-option>
+    <mat-option [value]="'unowned'">Unowned</mat-option>
+  </mat-select>
+</mat-form-field>
+
 <input [formControl]="filter" class="m-right-gap grid-filter placeholder-light" placeholder="filter by name">
 <mat-form-field floatLabel="never" class="sel m-right-gap" appearance="fill">
   <mat-select [formControl]="sorting" placeholder="select sorting" panelClass="dark-panel">
@@ -16,4 +19,40 @@ class="m-right-gap">
     <mat-option [value]="{id: 'dex', start: 'desc', disableClear: false}">DexNo. descending</mat-option>
   </mat-select>
 
+</mat-form-field>
+
+<mat-form-field floatLabel="never" class="sel m-right-gap" appearance="fill">
+  <mat-select multiple panelClass="dark-panel" [formControl]="categories" placeholder="Filter by category"
+              #categoriesSelect>
+    <mat-select-trigger *ngxAlias="transformSelectSelection(categoriesSelect.selected) as selection">
+      {{selection.length ? selection[0].viewValue : ''}}
+      <span *ngIf="selection.length > 1" class="filter-others-label">
+        (+{{selection.length - 1}} {{selection.length === 2 ? 'other' : 'others'}})
+      </span>
+    </mat-select-trigger>
+    <mat-option [value]="pokemonCategory.UNCATEGORIZED">Uncategorized</mat-option>
+    <mat-optgroup label="Valuable">
+      <mat-option [value]="pokemonCategory.SUB_LEGENDARY">Sub-Legendary</mat-option>
+      <mat-option [value]="pokemonCategory.LEGENDARY">Legendary</mat-option>
+      <mat-option [value]="pokemonCategory.ULTRA_BEAST">Ultra Beast</mat-option>
+      <mat-option [value]="pokemonCategory.MYSTICAL">Mystical</mat-option>
+    </mat-optgroup>
+    <mat-optgroup label="Regional">
+      <mat-option [value]="pokemonCategory.ALOLA">Alola</mat-option>
+      <mat-option [value]="pokemonCategory.GALAR">Galar</mat-option>
+      <mat-option [value]="pokemonCategory.HISUI">Hisui</mat-option>
+    </mat-optgroup>
+    <mat-optgroup label="Species">
+      <mat-option [value]="pokemonCategory.UNOWN">Unown</mat-option>
+      <mat-option [value]="pokemonCategory.VIVILLON">Vivillon</mat-option>
+      <mat-option [value]="pokemonCategory.ALCREMIE">Alcremie</mat-option>
+    </mat-optgroup>
+    <mat-optgroup label="Other">
+      <mat-option [value]="pokemonCategory.STARTER">Starter</mat-option>
+      <mat-option [value]="pokemonCategory.PSEUDO_LEGENDARY">Pseudo-Legendary</mat-option>
+      <mat-option [value]="pokemonCategory.FOSSIL">Fossil</mat-option>
+      <mat-option [value]="pokemonCategory.BABY">Baby</mat-option>
+      <mat-option [value]="pokemonCategory.GIGANTAMAX">Gigantamax</mat-option>
+    </mat-optgroup>
+  </mat-select>
 </mat-form-field>

@@ -22,7 +22,6 @@ export class BallComponent implements OnInit, OnDestroy {
 
   subscriptions: Subscription[] = [];
   gridAppearance$: Observable<GridAppearanceType>;
-  hideItems$: Observable<boolean>;
 
   constructor(
     private spreadsheetFacade: SpreadsheetFacade,
@@ -31,9 +30,8 @@ export class BallComponent implements OnInit, OnDestroy {
     private gridService: GridService
   ) {
     this.gridService.updateHideAppearanceControl(false);
-    this.gridService.updateHideInactiveItemsControl(false);
+    this.gridService.updateHideOwnedStatusControl(false);
     this.gridAppearance$ = this.gridService.getGridAppearance$();
-    this.hideItems$ = this.gridService.getHideItems$();
   }
 
   ngOnInit(): void {

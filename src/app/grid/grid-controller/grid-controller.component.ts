@@ -4,6 +4,8 @@ import { FormControl } from '@angular/forms';
 import { GridService } from '../services/grid.service';
 import { Observable, Subscription } from 'rxjs';
 import { debounceTime, distinctUntilChanged, tap } from 'rxjs/operators';
+import { PokemonCategory } from '@shared/enums/pokemon-category.enum';
+import { MatOption } from '@angular/material/core';
 
 @Component({
   selector: 'app-grid-controller',
@@ -17,19 +19,23 @@ export class GridControllerComponent implements OnDestroy {
 
   private subscriptions: Subscription[] = [];
 
-  toggleInactivesControl: FormControl;
+  pokemonCategory = PokemonCategory;
+
+  ownedStatusControl: FormControl;
   hideAppearance$: Observable<boolean>;
-  hideInactives$: Observable<boolean>;
+  hideOwnedStatusControl$: Observable<boolean>;
   filter: FormControl;
   sorting: FormControl;
+  categories: FormControl;
 
 
   constructor(private gridService: GridService) {
-    this.toggleInactivesControl = new FormControl(this.gridService.getHideItems());
+    this.ownedStatusControl = this.gridService.getOwnedStatusControl();
     this.hideAppearance$ = this.gridService.getHideAppearanceControl$();
-    this.hideInactives$ = this.gridService.getHideInactiveItemsControl$();
+    this.hideOwnedStatusControl$ = this.gridService.getHideOwnedStatusControl$();
 
     this.filter = new FormControl('');
+    this.categories = new FormControl([]);
     this.sorting = new FormControl(null);
     this.subscriptions.push(
       this.filter.valueChanges.pipe(
@@ -46,18 +52,24 @@ export class GridControllerComponent implements OnDestroy {
         this.gridService.updateSorting(val);
       })
     ).subscribe());
+
+    this.subscriptions.push(this.categories.valueChanges.pipe(
+      tap(val => {
+        this.gridService.updateCategories(val);
+      })
+    ).subscribe());
   }
 
   changeGrid(appearance: GridAppearanceType): void {
     this.gridService.updateGridAppearance(appearance);
   }
 
-  changeGridInactives(): void {
-    this.gridService.updateHideItems(this.toggleInactivesControl.value);
-  }
-
   ngOnDestroy(): void {
     this.subscriptions.forEach(sub => sub.unsubscribe());
+  }
+
+  transformSelectSelection(selection: MatOption<any> | MatOption[]): MatOption[] {
+    return Array.isArray(selection) ? selection : [selection];
   }
 
 }

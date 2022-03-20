@@ -26,8 +26,19 @@ export class GridComponent implements AfterContentInit, OnDestroy {
   @HostBinding('class.grid') isGrid = true;
   @Input() @HostBinding('class.hide-inactives') hideInactiveItems = false;
 
-  @HostBinding('class') get class() {
-    return this.appearance ?? 'normal';
+  private _categories: string[] = []
+  private _ownedStatus: string[] = []
+
+  @HostBinding('class') get getClasses(): string[] {
+    const classes: string[] = [];
+
+    classes.push(this.appearance ?? 'normal');
+    if (this._categories.length) {
+      classes.push('filtered');
+    }
+    classes.push(...this._categories);
+    classes.push(...this._ownedStatus);
+    return classes;
   }
 
   @Input() appearance: GridAppearanceType | undefined | null;
@@ -47,7 +58,7 @@ export class GridComponent implements AfterContentInit, OnDestroy {
       switch (sortField) {
         case 'name':
           return item.pokemon?.name ?? '';
-          case 'dex':
+        case 'dex':
           return item.pokemon?.dex ?? '';
         default:
           return '';
@@ -58,29 +69,38 @@ export class GridComponent implements AfterContentInit, OnDestroy {
       return (data.pokemon?.name ?? '').toLowerCase().includes(filter);
     };
 
-    this.subscriptions.push(this.gridService.getFilter$().subscribe(
-      {
-        next: filter => {
-          this.dataSource.filter = filter;
-        }
-      })
-    );
-
-    this.subscriptions.push(this.gridService.getSorting$().subscribe(
-      {
-        next: sorting => {
-          // reset if none set
-          if (sorting === undefined) {
-            sorting = {id: '', start: 'asc', disableClear: false};
-          }
-          this.sort(sorting);
-        }
+    this.subscriptions.push(this.gridService.getFilter$().subscribe({
+      next: filter => {
+        this.dataSource.filter = filter;
       }
-    ));
+    }));
+
+
+    this.subscriptions.push(this.gridService.getSorting$().subscribe({
+      next: sorting => {
+        // reset if none set
+        if (sorting === undefined) {
+          sorting = {id: '', start: 'asc', disableClear: false};
+        }
+        this.sort(sorting);
+      }
+    }));
+
+
+    this.subscriptions.push(this.gridService.getCategories$().subscribe({
+      next: categories => {
+        this._categories = categories
+      }
+    }));
+
+    this.subscriptions.push(this.gridService.getOwnedStatus$().subscribe({
+      next: ownedStatus => {
+        this._ownedStatus = ownedStatus
+      }
+    }));
 
 
   }
-
 
   ngAfterContentInit() {
 
@@ -107,6 +127,7 @@ export class GridComponent implements AfterContentInit, OnDestroy {
       this.dataSource.data = this.dataSource._orderData(this.items);
     }
   }
+
 
   ngOnDestroy(): void {
     this.subscriptions.forEach(sub => sub.unsubscribe());

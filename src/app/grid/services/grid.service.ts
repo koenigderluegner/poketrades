@@ -1,8 +1,10 @@
-import {Injectable} from '@angular/core';
-import {BehaviorSubject, Observable} from 'rxjs';
-import {GridAppearanceType} from '../grid-appearance.type';
-import {coerceBooleanProperty} from '@angular/cdk/coercion';
-import {MatSortable} from '@angular/material/sort';
+import { Injectable } from '@angular/core';
+import { BehaviorSubject, Observable } from 'rxjs';
+import { GridAppearanceType } from '../grid-appearance.type';
+import { MatSortable } from '@angular/material/sort';
+import { PokemonCategory } from '@shared/enums/pokemon-category.enum';
+import { FormControl } from '@angular/forms';
+import { startWith, tap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -12,30 +14,30 @@ export class GridService {
   gridAppearance: BehaviorSubject<GridAppearanceType>;
   filter: BehaviorSubject<string>;
   sorting: BehaviorSubject<MatSortable>;
-  hideInactiveItems: BehaviorSubject<boolean>;
+  categories: BehaviorSubject<PokemonCategory[]>;
   hideSortingControl: BehaviorSubject<boolean>;
   hideAppearanceControl: BehaviorSubject<boolean>;
   hideFilterControl: BehaviorSubject<boolean>;
-  hideInactiveItemsControl: BehaviorSubject<boolean>;
+  hideOwnedStatusControl: BehaviorSubject<boolean>;
+
+  private readonly _ownedStatusControl: FormControl
 
   constructor() {
     let gridAppearanceType = localStorage.getItem('gridAppearanceType');
-    const hideItems = coerceBooleanProperty(localStorage.getItem('hideItems'));
+    const ownedStatus: string[] = JSON.parse(localStorage.getItem('ownedStatus') ?? '[]');
     gridAppearanceType = gridAppearanceType !== 'detailed' && gridAppearanceType !== 'normal' ? 'minimal' : gridAppearanceType;
 
     this.gridAppearance = new BehaviorSubject<GridAppearanceType>(gridAppearanceType as GridAppearanceType);
 
-    if (hideItems !== null) {
-      this.hideInactiveItems = new BehaviorSubject<boolean>(hideItems);
-    } else {
-      this.hideInactiveItems = new BehaviorSubject<boolean>(false);
-    }
+    this._ownedStatusControl = new FormControl(ownedStatus);
+
     this.filter = new BehaviorSubject<string>('');
     this.sorting = new BehaviorSubject<MatSortable>({id: '', disableClear: false, start: 'asc'});
+    this.categories = new BehaviorSubject<PokemonCategory[]>([]);
     this.hideAppearanceControl = new BehaviorSubject<boolean>(false);
     this.hideFilterControl = new BehaviorSubject<boolean>(false);
     this.hideSortingControl = new BehaviorSubject<boolean>(false);
-    this.hideInactiveItemsControl = new BehaviorSubject<boolean>(false);
+    this.hideOwnedStatusControl = new BehaviorSubject<boolean>(false);
   }
 
   getGridAppearance$(): Observable<GridAppearanceType> {
@@ -63,33 +65,35 @@ export class GridService {
     this.sorting.next(sorting);
   }
 
-  getHideItems$(): Observable<boolean> {
-    return this.hideInactiveItems.asObservable();
+  getCategories$(): Observable<PokemonCategory[]> {
+    return this.categories.asObservable();
   }
 
-  getHideItems(): boolean {
-    return this.hideInactiveItems.getValue();
+  updateCategories(categories: PokemonCategory[]): void {
+    this.categories.next(categories);
   }
 
-  updateHideItems(hideItems: boolean): void {
-    localStorage.setItem('hideItems', String(hideItems));
-    return this.hideInactiveItems.next(hideItems);
+  getOwnedStatusControl(): FormControl {
+    return this._ownedStatusControl;
   }
 
-  getHideInactiveItemsControl$(): Observable<boolean> {
-    return this.hideInactiveItemsControl.asObservable();
+  getOwnedStatus$(): Observable<string[]> {
+    return this._ownedStatusControl.valueChanges.pipe(
+      startWith(this._ownedStatusControl.value),
+      tap(value => localStorage.setItem('ownedStatus', JSON.stringify(value)))
+    );
   }
 
-  updateHideInactiveItemsControl(hideControl: boolean): void {
-    return this.hideInactiveItemsControl.next(hideControl);
+  updateOwnedStatus(ownedStatus: string[]): void {
+    return this._ownedStatusControl.setValue(ownedStatus, {emitEvent: true});
   }
 
-  getHideFilterControl$(): Observable<boolean> {
-    return this.hideFilterControl.asObservable();
+  getHideOwnedStatusControl$(): Observable<boolean> {
+    return this.hideOwnedStatusControl.asObservable();
   }
 
-  updateHideFilterControl(hideControl: boolean): void {
-    return this.hideFilterControl.next(hideControl);
+  updateHideOwnedStatusControl(hideControl: boolean): void {
+    return this.hideOwnedStatusControl.next(hideControl);
   }
 
   getHideAppearanceControl$(): Observable<boolean> {
@@ -98,14 +102,6 @@ export class GridService {
 
   updateHideAppearanceControl(hideControl: boolean): void {
     return this.hideAppearanceControl.next(hideControl);
-  }
-
-  getHideSortingControl$(): Observable<boolean> {
-    return this.hideSortingControl.asObservable();
-  }
-
-  updateHideSortingControl(hideControl: boolean): void {
-    return this.hideSortingControl.next(hideControl);
   }
 
 }
