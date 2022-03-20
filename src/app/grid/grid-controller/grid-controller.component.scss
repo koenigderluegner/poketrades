@@ -14,6 +14,11 @@
   font-size: 1.6rem;
 }
 
+.filter-others-label{
+    opacity: 0.75;
+    font-size: 0.75em;
+}
+
 .sel.mat-form-field-appearance-fill {
 
   .mat-select-placeholder {
@@ -88,5 +93,9 @@
 
   .mat-option.mat-selected:not(.mat-option-disabled) {
     color: #58a6ff;
+  }
+
+  .mat-optgroup-label {
+    color: #efe2e3;
   }
 }

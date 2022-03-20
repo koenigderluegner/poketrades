@@ -1,7 +1,35 @@
+$categories: 'uncategorized',
+'ultra-beast',
+'sub-legendary',
+'legendary',
+'mystical',
+'fossil',
+'baby',
+'alola',
+'galar',
+'hisui',
+'unown',
+'alcremie',
+'vivillon',
+'gmax';
+
+
 .grid {
   display: grid;
 
   &.hide-inactives .grid-item.inactive {
     display: none;
+  }
+
+  &.filtered {
+    .grid-item {
+      display: none;
+    }
+
+    @each $category in $categories {
+      &.#{$category} .grid-item.#{$category} {
+        display: block;
+      }
+    }
   }
 }

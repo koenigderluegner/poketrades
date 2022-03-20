@@ -188,6 +188,10 @@ a {
   padding: 20px;
 }
 
+.mat-form-field .mat-form-field-infix {
+  width: 190px;
+}
+
 /**
 Mat Tooltip
  */
@@ -252,7 +256,7 @@ Mat Tooltip
 
 }
 
-.placeholder-light{
+.placeholder-light {
   &::placeholder {
     color: #8b949e;
     opacity: 1;

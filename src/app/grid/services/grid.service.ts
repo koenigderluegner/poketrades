@@ -1,8 +1,9 @@
-import {Injectable} from '@angular/core';
-import {BehaviorSubject, Observable} from 'rxjs';
-import {GridAppearanceType} from '../grid-appearance.type';
-import {coerceBooleanProperty} from '@angular/cdk/coercion';
-import {MatSortable} from '@angular/material/sort';
+import { Injectable } from '@angular/core';
+import { BehaviorSubject, Observable } from 'rxjs';
+import { GridAppearanceType } from '../grid-appearance.type';
+import { coerceBooleanProperty } from '@angular/cdk/coercion';
+import { MatSortable } from '@angular/material/sort';
+import { PokemonCategory } from '@shared/enums/pokemon-category.enum';
 
 @Injectable({
   providedIn: 'root'
@@ -12,6 +13,7 @@ export class GridService {
   gridAppearance: BehaviorSubject<GridAppearanceType>;
   filter: BehaviorSubject<string>;
   sorting: BehaviorSubject<MatSortable>;
+  categories: BehaviorSubject<PokemonCategory[]>;
   hideInactiveItems: BehaviorSubject<boolean>;
   hideSortingControl: BehaviorSubject<boolean>;
   hideAppearanceControl: BehaviorSubject<boolean>;
@@ -32,6 +34,7 @@ export class GridService {
     }
     this.filter = new BehaviorSubject<string>('');
     this.sorting = new BehaviorSubject<MatSortable>({id: '', disableClear: false, start: 'asc'});
+    this.categories = new BehaviorSubject<PokemonCategory[]>([]);
     this.hideAppearanceControl = new BehaviorSubject<boolean>(false);
     this.hideFilterControl = new BehaviorSubject<boolean>(false);
     this.hideSortingControl = new BehaviorSubject<boolean>(false);
@@ -61,6 +64,14 @@ export class GridService {
 
   updateSorting(sorting: MatSortable): void {
     this.sorting.next(sorting);
+  }
+
+  getCategories$(): Observable<PokemonCategory[]> {
+    return this.categories.asObservable();
+  }
+
+  updateCategories(categories: PokemonCategory[]): void {
+    this.categories.next(categories);
   }
 
   getHideItems$(): Observable<boolean> {
