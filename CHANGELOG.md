@@ -9,6 +9,7 @@
 - Fixed Diancie-Mega bankable flag being true
 - Fixed detail appearance of grid showing empty moves
 - Fixed missing icon for RNGs
+- Fixed missing Avalugg entry
 
 
 ## 0.4.2 - 2022-03-19
