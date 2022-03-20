@@ -28,7 +28,8 @@ export class IndexComponent implements OnInit {
     events: 'cherish',
     legendaries: 'master',
     shinies: 'shiny-charm',
-    competitives: 'focus-sash'
+    competitives: 'focus-sash',
+    rngs: 'teachy-tv'
   };
 
   constructor(
