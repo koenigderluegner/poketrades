@@ -18,7 +18,6 @@ import { ObtainingMethods } from '@shared/enums/obtaining-method.enum';
 export class FriendSafariShinyDexComponent extends BaseShinyDexComponent implements OnInit {
 
   shinies$?: Observable<[string, ShinyDexEntry][]>;
-  hideItems$: Observable<boolean>;
 
   constructor(
     private _databases: DatabaseFacadeService,
@@ -26,8 +25,7 @@ export class FriendSafariShinyDexComponent extends BaseShinyDexComponent impleme
     private _gridService: GridService
   ) {
     super();
-    this.hideItems$ = this._gridService.getHideItems$();
-    this._gridService.updateHideInactiveItemsControl(false);
+    this._gridService.updateHideOwnedStatusControl(false);
     this._gridService.updateHideAppearanceControl(true);
   }
 
