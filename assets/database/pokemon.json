@@ -19752,6 +19752,27 @@
     "femaleRatio": 49.8
   },
   {
+    "name": "Avalugg",
+    "dex": "713",
+    "types": [
+      "Ice"
+    ],
+    "eggGroups": [
+      "Monster",
+      "Mineral"
+    ],
+    "abilities": [
+      "Own Tempo",
+      "Ice Body"
+    ],
+    "hiddenAbility": "Sturdy",
+    "canBeShiny": true,
+    "canBeBanked": true,
+    "iconSlug": "avalugg",
+    "gen8Appearance": "swsh",
+    "femaleRatio": 49.8
+  },
+  {
     "name": "Avalugg-Hisui",
     "dex": "713",
     "types": [
@@ -20012,7 +20033,7 @@
     ],
     "hiddenAbility": null,
     "canBeShiny": true,
-    "canBeBanked": true,
+    "canBeBanked": false,
     "iconSlug": "diancie-mega",
     "gen8Appearance": "unknown",
     "femaleRatio": null
