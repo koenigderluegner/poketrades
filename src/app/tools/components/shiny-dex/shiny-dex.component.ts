@@ -19,14 +19,12 @@ export class ShinyDexComponent implements OnInit {
   allShinyWorksheets: Worksheet[] = [];
   partialShinyWorksheets: Worksheet[] = [];
   shinies$?: Observable<[string, ShinyDexEntry][]>;
-  hideItems$: Observable<boolean>;
 
 
   constructor(private databases: DatabaseFacadeService,
               private spreadsheets: SpreadsheetFacade,
               private gridService: GridService) {
-    this.hideItems$ = this.gridService.getHideItems$();
-    this.gridService.updateHideInactiveItemsControl(false);
+    this.gridService.updateHideOwnedStatusControl(false);
     this.gridService.updateHideAppearanceControl(true);
   }
 

@@ -1,11 +1,12 @@
 # Changelog
 
-## 0.5.0 - TBD
+## 0.5.0 - 2022-03-20
 
 ### Added
 - Filter for pokemon categories like legendary or fossil
 
 ### Changed
+- Changed "hide inactives" filter to owned status filter
 - Fixed Diancie-Mega bankable flag being true
 - Fixed detail appearance of grid showing empty moves
 - Fixed missing icon for RNGs

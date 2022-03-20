@@ -21,18 +21,18 @@ export class GridControllerComponent implements OnDestroy {
 
   pokemonCategory = PokemonCategory;
 
-  toggleInactivesControl: FormControl;
+  ownedStatusControl: FormControl;
   hideAppearance$: Observable<boolean>;
-  hideInactives$: Observable<boolean>;
+  hideOwnedStatusControl$: Observable<boolean>;
   filter: FormControl;
   sorting: FormControl;
   categories: FormControl;
 
 
   constructor(private gridService: GridService) {
-    this.toggleInactivesControl = new FormControl(this.gridService.getHideItems());
+    this.ownedStatusControl = this.gridService.getOwnedStatusControl();
     this.hideAppearance$ = this.gridService.getHideAppearanceControl$();
-    this.hideInactives$ = this.gridService.getHideInactiveItemsControl$();
+    this.hideOwnedStatusControl$ = this.gridService.getHideOwnedStatusControl$();
 
     this.filter = new FormControl('');
     this.categories = new FormControl([]);
@@ -62,10 +62,6 @@ export class GridControllerComponent implements OnDestroy {
 
   changeGrid(appearance: GridAppearanceType): void {
     this.gridService.updateGridAppearance(appearance);
-  }
-
-  changeGridInactives(): void {
-    this.gridService.updateHideItems(this.toggleInactivesControl.value);
   }
 
   ngOnDestroy(): void {

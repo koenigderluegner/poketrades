@@ -1,5 +1,5 @@
 import { Component, HostBinding, ViewEncapsulation } from '@angular/core';
-import { GridBaseAppearanceComponent } from '../components/grid-base-appearance/grid-base-appearance.component';
+import { GridBaseAppearanceDirective } from '../components/grid-base-appearance.directive';
 
 @Component({
   selector: 'app-normal',
@@ -7,7 +7,7 @@ import { GridBaseAppearanceComponent } from '../components/grid-base-appearance/
   styleUrls: ['./normal.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class NormalComponent extends GridBaseAppearanceComponent {
+export class NormalComponent extends GridBaseAppearanceDirective {
 
   @HostBinding('class') classes = 'grid-item';
 

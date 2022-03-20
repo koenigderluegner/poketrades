@@ -21,7 +21,7 @@ export class OverviewComponent {
               private db: DatabaseFacadeService,
               private gridService: GridService) {
     this.gridService.updateHideAppearanceControl(true);
-    this.gridService.updateHideInactiveItemsControl(true);
+    this.gridService.updateHideOwnedStatusControl(true);
     this.data$ = combineLatest([
       this.db.getBreedableLegality(),
       this.facade.getCurrentSpreadsheet$()

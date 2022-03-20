@@ -3,7 +3,7 @@ import { DatabaseFacadeService } from '../../database/database-facade.service';
 import { forkJoin, Observable, of } from 'rxjs';
 import { PokemonEntry } from '../../database/models/pokemon-entry.interface';
 import { Move } from '../../database/models/move.interface';
-import { GridBaseAppearanceComponent } from '../components/grid-base-appearance/grid-base-appearance.component';
+import { GridBaseAppearanceDirective } from '../components/grid-base-appearance.directive';
 
 @Component({
   selector: 'app-detailed',
@@ -11,7 +11,7 @@ import { GridBaseAppearanceComponent } from '../components/grid-base-appearance/
   styleUrls: ['./detailed.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class DetailedComponent extends GridBaseAppearanceComponent implements OnInit, OnChanges {
+export class DetailedComponent extends GridBaseAppearanceDirective implements OnInit, OnChanges {
 
   @HostBinding('class.grid-item') isGridItem = true;
   isEggMove$: Observable<boolean[]> | undefined;

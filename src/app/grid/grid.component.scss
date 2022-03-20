@@ -34,4 +34,12 @@ $categories: 'uncategorized',
       }
     }
   }
+
+  &.owned:not(.unowned) .grid-item.inactive {
+    display: none;
+  }
+
+  &.unowned:not(.owned) .grid-item:not(.inactive) {
+    display: none;
+  }
 }

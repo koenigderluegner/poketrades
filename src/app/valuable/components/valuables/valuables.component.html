@@ -1,7 +1,7 @@
 <ng-container *ngxAlias="gridAppearance$ | async as gridAppearance">
-    <app-grid *ngIf="worksheet" [appearance]="gridAppearance">
-      <ng-container *ngFor="let entry of worksheet?.data; trackBy: trackBy">
-        <app-grid-item [pokemon]="entry | castValuable"></app-grid-item>
-      </ng-container>
-    </app-grid>
+  <app-grid *ngIf="worksheet" [appearance]="gridAppearance">
+    <ng-container *ngFor="let entry of worksheet?.data; trackBy: trackBy">
+      <app-grid-item [pokemon]="entry | castValuable"></app-grid-item>
+    </ng-container>
+  </app-grid>
 </ng-container>

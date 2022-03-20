@@ -1,12 +1,9 @@
-import { Component, HostBinding, Input } from '@angular/core';
+import { Directive, HostBinding, Input } from '@angular/core';
 import { Pokemon } from '@shared/interfaces/pokemon';
 import { categoriesOf } from '@shared/functions/pokemon-categories.function';
 
-@Component({
-  selector: '',
-  template: ''
-})
-export abstract class GridBaseAppearanceComponent {
+@Directive()
+export abstract class GridBaseAppearanceDirective {
 
   @Input() pokemon: Pokemon | undefined;
 

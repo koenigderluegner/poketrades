@@ -4,8 +4,6 @@ import { Spreadsheet } from '@spreadsheet/models/spreadsheet';
 import { FormControl } from '@angular/forms';
 import { Worksheet } from '@spreadsheet/models/worksheet';
 import { SpreadsheetFacade } from '@spreadsheet/spreadsheet.facade';
-import { GridService } from '../../../grid/services/grid.service';
-import { GridAppearanceType } from '../../../grid/grid-appearance.type';
 
 @Component({
   selector: 'app-index',
@@ -32,12 +30,9 @@ export class IndexComponent implements OnInit {
     rngs: 'teachy-tv'
   };
 
-  constructor(
-    private spreadsheetFacade: SpreadsheetFacade,
-    private gridService: GridService
-  ) {
+  constructor(private readonly _spreadsheetFacade: SpreadsheetFacade) {
     this.toggleInactivesControl = new FormControl(false);
-    this.spreadsheetData$ = this.spreadsheetFacade.getCurrentSpreadsheet$();
+    this.spreadsheetData$ = this._spreadsheetFacade.getCurrentSpreadsheet$();
   }
 
   ngOnInit(): void {
@@ -50,20 +45,12 @@ export class IndexComponent implements OnInit {
     });
   }
 
-  changeGrid(appearance: GridAppearanceType): void {
-    this.gridService.updateGridAppearance(appearance);
-  }
-
   getItemMapping(subType?: string): string {
     if (subType) {
       return this.subTypeItemMap[subType.toLocaleLowerCase()] ?? '';
     } else {
       return '';
     }
-  }
-
-  changeGridInactives(): void {
-    this.gridService.updateHideItems(this.toggleInactivesControl.value);
   }
 
 }

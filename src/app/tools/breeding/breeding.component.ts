@@ -39,7 +39,7 @@ export class BreedingComponent {
   constructor(private database: DatabaseFacadeService,
               private spreadsheetFacade: SpreadsheetFacade,
               private gridService: GridService) {
-    this.gridService.updateHideInactiveItemsControl(true);
+    this.gridService.updateHideOwnedStatusControl(true);
     this.gridService.updateHideAppearanceControl(true);
     this.placeHolderPokemon = {
       id: '',

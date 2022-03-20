@@ -1,5 +1,5 @@
 import { Component, HostBinding, ViewEncapsulation } from '@angular/core';
-import { GridBaseAppearanceComponent } from '../components/grid-base-appearance/grid-base-appearance.component';
+import { GridBaseAppearanceDirective } from '../components/grid-base-appearance.directive';
 
 @Component({
   selector: 'app-minimal[pokemon]',
@@ -7,7 +7,7 @@ import { GridBaseAppearanceComponent } from '../components/grid-base-appearance/
   styleUrls: ['./minimal.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class MinimalComponent extends GridBaseAppearanceComponent {
+export class MinimalComponent extends GridBaseAppearanceDirective {
 
   @HostBinding('class.grid-item') isGridItem = true;
 

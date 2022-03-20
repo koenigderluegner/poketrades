@@ -27,6 +27,7 @@ export class GridComponent implements AfterContentInit, OnDestroy {
   @Input() @HostBinding('class.hide-inactives') hideInactiveItems = false;
 
   private _categories: string[] = []
+  private _ownedStatus: string[] = []
 
   @HostBinding('class') get getClasses(): string[] {
     const classes: string[] = [];
@@ -36,6 +37,7 @@ export class GridComponent implements AfterContentInit, OnDestroy {
       classes.push('filtered');
     }
     classes.push(...this._categories);
+    classes.push(...this._ownedStatus);
     return classes;
   }
 
@@ -67,35 +69,35 @@ export class GridComponent implements AfterContentInit, OnDestroy {
       return (data.pokemon?.name ?? '').toLowerCase().includes(filter);
     };
 
-    this.subscriptions.push(this.gridService.getFilter$().subscribe(
-      {
-        next: filter => {
-          this.dataSource.filter = filter;
-        }
-      })
-    );
-
-
-    this.subscriptions.push(this.gridService.getSorting$().subscribe(
-      {
-        next: sorting => {
-          // reset if none set
-          if (sorting === undefined) {
-            sorting = {id: '', start: 'asc', disableClear: false};
-          }
-          this.sort(sorting);
-        }
+    this.subscriptions.push(this.gridService.getFilter$().subscribe({
+      next: filter => {
+        this.dataSource.filter = filter;
       }
-    ));
+    }));
 
 
-    this.subscriptions.push(this.gridService.getCategories$().subscribe(
-      {
-        next: categories => {
-          this._categories = categories
+    this.subscriptions.push(this.gridService.getSorting$().subscribe({
+      next: sorting => {
+        // reset if none set
+        if (sorting === undefined) {
+          sorting = {id: '', start: 'asc', disableClear: false};
         }
-      })
-    );
+        this.sort(sorting);
+      }
+    }));
+
+
+    this.subscriptions.push(this.gridService.getCategories$().subscribe({
+      next: categories => {
+        this._categories = categories
+      }
+    }));
+
+    this.subscriptions.push(this.gridService.getOwnedStatus$().subscribe({
+      next: ownedStatus => {
+        this._ownedStatus = ownedStatus
+      }
+    }));
 
 
   }

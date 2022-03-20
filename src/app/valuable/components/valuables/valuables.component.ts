@@ -22,7 +22,6 @@ export class ValuablesComponent implements OnInit {
 
   subscriptions: Subscription[] = [];
   gridAppearance$: Observable<GridAppearanceType>;
-  hideItems$: Observable<boolean>;
 
   constructor(
     private spreadsheetFacade: SpreadsheetFacade,
@@ -30,10 +29,9 @@ export class ValuablesComponent implements OnInit {
     private slugifyPipe: SlugifyPipe,
     private gridService: GridService
   ) {
-    this.gridService.updateHideInactiveItemsControl(true);
+    this.gridService.updateHideOwnedStatusControl(true);
     this.gridService.updateHideAppearanceControl(false);
     this.gridAppearance$ = this.gridService.getGridAppearance$();
-    this.hideItems$ = this.gridService.getHideItems$();
   }
 
   ngOnInit(): void {

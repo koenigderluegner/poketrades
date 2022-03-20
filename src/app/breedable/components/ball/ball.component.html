@@ -1,9 +1,7 @@
 <ng-container *ngxAlias="gridAppearance$ | async as gridAppearance">
-  <ng-container *ngxAlias="hideItems$ | async as hideItems">
-    <app-grid *ngIf="worksheet" [appearance]="gridAppearance" [hideInactiveItems]="!!hideItems">
-      <ng-container *ngFor="let entry of worksheet?.data; trackBy: trackBy">
-        <app-grid-item [pokemon]="entry | castBreedable"></app-grid-item>
-      </ng-container>
-    </app-grid>
-  </ng-container>
+  <app-grid *ngIf="worksheet" [appearance]="gridAppearance">
+    <ng-container *ngFor="let entry of worksheet?.data; trackBy: trackBy">
+      <app-grid-item [pokemon]="entry | castBreedable"></app-grid-item>
+    </ng-container>
+  </app-grid>
 </ng-container>
