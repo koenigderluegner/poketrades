@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.5.0 - TBD
+
+### Added
+- Filter for pokemon categories like legendary or fossil
+
+### Changed
+- Fixed Diancie-Mega bankable flag being true
+- Fixed detail appearance of grid showing empty moves
+
+
 ## 0.4.2 - 2022-03-19
 ### Changed
 - Updated NPM-Packages
