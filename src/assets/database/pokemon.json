@@ -20012,7 +20012,7 @@
     ],
     "hiddenAbility": null,
     "canBeShiny": true,
-    "canBeBanked": true,
+    "canBeBanked": false,
     "iconSlug": "diancie-mega",
     "gen8Appearance": "unknown",
     "femaleRatio": null
