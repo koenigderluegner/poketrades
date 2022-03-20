@@ -1,6 +1,106 @@
 import { Pokemon } from '@shared/interfaces/pokemon';
 import { PokemonCategory } from '@shared/enums/pokemon-category.enum';
 
+const starterDexNumbers: string[] = [
+  '001', // Bulbasaur
+  '002', // Ivysaur
+  '003', // Venusaur
+  '004', // Charmander
+  '005', // Charmeleon
+  '006', // Charizard
+  '007', // Squirtle
+  '008', // Wartortle
+  '009', // Blastoise
+  '152', // Chikorita
+  '153', // Bayleef
+  '154', // Meganium
+  '155', // Cyndaquil
+  '156', // Quilava
+  '157', // Typhlosion
+  '158', // Totodile
+  '159', // Croconaw
+  '160', // Feraligatr
+  '252', // Treecko
+  '253', // Grovyle
+  '254', // Sceptile
+  '255', // Torchic
+  '256', // Combusken
+  '257', // Blaziken
+  '258', // Mudkip
+  '259', // Marshtomp
+  '260', // Swampert
+  '387', // Turtwig
+  '388', // Grotle
+  '389', // Torterra
+  '390', // Chimchar
+  '391', // Monferno
+  '392', // Infernape
+  '393', // Piplup
+  '394', // Prinplup
+  '395', // Empoleon
+  '495', // Snivy
+  '496', // Servine
+  '497', // Serperior
+  '498', // Tepig
+  '499', // Pignite
+  '500', // Emboar
+  '501', // Oshawott
+  '502', // Dewott
+  '503', // Samurott
+  '650', // Chespin
+  '651', // Quilladin
+  '652', // Chesnaught
+  '722', // Rowlet
+  '723', // Datrix
+  '724', // Decidueye
+  '725', // Litten
+  '726', // Torracat
+  '727', // Incineroar
+  '728', // Popplio
+  '729', // Brionne
+  '730', // Primarina
+  '810', // Grookey
+  '811', // Thwackey
+  '812', // Rillaboom
+  '813', // Scorbunny
+  '814', // Raboot
+  '815', // Cinderace
+  '816', // Sobble
+  '817', // Drizzile
+  '818', // Inteleon
+]
+
+
+const pseudoLegendaryDexNumbers: string[] = [
+  '147', // Dratini
+  '148', // Dragonair
+  '149', // Dragonite
+  '246', // Larvitar
+  '247', // Pupitar
+  '248', // Tyranitar
+  '371', // Bagon
+  '372', // Shelgon
+  '373', // Salamence
+  '374', // Beldum
+  '375', // Metang
+  '376', // Metagross
+  '443', // Gible
+  '444', // Gabite
+  '445', // Garchomp
+  '633', // Deino
+  '634', // Zweilos
+  '635', // Hydreigon
+  '704', // Goomy
+  '705', // Sliggoo
+  '706', // Goodra
+  '782', // Jangmo-o
+  '783', // Hakamo-o
+  '784', // Kommo-o
+  '885', // Dreepy
+  '886', // Drakloak
+  '887', // Dragapult
+];
+
 const fossilDexNumbers: string[] = [
   '138', // Omanyte
   '139', // Omastar
@@ -204,6 +304,10 @@ export function categoriesOf(pokemon: Pokemon | undefined | null): string[] {
     categories.add(PokemonCategory.SUB_LEGENDARY);
   } else if (subLegendaryDexNumbers.includes(pokemon.dex)) {
     categories.add(PokemonCategory.SUB_LEGENDARY);
+  } else if (starterDexNumbers.includes(pokemon.dex)) {
+    categories.add(PokemonCategory.STARTER);
+  } else if (pseudoLegendaryDexNumbers.includes(pokemon.dex)) {
+    categories.add(PokemonCategory.PSEUDO_LEGENDARY);
   }
 
   if (categories.size === 0) {

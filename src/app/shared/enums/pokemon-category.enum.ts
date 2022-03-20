@@ -1,5 +1,7 @@
 export enum PokemonCategory {
   UNCATEGORIZED = 'uncategorized',
+  STARTER = 'starter',
+  PSEUDO_LEGENDARY = 'pseudo-legendary',
   ULTRA_BEAST = 'ultra-beast',
   SUB_LEGENDARY = 'sub-legendary',
   LEGENDARY = 'legendary',
