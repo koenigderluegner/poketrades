@@ -1,9 +1,9 @@
-import {Component, HostBinding, Input, OnChanges, OnInit, SimpleChanges, ViewEncapsulation} from '@angular/core';
-import {Pokemon} from '@shared/interfaces/pokemon';
-import {DatabaseFacadeService} from '../../database/database-facade.service';
-import {forkJoin, Observable, of} from 'rxjs';
-import {PokemonEntry} from '../../database/models/pokemon-entry.interface';
-import {Move} from '../../database/models/move.interface';
+import { Component, HostBinding, OnChanges, OnInit, SimpleChanges, ViewEncapsulation } from '@angular/core';
+import { DatabaseFacadeService } from '../../database/database-facade.service';
+import { forkJoin, Observable, of } from 'rxjs';
+import { PokemonEntry } from '../../database/models/pokemon-entry.interface';
+import { Move } from '../../database/models/move.interface';
+import { GridBaseAppearanceComponent } from '../components/grid-base-appearance/grid-base-appearance.component';
 
 @Component({
   selector: 'app-detailed',
@@ -11,7 +11,7 @@ import {Move} from '../../database/models/move.interface';
   styleUrls: ['./detailed.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class DetailedComponent implements OnInit, OnChanges {
+export class DetailedComponent extends GridBaseAppearanceComponent implements OnInit, OnChanges {
 
   @HostBinding('class.grid-item') isGridItem = true;
   isEggMove$: Observable<boolean[]> | undefined;
@@ -21,11 +21,11 @@ export class DetailedComponent implements OnInit, OnChanges {
     return !this.pokemon?.isOwned;
   }
 
-  @Input() pokemon: Pokemon | undefined;
   dbpokemon$: Observable<PokemonEntry> | undefined;
   moves$: Observable<Move[]> | undefined;
 
   constructor(private databaseFacadeService: DatabaseFacadeService) {
+    super();
   }
 
   ngOnInit(): void {

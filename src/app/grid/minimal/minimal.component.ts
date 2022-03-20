@@ -1,5 +1,5 @@
-import { Component, HostBinding, Input, ViewEncapsulation } from '@angular/core';
-import { Pokemon } from '@shared/interfaces/pokemon';
+import { Component, HostBinding, ViewEncapsulation } from '@angular/core';
+import { GridBaseAppearanceComponent } from '../components/grid-base-appearance/grid-base-appearance.component';
 
 @Component({
   selector: 'app-minimal[pokemon]',
@@ -7,7 +7,7 @@ import { Pokemon } from '@shared/interfaces/pokemon';
   styleUrls: ['./minimal.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class MinimalComponent {
+export class MinimalComponent extends GridBaseAppearanceComponent {
 
   @HostBinding('class.grid-item') isGridItem = true;
 
@@ -15,6 +15,5 @@ export class MinimalComponent {
     return !this.pokemon?.isOwned;
   }
 
-  @Input() pokemon: Pokemon | undefined;
 
 }
