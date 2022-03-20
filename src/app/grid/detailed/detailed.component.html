@@ -75,11 +75,13 @@
 
     <div class="detailed-moves" *ngIf="moves$ | async as moves">
       <ng-container *ngIf="isEggMove$ | async as isEggMove">
-        <app-detailed-move *ngFor="let move of pokemon.moves; let i = index"
+        <ng-container *ngFor="let move of pokemon.moves; let i = index">
+        <app-detailed-move *ngIf="move"
                            [isEggMove]="isEggMove[i]" [move]="move"
                            [type]="(moves[i]?.type ? moves[i].type : 'unknown')">
 
         </app-detailed-move>
+        </ng-container>
       </ng-container>
     </div>
   </ng-container>
