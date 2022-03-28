@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.5.1 - 2022-03-28
+
+### Changed
+- Updated dependencies
+
 ## 0.5.0 - 2022-03-20
 
 ### Added
