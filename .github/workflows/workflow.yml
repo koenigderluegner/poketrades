@@ -36,5 +36,5 @@ jobs:
       - name: Test
         run: npm test -- --watch=false --progress false --code-coverage --browsers=ChromeHeadless
       - name: Build
-        run: npm run build -- --prod
+        run: npm run build
 
