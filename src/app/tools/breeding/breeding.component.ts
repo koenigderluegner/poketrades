@@ -1,16 +1,16 @@
-import {Component, HostBinding, ViewEncapsulation} from '@angular/core';
-import {FormControl} from '@angular/forms';
-import {DatabaseFacadeService} from '../../database/database-facade.service';
-import {forkJoin, Observable} from 'rxjs';
-import {map, mergeMap, startWith, tap} from 'rxjs/operators';
-import {MatAutocompleteSelectedEvent} from '@angular/material/autocomplete';
-import {LegalityEntry} from '../../database/models/legality-entry.interface';
-import {PokemonEntry} from '../../database/models/pokemon-entry.interface';
-import {LevelUpMove} from '../../database/models/level-up-move.interface';
-import {Pokemon} from '@shared/interfaces/pokemon';
-import {SpreadsheetFacade} from '@spreadsheet/spreadsheet.facade';
-import {Worksheet} from '@spreadsheet/models/worksheet';
-import {GridService} from '../../grid/services/grid.service';
+import { Component, HostBinding, ViewEncapsulation } from '@angular/core';
+import { FormControl } from '@angular/forms';
+import { DatabaseFacadeService } from '../../database/database-facade.service';
+import { forkJoin, Observable } from 'rxjs';
+import { map, mergeMap, startWith, tap } from 'rxjs/operators';
+import { MatAutocompleteSelectedEvent } from '@angular/material/autocomplete';
+import { LegalityEntry } from '../../database/models/legality-entry.interface';
+import { PokemonEntry } from '../../database/models/pokemon-entry.interface';
+import { LevelUpMove } from '../../database/models/level-up-move.interface';
+import { Pokemon } from '@shared/interfaces/pokemon';
+import { SpreadsheetFacade } from '@spreadsheet/spreadsheet.facade';
+import { Worksheet } from '@spreadsheet/models/worksheet';
+import { GridService } from '../../grid/services/grid.service';
 import { Breedable } from '@shared/interfaces/breedable.interface';
 
 @Component({
@@ -21,9 +21,9 @@ import { Breedable } from '@shared/interfaces/breedable.interface';
 })
 export class BreedingComponent {
 
-  @HostBinding('class.breeding-view') setClass = true;
+  @HostBinding('class.breeding-view') private _isBreedingView = true;
 
-  control: FormControl;
+  searchControl: FormControl<string | LegalityEntry>;
   breedables$: Observable<LegalityEntry[]>;
   private breedables: LegalityEntry[] | undefined;
   filteredPokemon: Observable<LegalityEntry[]>;
@@ -53,7 +53,7 @@ export class BreedingComponent {
       moves: []
     };
     this.parentMoves = null;
-    this.control = new FormControl('');
+    this.searchControl = new FormControl<string | LegalityEntry>('', {nonNullable: true});
     this.breedables$ = this.database.getBreedableLegality().pipe(
       tap(pokemon => {
         this.breedables = pokemon;
@@ -69,13 +69,13 @@ export class BreedingComponent {
     });
 
 
-    this.filteredPokemon = this.control.valueChanges.pipe(
+    this.filteredPokemon = this.searchControl.valueChanges.pipe(
       startWith(''),
       map(value => this._filter(value))
     );
   }
 
-  private _filter(value: string): LegalityEntry[] {
+  private _filter(value: string | LegalityEntry): LegalityEntry[] {
     const filterValue = this._normalizeValue(value);
     return this.breedables?.filter(
       (legalityEntry: LegalityEntry) => this._normalizeValue(legalityEntry.pokemon).includes(filterValue)

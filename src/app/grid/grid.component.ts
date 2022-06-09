@@ -14,6 +14,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { MatSort, MatSortable } from '@angular/material/sort';
 import { Subscription } from 'rxjs';
 import { GridService } from './services/grid.service';
+import { OwnedStatus } from "./types/owned-status.type";
 
 @Component({
   selector: 'app-grid',
@@ -26,8 +27,8 @@ export class GridComponent implements AfterContentInit, OnDestroy {
   @HostBinding('class.grid') isGrid = true;
   @Input() @HostBinding('class.hide-inactives') hideInactiveItems = false;
 
-  private _categories: string[] = []
-  private _ownedStatus: string[] = []
+  private _categories: string[] = [];
+  private _ownedStatus: OwnedStatus[] = [];
 
   @HostBinding('class') get getClasses(): string[] {
     const classes: string[] = [];
@@ -89,13 +90,13 @@ export class GridComponent implements AfterContentInit, OnDestroy {
 
     this.subscriptions.push(this.gridService.getCategories$().subscribe({
       next: categories => {
-        this._categories = categories
+        this._categories = categories;
       }
     }));
 
     this.subscriptions.push(this.gridService.getOwnedStatus$().subscribe({
       next: ownedStatus => {
-        this._ownedStatus = ownedStatus
+        this._ownedStatus = ownedStatus;
       }
     }));
 

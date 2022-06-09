@@ -6,6 +6,10 @@ import { SpreadsheetFacade } from '@spreadsheet/spreadsheet.facade';
 import { SearchHistoryEntry } from '../models/search-history-entry.interface';
 import { environment } from '../../../environments/environment';
 
+interface SearchGroup {
+  search: FormControl<string>;
+}
+
 @Component({
   selector: 'app-index',
   templateUrl: './index.component.html',
@@ -16,7 +20,7 @@ export class IndexComponent {
 
   @HostBinding('class') classes = 'view spreadsheet-changer-view';
 
-  searchForm: FormGroup;
+  searchForm: FormGroup<SearchGroup>;
   hasRequested = false;
 
   apiKey = environment.googleApiKey;
@@ -28,7 +32,7 @@ export class IndexComponent {
 
   constructor(private spreadsheetFacade: SpreadsheetFacade) {
     this.searchForm = new FormGroup({
-      search: new FormControl('')
+      search: new FormControl('', {nonNullable: true})
     });
     this.isLoading$ = this.spreadsheetFacade.isLoading$();
     this.spreadsheetHistory$ = this.spreadsheetFacade.getSpreadsheetHistory$();

@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.6.0 - 2021-03-03
+### Changed
+- Updated dependencies including major update for Angular (from 13 to 14)
+- Minor code clean up
+
+
 ## 0.5.1 - 2022-03-28
 
 ### Changed
