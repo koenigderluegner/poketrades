@@ -3,8 +3,9 @@ import { BehaviorSubject, Observable } from 'rxjs';
 import { GridAppearanceType } from '../grid-appearance.type';
 import { MatSortable } from '@angular/material/sort';
 import { PokemonCategory } from '@shared/enums/pokemon-category.enum';
-import { UntypedFormControl } from '@angular/forms';
+import { FormControl } from '@angular/forms';
 import { startWith, tap } from 'rxjs/operators';
+import { OwnedStatus } from "../types/owned-status.type";
 
 @Injectable({
   providedIn: 'root'
@@ -20,16 +21,16 @@ export class GridService {
   hideFilterControl: BehaviorSubject<boolean>;
   hideOwnedStatusControl: BehaviorSubject<boolean>;
 
-  private readonly _ownedStatusControl: UntypedFormControl
+  private readonly _ownedStatusControl: FormControl<OwnedStatus[]>;
 
   constructor() {
     let gridAppearanceType = localStorage.getItem('gridAppearanceType');
-    const ownedStatus: string[] = JSON.parse(localStorage.getItem('ownedStatus') ?? '[]');
+    const ownedStatus: OwnedStatus[] = JSON.parse(localStorage.getItem('ownedStatus') ?? '[]');
     gridAppearanceType = gridAppearanceType !== 'detailed' && gridAppearanceType !== 'normal' ? 'minimal' : gridAppearanceType;
 
     this.gridAppearance = new BehaviorSubject<GridAppearanceType>(gridAppearanceType as GridAppearanceType);
 
-    this._ownedStatusControl = new UntypedFormControl(ownedStatus);
+    this._ownedStatusControl = new FormControl<OwnedStatus[]>(ownedStatus, {nonNullable: true});
 
     this.filter = new BehaviorSubject<string>('');
     this.sorting = new BehaviorSubject<MatSortable>({id: '', disableClear: false, start: 'asc'});
@@ -73,18 +74,18 @@ export class GridService {
     this.categories.next(categories);
   }
 
-  getOwnedStatusControl(): UntypedFormControl {
+  getOwnedStatusControl(): FormControl<OwnedStatus[]> {
     return this._ownedStatusControl;
   }
 
-  getOwnedStatus$(): Observable<string[]> {
+  getOwnedStatus$(): Observable<OwnedStatus[]> {
     return this._ownedStatusControl.valueChanges.pipe(
       startWith(this._ownedStatusControl.value),
       tap(value => localStorage.setItem('ownedStatus', JSON.stringify(value)))
     );
   }
 
-  updateOwnedStatus(ownedStatus: string[]): void {
+  updateOwnedStatus(ownedStatus: OwnedStatus[]): void {
     return this._ownedStatusControl.setValue(ownedStatus, {emitEvent: true});
   }
 

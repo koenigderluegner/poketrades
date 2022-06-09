@@ -1,7 +1,6 @@
 import { Component, HostBinding, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Spreadsheet } from '@spreadsheet/models/spreadsheet';
-import { UntypedFormControl } from '@angular/forms';
 import { Worksheet } from '@spreadsheet/models/worksheet';
 import { SpreadsheetFacade } from '@spreadsheet/spreadsheet.facade';
 
@@ -13,16 +12,14 @@ import { SpreadsheetFacade } from '@spreadsheet/spreadsheet.facade';
 export class IndexComponent implements OnInit {
 
 
-  @HostBinding('class.view') isView = true;
+  @HostBinding('class.view') private _isView = true;
 
   spreadsheetData$: Observable<Spreadsheet>;
-
-  toggleInactivesControl: UntypedFormControl;
 
   spreadsheetId: string | undefined;
   worksheets: Worksheet[] | undefined;
 
-  subTypeItemMap: { [key: string]: string } = {
+  subTypeItemMap: Record<string, string> = {
     events: 'cherish',
     legendaries: 'master',
     shinies: 'shiny-charm',
@@ -31,7 +28,6 @@ export class IndexComponent implements OnInit {
   };
 
   constructor(private readonly _spreadsheetFacade: SpreadsheetFacade) {
-    this.toggleInactivesControl = new UntypedFormControl(false);
     this.spreadsheetData$ = this._spreadsheetFacade.getCurrentSpreadsheet$();
   }
 

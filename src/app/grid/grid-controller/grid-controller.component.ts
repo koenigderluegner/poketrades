@@ -1,11 +1,13 @@
 import { Component, HostBinding, OnDestroy, ViewEncapsulation } from '@angular/core';
 import { GridAppearanceType } from '../grid-appearance.type';
-import { UntypedFormControl } from '@angular/forms';
+import { FormControl } from '@angular/forms';
 import { GridService } from '../services/grid.service';
 import { Observable, Subscription } from 'rxjs';
 import { debounceTime, distinctUntilChanged, tap } from 'rxjs/operators';
 import { PokemonCategory } from '@shared/enums/pokemon-category.enum';
 import { MatOption } from '@angular/material/core';
+import { OwnedStatus } from "../types/owned-status.type";
+import { MatSortable } from "@angular/material/sort";
 
 @Component({
   selector: 'app-grid-controller',
@@ -21,12 +23,12 @@ export class GridControllerComponent implements OnDestroy {
 
   pokemonCategory = PokemonCategory;
 
-  ownedStatusControl: UntypedFormControl;
+  ownedStatusControl: FormControl<OwnedStatus[]>;
   hideAppearance$: Observable<boolean>;
   hideOwnedStatusControl$: Observable<boolean>;
-  filter: UntypedFormControl;
-  sorting: UntypedFormControl;
-  categories: UntypedFormControl;
+  filter: FormControl<string>;
+  sorting: FormControl<MatSortable>;
+  categories: FormControl<PokemonCategory[]>;
 
 
   constructor(private gridService: GridService) {
@@ -34,9 +36,9 @@ export class GridControllerComponent implements OnDestroy {
     this.hideAppearance$ = this.gridService.getHideAppearanceControl$();
     this.hideOwnedStatusControl$ = this.gridService.getHideOwnedStatusControl$();
 
-    this.filter = new UntypedFormControl('');
-    this.categories = new UntypedFormControl([]);
-    this.sorting = new UntypedFormControl(null);
+    this.filter = new FormControl('', {nonNullable: true});
+    this.categories = new FormControl<PokemonCategory[]>([], {nonNullable: true});
+    this.sorting = new FormControl({id: '', disableClear: false, start: 'asc'}, {nonNullable: true});
     this.subscriptions.push(
       this.filter.valueChanges.pipe(
         debounceTime(150),

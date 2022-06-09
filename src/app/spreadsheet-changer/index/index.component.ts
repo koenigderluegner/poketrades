@@ -1,10 +1,14 @@
 import { Component, HostBinding, ViewEncapsulation } from '@angular/core';
-import { UntypedFormControl, UntypedFormGroup } from '@angular/forms';
+import { FormControl, FormGroup } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { Spreadsheet } from '@spreadsheet/models/spreadsheet';
 import { SpreadsheetFacade } from '@spreadsheet/spreadsheet.facade';
 import { SearchHistoryEntry } from '../models/search-history-entry.interface';
 import { environment } from '../../../environments/environment';
+
+interface SearchGroup {
+  search: FormControl<string>;
+}
 
 @Component({
   selector: 'app-index',
@@ -16,7 +20,7 @@ export class IndexComponent {
 
   @HostBinding('class') classes = 'view spreadsheet-changer-view';
 
-  searchForm: UntypedFormGroup;
+  searchForm: FormGroup<SearchGroup>;
   hasRequested = false;
 
   apiKey = environment.googleApiKey;
@@ -27,8 +31,8 @@ export class IndexComponent {
   spreadsheetHistory$: Observable<SearchHistoryEntry[]>;
 
   constructor(private spreadsheetFacade: SpreadsheetFacade) {
-    this.searchForm = new UntypedFormGroup({
-      search: new UntypedFormControl('')
+    this.searchForm = new FormGroup({
+      search: new FormControl('', {nonNullable: true})
     });
     this.isLoading$ = this.spreadsheetFacade.isLoading$();
     this.spreadsheetHistory$ = this.spreadsheetFacade.getSpreadsheetHistory$();
