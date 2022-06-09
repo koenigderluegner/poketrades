@@ -3,7 +3,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 import { GridAppearanceType } from '../grid-appearance.type';
 import { MatSortable } from '@angular/material/sort';
 import { PokemonCategory } from '@shared/enums/pokemon-category.enum';
-import { FormControl } from '@angular/forms';
+import { UntypedFormControl } from '@angular/forms';
 import { startWith, tap } from 'rxjs/operators';
 
 @Injectable({
@@ -20,7 +20,7 @@ export class GridService {
   hideFilterControl: BehaviorSubject<boolean>;
   hideOwnedStatusControl: BehaviorSubject<boolean>;
 
-  private readonly _ownedStatusControl: FormControl
+  private readonly _ownedStatusControl: UntypedFormControl
 
   constructor() {
     let gridAppearanceType = localStorage.getItem('gridAppearanceType');
@@ -29,7 +29,7 @@ export class GridService {
 
     this.gridAppearance = new BehaviorSubject<GridAppearanceType>(gridAppearanceType as GridAppearanceType);
 
-    this._ownedStatusControl = new FormControl(ownedStatus);
+    this._ownedStatusControl = new UntypedFormControl(ownedStatus);
 
     this.filter = new BehaviorSubject<string>('');
     this.sorting = new BehaviorSubject<MatSortable>({id: '', disableClear: false, start: 'asc'});
@@ -73,7 +73,7 @@ export class GridService {
     this.categories.next(categories);
   }
 
-  getOwnedStatusControl(): FormControl {
+  getOwnedStatusControl(): UntypedFormControl {
     return this._ownedStatusControl;
   }
 

@@ -1,5 +1,5 @@
 import {Component, HostBinding, ViewEncapsulation} from '@angular/core';
-import {FormControl} from '@angular/forms';
+import {UntypedFormControl} from '@angular/forms';
 import {DatabaseFacadeService} from '../../database/database-facade.service';
 import {forkJoin, Observable} from 'rxjs';
 import {map, mergeMap, startWith, tap} from 'rxjs/operators';
@@ -23,7 +23,7 @@ export class BreedingComponent {
 
   @HostBinding('class.breeding-view') setClass = true;
 
-  control: FormControl;
+  control: UntypedFormControl;
   breedables$: Observable<LegalityEntry[]>;
   private breedables: LegalityEntry[] | undefined;
   filteredPokemon: Observable<LegalityEntry[]>;
@@ -53,7 +53,7 @@ export class BreedingComponent {
       moves: []
     };
     this.parentMoves = null;
-    this.control = new FormControl('');
+    this.control = new UntypedFormControl('');
     this.breedables$ = this.database.getBreedableLegality().pipe(
       tap(pokemon => {
         this.breedables = pokemon;

@@ -1,6 +1,6 @@
 import { Component, HostBinding, OnDestroy, ViewEncapsulation } from '@angular/core';
 import { GridAppearanceType } from '../grid-appearance.type';
-import { FormControl } from '@angular/forms';
+import { UntypedFormControl } from '@angular/forms';
 import { GridService } from '../services/grid.service';
 import { Observable, Subscription } from 'rxjs';
 import { debounceTime, distinctUntilChanged, tap } from 'rxjs/operators';
@@ -21,12 +21,12 @@ export class GridControllerComponent implements OnDestroy {
 
   pokemonCategory = PokemonCategory;
 
-  ownedStatusControl: FormControl;
+  ownedStatusControl: UntypedFormControl;
   hideAppearance$: Observable<boolean>;
   hideOwnedStatusControl$: Observable<boolean>;
-  filter: FormControl;
-  sorting: FormControl;
-  categories: FormControl;
+  filter: UntypedFormControl;
+  sorting: UntypedFormControl;
+  categories: UntypedFormControl;
 
 
   constructor(private gridService: GridService) {
@@ -34,9 +34,9 @@ export class GridControllerComponent implements OnDestroy {
     this.hideAppearance$ = this.gridService.getHideAppearanceControl$();
     this.hideOwnedStatusControl$ = this.gridService.getHideOwnedStatusControl$();
 
-    this.filter = new FormControl('');
-    this.categories = new FormControl([]);
-    this.sorting = new FormControl(null);
+    this.filter = new UntypedFormControl('');
+    this.categories = new UntypedFormControl([]);
+    this.sorting = new UntypedFormControl(null);
     this.subscriptions.push(
       this.filter.valueChanges.pipe(
         debounceTime(150),

@@ -1,7 +1,7 @@
 import { Component, HostBinding, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Spreadsheet } from '@spreadsheet/models/spreadsheet';
-import { FormControl } from '@angular/forms';
+import { UntypedFormControl } from '@angular/forms';
 import { Worksheet } from '@spreadsheet/models/worksheet';
 import { SpreadsheetFacade } from '@spreadsheet/spreadsheet.facade';
 
@@ -17,7 +17,7 @@ export class IndexComponent implements OnInit {
 
   spreadsheetData$: Observable<Spreadsheet>;
 
-  toggleInactivesControl: FormControl;
+  toggleInactivesControl: UntypedFormControl;
 
   spreadsheetId: string | undefined;
   worksheets: Worksheet[] | undefined;
@@ -31,7 +31,7 @@ export class IndexComponent implements OnInit {
   };
 
   constructor(private readonly _spreadsheetFacade: SpreadsheetFacade) {
-    this.toggleInactivesControl = new FormControl(false);
+    this.toggleInactivesControl = new UntypedFormControl(false);
     this.spreadsheetData$ = this._spreadsheetFacade.getCurrentSpreadsheet$();
   }
 
