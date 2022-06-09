@@ -1,6 +1,12 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { GridControllerComponent } from './grid-controller.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { ReactiveFormsModule } from '@angular/forms';
+import { NgxAliasModule } from '@tngtech/ngx-structurals';
+import { ChangerComponent } from '../changer/changer.component';
 
 describe('GridControllerComponent', () => {
   let component: GridControllerComponent;
@@ -8,9 +14,10 @@ describe('GridControllerComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ GridControllerComponent ]
+      imports: [MatFormFieldModule, MatSelectModule, NoopAnimationsModule, ReactiveFormsModule, NgxAliasModule],
+      declarations: [GridControllerComponent, ChangerComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
