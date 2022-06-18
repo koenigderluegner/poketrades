@@ -82,7 +82,7 @@ export class SpreadsheetService {
         const worksheets: Worksheet[] = [];
 
         for (const values of configs.valueRanges) {
-          const confIndex = values.values[0]?.indexOf('config') ?? -1;
+          const confIndex = values.values?.[0]?.indexOf('config') ?? -1;
 
           // skip if no config was found
           if (confIndex === -1) {

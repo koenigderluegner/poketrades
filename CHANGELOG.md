@@ -1,10 +1,13 @@
 # Changelog
 
-## 0.6.0 - 2021-03-03
+## 0.6.1 - 2021-06-18
+### Changed
+- Fixed crash when trying to read sheets with missing config
+
+## 0.6.0 - 2022-06-09
 ### Changed
 - Updated dependencies including major update for Angular (from 13 to 14)
 - Minor code clean up
-
 
 ## 0.5.1 - 2022-03-28
 
