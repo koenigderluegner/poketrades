@@ -24,7 +24,7 @@
 <mat-form-field floatLabel="never" class="sel m-right-gap" appearance="fill">
   <mat-select multiple panelClass="dark-panel" [formControl]="categories" placeholder="Filter by category"
               #categoriesSelect>
-    <mat-select-trigger *ngxAlias="transformSelectSelection(categoriesSelect.selected) as selection">
+    <mat-select-trigger *ngIf="transformSelectSelection(categoriesSelect.selected) as selection">
       {{selection.length ? selection[0].viewValue : ''}}
       <span *ngIf="selection.length > 1" class="filter-others-label">
         (+{{selection.length - 1}} {{selection.length === 2 ? 'other' : 'others'}})

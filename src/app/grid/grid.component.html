@@ -1,4 +1,4 @@
-<ng-container *ngxSubscribe="let items of this.dataSource.connect()">
+<ng-container *ngIf="(this.dataSource.connect() | async) as items">
   <ng-container *ngFor="let item of dataSource.filteredData; trackBy: trackByFn">
     <ng-container [ngSwitch]="appearance">
       <ng-container *ngSwitchCase="'minimal'">
