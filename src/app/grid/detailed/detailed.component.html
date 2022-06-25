@@ -51,7 +51,7 @@
     <div *ngIf="pokemon.dynamaxLevel" class="detailed-dynamax row ">
       <div class="detailed-label dark-bg">Dynamax Level</div>
       <ul>
-        <li [class.on]="index < pokemon.dynamaxLevel" *ngxRepeat="10; let index"></li>
+        <li [class.on]="index < pokemon.dynamaxLevel" *ngFor="let _ of [].constructor(10); let index"></li>
       </ul>
     </div>
 

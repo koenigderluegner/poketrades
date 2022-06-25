@@ -49,7 +49,7 @@
                   </ng-container>
                 </td>
 
-                <td *ngxRepeat="4; let index" [class.is-em]="isEggMove(sheetbreedable.value.moves[index])">
+                <td *ngFor="let _ of [].constructor(4); let index" [class.is-em]="isEggMove(sheetbreedable.value.moves[index])">
                   {{sheetbreedable.value.moves[index]}}
                 </td>
                 <td>
