@@ -21,7 +21,6 @@
     "@angular/platform-browser": "14.0.3",
     "@angular/platform-browser-dynamic": "14.0.3",
     "@angular/router": "14.0.3",
-    "@tngtech/ngx-structurals": "1.2.2",
     "karma-junit-reporter": "^2.0.1",
     "ngx-markdown": "^14.0.1",
     "pokesprite-spritesheet": "github:koenigderluegner/pokesprite-spritesheet#master",

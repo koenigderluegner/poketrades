@@ -3,7 +3,6 @@ import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IndexComponent } from './index.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { NgxStructuralsModule } from '@tngtech/ngx-structurals';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { SpreadsheetFacade } from '@spreadsheet/spreadsheet.facade';
 import { BehaviorSubject } from 'rxjs';
@@ -23,7 +22,7 @@ describe('SpreadsheetChanger IndexComponent', () => {
     spreadsheetSpy.getCurrentSpreadsheet$.and.returnValue(new BehaviorSubject(MOCK_SPREADSHEET));
 
     TestBed.configureTestingModule({
-      imports: [HttpClientTestingModule, ReactiveFormsModule, FormsModule, NgxStructuralsModule],
+      imports: [HttpClientTestingModule, ReactiveFormsModule, FormsModule],
       declarations: [IndexComponent],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
       providers: [

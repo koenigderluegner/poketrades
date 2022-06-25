@@ -2,7 +2,6 @@ import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { OverviewComponent } from './overview.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { NgxSubscribeModule } from '@tngtech/ngx-structurals';
 import { SpreadsheetFacade } from '@spreadsheet/spreadsheet.facade';
 import SpyObj = jasmine.SpyObj;
 
@@ -15,7 +14,7 @@ describe('OverviewComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      imports: [HttpClientTestingModule, NgxSubscribeModule],
+      imports: [HttpClientTestingModule],
       declarations: [OverviewComponent],
       providers: [
         {provide: SpreadsheetFacade, useValue: spreadsheetSpy}
@@ -29,6 +28,11 @@ describe('OverviewComponent', () => {
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
+
+  afterEach(() => {
+    fixture.destroy();
+  });
+
 
   it('should create', () => {
     expect(component).toBeTruthy();

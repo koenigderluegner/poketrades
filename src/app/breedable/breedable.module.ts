@@ -6,7 +6,6 @@ import { BallComponent } from './components/ball/ball.component';
 import { SharedModule } from '@shared/shared.module';
 import { GridModule } from '../grid/grid.module';
 import { SlugifyPipe } from '@shared/pipes/slugify.pipe';
-import { NgxStructuralsModule } from '@tngtech/ngx-structurals';
 import { ReactiveFormsModule } from '@angular/forms';
 import { IconModule } from '../icon/icon.module';
 import { OverviewComponent } from './components/overview/overview.component';
@@ -19,7 +18,6 @@ import { OverviewComponent } from './components/overview/overview.component';
         BreedableRoutingModule,
         SharedModule,
         GridModule,
-        NgxStructuralsModule,
         ReactiveFormsModule,
         IconModule
     ],

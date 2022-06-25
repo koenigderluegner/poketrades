@@ -95,7 +95,8 @@ export class SpreadsheetFacade {
         return spreadsheet;
       }),
       catchError((error) => {
-        console.log(error);
+        this.updateIsLoading(false);
+        console.error(error);
         return throwError(this.convertApiErrors('' + error.status));
       })
     );

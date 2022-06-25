@@ -1,7 +1,6 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { GridComponent } from './grid.component';
-import { NgxSubscribeModule } from '@tngtech/ngx-structurals';
 
 describe('GridComponent', () => {
   let component: GridComponent;
@@ -9,7 +8,7 @@ describe('GridComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      imports: [NgxSubscribeModule],
+      imports: [],
       declarations: [GridComponent]
     })
       .compileComponents();

@@ -1,10 +1,12 @@
 import { Component, HostBinding, ViewEncapsulation } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { Observable } from 'rxjs';
+import { Observable, tap } from 'rxjs';
 import { Spreadsheet } from '@spreadsheet/models/spreadsheet';
 import { SpreadsheetFacade } from '@spreadsheet/spreadsheet.facade';
 import { SearchHistoryEntry } from '../models/search-history-entry.interface';
 import { environment } from '../../../environments/environment';
+import { ApiError } from '@shared/interfaces/api-error.interface';
+import { catchError } from 'rxjs/operators';
 
 interface SearchGroup {
   search: FormControl<string>;
@@ -30,17 +32,27 @@ export class IndexComponent {
 
   spreadsheetHistory$: Observable<SearchHistoryEntry[]>;
 
+  error: ApiError | null = null;
+
   constructor(private spreadsheetFacade: SpreadsheetFacade) {
     this.searchForm = new FormGroup({
       search: new FormControl('', {nonNullable: true})
     });
-    this.isLoading$ = this.spreadsheetFacade.isLoading$();
+    this.isLoading$ = this.spreadsheetFacade.isLoading$().pipe(tap(i => console.log('lods', i)));
     this.spreadsheetHistory$ = this.spreadsheetFacade.getSpreadsheetHistory$();
   }
 
   submitSearch(): void {
     this.hasRequested = true;
-    this.loadedSpreadsheet$ = this.spreadsheetFacade.searchSpreadsheet(this.searchForm.controls.search.value, this.apiKey);
+    this.error = null;
+    this.loadedSpreadsheet$ = this.spreadsheetFacade.searchSpreadsheet(this.searchForm.controls.search.value, this.apiKey)
+      .pipe(
+        catchError((err, observable) => {
+          console.log('ge', err);
+          this.error = err;
+          return observable;
+        })
+      );
   }
 
   saveSpreadsheet(spreadsheet: Spreadsheet): void {

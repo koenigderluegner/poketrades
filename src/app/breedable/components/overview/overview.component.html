@@ -1,4 +1,4 @@
-<ng-container *ngxSubscribe="let data of data$; beforeAny loading">
+<ng-container *ngIf="(data$ | async) as data;">
 
   <div class="legality-table">
     <ng-container *ngIf="data">
@@ -16,4 +16,3 @@
     </ng-container>
   </div>
 </ng-container>
-<ng-template #loading>Loading</ng-template>
