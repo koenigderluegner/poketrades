@@ -1,5 +1,5 @@
 <ng-container *ngIf="pokemon && dbpokemon$">
-  <ng-container *ngxSubscribe="let dbpokemon of dbpokemon$">
+  <ng-container *ngIf="(dbpokemon$ | async)as dbpokemon">
     <div class="detailed-header dark-bg d-flex">
       <app-item category="ball" *ngIf="pokemon.ball" [slug]="pokemon.ball | slugify"></app-item>
       {{pokemon.name}}</div>
@@ -51,7 +51,7 @@
     <div *ngIf="pokemon.dynamaxLevel" class="detailed-dynamax row ">
       <div class="detailed-label dark-bg">Dynamax Level</div>
       <ul>
-        <li [class.on]="index < pokemon.dynamaxLevel" *ngxRepeat="10; let index"></li>
+        <li [class.on]="index < pokemon.dynamaxLevel" *ngFor="let _ of [].constructor(10); let index"></li>
       </ul>
     </div>
 

@@ -7,9 +7,7 @@ import { SharedModule } from '@shared/shared.module';
 import { GridModule } from '../grid/grid.module';
 import { ValuablesComponent } from './components/valuables/valuables.component';
 import { SlugifyPipe } from '@shared/pipes/slugify.pipe';
-import { NgxStructuralsModule } from '@tngtech/ngx-structurals';
 import { IconModule } from '../icon/icon.module';
-
 
 
 @NgModule({
@@ -20,7 +18,6 @@ import { IconModule } from '../icon/icon.module';
         ReactiveFormsModule,
         SharedModule,
         GridModule,
-        NgxStructuralsModule,
         IconModule
     ],
   providers: [SlugifyPipe]

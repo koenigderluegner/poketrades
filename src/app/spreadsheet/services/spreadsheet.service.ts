@@ -18,12 +18,7 @@ import { coerceBooleanProperty } from '@angular/cdk/coercion';
 })
 export class SpreadsheetService {
 
-  constructor(private httpClient: HttpClient,
-              private gss: GoogleSpreadsheetService,
-              private slugifyPipe: SlugifyPipe) {
-  }
-
-  bannedSheets: string[] = [
+  private readonly bannedSheets: string[] = [
     'Welcome',
     'Living Dex', 'Shiny Living Dex', 'Breedables Overview', 'Alcremie', 'Tool:Breeding', 'Tool: Move Lookup',
     'Breedables Ball Legality', 'Ban Checker', 'DB:Abilities', 'DB:Balls', 'DB:Pokemon', 'DB:LevelMoves', 'DB:Items',
@@ -31,29 +26,30 @@ export class SpreadsheetService {
   ];
 
 
-  possibleHeaders: string[] = [
+  private readonly possibleHeaders: string[] = [
     'dex', 'name', 'ability', 'owned', 'hasHA', 'ratio', 'move1', 'move2', 'move3', 'move4', 'nature', 'ball',
     'gender', 'ot', 'amount', 'notes', 'event', 'isShiny', 'level', 'hp', 'atk', 'def', 'spa', 'spd', 'spe', 'item',
     'id', 'dates', 'proof', 'tradeHistory', 'disclosure', 'lang', 'evhp', 'evatk', 'evdef', 'evspa', 'evspd', 'evspe'
   ];
 
-  filteredTabs = ['Welcome', 'Shiny Living Dex', 'Living Dex', 'Friend Safari (X & Y)', 'Resource',
-                  'Breedables Overview', 'Ban List', 'Ban Checker', 'Breedables Ball Legality', 'Resource Gen7 (Backup)',
-                  'DB:Natures', 'DB:Types', 'DB:Moves', 'DB:Misc', 'DB:Pokemon', 'DB:Items', 'DB:Abilities', 'DB:LevelMoves',
-                  'DB:Balls', 'Tool:Breeding', 'Tool: Move Lookup', 'Alcremie'];
-
   private readonly allowedConfigs: AllowedConfig = {
     type: ['Valuables', 'Breedables'],
     subType: ['RNGs', 'Legendaries', 'Shinies', 'Competitives', 'Events'],
     ball: ['Dream', 'Safari', 'Sport', 'Beast', 'Fast', 'Moon', 'Heavy', 'Love', 'Lure', 'Level',
-           'Friend', 'Poké', 'Great', 'Ultra', 'Premier', 'Dive', 'Luxury', 'Nest', 'Net', 'Repeat', 'Timer', 'Quick',
-           'Dusk', 'Heal'],
+      'Friend', 'Poké', 'Great', 'Ultra', 'Premier', 'Dive', 'Luxury', 'Nest', 'Net', 'Repeat', 'Timer', 'Quick',
+      'Dusk', 'Heal'],
     includeShinies: ['true', 'false']
   };
 
+  constructor(private httpClient: HttpClient,
+              private gss: GoogleSpreadsheetService,
+              private slugifyPipe: SlugifyPipe) {
+  }
+
   getSpreadsheet(spreadsheetId: string, apiKey: string): Observable<Spreadsheet> {
     let spreadsheet: Spreadsheet;
-    return this.gss.getSpreadsheet(spreadsheetId, apiKey).pipe(switchMap(googleSpreadsheet => {
+    return this.gss.getSpreadsheet(spreadsheetId, apiKey).pipe(
+      switchMap(googleSpreadsheet => {
 
         spreadsheet = {id: spreadsheetId, title: googleSpreadsheet.properties.title, worksheets: []};
 

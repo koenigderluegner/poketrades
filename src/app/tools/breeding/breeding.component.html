@@ -1,4 +1,4 @@
-<ng-container *ngxSubscribe="let breedables of breedables$">
+<ng-container *ngIf="(breedables$ | async) as breedables">
   <label class="poke-autocomplete-input-wrapper" matAutocompleteOrigin #origin="matAutocompleteOrigin">
 
     <app-pokemon [slug]="selectedPokemon ? selectedPokemon.iconSlug : 'unknown'"></app-pokemon>
@@ -19,7 +19,7 @@
     </mat-option>
   </mat-autocomplete>
   <ng-container *ngIf="selectedPokemon$">
-    <ng-container *ngxSubscribe="let pokemon of selectedPokemon$">
+    <ng-container *ngIf="(selectedPokemon$ | async) as pokemon">
       <ng-container *ngIf="pokemon; else pokemonNotFound">
 
         <div class="card">
@@ -49,7 +49,7 @@
                   </ng-container>
                 </td>
 
-                <td *ngxRepeat="4; let index" [class.is-em]="isEggMove(sheetbreedable.value.moves[index])">
+                <td *ngFor="let _ of [].constructor(4); let index" [class.is-em]="isEggMove(sheetbreedable.value.moves[index])">
                   {{sheetbreedable.value.moves[index]}}
                 </td>
                 <td>

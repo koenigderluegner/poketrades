@@ -2,7 +2,6 @@ import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { BreedingComponent } from './breeding.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { NgxSubscribeModule } from '@tngtech/ngx-structurals';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -25,7 +24,7 @@ describe('BreedingComponent', () => {
     spreadsheetSpy.getCurrentSpreadsheet$.and.returnValue(new BehaviorSubject(MOCK_SPREADSHEET));
 
     TestBed.configureTestingModule({
-      imports: [HttpClientTestingModule, NgxSubscribeModule, MatAutocompleteModule, FormsModule, MatInputModule, ReactiveFormsModule],
+      imports: [HttpClientTestingModule, MatAutocompleteModule, FormsModule, MatInputModule, ReactiveFormsModule],
       declarations: [BreedingComponent],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
       providers: [

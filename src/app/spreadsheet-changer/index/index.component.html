@@ -17,26 +17,34 @@
 </aside>
 <div class="view-content">
   <ng-container *ngIf="loadedSpreadsheet$; else notRequestedYet">
-    <ng-container
-      *ngxSubscribe="let loadedSpreadsheet of loadedSpreadsheet$; beforeAny pendingTemplate onError errorTemplate">
-      <ng-container *ngIf="loadedSpreadsheet">
-        <div class="view-subheader">{{loadedSpreadsheet.title}}</div>
-        <div class=""></div>
-        <div class="collection-infos" *ngIf="loadedSpreadsheet.hasValuables">
-          <div class="title">Contains valuables!</div>
-          <div class="text">Valuables are Pokémon with a certain rarity. Event, shiny, competitive, legendary Pokémon
-            and others.
+    <ng-container *ngIf="(isLoading$ |async)">
+      <div *ngIf="hasRequested">
+        <app-spinner class="centered-spinner"></app-spinner>
+        <div class="t-align-center">Load spreadsheet</div>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="!error; else errorTemplate">
+      <ng-container *ngIf="(loadedSpreadsheet$ | async) as loadedSpreadsheet">
+        <ng-container *ngIf="loadedSpreadsheet">
+          <div class="view-subheader">{{loadedSpreadsheet.title}}</div>
+          <div class=""></div>
+          <div class="collection-infos" *ngIf="loadedSpreadsheet.hasValuables">
+            <div class="title">Contains valuables!</div>
+            <div class="text">Valuables are Pokémon with a certain rarity. Event, shiny, competitive, legendary Pokémon
+              and others.
+            </div>
           </div>
-        </div>
-        <div class="collection-infos" *ngIf="loadedSpreadsheet.hasBreedables">
-          <div class="title">Contains breedables!</div>
-          <div class="text">Breedables are Pokémon, which can be bred or are a result of breeding. They are usually
-            collected in different kind of balls like Bulbasaur in a Friend Ball.
+          <div class="collection-infos" *ngIf="loadedSpreadsheet.hasBreedables">
+            <div class="title">Contains breedables!</div>
+            <div class="text">Breedables are Pokémon, which can be bred or are a result of breeding. They are usually
+              collected in different kind of balls like Bulbasaur in a Friend Ball.
+            </div>
           </div>
-        </div>
-        <div class="button-row">
-          <button class="save-button" (click)="saveSpreadsheet(loadedSpreadsheet)">Save as current spreadsheet</button>
-        </div>
+          <div class="button-row">
+            <button class="save-button" (click)="saveSpreadsheet(loadedSpreadsheet)">Save as current spreadsheet
+            </button>
+          </div>
+        </ng-container>
       </ng-container>
     </ng-container>
   </ng-container>
@@ -49,12 +57,7 @@
     <div>Currently no other spreadsheet template it supported.</div>
   </app-ball-guy-bubble>
 </ng-template>
-<ng-template #pendingTemplate>
-  <div *ngIf="hasRequested">
-    <app-spinner class="centered-spinner"></app-spinner>
-    <div class="t-align-center">Load spreadsheet</div>
-  </div>
-</ng-template>
-<ng-template #errorTemplate let-error="error">Error: {{ error.message }}</ng-template>
+
+<ng-template #errorTemplate>Error: {{ error?.message }}</ng-template>
 
 
