@@ -32,6 +32,11 @@
     "fullTemplateTypeCheck": true,
     "strictInjectionParameters": true,
     "strictTemplates": true,
-    "disableTypeScriptVersionCheck": true
+    "disableTypeScriptVersionCheck": true,
+    "extendedDiagnostics": {
+      "checks": {
+        "optionalChainNotNullable": "suppress"
+      }
+    }
   }
 }
