@@ -5485,7 +5485,8 @@
     "iconSlug": "quagsire",
     "gen8Appearance": "swsh",
     "femaleRatio": 49.8,
-    "fsObtainingMethod": 2
+    "fsObtainingMethod": 2,
+    "uwObtainingMethod": 2
   },
   {
     "name": "Espeon",
@@ -6626,7 +6627,8 @@
     "iconSlug": "magcargo",
     "gen8Appearance": "bdsp",
     "femaleRatio": 49.8,
-    "fsObtainingMethod": 2
+    "fsObtainingMethod": 2,
+    "uwObtainingMethod": 2
   },
   {
     "name": "Swinub",
@@ -7857,7 +7859,8 @@
     "canBeBanked": true,
     "iconSlug": "lombre",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "uwObtainingMethod": 2
   },
   {
     "name": "Ludicolo",
@@ -7879,7 +7882,8 @@
     "canBeBanked": true,
     "iconSlug": "ludicolo",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "uwObtainingMethod": 3
   },
   {
     "name": "Seedot",
@@ -7923,7 +7927,8 @@
     "iconSlug": "nuzleaf",
     "gen8Appearance": "swsh",
     "femaleRatio": 49.8,
-    "fsObtainingMethod": 2
+    "fsObtainingMethod": 2,
+    "uwObtainingMethod": 2
   },
   {
     "name": "Shiftry",
@@ -7946,7 +7951,8 @@
     "iconSlug": "shiftry",
     "gen8Appearance": "swsh",
     "femaleRatio": 49.8,
-    "fsObtainingMethod": 3
+    "fsObtainingMethod": 3,
+    "uwObtainingMethod": 3
   },
   {
     "name": "Taillow",
@@ -7986,7 +7992,8 @@
     "canBeBanked": true,
     "iconSlug": "swellow",
     "gen8Appearance": "bdsp",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "uwObtainingMethod": 2
   },
   {
     "name": "Wingull",
@@ -8722,7 +8729,8 @@
     "iconSlug": "medicham",
     "gen8Appearance": "bdsp",
     "femaleRatio": 49.8,
-    "fsObtainingMethod": 3
+    "fsObtainingMethod": 3,
+    "uwObtainingMethod": 2
   },
   {
     "name": "Medicham-Mega",
@@ -9173,7 +9181,8 @@
     "iconSlug": "grumpig",
     "gen8Appearance": "bdsp",
     "femaleRatio": 49.8,
-    "fsObtainingMethod": 2
+    "fsObtainingMethod": 2,
+    "uwObtainingMethod": 2
   },
   {
     "name": "Spinda",
@@ -9344,7 +9353,8 @@
     "canBeBanked": true,
     "iconSlug": "altaria",
     "gen8Appearance": "tct",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "uwObtainingMethod": 2
   },
   {
     "name": "Altaria-Mega",
@@ -11487,7 +11497,8 @@
     "iconSlug": "floatzel",
     "gen8Appearance": "bdsp",
     "femaleRatio": 49.8,
-    "fsObtainingMethod": 2
+    "fsObtainingMethod": 2,
+    "uwObtainingMethod": 2
   },
   {
     "name": "Cherubi",
@@ -12276,7 +12287,8 @@
     "canBeBanked": true,
     "iconSlug": "hippowdon",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "uwObtainingMethod": 2
   },
   {
     "name": "Hippowdon ♀",
@@ -12295,7 +12307,8 @@
     "canBeBanked": true,
     "iconSlug": "female/hippowdon",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "uwObtainingMethod": 2
   },
   {
     "name": "Skorupi",
@@ -12340,7 +12353,8 @@
     "iconSlug": "drapion",
     "gen8Appearance": "swsh",
     "femaleRatio": 49.8,
-    "fsObtainingMethod": 2
+    "fsObtainingMethod": 2,
+    "uwObtainingMethod": 2
   },
   {
     "name": "Croagunk",
@@ -12507,7 +12521,8 @@
     "iconSlug": "abomasnow",
     "gen8Appearance": "swsh",
     "femaleRatio": 49.8,
-    "fsObtainingMethod": 3
+    "fsObtainingMethod": 3,
+    "uwObtainingMethod": 2
   },
   {
     "name": "Abomasnow-Mega",
@@ -12719,7 +12734,8 @@
     "canBeBanked": true,
     "iconSlug": "yanmega",
     "gen8Appearance": "bdsp",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "uwObtainingMethod": 2
   },
   {
     "name": "Leafeon",
@@ -14543,7 +14559,8 @@
     "iconSlug": "audino",
     "gen8Appearance": "tct",
     "femaleRatio": 49.8,
-    "fsObtainingMethod": 2
+    "fsObtainingMethod": 2,
+    "uwObtainingMethod": 2
   },
   {
     "name": "Audino-Mega",
@@ -15275,7 +15292,8 @@
     "iconSlug": "crustle",
     "gen8Appearance": "swsh",
     "femaleRatio": 49.8,
-    "fsObtainingMethod": 3
+    "fsObtainingMethod": 3,
+    "uwObtainingMethod": 2
   },
   {
     "name": "Scraggy",
@@ -15341,7 +15359,8 @@
     "iconSlug": "sigilyph",
     "gen8Appearance": "swsh",
     "femaleRatio": 49.8,
-    "fsObtainingMethod": 2
+    "fsObtainingMethod": 2,
+    "uwObtainingMethod": 2
   },
   {
     "name": "Yamask",
@@ -15838,7 +15857,8 @@
     "iconSlug": "swanna",
     "gen8Appearance": "unknown",
     "femaleRatio": 49.8,
-    "fsObtainingMethod": 2
+    "fsObtainingMethod": 2,
+    "uwObtainingMethod": 2
   },
   {
     "name": "Vanillite",
@@ -16773,7 +16793,8 @@
     "iconSlug": "stunfisk",
     "gen8Appearance": "swsh",
     "femaleRatio": 49.8,
-    "fsObtainingMethod": 2
+    "fsObtainingMethod": 2,
+    "uwObtainingMethod": 2
   },
   {
     "name": "Stunfisk-Galar",
@@ -19397,7 +19418,8 @@
     "iconSlug": "barbaracle",
     "gen8Appearance": "swsh",
     "femaleRatio": 49.8,
-    "fsObtainingMethod": 2
+    "fsObtainingMethod": 2,
+    "uwObtainingMethod": 2
   },
   {
     "name": "Skrelp",
@@ -19527,7 +19549,8 @@
     "iconSlug": "heliolisk",
     "gen8Appearance": "swsh",
     "femaleRatio": 49.8,
-    "fsObtainingMethod": 3
+    "fsObtainingMethod": 3,
+    "uwObtainingMethod": 2
   },
   {
     "name": "Tyrunt",

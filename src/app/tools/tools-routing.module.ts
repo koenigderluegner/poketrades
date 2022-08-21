@@ -4,6 +4,9 @@ import { ToolsComponent } from './tools.component';
 import { BreedingComponent } from './breeding/breeding.component';
 import { ShinyDexComponent } from './components/shiny-dex/shiny-dex.component';
 import { FriendSafariShinyDexComponent } from './components/friend-safari-shiny-dex/friend-safari-shiny-dex.component';
+import {
+  UltraWormholeShinyDexComponent
+} from './components/ultra-wormhole-shiny-dex/ultra-wormhole-shiny-dex.component';
 
 
 const routes: Routes = [
@@ -20,6 +23,9 @@ const routes: Routes = [
       },
       {
         path: 'friend-safari-shiny-dex', component: FriendSafariShinyDexComponent
+      },
+      {
+        path: 'ultra-wormhole-shiny-dex', component: UltraWormholeShinyDexComponent
       }
     ]
   }
