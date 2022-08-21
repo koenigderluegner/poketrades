@@ -3145,7 +3145,8 @@
     "canBeBanked": true,
     "iconSlug": "electrode",
     "gen8Appearance": "bdsp",
-    "femaleRatio": null
+    "femaleRatio": null,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Electrode-Hisui",
@@ -3166,8 +3167,7 @@
     "canBeBanked": true,
     "iconSlug": "electrode-hisui",
     "gen8Appearance": "pla",
-    "femaleRatio": null,
-    "fsObtainingMethod": 2
+    "femaleRatio": null
   },
   {
     "name": "Exeggcute",
