@@ -39,7 +39,8 @@
     "canBeBanked": true,
     "iconSlug": "ivysaur",
     "gen8Appearance": "swsh",
-    "femaleRatio": 11.85
+    "femaleRatio": 11.85,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Venusaur",
@@ -60,7 +61,8 @@
     "canBeBanked": true,
     "iconSlug": "venusaur",
     "gen8Appearance": "swsh",
-    "femaleRatio": 11.85
+    "femaleRatio": 11.85,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Venusaur-Gigantamax",
@@ -142,7 +144,8 @@
     "canBeBanked": true,
     "iconSlug": "charmeleon",
     "gen8Appearance": "swsh",
-    "femaleRatio": 11.85
+    "femaleRatio": 11.85,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Charizard",
@@ -163,7 +166,8 @@
     "canBeBanked": true,
     "iconSlug": "charizard",
     "gen8Appearance": "swsh",
-    "femaleRatio": 11.85
+    "femaleRatio": 11.85,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Charizard-Gigantamax",
@@ -266,7 +270,8 @@
     "canBeBanked": true,
     "iconSlug": "wartortle",
     "gen8Appearance": "swsh",
-    "femaleRatio": 11.85
+    "femaleRatio": 11.85,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Blastoise",
@@ -286,7 +291,8 @@
     "canBeBanked": true,
     "iconSlug": "blastoise",
     "gen8Appearance": "swsh",
-    "femaleRatio": 11.85
+    "femaleRatio": 11.85,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Blastoise-Gigantamax",
@@ -384,7 +390,8 @@
     "canBeBanked": true,
     "iconSlug": "butterfree",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Butterfree-Gigantamax",
@@ -444,7 +451,8 @@
     "canBeBanked": true,
     "iconSlug": "kakuna",
     "gen8Appearance": "bdsp",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Beedrill",
@@ -464,7 +472,8 @@
     "canBeBanked": true,
     "iconSlug": "beedrill",
     "gen8Appearance": "bdsp",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Beedrill-Mega",
@@ -505,7 +514,8 @@
     "canBeBanked": true,
     "iconSlug": "pidgey",
     "gen8Appearance": "bdsp",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Pidgeotto",
@@ -526,7 +536,8 @@
     "canBeBanked": true,
     "iconSlug": "pidgeotto",
     "gen8Appearance": "bdsp",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Pidgeot",
@@ -547,7 +558,8 @@
     "canBeBanked": true,
     "iconSlug": "pidgeot",
     "gen8Appearance": "bdsp",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Pidgeot-Mega",
@@ -669,7 +681,8 @@
     "canBeBanked": true,
     "iconSlug": "spearow",
     "gen8Appearance": "bdsp",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Fearow",
@@ -689,7 +702,8 @@
     "canBeBanked": true,
     "iconSlug": "fearow",
     "gen8Appearance": "bdsp",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Ekans",
@@ -751,7 +765,8 @@
     "canBeBanked": true,
     "iconSlug": "pikachu",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Pikachu-Original Cap",
@@ -963,7 +978,8 @@
     "canBeBanked": true,
     "iconSlug": "raichu",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Sandshrew",
@@ -982,7 +998,8 @@
     "canBeBanked": true,
     "iconSlug": "sandshrew",
     "gen8Appearance": "ioa",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Sandshrew-Alola",
@@ -1021,7 +1038,8 @@
     "canBeBanked": true,
     "iconSlug": "sandslash",
     "gen8Appearance": "ioa",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Sandslash-Alola",
@@ -1187,7 +1205,8 @@
     "canBeBanked": true,
     "iconSlug": "clefairy",
     "gen8Appearance": "swsh",
-    "femaleRatio": 75.1
+    "femaleRatio": 75.1,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Clefable",
@@ -1207,7 +1226,8 @@
     "canBeBanked": true,
     "iconSlug": "clefable",
     "gen8Appearance": "swsh",
-    "femaleRatio": 75.1
+    "femaleRatio": 75.1,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Vulpix",
@@ -1264,7 +1284,8 @@
     "canBeBanked": true,
     "iconSlug": "ninetales",
     "gen8Appearance": "swsh",
-    "femaleRatio": 75.1
+    "femaleRatio": 75.1,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Ninetales-Alola",
@@ -1305,7 +1326,8 @@
     "canBeBanked": true,
     "iconSlug": "jigglypuff",
     "gen8Appearance": "ioa",
-    "femaleRatio": 75.1
+    "femaleRatio": 75.1,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Wigglytuff",
@@ -1326,7 +1348,8 @@
     "canBeBanked": true,
     "iconSlug": "wigglytuff",
     "gen8Appearance": "ioa",
-    "femaleRatio": 75.1
+    "femaleRatio": 75.1,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Zubat",
@@ -1386,7 +1409,8 @@
     "canBeBanked": true,
     "iconSlug": "oddish",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Gloom",
@@ -1406,7 +1430,8 @@
     "canBeBanked": true,
     "iconSlug": "gloom",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Vileplume",
@@ -1426,7 +1451,8 @@
     "canBeBanked": true,
     "iconSlug": "vileplume",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Paras",
@@ -1448,7 +1474,8 @@
     "canBeBanked": true,
     "iconSlug": "paras",
     "gen8Appearance": "bdsp",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Parasect",
@@ -1470,7 +1497,8 @@
     "canBeBanked": true,
     "iconSlug": "parasect",
     "gen8Appearance": "bdsp",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Venonat",
@@ -1512,7 +1540,8 @@
     "canBeBanked": true,
     "iconSlug": "venomoth",
     "gen8Appearance": "bdsp",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Diglett-Alola",
@@ -1594,7 +1623,8 @@
     "canBeBanked": true,
     "iconSlug": "dugtrio",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Meowth",
@@ -1776,7 +1806,8 @@
     "canBeBanked": true,
     "iconSlug": "mankey",
     "gen8Appearance": "bdsp",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Primeape",
@@ -1796,7 +1827,8 @@
     "canBeBanked": true,
     "iconSlug": "primeape",
     "gen8Appearance": "bdsp",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Growlithe",
@@ -1816,7 +1848,8 @@
     "canBeBanked": true,
     "iconSlug": "growlithe",
     "gen8Appearance": "swsh",
-    "femaleRatio": 24.5
+    "femaleRatio": 24.5,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Growlithe-Hisui",
@@ -1857,7 +1890,8 @@
     "canBeBanked": true,
     "iconSlug": "arcanine",
     "gen8Appearance": "swsh",
-    "femaleRatio": 24.5
+    "femaleRatio": 24.5,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Arcanine-Hisui",
@@ -1918,7 +1952,8 @@
     "canBeBanked": true,
     "iconSlug": "poliwhirl",
     "gen8Appearance": "ioa",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Poliwrath",
@@ -1939,7 +1974,8 @@
     "canBeBanked": true,
     "iconSlug": "poliwrath",
     "gen8Appearance": "ioa",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Abra",
@@ -1959,7 +1995,8 @@
     "canBeBanked": true,
     "iconSlug": "abra",
     "gen8Appearance": "ioa",
-    "femaleRatio": 24.5
+    "femaleRatio": 24.5,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Kadabra",
@@ -1979,7 +2016,8 @@
     "canBeBanked": true,
     "iconSlug": "kadabra",
     "gen8Appearance": "ioa",
-    "femaleRatio": 24.5
+    "femaleRatio": 24.5,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Alakazam",
@@ -1999,7 +2037,8 @@
     "canBeBanked": true,
     "iconSlug": "alakazam",
     "gen8Appearance": "ioa",
-    "femaleRatio": 24.5
+    "femaleRatio": 24.5,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Alakazam-Mega",
@@ -2058,7 +2097,8 @@
     "canBeBanked": true,
     "iconSlug": "machoke",
     "gen8Appearance": "swsh",
-    "femaleRatio": 24.5
+    "femaleRatio": 24.5,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Machamp",
@@ -2078,7 +2118,8 @@
     "canBeBanked": true,
     "iconSlug": "machamp",
     "gen8Appearance": "swsh",
-    "femaleRatio": 24.5
+    "femaleRatio": 24.5,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Machamp-Gigantamax",
@@ -2346,7 +2387,8 @@
     "canBeBanked": true,
     "iconSlug": "ponyta",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Ponyta-Galar",
@@ -2386,7 +2428,8 @@
     "canBeBanked": true,
     "iconSlug": "rapidash",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Rapidash-Galar",
@@ -2558,7 +2601,8 @@
     "canBeBanked": true,
     "iconSlug": "magneton",
     "gen8Appearance": "ioa",
-    "femaleRatio": null
+    "femaleRatio": null,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Farfetch'd",
@@ -2580,7 +2624,8 @@
     "canBeBanked": true,
     "iconSlug": "farfetchd",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Farfetch'd-Galar",
@@ -2621,7 +2666,8 @@
     "canBeBanked": true,
     "iconSlug": "doduo",
     "gen8Appearance": "bdsp",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Dodrio",
@@ -2642,7 +2688,8 @@
     "canBeBanked": true,
     "iconSlug": "dodrio",
     "gen8Appearance": "bdsp",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Seel",
@@ -2685,7 +2732,8 @@
     "canBeBanked": true,
     "iconSlug": "dewgong",
     "gen8Appearance": "bdsp",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Grimer",
@@ -2746,7 +2794,8 @@
     "canBeBanked": true,
     "iconSlug": "muk",
     "gen8Appearance": "bdsp",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Muk-Alola",
@@ -2808,7 +2857,8 @@
     "canBeBanked": true,
     "iconSlug": "cloyster",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Gastly",
@@ -2929,7 +2979,8 @@
     "canBeBanked": true,
     "iconSlug": "onix",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Drowzee",
@@ -2949,7 +3000,8 @@
     "canBeBanked": true,
     "iconSlug": "drowzee",
     "gen8Appearance": "bdsp",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Hypno",
@@ -2969,7 +3021,8 @@
     "canBeBanked": true,
     "iconSlug": "hypno",
     "gen8Appearance": "bdsp",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Krabby",
@@ -2989,7 +3042,8 @@
     "canBeBanked": true,
     "iconSlug": "krabby",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Kingler",
@@ -3009,7 +3063,8 @@
     "canBeBanked": true,
     "iconSlug": "kingler",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Kingler-Gigantamax",
@@ -3111,7 +3166,8 @@
     "canBeBanked": true,
     "iconSlug": "electrode-hisui",
     "gen8Appearance": "pla",
-    "femaleRatio": null
+    "femaleRatio": null,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Exeggcute",
@@ -3212,7 +3268,8 @@
     "canBeBanked": true,
     "iconSlug": "marowak",
     "gen8Appearance": "ioa",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Marowak-Alola",
@@ -3253,7 +3310,8 @@
     "canBeBanked": true,
     "iconSlug": "hitmonlee",
     "gen8Appearance": "swsh",
-    "femaleRatio": 0
+    "femaleRatio": 0,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Hitmonchan",
@@ -3293,7 +3351,8 @@
     "canBeBanked": true,
     "iconSlug": "lickitung",
     "gen8Appearance": "ioa",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Koffing",
@@ -3398,7 +3457,8 @@
     "canBeBanked": true,
     "iconSlug": "rhydon",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Chansey",
@@ -3418,7 +3478,8 @@
     "canBeBanked": true,
     "iconSlug": "chansey",
     "gen8Appearance": "ioa",
-    "femaleRatio": 100
+    "femaleRatio": 100,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Tangela",
@@ -3438,7 +3499,8 @@
     "canBeBanked": true,
     "iconSlug": "tangela",
     "gen8Appearance": "ioa",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Kangaskhan",
@@ -3703,7 +3765,8 @@
     "canBeBanked": true,
     "iconSlug": "electabuzz",
     "gen8Appearance": "tct",
-    "femaleRatio": 24.5
+    "femaleRatio": 24.5,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Magmar",
@@ -3722,7 +3785,8 @@
     "canBeBanked": true,
     "iconSlug": "magmar",
     "gen8Appearance": "tct",
-    "femaleRatio": 24.5
+    "femaleRatio": 24.5,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Pinsir",
@@ -3742,7 +3806,8 @@
     "canBeBanked": true,
     "iconSlug": "pinsir",
     "gen8Appearance": "ioa",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Pinsir-Mega",
@@ -3823,7 +3888,8 @@
     "canBeBanked": true,
     "iconSlug": "gyarados",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Gyarados-Mega",
@@ -3866,7 +3932,8 @@
     "canBeBanked": true,
     "iconSlug": "lapras",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Lapras-Gigantamax",
@@ -3907,7 +3974,8 @@
     "canBeBanked": true,
     "iconSlug": "ditto",
     "gen8Appearance": "swsh",
-    "femaleRatio": null
+    "femaleRatio": null,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Eevee",
@@ -3927,7 +3995,8 @@
     "canBeBanked": true,
     "iconSlug": "eevee",
     "gen8Appearance": "swsh",
-    "femaleRatio": 11.85
+    "femaleRatio": 11.85,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Eevee-Gigantamax",
@@ -3966,7 +4035,8 @@
     "canBeBanked": true,
     "iconSlug": "vaporeon",
     "gen8Appearance": "swsh",
-    "femaleRatio": 11.85
+    "femaleRatio": 11.85,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Jolteon",
@@ -3985,7 +4055,8 @@
     "canBeBanked": true,
     "iconSlug": "jolteon",
     "gen8Appearance": "swsh",
-    "femaleRatio": 11.85
+    "femaleRatio": 11.85,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Flareon",
@@ -4004,7 +4075,8 @@
     "canBeBanked": true,
     "iconSlug": "flareon",
     "gen8Appearance": "swsh",
-    "femaleRatio": 11.85
+    "femaleRatio": 11.85,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Porygon",
@@ -4353,7 +4425,8 @@
     "canBeBanked": true,
     "iconSlug": "dragonair",
     "gen8Appearance": "tct",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Dragonite",
@@ -4374,7 +4447,8 @@
     "canBeBanked": true,
     "iconSlug": "dragonite",
     "gen8Appearance": "tct",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Mewtwo",
@@ -4709,7 +4783,8 @@
     "canBeBanked": true,
     "iconSlug": "hoothoot",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Noctowl",
@@ -4730,7 +4805,8 @@
     "canBeBanked": true,
     "iconSlug": "noctowl",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Ledyba",
@@ -4751,7 +4827,8 @@
     "canBeBanked": true,
     "iconSlug": "ledyba",
     "gen8Appearance": "bdsp",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Ledian",
@@ -4772,7 +4849,8 @@
     "canBeBanked": true,
     "iconSlug": "ledian",
     "gen8Appearance": "bdsp",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Spinarak",
@@ -4814,7 +4892,8 @@
     "canBeBanked": true,
     "iconSlug": "ariados",
     "gen8Appearance": "bdsp",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Crobat",
@@ -4956,7 +5035,8 @@
     "canBeBanked": true,
     "iconSlug": "togepi",
     "gen8Appearance": "swsh",
-    "femaleRatio": 11.85
+    "femaleRatio": 11.85,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Togetic",
@@ -4978,7 +5058,8 @@
     "canBeBanked": true,
     "iconSlug": "togetic",
     "gen8Appearance": "swsh",
-    "femaleRatio": 11.85
+    "femaleRatio": 11.85,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Natu",
@@ -5020,7 +5101,8 @@
     "canBeBanked": true,
     "iconSlug": "xatu",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Mareep",
@@ -5120,7 +5202,8 @@
     "canBeBanked": true,
     "iconSlug": "bellossom",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Marill",
@@ -5164,7 +5247,8 @@
     "canBeBanked": true,
     "iconSlug": "azumarill",
     "gen8Appearance": "ioa",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Sudowoodo",
@@ -5204,7 +5288,8 @@
     "canBeBanked": true,
     "iconSlug": "politoed",
     "gen8Appearance": "ioa",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Hoppip",
@@ -5290,7 +5375,8 @@
     "canBeBanked": true,
     "iconSlug": "aipom",
     "gen8Appearance": "bdsp",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Sunkern",
@@ -5310,7 +5396,8 @@
     "canBeBanked": true,
     "iconSlug": "sunkern",
     "gen8Appearance": "bdsp",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Sunflora",
@@ -5330,7 +5417,8 @@
     "canBeBanked": true,
     "iconSlug": "sunflora",
     "gen8Appearance": "bdsp",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Yanma",
@@ -5373,7 +5461,8 @@
     "canBeBanked": true,
     "iconSlug": "wooper",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Quagsire",
@@ -5395,7 +5484,9 @@
     "canBeBanked": true,
     "iconSlug": "quagsire",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2,
+    "uwObtainingMethod": 2
   },
   {
     "name": "Espeon",
@@ -5414,7 +5505,8 @@
     "canBeBanked": true,
     "iconSlug": "espeon",
     "gen8Appearance": "swsh",
-    "femaleRatio": 11.85
+    "femaleRatio": 11.85,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Umbreon",
@@ -5433,7 +5525,8 @@
     "canBeBanked": true,
     "iconSlug": "umbreon",
     "gen8Appearance": "swsh",
-    "femaleRatio": 11.85
+    "femaleRatio": 11.85,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Murkrow",
@@ -6068,7 +6161,8 @@
     "canBeBanked": true,
     "iconSlug": "wobbuffet",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Girafarig",
@@ -6089,7 +6183,8 @@
     "canBeBanked": true,
     "iconSlug": "girafarig",
     "gen8Appearance": "bdsp",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Pineco",
@@ -6128,7 +6223,8 @@
     "canBeBanked": true,
     "iconSlug": "forretress",
     "gen8Appearance": "bdsp",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Dunsparce",
@@ -6148,7 +6244,8 @@
     "canBeBanked": true,
     "iconSlug": "dunsparce",
     "gen8Appearance": "ioa",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Gligar",
@@ -6190,7 +6287,8 @@
     "canBeBanked": true,
     "iconSlug": "steelix",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Steelix-Mega",
@@ -6231,7 +6329,8 @@
     "canBeBanked": true,
     "iconSlug": "snubbull",
     "gen8Appearance": "bdsp",
-    "femaleRatio": 75.1
+    "femaleRatio": 75.1,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Granbull",
@@ -6252,7 +6351,8 @@
     "canBeBanked": true,
     "iconSlug": "granbull",
     "gen8Appearance": "bdsp",
-    "femaleRatio": 75.1
+    "femaleRatio": 75.1,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Qwilfish",
@@ -6356,7 +6456,8 @@
     "canBeBanked": true,
     "iconSlug": "shuckle",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Heracross",
@@ -6377,7 +6478,8 @@
     "canBeBanked": true,
     "iconSlug": "heracross",
     "gen8Appearance": "ioa",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Heracross-Mega",
@@ -6418,7 +6520,8 @@
     "canBeBanked": true,
     "iconSlug": "sneasel",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Sneasel-Hisui",
@@ -6459,7 +6562,8 @@
     "canBeBanked": true,
     "iconSlug": "teddiursa",
     "gen8Appearance": "bdsp",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Ursaring",
@@ -6479,7 +6583,8 @@
     "canBeBanked": true,
     "iconSlug": "ursaring",
     "gen8Appearance": "bdsp",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Slugma",
@@ -6499,7 +6604,8 @@
     "canBeBanked": true,
     "iconSlug": "slugma",
     "gen8Appearance": "bdsp",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Magcargo",
@@ -6520,7 +6626,9 @@
     "canBeBanked": true,
     "iconSlug": "magcargo",
     "gen8Appearance": "bdsp",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2,
+    "uwObtainingMethod": 2
   },
   {
     "name": "Swinub",
@@ -6562,7 +6670,8 @@
     "canBeBanked": true,
     "iconSlug": "piloswine",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Corsola",
@@ -6584,7 +6693,8 @@
     "canBeBanked": true,
     "iconSlug": "corsola",
     "gen8Appearance": "swsh",
-    "femaleRatio": 75.1
+    "femaleRatio": 75.1,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Corsola-Galar",
@@ -6646,7 +6756,8 @@
     "canBeBanked": true,
     "iconSlug": "octillery",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Delibird",
@@ -6668,7 +6779,8 @@
     "canBeBanked": true,
     "iconSlug": "delibird",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Mantine",
@@ -6710,7 +6822,8 @@
     "canBeBanked": true,
     "iconSlug": "skarmory",
     "gen8Appearance": "ioa",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Houndour",
@@ -6813,7 +6926,8 @@
     "canBeBanked": true,
     "iconSlug": "phanpy",
     "gen8Appearance": "bdsp",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Donphan",
@@ -6832,7 +6946,8 @@
     "canBeBanked": true,
     "iconSlug": "donphan",
     "gen8Appearance": "bdsp",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Porygon2",
@@ -6892,7 +7007,8 @@
     "canBeBanked": true,
     "iconSlug": "smeargle",
     "gen8Appearance": "bdsp",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Tyrogue",
@@ -6912,7 +7028,8 @@
     "canBeBanked": true,
     "iconSlug": "tyrogue",
     "gen8Appearance": "swsh",
-    "femaleRatio": 0
+    "femaleRatio": 0,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Hitmontop",
@@ -6932,7 +7049,8 @@
     "canBeBanked": true,
     "iconSlug": "hitmontop",
     "gen8Appearance": "swsh",
-    "femaleRatio": 0
+    "femaleRatio": 0,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Smoochum",
@@ -7031,7 +7149,8 @@
     "canBeBanked": true,
     "iconSlug": "blissey",
     "gen8Appearance": "ioa",
-    "femaleRatio": 100
+    "femaleRatio": 100,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Raikou",
@@ -7128,7 +7247,8 @@
     "canBeBanked": true,
     "iconSlug": "pupitar",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Tyranitar",
@@ -7148,7 +7268,8 @@
     "canBeBanked": true,
     "iconSlug": "tyranitar",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Tyranitar-Mega",
@@ -7511,7 +7632,8 @@
     "canBeBanked": true,
     "iconSlug": "mightyena",
     "gen8Appearance": "bdsp",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Zigzagoon",
@@ -7651,7 +7773,8 @@
     "canBeBanked": true,
     "iconSlug": "beautifly",
     "gen8Appearance": "bdsp",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Cascoon",
@@ -7670,7 +7793,8 @@
     "canBeBanked": true,
     "iconSlug": "cascoon",
     "gen8Appearance": "bdsp",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Dustox",
@@ -7690,7 +7814,8 @@
     "canBeBanked": true,
     "iconSlug": "dustox",
     "gen8Appearance": "bdsp",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Lotad",
@@ -7734,7 +7859,8 @@
     "canBeBanked": true,
     "iconSlug": "lombre",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "uwObtainingMethod": 2
   },
   {
     "name": "Ludicolo",
@@ -7756,7 +7882,8 @@
     "canBeBanked": true,
     "iconSlug": "ludicolo",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "uwObtainingMethod": 3
   },
   {
     "name": "Seedot",
@@ -7799,7 +7926,9 @@
     "canBeBanked": true,
     "iconSlug": "nuzleaf",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2,
+    "uwObtainingMethod": 2
   },
   {
     "name": "Shiftry",
@@ -7821,7 +7950,9 @@
     "canBeBanked": true,
     "iconSlug": "shiftry",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3,
+    "uwObtainingMethod": 3
   },
   {
     "name": "Taillow",
@@ -7861,7 +7992,8 @@
     "canBeBanked": true,
     "iconSlug": "swellow",
     "gen8Appearance": "bdsp",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "uwObtainingMethod": 2
   },
   {
     "name": "Wingull",
@@ -7949,7 +8081,8 @@
     "canBeBanked": true,
     "iconSlug": "kirlia",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Gardevoir",
@@ -7971,7 +8104,8 @@
     "canBeBanked": true,
     "iconSlug": "gardevoir",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Gardevoir-Mega",
@@ -8033,7 +8167,8 @@
     "canBeBanked": true,
     "iconSlug": "masquerain",
     "gen8Appearance": "bdsp",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Shroomish",
@@ -8076,7 +8211,8 @@
     "canBeBanked": true,
     "iconSlug": "breloom",
     "gen8Appearance": "bdsp",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Slakoth",
@@ -8153,7 +8289,8 @@
     "canBeBanked": true,
     "iconSlug": "nincada",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Ninjask",
@@ -8173,7 +8310,8 @@
     "canBeBanked": true,
     "iconSlug": "ninjask",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Shedinja",
@@ -8193,7 +8331,8 @@
     "canBeBanked": true,
     "iconSlug": "shedinja",
     "gen8Appearance": "swsh",
-    "femaleRatio": null
+    "femaleRatio": null,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Whismur",
@@ -8233,7 +8372,8 @@
     "canBeBanked": true,
     "iconSlug": "loudred",
     "gen8Appearance": "ioa",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Exploud",
@@ -8253,7 +8393,8 @@
     "canBeBanked": true,
     "iconSlug": "exploud",
     "gen8Appearance": "ioa",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Makuhita",
@@ -8293,7 +8434,8 @@
     "canBeBanked": true,
     "iconSlug": "hariyama",
     "gen8Appearance": "bdsp",
-    "femaleRatio": 24.5
+    "femaleRatio": 24.5,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Azurill",
@@ -8334,7 +8476,8 @@
     "canBeBanked": true,
     "iconSlug": "nosepass",
     "gen8Appearance": "bdsp",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Skitty",
@@ -8397,7 +8540,8 @@
     "canBeBanked": true,
     "iconSlug": "sableye",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Sableye-Mega",
@@ -8439,7 +8583,8 @@
     "canBeBanked": true,
     "iconSlug": "mawile",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Mawile-Mega",
@@ -8562,7 +8707,8 @@
     "canBeBanked": true,
     "iconSlug": "meditite",
     "gen8Appearance": "bdsp",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Medicham",
@@ -8582,7 +8728,9 @@
     "canBeBanked": true,
     "iconSlug": "medicham",
     "gen8Appearance": "bdsp",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3,
+    "uwObtainingMethod": 2
   },
   {
     "name": "Medicham-Mega",
@@ -8642,7 +8790,8 @@
     "canBeBanked": true,
     "iconSlug": "manectric",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Manectric-Mega",
@@ -8720,7 +8869,8 @@
     "canBeBanked": true,
     "iconSlug": "volbeat",
     "gen8Appearance": "bdsp",
-    "femaleRatio": 0
+    "femaleRatio": 0,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Illumise",
@@ -8741,7 +8891,8 @@
     "canBeBanked": true,
     "iconSlug": "illumise",
     "gen8Appearance": "bdsp",
-    "femaleRatio": 100
+    "femaleRatio": 100,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Roselia",
@@ -8803,7 +8954,8 @@
     "canBeBanked": true,
     "iconSlug": "swalot",
     "gen8Appearance": "bdsp",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Carvanha",
@@ -8947,7 +9099,8 @@
     "canBeBanked": true,
     "iconSlug": "camerupt",
     "gen8Appearance": "bdsp",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Camerupt-Mega",
@@ -9027,7 +9180,9 @@
     "canBeBanked": true,
     "iconSlug": "grumpig",
     "gen8Appearance": "bdsp",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2,
+    "uwObtainingMethod": 2
   },
   {
     "name": "Spinda",
@@ -9069,7 +9224,8 @@
     "canBeBanked": true,
     "iconSlug": "trapinch",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Vibrava",
@@ -9090,7 +9246,8 @@
     "canBeBanked": true,
     "iconSlug": "vibrava",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Flygon",
@@ -9111,7 +9268,8 @@
     "canBeBanked": true,
     "iconSlug": "flygon",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Cacnea",
@@ -9152,7 +9310,8 @@
     "canBeBanked": true,
     "iconSlug": "cacturne",
     "gen8Appearance": "bdsp",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Swablu",
@@ -9194,7 +9353,8 @@
     "canBeBanked": true,
     "iconSlug": "altaria",
     "gen8Appearance": "tct",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "uwObtainingMethod": 2
   },
   {
     "name": "Altaria-Mega",
@@ -9254,7 +9414,8 @@
     "canBeBanked": true,
     "iconSlug": "seviper",
     "gen8Appearance": "bdsp",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Lunatone",
@@ -9379,7 +9540,8 @@
     "canBeBanked": true,
     "iconSlug": "crawdaunt",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Baltoy",
@@ -9640,7 +9802,8 @@
     "canBeBanked": true,
     "iconSlug": "kecleon",
     "gen8Appearance": "bdsp",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Shuppet",
@@ -9660,7 +9823,8 @@
     "canBeBanked": true,
     "iconSlug": "shuppet",
     "gen8Appearance": "bdsp",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Banette",
@@ -9680,7 +9844,8 @@
     "canBeBanked": true,
     "iconSlug": "banette",
     "gen8Appearance": "bdsp",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Banette-Mega",
@@ -9737,7 +9902,8 @@
     "canBeBanked": true,
     "iconSlug": "dusclops",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Tropius",
@@ -9759,7 +9925,8 @@
     "canBeBanked": true,
     "iconSlug": "tropius",
     "gen8Appearance": "bdsp",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Chimecho",
@@ -9798,7 +9965,8 @@
     "canBeBanked": true,
     "iconSlug": "absol",
     "gen8Appearance": "tct",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Absol-Mega",
@@ -9857,7 +10025,8 @@
     "canBeBanked": true,
     "iconSlug": "snorunt",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Glalie",
@@ -9878,7 +10047,8 @@
     "canBeBanked": true,
     "iconSlug": "glalie",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Glalie-Mega",
@@ -9920,7 +10090,8 @@
     "canBeBanked": true,
     "iconSlug": "spheal",
     "gen8Appearance": "tct",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Sealeo",
@@ -9942,7 +10113,8 @@
     "canBeBanked": true,
     "iconSlug": "sealeo",
     "gen8Appearance": "tct",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Walrein",
@@ -9964,7 +10136,8 @@
     "canBeBanked": true,
     "iconSlug": "walrein",
     "gen8Appearance": "tct",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Clamperl",
@@ -10100,7 +10273,8 @@
     "canBeBanked": true,
     "iconSlug": "shelgon",
     "gen8Appearance": "tct",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Salamence",
@@ -10120,7 +10294,8 @@
     "canBeBanked": true,
     "iconSlug": "salamence",
     "gen8Appearance": "tct",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Salamence-Mega",
@@ -10180,7 +10355,8 @@
     "canBeBanked": true,
     "iconSlug": "metang",
     "gen8Appearance": "tct",
-    "femaleRatio": null
+    "femaleRatio": null,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Metagross",
@@ -10200,7 +10376,8 @@
     "canBeBanked": true,
     "iconSlug": "metagross",
     "gen8Appearance": "tct",
-    "femaleRatio": null
+    "femaleRatio": null,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Metagross-Mega",
@@ -10857,7 +11034,8 @@
     "canBeBanked": true,
     "iconSlug": "bibarel",
     "gen8Appearance": "bdsp",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Kricketot",
@@ -10935,7 +11113,8 @@
     "canBeBanked": true,
     "iconSlug": "luxio",
     "gen8Appearance": "ioa",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Luxray",
@@ -10955,7 +11134,8 @@
     "canBeBanked": true,
     "iconSlug": "luxray",
     "gen8Appearance": "ioa",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Budew",
@@ -11233,7 +11413,8 @@
     "canBeBanked": true,
     "iconSlug": "combee",
     "gen8Appearance": "swsh",
-    "femaleRatio": 11.85
+    "femaleRatio": 11.85,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Vespiquen",
@@ -11253,7 +11434,8 @@
     "canBeBanked": true,
     "iconSlug": "vespiquen",
     "gen8Appearance": "swsh",
-    "femaleRatio": 100
+    "femaleRatio": 100,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Pachirisu",
@@ -11314,7 +11496,9 @@
     "canBeBanked": true,
     "iconSlug": "floatzel",
     "gen8Appearance": "bdsp",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2,
+    "uwObtainingMethod": 2
   },
   {
     "name": "Cherubi",
@@ -11438,7 +11622,8 @@
     "canBeBanked": true,
     "iconSlug": "gastrodon",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Gastrodon-East",
@@ -11480,7 +11665,8 @@
     "canBeBanked": true,
     "iconSlug": "ambipom",
     "gen8Appearance": "bdsp",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Drifloon",
@@ -11522,7 +11708,8 @@
     "canBeBanked": true,
     "iconSlug": "drifblim",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Buneary",
@@ -11768,7 +11955,8 @@
     "canBeBanked": true,
     "iconSlug": "bronzong",
     "gen8Appearance": "swsh",
-    "femaleRatio": null
+    "femaleRatio": null,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Bonsly",
@@ -11870,7 +12058,8 @@
     "canBeBanked": true,
     "iconSlug": "spiritomb",
     "gen8Appearance": "tct",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Gible",
@@ -11912,7 +12101,8 @@
     "canBeBanked": true,
     "iconSlug": "gabite",
     "gen8Appearance": "tct",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Garchomp",
@@ -11933,7 +12123,8 @@
     "canBeBanked": true,
     "iconSlug": "garchomp",
     "gen8Appearance": "tct",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Garchomp-Mega",
@@ -11994,7 +12185,8 @@
     "canBeBanked": true,
     "iconSlug": "riolu",
     "gen8Appearance": "swsh",
-    "femaleRatio": 11.85
+    "femaleRatio": 11.85,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Lucario",
@@ -12016,7 +12208,8 @@
     "canBeBanked": true,
     "iconSlug": "lucario",
     "gen8Appearance": "swsh",
-    "femaleRatio": 11.85
+    "femaleRatio": 11.85,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Lucario-Mega",
@@ -12094,7 +12287,8 @@
     "canBeBanked": true,
     "iconSlug": "hippowdon",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "uwObtainingMethod": 2
   },
   {
     "name": "Hippowdon ♀",
@@ -12113,7 +12307,8 @@
     "canBeBanked": true,
     "iconSlug": "female/hippowdon",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "uwObtainingMethod": 2
   },
   {
     "name": "Skorupi",
@@ -12157,7 +12352,9 @@
     "canBeBanked": true,
     "iconSlug": "drapion",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2,
+    "uwObtainingMethod": 2
   },
   {
     "name": "Croagunk",
@@ -12199,7 +12396,8 @@
     "canBeBanked": true,
     "iconSlug": "toxicroak",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Carnivine",
@@ -12300,7 +12498,8 @@
     "canBeBanked": true,
     "iconSlug": "snover",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Abomasnow",
@@ -12321,7 +12520,9 @@
     "canBeBanked": true,
     "iconSlug": "abomasnow",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3,
+    "uwObtainingMethod": 2
   },
   {
     "name": "Abomasnow-Mega",
@@ -12362,7 +12563,8 @@
     "canBeBanked": true,
     "iconSlug": "weavile",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Magnezone",
@@ -12383,7 +12585,8 @@
     "canBeBanked": true,
     "iconSlug": "magnezone",
     "gen8Appearance": "ioa",
-    "femaleRatio": null
+    "femaleRatio": null,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Lickilicky",
@@ -12425,7 +12628,8 @@
     "canBeBanked": true,
     "iconSlug": "rhyperior",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Tangrowth",
@@ -12445,7 +12649,8 @@
     "canBeBanked": true,
     "iconSlug": "tangrowth",
     "gen8Appearance": "ioa",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Electivire",
@@ -12464,7 +12669,8 @@
     "canBeBanked": true,
     "iconSlug": "electivire",
     "gen8Appearance": "tct",
-    "femaleRatio": 24.5
+    "femaleRatio": 24.5,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Magmortar",
@@ -12483,7 +12689,8 @@
     "canBeBanked": true,
     "iconSlug": "magmortar",
     "gen8Appearance": "tct",
-    "femaleRatio": 24.5
+    "femaleRatio": 24.5,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Togekiss",
@@ -12505,7 +12712,8 @@
     "canBeBanked": true,
     "iconSlug": "togekiss",
     "gen8Appearance": "swsh",
-    "femaleRatio": 11.85
+    "femaleRatio": 11.85,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Yanmega",
@@ -12526,7 +12734,8 @@
     "canBeBanked": true,
     "iconSlug": "yanmega",
     "gen8Appearance": "bdsp",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "uwObtainingMethod": 2
   },
   {
     "name": "Leafeon",
@@ -12545,7 +12754,8 @@
     "canBeBanked": true,
     "iconSlug": "leafeon",
     "gen8Appearance": "swsh",
-    "femaleRatio": 11.85
+    "femaleRatio": 11.85,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Glaceon",
@@ -12564,7 +12774,8 @@
     "canBeBanked": true,
     "iconSlug": "glaceon",
     "gen8Appearance": "swsh",
-    "femaleRatio": 11.85
+    "femaleRatio": 11.85,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Gliscor",
@@ -12647,7 +12858,8 @@
     "canBeBanked": true,
     "iconSlug": "gallade",
     "gen8Appearance": "swsh",
-    "femaleRatio": 0
+    "femaleRatio": 0,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Gallade-Mega",
@@ -12688,7 +12900,8 @@
     "canBeBanked": true,
     "iconSlug": "probopass",
     "gen8Appearance": "bdsp",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Dusknoir",
@@ -12707,7 +12920,8 @@
     "canBeBanked": true,
     "iconSlug": "dusknoir",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Froslass",
@@ -12728,7 +12942,8 @@
     "canBeBanked": true,
     "iconSlug": "froslass",
     "gen8Appearance": "swsh",
-    "femaleRatio": 100
+    "femaleRatio": 100,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Rotom",
@@ -13799,7 +14014,8 @@
     "canBeBanked": true,
     "iconSlug": "lillipup",
     "gen8Appearance": "ioa",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Herdier",
@@ -13819,7 +14035,8 @@
     "canBeBanked": true,
     "iconSlug": "herdier",
     "gen8Appearance": "ioa",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Stoutland",
@@ -13839,7 +14056,8 @@
     "canBeBanked": true,
     "iconSlug": "stoutland",
     "gen8Appearance": "ioa",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Purrloin",
@@ -13879,7 +14097,8 @@
     "canBeBanked": true,
     "iconSlug": "liepard",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Pansage",
@@ -13898,7 +14117,8 @@
     "canBeBanked": true,
     "iconSlug": "pansage",
     "gen8Appearance": "unknown",
-    "femaleRatio": 11.85
+    "femaleRatio": 11.85,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Simisage",
@@ -13917,7 +14137,8 @@
     "canBeBanked": true,
     "iconSlug": "simisage",
     "gen8Appearance": "unknown",
-    "femaleRatio": 11.85
+    "femaleRatio": 11.85,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Pansear",
@@ -13936,7 +14157,8 @@
     "canBeBanked": true,
     "iconSlug": "pansear",
     "gen8Appearance": "unknown",
-    "femaleRatio": 11.85
+    "femaleRatio": 11.85,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Simisear",
@@ -13955,7 +14177,8 @@
     "canBeBanked": true,
     "iconSlug": "simisear",
     "gen8Appearance": "unknown",
-    "femaleRatio": 11.85
+    "femaleRatio": 11.85,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Panpour",
@@ -13974,7 +14197,8 @@
     "canBeBanked": true,
     "iconSlug": "panpour",
     "gen8Appearance": "unknown",
-    "femaleRatio": 11.85
+    "femaleRatio": 11.85,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Simipour",
@@ -13993,7 +14217,8 @@
     "canBeBanked": true,
     "iconSlug": "simipour",
     "gen8Appearance": "unknown",
-    "femaleRatio": 11.85
+    "femaleRatio": 11.85,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Munna",
@@ -14013,7 +14238,8 @@
     "canBeBanked": true,
     "iconSlug": "munna",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Musharna",
@@ -14033,7 +14259,8 @@
     "canBeBanked": true,
     "iconSlug": "musharna",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Pidove",
@@ -14075,7 +14302,8 @@
     "canBeBanked": true,
     "iconSlug": "tranquill",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Unfezant",
@@ -14096,7 +14324,8 @@
     "canBeBanked": true,
     "iconSlug": "unfezant",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Unfezant ♀",
@@ -14117,7 +14346,8 @@
     "canBeBanked": true,
     "iconSlug": "female/unfezant",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Blitzle",
@@ -14157,7 +14387,8 @@
     "canBeBanked": true,
     "iconSlug": "zebstrika",
     "gen8Appearance": "unknown",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Roggenrola",
@@ -14197,7 +14428,8 @@
     "canBeBanked": true,
     "iconSlug": "boldore",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Gigalith",
@@ -14217,7 +14449,8 @@
     "canBeBanked": true,
     "iconSlug": "gigalith",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Woobat",
@@ -14239,7 +14472,8 @@
     "canBeBanked": true,
     "iconSlug": "woobat",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Swoobat",
@@ -14261,7 +14495,8 @@
     "canBeBanked": true,
     "iconSlug": "swoobat",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Drilbur",
@@ -14302,7 +14537,8 @@
     "canBeBanked": true,
     "iconSlug": "excadrill",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Audino",
@@ -14322,7 +14558,9 @@
     "canBeBanked": true,
     "iconSlug": "audino",
     "gen8Appearance": "tct",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2,
+    "uwObtainingMethod": 2
   },
   {
     "name": "Audino-Mega",
@@ -14443,7 +14681,8 @@
     "canBeBanked": true,
     "iconSlug": "palpitoad",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Seismitoad",
@@ -14464,7 +14703,8 @@
     "canBeBanked": true,
     "iconSlug": "seismitoad",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Throh",
@@ -14484,7 +14724,8 @@
     "canBeBanked": true,
     "iconSlug": "throh",
     "gen8Appearance": "swsh",
-    "femaleRatio": 0
+    "femaleRatio": 0,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Sawk",
@@ -14504,7 +14745,8 @@
     "canBeBanked": true,
     "iconSlug": "sawk",
     "gen8Appearance": "swsh",
-    "femaleRatio": 0
+    "femaleRatio": 0,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Sewaddle",
@@ -14546,7 +14788,8 @@
     "canBeBanked": true,
     "iconSlug": "swadloon",
     "gen8Appearance": "unknown",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Leavanny",
@@ -14567,7 +14810,8 @@
     "canBeBanked": true,
     "iconSlug": "leavanny",
     "gen8Appearance": "unknown",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Venipede",
@@ -14609,7 +14853,8 @@
     "canBeBanked": true,
     "iconSlug": "whirlipede",
     "gen8Appearance": "ioa",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Scolipede",
@@ -14630,7 +14875,8 @@
     "canBeBanked": true,
     "iconSlug": "scolipede",
     "gen8Appearance": "ioa",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Cottonee",
@@ -14694,7 +14940,8 @@
     "canBeBanked": true,
     "iconSlug": "petilil",
     "gen8Appearance": "ioa",
-    "femaleRatio": 100
+    "femaleRatio": 100,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Lilligant",
@@ -14714,7 +14961,8 @@
     "canBeBanked": true,
     "iconSlug": "lilligant",
     "gen8Appearance": "ioa",
-    "femaleRatio": 100
+    "femaleRatio": 100,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Lilligant-Hisui",
@@ -14816,7 +15064,8 @@
     "canBeBanked": true,
     "iconSlug": "sandile",
     "gen8Appearance": "ioa",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Krokorok",
@@ -14837,7 +15086,8 @@
     "canBeBanked": true,
     "iconSlug": "krokorok",
     "gen8Appearance": "ioa",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Krookodile",
@@ -14858,7 +15108,8 @@
     "canBeBanked": true,
     "iconSlug": "krookodile",
     "gen8Appearance": "ioa",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Darumaka",
@@ -14994,7 +15245,8 @@
     "canBeBanked": true,
     "iconSlug": "maractus",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Dwebble",
@@ -15016,7 +15268,8 @@
     "canBeBanked": true,
     "iconSlug": "dwebble",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Crustle",
@@ -15038,7 +15291,9 @@
     "canBeBanked": true,
     "iconSlug": "crustle",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3,
+    "uwObtainingMethod": 2
   },
   {
     "name": "Scraggy",
@@ -15103,7 +15358,9 @@
     "canBeBanked": true,
     "iconSlug": "sigilyph",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2,
+    "uwObtainingMethod": 2
   },
   {
     "name": "Yamask",
@@ -15290,7 +15547,8 @@
     "canBeBanked": true,
     "iconSlug": "garbodor",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Garbodor-Gigantamax",
@@ -15408,7 +15666,8 @@
     "canBeBanked": true,
     "iconSlug": "minccino",
     "gen8Appearance": "swsh",
-    "femaleRatio": 75.1
+    "femaleRatio": 75.1,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Cinccino",
@@ -15428,7 +15687,8 @@
     "canBeBanked": true,
     "iconSlug": "cinccino",
     "gen8Appearance": "swsh",
-    "femaleRatio": 75.1
+    "femaleRatio": 75.1,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Gothita",
@@ -15468,7 +15728,8 @@
     "canBeBanked": true,
     "iconSlug": "gothorita",
     "gen8Appearance": "swsh",
-    "femaleRatio": 75.1
+    "femaleRatio": 75.1,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Gothitelle",
@@ -15488,7 +15749,8 @@
     "canBeBanked": true,
     "iconSlug": "gothitelle",
     "gen8Appearance": "swsh",
-    "femaleRatio": 75.1
+    "femaleRatio": 75.1,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Solosis",
@@ -15528,7 +15790,8 @@
     "canBeBanked": true,
     "iconSlug": "duosion",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Reuniclus",
@@ -15548,7 +15811,8 @@
     "canBeBanked": true,
     "iconSlug": "reuniclus",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Ducklett",
@@ -15592,7 +15856,9 @@
     "canBeBanked": true,
     "iconSlug": "swanna",
     "gen8Appearance": "unknown",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2,
+    "uwObtainingMethod": 2
   },
   {
     "name": "Vanillite",
@@ -15757,7 +16023,8 @@
     "canBeBanked": true,
     "iconSlug": "sawsbuck",
     "gen8Appearance": "unknown",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Sawsbuck-Summer",
@@ -15840,7 +16107,8 @@
     "canBeBanked": true,
     "iconSlug": "emolga",
     "gen8Appearance": "ioa",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Karrablast",
@@ -16068,7 +16336,8 @@
     "canBeBanked": true,
     "iconSlug": "galvantula",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Ferroseed",
@@ -16089,7 +16358,8 @@
     "canBeBanked": true,
     "iconSlug": "ferroseed",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Ferrothorn",
@@ -16110,7 +16380,8 @@
     "canBeBanked": true,
     "iconSlug": "ferrothorn",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Klink",
@@ -16150,7 +16421,8 @@
     "canBeBanked": true,
     "iconSlug": "klang",
     "gen8Appearance": "swsh",
-    "femaleRatio": null
+    "femaleRatio": null,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Klinklang",
@@ -16170,7 +16442,8 @@
     "canBeBanked": true,
     "iconSlug": "klinklang",
     "gen8Appearance": "swsh",
-    "femaleRatio": null
+    "femaleRatio": null,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Tynamo",
@@ -16309,7 +16582,8 @@
     "canBeBanked": true,
     "iconSlug": "lampent",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Chandelure",
@@ -16330,7 +16604,8 @@
     "canBeBanked": true,
     "iconSlug": "chandelure",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Axew",
@@ -16372,7 +16647,8 @@
     "canBeBanked": true,
     "iconSlug": "fraxure",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Haxorus",
@@ -16393,7 +16669,8 @@
     "canBeBanked": true,
     "iconSlug": "haxorus",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Cubchoo",
@@ -16433,7 +16710,8 @@
     "canBeBanked": true,
     "iconSlug": "beartic",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Cryogonal",
@@ -16514,7 +16792,9 @@
     "canBeBanked": true,
     "iconSlug": "stunfisk",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2,
+    "uwObtainingMethod": 2
   },
   {
     "name": "Stunfisk-Galar",
@@ -16556,7 +16836,8 @@
     "canBeBanked": true,
     "iconSlug": "mienfoo",
     "gen8Appearance": "ioa",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Mienshao",
@@ -16577,7 +16858,8 @@
     "canBeBanked": true,
     "iconSlug": "mienshao",
     "gen8Appearance": "ioa",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Druddigon",
@@ -16598,7 +16880,8 @@
     "canBeBanked": true,
     "iconSlug": "druddigon",
     "gen8Appearance": "ioa",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Golett",
@@ -16640,7 +16923,8 @@
     "canBeBanked": true,
     "iconSlug": "golurk",
     "gen8Appearance": "swsh",
-    "femaleRatio": null
+    "femaleRatio": null,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Pawniard",
@@ -16661,7 +16945,8 @@
     "canBeBanked": true,
     "iconSlug": "pawniard",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Bisharp",
@@ -16682,7 +16967,8 @@
     "canBeBanked": true,
     "iconSlug": "bisharp",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Bouffalant",
@@ -16723,7 +17009,8 @@
     "canBeBanked": true,
     "iconSlug": "rufflet",
     "gen8Appearance": "swsh",
-    "femaleRatio": 0
+    "femaleRatio": 0,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Braviary",
@@ -16744,7 +17031,8 @@
     "canBeBanked": true,
     "iconSlug": "braviary",
     "gen8Appearance": "swsh",
-    "femaleRatio": 0
+    "femaleRatio": 0,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Braviary-Hisui",
@@ -16786,7 +17074,8 @@
     "canBeBanked": true,
     "iconSlug": "vullaby",
     "gen8Appearance": "swsh",
-    "femaleRatio": 100
+    "femaleRatio": 100,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Mandibuzz",
@@ -16807,7 +17096,8 @@
     "canBeBanked": true,
     "iconSlug": "mandibuzz",
     "gen8Appearance": "swsh",
-    "femaleRatio": 100
+    "femaleRatio": 100,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Heatmor",
@@ -16928,7 +17218,8 @@
     "canBeBanked": true,
     "iconSlug": "larvesta",
     "gen8Appearance": "ioa",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Volcarona",
@@ -16948,7 +17239,8 @@
     "canBeBanked": true,
     "iconSlug": "volcarona",
     "gen8Appearance": "ioa",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Cobalion",
@@ -17444,7 +17736,8 @@
     "canBeBanked": true,
     "iconSlug": "quilladin",
     "gen8Appearance": "unknown",
-    "femaleRatio": 11.85
+    "femaleRatio": 11.85,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Chesnaught",
@@ -17464,7 +17757,8 @@
     "canBeBanked": true,
     "iconSlug": "chesnaught",
     "gen8Appearance": "unknown",
-    "femaleRatio": 11.85
+    "femaleRatio": 11.85,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Fennekin",
@@ -17502,7 +17796,8 @@
     "canBeBanked": true,
     "iconSlug": "braixen",
     "gen8Appearance": "unknown",
-    "femaleRatio": 11.85
+    "femaleRatio": 11.85,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Delphox",
@@ -17522,7 +17817,8 @@
     "canBeBanked": true,
     "iconSlug": "delphox",
     "gen8Appearance": "unknown",
-    "femaleRatio": 11.85
+    "femaleRatio": 11.85,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Froakie",
@@ -17560,7 +17856,8 @@
     "canBeBanked": true,
     "iconSlug": "frogadier",
     "gen8Appearance": "unknown",
-    "femaleRatio": 11.85
+    "femaleRatio": 11.85,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Greninja",
@@ -17580,7 +17877,8 @@
     "canBeBanked": true,
     "iconSlug": "greninja",
     "gen8Appearance": "unknown",
-    "femaleRatio": 11.85
+    "femaleRatio": 11.85,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Greninja-Ash",
@@ -17641,7 +17939,8 @@
     "canBeBanked": true,
     "iconSlug": "diggersby",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Fletchling",
@@ -17681,7 +17980,8 @@
     "canBeBanked": true,
     "iconSlug": "fletchinder",
     "gen8Appearance": "ioa",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Talonflame",
@@ -17701,7 +18001,8 @@
     "canBeBanked": true,
     "iconSlug": "talonflame",
     "gen8Appearance": "ioa",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Scatterbug",
@@ -17761,7 +18062,8 @@
     "canBeBanked": true,
     "iconSlug": "vivillon",
     "gen8Appearance": "unknown",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Vivillon-Archipelago",
@@ -18202,7 +18504,8 @@
     "canBeBanked": true,
     "iconSlug": "pyroar",
     "gen8Appearance": "unknown",
-    "femaleRatio": 88.14
+    "femaleRatio": 88.14,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Pyroar ♀",
@@ -18337,7 +18640,8 @@
     "canBeBanked": true,
     "iconSlug": "floette",
     "gen8Appearance": "unknown",
-    "femaleRatio": 100
+    "femaleRatio": 100,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Floette-Orange",
@@ -18451,7 +18755,8 @@
     "canBeBanked": true,
     "iconSlug": "florges",
     "gen8Appearance": "unknown",
-    "femaleRatio": 100
+    "femaleRatio": 100,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Florges-Orange",
@@ -18565,7 +18870,8 @@
     "canBeBanked": true,
     "iconSlug": "gogoat",
     "gen8Appearance": "unknown",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Pancham",
@@ -18586,7 +18892,8 @@
     "canBeBanked": true,
     "iconSlug": "pancham",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Pangoro",
@@ -18608,7 +18915,8 @@
     "canBeBanked": true,
     "iconSlug": "pangoro",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Furfrou",
@@ -18818,7 +19126,8 @@
     "canBeBanked": true,
     "iconSlug": "espurr",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Meowstic",
@@ -18838,7 +19147,8 @@
     "canBeBanked": true,
     "iconSlug": "meowstic",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Meowstic ♀",
@@ -18858,7 +19168,8 @@
     "canBeBanked": true,
     "iconSlug": "female/meowstic",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Honedge",
@@ -18957,7 +19268,8 @@
     "canBeBanked": true,
     "iconSlug": "spritzee",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Aromatisse",
@@ -18976,7 +19288,8 @@
     "canBeBanked": true,
     "iconSlug": "aromatisse",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Swirlix",
@@ -18995,7 +19308,8 @@
     "canBeBanked": true,
     "iconSlug": "swirlix",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Slurpuff",
@@ -19014,7 +19328,8 @@
     "canBeBanked": true,
     "iconSlug": "slurpuff",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Inkay",
@@ -19036,7 +19351,8 @@
     "canBeBanked": true,
     "iconSlug": "inkay",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Malamar",
@@ -19058,7 +19374,8 @@
     "canBeBanked": true,
     "iconSlug": "malamar",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Binacle",
@@ -19100,7 +19417,9 @@
     "canBeBanked": true,
     "iconSlug": "barbaracle",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2,
+    "uwObtainingMethod": 2
   },
   {
     "name": "Skrelp",
@@ -19206,7 +19525,8 @@
     "canBeBanked": true,
     "iconSlug": "helioptile",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Heliolisk",
@@ -19228,7 +19548,9 @@
     "canBeBanked": true,
     "iconSlug": "heliolisk",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3,
+    "uwObtainingMethod": 2
   },
   {
     "name": "Tyrunt",
@@ -19329,7 +19651,8 @@
     "canBeBanked": true,
     "iconSlug": "sylveon",
     "gen8Appearance": "swsh",
-    "femaleRatio": 11.85
+    "femaleRatio": 11.85,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Hawlucha",
@@ -19351,7 +19674,8 @@
     "canBeBanked": true,
     "iconSlug": "hawlucha",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Dedenne",
@@ -19373,7 +19697,8 @@
     "canBeBanked": true,
     "iconSlug": "dedenne",
     "gen8Appearance": "ioa",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Carbink",
@@ -19434,7 +19759,8 @@
     "canBeBanked": true,
     "iconSlug": "sliggoo",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Sliggoo-Hisui",
@@ -19475,7 +19801,8 @@
     "canBeBanked": true,
     "iconSlug": "goodra",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Goodra-Hisui",
@@ -19516,7 +19843,8 @@
     "canBeBanked": true,
     "iconSlug": "klefki",
     "gen8Appearance": "ioa",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Phantump",
@@ -19538,7 +19866,8 @@
     "canBeBanked": true,
     "iconSlug": "phantump",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Trevenant",
@@ -19560,7 +19889,8 @@
     "canBeBanked": true,
     "iconSlug": "trevenant",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Pumpkaboo",
@@ -19581,7 +19911,8 @@
     "canBeBanked": true,
     "iconSlug": "pumpkaboo",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Pumpkaboo-Small",
@@ -19665,7 +19996,8 @@
     "canBeBanked": true,
     "iconSlug": "gourgeist",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Gourgeist-Small",
@@ -19749,7 +20081,8 @@
     "canBeBanked": true,
     "iconSlug": "bergmite",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Avalugg",
@@ -19770,7 +20103,8 @@
     "canBeBanked": true,
     "iconSlug": "avalugg",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Avalugg-Hisui",
@@ -19814,7 +20148,8 @@
     "canBeBanked": true,
     "iconSlug": "noibat",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 2
   },
   {
     "name": "Noivern",
@@ -19836,7 +20171,8 @@
     "canBeBanked": true,
     "iconSlug": "noivern",
     "gen8Appearance": "swsh",
-    "femaleRatio": 49.8
+    "femaleRatio": 49.8,
+    "fsObtainingMethod": 3
   },
   {
     "name": "Xerneas",
