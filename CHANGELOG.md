@@ -1,13 +1,22 @@
 # Changelog
 
+## 0.7.1 - 2022-08-21
+
+### Changed
+
+- Fixed Hisuian Electrode being shown in Friend Safaris instead of Kantonian
+
 ## 0.7.0 - 2022-08-21
+
 ### Added
 
 - Friend Safari Shiny Dex
 - Ultra Wormhole Shiny Dex
 
 ## 0.6.1 - 2021-06-18
+
 ### Changed
+
 - Fixed crash when trying to read sheets with missing config
 
 ## 0.6.0 - 2022-06-09
