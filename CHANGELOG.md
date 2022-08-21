@@ -1,8 +1,10 @@
 # Changelog
 
-## 0.7.0 - TBD
+## 0.7.0 - 2022-08-21
 ### Added
+
 - Friend Safari Shiny Dex
+- Ultra Wormhole Shiny Dex
 
 ## 0.6.1 - 2021-06-18
 ### Changed
