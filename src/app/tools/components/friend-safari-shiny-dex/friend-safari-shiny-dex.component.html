@@ -1,0 +1,10 @@
+<ng-container *ngIf="shinies$">
+  <app-grid appearance="minimal" class="friend-safari-grid" *ngIf="shinies$|async as shinies">
+    <ng-container *ngFor="let shinyDexentry of shinies">
+      <ng-container
+        *ngIf="(shinyDexentry[1] | shinyDexEntryToPokemon: {item: shinyDexentry[1].pokemon.fsObtainingMethod === 3 ? 'rare-candy' : null}) as pokemon">
+        <app-grid-item [pokemon]="pokemon"></app-grid-item>
+      </ng-container>
+    </ng-container>
+  </app-grid>
+</ng-container>

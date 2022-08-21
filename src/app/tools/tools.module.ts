@@ -13,6 +13,8 @@ import { GridModule } from '../grid/grid.module';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { ShinyDexComponent } from './components/shiny-dex/shiny-dex.component';
 import { ShinyDexEntryToPokemonPipe } from './pipes/shiny-dex-entry-to-pokemon.pipe';
+import { FriendSafariShinyDexComponent } from './components/friend-safari-shiny-dex/friend-safari-shiny-dex.component';
+import { UltraWormholeShinyDexComponent } from './components/ultra-wormhole-shiny-dex/ultra-wormhole-shiny-dex.component';
 
 
 @NgModule({
@@ -21,7 +23,9 @@ import { ShinyDexEntryToPokemonPipe } from './pipes/shiny-dex-entry-to-pokemon.p
     BreedingComponent,
     FilterLevelUpMovesPipe,
     ShinyDexComponent,
-    ShinyDexEntryToPokemonPipe
+    ShinyDexEntryToPokemonPipe,
+    FriendSafariShinyDexComponent,
+    UltraWormholeShinyDexComponent
   ],
   imports: [
     ToolsRoutingModule,
