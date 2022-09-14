@@ -26417,7 +26417,7 @@
       "Pressure"
     ],
     "hiddenAbility": null,
-    "canBeShiny": false,
+    "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "eternatus",
     "gen8Appearance": "swsh",
