@@ -1,10 +1,16 @@
 .markdown {
-  h1:first-of-type{margin-top: 0;}
+  h1:first-of-type {
+    margin-top: 0;
+  }
 
-  ul{
+  ul {
     list-style-type: disc;
     margin-block-start: 1em;
     margin-block-end: 1em;
     padding-inline-start: 40px;
+  }
+
+  i.pokesprite.pokemon {
+    margin: -34px -4px -10px;
   }
 }

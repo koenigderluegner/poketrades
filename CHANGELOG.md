@@ -1,10 +1,17 @@
 # Changelog
 
+## 0.7.2 - 2022-09-15
+
+### Changed
+
+- Marked ::eternatus:shiny::Eternatus as 'can be shiny'
+- Added support for Pokémon icons to changelog
+
 ## 0.7.1 - 2022-08-21
 
 ### Changed
 
-- Fixed Hisuian Electrode being shown in Friend Safaris instead of Kantonian
+- Fixed ::electrode-hisui::Hisuian Electrode being shown in Friend Safaris instead of Kantonian
 
 ## 0.7.0 - 2022-08-21
 
@@ -32,14 +39,16 @@
 ## 0.5.0 - 2022-03-20
 
 ### Added
-- Filter for pokemon categories like legendary or fossil
+
+- Filter for Pokémon categories like legendary or fossil
 
 ### Changed
+
 - Changed "hide inactives" filter to owned status filter
-- Fixed Diancie-Mega bankable flag being true
+- Fixed ::diancie-mega::Diancie-Mega bankable flag being true
 - Fixed detail appearance of grid showing empty moves
 - Fixed missing icon for RNGs
-- Fixed missing Avalugg entry
+- Fixed missing ::avalugg::Avalugg entry
 
 
 ## 0.4.2 - 2022-03-19
@@ -48,7 +57,9 @@
 
 ## 0.4.1 - 2022-03-06
 ### Changed
-- Updated Articuno-Galar, Zapdos-Galar and Moltres-Galar shiny availability
+
+- Updated ::Articuno-Galar:shiny::Articuno-Galar, ::Zapdos-Galar:shiny::Zapdos-Galar and ::Moltres-Galar:shiny::
+  Moltres-Galar shiny availability
 - Changed first appearances from BDSP mons
 - Fixed female versions show as Bulbasaur icons 
 
@@ -65,7 +76,8 @@
 
 ## 0.3.3 - 2021-10-24
 ### Changed
-- Zacian and Zamazenta can be shiny since 22nd October 2021
+
+- ::Zacian:shiny::Zacian and ::Zamazenta:shiny::Zamazenta can be shiny since 22nd October 2021
 
 ## 0.3.2 - 2021-10-02
 ### Changed
@@ -73,7 +85,8 @@
 
 ## 0.3.1 - 2021-09-25
 ### Changed
-- Fixed Galar-Birds, Marshadow and Magearna being marked as "can be shiny"
+
+- Fixed Galar-Birds, ::Marshadow::Marshadow and ::Magearna::Magearna being marked as "can be shiny"
 
 ## 0.3.0 - 2021-09-15
 ### Changed
@@ -89,14 +102,15 @@
 
 ## 0.2.0 - 2021-01-30
 ### Added
-- Filter by pokemon name
+
+- Filter by Pokémon name
 - Sorting
-    - Sorting by name (issue [#9])
-    - Sorting by dex number
+  - Sorting by name (issue [#9])
+  - Sorting by dex number
 - Flag to load json files as modules
 - Items now guess their category if none is set
-- Ball of pokemon in detailed and normal view
-- Hold item of pokemon in detailed and normal view
+- Ball of Pokémon in detailed and normal view
+- Hold item of Pokémon in detailed and normal view
 - A shiny indicator to normal view
     
 ### Changed
