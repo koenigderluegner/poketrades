@@ -14,7 +14,14 @@ export class ChangelogComponent {
   markdown: string;
 
   constructor() {
-    this.markdown = pageMarkdown;
+    this.markdown = this._convertPokemonIconTokens(pageMarkdown);
+  }
+
+  private _convertPokemonIconTokens(markdown: string): string {
+    return markdown.replace(/::(?<pokemon>[\.\d\w-]+)(?<shiny>:shiny)?::/gm, (...args) => {
+      const {pokemon, shiny}: { pokemon: string, shiny?: string } = args[args.length - 1];
+      return `<i class="pokesprite pokemon ${pokemon.toLowerCase()}${!!shiny ? ' shiny' : ''}"></i>`;
+    });
   }
 
 }
