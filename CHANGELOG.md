@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.7.2 - 2022-09-15
+
+### Changed
+
+- Marked Eternatus as 'can be shiny'
+
 ## 0.7.1 - 2022-08-21
 
 ### Changed
