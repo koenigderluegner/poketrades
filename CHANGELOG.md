@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.7.3 - 2022-10-09
+
+### Changed
+
+- Updated dependencies
+
 ## 0.7.2 - 2022-09-15
 
 ### Changed
