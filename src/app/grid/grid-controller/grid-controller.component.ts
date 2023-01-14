@@ -5,7 +5,7 @@ import { GridService } from '../services/grid.service';
 import { Observable, Subscription } from 'rxjs';
 import { debounceTime, distinctUntilChanged, tap } from 'rxjs/operators';
 import { PokemonCategory } from '@shared/enums/pokemon-category.enum';
-import { MatOption } from '@angular/material/core';
+import { MatLegacyOption as MatOption } from '@angular/material/legacy-core';
 import { OwnedStatus } from "../types/owned-status.type";
 import { MatSortable } from "@angular/material/sort";
 

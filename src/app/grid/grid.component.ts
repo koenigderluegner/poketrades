@@ -10,7 +10,7 @@ import {
 } from '@angular/core';
 import { GridAppearanceType } from './grid-appearance.type';
 import { GridItemComponent } from './grid-item/grid-item.component';
-import { MatTableDataSource } from '@angular/material/table';
+import { MatLegacyTableDataSource as MatTableDataSource } from '@angular/material/legacy-table';
 import { MatSort, MatSortable } from '@angular/material/sort';
 import { Subscription } from 'rxjs';
 import { GridService } from './services/grid.service';

@@ -2,10 +2,10 @@ import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { BreedingComponent } from './breeding.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatLegacyAutocompleteModule as MatAutocompleteModule } from '@angular/material/legacy-autocomplete';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatInputModule } from '@angular/material/input';
+import { MatLegacyInputModule as MatInputModule } from '@angular/material/legacy-input';
 import { SpreadsheetFacade } from '@spreadsheet/spreadsheet.facade';
 import { BehaviorSubject } from 'rxjs';
 import { MOCK_SPREADSHEET } from '../../../../testing/mocks/spreadsheet.mock';

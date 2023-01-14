@@ -12,7 +12,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { GridControllerComponent } from './grid-controller/grid-controller.component';
 import { MatIconModule } from '@angular/material/icon';
 import { DetailedMoveComponent } from './detailed-move/detailed-move.component';
-import { MatSelectModule } from '@angular/material/select';
+import { MatLegacySelectModule as MatSelectModule } from '@angular/material/legacy-select';
 
 
 @NgModule({
