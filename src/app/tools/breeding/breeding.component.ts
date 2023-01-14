@@ -3,9 +3,6 @@ import { FormControl } from '@angular/forms';
 import { DatabaseFacadeService } from '../../database/database-facade.service';
 import { forkJoin, Observable } from 'rxjs';
 import { map, mergeMap, startWith, tap } from 'rxjs/operators';
-import {
-  MatLegacyAutocompleteSelectedEvent as MatAutocompleteSelectedEvent
-} from '@angular/material/legacy-autocomplete';
 import { LegalityEntry } from '../../database/models/legality-entry.interface';
 import { PokemonEntry } from '../../database/models/pokemon-entry.interface';
 import { LevelUpMove } from '../../database/models/level-up-move.interface';
@@ -14,6 +11,7 @@ import { SpreadsheetFacade } from '@spreadsheet/spreadsheet.facade';
 import { Worksheet } from '@spreadsheet/models/worksheet';
 import { GridService } from '../../grid/services/grid.service';
 import { Breedable } from '@shared/interfaces/breedable.interface';
+import { MatAutocompleteSelectedEvent } from "@angular/material/autocomplete";
 
 @Component({
   selector: 'app-breeding',

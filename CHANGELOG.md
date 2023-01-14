@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.7.5 - 2023-01-14
+
+### Changed
+
+- Updated dependencies
+- Minor design fixes
+
 ## 0.7.4 - 2022-11-12
 
 ### Changed

@@ -15,7 +15,7 @@
                     [displayWith]="displayFn" autoActiveFirstOption>
     <mat-option *ngFor="let option of filteredPokemon | async" [value]="option">
       <app-pokemon [slug]="option.pokemon | nameToSlug"></app-pokemon>
-      {{option.pokemon}}
+      <span class="pokemon-name"> {{option.pokemon}} </span>
     </mat-option>
   </mat-autocomplete>
   <ng-container *ngIf="selectedPokemon$">

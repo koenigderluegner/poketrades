@@ -1,7 +1,7 @@
 <app-changer *ngIf="(hideAppearance$ | async)  === false" (selectionChanged)="changeGrid($event)"
              class="m-right-gap"></app-changer>
 
-<mat-form-field floatLabel="never" class="sel m-right-gap" appearance="fill"
+<mat-form-field class="sel m-right-gap" appearance="fill"
                 *ngIf="(hideOwnedStatusControl$ | async) === false">
   <mat-select multiple [formControl]="ownedStatusControl" placeholder="select owned status" panelClass="dark-panel">
     <mat-option [value]="'owned'">Owned</mat-option>
@@ -10,7 +10,7 @@
 </mat-form-field>
 
 <input [formControl]="filter" class="m-right-gap grid-filter placeholder-light" placeholder="filter by name">
-<mat-form-field floatLabel="never" class="sel m-right-gap" appearance="fill">
+<mat-form-field class="sel m-right-gap" appearance="fill">
   <mat-select [formControl]="sorting" placeholder="select sorting" panelClass="dark-panel">
     <mat-option>None</mat-option>
     <mat-option [value]="{id: 'name', start: 'asc', disableClear: false}">Name ascending</mat-option>
@@ -21,7 +21,7 @@
 
 </mat-form-field>
 
-<mat-form-field floatLabel="never" class="sel m-right-gap" appearance="fill">
+<mat-form-field class="sel m-right-gap" appearance="fill">
   <mat-select multiple panelClass="dark-panel" [formControl]="categories" placeholder="Filter by category"
               #categoriesSelect>
     <mat-select-trigger *ngIf="transformSelectSelection(categoriesSelect.selected) as selection">
