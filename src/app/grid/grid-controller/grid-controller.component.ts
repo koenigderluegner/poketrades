@@ -5,9 +5,9 @@ import { GridService } from '../services/grid.service';
 import { Observable, Subscription } from 'rxjs';
 import { debounceTime, distinctUntilChanged, tap } from 'rxjs/operators';
 import { PokemonCategory } from '@shared/enums/pokemon-category.enum';
-import { MatOption } from '@angular/material/core';
 import { OwnedStatus } from "../types/owned-status.type";
 import { MatSortable } from "@angular/material/sort";
+import { MatOption } from "@angular/material/core";
 
 @Component({
   selector: 'app-grid-controller',
@@ -70,7 +70,7 @@ export class GridControllerComponent implements OnDestroy {
     this.subscriptions.forEach(sub => sub.unsubscribe());
   }
 
-  transformSelectSelection(selection: MatOption<any> | MatOption[]): MatOption[] {
+  transformSelectSelection(selection: MatOption | MatOption[]): MatOption[] {
     return Array.isArray(selection) ? selection : [selection];
   }
 

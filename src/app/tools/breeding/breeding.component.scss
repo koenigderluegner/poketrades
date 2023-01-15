@@ -1,9 +1,22 @@
 .poke-autocomplete {
-  .mat-option {
+  background: #fff;
+
+  .mat-mdc-option {
     padding: 0 16px 0 0;
+
+    &:hover:not(.mat-mdc-option-disabled),
+    &:focus:not(.mat-mdc-option-disabled),
+    &.mdc-list-item--selected:not(.mat-mdc-option-multiple):not(.mat-mdc-option-disabled),
+    &.mat-mdc-option-active {
+      background: rgb(127 127 127 / 0.10);
+    }
   }
 
-  .mat-option-text {
+  .pokemon-name {
+    align-self: center;
+  }
+
+  .mdc-list-item__primary-text {
     display: inline-flex;
     align-items: flex-end;
     height: 48px;
@@ -155,13 +168,13 @@
   .poke-autocomplete {
     background: #21262d;
 
-    .mat-option {
+    .mat-mdc-option {
       color: rgb(201, 209, 217);
 
-      &:hover:not(.mat-option-disabled),
-      &:focus:not(.mat-option-disabled),
-      &.mat-selected:not(.mat-option-multiple):not(.mat-option-disabled),
-      &.mat-active {
+      &:hover:not(.mat-mdc-option-disabled),
+      &:focus:not(.mat-mdc-option-disabled),
+      &.mdc-list-item--selected:not(.mat-mdc-option-multiple):not(.mat-mdc-option-disabled),
+      &.mat-mdc-option-active {
         background: rgb(0 0 0 / 0.15);
       }
     }
