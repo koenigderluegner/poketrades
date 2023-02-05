@@ -39,7 +39,7 @@ export class ShinyDexComponent extends BaseShinyDexComponent implements OnInit {
     const shinies: { [key: string]: ShinyDexEntry } = {};
 
     for (const pokemon of pokemonEntries) {
-      if (pokemon.canBeShiny && pokemon.canBeBanked) {
+      if (pokemon.canBeShiny && pokemon.canBeBanked && !pokemon.name.includes('-Gigantamax')) {
         Object.assign(shinies, {
           [pokemon.name]: {
             pokemon, amountShinies: 0
