@@ -18,6 +18,11 @@ export class ShinyDexComponent extends BaseShinyDexComponent implements OnInit {
 
   shinies$?: Observable<[string, ShinyDexEntry][]>;
 
+  readonly #excludedSlugs: string[] = [
+    'floette-eternal',
+    'eiscue-noice'
+  ]
+
 
   constructor(private databases: DatabaseFacadeService,
               private spreadsheets: SpreadsheetFacade,
@@ -39,7 +44,7 @@ export class ShinyDexComponent extends BaseShinyDexComponent implements OnInit {
     const shinies: { [key: string]: ShinyDexEntry } = {};
 
     for (const pokemon of pokemonEntries) {
-      if (pokemon.canBeShiny && pokemon.canBeBanked && !pokemon.name.includes('-Gigantamax')) {
+      if (pokemon.canBeShiny && pokemon.canBeBanked && !pokemon.name.includes('-Gigantamax') && !this.#excludedSlugs.includes(pokemon.iconSlug)) {
         Object.assign(shinies, {
           [pokemon.name]: {
             pokemon, amountShinies: 0
