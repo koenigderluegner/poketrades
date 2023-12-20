@@ -1,6 +1,6 @@
 @if (pokemon && dbpokemon$) {
 
-  @if ((dbpokemon$ | async)as dbpokemon) {
+  @if ((dbpokemon$ | async); as dbpokemon) {
 
     <div class="detailed-header dark-bg d-flex">
       @if (pokemon.ball) {
@@ -96,7 +96,7 @@
         <div class="detailed-label dark-bg">Dynamax Level</div>
         <ul>
           @for (_ of [].constructor(10); track _) {
-            <li [class.on]="index < pokemon.dynamaxLevel"></li>
+            <li [class.on]="$index < pokemon.dynamaxLevel"></li>
           }
         </ul>
       </div>

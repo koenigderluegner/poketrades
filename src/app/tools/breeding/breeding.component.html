@@ -66,8 +66,8 @@
                 </td>
 
                 @for (_ of [].constructor(4); track _) {
-                  <td [class.is-em]="isEggMove(sheetbreedable.value.moves[index])">
-                    {{ sheetbreedable.value.moves[index] }}
+                  <td [class.is-em]="isEggMove(sheetbreedable.value.moves[$index])">
+                    {{ sheetbreedable.value.moves[$index] }}
                   </td>
                 }
                 <td>
