@@ -1,7 +1,13 @@
-<ng-container *ngIf="gridAppearance$ | async as gridAppearance">
-  <app-grid *ngIf="worksheet" [appearance]="gridAppearance">
-    <ng-container *ngFor="let entry of worksheet?.data; trackBy: trackBy">
-      <app-grid-item [pokemon]="entry | castBreedable"></app-grid-item>
-    </ng-container>
-  </app-grid>
-</ng-container>
+@if (gridAppearance$ | async; as gridAppearance) {
+
+  @if (worksheet) {
+    <app-grid [appearance]="gridAppearance">
+      @for (entry of worksheet?.data; track trackBy($index, entry)) {
+
+        <app-grid-item [pokemon]="entry | castBreedable"></app-grid-item>
+
+      }
+    </app-grid>
+  }
+
+}

@@ -1,10 +1,10 @@
-import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
-import {HeaderComponent} from './header.component';
-import {HttpClientTestingModule} from '@angular/common/http/testing';
-import {RouterTestingModule} from '@angular/router/testing';
-import {OverlayModule} from '@angular/cdk/overlay';
-import {SlugifyPipe} from '@shared/pipes/slugify.pipe';
+import { HeaderComponent } from './header.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+import { OverlayModule } from '@angular/cdk/overlay';
+import { SlugifyPipe } from '@shared/pipes/slugify.pipe';
 
 describe('HeaderComponent', () => {
   let component: HeaderComponent;

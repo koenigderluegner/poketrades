@@ -15,4 +15,5 @@ import { SharedModule } from '@shared/shared.module';
     SharedModule
   ]
 })
-export class SpreadsheetChangerModule { }
+export class SpreadsheetChangerModule {
+}

@@ -21,7 +21,7 @@ describe('BaseShinyDexComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [BaseShinyDexComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

@@ -1,5 +1,5 @@
 .poke-autocomplete {
-  background: #fff;
+  --mat-autocomplete-background-color: #fff;
 
   .mat-mdc-option {
     padding: 0 16px 0 0;
@@ -166,7 +166,7 @@
   }
 
   .poke-autocomplete {
-    background: #21262d;
+    --mat-autocomplete-background-color: #21262d;
 
     .mat-mdc-option {
       color: rgb(201, 209, 217);

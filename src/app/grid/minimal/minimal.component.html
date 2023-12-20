@@ -1,4 +1,8 @@
-<div class="icon" *ngIf="pokemon">
-  <app-pokemon [shiny]="pokemon.isShiny" [slug]="pokemon.iconSlug"></app-pokemon>
-  <app-item [slug]="pokemon?.item | slugify" *ngIf="pokemon?.item"></app-item>
-</div>
+@if (pokemon) {
+  <div class="icon">
+    <app-pokemon [shiny]="pokemon.isShiny" [slug]="pokemon.iconSlug"></app-pokemon>
+    @if (pokemon?.item) {
+      <app-item [slug]="pokemon?.item | slugify"></app-item>
+    }
+  </div>
+}

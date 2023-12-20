@@ -1,13 +1,17 @@
-<app-changer *ngIf="(hideAppearance$ | async)  === false" (selectionChanged)="changeGrid($event)"
-             class="m-right-gap"></app-changer>
+@if ((hideAppearance$ | async) === false) {
+  <app-changer (selectionChanged)="changeGrid($event)"
+               class="m-right-gap"></app-changer>
+}
 
-<mat-form-field class="sel m-right-gap" appearance="fill"
-                *ngIf="(hideOwnedStatusControl$ | async) === false">
-  <mat-select multiple [formControl]="ownedStatusControl" placeholder="select owned status" panelClass="dark-panel">
-    <mat-option [value]="'owned'">Owned</mat-option>
-    <mat-option [value]="'unowned'">Unowned</mat-option>
-  </mat-select>
-</mat-form-field>
+@if ((hideOwnedStatusControl$ | async) === false) {
+  <mat-form-field class="sel m-right-gap" appearance="fill"
+  >
+    <mat-select multiple [formControl]="ownedStatusControl" placeholder="select owned status" panelClass="dark-panel">
+      <mat-option [value]="'owned'">Owned</mat-option>
+      <mat-option [value]="'unowned'">Unowned</mat-option>
+    </mat-select>
+  </mat-form-field>
+}
 
 <input [formControl]="filter" class="m-right-gap grid-filter placeholder-light" placeholder="filter by name">
 <mat-form-field class="sel m-right-gap" appearance="fill">
@@ -24,12 +28,16 @@
 <mat-form-field class="sel m-right-gap" appearance="fill">
   <mat-select multiple panelClass="dark-panel" [formControl]="categories" placeholder="Filter by category"
               #categoriesSelect>
-    <mat-select-trigger *ngIf="transformSelectSelection(categoriesSelect.selected) as selection">
-      {{selection.length ? selection[0].viewValue : ''}}
-      <span *ngIf="selection.length > 1" class="filter-others-label">
-        (+{{selection.length - 1}} {{selection.length === 2 ? 'other' : 'others'}})
+    @if (transformSelectSelection(categoriesSelect.selected); as selection) {
+      <mat-select-trigger>
+        {{ selection.length ? selection[0].viewValue : '' }}
+        @if (selection.length > 1) {
+          <span class="filter-others-label">
+        (+{{ selection.length - 1 }} {{ selection.length === 2 ? 'other' : 'others' }})
       </span>
-    </mat-select-trigger>
+        }
+      </mat-select-trigger>
+    }
     <mat-option [value]="pokemonCategory.UNCATEGORIZED">Uncategorized</mat-option>
     <mat-optgroup label="Valuable">
       <mat-option [value]="pokemonCategory.SUB_LEGENDARY">Sub-Legendary</mat-option>

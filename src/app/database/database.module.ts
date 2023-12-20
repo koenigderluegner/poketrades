@@ -8,4 +8,5 @@ import { CommonModule } from '@angular/common';
     CommonModule
   ]
 })
-export class DatabaseModule { }
+export class DatabaseModule {
+}

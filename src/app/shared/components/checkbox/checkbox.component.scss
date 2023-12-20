@@ -35,11 +35,11 @@ $grid-changer-height: 24px;
 
 @media (prefers-color-scheme: dark) {
   .inacitve-hider {
-    background:#21262d;
+    background: #21262d;
     color: #efe2e3;
 
     input:checked ~ .label, input:checked ~ .material-icons {
-      background:  #161b22;
+      background: #161b22;
       color: #58a6ff;
     }
   }

@@ -1,45 +1,59 @@
-<ng-container *ngIf="spreadsheetData">
+@if (spreadsheetData) {
+
   <div class="App-title">
-    <a routerLink="/">{{spreadsheetData.title ? spreadsheetData.title : 'Pokétrades' }}</a>
+    <a routerLink="/">{{ spreadsheetData.title ? spreadsheetData.title : 'Pokétrades' }}</a>
   </div>
 
-  <nav *ngIf="windowSize >= 1200" class="App-navigation">
-    <div class="nav-wrapper">
-      <ul>
-        <li><a routerLink="/change-spreadsheet">Change Spreadsheet</a></li>
-        <li *ngIf="spreadsheetData.hasBreedables">
-          <a routerLinkActive="selected" [routerLink]="breeablesLink">Breedables</a>
-        </li>
-        <li *ngIf="spreadsheetData.hasValuables && valuablesLink">
-          <a routerLinkActive="selected" [routerLink]="valuablesLinkArray">Valuables</a>
-        </li>
-        <li>
-          <a routerLinkActive="selected" [routerLink]="toolsLink">Tools</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+  @if (windowSize >= 1200) {
+    <nav class="App-navigation">
+      <div class="nav-wrapper">
+        <ul>
+          <li><a routerLink="/change-spreadsheet">Change Spreadsheet</a></li>
+          @if (spreadsheetData.hasBreedables) {
+            <li>
+              <a routerLinkActive="selected" [routerLink]="breeablesLink">Breedables</a>
+            </li>
+          }
+          @if (spreadsheetData.hasValuables && valuablesLink) {
+            <li>
+              <a routerLinkActive="selected" [routerLink]="valuablesLinkArray">Valuables</a>
+            </li>
+          }
+          <li>
+            <a routerLinkActive="selected" [routerLink]="toolsLink">Tools</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  }
 
-  <button *ngIf="windowSize < 1200" type="button" (click)="openMenu()" mat-button>
-    <mat-icon>menu</mat-icon>
-  </button>
+  @if (windowSize < 1200) {
+    <button type="button" (click)="openMenu()" mat-button>
+      <mat-icon>menu</mat-icon>
+    </button>
+  }
 
   <ng-template #menuTemplate>
     <!-- remove code duplication -->
     <ul id="pop-up-main-menu" (click)="closeMenu()">
       <li><a (click)="closeMenu()" routerLink="/change-spreadsheet">Change Spreadsheet</a></li>
-      <li *ngIf="spreadsheetData.hasBreedables">
-        <a routerLinkActive="selected" (click)="closeMenu()" [routerLink]="breeablesLink">Breedables</a>
-      </li>
-      <li *ngIf="spreadsheetData.hasValuables && valuablesLink">
-        <a routerLinkActive="selected" (click)="closeMenu()" [routerLink]="valuablesLinkArray">Valuables</a>
-      </li>
+      @if (spreadsheetData.hasBreedables) {
+        <li>
+          <a routerLinkActive="selected" (click)="closeMenu()" [routerLink]="breeablesLink">Breedables</a>
+        </li>
+      }
+      @if (spreadsheetData.hasValuables && valuablesLink) {
+        <li>
+          <a routerLinkActive="selected" (click)="closeMenu()" [routerLink]="valuablesLinkArray">Valuables</a>
+        </li>
+      }
       <li>
         <a routerLinkActive="selected" (click)="closeMenu()" [routerLink]="toolsLink">Tools</a>
       </li>
     </ul>
   </ng-template>
 
-</ng-container>
+
+}
 
 

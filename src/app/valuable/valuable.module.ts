@@ -12,14 +12,15 @@ import { IconModule } from '../icon/icon.module';
 
 @NgModule({
   declarations: [IndexComponent, ValuablesComponent],
-    imports: [
-        CommonModule,
-        ValuableRoutingModule,
-        ReactiveFormsModule,
-        SharedModule,
-        GridModule,
-        IconModule
-    ],
+  imports: [
+    CommonModule,
+    ValuableRoutingModule,
+    ReactiveFormsModule,
+    SharedModule,
+    GridModule,
+    IconModule
+  ],
   providers: [SlugifyPipe]
 })
-export class ValuableModule { }
+export class ValuableModule {
+}

@@ -3,16 +3,22 @@
   <app-grid-controller></app-grid-controller>
 </div>
 <aside class="view-sidebar">
-  <ul class="sub-navi" *ngIf="worksheets">
+  @if (worksheets) {
+    <ul class="sub-navi">
 
-    <app-sub-navi-item [link]="['/'+spreadsheetId, 'valuables', worksheet.title | slugify]"
-                       *ngFor="let worksheet of worksheets"
-                       [text]="worksheet.title"
-                       [meta]="''+worksheet.data?.length">
-      <app-item *ngIf="worksheet.config?.subType" [slug]="(getItemMapping(worksheet.config?.subType) | slugify)"></app-item>
-    </app-sub-navi-item>
+      @for (worksheet of worksheets; track worksheet) {
+        <app-sub-navi-item [link]="['/'+spreadsheetId, 'valuables', worksheet.title | slugify]"
 
-  </ul>
+                           [text]="worksheet.title"
+                           [meta]="''+worksheet.data?.length">
+          @if (worksheet.config?.subType) {
+            <app-item [slug]="(getItemMapping(worksheet.config?.subType) | slugify)"></app-item>
+          }
+        </app-sub-navi-item>
+      }
+
+    </ul>
+  }
 </aside>
 <div class="view-content">
   <router-outlet></router-outlet>

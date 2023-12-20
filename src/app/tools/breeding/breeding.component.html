@@ -1,4 +1,5 @@
-<ng-container *ngIf="(breedables$ | async) as breedables">
+@if ((breedables$ | async); as breedables) {
+
   <label class="poke-autocomplete-input-wrapper" matAutocompleteOrigin #origin="matAutocompleteOrigin">
 
     <app-pokemon [slug]="selectedPokemon ? selectedPokemon.iconSlug : 'unknown'"></app-pokemon>
@@ -13,90 +14,129 @@
   </label>
   <mat-autocomplete (optionSelected)="selectPokemon($event)" #auto="matAutocomplete" class="poke-autocomplete"
                     [displayWith]="displayFn" autoActiveFirstOption>
-    <mat-option *ngFor="let option of filteredPokemon | async" [value]="option">
-      <app-pokemon [slug]="option.pokemon | nameToSlug"></app-pokemon>
-      <span class="pokemon-name"> {{option.pokemon}} </span>
-    </mat-option>
+    @for (option of filteredPokemon | async; track option) {
+      <mat-option [value]="option">
+        <app-pokemon [slug]="option.pokemon | nameToSlug"></app-pokemon>
+        <span class="pokemon-name"> {{ option.pokemon }} </span>
+      </mat-option>
+    }
   </mat-autocomplete>
-  <ng-container *ngIf="selectedPokemon$">
-    <ng-container *ngIf="(selectedPokemon$ | async) as pokemon">
-      <ng-container *ngIf="pokemon; else pokemonNotFound">
+  @if (selectedPokemon$) {
+
+    @if ((selectedPokemon$ | async); as pokemon) {
+
+      @if (pokemon) {
+
 
         <div class="card">
-          <h2 class="m-0">{{pokemon.name}} information</h2>
-          <app-type-badge [type]="type" size="small" *ngFor="let type of pokemon.types">{{type}}</app-type-badge>
+          <h2 class="m-0">{{ pokemon.name }} information</h2>
+          @for (type of pokemon.types; track type) {
+            <app-type-badge [type]="type" size="small">{{ type }}</app-type-badge>
+          }
           <div><b>Abilities:</b>
-            <ng-container *ngFor="let ability of pokemon.abilities">{{ability}}</ng-container>
+            @for (ability of pokemon.abilities; track ability) {
+              {{ ability }}
+            }
           </div>
-          <div><b>Hidden Ability:</b> {{pokemon.hiddenAbility ? pokemon.hiddenAbility : '-'}}</div>
+          <div><b>Hidden Ability:</b> {{ pokemon.hiddenAbility ? pokemon.hiddenAbility : '-' }}</div>
         </div>
 
 
-        <ng-container *ngIf="sheetBreeadbles">
+        @if (sheetBreeadbles) {
+
           <table class="breeding-pokemon-table">
-            <ng-container *ngFor="let sheetbreedable of sheetBreeadbles | keyvalue">
+            @for (sheetbreedable of sheetBreeadbles | keyvalue; track sheetbreedable) {
+
               <tr [class.is-owned]="sheetbreedable.value.isOwned">
                 <td class="ball-col">
                   <app-item category="ball" [slug]="sheetbreedable.key | slugify"></app-item>
                 </td>
                 <td class="egg-col">
-                  <app-pokemon matTooltip="This breedable has the maximum amount of egg moves!"
-                               *ngIf="hasMaxEggmoves(sheetbreedable.value)" slug="egg"></app-pokemon>
+                  @if (hasMaxEggmoves(sheetbreedable.value)) {
+                    <app-pokemon matTooltip="This breedable has the maximum amount of egg moves!"
+                                 slug="egg"></app-pokemon>
+                  }
                 </td>
                 <td>
-                  <ng-container *ngIf="sheetbreedable.value.isOwned">
-                    {{sheetbreedable.value.hasHiddenAbility ? 'HA' : 'NON-HA'}}
-                  </ng-container>
+                  @if (sheetbreedable.value.isOwned) {
+
+                    {{ sheetbreedable.value.hasHiddenAbility ? 'HA' : 'NON-HA' }}
+
+                  }
                 </td>
 
-                <td *ngFor="let _ of [].constructor(4); let index" [class.is-em]="isEggMove(sheetbreedable.value.moves[index])">
-                  {{sheetbreedable.value.moves[index]}}
-                </td>
+                @for (_ of [].constructor(4); track _) {
+                  <td [class.is-em]="isEggMove(sheetbreedable.value.moves[$index])">
+                    {{ sheetbreedable.value.moves[$index] }}
+                  </td>
+                }
                 <td>
-                  {{sheetbreedable.value.nature}}
+                  {{ sheetbreedable.value.nature }}
                 </td>
               </tr>
-            </ng-container>
+
+            }
           </table>
-        </ng-container>
+
+        }
 
         <div>
           <h2>Inheritance</h2>
           <div class="breeding-move-grid">
-            <ng-container *ngFor="let eggMove of eggMoves">
-              <div class="move-name">{{eggMove}}</div>
+            @for (eggMove of eggMoves; track eggMove) {
+
+              <div class="move-name">{{ eggMove }}</div>
               <app-grid appearance="minimal">
-                <ng-container *ngFor="let parent of parentMoves | keyvalue">
-                  <app-grid-item *ngIf="parent.key !== pokemon.name && parent.value.eggMoves.includes(eggMove)"
-                                 [pokemon]="asPokemon({iconSlug: parent.key | slugify}) "></app-grid-item>
-                </ng-container>
+                @for (parent of parentMoves | keyvalue; track parent) {
+
+                  @if (parent.key !== pokemon.name && parent.value.eggMoves.includes(eggMove)) {
+                    <app-grid-item
+                      [pokemon]="asPokemon({iconSlug: parent.key | slugify}) "></app-grid-item>
+                  }
+
+                }
               </app-grid>
-            </ng-container>
+
+            }
           </div>
         </div>
 
         <div>
           <h2>Leveling</h2>
           <div class="breeding-move-grid">
-            <ng-container *ngFor="let eggMove of eggMoves">
-              <div class="move-name">{{eggMove}}</div>
+            @for (eggMove of eggMoves; track eggMove) {
+
+              <div class="move-name">{{ eggMove }}</div>
               <app-grid appearance="minimal">
-                <ng-container *ngFor="let parent of parentMoves | keyvalue">
-                  <ng-container *ngIf="(parent.value.levelUpMoves | filterLevelUpMoves: eggMove) as moves">
-                    <app-grid-item [pokemon]="asPokemon({iconSlug: parent.key | slugify})"
-                                   *ngIf="moves.length"></app-grid-item>
-                  </ng-container>
-                </ng-container>
+                @for (parent of parentMoves | keyvalue; track parent) {
+
+                  @if ((parent.value.levelUpMoves | filterLevelUpMoves: eggMove); as moves) {
+
+                    @if (moves.length) {
+                      <app-grid-item [pokemon]="asPokemon({iconSlug: parent.key | slugify})"
+                      ></app-grid-item>
+                    }
+
+                  }
+
+                }
               </app-grid>
-            </ng-container>
+
+            }
           </div>
         </div>
-      </ng-container>
-    </ng-container>
-  </ng-container>
-</ng-container>
 
-<ng-template #pokemonNotFound>
-  <app-ball-guy-bubble>The Pokemon you're looking for was not found. The database might not be up to date.
-  </app-ball-guy-bubble>
-</ng-template>
+      } @else {
+
+        <app-ball-guy-bubble>The Pokemon you're looking for was not found. The database might not be up to date.
+        </app-ball-guy-bubble>
+
+      }
+
+    }
+
+  }
+
+}
+
+

@@ -13,14 +13,14 @@ import { OverviewComponent } from './components/overview/overview.component';
 
 @NgModule({
   declarations: [IndexComponent, BallComponent, OverviewComponent],
-    imports: [
-        CommonModule,
-        BreedableRoutingModule,
-        SharedModule,
-        GridModule,
-        ReactiveFormsModule,
-        IconModule
-    ],
+  imports: [
+    CommonModule,
+    BreedableRoutingModule,
+    SharedModule,
+    GridModule,
+    ReactiveFormsModule,
+    IconModule
+  ],
   providers: [SlugifyPipe]
 })
 export class BreedableModule {

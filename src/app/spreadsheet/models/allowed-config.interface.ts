@@ -8,4 +8,4 @@ export interface AllowedConfig {
 }
 
 export type AllowedConfigType = 'Valuables' | 'Breedables' | 'unknown';
-export type AllowedConfigSubType = 'RNGs'| 'Legendaries'| 'Shinies'| 'Competitives'| 'Events';
+export type AllowedConfigSubType = 'RNGs' | 'Legendaries' | 'Shinies' | 'Competitives' | 'Events';

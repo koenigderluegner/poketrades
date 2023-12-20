@@ -29,7 +29,7 @@
 
 }
 
-.main-wrapper{
+.main-wrapper {
   min-height: calc(100% - 106px); // 100% - (headerHeight + footerHeight)
 }
 
@@ -44,7 +44,7 @@
 }
 
 @media screen and (max-width: 900px) {
-  .main-wrapper{
+  .main-wrapper {
     min-height: calc(100% - 159px); // 100% - (headerHeight + footerHeight * 2)
   }
 }

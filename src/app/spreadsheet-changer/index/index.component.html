@@ -9,55 +9,78 @@
     search history
   </div>
   <ul>
-    <li class="history-entry" *ngFor="let historyEntry of spreadsheetHistory$ | async; trackBy: trackBy"
-        (click)="fromHistory(historyEntry.id)">
-      {{historyEntry.title}}
-    </li>
+    @for (historyEntry of spreadsheetHistory$ | async; track trackBy($index, historyEntry)) {
+      <li class="history-entry"
+          (click)="fromHistory(historyEntry.id)">
+        {{ historyEntry.title }}
+      </li>
+    }
   </ul>
 </aside>
 <div class="view-content">
-  <ng-container *ngIf="loadedSpreadsheet$; else notRequestedYet">
-    <ng-container *ngIf="(isLoading$ |async)">
-      <div *ngIf="hasRequested">
-        <app-spinner class="centered-spinner"></app-spinner>
-        <div class="t-align-center">Load spreadsheet</div>
-      </div>
-    </ng-container>
-    <ng-container *ngIf="!error; else errorTemplate">
-      <ng-container *ngIf="(loadedSpreadsheet$ | async) as loadedSpreadsheet">
-        <ng-container *ngIf="loadedSpreadsheet">
-          <div class="view-subheader">{{loadedSpreadsheet.title}}</div>
+  @if (loadedSpreadsheet$) {
+
+    @if ((isLoading$ |async)) {
+
+      @if (hasRequested) {
+        <div>
+          <app-spinner class="centered-spinner"></app-spinner>
+          <div class="t-align-center">Load spreadsheet</div>
+        </div>
+      }
+
+    }
+    @if (!error) {
+
+      @if ((loadedSpreadsheet$ | async); as loadedSpreadsheet) {
+
+        @if (loadedSpreadsheet) {
+
+          <div class="view-subheader">{{ loadedSpreadsheet.title }}</div>
           <div class=""></div>
-          <div class="collection-infos" *ngIf="loadedSpreadsheet.hasValuables">
-            <div class="title">Contains valuables!</div>
-            <div class="text">Valuables are Pokémon with a certain rarity. Event, shiny, competitive, legendary Pokémon
-              and others.
+          @if (loadedSpreadsheet.hasValuables) {
+            <div class="collection-infos">
+              <div class="title">Contains valuables!</div>
+              <div class="text">Valuables are Pokémon with a certain rarity. Event, shiny, competitive, legendary
+                Pokémon
+                and others.
+              </div>
             </div>
-          </div>
-          <div class="collection-infos" *ngIf="loadedSpreadsheet.hasBreedables">
-            <div class="title">Contains breedables!</div>
-            <div class="text">Breedables are Pokémon, which can be bred or are a result of breeding. They are usually
-              collected in different kind of balls like Bulbasaur in a Friend Ball.
+          }
+          @if (loadedSpreadsheet.hasBreedables) {
+            <div class="collection-infos">
+              <div class="title">Contains breedables!</div>
+              <div class="text">Breedables are Pokémon, which can be bred or are a result of breeding. They are usually
+                collected in different kind of balls like Bulbasaur in a Friend Ball.
+              </div>
             </div>
-          </div>
+          }
           <div class="button-row">
             <button class="save-button" (click)="saveSpreadsheet(loadedSpreadsheet)">Save as current spreadsheet
             </button>
           </div>
-        </ng-container>
-      </ng-container>
-    </ng-container>
-  </ng-container>
+
+        }
+
+      }
+
+    } @else {
+      Error: {{ error?.message }}
+    }
+
+  } @else {
+
+    <app-ball-guy-bubble>
+      <div>Enter a spreadsheet ID to load a spreadsheet.</div>
+      <div>Make sure the spreadsheet with that given ID is published to web and made from the template!</div>
+      <div>Currently no other spreadsheet template it supported.</div>
+    </app-ball-guy-bubble>
+
+  }
 </div>
 
-<ng-template #notRequestedYet>
-  <app-ball-guy-bubble>
-    <div>Enter a spreadsheet ID to load a spreadsheet.</div>
-    <div>Make sure the spreadsheet with that given ID is published to web and made from the template!</div>
-    <div>Currently no other spreadsheet template it supported.</div>
-  </app-ball-guy-bubble>
-</ng-template>
 
-<ng-template #errorTemplate>Error: {{ error?.message }}</ng-template>
+
+
 
 
