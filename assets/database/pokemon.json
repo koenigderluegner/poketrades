@@ -18437,7 +18437,7 @@
       "Compound Eyes"
     ],
     "hiddenAbility": "Friend Guard",
-    "canBeShiny": false,
+    "canBeShiny": true,
     "canBeBanked": true,
     "iconSlug": "vivillon-fancy",
     "gen8Appearance": "unknown",
