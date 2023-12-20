@@ -4,7 +4,7 @@
 
 ### Changed
 
-- Removed ::floette-ternal::Floette-Eternal and ::eiscue-noice::Eiscue-Noice from Shiny Living Dex
+- Removed ::floette-eternal::Floette-Eternal and ::eiscue-noice::Eiscue-Noice from Shiny Living Dex
 - Removed Gigantamax from Shiny Living Dex - cast Gigantamax-Pokemon to their Non-Gigantamax-Form
 
 ## 0.7.5 - 2023-01-14
