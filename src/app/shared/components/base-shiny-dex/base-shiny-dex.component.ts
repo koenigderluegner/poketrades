@@ -10,8 +10,8 @@ import { ShinyList } from '@shared/interfaces/shiny-list.interface';
 })
 export abstract class BaseShinyDexComponent {
 
-   constructor() {
-   }
+  constructor() {
+  }
 
   /**
    * Returns worksheets containing only shinies

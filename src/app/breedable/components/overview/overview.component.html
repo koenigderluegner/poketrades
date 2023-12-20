@@ -1,18 +1,27 @@
-<ng-container *ngIf="(data$ | async) as data;">
+@if ((data$ | async); as data; ) {
+
 
   <div class="legality-table">
-    <ng-container *ngIf="data">
-      <div class="legality-row d-flex" *ngFor="let entry of data.legality">
-        <div class="name d-flex">
-          <app-pokemon [slug]="entry.pokemon | nameToSlug"></app-pokemon>
-          {{entry.pokemon}}</div>
-        <ng-container *ngFor="let ball of data.entries | keyvalue">
-          <div class="ball-col" [class.active]="data.entries[ball.key][(entry.pokemon | slugify)]?.isOwned"
-               [class.illegal]="entry[ball.key] === null">
-            <app-item [slug]="ball.key | slugify" category="ball"></app-item>
+    @if (data) {
+
+      @for (entry of data.legality; track entry) {
+        <div class="legality-row d-flex">
+          <div class="name d-flex">
+            <app-pokemon [slug]="entry.pokemon | nameToSlug"></app-pokemon>
+            {{ entry.pokemon }}
           </div>
-        </ng-container>
-      </div>
-    </ng-container>
+          @for (ball of data.entries | keyvalue; track ball) {
+
+            <div class="ball-col" [class.active]="data.entries[ball.key][(entry.pokemon | slugify)]?.isOwned"
+                 [class.illegal]="entry[ball.key] === null">
+              <app-item [slug]="ball.key | slugify" category="ball"></app-item>
+            </div>
+
+          }
+        </div>
+      }
+
+    }
   </div>
-</ng-container>
+
+}

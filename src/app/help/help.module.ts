@@ -13,4 +13,5 @@ import { HowToUseGuideComponent } from './components/how-to-use-guide/how-to-use
     HelpRoutingModule
   ]
 })
-export class HelpModule { }
+export class HelpModule {
+}

@@ -8,9 +8,9 @@ describe('DetailedMoveComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DetailedMoveComponent ]
+      declarations: [DetailedMoveComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

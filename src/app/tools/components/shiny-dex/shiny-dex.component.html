@@ -1,7 +1,13 @@
-<ng-container *ngIf="shinies$">
-  <app-grid appearance="minimal" *ngIf="shinies$|async as shinies">
-    <ng-container *ngFor="let shinyDexentry of shinies">
-      <app-grid-item [pokemon]="shinyDexentry[1] | shinyDexEntryToPokemon"></app-grid-item>
-    </ng-container>
-  </app-grid>
-</ng-container>
+@if (shinies$) {
+
+  @if (shinies$|async; as shinies) {
+    <app-grid appearance="minimal">
+      @for (shinyDexentry of shinies; track shinyDexentry) {
+
+        <app-grid-item [pokemon]="shinyDexentry[1] | shinyDexEntryToPokemon"></app-grid-item>
+
+      }
+    </app-grid>
+  }
+
+}

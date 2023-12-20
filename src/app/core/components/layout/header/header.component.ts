@@ -1,5 +1,6 @@
 import {
-  Component, HostBinding,
+  Component,
+  HostBinding,
   HostListener,
   OnInit,
   TemplateRef,
@@ -7,11 +8,11 @@ import {
   ViewContainerRef,
   ViewEncapsulation
 } from '@angular/core';
-import {Spreadsheet} from '@spreadsheet/models/spreadsheet';
-import {SpreadsheetFacade} from '@spreadsheet/spreadsheet.facade';
-import {TemplatePortal} from '@angular/cdk/portal';
-import {Overlay, OverlayConfig, OverlayRef} from '@angular/cdk/overlay';
-import {SlugifyPipe} from '@shared/pipes/slugify.pipe';
+import { Spreadsheet } from '@spreadsheet/models/spreadsheet';
+import { SpreadsheetFacade } from '@spreadsheet/spreadsheet.facade';
+import { TemplatePortal } from '@angular/cdk/portal';
+import { Overlay, OverlayConfig, OverlayRef } from '@angular/cdk/overlay';
+import { SlugifyPipe } from '@shared/pipes/slugify.pipe';
 
 @Component({
   selector: 'app-header',

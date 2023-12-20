@@ -2,14 +2,20 @@
   <img class="icon-foundation" [src]="'assets/images/pokesprite-pokeball.svg'" alt="">
   <div class="icon">
     <app-pokemon [shiny]="!!pokemon?.isShiny" [slug]="pokemon?.iconSlug"></app-pokemon>
-    <app-item [slug]="pokemon?.item | slugify" *ngIf="pokemon?.item"></app-item>
-    <app-item [slug]="pokemon?.ball | slugify" category="ball" *ngIf="pokemon?.ball"></app-item>
+    @if (pokemon?.item) {
+      <app-item [slug]="pokemon?.item | slugify"></app-item>
+    }
+    @if (pokemon?.ball) {
+      <app-item [slug]="pokemon?.ball | slugify" category="ball"></app-item>
+    }
   </div>
 </div>
 <div class="information">
-  <div>{{pokemon?.name}}</div>
-  <div>{{pokemon?.ability}}</div>
+  <div>{{ pokemon?.name }}</div>
+  <div>{{ pokemon?.ability }}</div>
 </div>
 <div class="shiny-icon">
-  <mat-icon *ngIf="pokemon?.isShiny" svgIcon="shiny-stars"></mat-icon>
+  @if (pokemon?.isShiny) {
+    <mat-icon svgIcon="shiny-stars"></mat-icon>
+  }
 </div>

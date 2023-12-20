@@ -28,4 +28,5 @@ import { MatButtonModule } from "@angular/material/button";
     SlugifyPipe
   ]
 })
-export class CoreModule { }
+export class CoreModule {
+}

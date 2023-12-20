@@ -1,15 +1,27 @@
-<ng-container *ngIf="(this.dataSource.connect() | async) as items">
-  <ng-container *ngFor="let item of dataSource.filteredData; trackBy: trackByFn">
-    <ng-container [ngSwitch]="appearance">
-      <ng-container *ngSwitchCase="'minimal'">
+@if ((this.dataSource.connect() | async); as items) {
+
+  @for (item of dataSource.filteredData; track trackByFn($index, item)) {
+
+
+    @switch (appearance) {
+      @case ('minimal') {
+
         <app-minimal [pokemon]="item.pokemon"></app-minimal>
-      </ng-container>
-      <ng-container *ngSwitchCase="'normal'">
+
+      }
+      @case ('normal') {
+
         <app-normal [pokemon]="item.pokemon"></app-normal>
-      </ng-container>
-      <ng-container *ngSwitchCase="'detailed'">
+
+      }
+      @case ('detailed') {
+
         <app-detailed [pokemon]="item.pokemon"></app-detailed>
-      </ng-container>
-    </ng-container>
-  </ng-container>
-</ng-container>
+
+      }
+    }
+
+
+  }
+
+}

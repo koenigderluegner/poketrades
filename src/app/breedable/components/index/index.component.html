@@ -3,21 +3,25 @@
   <app-grid-controller></app-grid-controller>
 </div>
 <aside class="view-sidebar">
-  <ul class="sub-navi" *ngIf="worksheets">
+  @if (worksheets) {
+    <ul class="sub-navi">
 
-    <app-sub-navi-item [link]="['/'+spreadsheetId, 'breedables', 'overview']"
-                       [text]="'Overview'">
-      <app-item category="ball" [slug]="'master'"></app-item>
-    </app-sub-navi-item>
+      <app-sub-navi-item [link]="['/'+spreadsheetId, 'breedables', 'overview']"
+                         [text]="'Overview'">
+        <app-item category="ball" [slug]="'master'"></app-item>
+      </app-sub-navi-item>
 
-    <app-sub-navi-item [link]="['/'+spreadsheetId, 'breedables', worksheet.title | slugify]"
-                       *ngFor="let worksheet of worksheets"
-                       [text]="worksheet.title"
-                       [meta]="worksheet.ownedEntries +'/'+(worksheet.data ? worksheet.data.length : '???')">
+      @for (worksheet of worksheets; track worksheet) {
+        <app-sub-navi-item [link]="['/'+spreadsheetId, 'breedables', worksheet.title | slugify]"
 
-      <app-item category="ball" [slug]="worksheet.title | slugify"></app-item>
-    </app-sub-navi-item>
-  </ul>
+                           [text]="worksheet.title"
+                           [meta]="worksheet.ownedEntries +'/'+(worksheet.data ? worksheet.data.length : '???')">
+
+          <app-item category="ball" [slug]="worksheet.title | slugify"></app-item>
+        </app-sub-navi-item>
+      }
+    </ul>
+  }
 </aside>
 <div class="view-content">
   <router-outlet></router-outlet>

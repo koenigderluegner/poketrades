@@ -1,4 +1,5 @@
-<ng-container *ngIf="appearance$ | async as appearance">
+@if (appearance$ | async; as appearance) {
+
   <label class="grid-changer-option">
     <input value="minimal" [checked]="appearance==='minimal' " name="changer" type="radio"
            (change)="emitChange($event)">
@@ -18,4 +19,5 @@
     <span class="material-icons">view_column</span>
     <span class="label">Detailed</span>
   </label>
-</ng-container>
+
+}

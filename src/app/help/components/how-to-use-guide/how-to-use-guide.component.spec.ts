@@ -8,9 +8,9 @@ describe('HowToUseGuideComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HowToUseGuideComponent ]
+      declarations: [HowToUseGuideComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

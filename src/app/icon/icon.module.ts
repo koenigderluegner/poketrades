@@ -4,7 +4,6 @@ import { PokemonComponent } from './pokemon/pokemon.component';
 import { ItemComponent } from './item/item.component';
 
 
-
 @NgModule({
   declarations: [PokemonComponent, ItemComponent],
   exports: [
@@ -15,4 +14,5 @@ import { ItemComponent } from './item/item.component';
     CommonModule
   ]
 })
-export class IconModule { }
+export class IconModule {
+}
