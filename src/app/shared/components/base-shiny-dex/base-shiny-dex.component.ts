@@ -51,7 +51,9 @@ export abstract class BaseShinyDexComponent {
     for (const worksheet of allShinyWorksheets) {
       if (worksheet.data) {
         for (const worksheetentries of worksheet.data) {
-          const pokemonName = worksheetentries.name;
+          // we exclude Gigantamax, technically they're a different form, but are SwSh exclusive (like megas in earlier
+          // gens
+          const pokemonName = worksheetentries.name.replace('-Gigantamax', '');
           if (shinyList[pokemonName]) {
             shinyList[pokemonName].amountShinies++;
           } else {
