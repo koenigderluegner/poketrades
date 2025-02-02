@@ -1,4 +1,4 @@
-import { Component, HostBinding, inject, OnChanges, OnInit, SimpleChanges, ViewEncapsulation } from '@angular/core';
+import { Component, inject, OnChanges, OnInit, SimpleChanges, ViewEncapsulation } from '@angular/core';
 import { DatabaseFacadeService } from '../../database/database-facade.service';
 import { forkJoin, Observable, of } from 'rxjs';
 import { PokemonEntry } from '../../database/models/pokemon-entry.interface';
@@ -27,10 +27,14 @@ import { Pokemon } from "@shared/interfaces/pokemon";
     TypeBadgeComponent,
     MatIcon,
     DetailedMoveComponent
-  ]
+  ],
+  host: {
+    'class': 'grid-item',
+    '[class.inactive]': 'inactive',
+  }
 })
 export class DetailedComponent extends GridBaseAppearanceDirective implements OnInit, OnChanges {
-  @HostBinding('class.grid-item') isGridItem = true;
+
   isEggMove$: Observable<boolean[]> | undefined;
   natureClass = '';
   dbpokemon$: Observable<PokemonEntry> | undefined;
@@ -38,7 +42,7 @@ export class DetailedComponent extends GridBaseAppearanceDirective implements On
   protected readonly PokemonComponent = PokemonComponent;
   private databaseFacadeService = inject(DatabaseFacadeService);
 
-  @HostBinding('class.inactive') get inactive() {
+  get inactive() {
     return !this.pokemon?.isOwned;
   }
 

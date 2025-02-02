@@ -1,4 +1,4 @@
-import { Component, HostBinding, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import pageMarkdown from '../../../CHANGELOG.md';
 import { MarkdownComponent } from "ngx-markdown";
 
@@ -9,12 +9,14 @@ import { MarkdownComponent } from "ngx-markdown";
   encapsulation: ViewEncapsulation.None,
   imports: [
     MarkdownComponent
-  ]
+  ],
+  host: {
+    'class': 'container'
+  }
 })
 export class ChangelogComponent {
 
   markdown: string;
-  @HostBinding('class.container') private setClass = true;
 
   constructor() {
     this.markdown = this._convertPokemonIconTokens(pageMarkdown);

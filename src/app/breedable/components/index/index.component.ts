@@ -1,4 +1,4 @@
-import { Component, HostBinding, inject, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Spreadsheet } from '@spreadsheet/models/spreadsheet';
 import { Worksheet } from '@spreadsheet/models/worksheet';
@@ -19,13 +19,13 @@ import { RouterOutlet } from "@angular/router";
     ItemComponent,
     SlugifyPipe,
     RouterOutlet
-  ]
+  ],
+  host: {
+    'class': 'view'
+  }
 })
 export class IndexComponent implements OnInit {
   private spreadsheetFacade = inject(SpreadsheetFacade);
-
-
-  @HostBinding('class.view') isView = true;
 
   spreadsheetData$: Observable<Spreadsheet>;
 

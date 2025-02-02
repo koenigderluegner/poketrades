@@ -1,4 +1,4 @@
-import { Component, HostBinding, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { RouterLink } from "@angular/router";
 
 @Component({
@@ -8,11 +8,10 @@ import { RouterLink } from "@angular/router";
   encapsulation: ViewEncapsulation.None,
   imports: [
     RouterLink
-  ]
+  ],
+  host: {
+    'class': 'footer'
+  }
 })
 export class FooterComponent {
-
-  @HostBinding('class.footer') private setClass = true;
-
-
 }

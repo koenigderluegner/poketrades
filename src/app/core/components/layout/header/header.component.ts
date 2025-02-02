@@ -1,14 +1,4 @@
-import {
-  Component,
-  HostBinding,
-  HostListener,
-  inject,
-  OnInit,
-  TemplateRef,
-  viewChild,
-  ViewContainerRef,
-  ViewEncapsulation
-} from '@angular/core';
+import { Component, inject, OnInit, TemplateRef, viewChild, ViewContainerRef, ViewEncapsulation } from '@angular/core';
 import { Spreadsheet } from '@spreadsheet/models/spreadsheet';
 import { SpreadsheetFacade } from '@spreadsheet/spreadsheet.facade';
 import { TemplatePortal } from '@angular/cdk/portal';
@@ -28,16 +18,17 @@ import { MatButton } from "@angular/material/button";
     RouterLinkActive,
     MatIcon,
     MatButton
-  ]
+  ],
+  host: {
+    'class': 'app-header',
+    '(window:resize)': 'onResize($event)'
+  }
 })
 export class HeaderComponent implements OnInit {
   private spreadsheetFacade = inject(SpreadsheetFacade);
   overlay = inject(Overlay);
   viewContainerRef = inject(ViewContainerRef);
   private slugifyPipe = inject(SlugifyPipe);
-
-
-  @HostBinding('class.app-header') setClass = true;
 
   spreadsheetData: Spreadsheet | undefined;
 
@@ -50,7 +41,6 @@ export class HeaderComponent implements OnInit {
   toolsLink: string[] = [];
   private overlayRef?: OverlayRef;
 
-  @HostListener('window:resize', ['$event'])
   onResize(event: UIEvent) {
     this.windowSize = (event.target as Window).innerWidth;
 

@@ -1,4 +1,4 @@
-import { Component, HostBinding, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { GridBaseAppearanceDirective } from '../components/grid-base-appearance.directive';
 import { PokemonComponent } from "../../icon/pokemon/pokemon.component";
 import { ItemComponent } from "../../icon/item/item.component";
@@ -17,11 +17,12 @@ import { Pokemon } from "@shared/interfaces/pokemon";
     ItemComponent,
     MatIcon,
     SlugifyPipe
-  ]
+  ],
+  host: {
+    'class': 'grid-item',
+  }
 })
 export class NormalComponent extends GridBaseAppearanceDirective {
-
-  @HostBinding('class') classes = 'grid-item';
 
   isPokemon(p: Breedable | Pokemon | undefined): p is Pokemon {
     return !!p && 'item' in p

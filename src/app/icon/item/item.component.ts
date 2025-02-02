@@ -1,17 +1,18 @@
-import { Component, HostBinding, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 // @ts-ignore
 import { default as categoryData } from './categories.json';
 
 @Component({
   selector: 'app-item',
   template: '',
+  host: {
+    'class': 'pokesprite item-icon',
+    '[class]': 'classes',
+  }
 })
 export class ItemComponent {
 
-
-  @HostBinding('class') classes: string | undefined;
-  @HostBinding('class.pokesprite') private pokespriteClass = true;
-  @HostBinding('class.item-icon') private itemIconClass = true;
+  classes: string | undefined;
   private slugClass: string | undefined;
   private categoryClass: string | undefined;
   private suffixLess?: string;

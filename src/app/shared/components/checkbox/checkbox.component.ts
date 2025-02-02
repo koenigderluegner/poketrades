@@ -1,4 +1,4 @@
-import { Component, forwardRef, HostBinding, Input, ViewEncapsulation } from '@angular/core';
+import { Component, forwardRef, Input, ViewEncapsulation } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 @Component({
@@ -13,12 +13,14 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
     }
   ],
   encapsulation: ViewEncapsulation.None,
+  host: {
+    'class': 'd-flex',
+  }
 })
 export class CheckboxComponent implements ControlValueAccessor {
 
   static idCounter = 0;
 
-  @HostBinding('class.d-flex') displayFlex = true;
   controlID: string;
   checked = false;
   onTouchedCallback: (() => void) | undefined;

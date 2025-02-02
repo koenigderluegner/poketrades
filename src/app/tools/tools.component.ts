@@ -1,4 +1,4 @@
-import { Component, HostBinding, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { SubNaviItemComponent } from "@shared/components/sub-navi-item/sub-navi-item.component";
 import { ItemComponent } from "../icon/item/item.component";
 import { RouterOutlet } from "@angular/router";
@@ -14,10 +14,11 @@ import { GridControllerComponent } from "../grid/grid-controller/grid-controller
     ItemComponent,
     RouterOutlet,
     GridControllerComponent
-  ]
+  ],
+  host: {
+    'class': 'view'
+  }
 })
 export class ToolsComponent {
-
-  @HostBinding('class.view') classes = true;
 
 }

@@ -2,7 +2,6 @@ import {
   AfterContentInit,
   Component,
   ContentChildren,
-  HostBinding,
   inject,
   Input,
   input,
@@ -32,23 +31,27 @@ import { AsyncPipe } from "@angular/common";
     NormalComponent,
     DetailedComponent,
     AsyncPipe
-  ]
+  ],
+  host: {
+    'class': 'grid',
+    '[class]': 'getClasses',
+    '[class.hide-inactives]': 'hideInactiveItems',
+  }
 })
 export class GridComponent implements AfterContentInit, OnDestroy {
-  private gridService = inject(GridService);
+  //  break.
+  @Input() hideInactiveItems = false;
 
 
-  @HostBinding('class.grid') isGrid = true;
   // TODO: Skipped for migration because:
   //  This input is used in combination with `@HostBinding` and migrating would
-  //  break.
-  @Input() @HostBinding('class.hide-inactives') hideInactiveItems = false;
   readonly appearance = input<GridAppearanceType | null>();
-  // TODO: Skipped for migration because:
   //  There are references to this query that cannot be migrated automatically.
   @ContentChildren(GridItemComponent) contentChildren !: QueryList<GridItemComponent>;
+  // TODO: Skipped for migration because:
   items: GridItemComponent[] | undefined;
   dataSource: MatTableDataSource<GridItemComponent>;
+  private gridService = inject(GridService);
   private _categories: string[] = [];
   private _ownedStatus: OwnedStatus[] = [];
   private subscriptions: Subscription[] = [];
@@ -104,7 +107,7 @@ export class GridComponent implements AfterContentInit, OnDestroy {
 
   }
 
-  @HostBinding('class') get getClasses(): string[] {
+  get getClasses(): string[] {
     const classes: string[] = [];
 
     classes.push(this.appearance() ?? 'normal');

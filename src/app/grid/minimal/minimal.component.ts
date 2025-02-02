@@ -1,4 +1,4 @@
-import { Component, HostBinding, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { GridBaseAppearanceDirective } from '../components/grid-base-appearance.directive';
 import { PokemonComponent } from "../../icon/pokemon/pokemon.component";
 import { ItemComponent } from "../../icon/item/item.component";
@@ -15,13 +15,15 @@ import { Pokemon } from "@shared/interfaces/pokemon";
     PokemonComponent,
     ItemComponent,
     SlugifyPipe
-  ]
+  ],
+  host: {
+    'class': 'grid-item',
+    '[class.inactive]': 'inactive',
+  }
 })
 export class MinimalComponent extends GridBaseAppearanceDirective {
 
-  @HostBinding('class.grid-item') isGridItem = true;
-
-  @HostBinding('class.inactive') get inactive(): boolean {
+  get inactive(): boolean {
     return !this.pokemon?.isOwned;
   }
 

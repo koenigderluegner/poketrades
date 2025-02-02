@@ -1,4 +1,4 @@
-import { Component, HostBinding, inject, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Spreadsheet } from '@spreadsheet/models/spreadsheet';
 import { Worksheet } from '@spreadsheet/models/worksheet';
@@ -19,7 +19,10 @@ import { SlugifyPipe } from "@shared/pipes/slugify.pipe";
     ItemComponent,
     RouterOutlet,
     SlugifyPipe
-  ]
+  ],
+  host: {
+    'class': 'view'
+  }
 })
 export class IndexComponent implements OnInit {
   private readonly _spreadsheetFacade = inject(SpreadsheetFacade);
@@ -36,7 +39,6 @@ export class IndexComponent implements OnInit {
     competitives: 'focus-sash',
     rngs: 'teachy-tv'
   };
-  @HostBinding('class.view') private _isView = true;
 
   constructor() {
     this.spreadsheetData$ = this._spreadsheetFacade.getCurrentSpreadsheet$();

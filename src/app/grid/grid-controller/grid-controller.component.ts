@@ -1,4 +1,4 @@
-import { Component, HostBinding, inject, OnDestroy, ViewEncapsulation } from '@angular/core';
+import { Component, inject, OnDestroy, ViewEncapsulation } from '@angular/core';
 import { GridAppearanceType } from '../grid-appearance.type';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { GridService } from '../services/grid.service';
@@ -27,13 +27,15 @@ import { MatSelect, MatSelectTrigger } from "@angular/material/select";
     MatOption,
     MatOptgroup,
     MatSelectTrigger
-  ]
+  ],
+  host: {
+    'class': 'grid-controller',
+  }
 })
 export class GridControllerComponent implements OnDestroy {
   private gridService = inject(GridService);
 
 
-  @HostBinding('class.grid-controller') setClass = true;
   pokemonCategory = PokemonCategory;
   ownedStatusControl: FormControl<OwnedStatus[]>;
   hideAppearance$: Observable<boolean>;

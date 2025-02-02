@@ -1,4 +1,4 @@
-import { Component, HostBinding, inject, ViewEncapsulation } from '@angular/core';
+import { Component, inject, ViewEncapsulation } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { Spreadsheet } from '@spreadsheet/models/spreadsheet';
@@ -25,13 +25,13 @@ interface SearchGroup {
     AsyncPipe,
     SpinnerComponent,
     BallGuyBubbleComponent
-  ]
+  ],
+  host: {
+    'class': 'view spreadsheet-changer-view'
+  }
 })
 export class IndexComponent {
   private spreadsheetFacade = inject(SpreadsheetFacade);
-
-
-  @HostBinding('class') classes = 'view spreadsheet-changer-view';
 
   searchForm: FormGroup<SearchGroup>;
   hasRequested = false;

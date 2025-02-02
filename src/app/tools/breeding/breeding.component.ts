@@ -1,4 +1,4 @@
-import { Component, HostBinding, inject, ViewEncapsulation } from '@angular/core';
+import { Component, inject, ViewEncapsulation } from '@angular/core';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { DatabaseFacadeService } from '../../database/database-facade.service';
 import { forkJoin, Observable } from 'rxjs';
@@ -55,7 +55,10 @@ import { BallGuyBubbleComponent } from "@shared/components/ball-guy-bubble/ball-
     FilterLevelUpMovesPipe,
     BallGuyBubbleComponent,
     MatAutocompleteOrigin
-  ]
+  ],
+  host: {
+    'class': 'breeding-view'
+  }
 })
 export class BreedingComponent {
   private database = inject(DatabaseFacadeService);
@@ -73,7 +76,6 @@ export class BreedingComponent {
   placeHolderPokemon: Pokemon;
   worksheets?: Worksheet[];
   sheetBreeadbles?: { [key: string]: Breedable };
-  @HostBinding('class.breeding-view') private _isBreedingView = true;
   private breedables: LegalityEntry[] | undefined;
 
   constructor() {
