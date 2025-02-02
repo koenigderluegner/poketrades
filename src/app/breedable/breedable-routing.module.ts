@@ -1,14 +1,17 @@
 import { Routes } from '@angular/router';
-import { IndexComponent } from './components/index/index.component';
-import { BallComponent } from './components/ball/ball.component';
-import { OverviewComponent } from './components/overview/overview.component';
 
 
 export const routes: Routes = [
   {
-    path: '', component: IndexComponent, children: [
-      {path: 'overview', component: OverviewComponent},
-      {path: ':worksheetTitle', component: BallComponent}
+    path: '', loadComponent: () => import('./components/index/index.component').then(m => m.IndexComponent), children: [
+      {
+        path: 'overview',
+        loadComponent: () => import('./components/overview/overview.component').then(m => m.OverviewComponent)
+      },
+      {
+        path: ':worksheetTitle',
+        loadComponent: () => import('./components/ball/ball.component').then(m => m.BallComponent)
+      }
     ]
   }
 ];

@@ -1,11 +1,4 @@
 import { Routes } from '@angular/router';
-import { ToolsComponent } from './tools.component';
-import { BreedingComponent } from './breeding/breeding.component';
-import { ShinyDexComponent } from './components/shiny-dex/shiny-dex.component';
-import { FriendSafariShinyDexComponent } from './components/friend-safari-shiny-dex/friend-safari-shiny-dex.component';
-import {
-  UltraWormholeShinyDexComponent
-} from './components/ultra-wormhole-shiny-dex/ultra-wormhole-shiny-dex.component';
 
 
 export const routes: Routes = [
@@ -13,18 +6,21 @@ export const routes: Routes = [
     path: '', redirectTo: 'breeding', pathMatch: "full"
   },
   {
-    path: '', component: ToolsComponent, children: [
+    path: '', loadComponent: () => import('./tools.component').then(m => m.ToolsComponent), children: [
       {
-        path: 'breeding', component: BreedingComponent
+        path: 'breeding', loadComponent: () => import('./breeding/breeding.component').then(m => m.BreedingComponent)
       },
       {
-        path: 'shiny-dex', component: ShinyDexComponent
+        path: 'shiny-dex',
+        loadComponent: () => import('./components/shiny-dex/shiny-dex.component').then(m => m.ShinyDexComponent)
       },
       {
-        path: 'friend-safari-shiny-dex', component: FriendSafariShinyDexComponent
+        path: 'friend-safari-shiny-dex',
+        loadComponent: () => import('./components/friend-safari-shiny-dex/friend-safari-shiny-dex.component').then(m => m.FriendSafariShinyDexComponent)
       },
       {
-        path: 'ultra-wormhole-shiny-dex', component: UltraWormholeShinyDexComponent
+        path: 'ultra-wormhole-shiny-dex',
+        loadComponent: () => import('./components/ultra-wormhole-shiny-dex/ultra-wormhole-shiny-dex.component').then(m => m.UltraWormholeShinyDexComponent)
       }
     ]
   }

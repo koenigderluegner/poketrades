@@ -1,5 +1,4 @@
 import { Routes } from '@angular/router';
 
-import { HelpComponent } from './help.component';
 
-export const routes: Routes = [{path: '', component: HelpComponent}];
+export const routes: Routes = [{path: '', loadComponent: () => import('./help.component').then(m => m.HelpComponent)}];

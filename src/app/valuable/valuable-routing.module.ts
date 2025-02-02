@@ -1,12 +1,13 @@
 import { Routes } from '@angular/router';
-import { IndexComponent } from './components/index/index.component';
-import { ValuablesComponent } from './components/valuables/valuables.component';
 
 
 export const routes: Routes = [
   {
-    path: '', component: IndexComponent, children: [
-      {path: ':worksheetTitle', component: ValuablesComponent}
+    path: '', loadComponent: () => import('./components/index/index.component').then(m => m.IndexComponent), children: [
+      {
+        path: ':worksheetTitle',
+        loadComponent: () => import('./components/valuables/valuables.component').then(m => m.ValuablesComponent)
+      }
     ]
   }
 ];
