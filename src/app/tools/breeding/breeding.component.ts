@@ -21,11 +21,8 @@ import { MatAutocompleteSelectedEvent } from "@angular/material/autocomplete";
 })
 export class BreedingComponent {
 
-  @HostBinding('class.breeding-view') private _isBreedingView = true;
-
   searchControl: FormControl<string | LegalityEntry>;
   breedables$: Observable<LegalityEntry[]>;
-  private breedables: LegalityEntry[] | undefined;
   filteredPokemon: Observable<LegalityEntry[]>;
   selectedPokemon$: Observable<PokemonEntry> | undefined;
   selectedPokemon: PokemonEntry | undefined;
@@ -34,7 +31,8 @@ export class BreedingComponent {
   placeHolderPokemon: Pokemon;
   worksheets?: Worksheet[];
   sheetBreeadbles?: { [key: string]: Breedable };
-
+  @HostBinding('class.breeding-view') private _isBreedingView = true;
+  private breedables: LegalityEntry[] | undefined;
 
   constructor(private database: DatabaseFacadeService,
               private spreadsheetFacade: SpreadsheetFacade,
@@ -73,23 +71,6 @@ export class BreedingComponent {
       startWith(''),
       map(value => this._filter(value))
     );
-  }
-
-  private _filter(value: string | LegalityEntry): LegalityEntry[] {
-    const filterValue = this._normalizeValue(value);
-    return this.breedables?.filter(
-      (legalityEntry: LegalityEntry) => this._normalizeValue(legalityEntry.pokemon).includes(filterValue)
-    ) || [];
-  }
-
-  private _normalizeValue(value: string | LegalityEntry): string {
-    let pokemon;
-    if (typeof value !== 'string') {
-      pokemon = value?.pokemon || '';
-    } else {
-      pokemon = value;
-    }
-    return pokemon.toLowerCase().replace(/\s/g, '');
   }
 
   displayFn(pokemon: LegalityEntry): string {
@@ -161,8 +142,24 @@ export class BreedingComponent {
     return eggCount === eggMovesLengeth;
   }
 
-
   selectInputText($event: FocusEvent) {
     ($event.target as HTMLInputElement).select();
+  }
+
+  private _filter(value: string | LegalityEntry): LegalityEntry[] {
+    const filterValue = this._normalizeValue(value);
+    return this.breedables?.filter(
+      (legalityEntry: LegalityEntry) => this._normalizeValue(legalityEntry.pokemon).includes(filterValue)
+    ) || [];
+  }
+
+  private _normalizeValue(value: string | LegalityEntry): string {
+    let pokemon;
+    if (typeof value !== 'string') {
+      pokemon = value?.pokemon || '';
+    } else {
+      pokemon = value;
+    }
+    return pokemon.toLowerCase().replace(/\s/g, '');
   }
 }

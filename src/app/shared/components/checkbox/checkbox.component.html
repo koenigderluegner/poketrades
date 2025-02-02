@@ -1,6 +1,6 @@
 <label class="inacitve-hider">
-  <input type="checkbox" id="{{ controlID }}"
-         [checked]="checked" (change)="onChange($event)">
+  <input (change)="onChange($event)" [checked]="checked"
+         id="{{ controlID }}" type="checkbox">
   @if (icon) {
     <span class="material-icons">{{ icon }}</span>
   }

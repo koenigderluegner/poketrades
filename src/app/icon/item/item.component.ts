@@ -9,6 +9,7 @@ import { default as categoryData } from './categories.json';
 export class ItemComponent {
 
 
+  @HostBinding('class') classes: string | undefined;
   @HostBinding('class.pokesprite') private pokespriteClass = true;
   @HostBinding('class.item-icon') private itemIconClass = true;
   private slugClass: string | undefined;
@@ -26,18 +27,15 @@ export class ItemComponent {
 
   }
 
-  @Input() set category(cat: string) {
-    this.categoryClass = cat;
-  }
-
   get category(): string {
+    const categories: Record<string, string> = categoryData;
     if (this.categoryClass) {
       return this.categoryClass;
     } else if (this.slugClass) {
-      let category = categoryData[this.slugClass];
+      let category = categories[this.slugClass];
       if (!category) {
         const suffixLess = this.slugClass.substring(0, this.slugClass.lastIndexOf('-'));
-        category = categoryData[suffixLess];
+        category = categories[suffixLess];
         if (category) {
           this.suffixLess = suffixLess;
         }
@@ -47,6 +45,7 @@ export class ItemComponent {
     return '';
   }
 
-
-  @HostBinding('class') classes: string | undefined;
+  @Input() set category(cat: string) {
+    this.categoryClass = cat;
+  }
 }

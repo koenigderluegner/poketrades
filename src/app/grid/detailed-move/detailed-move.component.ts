@@ -8,17 +8,14 @@ import { Component, HostBinding, Input, ViewEncapsulation } from '@angular/core'
 })
 export class DetailedMoveComponent {
 
-  @HostBinding('class.detailed-move') private setClasses = true;
-
   @Input() move: string;
   @Input() isEggMove: boolean;
+  @HostBinding('class.detailed-move') private setClasses = true;
 
-  @Input() set type(type: string) {
-    this._type = type;
-  }
-
-  get type(): string {
-    return this._type;
+  constructor() {
+    this.move = 'unknown';
+    this.isEggMove = false;
+    this._type = 'unknown';
   }
 
   @HostBinding('class') get typeClass(): string {
@@ -27,10 +24,12 @@ export class DetailedMoveComponent {
 
   private _type: string;
 
-  constructor() {
-    this.move = 'unknown';
-    this.isEggMove = false;
-    this._type = 'unknown';
+  get type(): string {
+    return this._type;
+  }
+
+  @Input() set type(type: string) {
+    this._type = type;
   }
 
 }

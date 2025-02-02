@@ -3,8 +3,7 @@
     <app-spinner [class.pause-animation]="errored"></app-spinner>
     <span class="message">{{ loadingMessage }}</span>
   </div>
-}
-@if (!isLoading && !waitingForRouter) {
+} @if (!isLoading && !waitingForRouter) {
   <app-header></app-header>
   <main class="main-wrapper">
     <router-outlet></router-outlet>

@@ -1,11 +1,12 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { IndexComponent } from './index.component';
-import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { provideHttpClientTesting } from '@angular/common/http/testing';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { SpreadsheetFacade } from '@spreadsheet/spreadsheet.facade';
 import { BehaviorSubject } from 'rxjs';
 import { MOCK_SPREADSHEET } from '../../../../../testing/mocks/spreadsheet.mock';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import SpyObj = jasmine.SpyObj;
 
 describe('IndexComponent', () => {
@@ -20,12 +21,14 @@ describe('IndexComponent', () => {
     spreadsheetSpy.getCurrentSpreadsheet$.and.returnValue(new BehaviorSubject(MOCK_SPREADSHEET));
 
     TestBed.configureTestingModule({
-      imports: [HttpClientTestingModule],
       declarations: [IndexComponent],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
+      imports: [],
       providers: [
-        {provide: SpreadsheetFacade, useValue: spreadsheetSpy}
-      ],
-      schemas: [CUSTOM_ELEMENTS_SCHEMA]
+        {provide: SpreadsheetFacade, useValue: spreadsheetSpy},
+        provideHttpClient(withInterceptorsFromDi()),
+        provideHttpClientTesting()
+      ]
     })
       .compileComponents();
   }));

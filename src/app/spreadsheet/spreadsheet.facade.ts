@@ -102,23 +102,6 @@ export class SpreadsheetFacade {
     );
   }
 
-  private convertApiErrors(errorStatus: string): ApiError {
-    const newError = {
-      state: 'unknown',
-      message: ''
-    };
-    switch (errorStatus) {
-      case '429':
-        newError.message = 'Too many requests: Google request limit reached, try again later.';
-        break;
-      default:
-        newError.message = 'Unknown Error: please check the given ID and publish your sheet if not already.';
-        break;
-    }
-    return newError;
-  }
-
-
   updateCurrentSpreadsheet(spreadsheet: Spreadsheet): BehaviorSubject<Spreadsheet> {
     this.updateIsDefaultSpreadhseet(false);
     this._currentSpreadsheet$.next(spreadsheet);
@@ -143,9 +126,24 @@ export class SpreadsheetFacade {
     return this._isDefaultSheet$;
   }
 
-
   getSpreadsheetHistory$(): BehaviorSubject<SearchHistoryEntry[]> {
     return this._searchHistory;
+  }
+
+  private convertApiErrors(errorStatus: string): ApiError {
+    const newError = {
+      state: 'unknown',
+      message: ''
+    };
+    switch (errorStatus) {
+      case '429':
+        newError.message = 'Too many requests: Google request limit reached, try again later.';
+        break;
+      default:
+        newError.message = 'Unknown Error: please check the given ID and publish your sheet if not already.';
+        break;
+    }
+    return newError;
   }
 
   private saveToHistory(spreadsheet: Spreadsheet): void {

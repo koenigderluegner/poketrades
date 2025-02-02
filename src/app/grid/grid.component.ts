@@ -26,31 +26,13 @@ export class GridComponent implements AfterContentInit, OnDestroy {
 
   @HostBinding('class.grid') isGrid = true;
   @Input() @HostBinding('class.hide-inactives') hideInactiveItems = false;
-
+  @Input() appearance: GridAppearanceType | undefined | null;
+  @ContentChildren(GridItemComponent) contentChildren !: QueryList<GridItemComponent>;
+  items: GridItemComponent[] | undefined;
+  dataSource: MatTableDataSource<GridItemComponent>;
   private _categories: string[] = [];
   private _ownedStatus: OwnedStatus[] = [];
-
-  @HostBinding('class') get getClasses(): string[] {
-    const classes: string[] = [];
-
-    classes.push(this.appearance ?? 'normal');
-    if (this._categories.length) {
-      classes.push('filtered');
-    }
-    classes.push(...this._categories);
-    classes.push(...this._ownedStatus);
-    return classes;
-  }
-
-  @Input() appearance: GridAppearanceType | undefined | null;
-
-  @ContentChildren(GridItemComponent) contentChildren !: QueryList<GridItemComponent>;
-
   private subscriptions: Subscription[] = [];
-  items: GridItemComponent[] | undefined;
-
-  dataSource: MatTableDataSource<GridItemComponent>;
-
 
   constructor(private gridService: GridService) {
     this.dataSource = new MatTableDataSource<GridItemComponent>([]);
@@ -101,6 +83,18 @@ export class GridComponent implements AfterContentInit, OnDestroy {
     }));
 
 
+  }
+
+  @HostBinding('class') get getClasses(): string[] {
+    const classes: string[] = [];
+
+    classes.push(this.appearance ?? 'normal');
+    if (this._categories.length) {
+      classes.push('filtered');
+    }
+    classes.push(...this._categories);
+    classes.push(...this._ownedStatus);
+    return classes;
   }
 
   ngAfterContentInit() {

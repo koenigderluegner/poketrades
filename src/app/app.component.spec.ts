@@ -1,8 +1,9 @@
 import { TestBed, waitForAsync } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
-import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { provideHttpClientTesting } from '@angular/common/http/testing';
 import { SpreadsheetFacade } from '@spreadsheet/spreadsheet.facade';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import SpyObj = jasmine.SpyObj;
 
 describe('AppComponent', () => {
@@ -15,16 +16,15 @@ describe('AppComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      imports: [
-        HttpClientTestingModule,
-        RouterTestingModule
-      ],
       declarations: [
         AppComponent
       ],
+      imports: [RouterTestingModule],
       providers: [
-        {provide: SpreadsheetFacade, useValue: spreadsheetSpy}
-      ],
+        {provide: SpreadsheetFacade, useValue: spreadsheetSpy},
+        provideHttpClient(withInterceptorsFromDi()),
+        provideHttpClientTesting()
+      ]
     }).compileComponents();
   }));
 

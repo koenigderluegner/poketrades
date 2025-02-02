@@ -1,8 +1,9 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { OverviewComponent } from './overview.component';
-import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { provideHttpClientTesting } from '@angular/common/http/testing';
 import { SpreadsheetFacade } from '@spreadsheet/spreadsheet.facade';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import SpyObj = jasmine.SpyObj;
 
 describe('OverviewComponent', () => {
@@ -14,11 +15,13 @@ describe('OverviewComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      imports: [HttpClientTestingModule],
       declarations: [OverviewComponent],
+      imports: [],
       providers: [
-        {provide: SpreadsheetFacade, useValue: spreadsheetSpy}
-      ],
+        {provide: SpreadsheetFacade, useValue: spreadsheetSpy},
+        provideHttpClient(withInterceptorsFromDi()),
+        provideHttpClientTesting()
+      ]
     })
       .compileComponents();
   }));

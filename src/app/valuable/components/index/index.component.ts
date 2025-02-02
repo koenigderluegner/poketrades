@@ -12,13 +12,9 @@ import { SpreadsheetFacade } from '@spreadsheet/spreadsheet.facade';
 export class IndexComponent implements OnInit {
 
 
-  @HostBinding('class.view') private _isView = true;
-
   spreadsheetData$: Observable<Spreadsheet>;
-
   spreadsheetId: string | undefined;
   worksheets: Worksheet[] | undefined;
-
   subTypeItemMap: Record<string, string> = {
     events: 'cherish',
     legendaries: 'master',
@@ -26,6 +22,7 @@ export class IndexComponent implements OnInit {
     competitives: 'focus-sash',
     rngs: 'teachy-tv'
   };
+  @HostBinding('class.view') private _isView = true;
 
   constructor(private readonly _spreadsheetFacade: SpreadsheetFacade) {
     this.spreadsheetData$ = this._spreadsheetFacade.getCurrentSpreadsheet$();

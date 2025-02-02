@@ -17,6 +17,14 @@ import { environment } from '../environments/environment';
 export class AppComponent implements OnInit {
 
 
+  apiKey = environment.googleApiKey;
+  spreadsheet: Spreadsheet | undefined;
+  isLoading = false;
+  loadingMessage: string | undefined;
+  errored = false;
+  waitingForRouter = true;
+  private nonIdRoutes: string[] = [];
+
   constructor(
     private spreadsheetFacade: SpreadsheetFacade,
     private databaseFacadeService: DatabaseFacadeService,
@@ -27,17 +35,6 @@ export class AppComponent implements OnInit {
     private domSanitizer: DomSanitizer,
   ) {
   }
-
-  apiKey = environment.googleApiKey;
-
-  spreadsheet: Spreadsheet | undefined;
-
-  isLoading = false;
-  loadingMessage: string | undefined;
-  errored = false;
-  waitingForRouter = true;
-  private nonIdRoutes: string[] = [];
-
 
   ngOnInit(): void {
 

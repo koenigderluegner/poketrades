@@ -1,17 +1,20 @@
 import { TestBed } from '@angular/core/testing';
 
 import { SpreadsheetFacade } from './spreadsheet.facade';
-import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { provideHttpClientTesting } from '@angular/common/http/testing';
 import { SlugifyPipe } from '@shared/pipes/slugify.pipe';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
 describe('Spreadsheet.FacadeService', () => {
   let facade: SpreadsheetFacade;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [HttpClientTestingModule],
+      imports: [],
       providers: [
-        SlugifyPipe
+        SlugifyPipe,
+        provideHttpClient(withInterceptorsFromDi()),
+        provideHttpClientTesting()
       ]
     });
     facade = TestBed.inject(SpreadsheetFacade);

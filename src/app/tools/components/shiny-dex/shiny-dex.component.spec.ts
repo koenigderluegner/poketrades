@@ -1,12 +1,13 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { ShinyDexComponent } from './shiny-dex.component';
-import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { provideHttpClientTesting } from '@angular/common/http/testing';
 import { SpreadsheetFacade } from '@spreadsheet/spreadsheet.facade';
 import { BehaviorSubject } from 'rxjs';
 import { MOCK_SPREADSHEET } from '../../../../../testing/mocks/spreadsheet.mock';
 import { SharedModule } from '@shared/shared.module';
 import { SlugifyPipe } from '@shared/pipes/slugify.pipe';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import SpyObj = jasmine.SpyObj;
 
 describe('ShinyDexComponent', () => {
@@ -21,12 +22,14 @@ describe('ShinyDexComponent', () => {
       spreadsheetSpy.getCurrentSpreadsheet$.and.returnValue(new BehaviorSubject(MOCK_SPREADSHEET));
 
       TestBed.configureTestingModule({
-        imports: [HttpClientTestingModule, SharedModule],
         declarations: [ShinyDexComponent],
+        imports: [SharedModule],
         providers: [
           SlugifyPipe,
-          {provide: SpreadsheetFacade, useValue: spreadsheetSpy}
-        ],
+          {provide: SpreadsheetFacade, useValue: spreadsheetSpy},
+          provideHttpClient(withInterceptorsFromDi()),
+          provideHttpClientTesting()
+        ]
       })
         .compileComponents();
     })

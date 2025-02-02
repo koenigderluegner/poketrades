@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { IndexComponent } from './index.component';
-import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { provideHttpClientTesting } from '@angular/common/http/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -9,6 +9,7 @@ import { SharedModule } from '@shared/shared.module';
 import { SpreadsheetFacade } from '@spreadsheet/spreadsheet.facade';
 import { BehaviorSubject } from 'rxjs';
 import { MOCK_SPREADSHEET } from '../../../../../testing/mocks/spreadsheet.mock';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import SpyObj = jasmine.SpyObj;
 
 describe('Breedables IndexComponent', () => {
@@ -23,12 +24,14 @@ describe('Breedables IndexComponent', () => {
     spreadsheetSpy.getCurrentSpreadsheet$.and.returnValue(new BehaviorSubject(MOCK_SPREADSHEET));
 
     TestBed.configureTestingModule({
-      imports: [HttpClientTestingModule, RouterTestingModule, FormsModule, ReactiveFormsModule, SharedModule],
       declarations: [IndexComponent],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
+      imports: [RouterTestingModule, FormsModule, ReactiveFormsModule, SharedModule],
       providers: [
-        {provide: SpreadsheetFacade, useValue: spreadsheetSpy}
-      ],
-      schemas: [CUSTOM_ELEMENTS_SCHEMA]
+        {provide: SpreadsheetFacade, useValue: spreadsheetSpy},
+        provideHttpClient(withInterceptorsFromDi()),
+        provideHttpClientTesting()
+      ]
     })
       .compileComponents();
   }));

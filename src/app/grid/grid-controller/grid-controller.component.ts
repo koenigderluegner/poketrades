@@ -18,18 +18,14 @@ import { MatOption } from "@angular/material/core";
 export class GridControllerComponent implements OnDestroy {
 
   @HostBinding('class.grid-controller') setClass = true;
-
-  private subscriptions: Subscription[] = [];
-
   pokemonCategory = PokemonCategory;
-
   ownedStatusControl: FormControl<OwnedStatus[]>;
   hideAppearance$: Observable<boolean>;
   hideOwnedStatusControl$: Observable<boolean>;
   filter: FormControl<string>;
   sorting: FormControl<MatSortable>;
   categories: FormControl<PokemonCategory[]>;
-
+  private subscriptions: Subscription[] = [];
 
   constructor(private gridService: GridService) {
     this.ownedStatusControl = this.gridService.getOwnedStatusControl();

@@ -1,5 +1,5 @@
 import { Component, HostBinding, ViewEncapsulation } from '@angular/core';
-import { default as pageMarkdown } from 'raw-loader!../../../CHANGELOG.md'; // TODO deprecated since webpack v5
+import pageMarkdown from '../../../CHANGELOG.md';
 
 @Component({
   selector: 'app-changelog',
@@ -9,9 +9,8 @@ import { default as pageMarkdown } from 'raw-loader!../../../CHANGELOG.md'; // T
 })
 export class ChangelogComponent {
 
-  @HostBinding('class.container') private setClass = true;
-
   markdown: string;
+  @HostBinding('class.container') private setClass = true;
 
   constructor() {
     this.markdown = this._convertPokemonIconTokens(pageMarkdown);

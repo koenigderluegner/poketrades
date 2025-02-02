@@ -31,11 +31,10 @@ export class HeaderComponent implements OnInit {
   windowSize = window.innerWidth;
   // @ts-ignore
   @ViewChild('menuTemplate') templatePortalContent: TemplateRef<unknown>;
-  private overlayRef?: OverlayRef;
   breeablesLink: string[] = [];
   valuablesLinkArray: string[] = [];
   toolsLink: string[] = [];
-
+  private overlayRef?: OverlayRef;
 
   constructor(private spreadsheetFacade: SpreadsheetFacade,
               public overlay: Overlay,

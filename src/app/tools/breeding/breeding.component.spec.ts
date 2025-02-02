@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { BreedingComponent } from './breeding.component';
-import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { provideHttpClientTesting } from '@angular/common/http/testing';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SpreadsheetFacade } from '@spreadsheet/spreadsheet.facade';
@@ -10,6 +10,7 @@ import { MOCK_SPREADSHEET } from '../../../../testing/mocks/spreadsheet.mock';
 import { SlugifyPipe } from '@shared/pipes/slugify.pipe';
 import { MatAutocompleteModule } from "@angular/material/autocomplete";
 import { MatInputModule } from "@angular/material/input";
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import SpyObj = jasmine.SpyObj;
 
 describe('BreedingComponent', () => {
@@ -24,11 +25,13 @@ describe('BreedingComponent', () => {
     spreadsheetSpy.getCurrentSpreadsheet$.and.returnValue(new BehaviorSubject(MOCK_SPREADSHEET));
 
     TestBed.configureTestingModule({
-      imports: [HttpClientTestingModule, MatAutocompleteModule, FormsModule, MatInputModule, ReactiveFormsModule],
       declarations: [BreedingComponent],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
+      imports: [MatAutocompleteModule, FormsModule, MatInputModule, ReactiveFormsModule],
       providers: [
-        SlugifyPipe
+        SlugifyPipe,
+        provideHttpClient(withInterceptorsFromDi()),
+        provideHttpClientTesting()
       ]
     })
       .compileComponents();

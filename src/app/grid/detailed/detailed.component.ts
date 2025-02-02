@@ -16,16 +16,15 @@ export class DetailedComponent extends GridBaseAppearanceDirective implements On
   @HostBinding('class.grid-item') isGridItem = true;
   isEggMove$: Observable<boolean[]> | undefined;
   natureClass = '';
-
-  @HostBinding('class.inactive') get inactive() {
-    return !this.pokemon?.isOwned;
-  }
-
   dbpokemon$: Observable<PokemonEntry> | undefined;
   moves$: Observable<Move[]> | undefined;
 
   constructor(private databaseFacadeService: DatabaseFacadeService) {
     super();
+  }
+
+  @HostBinding('class.inactive') get inactive() {
+    return !this.pokemon?.isOwned;
   }
 
   ngOnInit(): void {
