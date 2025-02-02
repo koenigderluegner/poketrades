@@ -7,7 +7,6 @@ import { ShinyList } from '@shared/interfaces/shiny-list.interface';
 
 @Component({
   template: '',
-  standalone: false
 })
 export abstract class BaseShinyDexComponent {
 

@@ -1,12 +1,15 @@
-import { Component, HostBinding, inject, ViewEncapsulation } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
-import { Observable, tap } from 'rxjs';
+import { Component, inject, ViewEncapsulation } from '@angular/core';
+import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { Observable } from 'rxjs';
 import { Spreadsheet } from '@spreadsheet/models/spreadsheet';
 import { SpreadsheetFacade } from '@spreadsheet/spreadsheet.facade';
 import { SearchHistoryEntry } from '../models/search-history-entry.interface';
 import { environment } from '../../../environments/environment';
 import { ApiError } from '@shared/interfaces/api-error.interface';
 import { catchError } from 'rxjs/operators';
+import { AsyncPipe } from "@angular/common";
+import { SpinnerComponent } from "@shared/components/spinner/spinner.component";
+import { BallGuyBubbleComponent } from "@shared/components/ball-guy-bubble/ball-guy-bubble.component";
 
 interface SearchGroup {
   search: FormControl<string>;
@@ -17,13 +20,18 @@ interface SearchGroup {
   templateUrl: './index.component.html',
   styleUrls: ['./index.component.scss'],
   encapsulation: ViewEncapsulation.None,
-  standalone: false
+  imports: [
+    ReactiveFormsModule,
+    AsyncPipe,
+    SpinnerComponent,
+    BallGuyBubbleComponent
+  ],
+  host: {
+    'class': 'view spreadsheet-changer-view'
+  }
 })
 export class IndexComponent {
   private spreadsheetFacade = inject(SpreadsheetFacade);
-
-
-  @HostBinding('class') classes = 'view spreadsheet-changer-view';
 
   searchForm: FormGroup<SearchGroup>;
   hasRequested = false;
@@ -41,7 +49,7 @@ export class IndexComponent {
     this.searchForm = new FormGroup({
       search: new FormControl('', {nonNullable: true})
     });
-    this.isLoading$ = this.spreadsheetFacade.isLoading$().pipe(tap(i => console.log('lods', i)));
+    this.isLoading$ = this.spreadsheetFacade.isLoading$();
     this.spreadsheetHistory$ = this.spreadsheetFacade.getSpreadsheetHistory$();
   }
 
@@ -51,7 +59,6 @@ export class IndexComponent {
     this.loadedSpreadsheet$ = this.spreadsheetFacade.searchSpreadsheet(this.searchForm.controls.search.value, this.apiKey)
       .pipe(
         catchError((err, observable) => {
-          console.log('ge', err);
           this.error = err;
           return observable;
         })

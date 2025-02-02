@@ -1,20 +1,23 @@
+@let poke = pokemon();
+
 <div class="icon-wrapper">
   <img [src]="'assets/images/pokesprite-pokeball.svg'" alt="" class="icon-foundation">
   <div class="icon">
-    <app-pokemon [shiny]="!!pokemon?.isShiny" [slug]="pokemon?.iconSlug"></app-pokemon>
-    @if (pokemon?.item) {
-      <app-item [slug]="pokemon?.item | slugify"></app-item>
-    } @if (pokemon?.ball) {
-    <app-item [slug]="pokemon?.ball | slugify" category="ball"></app-item>
-  }
+    <app-pokemon [shiny]="!!poke?.isShiny" [slug]="poke?.iconSlug"></app-pokemon>
+    @if (isPokemon(poke) && poke?.item) {
+      <app-item [slug]="poke?.item | slugify"></app-item>
+    }
+    @if (poke?.ball) {
+      <app-item [slug]="poke?.ball | slugify" category="ball"></app-item>
+    }
   </div>
 </div>
 <div class="information">
-  <div>{{ pokemon?.name }}</div>
-  <div>{{ pokemon?.ability }}</div>
+  <div>{{ poke?.name }}</div>
+  <div>{{ poke?.ability }}</div>
 </div>
 <div class="shiny-icon">
-  @if (pokemon?.isShiny) {
+  @if (poke?.isShiny) {
     <mat-icon svgIcon="shiny-stars"></mat-icon>
   }
 </div>

@@ -1,4 +1,4 @@
-import { Component, forwardRef, HostBinding, Input, ViewEncapsulation } from '@angular/core';
+import { Component, forwardRef, input, ViewEncapsulation } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 @Component({
@@ -13,20 +13,18 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
     }
   ],
   encapsulation: ViewEncapsulation.None,
-  standalone: false
+  host: {
+    'class': 'd-flex',
+  }
 })
 export class CheckboxComponent implements ControlValueAccessor {
 
   static idCounter = 0;
 
-  @HostBinding('class.d-flex') displayFlex = true;
   controlID: string;
   checked = false;
   onTouchedCallback: (() => void) | undefined;
-  // TODO: Skipped for migration because:
-  //  This input is used in a control flow expression (e.g. `@if` or `*ngIf`)
-  //  and migrating would break narrowing currently.
-  @Input() icon: string | undefined;
+  icon = input<string>()
 
   constructor() {
     this.controlID = 'pktrds-checkbox-' + CheckboxComponent.idCounter++;

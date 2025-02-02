@@ -1,8 +1,8 @@
 <label class="inacitve-hider">
   <input (change)="onChange($event)" [checked]="checked"
          id="{{ controlID }}" type="checkbox">
-  @if (icon) {
-    <span class="material-icons">{{ icon }}</span>
+  @if (icon()) {
+    <span class="material-icons">{{ icon() }}</span>
   }
   <span class="label"><ng-content></ng-content></span>
 </label>

@@ -1,26 +1,41 @@
-import { Component, HostBinding, inject, OnDestroy, ViewEncapsulation } from '@angular/core';
+import { Component, inject, OnDestroy, ViewEncapsulation } from '@angular/core';
 import { GridAppearanceType } from '../grid-appearance.type';
-import { FormControl } from '@angular/forms';
+import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { GridService } from '../services/grid.service';
 import { Observable, Subscription } from 'rxjs';
 import { debounceTime, distinctUntilChanged, tap } from 'rxjs/operators';
 import { PokemonCategory } from '@shared/enums/pokemon-category.enum';
 import { OwnedStatus } from "../types/owned-status.type";
 import { MatSortable } from "@angular/material/sort";
-import { MatOption } from "@angular/material/core";
+import { MatOptgroup, MatOption } from "@angular/material/core";
+import { MatFormField } from "@angular/material/form-field";
+import { ChangerComponent } from "../changer/changer.component";
+import { AsyncPipe } from "@angular/common";
+import { MatSelect, MatSelectTrigger } from "@angular/material/select";
 
 @Component({
   selector: 'app-grid-controller',
   templateUrl: './grid-controller.component.html',
   styleUrls: ['./grid-controller.component.scss'],
   encapsulation: ViewEncapsulation.None,
-  standalone: false
+  imports: [
+    MatFormField,
+    ChangerComponent,
+    AsyncPipe,
+    ReactiveFormsModule,
+    MatSelect,
+    MatOption,
+    MatOptgroup,
+    MatSelectTrigger
+  ],
+  host: {
+    'class': 'grid-controller',
+  }
 })
 export class GridControllerComponent implements OnDestroy {
   private gridService = inject(GridService);
 
 
-  @HostBinding('class.grid-controller') setClass = true;
   pokemonCategory = PokemonCategory;
   ownedStatusControl: FormControl<OwnedStatus[]>;
   hideAppearance$: Observable<boolean>;

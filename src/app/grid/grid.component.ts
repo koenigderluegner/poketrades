@@ -1,13 +1,11 @@
 import {
-  AfterContentInit,
+  booleanAttribute,
   Component,
-  ContentChildren,
-  HostBinding,
+  contentChildren,
+  effect,
   inject,
-  Input,
   input,
   OnDestroy,
-  QueryList,
   ViewEncapsulation
 } from '@angular/core';
 import { GridAppearanceType } from './grid-appearance.type';
@@ -17,29 +15,38 @@ import { Subscription } from 'rxjs';
 import { GridService } from './services/grid.service';
 import { OwnedStatus } from "./types/owned-status.type";
 import { MatTableDataSource } from "@angular/material/table";
+import { MinimalComponent } from "./minimal/minimal.component";
+import { NormalComponent } from "./normal/normal.component";
+import { DetailedComponent } from "./detailed/detailed.component";
+import { AsyncPipe } from "@angular/common";
 
 @Component({
   selector: 'app-grid',
   templateUrl: './grid.component.html',
   styleUrls: ['./grid.component.scss'],
   encapsulation: ViewEncapsulation.None,
-  standalone: false
+  imports: [
+    MinimalComponent,
+    NormalComponent,
+    DetailedComponent,
+    AsyncPipe
+  ],
+  host: {
+    'class': 'grid',
+    '[class]': 'getClasses',
+    '[class.hide-inactives]': 'hideInactiveItems()',
+  }
 })
-export class GridComponent implements AfterContentInit, OnDestroy {
-  private gridService = inject(GridService);
+export class GridComponent implements OnDestroy {
+  hideInactiveItems = input(false, {transform: booleanAttribute})
 
-
-  @HostBinding('class.grid') isGrid = true;
-  // TODO: Skipped for migration because:
-  //  This input is used in combination with `@HostBinding` and migrating would
-  //  break.
-  @Input() @HostBinding('class.hide-inactives') hideInactiveItems = false;
   readonly appearance = input<GridAppearanceType | null>();
-  // TODO: Skipped for migration because:
   //  There are references to this query that cannot be migrated automatically.
-  @ContentChildren(GridItemComponent) contentChildren !: QueryList<GridItemComponent>;
-  items: GridItemComponent[] | undefined;
+  contentChildren = contentChildren(GridItemComponent)
+  // TODO: Skipped for migration because:
+  items: readonly GridItemComponent[] | undefined;
   dataSource: MatTableDataSource<GridItemComponent>;
+  private gridService = inject(GridService);
   private _categories: string[] = [];
   private _ownedStatus: OwnedStatus[] = [];
   private subscriptions: Subscription[] = [];
@@ -56,6 +63,8 @@ export class GridComponent implements AfterContentInit, OnDestroy {
         default:
           return '';
       }
+
+
     };
 
     this.dataSource.filterPredicate = (data: GridItemComponent, filter: string) => {
@@ -92,10 +101,16 @@ export class GridComponent implements AfterContentInit, OnDestroy {
       }
     }));
 
+    effect(() => {
+      const contentChildren = this.contentChildren();
+      this.items = contentChildren;
+      this.dataSource.data = [...this.items];
+    });
+
 
   }
 
-  @HostBinding('class') get getClasses(): string[] {
+  get getClasses(): string[] {
     const classes: string[] = [];
 
     classes.push(this.appearance() ?? 'normal');
@@ -107,19 +122,6 @@ export class GridComponent implements AfterContentInit, OnDestroy {
     return classes;
   }
 
-  ngAfterContentInit() {
-
-    // initial load of list
-    if (!this.items) {
-      this.items = this.contentChildren.toArray();
-      this.dataSource.data = this.items;
-    }
-    this.contentChildren.changes.subscribe((items: QueryList<GridItemComponent>) => {
-      this.items = items.toArray();
-      this.dataSource.data = this.items;
-    });
-
-  }
 
   trackByFn(index: number, item: GridItemComponent): string {
     return item.pokemon()?.id ?? '';
@@ -129,7 +131,7 @@ export class GridComponent implements AfterContentInit, OnDestroy {
     this.dataSource.sort?.sort(sorting);
 
     if (this.items) {
-      this.dataSource.data = this.dataSource._orderData(this.items);
+      this.dataSource.data = this.dataSource._orderData([...this.items]);
     }
   }
 

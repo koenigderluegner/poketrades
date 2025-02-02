@@ -1,8 +1,10 @@
-@if (pokemon) {
+@let poke = pokemon();
+
+@if (poke) {
   <div class="icon">
-    <app-pokemon [shiny]="pokemon.isShiny" [slug]="pokemon.iconSlug"></app-pokemon>
-    @if (pokemon?.item) {
-      <app-item [slug]="pokemon?.item | slugify"></app-item>
+    <app-pokemon [shiny]="poke.isShiny" [slug]="poke.iconSlug"></app-pokemon>
+    @if (isPokemon(poke) && poke.item) {
+      <app-item [slug]="poke.item | slugify"></app-item>
     }
   </div>
 }

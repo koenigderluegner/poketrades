@@ -4,7 +4,6 @@ import { ShinyDexEntry } from '@shared/interfaces/shiny-dex-entry.interface';
 
 @Pipe({
   name: 'shinyDexEntryToPokemon',
-  standalone: false
 })
 export class ShinyDexEntryToPokemonPipe implements PipeTransform {
 

@@ -3,7 +3,6 @@ import { LevelUpMove } from '../../database/models/level-up-move.interface';
 
 @Pipe({
   name: 'filterLevelUpMoves',
-  standalone: false
 })
 export class FilterLevelUpMovesPipe implements PipeTransform {
 

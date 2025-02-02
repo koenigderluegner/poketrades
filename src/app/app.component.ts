@@ -1,37 +1,41 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { Spreadsheet } from '@spreadsheet/models/spreadsheet';
-import { NavigationEnd, Route, Router } from '@angular/router';
+import { NavigationEnd, Route, Router, RouterOutlet } from '@angular/router';
 import { SpreadsheetFacade } from '@spreadsheet/spreadsheet.facade';
 import { DatabaseFacadeService } from './database/database-facade.service';
 import { UserService } from './database/services/user.service';
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
-import { GoogleSpreadsheetService } from './google-spreadsheet/services/google-spreadsheet.service';
 import { environment } from '../environments/environment';
+import { FooterComponent } from "@core/components/layout/footer/footer.component";
+import { HeaderComponent } from "@core/components/layout/header/header.component";
+import { SpinnerComponent } from "@shared/components/spinner/spinner.component";
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  standalone: false
+  imports: [
+    FooterComponent,
+    RouterOutlet,
+    HeaderComponent,
+    SpinnerComponent,
+    
+  ]
 })
 export class AppComponent implements OnInit {
-  private spreadsheetFacade = inject(SpreadsheetFacade);
-  private databaseFacadeService = inject(DatabaseFacadeService);
-  private userService = inject(UserService);
-  private router = inject(Router);
-  private gss = inject(GoogleSpreadsheetService);
-  private matIconRegistry = inject(MatIconRegistry);
-  private domSanitizer = inject(DomSanitizer);
-
-
-
   apiKey = environment.googleApiKey;
   spreadsheet: Spreadsheet | undefined;
   isLoading = false;
   loadingMessage: string | undefined;
   errored = false;
   waitingForRouter = true;
+  private spreadsheetFacade = inject(SpreadsheetFacade);
+  private databaseFacadeService = inject(DatabaseFacadeService);
+  private userService = inject(UserService);
+  private router = inject(Router);
+  private matIconRegistry = inject(MatIconRegistry);
+  private domSanitizer = inject(DomSanitizer);
   private nonIdRoutes: string[] = [];
 
   ngOnInit(): void {

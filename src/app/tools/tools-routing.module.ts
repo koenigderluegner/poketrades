@@ -1,5 +1,4 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { Routes } from '@angular/router';
 import { ToolsComponent } from './tools.component';
 import { BreedingComponent } from './breeding/breeding.component';
 import { ShinyDexComponent } from './components/shiny-dex/shiny-dex.component';
@@ -9,7 +8,7 @@ import {
 } from './components/ultra-wormhole-shiny-dex/ultra-wormhole-shiny-dex.component';
 
 
-const routes: Routes = [
+export const routes: Routes = [
   {
     path: '', redirectTo: 'breeding', pathMatch: "full"
   },
@@ -30,10 +29,3 @@ const routes: Routes = [
     ]
   }
 ];
-
-@NgModule({
-  imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
-})
-export class ToolsRoutingModule {
-}

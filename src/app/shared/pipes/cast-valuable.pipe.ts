@@ -4,7 +4,6 @@ import { Valuable } from '@shared/interfaces/valuable.interface';
 
 @Pipe({
   name: 'castValuable',
-  standalone: false
 })
 export class CastValuablePipe implements PipeTransform {
 

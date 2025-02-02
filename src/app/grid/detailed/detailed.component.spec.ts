@@ -11,7 +11,6 @@ import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http'
   selector: `app-test-host-component`,
   template: `
     <app-detailed [pokemon]="MOCK_POKEMON"></app-detailed>`,
-  standalone: false
 })
 class TestHostComponent {
 

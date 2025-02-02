@@ -1,17 +1,17 @@
 import { Component, input, ViewEncapsulation } from '@angular/core';
 import { GridAppearanceType } from '../grid-appearance.type';
 import { Pokemon } from '@shared/interfaces/pokemon';
+import { Breedable } from "@shared/interfaces/breedable.interface";
 
 @Component({
   selector: 'app-grid-item',
   templateUrl: './grid-item.component.html',
   styleUrls: ['./grid-item.component.scss'],
   encapsulation: ViewEncapsulation.None,
-  standalone: false
 })
 export class GridItemComponent {
 
-  readonly pokemon = input<Pokemon>();
+  readonly pokemon = input<Pokemon | Breedable>();
   readonly appearance = input<GridAppearanceType>();
 
 }

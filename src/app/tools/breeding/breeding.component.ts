@@ -1,5 +1,5 @@
-import { Component, HostBinding, inject, ViewEncapsulation } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { Component, inject, ViewEncapsulation } from '@angular/core';
+import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { DatabaseFacadeService } from '../../database/database-facade.service';
 import { forkJoin, Observable } from 'rxjs';
 import { map, mergeMap, startWith, tap } from 'rxjs/operators';
@@ -11,14 +11,54 @@ import { SpreadsheetFacade } from '@spreadsheet/spreadsheet.facade';
 import { Worksheet } from '@spreadsheet/models/worksheet';
 import { GridService } from '../../grid/services/grid.service';
 import { Breedable } from '@shared/interfaces/breedable.interface';
-import { MatAutocompleteSelectedEvent } from "@angular/material/autocomplete";
+import {
+  MatAutocomplete,
+  MatAutocompleteOrigin,
+  MatAutocompleteSelectedEvent,
+  MatAutocompleteTrigger,
+  MatOption
+} from "@angular/material/autocomplete";
+import { AsyncPipe, KeyValuePipe } from "@angular/common";
+import { PokemonComponent } from "../../icon/pokemon/pokemon.component";
+import { MatInput } from "@angular/material/input";
+import { NameToSlugPipe } from "@shared/pipes/name-to-slug.pipe";
+import { TypeBadgeComponent } from "@shared/components/type-badge/type-badge.component";
+import { ItemComponent } from "../../icon/item/item.component";
+import { SlugifyPipe } from "@shared/pipes/slugify.pipe";
+import { MatTooltip } from "@angular/material/tooltip";
+import { GridComponent } from "../../grid/grid.component";
+import { GridItemComponent } from "../../grid/grid-item/grid-item.component";
+import { FilterLevelUpMovesPipe } from "../pipes/filter-level-up-moves.pipe";
+import { BallGuyBubbleComponent } from "@shared/components/ball-guy-bubble/ball-guy-bubble.component";
 
 @Component({
   selector: 'app-breeding',
   templateUrl: './breeding.component.html',
   styleUrls: ['./breeding.component.scss'],
   encapsulation: ViewEncapsulation.None,
-  standalone: false
+  imports: [
+    ReactiveFormsModule,
+    AsyncPipe,
+    PokemonComponent,
+    MatAutocompleteTrigger,
+    MatAutocomplete,
+    MatOption,
+    MatInput,
+    NameToSlugPipe,
+    TypeBadgeComponent,
+    KeyValuePipe,
+    ItemComponent,
+    SlugifyPipe,
+    MatTooltip,
+    GridComponent,
+    GridItemComponent,
+    FilterLevelUpMovesPipe,
+    BallGuyBubbleComponent,
+    MatAutocompleteOrigin
+  ],
+  host: {
+    'class': 'breeding-view'
+  }
 })
 export class BreedingComponent {
   private database = inject(DatabaseFacadeService);
@@ -36,7 +76,6 @@ export class BreedingComponent {
   placeHolderPokemon: Pokemon;
   worksheets?: Worksheet[];
   sheetBreeadbles?: { [key: string]: Breedable };
-  @HostBinding('class.breeding-view') private _isBreedingView = true;
   private breedables: LegalityEntry[] | undefined;
 
   constructor() {

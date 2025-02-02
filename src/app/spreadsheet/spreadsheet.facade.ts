@@ -11,11 +11,10 @@ import { ApiError } from '@shared/interfaces/api-error.interface';
 import { Breedable } from '@shared/interfaces/breedable.interface';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class SpreadsheetFacade {
   private spreadsheetService = inject(SpreadsheetService);
-
 
 
   private readonly _isDefaultSheet$: BehaviorSubject<boolean>;

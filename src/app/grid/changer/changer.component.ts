@@ -1,20 +1,23 @@
-import { Component, HostBinding, inject, output, ViewEncapsulation } from '@angular/core';
+import { Component, inject, output, ViewEncapsulation } from '@angular/core';
 import { GridAppearanceType } from '../grid-appearance.type';
 import { GridService } from '../services/grid.service';
 import { Observable } from 'rxjs';
+import { AsyncPipe } from "@angular/common";
 
 @Component({
   selector: 'app-changer',
   templateUrl: './changer.component.html',
   styleUrls: ['./changer.component.scss'],
   encapsulation: ViewEncapsulation.None,
-  standalone: false
+  imports: [
+    AsyncPipe
+  ],
+  host: {
+    'class': 'grid-changer',
+  }
 })
 export class ChangerComponent {
   private gridService = inject(GridService);
-
-
-  @HostBinding('class') classes = 'grid-changer';
 
   readonly selectionChanged = output<GridAppearanceType>();
   appearance$: Observable<GridAppearanceType>;

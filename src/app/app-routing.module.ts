@@ -1,29 +1,28 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { Route, Routes } from '@angular/router';
 
 
-const toolsRoutes = {
+const toolsRoutes: Route = {
   path: 'tools',
-  loadChildren: () => import('./tools/tools.module').then(m => m.ToolsModule)
+  loadChildren: () => import('./tools/tools-routing.module').then(m => m.routes)
 };
 
 
 const userRoutes: Routes = [
-  {path: 'breedables', loadChildren: () => import('./breedable/breedable.module').then(m => m.BreedableModule)},
-  {path: 'valuables', loadChildren: () => import('./valuable/valuable.module').then(m => m.ValuableModule)},
+  {path: 'breedables', loadChildren: () => import('./breedable/breedable-routing.module').then(m => m.routes)},
+  {path: 'valuables', loadChildren: () => import('./valuable/valuable-routing.module').then(m => m.routes)},
 ];
 
 userRoutes.push(toolsRoutes);
 
-const routes: Routes = [
-  {path: '', loadChildren: () => import('./changelog/changelog.module').then(m => m.ChangelogModule)},
+export const appRoutes: Routes = [
+  {path: '', loadChildren: () => import('./changelog/changelog-routing.module').then(m => m.routes)},
   {
     path: 'help',
-    loadChildren: () => import('./help/help.module').then(m => m.HelpModule)
+    loadChildren: () => import('./help/help-routing.module').then(m => m.routes)
   },
   {
     path: 'change-spreadsheet',
-    loadChildren: () => import('./spreadsheet-changer/spreadsheet-changer.module').then(m => m.SpreadsheetChangerModule)
+    loadChildren: () => import('./spreadsheet-changer/spreadsheet-changer-routing.module').then(m => m.routes)
   },
   {
     path: ':spreadsheetId', children: userRoutes
@@ -33,11 +32,4 @@ const routes: Routes = [
   },
 ];
 
-routes.unshift(toolsRoutes);
-
-@NgModule({
-  imports: [RouterModule.forRoot(routes, {})],
-  exports: [RouterModule]
-})
-export class AppRoutingModule {
-}
+appRoutes.unshift(toolsRoutes);

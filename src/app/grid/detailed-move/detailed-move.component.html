@@ -1,4 +1,4 @@
-<span>{{ move }}</span>
-@if (isEggMove) {
+<span>{{ move() }}</span>
+@if (isEggMove()) {
   <span class="egg-icon"><app-pokemon [slug]="'egg'"></app-pokemon></span>
 }
