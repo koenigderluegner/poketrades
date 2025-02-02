@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, inject, OnInit, ViewEncapsulation } from '@angular/core';
 import { BaseShinyDexComponent } from '@shared/components/base-shiny-dex/base-shiny-dex.component';
 import { DatabaseFacadeService } from '../../../database/database-facade.service';
 import { SpreadsheetFacade } from '@spreadsheet/spreadsheet.facade';
@@ -17,14 +17,14 @@ import { ObtainingMethods } from '@shared/enums/obtaining-method.enum';
   standalone: false
 })
 export class FriendSafariShinyDexComponent extends BaseShinyDexComponent implements OnInit {
+  private _databases = inject(DatabaseFacadeService);
+  private _spreadsheets = inject(SpreadsheetFacade);
+  private _gridService = inject(GridService);
+
 
   shinies$?: Observable<[string, ShinyDexEntry][]>;
 
-  constructor(
-    private _databases: DatabaseFacadeService,
-    private _spreadsheets: SpreadsheetFacade,
-    private _gridService: GridService
-  ) {
+  constructor() {
     super();
     this._gridService.updateHideOwnedStatusControl(false);
     this._gridService.updateHideAppearanceControl(true);

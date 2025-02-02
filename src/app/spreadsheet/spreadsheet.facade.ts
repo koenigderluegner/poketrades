@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, throwError } from 'rxjs';
 import { Spreadsheet } from './models/spreadsheet';
 import { catchError, map, tap } from 'rxjs/operators';
@@ -14,6 +14,8 @@ import { Breedable } from '@shared/interfaces/breedable.interface';
   providedIn: 'root'
 })
 export class SpreadsheetFacade {
+  private spreadsheetService = inject(SpreadsheetService);
+
 
 
   private readonly _isDefaultSheet$: BehaviorSubject<boolean>;
@@ -23,7 +25,7 @@ export class SpreadsheetFacade {
   private readonly _searchHistory: BehaviorSubject<SearchHistoryEntry[]>;
 
 
-  constructor(private spreadsheetService: SpreadsheetService) {
+  constructor() {
     if (!localStorage.getItem('spreadsheetHistory')) {
       localStorage.setItem('spreadsheetHistory', JSON.stringify([]));
       this._searchHistory = new BehaviorSubject<SearchHistoryEntry[]>([]);

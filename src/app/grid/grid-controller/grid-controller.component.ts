@@ -1,4 +1,4 @@
-import { Component, HostBinding, OnDestroy, ViewEncapsulation } from '@angular/core';
+import { Component, HostBinding, inject, OnDestroy, ViewEncapsulation } from '@angular/core';
 import { GridAppearanceType } from '../grid-appearance.type';
 import { FormControl } from '@angular/forms';
 import { GridService } from '../services/grid.service';
@@ -17,6 +17,8 @@ import { MatOption } from "@angular/material/core";
   standalone: false
 })
 export class GridControllerComponent implements OnDestroy {
+  private gridService = inject(GridService);
+
 
   @HostBinding('class.grid-controller') setClass = true;
   pokemonCategory = PokemonCategory;
@@ -28,7 +30,7 @@ export class GridControllerComponent implements OnDestroy {
   categories: FormControl<PokemonCategory[]>;
   private subscriptions: Subscription[] = [];
 
-  constructor(private gridService: GridService) {
+  constructor() {
     this.ownedStatusControl = this.gridService.getOwnedStatusControl();
     this.hideAppearance$ = this.gridService.getHideAppearanceControl$();
     this.hideOwnedStatusControl$ = this.gridService.getHideOwnedStatusControl$();

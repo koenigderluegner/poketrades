@@ -3,6 +3,7 @@ import {
   Component,
   ContentChildren,
   HostBinding,
+  inject,
   Input,
   input,
   OnDestroy,
@@ -25,6 +26,8 @@ import { MatTableDataSource } from "@angular/material/table";
   standalone: false
 })
 export class GridComponent implements AfterContentInit, OnDestroy {
+  private gridService = inject(GridService);
+
 
   @HostBinding('class.grid') isGrid = true;
   // TODO: Skipped for migration because:
@@ -41,7 +44,7 @@ export class GridComponent implements AfterContentInit, OnDestroy {
   private _ownedStatus: OwnedStatus[] = [];
   private subscriptions: Subscription[] = [];
 
-  constructor(private gridService: GridService) {
+  constructor() {
     this.dataSource = new MatTableDataSource<GridItemComponent>([]);
     this.dataSource.sort = new MatSort();
     this.dataSource.sortingDataAccessor = (item: GridItemComponent, sortField: string) => {

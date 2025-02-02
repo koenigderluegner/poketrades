@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { tap } from 'rxjs/operators';
@@ -8,11 +8,10 @@ import { LegalityEntry } from '../models/legality-entry.interface';
   providedIn: 'root'
 })
 export class LegalityService {
+  private httpClient = inject(HttpClient);
+
 
   private db: LegalityEntry[] | undefined;
-
-  constructor(private httpClient: HttpClient) {
-  }
 
   loadDatabase(): Observable<LegalityEntry[]> {
     if (this.db) {

@@ -1,4 +1,4 @@
-import { Component, HostBinding, OnInit } from '@angular/core';
+import { Component, HostBinding, inject, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Spreadsheet } from '@spreadsheet/models/spreadsheet';
 import { Worksheet } from '@spreadsheet/models/worksheet';
@@ -11,6 +11,8 @@ import { SpreadsheetFacade } from '@spreadsheet/spreadsheet.facade';
   standalone: false
 })
 export class IndexComponent implements OnInit {
+  private readonly _spreadsheetFacade = inject(SpreadsheetFacade);
+
 
 
   spreadsheetData$: Observable<Spreadsheet>;
@@ -25,7 +27,7 @@ export class IndexComponent implements OnInit {
   };
   @HostBinding('class.view') private _isView = true;
 
-  constructor(private readonly _spreadsheetFacade: SpreadsheetFacade) {
+  constructor() {
     this.spreadsheetData$ = this._spreadsheetFacade.getCurrentSpreadsheet$();
   }
 

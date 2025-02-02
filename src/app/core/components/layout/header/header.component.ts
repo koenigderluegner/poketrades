@@ -2,6 +2,7 @@ import {
   Component,
   HostBinding,
   HostListener,
+  inject,
   OnInit,
   TemplateRef,
   viewChild,
@@ -22,6 +23,11 @@ import { SlugifyPipe } from '@shared/pipes/slugify.pipe';
   standalone: false
 })
 export class HeaderComponent implements OnInit {
+  private spreadsheetFacade = inject(SpreadsheetFacade);
+  overlay = inject(Overlay);
+  viewContainerRef = inject(ViewContainerRef);
+  private slugifyPipe = inject(SlugifyPipe);
+
 
   @HostBinding('class.app-header') setClass = true;
 
@@ -30,19 +36,11 @@ export class HeaderComponent implements OnInit {
   valuablesLink: string | undefined;
 
   windowSize = window.innerWidth;
-  // @ts-ignore
-  readonly templatePortalContent = viewChild<TemplateRef<unknown>>('menuTemplate');
+  readonly templatePortalContent = viewChild.required<TemplateRef<unknown>>('menuTemplate');
   breeablesLink: string[] = [];
   valuablesLinkArray: string[] = [];
   toolsLink: string[] = [];
   private overlayRef?: OverlayRef;
-
-  constructor(private spreadsheetFacade: SpreadsheetFacade,
-              public overlay: Overlay,
-              public viewContainerRef: ViewContainerRef,
-              private slugifyPipe: SlugifyPipe) {
-
-  }
 
   @HostListener('window:resize', ['$event'])
   onResize(event: UIEvent) {

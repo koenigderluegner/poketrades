@@ -1,4 +1,4 @@
-import { Component, HostBinding, ViewEncapsulation } from '@angular/core';
+import { Component, HostBinding, inject, ViewEncapsulation } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { DatabaseFacadeService } from '../../database/database-facade.service';
 import { forkJoin, Observable } from 'rxjs';
@@ -21,6 +21,10 @@ import { MatAutocompleteSelectedEvent } from "@angular/material/autocomplete";
   standalone: false
 })
 export class BreedingComponent {
+  private database = inject(DatabaseFacadeService);
+  private spreadsheetFacade = inject(SpreadsheetFacade);
+  private gridService = inject(GridService);
+
 
   searchControl: FormControl<string | LegalityEntry>;
   breedables$: Observable<LegalityEntry[]>;
@@ -35,9 +39,9 @@ export class BreedingComponent {
   @HostBinding('class.breeding-view') private _isBreedingView = true;
   private breedables: LegalityEntry[] | undefined;
 
-  constructor(private database: DatabaseFacadeService,
-              private spreadsheetFacade: SpreadsheetFacade,
-              private gridService: GridService) {
+  constructor() {
+    const spreadsheetFacade = this.spreadsheetFacade;
+
     this.gridService.updateHideOwnedStatusControl(true);
     this.gridService.updateHideAppearanceControl(true);
     this.placeHolderPokemon = {

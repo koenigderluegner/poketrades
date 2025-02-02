@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, inject, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable, Subscription } from 'rxjs';
 import { Worksheet } from '@spreadsheet/models/worksheet';
@@ -17,6 +17,11 @@ import { Pokemon } from '@shared/interfaces/pokemon';
   standalone: false
 })
 export class BallComponent implements OnInit, OnDestroy {
+  private spreadsheetFacade = inject(SpreadsheetFacade);
+  private route = inject(ActivatedRoute);
+  private slugifyPipe = inject(SlugifyPipe);
+  private gridService = inject(GridService);
+
 
   worksheetTitle: string | undefined;
   worksheet: Worksheet | undefined;
@@ -24,12 +29,7 @@ export class BallComponent implements OnInit, OnDestroy {
   subscriptions: Subscription[] = [];
   gridAppearance$: Observable<GridAppearanceType>;
 
-  constructor(
-    private spreadsheetFacade: SpreadsheetFacade,
-    private route: ActivatedRoute,
-    private slugifyPipe: SlugifyPipe,
-    private gridService: GridService
-  ) {
+  constructor() {
     this.gridService.updateHideAppearanceControl(false);
     this.gridService.updateHideOwnedStatusControl(false);
     this.gridAppearance$ = this.gridService.getGridAppearance$();

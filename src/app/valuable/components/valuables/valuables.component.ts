@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { switchMap, tap } from 'rxjs/operators';
 import { SpreadsheetFacade } from '@spreadsheet/spreadsheet.facade';
 import { ActivatedRoute } from '@angular/router';
@@ -17,6 +17,11 @@ import { Spreadsheet } from '@spreadsheet/models/spreadsheet';
   standalone: false
 })
 export class ValuablesComponent implements OnInit {
+  private spreadsheetFacade = inject(SpreadsheetFacade);
+  private route = inject(ActivatedRoute);
+  private slugifyPipe = inject(SlugifyPipe);
+  private gridService = inject(GridService);
+
 
   worksheetTitle: string | null | undefined;
   worksheet: Worksheet | undefined;
@@ -24,12 +29,7 @@ export class ValuablesComponent implements OnInit {
   subscriptions: Subscription[] = [];
   gridAppearance$: Observable<GridAppearanceType>;
 
-  constructor(
-    private spreadsheetFacade: SpreadsheetFacade,
-    private route: ActivatedRoute,
-    private slugifyPipe: SlugifyPipe,
-    private gridService: GridService
-  ) {
+  constructor() {
     this.gridService.updateHideOwnedStatusControl(true);
     this.gridService.updateHideAppearanceControl(false);
     this.gridAppearance$ = this.gridService.getGridAppearance$();

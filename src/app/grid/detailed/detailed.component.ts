@@ -1,4 +1,4 @@
-import { Component, HostBinding, OnChanges, OnInit, SimpleChanges, ViewEncapsulation } from '@angular/core';
+import { Component, HostBinding, inject, OnChanges, OnInit, SimpleChanges, ViewEncapsulation } from '@angular/core';
 import { DatabaseFacadeService } from '../../database/database-facade.service';
 import { forkJoin, Observable, of } from 'rxjs';
 import { PokemonEntry } from '../../database/models/pokemon-entry.interface';
@@ -13,16 +13,14 @@ import { GridBaseAppearanceDirective } from '../components/grid-base-appearance.
   standalone: false
 })
 export class DetailedComponent extends GridBaseAppearanceDirective implements OnInit, OnChanges {
+  private databaseFacadeService = inject(DatabaseFacadeService);
+
 
   @HostBinding('class.grid-item') isGridItem = true;
   isEggMove$: Observable<boolean[]> | undefined;
   natureClass = '';
   dbpokemon$: Observable<PokemonEntry> | undefined;
   moves$: Observable<Move[]> | undefined;
-
-  constructor(private databaseFacadeService: DatabaseFacadeService) {
-    super();
-  }
 
   @HostBinding('class.inactive') get inactive() {
     return !this.pokemon?.isOwned;

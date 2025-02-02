@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { BaseShinyDexComponent } from '@shared/components/base-shiny-dex/base-shiny-dex.component';
 import { combineLatest, Observable, of } from 'rxjs';
 import { ShinyDexEntry } from '@shared/interfaces/shiny-dex-entry.interface';
@@ -16,14 +16,14 @@ import { ObtainingMethods } from '@shared/enums/obtaining-method.enum';
   standalone: false
 })
 export class UltraWormholeShinyDexComponent extends BaseShinyDexComponent implements OnInit {
+  private _databases = inject(DatabaseFacadeService);
+  private _spreadsheets = inject(SpreadsheetFacade);
+  private _gridService = inject(GridService);
+
 
   shinies$?: Observable<[string, ShinyDexEntry][]>;
 
-  constructor(
-    private _databases: DatabaseFacadeService,
-    private _spreadsheets: SpreadsheetFacade,
-    private _gridService: GridService
-  ) {
+  constructor() {
     super();
     this._gridService.updateHideOwnedStatusControl(false);
     this._gridService.updateHideAppearanceControl(true);

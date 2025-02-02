@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { Spreadsheet } from '@spreadsheet/models/spreadsheet';
 import { NavigationEnd, Route, Router } from '@angular/router';
 import { SpreadsheetFacade } from '@spreadsheet/spreadsheet.facade';
@@ -16,6 +16,14 @@ import { environment } from '../environments/environment';
   standalone: false
 })
 export class AppComponent implements OnInit {
+  private spreadsheetFacade = inject(SpreadsheetFacade);
+  private databaseFacadeService = inject(DatabaseFacadeService);
+  private userService = inject(UserService);
+  private router = inject(Router);
+  private gss = inject(GoogleSpreadsheetService);
+  private matIconRegistry = inject(MatIconRegistry);
+  private domSanitizer = inject(DomSanitizer);
+
 
 
   apiKey = environment.googleApiKey;
@@ -25,17 +33,6 @@ export class AppComponent implements OnInit {
   errored = false;
   waitingForRouter = true;
   private nonIdRoutes: string[] = [];
-
-  constructor(
-    private spreadsheetFacade: SpreadsheetFacade,
-    private databaseFacadeService: DatabaseFacadeService,
-    private userService: UserService,
-    private router: Router,
-    private gss: GoogleSpreadsheetService,
-    private matIconRegistry: MatIconRegistry,
-    private domSanitizer: DomSanitizer,
-  ) {
-  }
 
   ngOnInit(): void {
 

@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, inject, ViewEncapsulation } from '@angular/core';
 import { SpreadsheetFacade } from '@spreadsheet/spreadsheet.facade';
 import { combineLatest, Observable, of } from 'rxjs';
 import { DatabaseFacadeService } from '../../../database/database-facade.service';
@@ -15,12 +15,14 @@ import { GridService } from '../../../grid/services/grid.service';
   standalone: false
 })
 export class OverviewComponent {
+  private facade = inject(SpreadsheetFacade);
+  private db = inject(DatabaseFacadeService);
+  private gridService = inject(GridService);
+
 
   data$: Observable<{ legality: LegalityEntry[], entries: BreedablesOverviewList }>;
 
-  constructor(private facade: SpreadsheetFacade,
-              private db: DatabaseFacadeService,
-              private gridService: GridService) {
+  constructor() {
     this.gridService.updateHideAppearanceControl(true);
     this.gridService.updateHideOwnedStatusControl(true);
     this.data$ = combineLatest([

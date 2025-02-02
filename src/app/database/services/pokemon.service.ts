@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { switchMap, tap } from 'rxjs/operators';
 import { Observable, of, throwError } from 'rxjs';
@@ -8,11 +8,10 @@ import { PokemonEntry } from '../models/pokemon-entry.interface';
   providedIn: 'root'
 })
 export class PokemonService {
+  private httpClient = inject(HttpClient);
+
 
   private db: PokemonEntry[] | undefined;
-
-  constructor(private httpClient: HttpClient) {
-  }
 
   loadDatabase(): Observable<PokemonEntry[]> {
     if (this.db) {

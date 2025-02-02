@@ -1,4 +1,4 @@
-import { Component, HostBinding, ViewEncapsulation } from '@angular/core';
+import { Component, HostBinding, inject, ViewEncapsulation } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Observable, tap } from 'rxjs';
 import { Spreadsheet } from '@spreadsheet/models/spreadsheet';
@@ -20,6 +20,8 @@ interface SearchGroup {
   standalone: false
 })
 export class IndexComponent {
+  private spreadsheetFacade = inject(SpreadsheetFacade);
+
 
   @HostBinding('class') classes = 'view spreadsheet-changer-view';
 
@@ -35,7 +37,7 @@ export class IndexComponent {
 
   error: ApiError | null = null;
 
-  constructor(private spreadsheetFacade: SpreadsheetFacade) {
+  constructor() {
     this.searchForm = new FormGroup({
       search: new FormControl('', {nonNullable: true})
     });

@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { switchMap } from 'rxjs/operators';
 import { Observable, of } from 'rxjs';
@@ -17,6 +17,10 @@ import { coerceBooleanProperty } from '@angular/cdk/coercion';
   providedIn: 'root'
 })
 export class SpreadsheetService {
+  private httpClient = inject(HttpClient);
+  private gss = inject(GoogleSpreadsheetService);
+  private slugifyPipe = inject(SlugifyPipe);
+
 
   private readonly bannedSheets: string[] = [
     'Welcome',
@@ -40,11 +44,6 @@ export class SpreadsheetService {
       'Dusk', 'Heal'],
     includeShinies: ['true', 'false']
   };
-
-  constructor(private httpClient: HttpClient,
-              private gss: GoogleSpreadsheetService,
-              private slugifyPipe: SlugifyPipe) {
-  }
 
   getSpreadsheet(spreadsheetId: string, apiKey: string): Observable<Spreadsheet> {
     let spreadsheet: Spreadsheet;
