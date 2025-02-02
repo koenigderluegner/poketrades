@@ -3,7 +3,8 @@ import { Pokemon } from '@shared/interfaces/pokemon';
 import { Breedable } from '@shared/interfaces/breedable.interface';
 
 @Pipe({
-  name: 'castBreedable'
+  name: 'castBreedable',
+  standalone: false
 })
 export class CastBreedablePipe implements PipeTransform {
 

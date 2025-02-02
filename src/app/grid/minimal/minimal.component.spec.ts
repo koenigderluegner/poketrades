@@ -9,7 +9,8 @@ import { MOCK_POKEMON } from '../../../../testing/mocks/pokemon-list.mock';
 @Component({
   selector: `app-test-host-component`,
   template: `
-    <app-minimal [pokemon]="MOCK_POKEMON"></app-minimal>`
+    <app-minimal [pokemon]="MOCK_POKEMON"></app-minimal>`,
+  standalone: false
 })
 class TestHostComponent {
 

@@ -13,7 +13,8 @@ import { Spreadsheet } from '@spreadsheet/models/spreadsheet';
 @Component({
   selector: 'app-valuables',
   templateUrl: './valuables.component.html',
-  styleUrls: ['./valuables.component.scss']
+  styleUrls: ['./valuables.component.scss'],
+  standalone: false
 })
 export class ValuablesComponent implements OnInit {
 

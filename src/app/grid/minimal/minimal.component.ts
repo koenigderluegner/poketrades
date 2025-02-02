@@ -5,7 +5,8 @@ import { GridBaseAppearanceDirective } from '../components/grid-base-appearance.
   selector: 'app-minimal[pokemon]',
   templateUrl: './minimal.component.html',
   styleUrls: ['./minimal.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  standalone: false
 })
 export class MinimalComponent extends GridBaseAppearanceDirective {
 

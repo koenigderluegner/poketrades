@@ -5,6 +5,7 @@ import { default as categoryData } from './categories.json';
 @Component({
   selector: 'app-item',
   template: '',
+  standalone: false
 })
 export class ItemComponent {
 

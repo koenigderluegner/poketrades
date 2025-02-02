@@ -9,7 +9,8 @@ import { GridBaseAppearanceDirective } from '../components/grid-base-appearance.
   selector: 'app-detailed',
   templateUrl: './detailed.component.html',
   styleUrls: ['./detailed.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  standalone: false
 })
 export class DetailedComponent extends GridBaseAppearanceDirective implements OnInit, OnChanges {
 

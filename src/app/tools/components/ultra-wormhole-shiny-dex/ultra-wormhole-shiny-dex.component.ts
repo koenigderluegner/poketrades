@@ -12,7 +12,8 @@ import { ObtainingMethods } from '@shared/enums/obtaining-method.enum';
 @Component({
   selector: 'app-ultra-wormhole-shiny-dex',
   templateUrl: './ultra-wormhole-shiny-dex.component.html',
-  styleUrls: ['./ultra-wormhole-shiny-dex.component.scss']
+  styleUrls: ['./ultra-wormhole-shiny-dex.component.scss'],
+  standalone: false
 })
 export class UltraWormholeShinyDexComponent extends BaseShinyDexComponent implements OnInit {
 

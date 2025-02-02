@@ -5,7 +5,8 @@ import { GridBaseAppearanceDirective } from '../components/grid-base-appearance.
   selector: 'app-normal',
   templateUrl: './normal.component.html',
   styleUrls: ['./normal.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  standalone: false
 })
 export class NormalComponent extends GridBaseAppearanceDirective {
 

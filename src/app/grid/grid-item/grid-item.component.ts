@@ -6,7 +6,8 @@ import { Pokemon } from '@shared/interfaces/pokemon';
   selector: 'app-grid-item',
   templateUrl: './grid-item.component.html',
   styleUrls: ['./grid-item.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  standalone: false
 })
 export class GridItemComponent {
 

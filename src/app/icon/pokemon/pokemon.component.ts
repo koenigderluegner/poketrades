@@ -4,7 +4,8 @@ import { Component, HostBinding, Input, ViewEncapsulation } from '@angular/core'
   selector: 'app-pokemon',
   template: '',
   styleUrls: ['./pokemon.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  standalone: false
 })
 export class PokemonComponent {
 

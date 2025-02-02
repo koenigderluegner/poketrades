@@ -4,7 +4,8 @@ import { Component, HostBinding, Input, ViewEncapsulation } from '@angular/core'
   selector: 'app-sub-navi-item',
   templateUrl: './sub-navi-item.component.html',
   styleUrls: ['./sub-navi-item.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  standalone: false
 })
 export class SubNaviItemComponent {
 

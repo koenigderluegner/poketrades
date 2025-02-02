@@ -10,7 +10,8 @@ import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http'
 @Component({
   selector: `app-test-host-component`,
   template: `
-    <app-detailed [pokemon]="MOCK_POKEMON"></app-detailed>`
+    <app-detailed [pokemon]="MOCK_POKEMON"></app-detailed>`,
+  standalone: false
 })
 class TestHostComponent {
 

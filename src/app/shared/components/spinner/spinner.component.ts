@@ -5,7 +5,8 @@ import { coerceNumberProperty } from '@angular/cdk/coercion';
   selector: 'app-spinner',
   templateUrl: './spinner.component.html',
   styleUrls: ['./spinner.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  standalone: false
 })
 export class SpinnerComponent {
 

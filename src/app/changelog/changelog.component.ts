@@ -5,7 +5,8 @@ import pageMarkdown from '../../../CHANGELOG.md';
   selector: 'app-changelog',
   templateUrl: './changelog.component.html',
   styleUrls: ['./changelog.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  standalone: false
 })
 export class ChangelogComponent {
 

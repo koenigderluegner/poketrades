@@ -11,7 +11,8 @@ import { GridService } from '../../../grid/services/grid.service';
   selector: 'app-overview',
   templateUrl: './overview.component.html',
   styleUrls: ['./overview.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  standalone: false
 })
 export class OverviewComponent {
 

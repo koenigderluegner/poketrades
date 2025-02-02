@@ -8,6 +8,7 @@ import { Observable } from 'rxjs';
   templateUrl: './changer.component.html',
   styleUrls: ['./changer.component.scss'],
   encapsulation: ViewEncapsulation.None,
+  standalone: false
 })
 export class ChangerComponent {
 

@@ -14,6 +14,7 @@ import { Pokemon } from '@shared/interfaces/pokemon';
   selector: 'app-ball',
   templateUrl: './ball.component.html',
   styleUrls: ['./ball.component.scss'],
+  standalone: false
 })
 export class BallComponent implements OnInit, OnDestroy {
 

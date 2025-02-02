@@ -13,7 +13,8 @@ import { ObtainingMethods } from '@shared/enums/obtaining-method.enum';
   selector: 'app-friend-safari-shiny-dex',
   templateUrl: './friend-safari-shiny-dex.component.html',
   styleUrls: ['./friend-safari-shiny-dex.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  standalone: false
 })
 export class FriendSafariShinyDexComponent extends BaseShinyDexComponent implements OnInit {
 

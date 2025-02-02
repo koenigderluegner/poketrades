@@ -2,7 +2,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 import { SlugifyPipe } from '@shared/pipes/slugify.pipe';
 
 @Pipe({
-  name: 'nameToSlug'
+  name: 'nameToSlug',
+  standalone: false
 })
 export class NameToSlugPipe extends SlugifyPipe implements PipeTransform {
 

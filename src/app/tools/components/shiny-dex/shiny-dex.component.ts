@@ -12,7 +12,8 @@ import { ShinyDexEntry } from '@shared/interfaces/shiny-dex-entry.interface';
   selector: 'app-shiny-dex',
   templateUrl: './shiny-dex.component.html',
   styleUrls: ['./shiny-dex.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  standalone: false
 })
 export class ShinyDexComponent extends BaseShinyDexComponent implements OnInit {
 

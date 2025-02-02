@@ -13,7 +13,8 @@ import { MatOption } from "@angular/material/core";
   selector: 'app-grid-controller',
   templateUrl: './grid-controller.component.html',
   styleUrls: ['./grid-controller.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  standalone: false
 })
 export class GridControllerComponent implements OnDestroy {
 

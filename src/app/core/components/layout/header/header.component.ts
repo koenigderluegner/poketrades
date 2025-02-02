@@ -18,7 +18,8 @@ import { SlugifyPipe } from '@shared/pipes/slugify.pipe';
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  standalone: false
 })
 export class HeaderComponent implements OnInit {
 

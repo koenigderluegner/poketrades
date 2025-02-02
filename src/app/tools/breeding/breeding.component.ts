@@ -17,7 +17,8 @@ import { MatAutocompleteSelectedEvent } from "@angular/material/autocomplete";
   selector: 'app-breeding',
   templateUrl: './breeding.component.html',
   styleUrls: ['./breeding.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  standalone: false
 })
 export class BreedingComponent {
 

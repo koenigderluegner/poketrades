@@ -4,7 +4,8 @@ import { Component, HostBinding, Input, ViewEncapsulation } from '@angular/core'
   selector: 'app-detailed-move',
   templateUrl: './detailed-move.component.html',
   styleUrls: ['./detailed-move.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  standalone: false
 })
 export class DetailedMoveComponent {
 
