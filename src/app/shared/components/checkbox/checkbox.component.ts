@@ -12,7 +12,8 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
       multi: true
     }
   ],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  standalone: false
 })
 export class CheckboxComponent implements ControlValueAccessor {
 
@@ -22,6 +23,9 @@ export class CheckboxComponent implements ControlValueAccessor {
   controlID: string;
   checked = false;
   onTouchedCallback: (() => void) | undefined;
+  // TODO: Skipped for migration because:
+  //  This input is used in a control flow expression (e.g. `@if` or `*ngIf`)
+  //  and migrating would break narrowing currently.
   @Input() icon: string | undefined;
 
   constructor() {

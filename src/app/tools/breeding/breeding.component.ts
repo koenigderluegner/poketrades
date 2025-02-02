@@ -1,4 +1,4 @@
-import { Component, HostBinding, ViewEncapsulation } from '@angular/core';
+import { Component, HostBinding, inject, ViewEncapsulation } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { DatabaseFacadeService } from '../../database/database-facade.service';
 import { forkJoin, Observable } from 'rxjs';
@@ -17,15 +17,17 @@ import { MatAutocompleteSelectedEvent } from "@angular/material/autocomplete";
   selector: 'app-breeding',
   templateUrl: './breeding.component.html',
   styleUrls: ['./breeding.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  standalone: false
 })
 export class BreedingComponent {
+  private database = inject(DatabaseFacadeService);
+  private spreadsheetFacade = inject(SpreadsheetFacade);
+  private gridService = inject(GridService);
 
-  @HostBinding('class.breeding-view') private _isBreedingView = true;
 
   searchControl: FormControl<string | LegalityEntry>;
   breedables$: Observable<LegalityEntry[]>;
-  private breedables: LegalityEntry[] | undefined;
   filteredPokemon: Observable<LegalityEntry[]>;
   selectedPokemon$: Observable<PokemonEntry> | undefined;
   selectedPokemon: PokemonEntry | undefined;
@@ -34,11 +36,12 @@ export class BreedingComponent {
   placeHolderPokemon: Pokemon;
   worksheets?: Worksheet[];
   sheetBreeadbles?: { [key: string]: Breedable };
+  @HostBinding('class.breeding-view') private _isBreedingView = true;
+  private breedables: LegalityEntry[] | undefined;
 
+  constructor() {
+    const spreadsheetFacade = this.spreadsheetFacade;
 
-  constructor(private database: DatabaseFacadeService,
-              private spreadsheetFacade: SpreadsheetFacade,
-              private gridService: GridService) {
     this.gridService.updateHideOwnedStatusControl(true);
     this.gridService.updateHideAppearanceControl(true);
     this.placeHolderPokemon = {
@@ -73,23 +76,6 @@ export class BreedingComponent {
       startWith(''),
       map(value => this._filter(value))
     );
-  }
-
-  private _filter(value: string | LegalityEntry): LegalityEntry[] {
-    const filterValue = this._normalizeValue(value);
-    return this.breedables?.filter(
-      (legalityEntry: LegalityEntry) => this._normalizeValue(legalityEntry.pokemon).includes(filterValue)
-    ) || [];
-  }
-
-  private _normalizeValue(value: string | LegalityEntry): string {
-    let pokemon;
-    if (typeof value !== 'string') {
-      pokemon = value?.pokemon || '';
-    } else {
-      pokemon = value;
-    }
-    return pokemon.toLowerCase().replace(/\s/g, '');
   }
 
   displayFn(pokemon: LegalityEntry): string {
@@ -161,8 +147,24 @@ export class BreedingComponent {
     return eggCount === eggMovesLengeth;
   }
 
-
   selectInputText($event: FocusEvent) {
     ($event.target as HTMLInputElement).select();
+  }
+
+  private _filter(value: string | LegalityEntry): LegalityEntry[] {
+    const filterValue = this._normalizeValue(value);
+    return this.breedables?.filter(
+      (legalityEntry: LegalityEntry) => this._normalizeValue(legalityEntry.pokemon).includes(filterValue)
+    ) || [];
+  }
+
+  private _normalizeValue(value: string | LegalityEntry): string {
+    let pokemon;
+    if (typeof value !== 'string') {
+      pokemon = value?.pokemon || '';
+    } else {
+      pokemon = value;
+    }
+    return pokemon.toLowerCase().replace(/\s/g, '');
   }
 }

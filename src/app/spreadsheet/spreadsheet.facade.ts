@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, throwError } from 'rxjs';
 import { Spreadsheet } from './models/spreadsheet';
 import { catchError, map, tap } from 'rxjs/operators';
@@ -14,6 +14,8 @@ import { Breedable } from '@shared/interfaces/breedable.interface';
   providedIn: 'root'
 })
 export class SpreadsheetFacade {
+  private spreadsheetService = inject(SpreadsheetService);
+
 
 
   private readonly _isDefaultSheet$: BehaviorSubject<boolean>;
@@ -23,7 +25,7 @@ export class SpreadsheetFacade {
   private readonly _searchHistory: BehaviorSubject<SearchHistoryEntry[]>;
 
 
-  constructor(private spreadsheetService: SpreadsheetService) {
+  constructor() {
     if (!localStorage.getItem('spreadsheetHistory')) {
       localStorage.setItem('spreadsheetHistory', JSON.stringify([]));
       this._searchHistory = new BehaviorSubject<SearchHistoryEntry[]>([]);
@@ -102,23 +104,6 @@ export class SpreadsheetFacade {
     );
   }
 
-  private convertApiErrors(errorStatus: string): ApiError {
-    const newError = {
-      state: 'unknown',
-      message: ''
-    };
-    switch (errorStatus) {
-      case '429':
-        newError.message = 'Too many requests: Google request limit reached, try again later.';
-        break;
-      default:
-        newError.message = 'Unknown Error: please check the given ID and publish your sheet if not already.';
-        break;
-    }
-    return newError;
-  }
-
-
   updateCurrentSpreadsheet(spreadsheet: Spreadsheet): BehaviorSubject<Spreadsheet> {
     this.updateIsDefaultSpreadhseet(false);
     this._currentSpreadsheet$.next(spreadsheet);
@@ -143,9 +128,24 @@ export class SpreadsheetFacade {
     return this._isDefaultSheet$;
   }
 
-
   getSpreadsheetHistory$(): BehaviorSubject<SearchHistoryEntry[]> {
     return this._searchHistory;
+  }
+
+  private convertApiErrors(errorStatus: string): ApiError {
+    const newError = {
+      state: 'unknown',
+      message: ''
+    };
+    switch (errorStatus) {
+      case '429':
+        newError.message = 'Too many requests: Google request limit reached, try again later.';
+        break;
+      default:
+        newError.message = 'Unknown Error: please check the given ID and publish your sheet if not already.';
+        break;
+    }
+    return newError;
   }
 
   private saveToHistory(spreadsheet: Spreadsheet): void {

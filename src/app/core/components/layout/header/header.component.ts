@@ -2,9 +2,10 @@ import {
   Component,
   HostBinding,
   HostListener,
+  inject,
   OnInit,
   TemplateRef,
-  ViewChild,
+  viewChild,
   ViewContainerRef,
   ViewEncapsulation
 } from '@angular/core';
@@ -18,9 +19,15 @@ import { SlugifyPipe } from '@shared/pipes/slugify.pipe';
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  standalone: false
 })
 export class HeaderComponent implements OnInit {
+  private spreadsheetFacade = inject(SpreadsheetFacade);
+  overlay = inject(Overlay);
+  viewContainerRef = inject(ViewContainerRef);
+  private slugifyPipe = inject(SlugifyPipe);
+
 
   @HostBinding('class.app-header') setClass = true;
 
@@ -29,20 +36,11 @@ export class HeaderComponent implements OnInit {
   valuablesLink: string | undefined;
 
   windowSize = window.innerWidth;
-  // @ts-ignore
-  @ViewChild('menuTemplate') templatePortalContent: TemplateRef<unknown>;
-  private overlayRef?: OverlayRef;
+  readonly templatePortalContent = viewChild.required<TemplateRef<unknown>>('menuTemplate');
   breeablesLink: string[] = [];
   valuablesLinkArray: string[] = [];
   toolsLink: string[] = [];
-
-
-  constructor(private spreadsheetFacade: SpreadsheetFacade,
-              public overlay: Overlay,
-              public viewContainerRef: ViewContainerRef,
-              private slugifyPipe: SlugifyPipe) {
-
-  }
+  private overlayRef?: OverlayRef;
 
   @HostListener('window:resize', ['$event'])
   onResize(event: UIEvent) {
@@ -97,7 +95,7 @@ export class HeaderComponent implements OnInit {
       this.overlayRef?.dispose();
     });
 
-    this.overlayRef.attach(new TemplatePortal(this.templatePortalContent, this.viewContainerRef));
+    this.overlayRef.attach(new TemplatePortal(this.templatePortalContent(), this.viewContainerRef));
   }
 
   closeMenu(): void {

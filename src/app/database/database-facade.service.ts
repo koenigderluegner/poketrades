@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { PokemonService } from './services/pokemon.service';
 import { forkJoin, Observable } from 'rxjs';
 import { MoveService } from './services/move.service';
@@ -14,14 +14,11 @@ import { NaturesService } from './services/natures.service';
   providedIn: 'root'
 })
 export class DatabaseFacadeService {
+  private pokemonService = inject(PokemonService);
+  private moveService = inject(MoveService);
+  private legalityService = inject(LegalityService);
+  private naturesService = inject(NaturesService);
 
-  constructor(
-    private pokemonService: PokemonService,
-    private moveService: MoveService,
-    private legalityService: LegalityService,
-    private naturesService: NaturesService
-  ) {
-  }
 
   loadDatabases(): Observable<Database> {
     return forkJoin({

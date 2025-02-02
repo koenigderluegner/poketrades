@@ -4,7 +4,8 @@ import { Component, HostBinding, ViewEncapsulation } from '@angular/core';
   selector: 'app-ball-guy-bubble',
   templateUrl: './ball-guy-bubble.component.html',
   styleUrls: ['./ball-guy-bubble.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  standalone: false
 })
 export class BallGuyBubbleComponent {
 

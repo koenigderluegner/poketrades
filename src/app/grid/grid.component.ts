@@ -3,7 +3,9 @@ import {
   Component,
   ContentChildren,
   HostBinding,
+  inject,
   Input,
+  input,
   OnDestroy,
   QueryList,
   ViewEncapsulation
@@ -20,54 +22,44 @@ import { MatTableDataSource } from "@angular/material/table";
   selector: 'app-grid',
   templateUrl: './grid.component.html',
   styleUrls: ['./grid.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  standalone: false
 })
 export class GridComponent implements AfterContentInit, OnDestroy {
+  private gridService = inject(GridService);
+
 
   @HostBinding('class.grid') isGrid = true;
+  // TODO: Skipped for migration because:
+  //  This input is used in combination with `@HostBinding` and migrating would
+  //  break.
   @Input() @HostBinding('class.hide-inactives') hideInactiveItems = false;
-
+  readonly appearance = input<GridAppearanceType | null>();
+  // TODO: Skipped for migration because:
+  //  There are references to this query that cannot be migrated automatically.
+  @ContentChildren(GridItemComponent) contentChildren !: QueryList<GridItemComponent>;
+  items: GridItemComponent[] | undefined;
+  dataSource: MatTableDataSource<GridItemComponent>;
   private _categories: string[] = [];
   private _ownedStatus: OwnedStatus[] = [];
-
-  @HostBinding('class') get getClasses(): string[] {
-    const classes: string[] = [];
-
-    classes.push(this.appearance ?? 'normal');
-    if (this._categories.length) {
-      classes.push('filtered');
-    }
-    classes.push(...this._categories);
-    classes.push(...this._ownedStatus);
-    return classes;
-  }
-
-  @Input() appearance: GridAppearanceType | undefined | null;
-
-  @ContentChildren(GridItemComponent) contentChildren !: QueryList<GridItemComponent>;
-
   private subscriptions: Subscription[] = [];
-  items: GridItemComponent[] | undefined;
 
-  dataSource: MatTableDataSource<GridItemComponent>;
-
-
-  constructor(private gridService: GridService) {
+  constructor() {
     this.dataSource = new MatTableDataSource<GridItemComponent>([]);
     this.dataSource.sort = new MatSort();
     this.dataSource.sortingDataAccessor = (item: GridItemComponent, sortField: string) => {
       switch (sortField) {
         case 'name':
-          return item.pokemon?.name ?? '';
+          return item.pokemon()?.name ?? '';
         case 'dex':
-          return item.pokemon?.dex ?? '';
+          return item.pokemon()?.dex ?? '';
         default:
           return '';
       }
     };
 
     this.dataSource.filterPredicate = (data: GridItemComponent, filter: string) => {
-      return (data.pokemon?.name ?? '').toLowerCase().includes(filter);
+      return (data.pokemon()?.name ?? '').toLowerCase().includes(filter);
     };
 
     this.subscriptions.push(this.gridService.getFilter$().subscribe({
@@ -103,6 +95,18 @@ export class GridComponent implements AfterContentInit, OnDestroy {
 
   }
 
+  @HostBinding('class') get getClasses(): string[] {
+    const classes: string[] = [];
+
+    classes.push(this.appearance() ?? 'normal');
+    if (this._categories.length) {
+      classes.push('filtered');
+    }
+    classes.push(...this._categories);
+    classes.push(...this._ownedStatus);
+    return classes;
+  }
+
   ngAfterContentInit() {
 
     // initial load of list
@@ -118,7 +122,7 @@ export class GridComponent implements AfterContentInit, OnDestroy {
   }
 
   trackByFn(index: number, item: GridItemComponent): string {
-    return item.pokemon?.id ?? '';
+    return item.pokemon()?.id ?? '';
   }
 
   sort(sorting: MatSortable) { // mat sort + datasource?

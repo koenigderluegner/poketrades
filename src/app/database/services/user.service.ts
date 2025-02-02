@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, of, throwError } from 'rxjs';
 import { switchMap, tap } from 'rxjs/operators';
@@ -8,11 +8,10 @@ import { UserDatabase } from '../models/user-database.interface';
   providedIn: 'root'
 })
 export class UserService {
+  private httpClient = inject(HttpClient);
+
 
   private db: UserDatabase | undefined;
-
-  constructor(private httpClient: HttpClient) {
-  }
 
   loadDatabase(): Observable<UserDatabase> {
     if (this.db) {

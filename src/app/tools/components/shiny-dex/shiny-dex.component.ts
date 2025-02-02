@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, inject, OnInit, ViewEncapsulation } from '@angular/core';
 import { DatabaseFacadeService } from '../../../database/database-facade.service';
 import { combineLatest, Observable, of } from 'rxjs';
 import { SpreadsheetFacade } from '@spreadsheet/spreadsheet.facade';
@@ -12,9 +12,14 @@ import { ShinyDexEntry } from '@shared/interfaces/shiny-dex-entry.interface';
   selector: 'app-shiny-dex',
   templateUrl: './shiny-dex.component.html',
   styleUrls: ['./shiny-dex.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  standalone: false
 })
 export class ShinyDexComponent extends BaseShinyDexComponent implements OnInit {
+  private databases = inject(DatabaseFacadeService);
+  private spreadsheets = inject(SpreadsheetFacade);
+  private gridService = inject(GridService);
+
 
   shinies$?: Observable<[string, ShinyDexEntry][]>;
 
@@ -24,9 +29,7 @@ export class ShinyDexComponent extends BaseShinyDexComponent implements OnInit {
   ]
 
 
-  constructor(private databases: DatabaseFacadeService,
-              private spreadsheets: SpreadsheetFacade,
-              private gridService: GridService) {
+  constructor() {
     super();
     this.gridService.updateHideOwnedStatusControl(false);
     this.gridService.updateHideAppearanceControl(true);

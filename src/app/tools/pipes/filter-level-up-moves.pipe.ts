@@ -2,7 +2,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 import { LevelUpMove } from '../../database/models/level-up-move.interface';
 
 @Pipe({
-  name: 'filterLevelUpMoves'
+  name: 'filterLevelUpMoves',
+  standalone: false
 })
 export class FilterLevelUpMovesPipe implements PipeTransform {
 

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { Spreadsheet } from '@spreadsheet/models/spreadsheet';
 import { NavigationEnd, Route, Router } from '@angular/router';
 import { SpreadsheetFacade } from '@spreadsheet/spreadsheet.facade';
@@ -12,32 +12,27 @@ import { environment } from '../environments/environment';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  standalone: false
 })
 export class AppComponent implements OnInit {
+  private spreadsheetFacade = inject(SpreadsheetFacade);
+  private databaseFacadeService = inject(DatabaseFacadeService);
+  private userService = inject(UserService);
+  private router = inject(Router);
+  private gss = inject(GoogleSpreadsheetService);
+  private matIconRegistry = inject(MatIconRegistry);
+  private domSanitizer = inject(DomSanitizer);
 
 
-  constructor(
-    private spreadsheetFacade: SpreadsheetFacade,
-    private databaseFacadeService: DatabaseFacadeService,
-    private userService: UserService,
-    private router: Router,
-    private gss: GoogleSpreadsheetService,
-    private matIconRegistry: MatIconRegistry,
-    private domSanitizer: DomSanitizer,
-  ) {
-  }
 
   apiKey = environment.googleApiKey;
-
   spreadsheet: Spreadsheet | undefined;
-
   isLoading = false;
   loadingMessage: string | undefined;
   errored = false;
   waitingForRouter = true;
   private nonIdRoutes: string[] = [];
-
 
   ngOnInit(): void {
 

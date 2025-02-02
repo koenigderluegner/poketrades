@@ -13,21 +13,18 @@
             <li>
               <a routerLinkActive="selected" [routerLink]="breeablesLink">Breedables</a>
             </li>
-          }
-          @if (spreadsheetData.hasValuables && valuablesLink) {
-            <li>
-              <a routerLinkActive="selected" [routerLink]="valuablesLinkArray">Valuables</a>
-            </li>
-          }
+          } @if (spreadsheetData.hasValuables && valuablesLink) {
+          <li>
+            <a routerLinkActive="selected" [routerLink]="valuablesLinkArray">Valuables</a>
+          </li>
+        }
           <li>
             <a routerLinkActive="selected" [routerLink]="toolsLink">Tools</a>
           </li>
         </ul>
       </div>
     </nav>
-  }
-
-  @if (windowSize < 1200) {
+  } @if (windowSize < 1200) {
     <button type="button" (click)="openMenu()" mat-button>
       <mat-icon>menu</mat-icon>
     </button>
@@ -41,12 +38,11 @@
         <li>
           <a routerLinkActive="selected" (click)="closeMenu()" [routerLink]="breeablesLink">Breedables</a>
         </li>
-      }
-      @if (spreadsheetData.hasValuables && valuablesLink) {
-        <li>
-          <a routerLinkActive="selected" (click)="closeMenu()" [routerLink]="valuablesLinkArray">Valuables</a>
-        </li>
-      }
+      } @if (spreadsheetData.hasValuables && valuablesLink) {
+      <li>
+        <a routerLinkActive="selected" (click)="closeMenu()" [routerLink]="valuablesLinkArray">Valuables</a>
+      </li>
+    }
       <li>
         <a routerLinkActive="selected" (click)="closeMenu()" [routerLink]="toolsLink">Tools</a>
       </li>

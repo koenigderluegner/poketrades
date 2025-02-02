@@ -1,20 +1,21 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { DetailedComponent } from './detailed.component';
-import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { Component, CUSTOM_ELEMENTS_SCHEMA, ViewChild } from '@angular/core';
+import { provideHttpClientTesting } from '@angular/common/http/testing';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, viewChild } from '@angular/core';
 import { Pokemon } from '@shared/interfaces/pokemon';
 import { MOCK_POKEMON } from 'testing/mocks/pokemon-list.mock';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
 @Component({
   selector: `app-test-host-component`,
   template: `
-    <app-detailed [pokemon]="MOCK_POKEMON"></app-detailed>`
+    <app-detailed [pokemon]="MOCK_POKEMON"></app-detailed>`,
+  standalone: false
 })
 class TestHostComponent {
 
-  @ViewChild(DetailedComponent)
-  public detailedComponent: DetailedComponent | undefined;
+  readonly detailedComponent = viewChild(DetailedComponent);
 
   MOCK_POKEMON: Pokemon = MOCK_POKEMON[0];
 }
@@ -23,9 +24,10 @@ describe('DetailedComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      imports: [HttpClientTestingModule],
       declarations: [DetailedComponent, TestHostComponent],
-      schemas: [CUSTOM_ELEMENTS_SCHEMA]
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
+      imports: [],
+      providers: [provideHttpClient(withInterceptorsFromDi()), provideHttpClientTesting()]
     })
       .compileComponents();
   }));
@@ -44,7 +46,7 @@ describe('DetailedComponent', () => {
     });
 
     it('should create', () => {
-      expect(testHostComponent.detailedComponent).toBeTruthy();
+      expect(testHostComponent.detailedComponent()).toBeTruthy();
     });
   });
 });

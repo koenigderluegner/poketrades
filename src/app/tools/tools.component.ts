@@ -4,7 +4,8 @@ import { Component, HostBinding, ViewEncapsulation } from '@angular/core';
   selector: 'app-tools',
   templateUrl: './tools.component.html',
   styleUrls: ['./tools.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  standalone: false
 })
 export class ToolsComponent {
 

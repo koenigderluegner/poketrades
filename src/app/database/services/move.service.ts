@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { forkJoin, Observable, of, throwError } from 'rxjs';
 import { switchMap, tap } from 'rxjs/operators';
@@ -11,11 +11,10 @@ import { MoveDatabase } from '../models/move-database.interface';
   providedIn: 'root'
 })
 export class MoveService {
+  private httpClient = inject(HttpClient);
+
 
   private db: MoveDatabase | undefined;
-
-  constructor(private httpClient: HttpClient) {
-  }
 
   loadDatabase(): Observable<MoveDatabase> {
     if (this.db) {

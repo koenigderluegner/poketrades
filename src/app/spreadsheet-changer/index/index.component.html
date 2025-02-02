@@ -2,7 +2,7 @@
 <aside class="view-sidebar">
   <div class="view-subheader">Spreadsheet search</div>
   <form (submit)="submitSearch()" [formGroup]="searchForm">
-    <input id="search" formControlName="search" placeholder="Look up spreadsheet by id">
+    <input formControlName="search" id="search" placeholder="Look up spreadsheet by id">
   </form>
 
   <div class="view-subheader">
@@ -29,8 +29,7 @@
         </div>
       }
 
-    }
-    @if (!error) {
+    } @if (!error) {
 
       @if ((loadedSpreadsheet$ | async); as loadedSpreadsheet) {
 
@@ -46,8 +45,7 @@
                 and others.
               </div>
             </div>
-          }
-          @if (loadedSpreadsheet.hasBreedables) {
+          } @if (loadedSpreadsheet.hasBreedables) {
             <div class="collection-infos">
               <div class="title">Contains breedables!</div>
               <div class="text">Breedables are Pokémon, which can be bred or are a result of breeding. They are usually
@@ -70,13 +68,13 @@
 
   } @else {
 
-    <app-ball-guy-bubble>
-      <div>Enter a spreadsheet ID to load a spreadsheet.</div>
-      <div>Make sure the spreadsheet with that given ID is published to web and made from the template!</div>
-      <div>Currently no other spreadsheet template it supported.</div>
-    </app-ball-guy-bubble>
+  <app-ball-guy-bubble>
+    <div>Enter a spreadsheet ID to load a spreadsheet.</div>
+    <div>Make sure the spreadsheet with that given ID is published to web and made from the template!</div>
+    <div>Currently no other spreadsheet template it supported.</div>
+  </app-ball-guy-bubble>
 
-  }
+}
 </div>
 
 

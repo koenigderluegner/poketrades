@@ -3,7 +3,8 @@ import { Pokemon } from '@shared/interfaces/pokemon';
 import { Valuable } from '@shared/interfaces/valuable.interface';
 
 @Pipe({
-  name: 'castValuable'
+  name: 'castValuable',
+  standalone: false
 })
 export class CastValuablePipe implements PipeTransform {
 
