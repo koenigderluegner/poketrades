@@ -17,6 +17,8 @@ export class ItemComponent {
   private categoryClass: string | undefined;
   private suffixLess?: string;
 
+  // TODO: Skipped for migration because:
+  //  Accessor inputs cannot be migrated as they are too complex.
   @Input() set slug(sl: string) {
     this.slugClass = sl;
     const category = this.category;
@@ -46,6 +48,8 @@ export class ItemComponent {
     return '';
   }
 
+  // TODO: Skipped for migration because:
+  //  Accessor inputs cannot be migrated as they are too complex.
   @Input() set category(cat: string) {
     this.categoryClass = cat;
   }

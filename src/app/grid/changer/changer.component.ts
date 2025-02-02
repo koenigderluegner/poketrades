@@ -1,4 +1,4 @@
-import { Component, EventEmitter, HostBinding, Output, ViewEncapsulation } from '@angular/core';
+import { Component, HostBinding, output, ViewEncapsulation } from '@angular/core';
 import { GridAppearanceType } from '../grid-appearance.type';
 import { GridService } from '../services/grid.service';
 import { Observable } from 'rxjs';
@@ -14,7 +14,7 @@ export class ChangerComponent {
 
   @HostBinding('class') classes = 'grid-changer';
 
-  @Output() selectionChanged: EventEmitter<GridAppearanceType> = new EventEmitter();
+  readonly selectionChanged = output();
   appearance$: Observable<GridAppearanceType>;
 
   constructor(private gridService: GridService) {

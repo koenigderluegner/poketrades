@@ -1,4 +1,4 @@
-import { Component, HostBinding, Input, ViewEncapsulation } from '@angular/core';
+import { Component, HostBinding, input, ViewEncapsulation } from '@angular/core';
 import { PokemonType } from '@shared/interfaces/pokemon-type.type';
 
 @Component({
@@ -11,16 +11,16 @@ import { PokemonType } from '@shared/interfaces/pokemon-type.type';
 
 export class TypeBadgeComponent {
 
-  @Input() type: PokemonType = 'unknown';
-  @Input() size: 'small' | 'normal' = 'normal';
+  readonly type = input<PokemonType>('unknown');
+  readonly size = input<'small' | 'normal'>('normal');
 
   @HostBinding('class.type-badge') isTypeBade = true;
 
   @HostBinding('class') get typeClass() {
-    return this.type?.toLowerCase() || '';
+    return this.type()?.toLowerCase() || '';
   }
 
   @HostBinding('class.small') get sizeClass() {
-    return this.size === 'small';
+    return this.size() === 'small';
   }
 }

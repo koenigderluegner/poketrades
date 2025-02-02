@@ -1,4 +1,4 @@
-import { Component, HostBinding, Input, ViewEncapsulation } from '@angular/core';
+import { Component, HostBinding, Input, input, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-sub-navi-item',
@@ -11,8 +11,11 @@ export class SubNaviItemComponent {
 
   @HostBinding('class.sub-navi-item') subNaviClass = true;
 
+  // TODO: Skipped for migration because:
+  //  This input is used in a control flow expression (e.g. `@if` or `*ngIf`)
+  //  and migrating would break narrowing currently.
   @Input() text: string | undefined;
-  @Input() link: (string | number)[] | string | null | undefined; // routerLink inputs
-  @Input() meta: string | undefined;
+  readonly link = input<(string | number)[] | string | null>(); // routerLink inputs
+  readonly meta = input<string>();
 
 }

@@ -4,7 +4,7 @@ import {
   HostListener,
   OnInit,
   TemplateRef,
-  ViewChild,
+  viewChild,
   ViewContainerRef,
   ViewEncapsulation
 } from '@angular/core';
@@ -31,7 +31,7 @@ export class HeaderComponent implements OnInit {
 
   windowSize = window.innerWidth;
   // @ts-ignore
-  @ViewChild('menuTemplate') templatePortalContent: TemplateRef<unknown>;
+  readonly templatePortalContent = viewChild<TemplateRef<unknown>>('menuTemplate');
   breeablesLink: string[] = [];
   valuablesLinkArray: string[] = [];
   toolsLink: string[] = [];
@@ -97,7 +97,7 @@ export class HeaderComponent implements OnInit {
       this.overlayRef?.dispose();
     });
 
-    this.overlayRef.attach(new TemplatePortal(this.templatePortalContent, this.viewContainerRef));
+    this.overlayRef.attach(new TemplatePortal(this.templatePortalContent(), this.viewContainerRef));
   }
 
   closeMenu(): void {

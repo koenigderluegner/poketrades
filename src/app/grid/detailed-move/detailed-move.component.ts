@@ -9,7 +9,11 @@ import { Component, HostBinding, Input, ViewEncapsulation } from '@angular/core'
 })
 export class DetailedMoveComponent {
 
+  // TODO: Skipped for migration because:
+  //  Your application code writes to the input. This prevents migration.
   @Input() move: string;
+  // TODO: Skipped for migration because:
+  //  Your application code writes to the input. This prevents migration.
   @Input() isEggMove: boolean;
   @HostBinding('class.detailed-move') private setClasses = true;
 
@@ -29,6 +33,8 @@ export class DetailedMoveComponent {
     return this._type;
   }
 
+  // TODO: Skipped for migration because:
+  //  Accessor inputs cannot be migrated as they are too complex.
   @Input() set type(type: string) {
     this._type = type;
   }

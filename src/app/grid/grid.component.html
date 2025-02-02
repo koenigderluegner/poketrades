@@ -3,18 +3,18 @@
   @for (item of dataSource.filteredData; track trackByFn($index, item)) {
 
 
-    @switch (appearance) {
+    @switch (appearance()) {
       @case ('minimal') {
 
-        <app-minimal [pokemon]="item.pokemon"></app-minimal>
+        <app-minimal [pokemon]="item.pokemon()"></app-minimal>
 
       } @case ('normal') {
 
-        <app-normal [pokemon]="item.pokemon"></app-normal>
+        <app-normal [pokemon]="item.pokemon()"></app-normal>
 
       } @case ('detailed') {
 
-        <app-detailed [pokemon]="item.pokemon"></app-detailed>
+        <app-detailed [pokemon]="item.pokemon()"></app-detailed>
 
       }
     }

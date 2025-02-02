@@ -4,6 +4,7 @@ import {
   ContentChildren,
   HostBinding,
   Input,
+  input,
   OnDestroy,
   QueryList,
   ViewEncapsulation
@@ -26,8 +27,13 @@ import { MatTableDataSource } from "@angular/material/table";
 export class GridComponent implements AfterContentInit, OnDestroy {
 
   @HostBinding('class.grid') isGrid = true;
+  // TODO: Skipped for migration because:
+  //  This input is used in combination with `@HostBinding` and migrating would
+  //  break.
   @Input() @HostBinding('class.hide-inactives') hideInactiveItems = false;
-  @Input() appearance: GridAppearanceType | undefined | null;
+  readonly appearance = input<GridAppearanceType | null>();
+  // TODO: Skipped for migration because:
+  //  There are references to this query that cannot be migrated automatically.
   @ContentChildren(GridItemComponent) contentChildren !: QueryList<GridItemComponent>;
   items: GridItemComponent[] | undefined;
   dataSource: MatTableDataSource<GridItemComponent>;
@@ -41,16 +47,16 @@ export class GridComponent implements AfterContentInit, OnDestroy {
     this.dataSource.sortingDataAccessor = (item: GridItemComponent, sortField: string) => {
       switch (sortField) {
         case 'name':
-          return item.pokemon?.name ?? '';
+          return item.pokemon()?.name ?? '';
         case 'dex':
-          return item.pokemon?.dex ?? '';
+          return item.pokemon()?.dex ?? '';
         default:
           return '';
       }
     };
 
     this.dataSource.filterPredicate = (data: GridItemComponent, filter: string) => {
-      return (data.pokemon?.name ?? '').toLowerCase().includes(filter);
+      return (data.pokemon()?.name ?? '').toLowerCase().includes(filter);
     };
 
     this.subscriptions.push(this.gridService.getFilter$().subscribe({
@@ -89,7 +95,7 @@ export class GridComponent implements AfterContentInit, OnDestroy {
   @HostBinding('class') get getClasses(): string[] {
     const classes: string[] = [];
 
-    classes.push(this.appearance ?? 'normal');
+    classes.push(this.appearance() ?? 'normal');
     if (this._categories.length) {
       classes.push('filtered');
     }
@@ -113,7 +119,7 @@ export class GridComponent implements AfterContentInit, OnDestroy {
   }
 
   trackByFn(index: number, item: GridItemComponent): string {
-    return item.pokemon?.id ?? '';
+    return item.pokemon()?.id ?? '';
   }
 
   sort(sorting: MatSortable) { // mat sort + datasource?

@@ -1,4 +1,4 @@
-import { Component, Input, ViewEncapsulation } from '@angular/core';
+import { Component, input, ViewEncapsulation } from '@angular/core';
 import { GridAppearanceType } from '../grid-appearance.type';
 import { Pokemon } from '@shared/interfaces/pokemon';
 
@@ -11,7 +11,7 @@ import { Pokemon } from '@shared/interfaces/pokemon';
 })
 export class GridItemComponent {
 
-  @Input() pokemon: Pokemon | undefined;
-  @Input() appearance: GridAppearanceType | undefined;
+  readonly pokemon = input<Pokemon>();
+  readonly appearance = input<GridAppearanceType>();
 
 }

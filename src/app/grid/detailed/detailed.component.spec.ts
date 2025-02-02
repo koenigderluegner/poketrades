@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { DetailedComponent } from './detailed.component';
 import { provideHttpClientTesting } from '@angular/common/http/testing';
-import { Component, CUSTOM_ELEMENTS_SCHEMA, ViewChild } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, viewChild } from '@angular/core';
 import { Pokemon } from '@shared/interfaces/pokemon';
 import { MOCK_POKEMON } from 'testing/mocks/pokemon-list.mock';
 import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
@@ -15,8 +15,7 @@ import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http'
 })
 class TestHostComponent {
 
-  @ViewChild(DetailedComponent)
-  public detailedComponent: DetailedComponent | undefined;
+  readonly detailedComponent = viewChild(DetailedComponent);
 
   MOCK_POKEMON: Pokemon = MOCK_POKEMON[0];
 }
@@ -47,7 +46,7 @@ describe('DetailedComponent', () => {
     });
 
     it('should create', () => {
-      expect(testHostComponent.detailedComponent).toBeTruthy();
+      expect(testHostComponent.detailedComponent()).toBeTruthy();
     });
   });
 });
