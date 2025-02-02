@@ -1,12 +1,11 @@
 import {
-  AfterContentInit,
+  booleanAttribute,
   Component,
-  ContentChildren,
+  contentChildren,
+  effect,
   inject,
-  Input,
   input,
   OnDestroy,
-  QueryList,
   ViewEncapsulation
 } from '@angular/core';
 import { GridAppearanceType } from './grid-appearance.type';
@@ -35,21 +34,17 @@ import { AsyncPipe } from "@angular/common";
   host: {
     'class': 'grid',
     '[class]': 'getClasses',
-    '[class.hide-inactives]': 'hideInactiveItems',
+    '[class.hide-inactives]': 'hideInactiveItems()',
   }
 })
-export class GridComponent implements AfterContentInit, OnDestroy {
-  //  break.
-  @Input() hideInactiveItems = false;
+export class GridComponent implements OnDestroy {
+  hideInactiveItems = input(false, {transform: booleanAttribute})
 
-
-  // TODO: Skipped for migration because:
-  //  This input is used in combination with `@HostBinding` and migrating would
   readonly appearance = input<GridAppearanceType | null>();
   //  There are references to this query that cannot be migrated automatically.
-  @ContentChildren(GridItemComponent) contentChildren !: QueryList<GridItemComponent>;
+  contentChildren = contentChildren(GridItemComponent)
   // TODO: Skipped for migration because:
-  items: GridItemComponent[] | undefined;
+  items: readonly GridItemComponent[] | undefined;
   dataSource: MatTableDataSource<GridItemComponent>;
   private gridService = inject(GridService);
   private _categories: string[] = [];
@@ -68,6 +63,8 @@ export class GridComponent implements AfterContentInit, OnDestroy {
         default:
           return '';
       }
+
+
     };
 
     this.dataSource.filterPredicate = (data: GridItemComponent, filter: string) => {
@@ -104,6 +101,12 @@ export class GridComponent implements AfterContentInit, OnDestroy {
       }
     }));
 
+    effect(() => {
+      const contentChildren = this.contentChildren();
+      this.items = contentChildren;
+      this.dataSource.data = [...this.items];
+    });
+
 
   }
 
@@ -119,19 +122,6 @@ export class GridComponent implements AfterContentInit, OnDestroy {
     return classes;
   }
 
-  ngAfterContentInit() {
-
-    // initial load of list
-    if (!this.items) {
-      this.items = this.contentChildren.toArray();
-      this.dataSource.data = this.items;
-    }
-    this.contentChildren.changes.subscribe((items: QueryList<GridItemComponent>) => {
-      this.items = items.toArray();
-      this.dataSource.data = this.items;
-    });
-
-  }
 
   trackByFn(index: number, item: GridItemComponent): string {
     return item.pokemon()?.id ?? '';
@@ -141,7 +131,7 @@ export class GridComponent implements AfterContentInit, OnDestroy {
     this.dataSource.sort?.sort(sorting);
 
     if (this.items) {
-      this.dataSource.data = this.dataSource._orderData(this.items);
+      this.dataSource.data = this.dataSource._orderData([...this.items]);
     }
   }
 

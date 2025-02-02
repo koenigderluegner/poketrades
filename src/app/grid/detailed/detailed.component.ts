@@ -43,7 +43,7 @@ export class DetailedComponent extends GridBaseAppearanceDirective implements On
   private databaseFacadeService = inject(DatabaseFacadeService);
 
   get inactive() {
-    return !this.pokemon?.isOwned;
+    return !this.pokemon()?.isOwned;
   }
 
   isPokemon(p: Breedable | Pokemon | undefined): p is Pokemon {
@@ -59,18 +59,19 @@ export class DetailedComponent extends GridBaseAppearanceDirective implements On
   }
 
   initPokemonAttributes(): void {
-    if (this.pokemon) {
-      this.natureClass = this.pokemon.nature
-      && this.databaseFacadeService.isNature(this.pokemon.nature)
-        ? this.pokemon.nature.toLowerCase()
+    const pokemon = this.pokemon();
+    if (pokemon) {
+      this.natureClass = pokemon.nature
+      && this.databaseFacadeService.isNature(pokemon.nature)
+        ? pokemon.nature.toLowerCase()
         : '';
-      this.dbpokemon$ = this.databaseFacadeService.findPokemon(this.pokemon?.name);
-      this.moves$ = forkJoin(this.pokemon.moves.map(move => {
+      this.dbpokemon$ = this.databaseFacadeService.findPokemon(pokemon?.name);
+      this.moves$ = forkJoin(pokemon.moves.map(move => {
         return this.databaseFacadeService.findMove(move);
       }));
 
-      this.isEggMove$ = forkJoin(this.pokemon.moves.map(move => {
-        return this.pokemon ? this.databaseFacadeService.isEggMove(this.pokemon.name, move) : of(false);
+      this.isEggMove$ = forkJoin(pokemon.moves.map(move => {
+        return pokemon ? this.databaseFacadeService.isEggMove(pokemon.name, move) : of(false);
       }));
     }
   }

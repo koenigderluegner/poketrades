@@ -1,5 +1,4 @@
-import { Component, Input, ViewEncapsulation } from '@angular/core';
-import { coerceNumberProperty } from '@angular/cdk/coercion';
+import { Component, input, numberAttribute, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-spinner',
@@ -8,27 +7,10 @@ import { coerceNumberProperty } from '@angular/cdk/coercion';
   encapsulation: ViewEncapsulation.None,
   host: {
     'class': 'spinner',
-    '[style.height.px]': 'diameter',
-    '[style.width.px]': 'diameter',
+    '[style.height.px]': 'diameter()',
+    '[style.width.px]': 'diameter()',
   }
 })
 export class SpinnerComponent {
-
-  // TODO: Skipped for migration because:
-  //  Your application code writes to the input. This prevents migration.
-  @Input()
-  protected _diameter = 150;
-
-  /** The diameter of the spinner (will set width and height of container). */
-  // TODO: Skipped for migration because:
-  //  Accessor inputs cannot be migrated as they are too complex.
-  @Input()
-  get diameter(): number {
-    return this._diameter;
-  }
-
-  set diameter(size: number) {
-    this._diameter = coerceNumberProperty(size);
-  }
-
+  diameter = input(150, {transform: numberAttribute})
 }

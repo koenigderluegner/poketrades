@@ -24,7 +24,7 @@ import { Pokemon } from "@shared/interfaces/pokemon";
 export class MinimalComponent extends GridBaseAppearanceDirective {
 
   get inactive(): boolean {
-    return !this.pokemon?.isOwned;
+    return !this.pokemon()?.isOwned;
   }
 
 

@@ -1,17 +1,19 @@
-@if (pokemon && dbpokemon$) {
+@let poke = pokemon();
+
+@if (poke && dbpokemon$) {
 
   @if ((dbpokemon$ | async); as dbpokemon) {
 
     <div class="detailed-header dark-bg d-flex">
-      @if (pokemon.ball) {
-        <app-item category="ball" [slug]="pokemon.ball | slugify"></app-item>
+      @if (poke.ball) {
+        <app-item category="ball" [slug]="poke.ball | slugify"></app-item>
       }
-      {{ pokemon.name }}
+      {{ poke.name }}
     </div>
     <div class="detailed-species-info  d-flex">
       <div class="detailed-species-icon">
         <img alt="" class="icon-foundation" src="assets/images/pokesprite-pokeball.svg">
-        <app-pokemon [shiny]="pokemon.isShiny" [slug]="pokemon.iconSlug"></app-pokemon>
+        <app-pokemon [shiny]="poke.isShiny" [slug]="poke.iconSlug"></app-pokemon>
       </div>
       <div class="detailed-pokemon-info row">
         <div class="detailed-types">
@@ -27,66 +29,73 @@
 
         </div>
         <div class="shiny-icon-wrapper">
-          @if (pokemon.isShiny) {
+          @if (poke.isShiny) {
             <mat-icon svgIcon="shiny-stars"></mat-icon>
           }
         </div>
       </div>
     </div>
 
-    @if (isPokemon(pokemon) && (pokemon.ivs || pokemon.evs)) {
+    @if (isPokemon(poke) && (poke.ivs || poke.evs)) {
       <div class="detailed-stats row {{natureClass}}"
-           [class.ev-iv]="pokemon.ivs && pokemon.evs">
+           [class.ev-iv]="poke.ivs && poke.evs">
         <div class="detailed-label dark-bg t-align-center">Stats</div>
-        @if (pokemon.ivs) {
+        @if (poke.ivs) {
           <div class="iv">IVs</div>
-        } @if (pokemon.evs) {
+        }
+        @if (poke.evs) {
         <div class="ev">EVs</div>
       }
         <div class="detailed-label dark-bg t-align-center hp">HP</div>
-        @if (pokemon.ivs) {
-          <div class="hp">{{ pokemon.ivs.hp }}</div>
-        } @if (pokemon.evs) {
-        <div class="hp">{{ pokemon.evs.hp }}</div>
+        @if (poke.ivs) {
+          <div class="hp">{{ poke.ivs.hp }}</div>
+        }
+        @if (poke.evs) {
+          <div class="hp">{{ poke.evs.hp }}</div>
       }
         <div class="detailed-label dark-bg t-align-center atk">Attack</div>
-        @if (pokemon.ivs) {
-          <div class="atk">{{ pokemon.ivs.atk }}</div>
-        } @if (pokemon.evs) {
-        <div class="atk">{{ pokemon.evs.atk }}</div>
+        @if (poke.ivs) {
+          <div class="atk">{{ poke.ivs.atk }}</div>
+        }
+        @if (poke.evs) {
+          <div class="atk">{{ poke.evs.atk }}</div>
       }
         <div class="detailed-label dark-bg t-align-center def">Defense</div>
-        @if (pokemon.ivs) {
-          <div class="def">{{ pokemon.ivs.def }}</div>
-        } @if (pokemon.evs) {
-        <div class="def">{{ pokemon.evs.def }}</div>
+        @if (poke.ivs) {
+          <div class="def">{{ poke.ivs.def }}</div>
+        }
+        @if (poke.evs) {
+          <div class="def">{{ poke.evs.def }}</div>
       }
         <div class="detailed-label dark-bg t-align-center spa">Sp. Atk</div>
-        @if (pokemon.ivs) {
-          <div class="spa">{{ pokemon.ivs.spa }}</div>
-        } @if (pokemon.evs) {
-        <div class="spa">{{ pokemon.evs.spa }}</div>
+        @if (poke.ivs) {
+          <div class="spa">{{ poke.ivs.spa }}</div>
+        }
+        @if (poke.evs) {
+          <div class="spa">{{ poke.evs.spa }}</div>
       }
         <div class="detailed-label dark-bg t-align-center spd">Sp. Def</div>
-        @if (pokemon.ivs) {
-          <div class="spd">{{ pokemon.ivs.spd }}</div>
-        } @if (pokemon.evs) {
-        <div class="spd">{{ pokemon.evs.spd }}</div>
+        @if (poke.ivs) {
+          <div class="spd">{{ poke.ivs.spd }}</div>
+        }
+        @if (poke.evs) {
+          <div class="spd">{{ poke.evs.spd }}</div>
       }
         <div class="detailed-label dark-bg t-align-center spe">Speed</div>
-        @if (pokemon.ivs) {
-          <div class="spe">{{ pokemon.ivs.spe }}</div>
-        } @if (pokemon.evs) {
-        <div class="spe">{{ pokemon.evs.spe }}</div>
+        @if (poke.ivs) {
+          <div class="spe">{{ poke.ivs.spe }}</div>
+        }
+        @if (poke.evs) {
+          <div class="spe">{{ poke.evs.spe }}</div>
       }
       </div>
     }
-    @if (isPokemon(pokemon) && pokemon.dynamaxLevel) {
+    @if (isPokemon(poke) && poke.dynamaxLevel) {
       <div class="detailed-dynamax row ">
         <div class="detailed-label dark-bg">Dynamax Level</div>
         <ul>
           @for (_ of [].constructor(10); track _) {
-            <li [class.on]="$index < pokemon.dynamaxLevel"></li>
+            <li [class.on]="$index < poke.dynamaxLevel"></li>
           }
         </ul>
       </div>
@@ -94,28 +103,28 @@
 
     <div class="detailed-ability row ">
       <div class="detailed-label dark-bg">Ability</div>
-      <span class="detailed-text">{{ pokemon.ability }}</span>
+      <span class="detailed-text">{{ poke.ability }}</span>
     </div>
 
     @if (natureClass) {
       <div class="detailed-nature row ">
         <div class="detailed-label dark-bg">Nature</div>
-        <span class="detailed-text">{{ pokemon.nature }}</span>
+        <span class="detailed-text">{{ poke.nature }}</span>
       </div>
     }
-    @if (isPokemon(pokemon) && pokemon.item) {
+    @if (isPokemon(poke) && poke.item) {
       <div class="detailed-nature row ">
         <div class="detailed-label dark-bg">Item</div>
         <span class="detailed-text">
-        <app-item [slug]="pokemon.item | slugify"></app-item>
-          {{ pokemon.item }}
+        <app-item [slug]="poke.item | slugify"></app-item>
+          {{ poke.item }}
       </span>
       </div>
     } @if (moves$ | async; as moves) {
       <div class="detailed-moves">
         @if (isEggMove$ | async; as isEggMove) {
 
-          @for (move of pokemon.moves; track move; let i = $index) {
+          @for (move of poke.moves; track move; let i = $index) {
 
             @if (move) {
               <app-detailed-move

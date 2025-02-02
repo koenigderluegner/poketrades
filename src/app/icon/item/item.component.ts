@@ -1,5 +1,4 @@
-import { Component, Input } from '@angular/core';
-// @ts-ignore
+import { Component, computed, input } from '@angular/core';
 import { default as categoryData } from './categories.json';
 
 @Component({
@@ -7,50 +6,39 @@ import { default as categoryData } from './categories.json';
   template: '',
   host: {
     'class': 'pokesprite item-icon',
-    '[class]': 'classes',
+    '[class]': 'classes()',
   }
 })
 export class ItemComponent {
+  categories: Record<string, string> = categoryData;
+  slug = input<string>()
+  category = input<string>()
+  classes = computed(() => {
 
-  classes: string | undefined;
-  private slugClass: string | undefined;
-  private categoryClass: string | undefined;
-  private suffixLess?: string;
+    const slugClass = this.slug();
+    const category = this.category();
+    let categoryClass = ''
+    let suffixLessClass: string | undefined;
 
-  // TODO: Skipped for migration because:
-  //  Accessor inputs cannot be migrated as they are too complex.
-  @Input() set slug(sl: string) {
-    this.slugClass = sl;
-    const category = this.category;
-    if (this.suffixLess) {
-      this.classes = [this.suffixLess, category].join(' ');
-    } else {
-      this.classes = [this.slugClass, category].join(' ');
-    }
-
-  }
-
-  get category(): string {
-    const categories: Record<string, string> = categoryData;
-    if (this.categoryClass) {
-      return this.categoryClass;
-    } else if (this.slugClass) {
-      let category = categories[this.slugClass];
-      if (!category) {
-        const suffixLess = this.slugClass.substring(0, this.slugClass.lastIndexOf('-'));
-        category = categories[suffixLess];
-        if (category) {
-          this.suffixLess = suffixLess;
+    if (category) {
+      categoryClass = category;
+    } else if (slugClass) {
+      let searchedCategory = this.categories[slugClass];
+      if (!searchedCategory) {
+        const suffixLess = slugClass.substring(0, slugClass.lastIndexOf('-'));
+        categoryClass = this.categories[suffixLess];
+        if (categoryClass) {
+          suffixLessClass = suffixLess;
         }
+      } else {
+        categoryClass = searchedCategory;
       }
-      return category;
     }
-    return '';
-  }
 
-  // TODO: Skipped for migration because:
-  //  Accessor inputs cannot be migrated as they are too complex.
-  @Input() set category(cat: string) {
-    this.categoryClass = cat;
-  }
+    if (suffixLessClass) {
+      return [suffixLessClass, categoryClass].join(' ');
+    } else {
+      return [slugClass, categoryClass].join(' ');
+    }
+  });
 }

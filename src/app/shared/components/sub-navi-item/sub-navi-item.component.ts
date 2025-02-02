@@ -1,4 +1,4 @@
-import { Component, Input, input, ViewEncapsulation } from '@angular/core';
+import { Component, input, ViewEncapsulation } from '@angular/core';
 import { RouterLink } from "@angular/router";
 import { SlugifyPipe } from "@shared/pipes/slugify.pipe";
 
@@ -17,11 +17,7 @@ import { SlugifyPipe } from "@shared/pipes/slugify.pipe";
 })
 export class SubNaviItemComponent {
 
-
-  // TODO: Skipped for migration because:
-  //  This input is used in a control flow expression (e.g. `@if` or `*ngIf`)
-  //  and migrating would break narrowing currently.
-  @Input() text: string | undefined;
+  readonly text = input<string>()
   readonly link = input<(string | number)[] | string | null>(); // routerLink inputs
   readonly meta = input<string>();
 
