@@ -13,7 +13,6 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
     }
   ],
   encapsulation: ViewEncapsulation.None,
-  standalone: false
 })
 export class CheckboxComponent implements ControlValueAccessor {
 

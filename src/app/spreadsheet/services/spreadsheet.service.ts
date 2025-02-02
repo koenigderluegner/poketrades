@@ -14,7 +14,7 @@ import { Pokemon } from '@shared/interfaces/pokemon';
 import { coerceBooleanProperty } from '@angular/cdk/coercion';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class SpreadsheetService {
   private httpClient = inject(HttpClient);

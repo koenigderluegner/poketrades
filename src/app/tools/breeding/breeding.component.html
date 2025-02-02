@@ -87,13 +87,14 @@
 
               <div class="move-name">{{ eggMove }}</div>
               <app-grid appearance="minimal">
-                @for (parent of parentMoves | keyvalue; track parent) {
+                @if (parentMoves) {
+                  @for (parent of (parentMoves | keyvalue); track parent) {
 
-                  @if (parent.key !== pokemon.name && parent.value.eggMoves.includes(eggMove)) {
-                    <app-grid-item
-                      [pokemon]="asPokemon({iconSlug: parent.key | slugify}) "></app-grid-item>
+                    @if (parent.key !== pokemon.name && parent.value.eggMoves.includes(eggMove)) {
+                      <app-grid-item [pokemon]="asPokemon({iconSlug: parent.key | slugify}) "/>
+                    }
+
                   }
-
                 }
               </app-grid>
 
@@ -108,15 +109,17 @@
 
               <div class="move-name">{{ eggMove }}</div>
               <app-grid appearance="minimal">
-                @for (parent of parentMoves | keyvalue; track parent) {
+                @if (parentMoves) {
+                  @for (parent of parentMoves | keyvalue; track parent) {
 
-                  @if ((parent.value.levelUpMoves | filterLevelUpMoves: eggMove); as moves) {
+                    @if ((parent.value.levelUpMoves | filterLevelUpMoves: eggMove); as moves) {
 
-                    @if (moves.length) {
-                      <app-grid-item [pokemon]="asPokemon({iconSlug: parent.key | slugify})"
-                      ></app-grid-item>
+                      @if (moves.length) {
+                        <app-grid-item [pokemon]="asPokemon({iconSlug: parent.key | slugify})"
+                        ></app-grid-item>
+                      }
+
                     }
-
                   }
 
                 }

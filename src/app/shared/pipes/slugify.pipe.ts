@@ -30,7 +30,6 @@ import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
   name: 'slugify',
-  standalone: false
 })
 export class SlugifyPipe implements PipeTransform {
 

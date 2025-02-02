@@ -5,7 +5,6 @@ import { Component, HostBinding, ViewEncapsulation } from '@angular/core';
   templateUrl: './how-to-use-guide.component.html',
   styleUrls: ['./how-to-use-guide.component.scss'],
   encapsulation: ViewEncapsulation.None,
-  standalone: false
 })
 export class HowToUseGuideComponent {
 

@@ -2,7 +2,7 @@
   <img [src]="'assets/images/pokesprite-pokeball.svg'" alt="" class="icon-foundation">
   <div class="icon">
     <app-pokemon [shiny]="!!pokemon?.isShiny" [slug]="pokemon?.iconSlug"></app-pokemon>
-    @if (pokemon?.item) {
+    @if (isPokemon(pokemon) && pokemon?.item) {
       <app-item [slug]="pokemon?.item | slugify"></app-item>
     } @if (pokemon?.ball) {
     <app-item [slug]="pokemon?.ball | slugify" category="ball"></app-item>

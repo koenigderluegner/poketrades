@@ -2,10 +2,8 @@
 
   @if (worksheet) {
     <app-grid [appearance]="gridAppearance">
-      @for (entry of worksheet?.data; track trackBy($index, entry)) {
-
-        <app-grid-item [pokemon]="entry | castBreedable"></app-grid-item>
-
+      @for (entry of worksheet.data; track trackBy($index, entry)) {
+        <app-grid-item [pokemon]="entry | castBreedable"/>
       }
     </app-grid>
   }

@@ -14,13 +14,21 @@ import { SpreadsheetFacade } from '@spreadsheet/spreadsheet.facade';
 import { TemplatePortal } from '@angular/cdk/portal';
 import { Overlay, OverlayConfig, OverlayRef } from '@angular/cdk/overlay';
 import { SlugifyPipe } from '@shared/pipes/slugify.pipe';
+import { RouterLink, RouterLinkActive } from "@angular/router";
+import { MatIcon } from "@angular/material/icon";
+import { MatButton } from "@angular/material/button";
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
   encapsulation: ViewEncapsulation.None,
-  standalone: false
+  imports: [
+    RouterLink,
+    RouterLinkActive,
+    MatIcon,
+    MatButton
+  ]
 })
 export class HeaderComponent implements OnInit {
   private spreadsheetFacade = inject(SpreadsheetFacade);

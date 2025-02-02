@@ -4,7 +4,6 @@ import { Breedable } from '@shared/interfaces/breedable.interface';
 
 @Pipe({
   name: 'castBreedable',
-  standalone: false
 })
 export class CastBreedablePipe implements PipeTransform {
 

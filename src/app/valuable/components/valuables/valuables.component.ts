@@ -9,12 +9,21 @@ import { Observable, Subscription } from 'rxjs';
 import { GridAppearanceType } from '../../../grid/grid-appearance.type';
 import { Pokemon } from '@shared/interfaces/pokemon';
 import { Spreadsheet } from '@spreadsheet/models/spreadsheet';
+import { GridItemComponent } from "../../../grid/grid-item/grid-item.component";
+import { GridComponent } from "../../../grid/grid.component";
+import { AsyncPipe } from "@angular/common";
+import { CastValuablePipe } from "@shared/pipes/cast-valuable.pipe";
 
 @Component({
   selector: 'app-valuables',
   templateUrl: './valuables.component.html',
   styleUrls: ['./valuables.component.scss'],
-  standalone: false
+  imports: [
+    GridItemComponent,
+    GridComponent,
+    AsyncPipe,
+    CastValuablePipe
+  ]
 })
 export class ValuablesComponent implements OnInit {
   private spreadsheetFacade = inject(SpreadsheetFacade);

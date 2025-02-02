@@ -7,13 +7,22 @@ import { GridService } from '../../../grid/services/grid.service';
 import { BaseShinyDexComponent } from '@shared/components/base-shiny-dex/base-shiny-dex.component';
 import { PokemonEntry } from '../../../database/models/pokemon-entry.interface';
 import { ShinyDexEntry } from '@shared/interfaces/shiny-dex-entry.interface';
+import { GridItemComponent } from "../../../grid/grid-item/grid-item.component";
+import { GridComponent } from "../../../grid/grid.component";
+import { AsyncPipe } from "@angular/common";
+import { ShinyDexEntryToPokemonPipe } from "../../pipes/shiny-dex-entry-to-pokemon.pipe";
 
 @Component({
   selector: 'app-shiny-dex',
   templateUrl: './shiny-dex.component.html',
   styleUrls: ['./shiny-dex.component.scss'],
   encapsulation: ViewEncapsulation.None,
-  standalone: false
+  imports: [
+    GridItemComponent,
+    GridComponent,
+    AsyncPipe,
+    ShinyDexEntryToPokemonPipe
+  ]
 })
 export class ShinyDexComponent extends BaseShinyDexComponent implements OnInit {
   private databases = inject(DatabaseFacadeService);

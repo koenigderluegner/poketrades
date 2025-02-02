@@ -2,13 +2,16 @@ import { Component, HostBinding, inject, output, ViewEncapsulation } from '@angu
 import { GridAppearanceType } from '../grid-appearance.type';
 import { GridService } from '../services/grid.service';
 import { Observable } from 'rxjs';
+import { AsyncPipe } from "@angular/common";
 
 @Component({
   selector: 'app-changer',
   templateUrl: './changer.component.html',
   styleUrls: ['./changer.component.scss'],
   encapsulation: ViewEncapsulation.None,
-  standalone: false
+  imports: [
+    AsyncPipe
+  ]
 })
 export class ChangerComponent {
   private gridService = inject(GridService);

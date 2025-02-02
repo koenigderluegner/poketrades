@@ -17,13 +17,22 @@ import { Subscription } from 'rxjs';
 import { GridService } from './services/grid.service';
 import { OwnedStatus } from "./types/owned-status.type";
 import { MatTableDataSource } from "@angular/material/table";
+import { MinimalComponent } from "./minimal/minimal.component";
+import { NormalComponent } from "./normal/normal.component";
+import { DetailedComponent } from "./detailed/detailed.component";
+import { AsyncPipe } from "@angular/common";
 
 @Component({
   selector: 'app-grid',
   templateUrl: './grid.component.html',
   styleUrls: ['./grid.component.scss'],
   encapsulation: ViewEncapsulation.None,
-  standalone: false
+  imports: [
+    MinimalComponent,
+    NormalComponent,
+    DetailedComponent,
+    AsyncPipe
+  ]
 })
 export class GridComponent implements AfterContentInit, OnDestroy {
   private gridService = inject(GridService);

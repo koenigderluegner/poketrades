@@ -1,11 +1,14 @@
 import { Component, HostBinding, Input, ViewEncapsulation } from '@angular/core';
+import { PokemonComponent } from "../../icon/pokemon/pokemon.component";
 
 @Component({
   selector: 'app-detailed-move',
   templateUrl: './detailed-move.component.html',
   styleUrls: ['./detailed-move.component.scss'],
   encapsulation: ViewEncapsulation.None,
-  standalone: false
+  imports: [
+    PokemonComponent
+  ]
 })
 export class DetailedMoveComponent {
 

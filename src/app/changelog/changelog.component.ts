@@ -1,12 +1,15 @@
 import { Component, HostBinding, ViewEncapsulation } from '@angular/core';
 import pageMarkdown from '../../../CHANGELOG.md';
+import { MarkdownComponent } from "ngx-markdown";
 
 @Component({
   selector: 'app-changelog',
   templateUrl: './changelog.component.html',
   styleUrls: ['./changelog.component.scss'],
   encapsulation: ViewEncapsulation.None,
-  standalone: false
+  imports: [
+    MarkdownComponent
+  ]
 })
 export class ChangelogComponent {
 

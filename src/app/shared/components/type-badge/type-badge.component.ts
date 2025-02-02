@@ -6,7 +6,6 @@ import { PokemonType } from '@shared/interfaces/pokemon-type.type';
   template: '',
   styleUrls: ['./type-badge.component.scss'],
   encapsulation: ViewEncapsulation.None,
-  standalone: false
 })
 
 export class TypeBadgeComponent {

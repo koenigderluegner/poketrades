@@ -8,12 +8,21 @@ import { GridService } from '../../../grid/services/grid.service';
 import { switchMap } from 'rxjs/operators';
 import { PokemonEntry } from '../../../database/models/pokemon-entry.interface';
 import { ObtainingMethods } from '@shared/enums/obtaining-method.enum';
+import { GridItemComponent } from "../../../grid/grid-item/grid-item.component";
+import { ShinyDexEntryToPokemonPipe } from "../../pipes/shiny-dex-entry-to-pokemon.pipe";
+import { GridComponent } from "../../../grid/grid.component";
+import { AsyncPipe } from "@angular/common";
 
 @Component({
   selector: 'app-ultra-wormhole-shiny-dex',
   templateUrl: './ultra-wormhole-shiny-dex.component.html',
   styleUrls: ['./ultra-wormhole-shiny-dex.component.scss'],
-  standalone: false
+  imports: [
+    GridItemComponent,
+    ShinyDexEntryToPokemonPipe,
+    GridComponent,
+    AsyncPipe
+  ]
 })
 export class UltraWormholeShinyDexComponent extends BaseShinyDexComponent implements OnInit {
   private _databases = inject(DatabaseFacadeService);

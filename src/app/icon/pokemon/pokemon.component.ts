@@ -5,7 +5,6 @@ import { Component, HostBinding, Input, ViewEncapsulation } from '@angular/core'
   template: '',
   styleUrls: ['./pokemon.component.scss'],
   encapsulation: ViewEncapsulation.None,
-  standalone: false
 })
 export class PokemonComponent {
 

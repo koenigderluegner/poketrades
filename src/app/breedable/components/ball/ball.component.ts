@@ -9,12 +9,21 @@ import { GridService } from '../../../grid/services/grid.service';
 import { GridAppearanceType } from '../../../grid/grid-appearance.type';
 import { Spreadsheet } from '@spreadsheet/models/spreadsheet';
 import { Pokemon } from '@shared/interfaces/pokemon';
+import { GridItemComponent } from "../../../grid/grid-item/grid-item.component";
+import { GridComponent } from "../../../grid/grid.component";
+import { AsyncPipe } from "@angular/common";
+import { CastBreedablePipe } from "@shared/pipes/cast-breedable.pipe";
 
 @Component({
   selector: 'app-ball',
   templateUrl: './ball.component.html',
   styleUrls: ['./ball.component.scss'],
-  standalone: false
+  imports: [
+    GridItemComponent,
+    GridComponent,
+    AsyncPipe,
+    CastBreedablePipe
+  ]
 })
 export class BallComponent implements OnInit, OnDestroy {
   private spreadsheetFacade = inject(SpreadsheetFacade);

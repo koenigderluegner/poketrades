@@ -8,13 +8,22 @@ import { combineLatest, Observable, of } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 import { ShinyDexEntry } from '@shared/interfaces/shiny-dex-entry.interface';
 import { ObtainingMethods } from '@shared/enums/obtaining-method.enum';
+import { GridComponent } from "../../../grid/grid.component";
+import { GridItemComponent } from "../../../grid/grid-item/grid-item.component";
+import { ShinyDexEntryToPokemonPipe } from "../../pipes/shiny-dex-entry-to-pokemon.pipe";
+import { AsyncPipe } from "@angular/common";
 
 @Component({
   selector: 'app-friend-safari-shiny-dex',
   templateUrl: './friend-safari-shiny-dex.component.html',
   styleUrls: ['./friend-safari-shiny-dex.component.scss'],
   encapsulation: ViewEncapsulation.None,
-  standalone: false
+  imports: [
+    GridComponent,
+    GridItemComponent,
+    ShinyDexEntryToPokemonPipe,
+    AsyncPipe
+  ]
 })
 export class FriendSafariShinyDexComponent extends BaseShinyDexComponent implements OnInit {
   private _databases = inject(DatabaseFacadeService);
