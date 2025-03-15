@@ -1,0 +1,1 @@
+import"./chunk-ESJYUATY.js";var e=[{path:"",loadComponent:()=>import("./chunk-K5IKJNRR.js").then(o=>o.IndexComponent),children:[{path:"overview",loadComponent:()=>import("./chunk-X5Q7NL3U.js").then(o=>o.OverviewComponent)},{path:":worksheetTitle",loadComponent:()=>import("./chunk-VDLXZKS4.js").then(o=>o.BallComponent)}]}];export{e as routes};
