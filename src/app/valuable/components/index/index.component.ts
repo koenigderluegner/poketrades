@@ -12,7 +12,6 @@ import { SlugifyPipe } from "@shared/pipes/slugify.pipe";
 @Component({
   selector: 'app-index',
   templateUrl: './index.component.html',
-  styleUrls: ['./index.component.scss'],
   imports: [
     GridControllerComponent,
     SubNaviItemComponent,

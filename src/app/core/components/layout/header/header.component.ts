@@ -25,20 +25,18 @@ import { MatButton } from "@angular/material/button";
   }
 })
 export class HeaderComponent implements OnInit {
-  private spreadsheetFacade = inject(SpreadsheetFacade);
   overlay = inject(Overlay);
   viewContainerRef = inject(ViewContainerRef);
-  private slugifyPipe = inject(SlugifyPipe);
-
   spreadsheetData: Spreadsheet | undefined;
-
   valuablesLink: string | undefined;
-
   windowSize = window.innerWidth;
   readonly templatePortalContent = viewChild.required<TemplateRef<unknown>>('menuTemplate');
   breeablesLink: string[] = [];
   valuablesLinkArray: string[] = [];
   toolsLink: string[] = [];
+  livingDexesLink: string[] = [];
+  private spreadsheetFacade = inject(SpreadsheetFacade);
+  private slugifyPipe = inject(SlugifyPipe);
   private overlayRef?: OverlayRef;
 
   onResize(event: UIEvent) {
@@ -68,6 +66,9 @@ export class HeaderComponent implements OnInit {
         this.toolsLink = [
           spreadsheetData ? '/' + (spreadsheetData.username ? 'u/' + spreadsheetData.username : spreadsheetData.id) : '',
           'tools'];
+        this.livingDexesLink = [
+          spreadsheetData ? '/' + (spreadsheetData.username ? 'u/' + spreadsheetData.username : spreadsheetData.id) : '',
+          'living-dexes', 'home'];
       }
     });
   }

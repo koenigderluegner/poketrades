@@ -10,6 +10,7 @@ const toolsRoutes: Route = {
 const userRoutes: Routes = [
   {path: 'breedables', loadChildren: () => import('./breedable/breedable-routing.module').then(m => m.routes)},
   {path: 'valuables', loadChildren: () => import('./valuable/valuable-routing.module').then(m => m.routes)},
+  {path: 'living-dexes', loadChildren: () => import('./living-dexes/living-dexes-routes').then(m => m.routes)},
 ];
 
 userRoutes.push(toolsRoutes);

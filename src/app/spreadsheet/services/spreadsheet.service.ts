@@ -1,5 +1,4 @@
 import { inject, Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { switchMap } from 'rxjs/operators';
 import { Observable, of } from 'rxjs';
 import { Spreadsheet } from '../models/spreadsheet';
@@ -17,7 +16,6 @@ import { coerceBooleanProperty } from '@angular/cdk/coercion';
   providedIn: 'root',
 })
 export class SpreadsheetService {
-  private httpClient = inject(HttpClient);
   private gss = inject(GoogleSpreadsheetService);
   private slugifyPipe = inject(SlugifyPipe);
 
