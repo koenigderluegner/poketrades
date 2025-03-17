@@ -6,6 +6,7 @@ import { LivingDexService } from "./living-dex.service";
 import { PokemonComponent } from "../icon/pokemon/pokemon.component";
 import { LivingDex } from "./living-dex.type";
 import { HttpResourceRef } from "@angular/common/http";
+import { MatTooltip } from "@angular/material/tooltip";
 
 @Component({
     selector: 'app-living-dexes',
@@ -13,7 +14,8 @@ import { HttpResourceRef } from "@angular/common/http";
         GridControllerComponent,
         ItemComponent,
         SubNaviItemComponent,
-        PokemonComponent
+        PokemonComponent,
+        MatTooltip
     ],
     templateUrl: './living-dexes.component.html',
     styleUrl: './living-dexes.component.scss',

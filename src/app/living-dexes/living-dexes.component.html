@@ -28,7 +28,7 @@
                             </div>
                             <div class="grid minimal">
                                 @for (pokemon of chunk; track pokemon) {
-                                    <div class="grid-item">
+                                    <div class="grid-item" [matTooltip]="pokemon.slug">
                                         <div class="icon">
                                             <app-pokemon shiny [slug]="pokemon.slug"></app-pokemon>
                                         </div>

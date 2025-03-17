@@ -26,6 +26,10 @@ $categories: 'uncategorized',
   display: flex;
   flex-direction: column;
   gap: 8px;
+
+  .icon {
+    pointer-events: none;
+  }
 }
 
 .chunk-title {
