@@ -7,6 +7,13 @@ import { PokemonComponent } from "../icon/pokemon/pokemon.component";
 import { LivingDex } from "./living-dex.type";
 import { HttpResourceRef } from "@angular/common/http";
 import { MatTooltip } from "@angular/material/tooltip";
+import { SpreadsheetFacade } from "@spreadsheet/spreadsheet.facade";
+import { toSignal } from "@angular/core/rxjs-interop";
+
+type CheckedLivingDexEntry = LivingDex['pokemon'][0] & {
+    shiny: boolean
+    regular: boolean
+};
 
 @Component({
     selector: 'app-living-dexes',
@@ -34,6 +41,8 @@ export class LivingDexesComponent {
         ]
     )
 
+    currentSpreadsheet = toSignal(inject(SpreadsheetFacade).getCurrentSpreadsheet$());
+
     readonly CHUNK_SIZE = 30;
 
     currentDex: Signal<HttpResourceRef<LivingDex[] | undefined> | undefined> = computed(() => {
@@ -51,16 +60,22 @@ export class LivingDexesComponent {
         const dexes = currentDex.value();
 
         if (!dexes) return [];
+        const currentsheet = this.currentSpreadsheet();
+        const checkList = currentsheet?.livingDexChecklist ?? [];
 
         return [...dexes].flat().map((d: LivingDex) => {
-            const chunks = d.pokemon.reduce<LivingDex['pokemon'][]>((resultArray, item, index) => {
+            const chunks = d.pokemon.reduce<CheckedLivingDexEntry[][]>((resultArray, item, index) => {
                 const chunkIndex = Math.floor(index / this.CHUNK_SIZE)
 
                 if (!resultArray[chunkIndex]) {
                     resultArray[chunkIndex] = []
                 }
-
-                resultArray[chunkIndex].push(item)
+                const checkItem = checkList.find(p => p.slug === item.slug);
+                resultArray[chunkIndex].push({
+                    ...item,
+                    shiny: checkItem?.shiny ?? false,
+                    regular: checkItem?.regular ?? false
+                })
 
                 return resultArray
             }, []);

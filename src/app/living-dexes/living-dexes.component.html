@@ -13,7 +13,6 @@
     </ul>
 </aside>
 <div class="view-content">
-
     @let foundDex = currentDex();
     @if (foundDex) {
         @if (foundDex.hasValue()) {
@@ -28,9 +27,11 @@
                             </div>
                             <div class="grid minimal">
                                 @for (pokemon of chunk; track pokemon) {
-                                    <div class="grid-item" [matTooltip]="pokemon.slug">
+                                    <div class="grid-item" [class.inactive]="!pokemon.shiny"
+                                         [matTooltip]="pokemon.slug + (pokemon.shinyLocked ? ' - shiny locked' : '')">
                                         <div class="icon">
-                                            <app-pokemon shiny [slug]="pokemon.slug"></app-pokemon>
+                                            <app-pokemon [class.shiny-locked]="pokemon.shinyLocked" shiny
+                                                         [slug]="pokemon.slug"></app-pokemon>
                                         </div>
 
                                     </div>

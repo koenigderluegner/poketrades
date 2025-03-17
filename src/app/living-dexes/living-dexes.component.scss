@@ -36,6 +36,10 @@ $categories: 'uncategorized',
   font-weight: 500;
 }
 
+.shiny-locked.shiny {
+  filter: grayscale(1) opacity(0.2) brightness(0) !important;;
+}
+
 
 .grid {
   display: grid;

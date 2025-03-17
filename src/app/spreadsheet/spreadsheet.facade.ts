@@ -38,6 +38,7 @@ export class SpreadsheetFacade {
       hasBreedables: false,
       hasValuables: false,
       worksheets: [],
+      livingDexChecklist: [],
       id: '',
     });
 

@@ -11,31 +11,29 @@ import { AllowedConfig } from '@spreadsheet/models/allowed-config.interface';
 import { SlugifyPipe } from '@shared/pipes/slugify.pipe';
 import { Pokemon } from '@shared/interfaces/pokemon';
 import { coerceBooleanProperty } from '@angular/cdk/coercion';
+import { LivingDexChecklist } from "@spreadsheet/models/living-dex-checklist.type";
 
 @Injectable({
   providedIn: 'root',
 })
 export class SpreadsheetService {
+  spreadsheet: Spreadsheet | undefined = undefined;
   private gss = inject(GoogleSpreadsheetService);
   private slugifyPipe = inject(SlugifyPipe);
-
-
   private readonly bannedSheets: string[] = [
     'Welcome',
     'Living Dex', 'Shiny Living Dex', 'Breedables Overview', 'Alcremie', 'Tool:Breeding', 'Tool: Move Lookup',
     'Breedables Ball Legality', 'Ban Checker', 'DB:Abilities', 'DB:Balls', 'DB:Pokemon', 'DB:LevelMoves', 'DB:Items',
     'DB:Misc', 'DB:Moves', 'DB:Types', 'DB:Natures', 'Resource Gen7 (Backup)', 'Ban List'
   ];
-
-
   private readonly possibleHeaders: string[] = [
     'dex', 'name', 'ability', 'owned', 'hasHA', 'ratio', 'move1', 'move2', 'move3', 'move4', 'nature', 'ball',
     'gender', 'ot', 'amount', 'notes', 'event', 'isShiny', 'level', 'hp', 'atk', 'def', 'spa', 'spd', 'spe', 'item',
-    'id', 'dates', 'proof', 'tradeHistory', 'disclosure', 'lang', 'evhp', 'evatk', 'evdef', 'evspa', 'evspd', 'evspe'
+    'id', 'dates', 'proof', 'tradeHistory', 'disclosure', 'lang', 'evhp', 'evatk', 'evdef', 'evspa', 'evspd', 'evspe',
+    'regularOwned', 'shinyOwned', 'slug'
   ];
-
   private readonly allowedConfigs: AllowedConfig = {
-    type: ['Valuables', 'Breedables'],
+    type: ['Valuables', 'Breedables', "livingDex"],
     subType: ['RNGs', 'Legendaries', 'Shinies', 'Competitives', 'Events'],
     ball: ['Dream', 'Safari', 'Sport', 'Beast', 'Fast', 'Moon', 'Heavy', 'Love', 'Lure', 'Level',
       'Friend', 'Poké', 'Great', 'Ultra', 'Premier', 'Dive', 'Luxury', 'Nest', 'Net', 'Repeat', 'Timer', 'Quick',
@@ -48,14 +46,20 @@ export class SpreadsheetService {
     return this.gss.getSpreadsheet(spreadsheetId, apiKey).pipe(
       switchMap(googleSpreadsheet => {
 
-        spreadsheet = {id: spreadsheetId, title: googleSpreadsheet.properties.title, worksheets: []};
-
+        spreadsheet = {
+          id: spreadsheetId,
+          title: googleSpreadsheet.properties.title,
+          worksheets: [],
+          livingDexChecklist: []
+        };
+        this.spreadsheet = spreadsheet;
         const sheetsToCheck = googleSpreadsheet.sheets.filter(sheet => !this.bannedSheets.includes(sheet.properties.title));
 
         return this._getWorksheets(spreadsheetId, sheetsToCheck);
       }),
       switchMap(worksheets => {
         spreadsheet.worksheets = worksheets;
+        this.spreadsheet = spreadsheet;
         return of(spreadsheet);
       })
     );
@@ -214,6 +218,52 @@ export class SpreadsheetService {
           if (worksheet) {
 
             const pokemonData: Pokemon[] = [];
+            if (worksheet.config?.type === "livingDex") {
+
+              const livingDexData: LivingDexChecklist[] = [];
+
+              sheetValue.values?.forEach((valuesArray: string[]) => {
+
+                const tempPokemon: LivingDexChecklist = {slug: '', regular: false, shiny: false};
+
+                valuesArray.forEach((cellValue: string, index: number) => {
+
+                  const header = worksheet.headerIndex[index].trim();
+
+                  // skip if header is empty or no dex number was found (row unparseable)
+                  if (header === '' || (header === 'dex' && cellValue.trim() === '')) {
+                    return;
+                  }
+
+
+                  // skip if header is one with useless cell data
+                  if (['shinyIcon', 'icon', 'icon', 'dex'].includes(header)) {
+                    return;
+                  }
+
+
+                  switch (header) {
+                    case 'shinyOwned':
+                      tempPokemon.shiny = coerceBooleanProperty(cellValue.toLowerCase().trim());
+                      break;
+                    case 'regularOwned':
+                      tempPokemon.regular = coerceBooleanProperty(cellValue.toLowerCase().trim());
+                      break;
+                    case 'pokemon':
+                      tempPokemon.slug = this._generateIconSlug(cellValue.trim());
+                      break;
+                  }
+
+
+                });
+
+                livingDexData.push(tempPokemon)
+              });
+              console.log(livingDexData)
+              this.spreadsheet?.livingDexChecklist.push(...livingDexData);
+
+              return;
+            }
 
             sheetValue.values?.forEach((valuesArray: string[]) => {
 

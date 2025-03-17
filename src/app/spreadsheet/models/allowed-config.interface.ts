@@ -7,5 +7,5 @@ export interface AllowedConfig {
   [key: string]: string[] | undefined;
 }
 
-export type AllowedConfigType = 'Valuables' | 'Breedables' | 'unknown';
+export type AllowedConfigType = 'Valuables' | 'Breedables' | 'livingDex' | 'unknown';
 export type AllowedConfigSubType = 'RNGs' | 'Legendaries' | 'Shinies' | 'Competitives' | 'Events';
