@@ -2565,25 +2565,22 @@
     "name": "Extra regionals",
     "pokemon": [
       {
-        "slug": "meowth"
+        "slug": "meowth-alola"
       },
       {
-        "slug": "persian"
+        "slug": "persian-alola"
       },
       {
-        "slug": "meowth"
+        "slug": "meowth-galar"
       },
       {
         "slug": "perrserker"
       },
       {
-        "slug": "growlithe"
+        "slug": "growlithe-hisui"
       },
       {
-        "slug": "arcanine"
-      },
-      {
-        "slug": "exeggutor"
+        "slug": "arcanine-hisui"
       }
     ]
   }
