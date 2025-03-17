@@ -435,7 +435,7 @@
         "slug": "drifblim"
       },
       {
-        "slug": "flabébé"
+        "slug": "flabebe"
       },
       {
         "slug": "floette"
@@ -1128,40 +1128,40 @@
         "slug": "tatsugiri"
       },
       {
-        "slug": "great tusk"
+        "slug": "great-tusk"
       },
       {
-        "slug": "scream tail"
+        "slug": "scream-tail"
       },
       {
-        "slug": "brute bonnet"
+        "slug": "brute-bonnet"
       },
       {
-        "slug": "flutter mane"
+        "slug": "flutter-mane"
       },
       {
-        "slug": "slither wing"
+        "slug": "slither-wing"
       },
       {
-        "slug": "sandy shocks"
+        "slug": "sandy-shocks"
       },
       {
-        "slug": "iron treads"
+        "slug": "iron-treads"
       },
       {
-        "slug": "iron bundle"
+        "slug": "iron-bundle"
       },
       {
-        "slug": "iron hands"
+        "slug": "iron-hands"
       },
       {
-        "slug": "iron jugulis"
+        "slug": "iron-jugulis"
       },
       {
-        "slug": "iron moth"
+        "slug": "iron-moth"
       },
       {
-        "slug": "iron thorns"
+        "slug": "iron-thorns"
       },
       {
         "slug": "frigibax"
@@ -1179,16 +1179,20 @@
         "slug": "gholdengo"
       },
       {
-        "slug": "wo-chien"
+        "slug": "wo-chien",
+        "shinyLocked": true
       },
       {
-        "slug": "chien-pao"
+        "slug": "chien-pao",
+        "shinyLocked": true
       },
       {
-        "slug": "ting-lu"
+        "slug": "ting-lu",
+        "shinyLocked": true
       },
       {
-        "slug": "chi-yu"
+        "slug": "chi-yu",
+        "shinyLocked": true
       },
       {
         "slug": "roaring moon"
@@ -1197,10 +1201,12 @@
         "slug": "iron valiant"
       },
       {
-        "slug": "koraidon"
+        "slug": "koraidon",
+        "shinyLocked": true
       },
       {
-        "slug": "miraidon"
+        "slug": "miraidon",
+        "shinyLocked": true
       }
     ]
   },
@@ -1796,16 +1802,20 @@
         "slug": "ursaluna"
       },
       {
-        "slug": "okidogi"
+        "slug": "okidogi",
+        "shinyLocked": true
       },
       {
-        "slug": "munkidori"
+        "slug": "munkidori",
+        "shinyLocked": true
       },
       {
-        "slug": "fezandipiti"
+        "slug": "fezandipiti",
+        "shinyLocked": true
       },
       {
-        "slug": "ogerpon"
+        "slug": "ogerpon",
+        "shinyLocked": true
       }
     ]
   },
@@ -2518,28 +2528,36 @@
         "slug": "inteleon"
       },
       {
-        "slug": "gouging fire"
+        "slug": "gouging-fire",
+        "shinyLocked": true
       },
       {
-        "slug": "raging bolt"
+        "slug": "raging-bolt",
+        "shinyLocked": true
       },
       {
-        "slug": "iron crown"
+        "slug": "iron-crown",
+        "shinyLocked": true
       },
       {
-        "slug": "iron boulder"
+        "slug": "iron-boulder",
+        "shinyLocked": true
       },
       {
-        "slug": "terapagos"
+        "slug": "terapagos",
+        "shinyLocked": true
       },
       {
-        "slug": "walking wake"
+        "slug": "walking wake",
+        "shinyLocked": true
       },
       {
-        "slug": "iron leaves"
+        "slug": "iron leaves",
+        "shinyLocked": true
       },
       {
-        "slug": "pecharunt"
+        "slug": "pecharunt",
+        "shinyLocked": true
       }
     ]
   },
