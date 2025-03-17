@@ -1,0 +1,102 @@
+$categories: 'uncategorized',
+'starter',
+'pseudo-legendary',
+'ultra-beast',
+'sub-legendary',
+'legendary',
+'mystical',
+'fossil',
+'baby',
+'alola',
+'galar',
+'hisui',
+'unown',
+'alcremie',
+'vivillon',
+'gmax';
+
+.grid-wrapper {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.chunk {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.chunk-title {
+  font-weight: 500;
+}
+
+
+.grid {
+  display: grid;
+
+  &.hide-inactives .grid-item.inactive {
+    display: none;
+  }
+
+  &.filtered {
+    .grid-item {
+      display: none;
+    }
+
+    @each $category in $categories {
+      &.#{$category} .grid-item.#{$category} {
+        display: block;
+      }
+    }
+  }
+
+  &.owned:not(.unowned) .grid-item.inactive {
+    display: none;
+  }
+
+  &.unowned:not(.owned) .grid-item:not(.inactive) {
+    display: none;
+  }
+}
+
+.grid.minimal {
+  grid-gap: 6px;
+  grid-template-columns: repeat(6, 40px);
+
+  .grid-item {
+    height: 40px;
+    width: 40px;
+    border: none;
+    background: rgba(255, 255, 255, .22);
+    border-radius: 5px;
+
+    &.inactive .pokesprite {
+      filter: grayscale(1) opacity(0.2);
+    }
+
+    .icon {
+      position: relative;
+      width: 68px;
+      height: 56px;
+      margin-left: -14px;
+      flex-basis: 40px;
+      margin-top: -16px;
+
+      .item-icon {
+        position: absolute;
+        bottom: -10%;
+        left: 50%;
+      }
+    }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .grid.minimal .grid-item {
+    background: rgb(0 0 0 / 22%);
+  }
+}
+
+
