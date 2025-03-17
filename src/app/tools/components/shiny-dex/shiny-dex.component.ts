@@ -15,7 +15,6 @@ import { ShinyDexEntryToPokemonPipe } from "../../pipes/shiny-dex-entry-to-pokem
 @Component({
   selector: 'app-shiny-dex',
   templateUrl: './shiny-dex.component.html',
-  styleUrls: ['./shiny-dex.component.scss'],
   encapsulation: ViewEncapsulation.None,
   imports: [
     GridItemComponent,

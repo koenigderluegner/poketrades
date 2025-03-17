@@ -7,7 +7,6 @@ import { GridControllerComponent } from "../grid/grid-controller/grid-controller
 @Component({
   selector: 'app-tools',
   templateUrl: './tools.component.html',
-  styleUrls: ['./tools.component.scss'],
   encapsulation: ViewEncapsulation.None,
   imports: [
     SubNaviItemComponent,

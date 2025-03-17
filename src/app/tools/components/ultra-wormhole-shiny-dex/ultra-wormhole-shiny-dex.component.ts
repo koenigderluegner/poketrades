@@ -16,7 +16,6 @@ import { AsyncPipe } from "@angular/common";
 @Component({
   selector: 'app-ultra-wormhole-shiny-dex',
   templateUrl: './ultra-wormhole-shiny-dex.component.html',
-  styleUrls: ['./ultra-wormhole-shiny-dex.component.scss'],
   imports: [
     GridItemComponent,
     ShinyDexEntryToPokemonPipe,

@@ -23,6 +23,10 @@ $my-theme: mat.m2-define-light-theme((
 
 $gap-size: 2.5rem;
 
+.pokesprite.pokemon {
+  background-position: -350px -5050px;
+}
+
 * {
   box-sizing: border-box;
 }

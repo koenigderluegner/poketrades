@@ -13,18 +13,23 @@
             <li>
               <a routerLinkActive="selected" [routerLink]="breeablesLink">Breedables</a>
             </li>
-          } @if (spreadsheetData.hasValuables && valuablesLink) {
-          <li>
-            <a routerLinkActive="selected" [routerLink]="valuablesLinkArray">Valuables</a>
-          </li>
-        }
+          }
+          @if (spreadsheetData.hasValuables && valuablesLink) {
+            <li>
+              <a routerLinkActive="selected" [routerLink]="valuablesLinkArray">Valuables</a>
+            </li>
+          }
           <li>
             <a routerLinkActive="selected" [routerLink]="toolsLink">Tools</a>
+          </li>
+          <li>
+            <a routerLinkActive="selected" [routerLink]="livingDexesLink">Living dexes</a>
           </li>
         </ul>
       </div>
     </nav>
-  } @if (windowSize < 1200) {
+  }
+  @if (windowSize < 1200) {
     <button type="button" (click)="openMenu()" mat-button>
       <mat-icon fontIcon="menu"/>
     </button>
@@ -38,13 +43,17 @@
         <li>
           <a routerLinkActive="selected" (click)="closeMenu()" [routerLink]="breeablesLink">Breedables</a>
         </li>
-      } @if (spreadsheetData.hasValuables && valuablesLink) {
-      <li>
-        <a routerLinkActive="selected" (click)="closeMenu()" [routerLink]="valuablesLinkArray">Valuables</a>
-      </li>
-    }
+      }
+      @if (spreadsheetData.hasValuables && valuablesLink) {
+        <li>
+          <a routerLinkActive="selected" (click)="closeMenu()" [routerLink]="valuablesLinkArray">Valuables</a>
+        </li>
+      }
       <li>
         <a routerLinkActive="selected" (click)="closeMenu()" [routerLink]="toolsLink">Tools</a>
+      </li>
+      <li>
+        <a routerLinkActive="selected" (click)="closeMenu()" [routerLink]="livingDexesLink">Living dexes</a>
       </li>
     </ul>
   </ng-template>

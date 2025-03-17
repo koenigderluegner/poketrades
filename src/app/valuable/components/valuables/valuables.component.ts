@@ -17,7 +17,6 @@ import { CastValuablePipe } from "@shared/pipes/cast-valuable.pipe";
 @Component({
   selector: 'app-valuables',
   templateUrl: './valuables.component.html',
-  styleUrls: ['./valuables.component.scss'],
   imports: [
     GridItemComponent,
     GridComponent,
