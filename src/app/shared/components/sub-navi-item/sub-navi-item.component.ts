@@ -1,5 +1,5 @@
 import { Component, input, ViewEncapsulation } from '@angular/core';
-import { RouterLink } from "@angular/router";
+import { RouterLink, RouterLinkActive } from "@angular/router";
 import { SlugifyPipe } from "@shared/pipes/slugify.pipe";
 
 @Component({
@@ -9,7 +9,8 @@ import { SlugifyPipe } from "@shared/pipes/slugify.pipe";
   encapsulation: ViewEncapsulation.None,
   imports: [
     RouterLink,
-    SlugifyPipe
+    SlugifyPipe,
+    RouterLinkActive
   ],
   host: {
     'class': 'sub-navi-item',
