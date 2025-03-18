@@ -8,11 +8,11 @@ import { LivingDex } from "./living-dex.type";
 export class LivingDexService {
 
   getHomeDex() {
-    return httpResource<LivingDex[]>('/assets/database/living-dex-home.json')
+    return httpResource<LivingDex[]>('assets/database/living-dex-home.json')
   }
 
   getSVDex() {
-    return httpResource<LivingDex[]>('/assets/database/living-dex-sv-with-dlcs.json')
+    return httpResource<LivingDex[]>('assets/database/living-dex-sv-with-dlcs.json')
   }
 
 }
