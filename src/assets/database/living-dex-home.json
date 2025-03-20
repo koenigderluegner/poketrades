@@ -3291,6 +3291,283 @@
         "slug": "tauros-paldea"
       },
       {
+        "slug": "tauros-paldea-blaze"
+      },
+      {
+        "slug": "tauros-paldea-aqua"
+      },
+      {
+        "slug": "wooper-paldea"
+      }
+    ]
+  },
+  {
+    "name": "Vivillon Forms",
+    "pokemon": [
+      {
+        "slug": "vivillon-archipelago"
+      },
+      {
+        "slug": "vivillon-continental"
+      },
+      {
+        "slug": "vivillon-elegant"
+      },
+      {
+        "slug": "vivillon-garden"
+      },
+      {
+        "slug": "vivillon-high-plains"
+      },
+      {
+        "slug": "vivillon-icy-snow"
+      },
+      {
+        "slug": "vivillon-jungle"
+      },
+      {
+        "slug": "vivillon-marine"
+      },
+      {
+        "slug": "vivillon-modern"
+      },
+      {
+        "slug": "vivillon-monsoon"
+      },
+      {
+        "slug": "vivillon-ocean"
+      },
+      {
+        "slug": "vivillon-polar"
+      },
+      {
+        "slug": "vivillon-river"
+      },
+      {
+        "slug": "vivillon-sandstorm"
+      },
+      {
+        "slug": "vivillon-savanna"
+      },
+      {
+        "slug": "vivillon-sun"
+      },
+      {
+        "slug": "vivillon-tundra"
+      },
+      {
+        "slug": "vivillon-fancy"
+      },
+      {
+        "slug": "vivillon-poke-ball",
+        "shinyLocked": true
+      }
+    ]
+  },
+  {
+    "name": "Alcreamie Forms",
+    "pokemon": [
+      {
+        "slug": "alcremie-vanilla-cream-berry"
+      },
+      {
+        "slug": "alcremie-vanilla-cream-love"
+      },
+      {
+        "slug": "alcremie-vanilla-cream-star"
+      },
+      {
+        "slug": "alcremie-vanilla-cream-clover"
+      },
+      {
+        "slug": "alcremie-vanilla-cream-flower"
+      },
+      {
+        "slug": "alcremie-vanilla-cream-ribbon"
+      },
+      {
+        "slug": "alcremie-ruby-cream-strawberry"
+      },
+      {
+        "slug": "alcremie-ruby-cream-berry"
+      },
+      {
+        "slug": "alcremie-ruby-cream-love"
+      },
+      {
+        "slug": "alcremie-ruby-cream-star"
+      },
+      {
+        "slug": "alcremie-ruby-cream-clover"
+      },
+      {
+        "slug": "alcremie-ruby-cream-flower"
+      },
+      {
+        "slug": "alcremie-ruby-cream-ribbon"
+      },
+      {
+        "slug": "alcremie-matcha-cream-strawberry"
+      },
+      {
+        "slug": "alcremie-matcha-cream-berry"
+      },
+      {
+        "slug": "alcremie-matcha-cream-love"
+      },
+      {
+        "slug": "alcremie-matcha-cream-star"
+      },
+      {
+        "slug": "alcremie-matcha-cream-clover"
+      },
+      {
+        "slug": "alcremie-matcha-cream-flower"
+      },
+      {
+        "slug": "alcremie-matcha-cream-ribbon"
+      },
+      {
+        "slug": "alcremie-mint-cream-strawberry"
+      },
+      {
+        "slug": "alcremie-mint-cream-berry"
+      },
+      {
+        "slug": "alcremie-mint-cream-love"
+      },
+      {
+        "slug": "alcremie-mint-cream-star"
+      },
+      {
+        "slug": "alcremie-mint-cream-clover"
+      },
+      {
+        "slug": "alcremie-mint-cream-flower"
+      },
+      {
+        "slug": "alcremie-mint-cream-ribbon"
+      },
+      {
+        "slug": "alcremie-lemon-cream-strawberry"
+      },
+      {
+        "slug": "alcremie-lemon-cream-berry"
+      },
+      {
+        "slug": "alcremie-lemon-cream-love"
+      },
+      {
+        "slug": "alcremie-lemon-cream-star"
+      },
+      {
+        "slug": "alcremie-lemon-cream-clover"
+      },
+      {
+        "slug": "alcremie-lemon-cream-flower"
+      },
+      {
+        "slug": "alcremie-lemon-cream-ribbon"
+      },
+      {
+        "slug": "alcremie-salted-cream-strawberry"
+      },
+      {
+        "slug": "alcremie-salted-cream-berry"
+      },
+      {
+        "slug": "alcremie-salted-cream-love"
+      },
+      {
+        "slug": "alcremie-salted-cream-star"
+      },
+      {
+        "slug": "alcremie-salted-cream-clover"
+      },
+      {
+        "slug": "alcremie-salted-cream-flower"
+      },
+      {
+        "slug": "alcremie-salted-cream-ribbon"
+      },
+      {
+        "slug": "alcremie-ruby-swirl-strawberry"
+      },
+      {
+        "slug": "alcremie-ruby-swirl-berry"
+      },
+      {
+        "slug": "alcremie-ruby-swirl-love"
+      },
+      {
+        "slug": "alcremie-ruby-swirl-star"
+      },
+      {
+        "slug": "alcremie-ruby-swirl-clover"
+      },
+      {
+        "slug": "alcremie-ruby-swirl-flower"
+      },
+      {
+        "slug": "alcremie-ruby-swirl-ribbon"
+      },
+      {
+        "slug": "alcremie-caramel-swirl-strawberry"
+      },
+      {
+        "slug": "alcremie-caramel-swirl-berry"
+      },
+      {
+        "slug": "alcremie-caramel-swirl-love"
+      },
+      {
+        "slug": "alcremie-caramel-swirl-star"
+      },
+      {
+        "slug": "alcremie-caramel-swirl-clover"
+      },
+      {
+        "slug": "alcremie-caramel-swirl-flower"
+      },
+      {
+        "slug": "alcremie-caramel-swirl-ribbon"
+      },
+      {
+        "slug": "alcremie-rainbow-swirl-strawberry"
+      },
+      {
+        "slug": "alcremie-rainbow-swirl-berry"
+      },
+      {
+        "slug": "alcremie-rainbow-swirl-love"
+      },
+      {
+        "slug": "alcremie-rainbow-swirl-star"
+      },
+      {
+        "slug": "alcremie-rainbow-swirl-clover"
+      },
+      {
+        "slug": "alcremie-rainbow-swirl-flower"
+      },
+      {
+        "slug": "alcremie-rainbow-swirl-ribbon"
+      }
+    ]
+  },
+  {
+    "name": "Other Forms",
+    "pokemon": [
+      {
+        "slug": "deoxys-attack"
+      },
+      {
+        "slug": "deoxys-defense"
+      },
+      {
+        "slug": "deoxys-speed"
+      },
+      {
         "slug": "wooper-paldea"
       }
     ]
