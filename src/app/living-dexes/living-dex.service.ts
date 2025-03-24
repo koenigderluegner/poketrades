@@ -15,4 +15,8 @@ export class LivingDexService {
     return httpResource<LivingDex[]>('assets/database/living-dex-sv-with-dlcs.json')
   }
 
+  getSWSHDex() {
+    return httpResource<LivingDex[]>('assets/database/living-dex-swsh-with-dlcs.json')
+  }
+
 }
