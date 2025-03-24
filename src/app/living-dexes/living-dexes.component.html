@@ -1,51 +1,69 @@
 <header class="view-header">Living dexes</header>
 <div class="view-addional-content">
-    <app-grid-controller/>
+  <mat-checkbox [(ngModel)]="showOnlyUnowned"><b>Only unowned</b></mat-checkbox>
 </div>
 <aside class="view-sidebar">
-    <ul class="sub-navi">
-        <app-sub-navi-item link="../home" text="Home">
-            <app-item category="ball" slug="poke"></app-item>
-        </app-sub-navi-item>
-        <app-sub-navi-item link="../sv" text="Scarlet/Violet">
-            <app-item category="ball" slug="poke"></app-item>
-        </app-sub-navi-item>
-    </ul>
+  <ul class="sub-navi">
+    <app-sub-navi-item link="../home" text="Home">
+      <app-item category="ball" slug="poke"></app-item>
+    </app-sub-navi-item>
+    <app-sub-navi-item link="../sv" text="Scarlet/Violet">
+      <app-item category="ball" slug="poke"></app-item>
+    </app-sub-navi-item>
+  </ul>
 </aside>
 <div class="view-content">
-    @let foundDex = currentDex();
-    @if (foundDex) {
-        @if (foundDex.hasValue()) {
+  @let foundDex = currentDex();
+  @if (foundDex) {
+    @if (foundDex.hasValue()) {
 
-            @for (dex of chunkedDex(); track dex.name) {
-                <div class="grid-wrapper">
-                    @for (chunk of dex.pokemon; track chunk; let chunkIndex = $index; let size = $count) {
-                        <div class="chunk">
-                            <div class="chunk-title">
-                                {{ dex.name }} {{ (chunkIndex * CHUNK_SIZE + 1).toString().padStart(4, '0') }}
-                                - {{ ($last ? chunkIndex * CHUNK_SIZE + chunk.length : (chunkIndex + 1) * CHUNK_SIZE).toString().padStart(4, '0') }}
-                            </div>
-                            <div class="grid minimal">
-                                @for (pokemon of chunk; track pokemon) {
-                                    <div class="grid-item" [class.inactive]="!pokemon.shiny"
-                                         [matTooltip]="pokemon.slug + (pokemon.shinyLocked ? ' - shiny locked' : '')">
-                                        <div class="icon">
-                                            <app-pokemon [class.shiny-locked]="pokemon.shinyLocked" shiny
-                                                         [slug]="pokemon.slug"></app-pokemon>
-                                        </div>
 
-                                    </div>
-                                }
-                            </div>
-                        </div>
-                    }
+      @if (showOnlyUnowned()) {
 
+        <div class="grid minimal fluid">
+          @for (pokemon of filteredDex(); track pokemon) {
+            <div class="grid-item"
+                 [matTooltip]="pokemon.slug + (pokemon.shinyLocked ? ' - shiny locked' : '')">
+              <div class="icon">
+                <app-pokemon [class.shiny-locked]="pokemon.shinyLocked" shiny
+                             [slug]="pokemon.slug"></app-pokemon>
+              </div>
+
+            </div>
+          }
+        </div>
+
+      } @else {
+        @for (dex of chunkedDex(); track dex.name) {
+          <div class="grid-wrapper">
+            @for (chunk of dex.pokemon; track chunk; let chunkIndex = $index; let size = $count) {
+              <div class="chunk">
+                <div class="chunk-title">
+                  {{ dex.name }} {{ (chunkIndex * CHUNK_SIZE + 1).toString().padStart(4, '0') }}
+                  - {{ ($last ? chunkIndex * CHUNK_SIZE + chunk.length : (chunkIndex + 1) * CHUNK_SIZE).toString().padStart(4, '0') }}
                 </div>
+                <div class="grid minimal">
+                  @for (pokemon of chunk; track pokemon) {
+                    <div class="grid-item" [class.inactive]="!pokemon.shiny"
+                         [matTooltip]="pokemon.slug + (pokemon.shinyLocked ? ' - shiny locked' : '')">
+                      <div class="icon">
+                        <app-pokemon [class.shiny-locked]="pokemon.shinyLocked" shiny
+                                     [slug]="pokemon.slug"></app-pokemon>
+                      </div>
+
+                    </div>
+                  }
+                </div>
+              </div>
             }
 
+          </div>
         }
-    } @else {
-        <p>Can't find Dex with Id {{ dexId() }}</p>
+      }
+
     }
+  } @else {
+    <p>Can't find Dex with Id {{ dexId() }}</p>
+  }
 
 </div>
