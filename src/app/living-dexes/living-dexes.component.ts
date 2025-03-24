@@ -40,6 +40,7 @@ export class LivingDexesComponent {
   dexes = new Map([
       ['home', this.livingDex.getHomeDex()],
       ['sv', this.livingDex.getSVDex()],
+    ['swsh', this.livingDex.getSWSHDex()],
     ]
   )
 
