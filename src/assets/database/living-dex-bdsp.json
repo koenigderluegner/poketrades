@@ -1,0 +1,460 @@
+[
+  {
+    "name": "Base Game",
+    "pokemon": [
+      {
+        "slug": "turtwig"
+      },
+      {
+        "slug": "grotle"
+      },
+      {
+        "slug": "torterra"
+      },
+      {
+        "slug": "chimchar"
+      },
+      {
+        "slug": "monferno"
+      },
+      {
+        "slug": "infernape"
+      },
+      {
+        "slug": "piplup"
+      },
+      {
+        "slug": "prinplup"
+      },
+      {
+        "slug": "empoleon"
+      },
+      {
+        "slug": "starly"
+      },
+      {
+        "slug": "staravia"
+      },
+      {
+        "slug": "staraptor"
+      },
+      {
+        "slug": "bidoof"
+      },
+      {
+        "slug": "bibarel"
+      },
+      {
+        "slug": "kricketot"
+      },
+      {
+        "slug": "kricketune"
+      },
+      {
+        "slug": "shinx"
+      },
+      {
+        "slug": "luxio"
+      },
+      {
+        "slug": "luxray"
+      },
+      {
+        "slug": "abra"
+      },
+      {
+        "slug": "kadabra"
+      },
+      {
+        "slug": "alakazam"
+      },
+      {
+        "slug": "magikarp"
+      },
+      {
+        "slug": "gyarados"
+      },
+      {
+        "slug": "budew"
+      },
+      {
+        "slug": "roselia"
+      },
+      {
+        "slug": "roserade"
+      },
+      {
+        "slug": "zubat"
+      },
+      {
+        "slug": "golbat"
+      },
+      {
+        "slug": "crobat"
+      },
+      {
+        "slug": "geodude"
+      },
+      {
+        "slug": "graveler"
+      },
+      {
+        "slug": "golem"
+      },
+      {
+        "slug": "onix"
+      },
+      {
+        "slug": "steelix"
+      },
+      {
+        "slug": "cranidos"
+      },
+      {
+        "slug": "rampardos"
+      },
+      {
+        "slug": "shieldon"
+      },
+      {
+        "slug": "bastiodon"
+      },
+      {
+        "slug": "machop"
+      },
+      {
+        "slug": "machoke"
+      },
+      {
+        "slug": "machamp"
+      },
+      {
+        "slug": "psyduck"
+      },
+      {
+        "slug": "golduck"
+      },
+      {
+        "slug": "burmy"
+      },
+      {
+        "slug": "wormadam"
+      },
+      {
+        "slug": "mothim"
+      },
+      {
+        "slug": "wurmple"
+      },
+      {
+        "slug": "silcoon"
+      },
+      {
+        "slug": "beautifly"
+      },
+      {
+        "slug": "cascoon"
+      },
+      {
+        "slug": "dustox"
+      },
+      {
+        "slug": "combee"
+      },
+      {
+        "slug": "vespiquen"
+      },
+      {
+        "slug": "pachirisu"
+      },
+      {
+        "slug": "buizel"
+      },
+      {
+        "slug": "floatzel"
+      },
+      {
+        "slug": "cherubi"
+      },
+      {
+        "slug": "cherrim"
+      },
+      {
+        "slug": "shellos"
+      },
+      {
+        "slug": "gastrodon"
+      },
+      {
+        "slug": "heracross"
+      },
+      {
+        "slug": "aipom"
+      },
+      {
+        "slug": "ambipom"
+      },
+      {
+        "slug": "drifloon"
+      },
+      {
+        "slug": "drifblim"
+      },
+      {
+        "slug": "buneary"
+      },
+      {
+        "slug": "lopunny"
+      },
+      {
+        "slug": "gastly"
+      },
+      {
+        "slug": "haunter"
+      },
+      {
+        "slug": "gengar"
+      },
+      {
+        "slug": "misdreavus"
+      },
+      {
+        "slug": "mismagius"
+      },
+      {
+        "slug": "murkrow"
+      },
+      {
+        "slug": "honchkrow"
+      },
+      {
+        "slug": "glameow"
+      },
+      {
+        "slug": "purugly"
+      },
+      {
+        "slug": "goldeen"
+      },
+      {
+        "slug": "seaking"
+      },
+      {
+        "slug": "barboach"
+      },
+      {
+        "slug": "whiscash"
+      },
+      {
+        "slug": "chingling"
+      },
+      {
+        "slug": "chimecho"
+      },
+      {
+        "slug": "stunky"
+      },
+      {
+        "slug": "skuntank"
+      },
+      {
+        "slug": "meditite"
+      },
+      {
+        "slug": "medicham"
+      },
+      {
+        "slug": "bronzor"
+      },
+      {
+        "slug": "bronzong"
+      },
+      {
+        "slug": "ponyta"
+      },
+      {
+        "slug": "rapidash"
+      },
+      {
+        "slug": "bonsly"
+      },
+      {
+        "slug": "sudowoodo"
+      },
+      {
+        "slug": "mime-jr"
+      },
+      {
+        "slug": "mr-mime"
+      },
+      {
+        "slug": "happiny"
+      },
+      {
+        "slug": "chansey"
+      },
+      {
+        "slug": "blissey"
+      },
+      {
+        "slug": "cleffa"
+      },
+      {
+        "slug": "clefairy"
+      },
+      {
+        "slug": "clefable"
+      },
+      {
+        "slug": "chatot"
+      },
+      {
+        "slug": "pichu"
+      },
+      {
+        "slug": "pikachu"
+      },
+      {
+        "slug": "raichu"
+      },
+      {
+        "slug": "hoothoot"
+      },
+      {
+        "slug": "noctowl"
+      },
+      {
+        "slug": "spiritomb"
+      },
+      {
+        "slug": "gible"
+      },
+      {
+        "slug": "gabite"
+      },
+      {
+        "slug": "garchomp"
+      },
+      {
+        "slug": "munchlax"
+      },
+      {
+        "slug": "snorlax"
+      },
+      {
+        "slug": "unown"
+      },
+      {
+        "slug": "riolu"
+      },
+      {
+        "slug": "lucario"
+      },
+      {
+        "slug": "wooper"
+      },
+      {
+        "slug": "quagsire"
+      },
+      {
+        "slug": "wingull"
+      },
+      {
+        "slug": "pelipper"
+      },
+      {
+        "slug": "girafarig"
+      },
+      {
+        "slug": "hippopotas"
+      },
+      {
+        "slug": "hippowdon"
+      },
+      {
+        "slug": "azurill"
+      },
+      {
+        "slug": "marill"
+      },
+      {
+        "slug": "azumarill"
+      },
+      {
+        "slug": "skorupi"
+      },
+      {
+        "slug": "drapion"
+      },
+      {
+        "slug": "croagunk"
+      },
+      {
+        "slug": "toxicroak"
+      },
+      {
+        "slug": "carnivine"
+      },
+      {
+        "slug": "remoraid"
+      },
+      {
+        "slug": "octillery"
+      },
+      {
+        "slug": "finneon"
+      },
+      {
+        "slug": "lumineon"
+      },
+      {
+        "slug": "tentacool"
+      },
+      {
+        "slug": "tentacruel"
+      },
+      {
+        "slug": "feebas"
+      },
+      {
+        "slug": "milotic"
+      },
+      {
+        "slug": "mantyke"
+      },
+      {
+        "slug": "mantine"
+      },
+      {
+        "slug": "snover"
+      },
+      {
+        "slug": "abomasnow"
+      },
+      {
+        "slug": "sneasel"
+      },
+      {
+        "slug": "weavile"
+      },
+      {
+        "slug": "uxie"
+      },
+      {
+        "slug": "mesprit"
+      },
+      {
+        "slug": "azelf"
+      },
+      {
+        "slug": "dialga"
+      },
+      {
+        "slug": "palkia"
+      },
+      {
+        "slug": "manaphy"
+      }
+    ]
+  }
+]
