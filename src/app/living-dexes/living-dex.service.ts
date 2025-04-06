@@ -19,4 +19,16 @@ export class LivingDexService {
     return httpResource<LivingDex[]>('assets/database/living-dex-swsh-with-dlcs.json')
   }
 
+  getUSUMDex() {
+    return httpResource<LivingDex[]>('assets/database/living-dex-usum.json')
+  }
+
+  getBDSPDex() {
+    return httpResource<LivingDex[]>('assets/database/living-dex-bdsp.json')
+  }
+
+  getLADex() {
+    return httpResource<LivingDex[]>('assets/database/living-dex-la.json')
+  }
+
 }
