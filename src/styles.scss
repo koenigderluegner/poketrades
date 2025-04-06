@@ -23,7 +23,7 @@ $my-theme: mat.m2-define-light-theme((
 
 $gap-size: 2.5rem;
 
-.pokesprite.pokemon {
+:where(.pokesprite):where(.pokemon) {
   background-position: -140px -5572px;
 }
 

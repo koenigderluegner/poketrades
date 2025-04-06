@@ -20,12 +20,9 @@
       width: 100%;
       overflow: hidden;
 
-      /* required for safari to cut rounded borders */
-      -webkit-mask-image: -webkit-radial-gradient(white, black);
-
+      background: #fff;
 
       .icon {
-        background: #fff;
         flex-basis: 32px;
         height: 32px;
       }
@@ -37,7 +34,7 @@
         justify-content: space-between;
         height: 32px;
 
-        &:before {
+        &:not(.no-meta):before {
           background-color: #46504f;
           right: -150px;
           width: 198px;
@@ -51,13 +48,8 @@
           z-index: 1;
         }
 
-        &.no-meta:before {
-          background-color: #fff;
-        }
-
         .title {
           flex-grow: 1;
-          background: #fff;
         }
 
 
@@ -74,10 +66,9 @@
       }
 
       &.active {
-        .icon, .content .title, .content.no-meta:before {
-          background: #000;
-          color: #fff;
-        }
+        background: #000;
+        color: #fff;
+
       }
     }
   }
@@ -86,10 +77,9 @@
 @media (prefers-color-scheme: dark) {
   .sub-navi-item {
     li a {
-      .icon, .content .title, .content.no-meta:before {
-        background: #212121;
-        color: rgba(255, 255, 255, 0.8);
-      }
+      background: #212121;
+      color: rgba(255, 255, 255, 0.8);
+
 
       .content.no-meta:before {
         background-color: #212121;
