@@ -27,4 +27,8 @@ export class LivingDexService {
     return httpResource<LivingDex[]>('assets/database/living-dex-bdsp.json')
   }
 
+  getLADex() {
+    return httpResource<LivingDex[]>('assets/database/living-dex-la.json')
+  }
+
 }

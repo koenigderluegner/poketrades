@@ -42,7 +42,8 @@ export class LivingDexesComponent {
       ['sv', this.livingDex.getSVDex()],
     ['swsh', this.livingDex.getSWSHDex()],
     ['usum', this.livingDex.getUSUMDex()],
-    ['bdsp', this.livingDex.getUSUMDex()],
+    ['bdsp', this.livingDex.getBDSPDex()],
+    ['la', this.livingDex.getLADex()],
     ]
   )
 
