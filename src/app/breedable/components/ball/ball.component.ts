@@ -1,18 +1,14 @@
-import { Component, inject, OnDestroy, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { Observable, Subscription } from 'rxjs';
+import { Component, computed, inject, input } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Worksheet } from '@spreadsheet/models/worksheet';
 import { SlugifyPipe } from '@shared/pipes/slugify.pipe';
-import { switchMap, tap } from 'rxjs/operators';
 import { SpreadsheetFacade } from '@spreadsheet/spreadsheet.facade';
 import { GridService } from '../../../grid/services/grid.service';
 import { GridAppearanceType } from '../../../grid/grid-appearance.type';
-import { Spreadsheet } from '@spreadsheet/models/spreadsheet';
-import { Pokemon } from '@shared/interfaces/pokemon';
-import { GridItemComponent } from "../../../grid/grid-item/grid-item.component";
-import { GridComponent } from "../../../grid/grid.component";
-import { AsyncPipe } from "@angular/common";
-import { CastBreedablePipe } from "@shared/pipes/cast-breedable.pipe";
+import { GridItemComponent } from '../../../grid/grid-item/grid-item.component';
+import { GridComponent } from '../../../grid/grid.component';
+import { AsyncPipe } from '@angular/common';
+import { CastBreedablePipe } from '@shared/pipes/cast-breedable.pipe';
 
 @Component({
   selector: 'app-ball',
@@ -25,17 +21,14 @@ import { CastBreedablePipe } from "@shared/pipes/cast-breedable.pipe";
     CastBreedablePipe
   ]
 })
-export class BallComponent implements OnInit, OnDestroy {
-  private spreadsheetFacade = inject(SpreadsheetFacade);
-  private route = inject(ActivatedRoute);
+export class BallComponent {
   private slugifyPipe = inject(SlugifyPipe);
   private gridService = inject(GridService);
 
+  private currentSpreadsheet = inject(SpreadsheetFacade).currentSpreadsheetRef.value;
 
-  worksheetTitle: string | undefined;
-  worksheet: Worksheet | undefined;
+  worksheetTitle = input<string>();
 
-  subscriptions: Subscription[] = [];
   gridAppearance$: Observable<GridAppearanceType>;
 
   constructor() {
@@ -44,33 +37,14 @@ export class BallComponent implements OnInit, OnDestroy {
     this.gridAppearance$ = this.gridService.getGridAppearance$();
   }
 
-  ngOnInit(): void {
+  worksheet = computed(() => {
 
+    const spreadsheetData = this.currentSpreadsheet();
 
-    this.route.paramMap.pipe(
-      tap(params => this.worksheetTitle = params.get('worksheetTitle') ?? ''),
-      switchMap(
-        () => {
-          return this.spreadsheetFacade.getCurrentSpreadsheet$();
-        }
-      )).subscribe(
-      {
-        next: (spreadsheetData: Spreadsheet) => {
-          this.worksheet = spreadsheetData.worksheets.filter(
-            (worksheet: Worksheet) => this.slugifyPipe.transform(worksheet.title) === this.worksheetTitle
-          )?.[0];
-        }
-      }
-    );
-  }
+    return spreadsheetData?.worksheets.filter(
+      (worksheet: Worksheet) => this.slugifyPipe.transform(worksheet.title) === this.worksheetTitle()
+    )?.[0];
 
-  trackBy(index: number, pokemon: Pokemon): string {
-    return pokemon.id;
-  }
+  });
 
-  ngOnDestroy(): void {
-    for (const subscription of this.subscriptions) {
-      subscription.unsubscribe();
-    }
-  }
 }

@@ -1,13 +1,11 @@
 import { Component, effect, inject, signal, ViewEncapsulation } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { Observable } from 'rxjs';
 import { Spreadsheet } from '@spreadsheet/models/spreadsheet';
 import { SpreadsheetFacade } from '@spreadsheet/spreadsheet.facade';
 import { ApiError } from '@shared/interfaces/api-error.interface';
-import { catchError } from 'rxjs/operators';
-import { AsyncPipe } from "@angular/common";
-import { SpinnerComponent } from "@shared/components/spinner/spinner.component";
-import { BallGuyBubbleComponent } from "@shared/components/ball-guy-bubble/ball-guy-bubble.component";
+import { SpinnerComponent } from '@shared/components/spinner/spinner.component';
+import { BallGuyBubbleComponent } from '@shared/components/ball-guy-bubble/ball-guy-bubble.component';
+import { HttpErrorResponse } from '@angular/common/module.d-CnjH8Dlt';
 
 @Component({
   selector: 'app-index',
@@ -16,7 +14,6 @@ import { BallGuyBubbleComponent } from "@shared/components/ball-guy-bubble/ball-
   encapsulation: ViewEncapsulation.None,
   imports: [
     ReactiveFormsModule,
-    AsyncPipe,
     SpinnerComponent,
     BallGuyBubbleComponent,
     FormsModule
@@ -30,8 +27,7 @@ export class IndexComponent {
 
   searchValue = signal('');
   hasRequested = false;
-  loadedSpreadsheet$: Observable<Spreadsheet> | undefined;
-  isLoading$: Observable<boolean>;
+  loadedSpreadsheet$ = this.spreadsheetFacade.searchResult;
 
   spreadsheetHistory$ = this.spreadsheetFacade.getSpreadsheetHistory$();
 
@@ -39,24 +35,24 @@ export class IndexComponent {
 
   constructor() {
 
-    this.isLoading$ = this.spreadsheetFacade.isLoading$();
+    effect(() => {
+      const error = this.spreadsheetFacade.searchResult.error() as HttpErrorResponse | null;
+      if (error) {
+        this.error = this.spreadsheetFacade.convertApiErrors(error.status);
+      }
+    });
+
 
     effect(() => {
       if (this.searchValue().length)
-        this.submitSearch(this.searchValue)
+        this.submitSearch(this.searchValue);
     });
   }
 
   submitSearch(searchValue: () => string): void {
     this.hasRequested = true;
-    this.error = null;
-    this.loadedSpreadsheet$ = this.spreadsheetFacade.searchSpreadsheet(searchValue)
-      .pipe(
-        catchError((err, observable) => {
-          this.error = err;
-          return observable;
-        })
-      );
+    this.spreadsheetFacade.currentSearchTerm.set(searchValue());
+
   }
 
   saveSpreadsheet(spreadsheet: Spreadsheet): void {
@@ -65,7 +61,7 @@ export class IndexComponent {
 
   fromHistory(id: string): void {
     this.hasRequested = true;
-    this.loadedSpreadsheet$ = this.spreadsheetFacade.loadSpreadsheet(() => id);
+    this.spreadsheetFacade.currentSearchTerm.set(id);
   }
 
 }

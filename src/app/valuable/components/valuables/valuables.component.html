@@ -1,8 +1,8 @@
 @if (gridAppearance$ | async; as gridAppearance) {
 
-  @if (worksheet) {
+  @if (worksheet()) {
     <app-grid [appearance]="gridAppearance">
-      @for (entry of worksheet?.data; track trackBy($index, entry)) {
+      @for (entry of worksheet()?.data; track entry.id) {
 
         <app-grid-item [pokemon]="entry | castValuable"></app-grid-item>
 

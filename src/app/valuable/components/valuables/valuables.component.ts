@@ -1,18 +1,14 @@
-import { Component, inject, OnInit } from '@angular/core';
-import { switchMap, tap } from 'rxjs/operators';
+import { Component, computed, inject, input } from '@angular/core';
 import { SpreadsheetFacade } from '@spreadsheet/spreadsheet.facade';
-import { ActivatedRoute } from '@angular/router';
 import { SlugifyPipe } from '@shared/pipes/slugify.pipe';
 import { GridService } from '../../../grid/services/grid.service';
 import { Worksheet } from '@spreadsheet/models/worksheet';
-import { Observable, Subscription } from 'rxjs';
+import { Observable } from 'rxjs';
 import { GridAppearanceType } from '../../../grid/grid-appearance.type';
-import { Pokemon } from '@shared/interfaces/pokemon';
-import { Spreadsheet } from '@spreadsheet/models/spreadsheet';
-import { GridItemComponent } from "../../../grid/grid-item/grid-item.component";
-import { GridComponent } from "../../../grid/grid.component";
-import { AsyncPipe } from "@angular/common";
-import { CastValuablePipe } from "@shared/pipes/cast-valuable.pipe";
+import { GridItemComponent } from '../../../grid/grid-item/grid-item.component';
+import { GridComponent } from '../../../grid/grid.component';
+import { AsyncPipe } from '@angular/common';
+import { CastValuablePipe } from '@shared/pipes/cast-valuable.pipe';
 
 @Component({
   selector: 'app-valuables',
@@ -24,17 +20,24 @@ import { CastValuablePipe } from "@shared/pipes/cast-valuable.pipe";
     CastValuablePipe
   ]
 })
-export class ValuablesComponent implements OnInit {
-  private spreadsheetFacade = inject(SpreadsheetFacade);
-  private route = inject(ActivatedRoute);
+export class ValuablesComponent {
+  private currentSpreadsheet = inject(SpreadsheetFacade).currentSpreadsheetRef.value;
   private slugifyPipe = inject(SlugifyPipe);
   private gridService = inject(GridService);
 
+  worksheetTitle = input<string>();
 
-  worksheetTitle: string | null | undefined;
-  worksheet: Worksheet | undefined;
 
-  subscriptions: Subscription[] = [];
+  worksheet = computed(() => {
+
+    const spreadsheetData = this.currentSpreadsheet();
+
+    return spreadsheetData?.worksheets.filter(
+      (worksheet: Worksheet) => this.slugifyPipe.transform(worksheet.title) === this.worksheetTitle()
+    )?.[0];
+
+  })
+
   gridAppearance$: Observable<GridAppearanceType>;
 
   constructor() {
@@ -43,27 +46,5 @@ export class ValuablesComponent implements OnInit {
     this.gridAppearance$ = this.gridService.getGridAppearance$();
   }
 
-  ngOnInit(): void {
-
-    this.route.paramMap.pipe(
-      tap(params => this.worksheetTitle = params.get('worksheetTitle')),
-      switchMap(
-        () => {
-          return this.spreadsheetFacade.getCurrentSpreadsheet$();
-        }
-      )).subscribe(
-      {
-        next: (spreadsheetData: Spreadsheet) => {
-          this.worksheet = spreadsheetData.worksheets.filter(
-            (worksheet: Worksheet) => this.slugifyPipe.transform(worksheet.title) === this.worksheetTitle
-          )?.[0];
-        }
-      }
-    );
-  }
-
-  trackBy(index: number, pokemon: Pokemon): string {
-    return pokemon.id;
-  }
 
 }

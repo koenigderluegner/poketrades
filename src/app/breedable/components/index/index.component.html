@@ -1,18 +1,18 @@
 <header class="view-header">breedables</header>
-<div class="view-addional-content">
+<div class="view-additional-content">
   <app-grid-controller/>
 </div>
 <aside class="view-sidebar">
-  @if (worksheets) {
+  @if (worksheets()) {
     <ul class="sub-navi">
 
-      <app-sub-navi-item [link]="['/'+spreadsheetId, 'breedables', 'overview']"
+      <app-sub-navi-item [link]="['/'+spreadsheetId(), 'breedables', 'overview']"
                          [text]="'Overview'">
         <app-item category="ball" [slug]="'master'"></app-item>
       </app-sub-navi-item>
 
-      @for (worksheet of worksheets; track worksheet) {
-        <app-sub-navi-item [link]="['/'+spreadsheetId, 'breedables', worksheet.title | slugify]"
+      @for (worksheet of worksheets(); track worksheet) {
+        <app-sub-navi-item [link]="['/'+spreadsheetId(), 'breedables', worksheet.title | slugify]"
 
                            [text]="worksheet.title"
                            [meta]="worksheet.ownedEntries +'/'+(worksheet.data ? worksheet.data.length : '???')">

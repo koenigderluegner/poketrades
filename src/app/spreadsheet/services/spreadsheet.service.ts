@@ -1,5 +1,5 @@
-import { inject, Injectable } from '@angular/core';
-import { switchMap } from 'rxjs/operators';
+import { inject, Injectable, Injector, runInInjectionContext } from '@angular/core';
+import { map, switchMap } from 'rxjs/operators';
 import { Observable, of } from 'rxjs';
 import { Spreadsheet } from '../models/spreadsheet';
 import { GoogleSpreadsheetService } from '../../google-spreadsheet/services/google-spreadsheet.service';
@@ -10,14 +10,18 @@ import { AllowedConfig } from '@spreadsheet/models/allowed-config.interface';
 import { SlugifyPipe } from '@shared/pipes/slugify.pipe';
 import { Pokemon } from '@shared/interfaces/pokemon';
 import { coerceBooleanProperty } from '@angular/cdk/coercion';
-import { LivingDexChecklist } from "@spreadsheet/models/living-dex-checklist.type";
-import { API_KEY } from "../../../environments/api-key.injection-token";
+import { LivingDexChecklist } from '@spreadsheet/models/living-dex-checklist.type';
+import { API_KEY } from '../../../environments/api-key.injection-token';
+import { rxResource } from '@angular/core/rxjs-interop';
+import { BreedablesOverviewList } from '@shared/interfaces/breedables-overview-list.interface';
+import { Breedable } from '@shared/interfaces/breedable.interface';
 
 @Injectable({
   providedIn: 'root',
 })
 export class SpreadsheetService {
   private apiKey = inject(API_KEY);
+  private injector = inject(Injector);
   spreadsheet: Spreadsheet | undefined = undefined;
   private gss = inject(GoogleSpreadsheetService);
   private slugifyPipe = inject(SlugifyPipe);
@@ -34,7 +38,7 @@ export class SpreadsheetService {
     'regularOwned', 'shinyOwned', 'slug'
   ];
   private readonly allowedConfigs: AllowedConfig = {
-    type: ['Valuables', 'Breedables', "livingDex"],
+    type: ['Valuables', 'Breedables', 'livingDex'],
     subType: ['RNGs', 'Legendaries', 'Shinies', 'Competitives', 'Events'],
     ball: ['Dream', 'Safari', 'Sport', 'Beast', 'Fast', 'Moon', 'Heavy', 'Love', 'Lure', 'Level',
       'Friend', 'Poké', 'Great', 'Ultra', 'Premier', 'Dive', 'Luxury', 'Nest', 'Net', 'Repeat', 'Timer', 'Quick',
@@ -42,30 +46,89 @@ export class SpreadsheetService {
     includeShinies: ['true', 'false']
   };
 
-  getSpreadsheet(spreadsheetId: () => string, apiKey: string): Observable<Spreadsheet> {
+  getSpreadsheet(spreadsheetId: () => string, apiKey: string) {
     let spreadsheet: Spreadsheet;
-    return this.gss.getSpreadsheet(spreadsheetId, apiKey).pipe(
-      switchMap(googleSpreadsheet => {
+    return runInInjectionContext(this.injector, () => rxResource({
+      request: () => ({spreadsheetId: spreadsheetId()}),
+      loader: ({request}) => {
+        return !request.spreadsheetId ? of(undefined) : this.gss.getSpreadsheet(request.spreadsheetId, apiKey).pipe(
+          switchMap(googleSpreadsheet => {
+            if (!request.spreadsheetId) return of();
+            spreadsheet = {
+              id: spreadsheetId(),
+              title: googleSpreadsheet.properties.title,
+              worksheets: [],
+              livingDexChecklist: []
+            };
+            this.spreadsheet = spreadsheet;
+            const sheetsToCheck = googleSpreadsheet.sheets.filter(sheet => !this.bannedSheets.includes(sheet.properties.title));
 
-        spreadsheet = {
-          id: spreadsheetId(),
-          title: googleSpreadsheet.properties.title,
-          worksheets: [],
-          livingDexChecklist: []
-        };
-        this.spreadsheet = spreadsheet;
-        const sheetsToCheck = googleSpreadsheet.sheets.filter(sheet => !this.bannedSheets.includes(sheet.properties.title));
+            return this._getWorksheets(spreadsheetId, sheetsToCheck).pipe(
+              switchMap(worksheets => {
+                spreadsheet.worksheets = worksheets;
+                this.spreadsheet = spreadsheet;
+                return of(spreadsheet);
+              }),
+              map((spreadsheet: Spreadsheet) => {
+                for (const worksheet of spreadsheet.worksheets) {
 
-        return this._getWorksheets(spreadsheetId, sheetsToCheck);
-      }),
-      switchMap(worksheets => {
-        spreadsheet.worksheets = worksheets;
-        this.spreadsheet = spreadsheet;
-        return of(spreadsheet);
-      })
-    );
+
+                  if (worksheet.data) {
+                    worksheet.ownedEntries = (worksheet.data ?? []).filter(pokemon => pokemon.isOwned).length;
+
+
+                    if (worksheet.config?.type === 'Valuables' && worksheet.config?.subType === 'Shinies') {
+                      for (const entry of worksheet.data) {
+                        entry.isShiny = true;
+                      }
+                    }
+
+                    if (worksheet.config?.type === 'Breedables' && worksheet.config?.ball) {
+                      for (const entry of worksheet.data) {
+                        entry.ball = worksheet.config?.ball;
+                      }
+                    }
+                  }
+
+                }
+
+                spreadsheet.hasBreedables = spreadsheet.worksheets.some((ws: Worksheet) => ws.config?.type === 'Breedables');
+                spreadsheet.hasValuables = spreadsheet.worksheets.some((ws: Worksheet) => ws.config?.type === 'Valuables');
+
+                if (spreadsheet.hasBreedables) {
+                  spreadsheet.overviewEntries = this.buildOverviewEntries(
+                    spreadsheet.worksheets.filter((ws: Worksheet) => ws.config?.type === 'Breedables' && ws.config?.ball)
+                  );
+                }
+
+
+                return spreadsheet;
+              })
+            );
+          }),
+        );
+      }
+    }));
   }
 
+  private buildOverviewEntries(worksheets: Worksheet[]): BreedablesOverviewList {
+    const overviewEntries: BreedablesOverviewList = {};
+    worksheets.forEach((worksheet: Worksheet) => {
+      const ball: string | undefined = worksheet.config?.ball?.toLowerCase();
+      const data: Pokemon[] | undefined = worksheet.data;
+      if (!ball) {
+        return;
+      }
+      overviewEntries[ball] = {};
+      if (data) {
+        data.forEach((pokemon: Pokemon) => {
+          const breedable = (pokemon) as Breedable;
+          overviewEntries[ball][breedable.iconSlug] = breedable;
+        });
+      }
+    });
+    return overviewEntries;
+  }
 
   public getConfigs(
     spreadsheetId: () => string,
@@ -73,7 +136,7 @@ export class SpreadsheetService {
     sheetsToCheck: GoogleSpreadsheetResponse['sheets']
   ): Observable<Worksheet[]> {
     return this.gss.getBatchValues(
-      spreadsheetId,
+      spreadsheetId(),
       configRanges,
       this.apiKey
     ).pipe(switchMap(configs => {
@@ -206,7 +269,7 @@ export class SpreadsheetService {
 
   private getWorksheetValues(spreadsheetId: () => string, valueRanges: string[], worksheets: Worksheet[]): Observable<Worksheet[]> {
     return this.gss.getBatchValues(
-      spreadsheetId,
+      spreadsheetId(),
       valueRanges,
       this.apiKey
     ).pipe(switchMap(sheetValues => {
@@ -219,7 +282,7 @@ export class SpreadsheetService {
           if (worksheet) {
 
             const pokemonData: Pokemon[] = [];
-            if (worksheet.config?.type === "livingDex") {
+            if (worksheet.config?.type === 'livingDex') {
 
               const livingDexData: LivingDexChecklist[] = [];
 
@@ -258,9 +321,8 @@ export class SpreadsheetService {
 
                 });
 
-                livingDexData.push(tempPokemon)
+                livingDexData.push(tempPokemon);
               });
-              console.log(livingDexData)
               this.spreadsheet?.livingDexChecklist.push(...livingDexData);
 
               return;

@@ -21,7 +21,7 @@
 <div class="view-content">
   @if (loadedSpreadsheet$) {
 
-    @if ((isLoading$ |async)) {
+    @if ((loadedSpreadsheet$.isLoading()) || !loadedSpreadsheet$.status()) {
 
       @if (hasRequested) {
         <div>
@@ -30,10 +30,9 @@
         </div>
       }
 
-    }
-    @if (!error) {
+    } @else if (loadedSpreadsheet$.hasValue()) {
 
-      @if ((loadedSpreadsheet$ | async); as loadedSpreadsheet) {
+      @if ((loadedSpreadsheet$.value()); as loadedSpreadsheet) {
 
         @if (loadedSpreadsheet) {
 
