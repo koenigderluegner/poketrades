@@ -6,7 +6,6 @@ import { DatabaseFacadeService } from './database/database-facade.service';
 import { UserService } from './database/services/user.service';
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
-import { environment } from '../environments/environment';
 import { FooterComponent } from "@core/components/layout/footer/footer.component";
 import { HeaderComponent } from "@core/components/layout/header/header.component";
 import { SpinnerComponent } from "@shared/components/spinner/spinner.component";
@@ -20,11 +19,9 @@ import { SpinnerComponent } from "@shared/components/spinner/spinner.component";
     RouterOutlet,
     HeaderComponent,
     SpinnerComponent,
-    
   ]
 })
 export class AppComponent implements OnInit {
-  apiKey = environment.googleApiKey;
   spreadsheet: Spreadsheet | undefined;
   isLoading = false;
   loadingMessage: string | undefined;
@@ -88,7 +85,7 @@ export class AppComponent implements OnInit {
       this.loadingMessage = 'Load databases from server';
 
       this.loadingMessage = 'Loading spreadsheet from Google API';
-      const sub = this.spreadsheetFacade.loadSpreadsheet(spreadsheetId, this.apiKey).subscribe({
+      const sub = this.spreadsheetFacade.loadSpreadsheet(() => spreadsheetId).subscribe({
         next: (spreadsheet: Spreadsheet) => {
           if (username) {
             spreadsheet.username = username;

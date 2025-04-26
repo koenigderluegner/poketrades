@@ -1,4 +1,4 @@
-import { inject, Injectable } from '@angular/core';
+import { effect, inject, Injectable, signal } from '@angular/core';
 import { BehaviorSubject, Observable, throwError } from 'rxjs';
 import { Spreadsheet } from './models/spreadsheet';
 import { catchError, map, tap } from 'rxjs/operators';
@@ -9,29 +9,38 @@ import { Pokemon } from '@shared/interfaces/pokemon';
 import { BreedablesOverviewList } from '@shared/interfaces/breedables-overview-list.interface';
 import { ApiError } from '@shared/interfaces/api-error.interface';
 import { Breedable } from '@shared/interfaces/breedable.interface';
+import { API_KEY } from "../../environments/api-key.injection-token";
 
 @Injectable({
   providedIn: 'root',
 })
 export class SpreadsheetFacade {
   private spreadsheetService = inject(SpreadsheetService);
-
+  private readonly apiKey = inject(API_KEY);
 
   private readonly _isDefaultSheet$: BehaviorSubject<boolean>;
   private readonly _isLoading$: BehaviorSubject<boolean>;
   private readonly _currentSpreadsheet$: BehaviorSubject<Spreadsheet>;
 
-  private readonly _searchHistory: BehaviorSubject<SearchHistoryEntry[]>;
+  private readonly _searchHistory = signal<SearchHistoryEntry[]>([]);
+
+  currentSpreadsheetId = signal<string>('')
 
 
   constructor() {
+
+    effect(() => {
+      const currentSpreadsheetId = this.currentSpreadsheetId;
+      if (currentSpreadsheetId()) {
+        this.loadSpreadsheet(currentSpreadsheetId)
+      }
+    });
+
+
     if (!localStorage.getItem('spreadsheetHistory')) {
       localStorage.setItem('spreadsheetHistory', JSON.stringify([]));
-      this._searchHistory = new BehaviorSubject<SearchHistoryEntry[]>([]);
     } else {
-      this._searchHistory = new BehaviorSubject<SearchHistoryEntry[]>(
-        JSON.parse(localStorage.getItem('spreadsheetHistory') ?? [].toString())
-      );
+      this._searchHistory.set(JSON.parse(localStorage.getItem('spreadsheetHistory') ?? [].toString()))
     }
     this._currentSpreadsheet$ = new BehaviorSubject<Spreadsheet>({
       title: '',
@@ -50,17 +59,17 @@ export class SpreadsheetFacade {
     return this._currentSpreadsheet$;
   }
 
-  searchSpreadsheet(spreadsheetId: string, apiKey: string): Observable<Spreadsheet> {
-    return this.loadSpreadsheet(spreadsheetId, apiKey).pipe(
+  searchSpreadsheet(spreadsheetId: () => string): Observable<Spreadsheet> {
+    return this.loadSpreadsheet(spreadsheetId).pipe(
       tap((spreadsheet: Spreadsheet) => this.saveToHistory(spreadsheet))
     );
   }
 
-  loadSpreadsheet(spreadsheetId: string, apiKey: string): Observable<Spreadsheet> {
+  loadSpreadsheet(spreadsheetId: () => string): Observable<Spreadsheet> {
 
     this.updateIsLoading(true);
 
-    return this.spreadsheetService.getSpreadsheet(spreadsheetId, apiKey).pipe(
+    return this.spreadsheetService.getSpreadsheet(spreadsheetId, this.apiKey).pipe(
       map((spreadsheet: Spreadsheet) => {
         for (const worksheet of spreadsheet.worksheets) {
 
@@ -124,11 +133,7 @@ export class SpreadsheetFacade {
     return this._isLoading$;
   }
 
-  isDefaultSpreadhseet$(): BehaviorSubject<boolean> {
-    return this._isDefaultSheet$;
-  }
-
-  getSpreadsheetHistory$(): BehaviorSubject<SearchHistoryEntry[]> {
+  getSpreadsheetHistory$() {
     return this._searchHistory;
   }
 
@@ -149,18 +154,19 @@ export class SpreadsheetFacade {
   }
 
   private saveToHistory(spreadsheet: Spreadsheet): void {
-    const history: SearchHistoryEntry[] = JSON.parse(localStorage.getItem('spreadsheetHistory') ?? [].toString());
-    const entryIndex = history.findIndex((searchHistoryEntry: SearchHistoryEntry) => searchHistoryEntry.id === spreadsheet.id);
-    if (entryIndex !== -1) {
-      history.splice(entryIndex, 1);
-    }
-    history.unshift({
-      title: spreadsheet.title,
-      id: spreadsheet.id,
-      saveDate: new Date().toTimeString()
+    this._searchHistory.update(history => {
+      const entryIndex = history.findIndex((searchHistoryEntry: SearchHistoryEntry) => searchHistoryEntry.id === spreadsheet.id);
+      if (entryIndex !== -1) {
+        history.splice(entryIndex, 1);
+      }
+      history.unshift({
+        title: spreadsheet.title,
+        id: spreadsheet.id,
+        saveDate: new Date().toTimeString()
+      });
+      localStorage.setItem('spreadsheetHistory', JSON.stringify(history));
+      return [...history];
     });
-    localStorage.setItem('spreadsheetHistory', JSON.stringify(history));
-    this._searchHistory.next(history);
   }
 
   private buildOverviewEntries(worksheets: Worksheet[]): BreedablesOverviewList {

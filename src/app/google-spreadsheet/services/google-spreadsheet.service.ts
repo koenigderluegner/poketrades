@@ -23,16 +23,16 @@ export class GoogleSpreadsheetService {
     'sheets.properties.gridProperties.frozenColumnCount',
   ];
 
-  public getSpreadsheet(spreadsheetId: string, apiKey: string): Observable<GoogleSpreadsheetResponse> {
-    return this._httpClient.get<GoogleSpreadsheetResponse>(`https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}?includeGridData=false&fields=${this._spreadsheetFields.join(',')}&key=${apiKey}`);
+  public getSpreadsheet(spreadsheetId: () => string, apiKey: string): Observable<GoogleSpreadsheetResponse> {
+    return this._httpClient.get<GoogleSpreadsheetResponse>(`https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId()}?includeGridData=false&fields=${this._spreadsheetFields.join(',')}&key=${apiKey}`);
   }
 
-  public getBatchValues(spreadsheetId: string, ranges: string[], apiKey: string): Observable<GoogleWorksheetResponse> {
+  public getBatchValues(spreadsheetId: () => string, ranges: string[], apiKey: string): Observable<GoogleWorksheetResponse> {
     let params: HttpParams = new HttpParams();
 
     for (const range of ranges) {
       params = params.append('ranges', range);
     }
-    return this._httpClient.get<GoogleWorksheetResponse>(`https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values:batchGet?key=${apiKey}`, {params});
+    return this._httpClient.get<GoogleWorksheetResponse>(`https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId()}/values:batchGet?key=${apiKey}`, {params});
   }
 }

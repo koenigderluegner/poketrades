@@ -1,19 +1,13 @@
-import { Component, inject, ViewEncapsulation } from '@angular/core';
-import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { Component, effect, inject, signal, ViewEncapsulation } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { Spreadsheet } from '@spreadsheet/models/spreadsheet';
 import { SpreadsheetFacade } from '@spreadsheet/spreadsheet.facade';
-import { SearchHistoryEntry } from '../models/search-history-entry.interface';
-import { environment } from '../../../environments/environment';
 import { ApiError } from '@shared/interfaces/api-error.interface';
 import { catchError } from 'rxjs/operators';
 import { AsyncPipe } from "@angular/common";
 import { SpinnerComponent } from "@shared/components/spinner/spinner.component";
 import { BallGuyBubbleComponent } from "@shared/components/ball-guy-bubble/ball-guy-bubble.component";
-
-interface SearchGroup {
-  search: FormControl<string>;
-}
 
 @Component({
   selector: 'app-index',
@@ -24,7 +18,8 @@ interface SearchGroup {
     ReactiveFormsModule,
     AsyncPipe,
     SpinnerComponent,
-    BallGuyBubbleComponent
+    BallGuyBubbleComponent,
+    FormsModule
   ],
   host: {
     'class': 'view spreadsheet-changer-view'
@@ -33,30 +28,29 @@ interface SearchGroup {
 export class IndexComponent {
   private spreadsheetFacade = inject(SpreadsheetFacade);
 
-  searchForm: FormGroup<SearchGroup>;
+  searchValue = signal('');
   hasRequested = false;
-
-  apiKey = environment.googleApiKey;
-
   loadedSpreadsheet$: Observable<Spreadsheet> | undefined;
   isLoading$: Observable<boolean>;
 
-  spreadsheetHistory$: Observable<SearchHistoryEntry[]>;
+  spreadsheetHistory$ = this.spreadsheetFacade.getSpreadsheetHistory$();
 
   error: ApiError | null = null;
 
   constructor() {
-    this.searchForm = new FormGroup({
-      search: new FormControl('', {nonNullable: true})
-    });
+
     this.isLoading$ = this.spreadsheetFacade.isLoading$();
-    this.spreadsheetHistory$ = this.spreadsheetFacade.getSpreadsheetHistory$();
+
+    effect(() => {
+      if (this.searchValue().length)
+        this.submitSearch(this.searchValue)
+    });
   }
 
-  submitSearch(): void {
+  submitSearch(searchValue: () => string): void {
     this.hasRequested = true;
     this.error = null;
-    this.loadedSpreadsheet$ = this.spreadsheetFacade.searchSpreadsheet(this.searchForm.controls.search.value, this.apiKey)
+    this.loadedSpreadsheet$ = this.spreadsheetFacade.searchSpreadsheet(searchValue)
       .pipe(
         catchError((err, observable) => {
           this.error = err;
@@ -71,11 +65,7 @@ export class IndexComponent {
 
   fromHistory(id: string): void {
     this.hasRequested = true;
-    this.loadedSpreadsheet$ = this.spreadsheetFacade.loadSpreadsheet(id, this.apiKey);
-
+    this.loadedSpreadsheet$ = this.spreadsheetFacade.loadSpreadsheet(() => id);
   }
 
-  trackBy(index: number, item: SearchHistoryEntry): string {
-    return item.id;
-  }
 }

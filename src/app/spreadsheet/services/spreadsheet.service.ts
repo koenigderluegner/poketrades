@@ -3,7 +3,6 @@ import { switchMap } from 'rxjs/operators';
 import { Observable, of } from 'rxjs';
 import { Spreadsheet } from '../models/spreadsheet';
 import { GoogleSpreadsheetService } from '../../google-spreadsheet/services/google-spreadsheet.service';
-import { environment } from '../../../environments/environment';
 import { Worksheet } from '@spreadsheet/models/worksheet';
 import { GoogleSpreadsheetResponse } from '../../google-spreadsheet/interfaces/google-spreadsheet-response.interface';
 import { WorksheetConfig } from '@spreadsheet/models/worksheet-config.interface';
@@ -12,11 +11,13 @@ import { SlugifyPipe } from '@shared/pipes/slugify.pipe';
 import { Pokemon } from '@shared/interfaces/pokemon';
 import { coerceBooleanProperty } from '@angular/cdk/coercion';
 import { LivingDexChecklist } from "@spreadsheet/models/living-dex-checklist.type";
+import { API_KEY } from "../../../environments/api-key.injection-token";
 
 @Injectable({
   providedIn: 'root',
 })
 export class SpreadsheetService {
+  private apiKey = inject(API_KEY);
   spreadsheet: Spreadsheet | undefined = undefined;
   private gss = inject(GoogleSpreadsheetService);
   private slugifyPipe = inject(SlugifyPipe);
@@ -41,13 +42,13 @@ export class SpreadsheetService {
     includeShinies: ['true', 'false']
   };
 
-  getSpreadsheet(spreadsheetId: string, apiKey: string): Observable<Spreadsheet> {
+  getSpreadsheet(spreadsheetId: () => string, apiKey: string): Observable<Spreadsheet> {
     let spreadsheet: Spreadsheet;
     return this.gss.getSpreadsheet(spreadsheetId, apiKey).pipe(
       switchMap(googleSpreadsheet => {
 
         spreadsheet = {
-          id: spreadsheetId,
+          id: spreadsheetId(),
           title: googleSpreadsheet.properties.title,
           worksheets: [],
           livingDexChecklist: []
@@ -67,14 +68,14 @@ export class SpreadsheetService {
 
 
   public getConfigs(
-    spreadsheetId: string,
+    spreadsheetId: () => string,
     configRanges: string[],
     sheetsToCheck: GoogleSpreadsheetResponse['sheets']
   ): Observable<Worksheet[]> {
     return this.gss.getBatchValues(
       spreadsheetId,
       configRanges,
-      environment.googleApiKey
+      this.apiKey
     ).pipe(switchMap(configs => {
         const worksheets: Worksheet[] = [];
 
@@ -141,7 +142,7 @@ export class SpreadsheetService {
   }
 
 
-  private _getWorksheets(spreadsheetId: string, sheetsToCheck: GoogleSpreadsheetResponse['sheets']): Observable<Worksheet[]> {
+  private _getWorksheets(spreadsheetId: () => string, sheetsToCheck: GoogleSpreadsheetResponse['sheets']): Observable<Worksheet[]> {
 
     const configRanges = sheetsToCheck.map(sheet => `${sheet.properties.title}!A1:ZZ5`);
 
@@ -203,11 +204,11 @@ export class SpreadsheetService {
   }
 
 
-  private getWorksheetValues(spreadsheetId: string, valueRanges: string[], worksheets: Worksheet[]): Observable<Worksheet[]> {
+  private getWorksheetValues(spreadsheetId: () => string, valueRanges: string[], worksheets: Worksheet[]): Observable<Worksheet[]> {
     return this.gss.getBatchValues(
       spreadsheetId,
       valueRanges,
-      environment.googleApiKey
+      this.apiKey
     ).pipe(switchMap(sheetValues => {
 
 
