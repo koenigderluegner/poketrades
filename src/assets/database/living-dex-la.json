@@ -675,58 +675,76 @@
         "slug": "lucario"
       },
       {
-        "slug": "uxie"
+        "slug": "uxie",
+        "shinyLocked": true
       },
       {
-        "slug": "mesprit"
+        "slug": "mesprit",
+        "shinyLocked": true
       },
       {
-        "slug": "azelf"
+        "slug": "azelf",
+        "shinyLocked": true
       },
       {
-        "slug": "heatran"
+        "slug": "heatran",
+        "shinyLocked": true
       },
       {
-        "slug": "regigigas"
+        "slug": "regigigas",
+        "shinyLocked": true
       },
       {
-        "slug": "cresselia"
+        "slug": "cresselia",
+        "shinyLocked": true
       },
       {
-        "slug": "tornadus"
+        "slug": "tornadus",
+        "shinyLocked": true
       },
       {
-        "slug": "thundurus"
+        "slug": "thundurus",
+        "shinyLocked": true
       },
       {
-        "slug": "landorus"
+        "slug": "landorus",
+        "shinyLocked": true
       },
       {
-        "slug": "enamorus"
+        "slug": "enamorus",
+        "shinyLocked": true
       },
       {
-        "slug": "dialga"
+        "slug": "dialga",
+        "shinyLocked": true
       },
       {
-        "slug": "palkia"
+        "slug": "palkia",
+        "shinyLocked": true
       },
       {
-        "slug": "giratina"
+        "slug": "giratina",
+        "shinyLocked": true
       },
       {
-        "slug": "arceus"
+        "slug": "arceus",
+        "shinyLocked": true
       },
       {
-        "slug": "phione"
+        "slug": "phione",
+        "shinyLocked": true
       },
       {
-        "slug": "manaphy"
+        "slug": "manaphy",
+        "shinyLocked": true
       },
       {
-        "slug": "shaymin"
+        "slug": "shaymin",
+        "shinyLocked": true
       },
       {
-        "slug": "darkrai"
+        "slug": "darkrai",
+        "shinyLocked": true
       }
     ]
   },
