@@ -111,7 +111,7 @@
         "slug": "spewpa"
       },
       {
-        "slug": "vivillon"
+        "slug": "vivillon-fancy"
       },
       {
         "slug": "combee"
@@ -159,7 +159,7 @@
         "slug": "floatzel"
       },
       {
-        "slug": "wooper"
+        "slug": "wooper-paldea"
       },
       {
         "slug": "clodsire"
@@ -669,7 +669,7 @@
         "slug": "gogoat"
       },
       {
-        "slug": "tauros"
+        "slug": "tauros-paldea"
       },
       {
         "slug": "litleo"
@@ -2581,6 +2581,12 @@
       },
       {
         "slug": "arcanine-hisui"
+      },
+      {
+        "slug": "tauros-paldea-blaze"
+      },
+      {
+        "slug": "tauros-paldea-aqua"
       }
     ]
   }
