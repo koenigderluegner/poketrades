@@ -8,8 +8,22 @@
   justify-content: space-between;
   transition: padding .2s linear;
 
+
+  .mat-mdc-mini-fab[disabled], .mat-mdc-mini-fab.mat-mdc-button-disabled {
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  .mat-mdc-mini-fab.mat-accent {
+    --mdc-fab-small-container-color: rgb(255 255 255 / 10%);
+  }
+
+
   a {
     text-decoration: none;
+  }
+
+  .App-navigation {
+    margin-left: auto;
   }
 
   .App-title, .App-navigation ul {
@@ -21,6 +35,7 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    gap: 16px;
   }
 
   .App-navigation ul {
@@ -81,6 +96,33 @@
   }
 }
 
+.rotate {
+  -webkit-animation: rotate 2s infinite linear;
+  animation: rotate 2s infinite linear;
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   .app-header {
     &:before {
@@ -99,3 +141,4 @@
     padding: 0 0 0 1rem;
   }
 }
+

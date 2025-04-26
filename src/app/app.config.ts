@@ -7,6 +7,8 @@ import { provideClientHydration, withEventReplay } from '@angular/platform-brows
 import { MAT_TOOLTIP_DEFAULT_OPTIONS } from "@angular/material/tooltip";
 import { appRoutes } from "./app-routing.module";
 import { SlugifyPipe } from "@shared/pipes/slugify.pipe";
+import { API_KEY } from "../environments/api-key.injection-token";
+import { environment } from "../environments/environment";
 
 
 export const appConfig: ApplicationConfig = {
@@ -20,7 +22,8 @@ export const appConfig: ApplicationConfig = {
     provideMarkdown({sanitize: SecurityContext.HTML}),
     {provide: MAT_TOOLTIP_DEFAULT_OPTIONS, useValue: {position: 'above'}},
     provideHttpClient(withInterceptorsFromDi(), withFetch()),
-    SlugifyPipe
+    SlugifyPipe,
+    {provide: API_KEY, useValue: environment.googleApiKey},
 
   ],
 };

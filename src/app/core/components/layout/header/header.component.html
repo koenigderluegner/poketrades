@@ -1,14 +1,19 @@
-@if (spreadsheetData) {
+<div class="App-title">
+  <a routerLink="/">{{ spreadsheetData?.title ? spreadsheetData?.title : 'Pokétrades' }}</a>
+  @if (spreadsheetFacade.currentSpreadsheet()) {
+    <button mat-mini-fab (click)="spreadsheetFacade.currentSpreadsheetRef.reload()"
+            [disabled]="spreadsheetFacade.currentSpreadsheetRef.isLoading()">
+      <mat-icon fontIcon="sync" [class.rotate]="spreadsheetFacade.currentSpreadsheetRef.isLoading()"/>
+    </button>
+  }
+</div>
 
-  <div class="App-title">
-    <a routerLink="/">{{ spreadsheetData.title ? spreadsheetData.title : 'Pokétrades' }}</a>
-  </div>
-
-  @if (windowSize >= 1200) {
-    <nav class="App-navigation">
-      <div class="nav-wrapper">
-        <ul>
-          <li><a routerLink="/change-spreadsheet">Change Spreadsheet</a></li>
+@if (windowSize >= 1200) {
+  <nav class="App-navigation">
+    <div class="nav-wrapper">
+      <ul>
+        <li><a routerLink="/change-spreadsheet">Change Spreadsheet</a></li>
+        @if (spreadsheetData) {
           @if (spreadsheetData.hasBreedables) {
             <li>
               <a routerLinkActive="selected" [routerLink]="breeablesLink">Breedables</a>
@@ -19,26 +24,28 @@
               <a routerLinkActive="selected" [routerLink]="valuablesLinkArray">Valuables</a>
             </li>
           }
-          <li>
-            <a routerLinkActive="selected" [routerLink]="toolsLink">Tools</a>
-          </li>
-          <li>
-            <a routerLinkActive="selected" [routerLink]="livingDexesLink">Living dexes</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  }
-  @if (windowSize < 1200) {
-    <button type="button" (click)="openMenu()" mat-button>
-      <mat-icon fontIcon="menu"/>
-    </button>
-  }
+        }
+        <li>
+          <a routerLinkActive="selected" [routerLink]="toolsLink">Tools</a>
+        </li>
+        <li>
+          <a routerLinkActive="selected" [routerLink]="livingDexesLink">Living dexes</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+}
+@if (windowSize < 1200) {
+  <button type="button" (click)="openMenu()" mat-button>
+    <mat-icon fontIcon="menu"/>
+  </button>
+}
 
-  <ng-template #menuTemplate>
-    <!-- remove code duplication -->
-    <ul id="pop-up-main-menu" (click)="closeMenu()">
-      <li><a (click)="closeMenu()" routerLink="/change-spreadsheet">Change Spreadsheet</a></li>
+<ng-template #menuTemplate>
+  <!-- remove code duplication -->
+  <ul id="pop-up-main-menu" (click)="closeMenu()">
+    <li><a (click)="closeMenu()" routerLink="/change-spreadsheet">Change Spreadsheet</a></li>
+    @if (spreadsheetData) {
       @if (spreadsheetData.hasBreedables) {
         <li>
           <a routerLinkActive="selected" (click)="closeMenu()" [routerLink]="breeablesLink">Breedables</a>
@@ -49,16 +56,12 @@
           <a routerLinkActive="selected" (click)="closeMenu()" [routerLink]="valuablesLinkArray">Valuables</a>
         </li>
       }
-      <li>
-        <a routerLinkActive="selected" (click)="closeMenu()" [routerLink]="toolsLink">Tools</a>
-      </li>
-      <li>
-        <a routerLinkActive="selected" (click)="closeMenu()" [routerLink]="livingDexesLink">Living dexes</a>
-      </li>
-    </ul>
-  </ng-template>
-
-
-}
-
-
+    }
+    <li>
+      <a routerLinkActive="selected" (click)="closeMenu()" [routerLink]="toolsLink">Tools</a>
+    </li>
+    <li>
+      <a routerLinkActive="selected" (click)="closeMenu()" [routerLink]="livingDexesLink">Living dexes</a>
+    </li>
+  </ul>
+</ng-template>

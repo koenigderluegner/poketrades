@@ -1,4 +1,4 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, computed, effect, inject, OnInit, ResourceStatus, signal } from '@angular/core';
 import { Spreadsheet } from '@spreadsheet/models/spreadsheet';
 import { NavigationEnd, Route, Router, RouterOutlet } from '@angular/router';
 import { SpreadsheetFacade } from '@spreadsheet/spreadsheet.facade';
@@ -6,10 +6,11 @@ import { DatabaseFacadeService } from './database/database-facade.service';
 import { UserService } from './database/services/user.service';
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
-import { environment } from '../environments/environment';
-import { FooterComponent } from "@core/components/layout/footer/footer.component";
-import { HeaderComponent } from "@core/components/layout/header/header.component";
-import { SpinnerComponent } from "@shared/components/spinner/spinner.component";
+import { FooterComponent } from '@core/components/layout/footer/footer.component';
+import { HeaderComponent } from '@core/components/layout/header/header.component';
+import { SpinnerComponent } from '@shared/components/spinner/spinner.component';
+import { HttpErrorResponse } from '@angular/common/module.d-CnjH8Dlt';
+import { filter, take } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -20,15 +21,11 @@ import { SpinnerComponent } from "@shared/components/spinner/spinner.component";
     RouterOutlet,
     HeaderComponent,
     SpinnerComponent,
-    
   ]
 })
 export class AppComponent implements OnInit {
-  apiKey = environment.googleApiKey;
   spreadsheet: Spreadsheet | undefined;
-  isLoading = false;
   loadingMessage: string | undefined;
-  errored = false;
   waitingForRouter = true;
   private spreadsheetFacade = inject(SpreadsheetFacade);
   private databaseFacadeService = inject(DatabaseFacadeService);
@@ -37,6 +34,27 @@ export class AppComponent implements OnInit {
   private matIconRegistry = inject(MatIconRegistry);
   private domSanitizer = inject(DomSanitizer);
   private nonIdRoutes: string[] = [];
+  currentSpreadsheet = this.spreadsheetFacade.currentSpreadsheetRef;
+  protected databasesLoaded = signal(false);
+  protected foundCachedSheet = signal(false);
+  protected resolvedOrUnnecessary = signal(false);
+
+  hideSpinner = computed(() => this.databasesLoaded() && (this.foundCachedSheet() || this.resolvedOrUnnecessary()));
+
+
+  constructor() {
+    effect(() => {
+      const error = this.spreadsheetFacade.currentSpreadsheetRef.error() as HttpErrorResponse | null;
+      if (error)
+        this.loadingMessage = this.spreadsheetFacade.convertApiErrors(error.status).message ?? undefined;
+    });
+
+    effect(() => {
+      const error = this.spreadsheetFacade.currentSpreadsheetRef.status();
+      if (error === ResourceStatus.Resolved || error === ResourceStatus.Local)
+        this.resolvedOrUnnecessary.set(true);
+    });
+  }
 
   ngOnInit(): void {
 
@@ -46,35 +64,35 @@ export class AppComponent implements OnInit {
     ]);
 
     this.nonIdRoutes = this.router.config.map((route: Route) => route.path ? route.path : '');
+    this.databaseFacadeService.loadDatabases().subscribe({
+      next: () => this.databasesLoaded.set(true)
+    });
+    this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd),
+      take(1)
+    ).subscribe((e) => {
 
-    const routerSub = this.router.events.subscribe((e) => {
-      if (e instanceof NavigationEnd) {
-        routerSub.unsubscribe();
-        this.databaseFacadeService.loadDatabases().subscribe(() => {
 
-          const id = e.url.split('/')?.[1];
+      const id = e.url.split('/')?.[1];
 
-          if (id === 'u') { // user route
-            const username = e.url.split('/')?.[2];
-            this.isLoading = true;
-            this.loadingMessage = 'Search user ' + username;
-            this.waitingForRouter = false;
+      if (id === 'u') { // user route
+        const username = e.url.split('/')?.[2];
+        this.loadingMessage = 'Search user ' + username;
+        this.waitingForRouter = false;
 
-            this.userService.findUser(username).subscribe({
-              next: spreadsheetId => {
-                this.loadData(spreadsheetId, username);
-              },
-              error: err => {
-                this.loadingMessage = err;
-                this.errored = true;
-              }
-            });
-
-          } else {
-            this.loadData(id);
+        this.userService.findUser(username).subscribe({
+          next: spreadsheetId => {
+            this.loadData(spreadsheetId, username);
+          },
+          error: err => {
+            this.loadingMessage = err;
           }
         });
+
+      } else {
+        this.loadData(id);
       }
+
     });
 
 
@@ -82,32 +100,21 @@ export class AppComponent implements OnInit {
 
   loadData(spreadsheetId: string, username?: string): void {
     if (spreadsheetId && !this.nonIdRoutes.includes(spreadsheetId)) {
-      this.isLoading = true;
+
       this.waitingForRouter = false;
 
       this.loadingMessage = 'Load databases from server';
 
       this.loadingMessage = 'Loading spreadsheet from Google API';
-      const sub = this.spreadsheetFacade.loadSpreadsheet(spreadsheetId, this.apiKey).subscribe({
-        next: (spreadsheet: Spreadsheet) => {
-          if (username) {
-            spreadsheet.username = username;
-          }
-          this.spreadsheetFacade.updateCurrentSpreadsheet(spreadsheet);
-          this.isLoading = false;
-          sub.unsubscribe();
-        },
-        error: (error) => {
-          this.loadingMessage = error.message;
-          this.errored = true;
-          sub.unsubscribe();
-        }
-      });
+      setTimeout(() => this.spreadsheetFacade.currentSpreadsheetId.set(spreadsheetId), 3000);
+      this.foundCachedSheet.set(this.spreadsheetFacade.loadCachedSpreadsheet(spreadsheetId));
+
+      // if (username) {
+      //   spreadsheet.username = username;
+      // }
 
     } else {
-      this.isLoading = false;
-      this.waitingForRouter = false;
-
+      this.resolvedOrUnnecessary.set(true);
     }
   }
 

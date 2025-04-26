@@ -1,13 +1,10 @@
-import { Component, inject, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
-import { Spreadsheet } from '@spreadsheet/models/spreadsheet';
-import { Worksheet } from '@spreadsheet/models/worksheet';
+import { Component, computed, inject } from '@angular/core';
 import { SpreadsheetFacade } from '@spreadsheet/spreadsheet.facade';
-import { GridControllerComponent } from "../../../grid/grid-controller/grid-controller.component";
-import { SubNaviItemComponent } from "@shared/components/sub-navi-item/sub-navi-item.component";
-import { ItemComponent } from "../../../icon/item/item.component";
-import { SlugifyPipe } from "@shared/pipes/slugify.pipe";
-import { RouterOutlet } from "@angular/router";
+import { GridControllerComponent } from '../../../grid/grid-controller/grid-controller.component';
+import { SubNaviItemComponent } from '@shared/components/sub-navi-item/sub-navi-item.component';
+import { ItemComponent } from '../../../icon/item/item.component';
+import { SlugifyPipe } from '@shared/pipes/slugify.pipe';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-index',
@@ -24,25 +21,14 @@ import { RouterOutlet } from "@angular/router";
     'class': 'view'
   }
 })
-export class IndexComponent implements OnInit {
-  private spreadsheetFacade = inject(SpreadsheetFacade);
+export class IndexComponent {
 
-  spreadsheetData$: Observable<Spreadsheet>;
+  spreadsheetData$ = inject(SpreadsheetFacade).currentSpreadsheetRef;
 
-  spreadsheetId?: string;
-  worksheets?: Worksheet[];
+  worksheets = computed(() => {
+    const spreadsheet = this.spreadsheetData$.value()!;
+    return spreadsheet.worksheets.filter(worksheet => worksheet.config?.type === 'Breedables');
+  });
+  spreadsheetId = inject(SpreadsheetFacade).sheetURLPath;
 
-  constructor() {
-    this.spreadsheetData$ = this.spreadsheetFacade.getCurrentSpreadsheet$();
-  }
-
-  ngOnInit(): void {
-
-    this.spreadsheetData$.subscribe({
-      next: spreadsheet => {
-        this.spreadsheetId = spreadsheet.username ? 'u/' + spreadsheet.username : spreadsheet.id;
-        this.worksheets = spreadsheet.worksheets.filter(worksheet => worksheet.config?.type === 'Breedables');
-      }
-    });
-  }
 }

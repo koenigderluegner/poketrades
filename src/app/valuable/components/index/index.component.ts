@@ -1,13 +1,10 @@
-import { Component, inject, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
-import { Spreadsheet } from '@spreadsheet/models/spreadsheet';
-import { Worksheet } from '@spreadsheet/models/worksheet';
+import { Component, computed, inject } from '@angular/core';
 import { SpreadsheetFacade } from '@spreadsheet/spreadsheet.facade';
-import { GridControllerComponent } from "../../../grid/grid-controller/grid-controller.component";
-import { SubNaviItemComponent } from "@shared/components/sub-navi-item/sub-navi-item.component";
-import { ItemComponent } from "../../../icon/item/item.component";
-import { RouterOutlet } from "@angular/router";
-import { SlugifyPipe } from "@shared/pipes/slugify.pipe";
+import { GridControllerComponent } from '../../../grid/grid-controller/grid-controller.component';
+import { SubNaviItemComponent } from '@shared/components/sub-navi-item/sub-navi-item.component';
+import { ItemComponent } from '../../../icon/item/item.component';
+import { RouterOutlet } from '@angular/router';
+import { SlugifyPipe } from '@shared/pipes/slugify.pipe';
 
 @Component({
   selector: 'app-index',
@@ -23,14 +20,11 @@ import { SlugifyPipe } from "@shared/pipes/slugify.pipe";
     'class': 'view'
   }
 })
-export class IndexComponent implements OnInit {
-  private readonly _spreadsheetFacade = inject(SpreadsheetFacade);
+export class IndexComponent {
+  private readonly currentSpreadsheet = inject(SpreadsheetFacade).currentSpreadsheetRef.value;
 
-
-
-  spreadsheetData$: Observable<Spreadsheet>;
-  spreadsheetId: string | undefined;
-  worksheets: Worksheet[] | undefined;
+  spreadsheetId = computed(() => this.currentSpreadsheet()?.id);
+  worksheets = computed(() => this.currentSpreadsheet()?.worksheets.filter(worksheet => worksheet.config?.type === 'Valuables'));
   subTypeItemMap: Record<string, string> = {
     events: 'cherish',
     legendaries: 'master',
@@ -38,20 +32,6 @@ export class IndexComponent implements OnInit {
     competitives: 'focus-sash',
     rngs: 'teachy-tv'
   };
-
-  constructor() {
-    this.spreadsheetData$ = this._spreadsheetFacade.getCurrentSpreadsheet$();
-  }
-
-  ngOnInit(): void {
-    this.spreadsheetData$.subscribe({
-      next: spreadsheet => {
-        this.spreadsheetId = spreadsheet.id;
-        this.worksheets = spreadsheet.worksheets.filter(worksheet => worksheet.config?.type === 'Valuables'
-        );
-      }
-    });
-  }
 
   getItemMapping(subType?: string): string {
     if (subType) {

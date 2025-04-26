@@ -1,4 +1,4 @@
-import { Component, inject, ViewEncapsulation } from '@angular/core';
+import { Component, computed, inject, ViewEncapsulation } from '@angular/core';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { DatabaseFacadeService } from '../../database/database-facade.service';
 import { forkJoin, Observable } from 'rxjs';
@@ -8,7 +8,6 @@ import { PokemonEntry } from '../../database/models/pokemon-entry.interface';
 import { LevelUpMove } from '../../database/models/level-up-move.interface';
 import { Pokemon } from '@shared/interfaces/pokemon';
 import { SpreadsheetFacade } from '@spreadsheet/spreadsheet.facade';
-import { Worksheet } from '@spreadsheet/models/worksheet';
 import { GridService } from '../../grid/services/grid.service';
 import { Breedable } from '@shared/interfaces/breedable.interface';
 import {
@@ -17,19 +16,19 @@ import {
   MatAutocompleteSelectedEvent,
   MatAutocompleteTrigger,
   MatOption
-} from "@angular/material/autocomplete";
-import { AsyncPipe, KeyValuePipe } from "@angular/common";
-import { PokemonComponent } from "../../icon/pokemon/pokemon.component";
-import { MatInput } from "@angular/material/input";
-import { NameToSlugPipe } from "@shared/pipes/name-to-slug.pipe";
-import { TypeBadgeComponent } from "@shared/components/type-badge/type-badge.component";
-import { ItemComponent } from "../../icon/item/item.component";
-import { SlugifyPipe } from "@shared/pipes/slugify.pipe";
-import { MatTooltip } from "@angular/material/tooltip";
-import { GridComponent } from "../../grid/grid.component";
-import { GridItemComponent } from "../../grid/grid-item/grid-item.component";
-import { FilterLevelUpMovesPipe } from "../pipes/filter-level-up-moves.pipe";
-import { BallGuyBubbleComponent } from "@shared/components/ball-guy-bubble/ball-guy-bubble.component";
+} from '@angular/material/autocomplete';
+import { AsyncPipe, KeyValuePipe } from '@angular/common';
+import { PokemonComponent } from '../../icon/pokemon/pokemon.component';
+import { MatInput } from '@angular/material/input';
+import { NameToSlugPipe } from '@shared/pipes/name-to-slug.pipe';
+import { TypeBadgeComponent } from '@shared/components/type-badge/type-badge.component';
+import { ItemComponent } from '../../icon/item/item.component';
+import { SlugifyPipe } from '@shared/pipes/slugify.pipe';
+import { MatTooltip } from '@angular/material/tooltip';
+import { GridComponent } from '../../grid/grid.component';
+import { GridItemComponent } from '../../grid/grid-item/grid-item.component';
+import { FilterLevelUpMovesPipe } from '../pipes/filter-level-up-moves.pipe';
+import { BallGuyBubbleComponent } from '@shared/components/ball-guy-bubble/ball-guy-bubble.component';
 
 @Component({
   selector: 'app-breeding',
@@ -74,7 +73,13 @@ export class BreedingComponent {
   eggMoves: string[] | undefined;
   parentMoves: { [key: string]: { eggMoves: string[]; levelUpMoves: LevelUpMove[] } } | null;
   placeHolderPokemon: Pokemon;
-  worksheets?: Worksheet[];
+  worksheets = computed(() => {
+
+    const spreadsheet = this.spreadsheetFacade.currentSpreadsheetRef.value();
+    return spreadsheet?.worksheets.filter(worksheet => {
+      return worksheet.config?.type === 'Breedables';
+    });
+  });
   sheetBreeadbles?: { [key: string]: Breedable };
   private breedables: LegalityEntry[] | undefined;
 
@@ -102,15 +107,6 @@ export class BreedingComponent {
       })
     );
 
-    spreadsheetFacade.getCurrentSpreadsheet$().subscribe(spreadsheet => {
-      if (spreadsheet.hasBreedables) {
-        this.worksheets = spreadsheet.worksheets.filter(worksheet => {
-          return worksheet.config?.type === 'Breedables';
-        });
-      }
-    });
-
-
     this.filteredPokemon = this.searchControl.valueChanges.pipe(
       startWith(''),
       map(value => this._filter(value))
@@ -128,7 +124,7 @@ export class BreedingComponent {
 
         this.sheetBreeadbles = {};
 
-        this.worksheets?.forEach(worksheet => {
+        this.worksheets()?.forEach(worksheet => {
           const breedable = worksheet.data?.filter(poke => {
             return poke.name === pokemon.name;
           });

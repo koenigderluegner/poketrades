@@ -1,15 +1,16 @@
 <header class="view-header full-width">Change spreadsheet</header>
 <aside class="view-sidebar">
   <div class="view-subheader">Spreadsheet search</div>
-  <form (submit)="submitSearch()" [formGroup]="searchForm">
-    <input formControlName="search" id="search" placeholder="Look up spreadsheet by id">
+  <form>
+    <input id="search" [(ngModel)]="searchValue" [ngModelOptions]="{name:'search', updateOn: 'submit'}"
+           placeholder="Look up spreadsheet by id">
   </form>
 
   <div class="view-subheader">
     search history
   </div>
   <ul>
-    @for (historyEntry of spreadsheetHistory$ | async; track trackBy($index, historyEntry)) {
+    @for (historyEntry of spreadsheetHistory$(); track historyEntry.id) {
       <li class="history-entry"
           (click)="fromHistory(historyEntry.id)">
         {{ historyEntry.title }}
@@ -20,7 +21,7 @@
 <div class="view-content">
   @if (loadedSpreadsheet$) {
 
-    @if ((isLoading$ |async)) {
+    @if ((loadedSpreadsheet$.isLoading()) || !loadedSpreadsheet$.status()) {
 
       @if (hasRequested) {
         <div>
@@ -29,9 +30,9 @@
         </div>
       }
 
-    } @if (!error) {
+    } @else if (loadedSpreadsheet$.hasValue()) {
 
-      @if ((loadedSpreadsheet$ | async); as loadedSpreadsheet) {
+      @if ((loadedSpreadsheet$.value()); as loadedSpreadsheet) {
 
         @if (loadedSpreadsheet) {
 
@@ -45,7 +46,8 @@
                 and others.
               </div>
             </div>
-          } @if (loadedSpreadsheet.hasBreedables) {
+          }
+          @if (loadedSpreadsheet.hasBreedables) {
             <div class="collection-infos">
               <div class="title">Contains breedables!</div>
               <div class="text">Breedables are Pokémon, which can be bred or are a result of breeding. They are usually
@@ -68,13 +70,13 @@
 
   } @else {
 
-  <app-ball-guy-bubble>
-    <div>Enter a spreadsheet ID to load a spreadsheet.</div>
-    <div>Make sure the spreadsheet with that given ID is published to web and made from the template!</div>
-    <div>Currently no other spreadsheet template it supported.</div>
-  </app-ball-guy-bubble>
+    <app-ball-guy-bubble>
+      <div>Enter a spreadsheet ID to load a spreadsheet.</div>
+      <div>Make sure the spreadsheet with that given ID is published to web and made from the template!</div>
+      <div>Currently no other spreadsheet template it supported.</div>
+    </app-ball-guy-bubble>
 
-}
+  }
 </div>
 
 
