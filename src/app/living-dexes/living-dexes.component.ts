@@ -1,4 +1,4 @@
-import { Component, computed, inject, input, signal, Signal } from '@angular/core';
+import { Component, computed, effect, inject, input, model, Signal } from '@angular/core';
 import { ItemComponent } from '../icon/item/item.component';
 import { SubNaviItemComponent } from '@shared/components/sub-navi-item/sub-navi-item.component';
 import { LivingDexService } from './living-dex.service';
@@ -9,6 +9,7 @@ import { MatTooltip } from '@angular/material/tooltip';
 import { SpreadsheetFacade } from '@spreadsheet/spreadsheet.facade';
 import { MatCheckbox } from '@angular/material/checkbox';
 import { FormsModule } from '@angular/forms';
+import { ActivatedRoute, NavigationExtras, Router } from '@angular/router';
 
 type CheckedLivingDexEntry = LivingDex['pokemon'][0] & {
   shiny: boolean
@@ -34,6 +35,8 @@ type CheckedLivingDexEntry = LivingDex['pokemon'][0] & {
 export class LivingDexesComponent {
   dexId = input<string>();
   livingDex = inject(LivingDexService);
+  #router = inject(Router);
+  #route = inject(ActivatedRoute);
 
   // TODO eagerly loads all requests, optimize
   dexes = new Map([
@@ -55,7 +58,7 @@ export class LivingDexesComponent {
     if (!key) return;
     return this.dexes.get(key);
   });
-  showOnlyUnowned = signal(false);
+  showOnlyUnowned = model(false);
 
   filteredDex = computed(() => {
 
@@ -109,4 +112,18 @@ export class LivingDexesComponent {
 
 
   });
+
+  constructor() {
+    effect(() => {
+      // null to reset param and remove it entirely
+      const showOnlyUnowned = this.showOnlyUnowned() ? true : null;
+      const extras: NavigationExtras = {
+        relativeTo: this.#route,
+        queryParams: {showOnlyUnowned},
+        queryParamsHandling: 'merge'
+      };
+      this.#router.navigate([], extras).then(() => { /* continue here */
+      });
+    });
+  }
 }

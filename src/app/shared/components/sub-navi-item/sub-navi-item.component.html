@@ -1,6 +1,7 @@
 @if (text()) {
   <li class="{{text() | slugify}}">
-    <a [routerLink]="link()" routerLinkActive="active">
+    <a [routerLink]="routerLink.routerLink" [class.active]="routerLinkActive()"
+       [queryParamsHandling]="routerLink.queryParamsHandling">
       <div class="icon">
         <ng-content select="app-item, app-pokemon"></ng-content>
       </div>
