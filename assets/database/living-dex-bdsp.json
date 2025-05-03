@@ -453,7 +453,8 @@
         "slug": "palkia"
       },
       {
-        "slug": "manaphy"
+        "slug": "manaphy",
+        "shinyLocked": true
       }
     ]
   }

@@ -789,7 +789,8 @@
         "slug": "naganadel"
       },
       {
-        "slug": "zygarde"
+        "slug": "zygarde",
+        "shinyLocked": true
       },
       {
         "slug": "trubbish"
@@ -1149,16 +1150,20 @@
         "slug": "aerodactyl"
       },
       {
-        "slug": "tapu-koko"
+        "slug": "tapu-koko",
+        "shinyLocked": true
       },
       {
-        "slug": "tapu-lele"
+        "slug": "tapu-lele",
+        "shinyLocked": true
       },
       {
-        "slug": "tapu-bulu"
+        "slug": "tapu-bulu",
+        "shinyLocked": true
       },
       {
-        "slug": "tapu-fini"
+        "slug": "tapu-fini",
+        "shinyLocked": true
       },
       {
         "slug": "cosmog",
@@ -1169,10 +1174,12 @@
         "shinyLocked": true
       },
       {
-        "slug": "solgaleo"
+        "slug": "solgaleo",
+        "shinyLocked": true
       },
       {
-        "slug": "lunala"
+        "slug": "lunala",
+        "shinyLocked": true
       },
       {
         "slug": "nihilego"
