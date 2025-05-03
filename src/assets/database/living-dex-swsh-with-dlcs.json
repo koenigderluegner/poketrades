@@ -1194,13 +1194,16 @@
         "slug": "dragapult"
       },
       {
-        "slug": "zacian"
+        "slug": "zacian",
+        "shinyLocked": true
       },
       {
-        "slug": "zamazenta"
+        "slug": "zamazenta",
+        "shinyLocked": true
       },
       {
-        "slug": "eternatus"
+        "slug": "eternatus",
+        "shinyLocked": true
       }
     ]
   },
@@ -2452,13 +2455,16 @@
         "slug": "regidrago"
       },
       {
-        "slug": "articuno-galar"
+        "slug": "articuno-galar",
+        "shinyLocked": true
       },
       {
-        "slug": "zapdos-galar"
+        "slug": "zapdos-galar",
+        "shinyLocked": true
       },
       {
-        "slug": "moltres-galar"
+        "slug": "moltres-galar",
+        "shinyLocked": true
       },
       {
         "slug": "cobalion"
@@ -2571,10 +2577,12 @@
         "slug": "persian-alola"
       },
       {
-        "slug": "exeggutor-alola"
+        "slug": "exeggutor-alola",
+        "shinyLocked": true
       },
       {
-        "slug": "marowak-alola"
+        "slug": "marowak-alola",
+        "shinyLocked": true
       }
     ]
   }
