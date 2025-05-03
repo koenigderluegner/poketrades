@@ -59,29 +59,10 @@ export class LivingDexesComponent {
     return this.dexes.get(key);
   });
   showOnlyUnowned = model(false);
-
-  filteredDex = computed(() => {
-
-    const currentDex = this.currentDex();
-
-
-    if (!this.showOnlyUnowned()) return [];
-    if (!currentDex) return [];
-    const currentsheet = this.currentSpreadsheet();
-    const checkList = currentsheet?.livingDexChecklist ?? [];
-    return (currentDex.value()?.flatMap(l => l.pokemon) ?? []).filter(p => {
-      if (p.shinyLocked) return false;
-      const find = checkList.find(c => c.slug === p.slug);
-      return !find?.shiny;
-    });
-
-  });
   chunkedDex = computed(() => {
 
     const currentDex = this.currentDex();
 
-    // we dont show chunks, save compute
-    if (this.showOnlyUnowned()) return [];
     if (!currentDex) return [];
 
     const dexes = currentDex.value();
@@ -91,7 +72,12 @@ export class LivingDexesComponent {
     const checkList = currentsheet?.livingDexChecklist ?? [];
 
     return [...dexes].flat().map((d: LivingDex) => {
-      const chunks = d.pokemon.reduce<CheckedLivingDexEntry[][]>((resultArray, item, index) => {
+      const chunks = d.pokemon.filter(p => {
+        if (!this.showOnlyUnowned()) return true;
+        if (p.shinyLocked) return false;
+        const find = checkList.find(c => c.slug === p.slug);
+        return !find?.shiny;
+      }).reduce<CheckedLivingDexEntry[][]>((resultArray, item, index) => {
         const chunkIndex = Math.floor(index / this.CHUNK_SIZE);
 
         if (!resultArray[chunkIndex]) {
@@ -108,9 +94,7 @@ export class LivingDexesComponent {
       }, []);
 
       return {...d, pokemon: chunks};
-    });
-
-
+    }).filter(d => d.pokemon.length > 0);
   });
 
   constructor() {
@@ -122,8 +106,7 @@ export class LivingDexesComponent {
         queryParams: {showOnlyUnowned},
         queryParamsHandling: 'merge'
       };
-      this.#router.navigate([], extras).then(() => { /* continue here */
-      });
+      this.#router.navigate([], extras).then();
     });
   }
 }
