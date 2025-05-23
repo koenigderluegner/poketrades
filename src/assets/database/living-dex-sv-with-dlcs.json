@@ -2589,5 +2589,403 @@
         "slug": "tauros-paldea-aqua"
       }
     ]
+  },
+  {
+    "name": "Season Deer Forms",
+    "pokemon": [
+      {
+        "slug": "deerling-summer"
+      },
+      {
+        "slug": "deerling-autumn"
+      },
+      {
+        "slug": "deerling-winter"
+      },
+      {
+        "slug": "sawsbuck-summer"
+      },
+      {
+        "slug": "sawsbuck-autumn"
+      },
+      {
+        "slug": "sawsbuck-winter"
+      }
+    ]
+  },
+  {
+    "name": "Minior Forms",
+    "pokemon": [
+      {
+        "slug": "minior-blue"
+      },
+      {
+        "slug": "minior-indigo"
+      },
+      {
+        "slug": "minior-violet"
+      },
+      {
+        "slug": "minior-red"
+      },
+      {
+        "slug": "minior-orange"
+      },
+      {
+        "slug": "minior-yellow"
+      }
+    ]
+  },
+  {
+    "name": "Alcreamie Forms",
+    "pokemon": [
+      {
+        "slug": "alcremie-vanilla-cream-berry"
+      },
+      {
+        "slug": "alcremie-vanilla-cream-love"
+      },
+      {
+        "slug": "alcremie-vanilla-cream-star"
+      },
+      {
+        "slug": "alcremie-vanilla-cream-clover"
+      },
+      {
+        "slug": "alcremie-vanilla-cream-flower"
+      },
+      {
+        "slug": "alcremie-vanilla-cream-ribbon"
+      },
+      {
+        "slug": "alcremie-ruby-cream-strawberry"
+      },
+      {
+        "slug": "alcremie-ruby-cream-berry"
+      },
+      {
+        "slug": "alcremie-ruby-cream-love"
+      },
+      {
+        "slug": "alcremie-ruby-cream-star"
+      },
+      {
+        "slug": "alcremie-ruby-cream-clover"
+      },
+      {
+        "slug": "alcremie-ruby-cream-flower"
+      },
+      {
+        "slug": "alcremie-ruby-cream-ribbon"
+      },
+      {
+        "slug": "alcremie-matcha-cream-strawberry"
+      },
+      {
+        "slug": "alcremie-matcha-cream-berry"
+      },
+      {
+        "slug": "alcremie-matcha-cream-love"
+      },
+      {
+        "slug": "alcremie-matcha-cream-star"
+      },
+      {
+        "slug": "alcremie-matcha-cream-clover"
+      },
+      {
+        "slug": "alcremie-matcha-cream-flower"
+      },
+      {
+        "slug": "alcremie-matcha-cream-ribbon"
+      },
+      {
+        "slug": "alcremie-mint-cream-strawberry"
+      },
+      {
+        "slug": "alcremie-mint-cream-berry"
+      },
+      {
+        "slug": "alcremie-mint-cream-love"
+      },
+      {
+        "slug": "alcremie-mint-cream-star"
+      },
+      {
+        "slug": "alcremie-mint-cream-clover"
+      },
+      {
+        "slug": "alcremie-mint-cream-flower"
+      },
+      {
+        "slug": "alcremie-mint-cream-ribbon"
+      },
+      {
+        "slug": "alcremie-lemon-cream-strawberry"
+      },
+      {
+        "slug": "alcremie-lemon-cream-berry"
+      },
+      {
+        "slug": "alcremie-lemon-cream-love"
+      },
+      {
+        "slug": "alcremie-lemon-cream-star"
+      },
+      {
+        "slug": "alcremie-lemon-cream-clover"
+      },
+      {
+        "slug": "alcremie-lemon-cream-flower"
+      },
+      {
+        "slug": "alcremie-lemon-cream-ribbon"
+      },
+      {
+        "slug": "alcremie-salted-cream-strawberry"
+      },
+      {
+        "slug": "alcremie-salted-cream-berry"
+      },
+      {
+        "slug": "alcremie-salted-cream-love"
+      },
+      {
+        "slug": "alcremie-salted-cream-star"
+      },
+      {
+        "slug": "alcremie-salted-cream-clover"
+      },
+      {
+        "slug": "alcremie-salted-cream-flower"
+      },
+      {
+        "slug": "alcremie-salted-cream-ribbon"
+      },
+      {
+        "slug": "alcremie-ruby-swirl-strawberry"
+      },
+      {
+        "slug": "alcremie-ruby-swirl-berry"
+      },
+      {
+        "slug": "alcremie-ruby-swirl-love"
+      },
+      {
+        "slug": "alcremie-ruby-swirl-star"
+      },
+      {
+        "slug": "alcremie-ruby-swirl-clover"
+      },
+      {
+        "slug": "alcremie-ruby-swirl-flower"
+      },
+      {
+        "slug": "alcremie-ruby-swirl-ribbon"
+      },
+      {
+        "slug": "alcremie-caramel-swirl-strawberry"
+      },
+      {
+        "slug": "alcremie-caramel-swirl-berry"
+      },
+      {
+        "slug": "alcremie-caramel-swirl-love"
+      },
+      {
+        "slug": "alcremie-caramel-swirl-star"
+      },
+      {
+        "slug": "alcremie-caramel-swirl-clover"
+      },
+      {
+        "slug": "alcremie-caramel-swirl-flower"
+      },
+      {
+        "slug": "alcremie-caramel-swirl-ribbon"
+      },
+      {
+        "slug": "alcremie-rainbow-swirl-strawberry"
+      },
+      {
+        "slug": "alcremie-rainbow-swirl-berry"
+      },
+      {
+        "slug": "alcremie-rainbow-swirl-love"
+      },
+      {
+        "slug": "alcremie-rainbow-swirl-star"
+      },
+      {
+        "slug": "alcremie-rainbow-swirl-clover"
+      },
+      {
+        "slug": "alcremie-rainbow-swirl-flower"
+      },
+      {
+        "slug": "alcremie-rainbow-swirl-ribbon"
+      }
+    ]
+  },
+  {
+    "name": "Flabébé Line Forms",
+    "pokemon": [
+      {
+        "slug": "flabebe-orange"
+      },
+      {
+        "slug": "flabebe-yellow"
+      },
+      {
+        "slug": "flabebe-white"
+      },
+      {
+        "slug": "flabebe-blue"
+      },
+      {
+        "slug": "floette-orange"
+      },
+      {
+        "slug": "floette-yellow"
+      },
+      {
+        "slug": "floette-white"
+      },
+      {
+        "slug": "floette-blue"
+      },
+      {
+        "slug": "florges-orange"
+      },
+      {
+        "slug": "florges-yellow"
+      },
+      {
+        "slug": "florges-white"
+      },
+      {
+        "slug": "florges-blue"
+      }
+    ]
+  },
+  {
+    "name": "Rotom Forms",
+    "pokemon": [
+      {
+        "slug": "rotom-fan"
+      },
+      {
+        "slug": "rotom-frost"
+      },
+      {
+        "slug": "rotom-heat"
+      },
+      {
+        "slug": "rotom-mow"
+      },
+      {
+        "slug": "rotom-wash"
+      }
+    ]
+  },
+  {
+    "name": "Other Forms",
+    "pokemon": [
+      {
+        "slug": "shellos-east"
+      },
+      {
+        "slug": "gastrodon-east"
+      },
+      {
+        "slug": "toxtricity-low-key"
+      },
+      {
+        "slug": "sinistea"
+      },
+      {
+        "slug": "polteageist"
+      },
+      {
+        "slug": "poltchageist"
+      },
+      {
+        "slug": "sinistcha"
+      },
+      {
+        "slug": "tatsugiri-droopy"
+      },
+      {
+        "slug": "tatsugiri-stretchy"
+      },
+      {
+        "slug": "oricorio-pom-pom"
+      },
+      {
+        "slug": "oricorio-pau"
+      },
+      {
+        "slug": "oricorio-sensu"
+      },
+      {
+        "slug": "rockruff"
+      },
+      {
+        "slug": "lycanroc-midnight"
+      },
+      {
+        "slug": "lycanroc-dusk"
+      },
+      {
+        "slug": "basculin-blue-striped"
+      },
+      {
+        "slug": "basculin-white-striped"
+      },
+      {
+        "slug": "female/meowstic"
+      },
+      {
+        "slug": "female/basculegion"
+      },
+      {
+        "slug": "squawkabilly-blue"
+      },
+      {
+        "slug": "squawkabilly-yellow"
+      },
+      {
+        "slug": "squawkabilly-white"
+      },
+      {
+        "slug": "maushold-family-of-four"
+      },
+      {
+        "slug": "dudunsparce-three-segment"
+      },
+      {
+        "slug": "female/oinkologne"
+      },
+      {
+        "slug": "female/indeedee"
+      },
+      {
+        "slug": "tornadus-therian"
+      },
+      {
+        "slug": "thundurus-therian"
+      },
+      {
+        "slug": "landorus-therian"
+      },
+      {
+        "slug": "urshifu-rapid-strike",
+        "shinyLocked": true
+      },
+      {
+        "slug": "ursaluna-bloodmoon",
+        "shinyLocked": true
+      }
+    ]
   }
 ]
