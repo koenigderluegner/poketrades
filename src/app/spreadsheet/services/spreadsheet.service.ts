@@ -20,24 +20,24 @@ import { Breedable } from '@shared/interfaces/breedable.interface';
   providedIn: 'root',
 })
 export class SpreadsheetService {
-  private apiKey = inject(API_KEY);
-  private injector = inject(Injector);
   spreadsheet: Spreadsheet | undefined = undefined;
-  private gss = inject(GoogleSpreadsheetService);
-  private slugifyPipe = inject(SlugifyPipe);
-  private readonly bannedSheets: string[] = [
+  #apiKey = inject(API_KEY);
+  #injector = inject(Injector);
+  #gss = inject(GoogleSpreadsheetService);
+  #slugifyPipe = inject(SlugifyPipe);
+  readonly #bannedSheets: string[] = [
     'Welcome',
     'Living Dex', 'Shiny Living Dex', 'Breedables Overview', 'Alcremie', 'Tool:Breeding', 'Tool: Move Lookup',
     'Breedables Ball Legality', 'Ban Checker', 'DB:Abilities', 'DB:Balls', 'DB:Pokemon', 'DB:LevelMoves', 'DB:Items',
     'DB:Misc', 'DB:Moves', 'DB:Types', 'DB:Natures', 'Resource Gen7 (Backup)', 'Ban List'
   ];
-  private readonly possibleHeaders: string[] = [
+  readonly #possibleHeaders: string[] = [
     'dex', 'name', 'ability', 'owned', 'hasHA', 'ratio', 'move1', 'move2', 'move3', 'move4', 'nature', 'ball',
     'gender', 'ot', 'amount', 'notes', 'event', 'isShiny', 'level', 'hp', 'atk', 'def', 'spa', 'spd', 'spe', 'item',
     'id', 'dates', 'proof', 'tradeHistory', 'disclosure', 'lang', 'evhp', 'evatk', 'evdef', 'evspa', 'evspd', 'evspe',
     'regularOwned', 'shinyOwned', 'slug'
   ];
-  private readonly allowedConfigs: AllowedConfig = {
+  readonly #allowedConfigs: AllowedConfig = {
     type: ['Valuables', 'Breedables', 'livingDex'],
     subType: ['RNGs', 'Legendaries', 'Shinies', 'Competitives', 'Events'],
     ball: ['Dream', 'Safari', 'Sport', 'Beast', 'Fast', 'Moon', 'Heavy', 'Love', 'Lure', 'Level',
@@ -48,10 +48,10 @@ export class SpreadsheetService {
 
   getSpreadsheet(spreadsheetId: () => string, apiKey: string) {
     let spreadsheet: Spreadsheet;
-    return runInInjectionContext(this.injector, () => rxResource({
+    return runInInjectionContext(this.#injector, () => rxResource({
       params: () => ({spreadsheetId: spreadsheetId()}),
       stream: ({params: params}) => {
-        return !params.spreadsheetId ? of(undefined) : this.gss.getSpreadsheet(params.spreadsheetId, apiKey).pipe(
+        return !params.spreadsheetId ? of(undefined) : this.#gss.getSpreadsheet(params.spreadsheetId, apiKey).pipe(
           switchMap(googleSpreadsheet => {
             if (!params.spreadsheetId) return of();
             spreadsheet = {
@@ -61,9 +61,9 @@ export class SpreadsheetService {
               livingDexChecklist: []
             };
             this.spreadsheet = spreadsheet;
-            const sheetsToCheck = googleSpreadsheet.sheets.filter(sheet => !this.bannedSheets.includes(sheet.properties.title));
+            const sheetsToCheck = googleSpreadsheet.sheets.filter(sheet => !this.#bannedSheets.includes(sheet.properties.title));
 
-            return this._getWorksheets(spreadsheetId, sheetsToCheck).pipe(
+            return this.#getWorksheets(spreadsheetId, sheetsToCheck).pipe(
               switchMap(worksheets => {
                 spreadsheet.worksheets = worksheets;
                 this.spreadsheet = spreadsheet;
@@ -96,7 +96,7 @@ export class SpreadsheetService {
                 spreadsheet.hasValuables = spreadsheet.worksheets.some((ws: Worksheet) => ws.config?.type === 'Valuables');
 
                 if (spreadsheet.hasBreedables) {
-                  spreadsheet.overviewEntries = this.buildOverviewEntries(
+                  spreadsheet.overviewEntries = this.#buildOverviewEntries(
                     spreadsheet.worksheets.filter((ws: Worksheet) => ws.config?.type === 'Breedables' && ws.config?.ball)
                   );
                 }
@@ -111,34 +111,15 @@ export class SpreadsheetService {
     }));
   }
 
-  private buildOverviewEntries(worksheets: Worksheet[]): BreedablesOverviewList {
-    const overviewEntries: BreedablesOverviewList = {};
-    worksheets.forEach((worksheet: Worksheet) => {
-      const ball: string | undefined = worksheet.config?.ball?.toLowerCase();
-      const data: Pokemon[] | undefined = worksheet.data;
-      if (!ball) {
-        return;
-      }
-      overviewEntries[ball] = {};
-      if (data) {
-        data.forEach((pokemon: Pokemon) => {
-          const breedable = (pokemon) as Breedable;
-          overviewEntries[ball][breedable.iconSlug] = breedable;
-        });
-      }
-    });
-    return overviewEntries;
-  }
-
   public getConfigs(
     spreadsheetId: () => string,
     configRanges: string[],
     sheetsToCheck: GoogleSpreadsheetResponse['sheets']
   ): Observable<Worksheet[]> {
-    return this.gss.getBatchValues(
+    return this.#gss.getBatchValues(
       spreadsheetId(),
       configRanges,
-      this.apiKey
+      this.#apiKey
     ).pipe(switchMap(configs => {
         const worksheets: Worksheet[] = [];
 
@@ -156,21 +137,21 @@ export class SpreadsheetService {
           // remove header
           configArray.shift();
 
-          const config = this.getWorksheetConfig(configArray);
+          const config = this.#getWorksheetConfig(configArray);
           const title = values.range.split('!')[0];
-          const slug = this.slugifySheetName(title);
-          const matchingSheet = sheetsToCheck.find(sheet => this.slugifySheetName(sheet.properties.title) === slug);
+          const slug = this.#slugifySheetName(title);
+          const matchingSheet = sheetsToCheck.find(sheet => this.#slugifySheetName(sheet.properties.title) === slug);
 
           let colMin = 0;
           let colMax = 0;
           values.values[0].some((headerName: string, index: number) => {
-            if (this.possibleHeaders.includes(headerName)) {
+            if (this.#possibleHeaders.includes(headerName)) {
               colMin = index;
               return true;
             }
           });
           values.values[0].slice().reverse().some((headerName: string, index: number) => {
-            if (this.possibleHeaders.includes(headerName)) {
+            if (this.#possibleHeaders.includes(headerName)) {
               colMax = (values.values[0].length - 1) - index;
               return true;
             }
@@ -189,8 +170,8 @@ export class SpreadsheetService {
                 valueRange: ''
               }
             ;
-            const rangeStart = `${this.numberToColumnName(worksheet.config?.colIndex.min ?? 0)}${(worksheet.gridProperties.frozenRowCount ?? 0) + 1}`;
-            const rangeEnd = `${this.numberToColumnName(worksheet.config?.colIndex.max ?? 0)}${(worksheet.gridProperties.rowCount)}`;
+            const rangeStart = `${this.#numberToColumnName(worksheet.config?.colIndex.min ?? 0)}${(worksheet.gridProperties.frozenRowCount ?? 0) + 1}`;
+            const rangeEnd = `${this.#numberToColumnName(worksheet.config?.colIndex.max ?? 0)}${(worksheet.gridProperties.rowCount)}`;
             worksheet.valueRange = `${worksheet.title}!${rangeStart}:${rangeEnd}`;
             worksheet.title = title.replace(/'/g, '');
             worksheets.push(worksheet);
@@ -204,21 +185,39 @@ export class SpreadsheetService {
 
   }
 
+  #buildOverviewEntries(worksheets: Worksheet[]): BreedablesOverviewList {
+    const overviewEntries: BreedablesOverviewList = {};
+    worksheets.forEach((worksheet: Worksheet) => {
+      const ball: string | undefined = worksheet.config?.ball?.toLowerCase();
+      const data: Pokemon[] | undefined = worksheet.data;
+      if (!ball) {
+        return;
+      }
+      overviewEntries[ball] = {};
+      if (data) {
+        data.forEach((pokemon: Pokemon) => {
+          const breedable = (pokemon) as Breedable;
+          overviewEntries[ball][breedable.iconSlug] = breedable;
+        });
+      }
+    });
+    return overviewEntries;
+  }
 
-  private _getWorksheets(spreadsheetId: () => string, sheetsToCheck: GoogleSpreadsheetResponse['sheets']): Observable<Worksheet[]> {
+  #getWorksheets(spreadsheetId: () => string, sheetsToCheck: GoogleSpreadsheetResponse['sheets']): Observable<Worksheet[]> {
 
     const configRanges = sheetsToCheck.map(sheet => `${sheet.properties.title}!A1:ZZ5`);
 
     return this.getConfigs(spreadsheetId, configRanges, sheetsToCheck).pipe(
       switchMap(worksheets => {
         const valueRanges = worksheets.map(worksheet => worksheet.valueRange);
-        return this.getWorksheetValues(spreadsheetId, valueRanges, worksheets);
+        return this.#getWorksheetValues(spreadsheetId, valueRanges, worksheets);
       })
     );
 
   }
 
-  private numberToColumnName(numberToConvert: number): string {
+  #numberToColumnName(numberToConvert: number): string {
 
     const ordA = 'a'.charCodeAt(0);
     const ordZ = 'z'.charCodeAt(0);
@@ -233,8 +232,8 @@ export class SpreadsheetService {
 
   }
 
-  private slugifySheetName(sheetName: string) {
-    let slug = this.slugifyPipe.transform(sheetName);
+  #slugifySheetName(sheetName: string) {
+    let slug = this.#slugifyPipe.transform(sheetName);
     if (slug[0] === `'`) {
       slug = slug.substr(1);
     }
@@ -245,7 +244,7 @@ export class SpreadsheetService {
     return slug;
   }
 
-  private getWorksheetConfig(cells: string[]): WorksheetConfig {
+  #getWorksheetConfig(cells: string[]): WorksheetConfig {
     const config: WorksheetConfig = {type: 'unknown', colIndex: {min: 0, max: 0}};
     let configIndex = 0;
     let tempConfig: string[];
@@ -254,8 +253,8 @@ export class SpreadsheetService {
       tempConfig = cell.split(':');
       if (tempConfig.length === 2) {
         const [key, value] = tempConfig;
-        if (key in this.allowedConfigs) {
-          const configArray = this.allowedConfigs[key];
+        if (key in this.#allowedConfigs) {
+          const configArray = this.#allowedConfigs[key];
           if (configArray && configArray.includes(value)) {
             config[key] = key === 'includeShinies' ? coerceBooleanProperty(value) : value;
           }
@@ -267,18 +266,18 @@ export class SpreadsheetService {
   }
 
 
-  private getWorksheetValues(spreadsheetId: () => string, valueRanges: string[], worksheets: Worksheet[]): Observable<Worksheet[]> {
-    return this.gss.getBatchValues(
+  #getWorksheetValues(spreadsheetId: () => string, valueRanges: string[], worksheets: Worksheet[]): Observable<Worksheet[]> {
+    return this.#gss.getBatchValues(
       spreadsheetId(),
       valueRanges,
-      this.apiKey
+      this.#apiKey
     ).pipe(switchMap(sheetValues => {
 
 
         sheetValues.valueRanges.forEach((sheetValue) => {
           const title = sheetValue.range.split('!')[0];
-          const slug = this.slugifySheetName(title);
-          const worksheet = worksheets.find(sheet => this.slugifySheetName(sheet.slug) === slug);
+          const slug = this.#slugifySheetName(title);
+          const worksheet = worksheets.find(sheet => this.#slugifySheetName(sheet.slug) === slug);
           if (worksheet) {
 
             const pokemonData: Pokemon[] = [];
@@ -313,15 +312,15 @@ export class SpreadsheetService {
                     case 'regularOwned':
                       tempPokemon.regular = coerceBooleanProperty(cellValue.toLowerCase().trim());
                       break;
-                    case 'pokemon':
-                      tempPokemon.slug = this._generateIconSlug(cellValue.trim());
+                    case 'slug':
+                      tempPokemon.slug = this.#generateIconSlug(cellValue.trim());
                       break;
                   }
 
 
                 });
-
-                livingDexData.push(tempPokemon);
+                if (tempPokemon.slug)
+                  livingDexData.push(tempPokemon);
               });
               this.spreadsheet?.livingDexChecklist.push(...livingDexData);
 
@@ -393,7 +392,7 @@ export class SpreadsheetService {
               });
 
               if (tempPokemon.name) {
-                tempPokemon.iconSlug = this._generateIconSlug(tempPokemon.name);
+                tempPokemon.iconSlug = this.#generateIconSlug(tempPokemon.name);
               }
 
               tempPokemon.isOwned = tempPokemon.isOwned || worksheet.config?.type === 'Valuables';
@@ -416,7 +415,7 @@ export class SpreadsheetService {
     ));
   }
 
-  private _generateIconSlug(pokemonName: string): string {
+  #generateIconSlug(pokemonName: string): string {
     let slug = pokemonName.toLowerCase().replace('nidoran ♀', 'nidoran-f');
     slug = slug.replace('nidoran ♂', 'nidoran-m');
     slug = new SlugifyPipe().transform(slug);
