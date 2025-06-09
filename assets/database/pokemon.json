@@ -12266,7 +12266,7 @@
     "hiddenAbility": "Sand Force",
     "canBeShiny": true,
     "canBeBanked": true,
-    "iconSlug": "female/hippopotas",
+    "iconSlug": "hippopotas-f",
     "gen8Appearance": "swsh",
     "femaleRatio": 49.8
   },
@@ -12305,7 +12305,7 @@
     "hiddenAbility": "Sand Force",
     "canBeShiny": true,
     "canBeBanked": true,
-    "iconSlug": "female/hippowdon",
+    "iconSlug": "hippowdon-f",
     "gen8Appearance": "swsh",
     "femaleRatio": 49.8,
     "uwObtainingMethod": 2
@@ -14344,7 +14344,7 @@
     "hiddenAbility": "Rivalry",
     "canBeShiny": true,
     "canBeBanked": true,
-    "iconSlug": "female/unfezant",
+    "iconSlug": "unfezant-f",
     "gen8Appearance": "swsh",
     "femaleRatio": 49.8,
     "fsObtainingMethod": 3
@@ -16229,7 +16229,7 @@
     "hiddenAbility": "Damp",
     "canBeShiny": true,
     "canBeBanked": true,
-    "iconSlug": "female/frillish",
+    "iconSlug": "frillish-f",
     "gen8Appearance": "swsh",
     "femaleRatio": 49.8000000000001
   },
@@ -16271,7 +16271,7 @@
     "hiddenAbility": "Damp",
     "canBeShiny": true,
     "canBeBanked": true,
-    "iconSlug": "female/jellicent",
+    "iconSlug": "jellicent-f",
     "gen8Appearance": "swsh",
     "femaleRatio": 49.8
   },
@@ -18524,7 +18524,7 @@
     "hiddenAbility": "Moxie",
     "canBeShiny": true,
     "canBeBanked": true,
-    "iconSlug": "female/pyroar",
+    "iconSlug": "pyroar-f",
     "gen8Appearance": "unknown",
     "femaleRatio": 88.14
   },
@@ -19166,7 +19166,7 @@
     "hiddenAbility": "Competitive",
     "canBeShiny": true,
     "canBeBanked": true,
-    "iconSlug": "female/meowstic",
+    "iconSlug": "meowstic-female",
     "gen8Appearance": "swsh",
     "femaleRatio": 49.8,
     "fsObtainingMethod": 3
@@ -20995,7 +20995,7 @@
     "hiddenAbility": null,
     "canBeShiny": true,
     "canBeBanked": true,
-    "iconSlug": "rockruff",
+    "iconSlug": "rockruff-own-tempo",
     "gen8Appearance": "ioa",
     "femaleRatio": 49.8
   },
@@ -26025,7 +26025,7 @@
     "hiddenAbility": "Psychic Surge",
     "canBeShiny": true,
     "canBeBanked": true,
-    "iconSlug": "female/indeedee",
+    "iconSlug": "indeedee-female",
     "gen8Appearance": "swsh",
     "femaleRatio": 49.8
   },
@@ -26823,7 +26823,7 @@
     "hiddenAbility": "Mold Breaker",
     "canBeShiny": true,
     "canBeBanked": true,
-    "iconSlug": "female/basculegion",
+    "iconSlug": "basculegion-female",
     "gen8Appearance": "pla",
     "femaleRatio": 49.8
   },
