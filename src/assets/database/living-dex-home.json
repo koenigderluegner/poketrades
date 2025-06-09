@@ -3997,5 +3997,307 @@
         "shinyLocked": true
       }
     ]
+  },
+  {
+    "name": "Gender Differences",
+    "pokemon": [
+      {
+        "slug": "venusaur-f"
+      },
+      {
+        "slug": "butterfree-f"
+      },
+      {
+        "slug": "rattata-f"
+      },
+      {
+        "slug": "raticate-f"
+      },
+      {
+        "slug": "pikachu-f"
+      },
+      {
+        "slug": "raichu-f"
+      },
+      {
+        "slug": "zubat-f"
+      },
+      {
+        "slug": "golbat-f"
+      },
+      {
+        "slug": "gloom-f"
+      },
+      {
+        "slug": "vileplume-f"
+      },
+      {
+        "slug": "kadabra-f"
+      },
+      {
+        "slug": "alakazam-f"
+      },
+      {
+        "slug": "doduo-f"
+      },
+      {
+        "slug": "dodrio-f"
+      },
+      {
+        "slug": "hypno-f"
+      },
+      {
+        "slug": "rhyhorn-f"
+      },
+      {
+        "slug": "rhydon-f"
+      },
+      {
+        "slug": "goldeen-f"
+      },
+      {
+        "slug": "seaking-f"
+      },
+      {
+        "slug": "scyther-f"
+      },
+      {
+        "slug": "magikarp-f"
+      },
+      {
+        "slug": "gyarados-f"
+      },
+      {
+        "slug": "eevee-f"
+      },
+      {
+        "slug": "meganium-f"
+      },
+      {
+        "slug": "ledyba-f"
+      },
+      {
+        "slug": "ledian-f"
+      },
+      {
+        "slug": "xatu-f"
+      },
+      {
+        "slug": "sudowoodo-f"
+      },
+      {
+        "slug": "politoed-f"
+      },
+      {
+        "slug": "aipom-f"
+      },
+      {
+        "slug": "wooper-f"
+      },
+      {
+        "slug": "quagsire-f"
+      },
+      {
+        "slug": "murkrow-f"
+      },
+      {
+        "slug": "wobbuffet-f"
+      },
+      {
+        "slug": "girafarig-f"
+      },
+      {
+        "slug": "gligar-f"
+      },
+      {
+        "slug": "steelix-f"
+      },
+      {
+        "slug": "scizor-f"
+      },
+      {
+        "slug": "heracross-f"
+      },
+      {
+        "slug": "sneasel-f"
+      },
+      {
+        "slug": "sneasel-hisui-f"
+      },
+      {
+        "slug": "ursaring-f"
+      },
+      {
+        "slug": "piloswine-f"
+      },
+      {
+        "slug": "octillery-f"
+      },
+      {
+        "slug": "houndoom-f"
+      },
+      {
+        "slug": "donphan-f"
+      },
+      {
+        "slug": "torchic-f"
+      },
+      {
+        "slug": "combusken-f"
+      },
+      {
+        "slug": "blaziken-f"
+      },
+      {
+        "slug": "beautifly-f"
+      },
+      {
+        "slug": "dustox-f"
+      },
+      {
+        "slug": "ludicolo-f"
+      },
+      {
+        "slug": "nuzleaf-f"
+      },
+      {
+        "slug": "shiftry-f"
+      },
+      {
+        "slug": "meditite-f"
+      },
+      {
+        "slug": "medicham-f"
+      },
+      {
+        "slug": "roselia-f"
+      },
+      {
+        "slug": "gulpin-f"
+      },
+      {
+        "slug": "swalot-f"
+      },
+      {
+        "slug": "numel-f"
+      },
+      {
+        "slug": "camerupt-f"
+      },
+      {
+        "slug": "cacturne-f"
+      },
+      {
+        "slug": "milotic-f"
+      },
+      {
+        "slug": "relicanth-f"
+      },
+      {
+        "slug": "starly-f"
+      },
+      {
+        "slug": "staravia-f"
+      },
+      {
+        "slug": "staraptor-f"
+      },
+      {
+        "slug": "bidoof-f"
+      },
+      {
+        "slug": "bibarel-f"
+      },
+      {
+        "slug": "kricketot-f"
+      },
+      {
+        "slug": "kricketune-f"
+      },
+      {
+        "slug": "shinx-f"
+      },
+      {
+        "slug": "luxio-f"
+      },
+      {
+        "slug": "luxray-f"
+      },
+      {
+        "slug": "roserade-f"
+      },
+      {
+        "slug": "combee-f"
+      },
+      {
+        "slug": "pachirisu-f"
+      },
+      {
+        "slug": "buizel-f"
+      },
+      {
+        "slug": "floatzel-f"
+      },
+      {
+        "slug": "ambipom-f"
+      },
+      {
+        "slug": "gible-f"
+      },
+      {
+        "slug": "gabite-f"
+      },
+      {
+        "slug": "garchomp-f"
+      },
+      {
+        "slug": "hippopotas-f"
+      },
+      {
+        "slug": "hippowdon-f"
+      },
+      {
+        "slug": "croagunk-f"
+      },
+      {
+        "slug": "toxicroak-f"
+      },
+      {
+        "slug": "finneon-f"
+      },
+      {
+        "slug": "lumineon-f"
+      },
+      {
+        "slug": "snover-f"
+      },
+      {
+        "slug": "abomasnow-f"
+      },
+      {
+        "slug": "weavile-f"
+      },
+      {
+        "slug": "rhyperior-f"
+      },
+      {
+        "slug": "tangrowth-f"
+      },
+      {
+        "slug": "mamoswine-f"
+      },
+      {
+        "slug": "unfezant-f"
+      },
+      {
+        "slug": "frillish-f"
+      },
+      {
+        "slug": "jellicent-f"
+      },
+      {
+        "slug": "pyroar-f"
+      }
+    ]
   }
 ]
