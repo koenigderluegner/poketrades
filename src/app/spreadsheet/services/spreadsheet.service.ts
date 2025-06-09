@@ -49,11 +49,11 @@ export class SpreadsheetService {
   getSpreadsheet(spreadsheetId: () => string, apiKey: string) {
     let spreadsheet: Spreadsheet;
     return runInInjectionContext(this.injector, () => rxResource({
-      request: () => ({spreadsheetId: spreadsheetId()}),
-      loader: ({request}) => {
-        return !request.spreadsheetId ? of(undefined) : this.gss.getSpreadsheet(request.spreadsheetId, apiKey).pipe(
+      params: () => ({spreadsheetId: spreadsheetId()}),
+      stream: ({params: params}) => {
+        return !params.spreadsheetId ? of(undefined) : this.gss.getSpreadsheet(params.spreadsheetId, apiKey).pipe(
           switchMap(googleSpreadsheet => {
-            if (!request.spreadsheetId) return of();
+            if (!params.spreadsheetId) return of();
             spreadsheet = {
               id: spreadsheetId(),
               title: googleSpreadsheet.properties.title,

@@ -1,4 +1,4 @@
-import { Component, computed, effect, inject, OnInit, ResourceStatus, signal } from '@angular/core';
+import { Component, computed, effect, inject, OnInit, signal } from '@angular/core';
 import { Spreadsheet } from '@spreadsheet/models/spreadsheet';
 import { NavigationEnd, Route, Router, RouterOutlet } from '@angular/router';
 import { SpreadsheetFacade } from '@spreadsheet/spreadsheet.facade';
@@ -9,7 +9,6 @@ import { DomSanitizer } from '@angular/platform-browser';
 import { FooterComponent } from '@core/components/layout/footer/footer.component';
 import { HeaderComponent } from '@core/components/layout/header/header.component';
 import { SpinnerComponent } from '@shared/components/spinner/spinner.component';
-import { HttpErrorResponse } from '@angular/common/module.d-CnjH8Dlt';
 import { filter, take } from 'rxjs';
 
 @Component({
@@ -27,31 +26,30 @@ export class AppComponent implements OnInit {
   spreadsheet: Spreadsheet | undefined;
   loadingMessage: string | undefined;
   waitingForRouter = true;
+  protected databasesLoaded = signal(false);
+  protected foundCachedSheet = signal(false);
+  protected resolvedOrUnnecessary = signal(false);
+  hideSpinner = computed(() => this.databasesLoaded() && (this.foundCachedSheet() || this.resolvedOrUnnecessary()));
   private spreadsheetFacade = inject(SpreadsheetFacade);
+  currentSpreadsheet = this.spreadsheetFacade.currentSpreadsheetRef;
   private databaseFacadeService = inject(DatabaseFacadeService);
   private userService = inject(UserService);
   private router = inject(Router);
   private matIconRegistry = inject(MatIconRegistry);
   private domSanitizer = inject(DomSanitizer);
   private nonIdRoutes: string[] = [];
-  currentSpreadsheet = this.spreadsheetFacade.currentSpreadsheetRef;
-  protected databasesLoaded = signal(false);
-  protected foundCachedSheet = signal(false);
-  protected resolvedOrUnnecessary = signal(false);
-
-  hideSpinner = computed(() => this.databasesLoaded() && (this.foundCachedSheet() || this.resolvedOrUnnecessary()));
-
 
   constructor() {
     effect(() => {
-      const error = this.spreadsheetFacade.currentSpreadsheetRef.error() as HttpErrorResponse | null;
+      const error = this.spreadsheetFacade.currentSpreadsheetRef.error();
       if (error)
-        this.loadingMessage = this.spreadsheetFacade.convertApiErrors(error.status).message ?? undefined;
+        if ('status' in error && typeof error.status === 'number')
+          this.loadingMessage = this.spreadsheetFacade.convertApiErrors(error.status).message ?? undefined;
     });
 
     effect(() => {
       const error = this.spreadsheetFacade.currentSpreadsheetRef.status();
-      if (error === ResourceStatus.Resolved || error === ResourceStatus.Local)
+      if (error === 'resolved' || error === 'local')
         this.resolvedOrUnnecessary.set(true);
     });
   }

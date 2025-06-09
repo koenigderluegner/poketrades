@@ -5,7 +5,6 @@ import { SpreadsheetFacade } from '@spreadsheet/spreadsheet.facade';
 import { ApiError } from '@shared/interfaces/api-error.interface';
 import { SpinnerComponent } from '@shared/components/spinner/spinner.component';
 import { BallGuyBubbleComponent } from '@shared/components/ball-guy-bubble/ball-guy-bubble.component';
-import { HttpErrorResponse } from '@angular/common/module.d-CnjH8Dlt';
 
 @Component({
   selector: 'app-index',
@@ -23,22 +22,20 @@ import { HttpErrorResponse } from '@angular/common/module.d-CnjH8Dlt';
   }
 })
 export class IndexComponent {
-  private spreadsheetFacade = inject(SpreadsheetFacade);
-
   searchValue = signal('');
   hasRequested = false;
-  loadedSpreadsheet$ = this.spreadsheetFacade.searchResult;
-
-  spreadsheetHistory$ = this.spreadsheetFacade.getSpreadsheetHistory$();
-
   error: ApiError | null = null;
+  private spreadsheetFacade = inject(SpreadsheetFacade);
+  loadedSpreadsheet$ = this.spreadsheetFacade.searchResult;
+  spreadsheetHistory$ = this.spreadsheetFacade.getSpreadsheetHistory$();
 
   constructor() {
 
     effect(() => {
-      const error = this.spreadsheetFacade.searchResult.error() as HttpErrorResponse | null;
+      const error = this.spreadsheetFacade.searchResult.error();
       if (error) {
-        this.error = this.spreadsheetFacade.convertApiErrors(error.status);
+        if ('status' in error && typeof error.status === 'number')
+          this.error = this.spreadsheetFacade.convertApiErrors(error.status);
       }
     });
 

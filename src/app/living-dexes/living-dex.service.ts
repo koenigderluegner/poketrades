@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { httpResource } from "@angular/common/http";
-import { LivingDex } from "./living-dex.type";
+import { httpResource } from '@angular/common/http';
+import { LivingDex } from './living-dex.type';
 
 @Injectable({
   providedIn: 'root'
@@ -8,27 +8,27 @@ import { LivingDex } from "./living-dex.type";
 export class LivingDexService {
 
   getHomeDex() {
-    return httpResource<LivingDex[]>('assets/database/living-dex-home.json')
+    return httpResource<LivingDex[]>(() => 'assets/database/living-dex-home.json');
   }
 
   getSVDex() {
-    return httpResource<LivingDex[]>('assets/database/living-dex-sv-with-dlcs.json')
+    return httpResource<LivingDex[]>(() => 'assets/database/living-dex-sv-with-dlcs.json');
   }
 
   getSWSHDex() {
-    return httpResource<LivingDex[]>('assets/database/living-dex-swsh-with-dlcs.json')
+    return httpResource<LivingDex[]>(() => 'assets/database/living-dex-swsh-with-dlcs.json');
   }
 
   getUSUMDex() {
-    return httpResource<LivingDex[]>('assets/database/living-dex-usum.json')
+    return httpResource<LivingDex[]>(() => 'assets/database/living-dex-usum.json');
   }
 
   getBDSPDex() {
-    return httpResource<LivingDex[]>('assets/database/living-dex-bdsp.json')
+    return httpResource<LivingDex[]>(() => 'assets/database/living-dex-bdsp.json');
   }
 
   getLADex() {
-    return httpResource<LivingDex[]>('assets/database/living-dex-la.json')
+    return httpResource<LivingDex[]>(() => 'assets/database/living-dex-la.json');
   }
 
 }
