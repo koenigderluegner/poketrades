@@ -1,3 +1,5 @@
+@use 'sass:list';
+
 $dynamaxColor: #33EAFA,
 #5ADFFE,
 #65C2FD,
@@ -175,9 +177,9 @@ $dynamaxColor: #33EAFA,
     width: 7%;
     background: #E8E8E8;
 
-    @for $i from 1 through length($dynamaxColor) {
+    @for $i from 1 through list.length($dynamaxColor) {
       &.on:nth-child(#{$i}) {
-        background: nth($dynamaxColor, $i);
+        background: list.nth($dynamaxColor, $i);
       }
     }
   }
