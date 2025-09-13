@@ -18,8 +18,8 @@ $my-theme: mat.m2-define-light-theme((
   density: 0,
 ));
 @include mat.all-component-themes($my-theme);
-@import "pokesprite-spritesheet/assets/pokesprite-pokemon-gen8.css";
 @import "pokesprite-spritesheet/assets/pokesprite-inventory.css";
+@import "spritesheet.css";
 
 $gap-size: 2.5rem;
 

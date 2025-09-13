@@ -18171,7 +18171,7 @@
     "femaleRatio": 49.8
   },
   {
-    "name": "Vivillon-Icy-Snow",
+    "name": "Vivillon-Meadow",
     "dex": "666",
     "types": [
       "Bug",
@@ -18187,7 +18187,7 @@
     "hiddenAbility": "Friend Guard",
     "canBeShiny": true,
     "canBeBanked": true,
-    "iconSlug": "vivillon-icy-snow",
+    "iconSlug": "vivillon-meadow",
     "gen8Appearance": "unknown",
     "femaleRatio": 49.8
   },
@@ -19166,7 +19166,7 @@
     "hiddenAbility": "Competitive",
     "canBeShiny": true,
     "canBeBanked": true,
-    "iconSlug": "meowstic-female",
+    "iconSlug": "meowstic-f",
     "gen8Appearance": "swsh",
     "femaleRatio": 49.8,
     "fsObtainingMethod": 3
@@ -26025,7 +26025,7 @@
     "hiddenAbility": "Psychic Surge",
     "canBeShiny": true,
     "canBeBanked": true,
-    "iconSlug": "indeedee-female",
+    "iconSlug": "indeedee-f",
     "gen8Appearance": "swsh",
     "femaleRatio": 49.8
   },
@@ -26823,7 +26823,7 @@
     "hiddenAbility": "Mold Breaker",
     "canBeShiny": true,
     "canBeBanked": true,
-    "iconSlug": "basculegion-female",
+    "iconSlug": "basculegion-f",
     "gen8Appearance": "pla",
     "femaleRatio": 49.8
   },
