@@ -1201,12 +1201,10 @@
         "slug": "iron-valiant"
       },
       {
-        "slug": "koraidon",
-        "shinyLocked": true
+        "slug": "koraidon"
       },
       {
-        "slug": "miraidon",
-        "shinyLocked": true
+        "slug": "miraidon"
       }
     ]
   },
@@ -2926,9 +2924,6 @@
       },
       {
         "slug": "oricorio-sensu"
-      },
-      {
-        "slug": "rockruff-own-tempo"
       },
       {
         "slug": "lycanroc-midnight"
