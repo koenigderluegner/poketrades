@@ -1201,10 +1201,12 @@
         "slug": "iron-valiant"
       },
       {
-        "slug": "koraidon"
+        "slug": "koraidon",
+        "shinyLocked": true
       },
       {
-        "slug": "miraidon"
+        "slug": "miraidon",
+        "shinyLocked": true
       }
     ]
   },
