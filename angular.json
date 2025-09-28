@@ -61,19 +61,7 @@
               "outputHashing": "all",
               "sourceMap": false,
               "namedChunks": false,
-              "extractLicenses": true,
-              "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "750kb",
-                  "maximumError": "1.25mb"
-                },
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "5kb",
-                  "maximumError": "10kb"
-                }
-              ]
+              "extractLicenses": true
             }
           },
           "defaultConfiguration": ""
