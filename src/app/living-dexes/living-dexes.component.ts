@@ -46,6 +46,7 @@ export class LivingDexesComponent {
     ['usum', this.livingDex.getUSUMDex()],
     ['bdsp', this.livingDex.getBDSPDex()],
     ['la', this.livingDex.getLADex()],
+    ['lza', this.livingDex.getLZADex()],
     ]
   );
 
