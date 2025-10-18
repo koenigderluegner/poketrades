@@ -51,7 +51,7 @@
         "slug": "spewpa"
       },
       {
-        "slug": "vivillon"
+        "slug": "vivillon-meadow"
       },
       {
         "slug": "weedle"
@@ -114,7 +114,7 @@
         "slug": "starmie"
       },
       {
-        "slug": "flabébé"
+        "slug": "flabebe"
       },
       {
         "slug": "floette"
@@ -684,13 +684,16 @@
         "slug": "metagross"
       },
       {
-        "slug": "xerneas"
+        "slug": "xerneas",
+        "shinyLocked": true
       },
       {
-        "slug": "yveltal"
+        "slug": "yveltal",
+        "shinyLocked": true
       },
       {
-        "slug": "zygarde"
+        "slug": "zygarde",
+        "shinyLocked": true
       },
       {
         "slug": "diancie",
@@ -699,6 +702,211 @@
       {
         "slug": "mewtwo",
         "shinyLocked": true
+      }
+    ]
+  },
+  {
+    "name": "Furfrou Trims",
+    "pokemon": [
+      {
+        "slug": "furfrou-heart"
+      },
+      {
+        "slug": "furfrou-star"
+      },
+      {
+        "slug": "furfrou-diamond"
+      },
+      {
+        "slug": "furfrou-debutante"
+      },
+      {
+        "slug": "furfrou-matron"
+      },
+      {
+        "slug": "furfrou-dandy"
+      },
+      {
+        "slug": "furfrou-la-reine"
+      },
+      {
+        "slug": "furfrou-kabuki"
+      },
+      {
+        "slug": "furfrou-pharaoh"
+      }
+    ]
+  },
+  {
+    "name": "Flabébé Line Forms",
+    "pokemon": [
+      {
+        "slug": "flabebe-orange"
+      },
+      {
+        "slug": "flabebe-yellow"
+      },
+      {
+        "slug": "flabebe-white"
+      },
+      {
+        "slug": "flabebe-blue"
+      },
+      {
+        "slug": "floette-orange"
+      },
+      {
+        "slug": "floette-yellow"
+      },
+      {
+        "slug": "floette-white"
+      },
+      {
+        "slug": "floette-blue"
+      },
+      {
+        "slug": "florges-orange"
+      },
+      {
+        "slug": "florges-yellow"
+      },
+      {
+        "slug": "florges-white"
+      },
+      {
+        "slug": "florges-blue"
+      }
+    ]
+  },
+  {
+    "name": "Pumpkin Sizes",
+    "pokemon": [
+      {
+        "slug": "pumpkaboo-small"
+      },
+      {
+        "slug": "pumpkaboo-large"
+      },
+      {
+        "slug": "pumpkaboo-super"
+      },
+      {
+        "slug": "gourgeist-small"
+      },
+      {
+        "slug": "gourgeist-large"
+      },
+      {
+        "slug": "gourgeist-super"
+      }
+    ]
+  },
+  {
+    "name": "Other Forms",
+    "pokemon": [
+      {
+        "slug": "slowpoke-galar",
+        "shinyLocked": true
+      },
+      {
+        "slug": "slowbro-galar",
+        "shinyLocked": true
+      },
+      {
+        "slug": "slowking-galar",
+        "shinyLocked": true
+      },
+      {
+        "slug": "meowstic-f"
+      }
+    ]
+  },
+  {
+    "name": "Gender Differences",
+    "pokemon": [
+      {
+        "slug": "venusaur-f"
+      },
+      {
+        "slug": "pikachu-f"
+      },
+      {
+        "slug": "raichu-f"
+      },
+      {
+        "slug": "kadabra-f"
+      },
+      {
+        "slug": "alakazam-f"
+      },
+      {
+        "slug": "scyther-f"
+      },
+      {
+        "slug": "magikarp-f"
+      },
+      {
+        "slug": "gyarados-f"
+      },
+      {
+        "slug": "eevee-f"
+      },
+      {
+        "slug": "meganium-f"
+      },
+      {
+        "slug": "steelix-f"
+      },
+      {
+        "slug": "scizor-f"
+      },
+      {
+        "slug": "heracross-f"
+      },
+      {
+        "slug": "houndoom-f"
+      },
+      {
+        "slug": "meditite-f"
+      },
+      {
+        "slug": "medicham-f"
+      },
+      {
+        "slug": "roselia-f"
+      },
+      {
+        "slug": "numel-f"
+      },
+      {
+        "slug": "camerupt-f"
+      },
+      {
+        "slug": "roserade-f"
+      },
+      {
+        "slug": "gible-f"
+      },
+      {
+        "slug": "gabite-f"
+      },
+      {
+        "slug": "garchomp-f"
+      },
+      {
+        "slug": "hippopotas-f"
+      },
+      {
+        "slug": "hippowdon-f"
+      },
+      {
+        "slug": "snover-f"
+      },
+      {
+        "slug": "abomasnow-f"
+      },
+      {
+        "slug": "pyroar-f"
       }
     ]
   }
