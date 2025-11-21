@@ -27,7 +27,7 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm ci
+        run: npm ci --force
 
       - name: Find and Replace API Key
         uses: jacobtomlinson/gha-find-replace@v2
