@@ -1,14 +1,13 @@
 import { ApplicationConfig, SecurityContext } from '@angular/core';
 import { provideRouter, withComponentInputBinding, } from '@angular/router';
-import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-import { provideMarkdown } from 'ngx-markdown';
+import { provideMarkdown, SANITIZE } from 'ngx-markdown';
 import { provideHttpClient, withFetch, withInterceptorsFromDi } from '@angular/common/http';
 import { provideClientHydration, withEventReplay } from '@angular/platform-browser';
-import { MAT_TOOLTIP_DEFAULT_OPTIONS } from "@angular/material/tooltip";
-import { appRoutes } from "./app-routing.module";
-import { SlugifyPipe } from "@shared/pipes/slugify.pipe";
-import { API_KEY } from "../environments/api-key.injection-token";
-import { environment } from "../environments/environment";
+import { MAT_TOOLTIP_DEFAULT_OPTIONS } from '@angular/material/tooltip';
+import { appRoutes } from './app-routing.module';
+import { SlugifyPipe } from '@shared/pipes/slugify.pipe';
+import { API_KEY } from '../environments/api-key.injection-token';
+import { environment } from '../environments/environment';
 
 
 export const appConfig: ApplicationConfig = {
@@ -18,8 +17,12 @@ export const appConfig: ApplicationConfig = {
       appRoutes,
       withComponentInputBinding(),
     ),
-    provideAnimationsAsync(),
-    provideMarkdown({sanitize: SecurityContext.HTML}),
+    provideMarkdown({
+      sanitize: {
+        provide: SANITIZE,
+        useValue: SecurityContext.HTML
+      },
+    }),
     {provide: MAT_TOOLTIP_DEFAULT_OPTIONS, useValue: {position: 'above'}},
     provideHttpClient(withInterceptorsFromDi(), withFetch()),
     SlugifyPipe,
