@@ -7,7 +7,7 @@ import { ApiError } from '@shared/interfaces/api-error.interface';
 import { API_KEY } from '../../environments/api-key.injection-token';
 
 
-interface CachedSpreadseeht {
+interface CachedSpreadsheet {
   id: string,
   value: Spreadsheet
 }
@@ -48,12 +48,12 @@ export class SpreadsheetFacade {
     return sheet?.username ? `u/${sheet.username}` : sheet?.id ?? '';
   });
 
-  private readonly _SPREADHSEET_CACHE_KEY = 'cachedSpreadsheet';
+  private readonly _SPREADSHEET_CACHE_KEY = 'cachedSpreadsheet';
 
   loadCachedSpreadsheet(id: string) {
-    const cachedData = localStorage.getItem(this._SPREADHSEET_CACHE_KEY);
+    const cachedData = localStorage.getItem(this._SPREADSHEET_CACHE_KEY);
     if (cachedData) {
-      const data: CachedSpreadseeht = JSON.parse(cachedData);
+      const data: CachedSpreadsheet = JSON.parse(cachedData);
 
       if (data.id === id) {
         this.currentSpreadsheetRef.set(data.value);
@@ -76,10 +76,10 @@ export class SpreadsheetFacade {
     effect(() => {
       const currentSpreadsheet = this.currentSpreadsheetRef.value();
       if (currentSpreadsheet) {
-        localStorage.setItem(this._SPREADHSEET_CACHE_KEY, JSON.stringify({
+        localStorage.setItem(this._SPREADSHEET_CACHE_KEY, JSON.stringify({
           id: currentSpreadsheet.id,
           value: currentSpreadsheet
-        } satisfies CachedSpreadseeht));
+        } satisfies CachedSpreadsheet));
       }
     });
 
